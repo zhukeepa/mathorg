@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyText
+  title: MyString
+  depth: 1
+  ordering: MyString
+
+two:
+  description: MyText
+  title: MyString
+  depth: 1
+  ordering: MyString

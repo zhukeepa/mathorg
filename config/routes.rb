@@ -1,5 +1,10 @@
 Mathorg::Application.routes.draw do
   root "welcome#index"
+  resources :explanations
+  resources :topics
+
+  #get 'topics/:id' => 'topics#show'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

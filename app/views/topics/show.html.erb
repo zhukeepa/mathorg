@@ -1,0 +1,5 @@
+<h1><%= @topic.name %></h1>
+
+<% @topic.explanations.each do |explanation| %>
+	<%= render partial: 'explanation', object: explanation %>
+<% end %>

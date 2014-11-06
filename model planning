@@ -1,0 +1,112 @@
+# if an explanation doesn’t have a topic, it doesn’t “really” count as an explanation. 
+Explanation < ExplanationPart
+has_many :topic_explanations
+has_many :topics, through :topic_explanations
+has_many :expl_parts
+belongs_to :user
+has_many   :prereqs, class_name: :topic
+has_many   :votes, as: :votable
+attributes: description, title, depth, ordering
+
+# implement ordering as linked list, rather than array? 
+#ordering is the order the explanation objects are presented. order is serialized. 
+method: render(context, depth), subexplanations 
+
+ExplanationSupplement < ExplanationPart
+
+ProblemSet < ExplanationSupplement
+PracticeTest < ExplanationSupplement
+
+Problem type: 
+- recall 
+- direct application. 
+- more involved problem-solving. (How to categorize those?)
+
+SRS. 
+
+Summary. 
+
+- Connor wants a quick summary of all the things he has to learn. if an explanation isn’t already very terse, he could just reference the summary section. 
+- 
+
+VideoExplanation < Explanation 
+attributes: source, range
+
+DocExplanation < Explanation
+# has_many explanation_edits???
+render? 
+
+ExternalExplanation < Explanation
+attributes: source, url
+
+# ExplanationEdit #not a priority now
+# belongs_to :explanation 
+# attributes: date, explanation_ref #should i make this has_one Explanation object to record the previous version? 
+# should also make this eventually record the locations of the changes.
+
+ExplPart
+method: render()
+has_many :comments, as: :commentable
+attributes: depths_visible, prereqs_visiblegsfldaj
+
+TextExplPart < ExplPart
+has_many :inline_comments  # ideally inline eventually. err, how well does this work with STI? 
+attribute: text
+
+ImageExplPart < ExplPart
+attributes: src, caption
+
+Excerpt < ExplPart
+attributes: locator (text excerpt if text, otherwise description of where to find), page number, position, link. 
+
+#Problem < ExplPart
+#has_many: :solutions, class_name: :explanation
+#has_many: :quality_votes, class_name: 'Vote', as: :votable
+#has_many: :difficulty_votes, class_name: 'Vote', as: :votable
+#attributes: body, source, author, show_solution (bool),
+#methods: get_difficulty(user) (#function in terms of user's ability), render()
+
+---------------------------------------------------------------------------------------------------------
+
+Vote 
+belongs_to :user
+belongs_to: :votable, polymorphic: true
+attributes: data, positive #bool
+methods: up?, down?
+
+User
+has_many :votes
+has_many :explanations
+has_many :comments
+has_many :inline_comments #best to do it like this? I don't think I'll have do user.inline_comments...
+attributes: name, background/experience (not sure how this is stored), credits  # (not currently priority) karma, awards, status (or position in forum or whatever…)
+
+# how to merge with disqus?? 
+Comments
+has_many   :votes, as: :votable
+belongs_to :commentable, polymorphic: true
+belongs_to :user
+attributes: body, date, validated, type #(must be :question, :remark, :request, :general)
+
+-------------------------------------------------------------
+
+Basically finished (for now). 
+
+class Topic < ActiveRecord::Base
+  has_many :topic_explanations
+  has_many :explanations, through: :topic_explanations
+  
+  has_many :dependentexpl_prereqs, foreign_key: :prereq_id
+  has_many :dependentexpls, through: :dependentexpl_prereqs, source: :explanation
+
+  has_many :topic_child_parents, foreign_key: :child_id
+  has_many :parents, through: :topic_child_parents, source: :topic, foreign_key: :child_id
+  has_many :topic_parent_children, class_name: :topic_child_parents, foreign_key: :parent_id
+  has_many :children, through: :topic_parent_children, source: :topic, foreign_key: :parent_id
+end
+
+class TopicChildParent < ActiveRecord::Base
+  belongs_to :topic, foreign_key: :child_id
+  belongs_to :topic, foreign_key: :parent_id
+end
+
