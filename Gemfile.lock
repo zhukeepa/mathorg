@@ -26,6 +26,9 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     arel (4.0.2)
+    bcrypt (3.1.7)
+    bootstrap-sass (3.2.0.0)
+      sass (~> 3.2)
     builder (3.1.4)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -34,8 +37,16 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    devise (3.2.4)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.2.2)
+    haml (4.0.5)
+      tilt
     hike (1.2.3)
     i18n (0.6.11)
     jbuilder (1.5.3)
@@ -48,9 +59,12 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mathjax-rails (2.3.0)
+      railties (>= 3.0)
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.10.1)
+    orm_adapter (0.5.0)
     polyglot (0.3.5)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -102,14 +116,20 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    warden (1.2.3)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass (= 3.2.0.0)
   coffee-rails (~> 4.0.0)
+  devise
+  haml
   jbuilder (~> 1.2)
   jquery-rails
+  mathjax-rails
   rails (= 4.0.4)
   sass-rails (~> 4.0.2)
   sdoc

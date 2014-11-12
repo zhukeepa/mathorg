@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141105235354) do
+ActiveRecord::Schema.define(version: 20141107015220) do
 
   create_table "explanation_parts", force: true do |t|
     t.datetime "created_at"
@@ -27,6 +27,17 @@ ActiveRecord::Schema.define(version: 20141105235354) do
     t.datetime "updated_at"
     t.text     "body"
   end
+
+  create_table "topic_child_parents", force: true do |t|
+    t.float    "weight"
+    t.integer  "parent_id"
+    t.integer  "child_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "topic_child_parents", ["child_id"], name: "index_topic_child_parents_on_child_id"
+  add_index "topic_child_parents", ["parent_id"], name: "index_topic_child_parents_on_parent_id"
 
   create_table "topic_explanations", force: true do |t|
     t.integer "topic_id"

@@ -2,6 +2,7 @@ Mathorg::Application.routes.draw do
   root "welcome#index"
   resources :explanations
   resources :topics
+  mathjax 'mathjax'
 
   #get 'topics/:id' => 'topics#show'
 

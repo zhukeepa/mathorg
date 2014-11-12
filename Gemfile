@@ -3,8 +3,20 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
+# Bootstrap! 
+gem 'bootstrap-sass',       '3.2.0.0'
+
+# Mathjax
+gem 'mathjax-rails'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+
+# Use devise for users
+gem 'devise'
+
+# install haml
+gem 'haml'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'

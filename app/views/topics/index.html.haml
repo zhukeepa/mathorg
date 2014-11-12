@@ -1,0 +1,10 @@
+%h1 Topic List
+
+= link_to 'New topic', new_topic_path
+
+%br/
+%br/
+
+- @topics.each do |topic| 
+  = link_to topic.name, topic
+  %br/

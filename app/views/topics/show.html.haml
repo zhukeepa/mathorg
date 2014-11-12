@@ -1,0 +1,18 @@
+%h1= @topic.name
+
+%strong Parent(s): 
+- @topic.parents.each do |parent| 
+  = link_to parent.name, parent
+%br/
+
+%strong Children: 
+- @topic.children.each do |child| 
+  = link_to child.name, child
+%br/
+%br/
+= link_to 'Edit', edit_topic_path
+|
+= link_to 'Destroy', topic_path(@topic), method: :delete, data: { confirm: 'Are you sure?' }
+
+- @topic.explanations.each do |explanation|
+  = render partial: 'explanation', object: explanation

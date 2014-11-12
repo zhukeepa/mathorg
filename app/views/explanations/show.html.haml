@@ -1,0 +1,19 @@
+%h1= @explanation.title
+
+%p
+  %strong Topic(s):
+  - @explanation.topics.each do |topic|
+    = link_to topic.name, topic
+  %br/
+
+  %strong Description:
+  = @explanation.description
+  %br/
+
+  = link_to 'Edit', edit_explanation_path(@explanation)
+  | 
+  = link_to 'Destroy', explanation_path(@explanation), method: :delete, data: { confirm: 'Are you sure?' }
+  %br/
+  %br/
+
+  = @explanation.body
