@@ -10,6 +10,10 @@
   = @explanation.description
   %br/
 
+  = link_to 'Upvote', vote_explanation_path, method: :post, data: {positive: true, user_id: current_user.id, votable_id: @explanation.id}
+  %br/
+  %br/ 
+
   = link_to 'Edit', edit_explanation_path(@explanation)
   | 
   = link_to 'Destroy', explanation_path(@explanation), method: :delete, data: { confirm: 'Are you sure?' }
@@ -17,3 +21,9 @@
   %br/
 
   = @explanation.body
+
+  %br/
+  %br/
+  %strong Upvotes and downvotes:
+  - @explanation.votes.each do |vote| 
+    = vote.positive
