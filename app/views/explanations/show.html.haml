@@ -1,19 +1,31 @@
 %h1= @explanation.title
 
-%p
-  %strong Topic(s):
-  - @explanation.topics.each do |topic|
-    = link_to topic.name, topic
-  %br/
+= @cur_vote
 
-  %strong Description:
-  = @explanation.description
-  %br/
+%strong Topic(s):
+- @explanation.topics.each do |topic|
+  = link_to topic.name, topic
+%br/
 
-  = link_to 'Edit', edit_explanation_path(@explanation)
-  | 
-  = link_to 'Destroy', explanation_path(@explanation), method: :delete, data: { confirm: 'Are you sure?' }
-  %br/
-  %br/
+%strong Description:
+= @explanation.description
+%br/
 
-  = @explanation.body
+- if user_signed_in?
+  = link_to 'Upvote'  , vote_explanation_path(@cur_vote)#, {cur_vote: @cur_vote, votable_id: @explanation.id, positive: true, user_id: current_user.id})
+  |
+  = link_to 'Downvote', vote_explanation_path({cur_vote: @cur_vote, votable_id: @explanation.id, positive: false, user_id: current_user.id})
+- else
+  = 'You must be signed in to vote.'
+%br/
+- @explanation.votes.each do |v|
+  = v.positive?
+%br/
+
+= link_to 'Edit', edit_explanation_path(@explanation)
+| 
+= link_to 'Destroy', explanation_path(@explanation), method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+%br/
+
+= @explanation.body

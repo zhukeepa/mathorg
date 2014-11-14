@@ -17,6 +17,7 @@ class ExplanationsController < ApplicationController
 
   def show
     @explanation = Explanation.find(params[:id])
+    @cur_vote = user_signed_in? ? Vote.find_by_user_id_and_votable_id(current_user.id, @explanation.id) : nil
   end
 
   def destroy
@@ -27,15 +28,12 @@ class ExplanationsController < ApplicationController
   end
 
   def vote
-    @vote = Vote.new do |v| 
-      v.positive = params[:positive]
-      v.user_id = params[:user_id]
-      v.votable_id = 12#params[:votable_id]
-      v.votable_type = "Explanation"
-    end
+    #@cur_vote = Vote.find(params[:cur_vote])
+    render text: @cur_vote
+    #@cur_vote = Vote.new(params.permit(:positive, :user_id, :votable_id))
+    #@cur_vote.votable_type = "Explanation"
+    #@cur_vote.save
 
-    @vote.save
-
-    redirect_to action: :show, id: 12#params[:votable_id]
+    #redirect_to action: :show, id: params[:votable_id]
   end
 end

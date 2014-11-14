@@ -4,7 +4,7 @@ Mathorg::Application.routes.draw do
   
   resources :explanations do 
     member do 
-      post 'vote'
+      get 'vote'
     end
   end
   

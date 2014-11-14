@@ -1,24 +1,3 @@
 %h1 Edit Explanation
 
-
-= form_for :explanation, url: explanations_path do |f|
-    = f.label :title
-    %br/
-    = f.text_field :title
-    %br/
-    %br/
-    = f.label :description
-    %br/
-    = f.text_field :description
-    %br/
-    = f.label :topics
-    %br/
-    = f.text_field :topics
-    %br/
-    %br/
-    = f.label :body
-    %br/
-    = f.text_area :body
-    %br/
-    %br/
-    = f.submit
+= render 'form'
