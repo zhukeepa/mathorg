@@ -8,7 +8,10 @@ class ExplanationsController < ApplicationController
 
   def create
     @explanation = Explanation.new(params[:explanation].permit(:title, :description, :body))
+    @topics = Topic.topics_string_to_topics_array(params[:explanation][:topics])
     @explanation.save
+    @explanation.topics << @topics
+
     redirect_to action: :show, id: @explanation.id
   end
 

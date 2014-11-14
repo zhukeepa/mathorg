@@ -14,6 +14,10 @@ class Topic < ActiveRecord::Base
 
   ##::TODO:: - handle cases where topics aren't found; remove repeats; perhaps find faster way to query
   def self.topics_string_to_topics_array(tag_string)
+    if tag_string.nil?
+      return []
+    end
+    
   	topic_string_array = tag_string.split(",").map { |s| s.strip() }
   	topics_array = topic_string_array.map { |t| Topic.find_by! name: t }
   	topics_array.map{ |s| s }  

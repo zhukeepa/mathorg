@@ -7,6 +7,9 @@ class TopicsController < ApplicationController
   	@topics = Topic.all
   end
 
+  def new
+  end
+
   def edit
   	@topic = Topic.find(params[:id])
   end
@@ -16,8 +19,9 @@ class TopicsController < ApplicationController
     @parents = Topic.topics_string_to_topics_array(params[:topic][:parents])
     
     # ::TODO:: parents are not getting appropriately added
-    #@topic.parents << @parents
     @topic.save
+    @topic.parents << @parents
+
     redirect_to action: :show, id: @topic.id
   end
 
