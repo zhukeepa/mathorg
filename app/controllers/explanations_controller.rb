@@ -26,14 +26,4 @@ class ExplanationsController < ApplicationController
 
       render text: 'Your explanation has been deleted.'
   end
-
-  def vote
-    #@cur_vote = Vote.find(params[:cur_vote])
-    render text: @cur_vote
-    #@cur_vote = Vote.new(params.permit(:positive, :user_id, :votable_id))
-    #@cur_vote.votable_type = "Explanation"
-    #@cur_vote.save
-
-    #redirect_to action: :show, id: params[:votable_id]
-  end
 end
