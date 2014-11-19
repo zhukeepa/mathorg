@@ -17,7 +17,6 @@ class ExplanationsController < ApplicationController
 
   def show
     @explanation = Explanation.find(params[:id])
-    @cur_vote = user_signed_in? ? Vote.find_by_user_id_and_votable_id(current_user.id, @explanation.id) : nil
   end
 
   def destroy

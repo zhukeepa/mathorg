@@ -1,21 +1,17 @@
-= form_for :explanation, url: explanations_path do |f|
-    = f.label :title
+= form_for :topic, url: topics_path do |f|
+    = f.label :name
     %br/
-    = f.text_field :title
-    %br/
-    %br/
-    = f.label :description
-    %br/
-    = f.text_field :description
-    %br/
-    = f.label :topics
-    %br/
-    = f.text_field :topics
+    = f.text_field :name
     %br/
     %br/
-    = f.label :body
+    = f.label :parents
     %br/
-    = f.text_area :body
+    = f.text_field :parents
+    %br/
+    %br/
+    = f.label :children
+    %br/
+    = f.text_field :children
     %br/
     %br/
     = f.submit
