@@ -9,6 +9,9 @@ gem 'bootstrap-sass',       '3.2.0.0'
 # Mathjax
 gem 'mathjax-rails'
 
+# BBcode! 
+gem 'bb-ruby'
+
 # Use sqlite3 as the database for Active Record
 group :development, :test do
   gem 'sqlite3'
