@@ -10,10 +10,22 @@ class ExplanationsController < ApplicationController
   def create
     @explanation = Explanation.new(params[:explanation].permit(:title, :description, :body))
     @topics = Topic.topics_string_to_topics_array(params[:explanation][:topics])
+
+    #::CHECK:: is this the best way to implement?
     @explanation.save
     @explanation.topics << @topics
 
     redirect_to action: :show, id: @explanation.id
+  end
+
+  def update
+    @explanation = Explanation.find(params[:id])
+    @topics = Topic.topics_string_to_topics_array(params[:explanation][:topics])
+    
+    @explanation.update(params[:explanation].permit(:title, :description, :body))
+    @explanation.topics = @topics
+
+    redirect_to @explanation
   end
 
   def show
