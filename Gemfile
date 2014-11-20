@@ -12,6 +12,9 @@ gem 'mathjax-rails'
 # BBcode! 
 gem 'bb-ruby'
 
+# Voting! 
+gem 'acts_as_votable'
+
 # Use sqlite3 as the database for Active Record
 group :development, :test do
   gem 'sqlite3'

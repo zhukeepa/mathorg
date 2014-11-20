@@ -9,10 +9,19 @@
 = @explanation.description
 %br/
 
-= link_to 'Edit', edit_explanation_path(@explanation)
-| 
-= link_to 'Destroy', explanation_path(@explanation), method: :delete, data: { confirm: 'Are you sure?' }
+%strong Author: 
+= @explanation.user.email
+%br/
+
+%br/
+= render 'votes'
+%br/
+
+- if current_user == @explanation.user
+  = link_to 'Edit', edit_explanation_path(@explanation)
+  | 
+  = link_to 'Destroy', explanation_path(@explanation), method: :delete, data: { confirm: 'Are you sure?' }
 %br/
 %br/
 
-= raw(@explanation.body.bbcode_to_html)
+= raw(@explanation.body.bbcode_to_html.gsub("\n", "<br/>"))

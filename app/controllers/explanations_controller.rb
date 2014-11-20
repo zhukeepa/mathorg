@@ -9,6 +9,7 @@ class ExplanationsController < ApplicationController
 
   def create
     @explanation = Explanation.new(params[:explanation].permit(:title, :description, :body))
+    @explanation.user = current_user
     @topics = Topic.topics_string_to_topics_array(params[:explanation][:topics])
 
     #::CHECK:: is this the best way to implement?
@@ -20,6 +21,7 @@ class ExplanationsController < ApplicationController
 
   def update
     @explanation = Explanation.find(params[:id])
+    @explanation.user = current_user
     @topics = Topic.topics_string_to_topics_array(params[:explanation][:topics])
     
     @explanation.update(params[:explanation].permit(:title, :description, :body))
