@@ -1,0 +1,24 @@
+%strong Source:
+= @problem.source
+%br/
+
+%strong Author
+= @problem.author
+%br/
+
+- if user_signed_in?
+  = link_to 'Edit', edit_problem_path(@problem)
+  | 
+  = link_to 'Destroy', problem_path(@problem), method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+%br/
+
+= raw(@problem.body.bbcode_to_html.gsub("\n", "<br/>"))
+
+%h1 Solutions
+
+- @problem.solutions.each do |solution|
+  = solution.body.bbcode_to_html.gsub("\n", "<br/>")
+
+- #::TODO:: this seems like a blah way to pass in variables. 
+= link_to 'Add solution', new_explanation_path(problem_id: @problem.id)

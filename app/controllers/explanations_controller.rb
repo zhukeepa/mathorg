@@ -12,9 +12,15 @@ class ExplanationsController < ApplicationController
     @explanation.user = current_user
     @topics = Topic.topics_string_to_topics_array(params[:explanation][:topics])
 
+    #::CHECK:: something feels bad about this. I feel like I should be using inheritance here. 
+    if params[:explanation][:problem_id]
+      @explanation.problem = Problem.find(params[:explanation][:problem_id])
+    end
+    
     #::CHECK:: is this the best way to implement?
     @explanation.save
     @explanation.topics << @topics
+
 
     redirect_to action: :show, id: @explanation.id
   end

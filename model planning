@@ -63,7 +63,12 @@ attributes: locator (text excerpt if text, otherwise description of where to fin
 #has_many: :solutions, class_name: :explanation
 #has_many: :quality_votes, class_name: 'Vote', as: :votable
 #has_many: :difficulty_votes, class_name: 'Vote', as: :votable
-#attributes: body, source, author, show_solution (bool),
+#attributes: 
+body:text
+source:string
+author:string
+show_solution:bool
+rails g migration AddProblemToExplanations problem:references
 #methods: get_difficulty(user) (#function in terms of user's ability), render()
 
 ---------------------------------------------------------------------------------------------------------

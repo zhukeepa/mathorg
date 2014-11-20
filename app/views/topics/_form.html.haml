@@ -1,17 +1,17 @@
 = form_for @topic do |f|
-    = f.label :name
-    %br/
-    = f.text_field :name
-    %br/
-    %br/
-    = f.label :parents
-    %br/
-    = f.text_field :parents, value: Topic.topics_array_to_topics_string(@topic.parents)
-    %br/
-    %br/
-    = f.label :children
-    %br/
-    = f.text_field :children, value: Topic.topics_array_to_topics_string(@topic.children)
-    %br/
-    %br/
-    = f.submit
+  = f.label :name
+  %br/
+  = f.text_field :name
+  %br/
+  %br/
+  = f.label :parents
+  %br/
+  = f.text_field :parents, value: Topic.topics_array_to_topics_string(@topic.parents)
+  %br/
+  %br/
+  = f.label :children
+  %br/
+  = f.text_field :children, value: Topic.topics_array_to_topics_string(@topic.children)
+  %br/
+  %br/
+  = f.submit
