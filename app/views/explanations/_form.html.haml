@@ -1,4 +1,4 @@
-= form_for :explanation, url: explanations_path do |f|
+= form_for @explanation, url: explanations_path do |f|
     = f.label :title
     %br/
     = f.text_field :title
@@ -8,9 +8,10 @@
     %br/
     = f.text_field :description
     %br/
+    %br/
     = f.label :topics
     %br/
-    = f.text_field :topics
+    = f.text_field :topics, value: Topic.topics_array_to_topics_string(@explanation.topics)
     %br/
     %br/
     = f.label :body

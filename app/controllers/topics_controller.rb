@@ -8,6 +8,7 @@ class TopicsController < ApplicationController
   end
 
   def new
+    @topic = Topic.new
   end
 
   def edit
@@ -16,7 +17,7 @@ class TopicsController < ApplicationController
 
   def create
     @topic = Topic.new(params[:topic].permit(:name))
-    @parents = Topic.topics_string_to_topics_array(params[:topic][:parents_string])
+    @parents = Topic.topics_string_to_topics_array(params[:topic][:parents])
     
     # ::TODO:: parents are not getting appropriately added
     @topic.save

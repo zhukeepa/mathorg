@@ -1,5 +1,6 @@
 class ExplanationsController < ApplicationController
   def new 
+    @explanation = Explanation.new
   end
 
   def edit
