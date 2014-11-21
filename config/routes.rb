@@ -5,6 +5,7 @@ Mathorg::Application.routes.draw do
   resources :explanations  
   resources :topics
   resources :problems
+  resources :solutions
 
   mathjax 'mathjax'
 

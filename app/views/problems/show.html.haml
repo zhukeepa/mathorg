@@ -21,4 +21,4 @@
   = solution.body.bbcode_to_html.gsub("\n", "<br/>")
 
 - #::TODO:: this seems like a blah way to pass in variables. 
-= link_to 'Add solution', new_explanation_path(problem_id: @problem.id)
+= link_to 'Add solution', new_solution_path(problem_id: @problem.id)

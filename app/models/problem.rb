@@ -1,3 +1,3 @@
 class Problem < ActiveRecord::Base
-  has_many :solutions, class_name: 'Explanation'
+  has_many :solutions
 end
