@@ -20,7 +20,6 @@ class TopicsController < ApplicationController
     @parents = Topic.topics_string_to_topics_array(params[:topic][:parents])
     @children = Topic.topics_string_to_topics_array(params[:topic][:children])
     
-    # ::TODO:: parents are not getting appropriately added
     @topic.save
     @topic.parents << @parents
     @topic.children << @children
