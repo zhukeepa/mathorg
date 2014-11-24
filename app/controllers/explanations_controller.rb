@@ -41,4 +41,15 @@ class ExplanationsController < ApplicationController
 
       render text: 'Your explanation has been deleted.'
   end
+
+  def vote
+    if params[:pos] == 'true'
+      Explanation.find(params[:id]).liked_by User.find(params[:user_id])
+    else
+      Explanation.find(params[:id]).disliked_by User.find(params[:user_id])
+    end
+
+    #::TODO:: smells very hacky
+    @explanation = Explanation.find(params[:id])
+  end
 end

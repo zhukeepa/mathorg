@@ -10,11 +10,10 @@
 %br/
 
 %strong Author: 
-= @explanation.user.email
+= #@explanation.user.email
 %br/
-
-%br/
-= render 'votes'
+#dispvotes
+  = render 'votes'
 %br/
 
 - if current_user == @explanation.user

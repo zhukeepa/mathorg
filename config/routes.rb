@@ -2,7 +2,13 @@ Mathorg::Application.routes.draw do
   devise_for :users
   root "welcome#index"
   
-  resources :explanations  
+  resources :explanations do 
+    member do
+      get 'vote' => 'explanations#vote'
+      patch 'vote' => 'explanations#vote'
+    end
+  end
+
   resources :topics
   resources :problems
   resources :solutions

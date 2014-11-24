@@ -1,1 +1,10 @@
-Hi!dfdsfadvsfsd
+(+|-): 
+= @explanation.get_upvotes.size
+|
+= @explanation.get_downvotes.size
+
+%br/
+= link_to "Upvote", controller: 'explanations', action: 'vote', user_id: current_user.id, pos: true, remote: true
+| 
+= link_to "Downvote", controller: 'explanations', action: 'vote', user_id: current_user.id, pos: false, remote: true
+%br/ 
