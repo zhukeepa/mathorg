@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141120223455) do
+ActiveRecord::Schema.define(version: 20141125230509) do
 
   create_table "explanation_parts", force: true do |t|
     t.datetime "created_at"
@@ -32,6 +32,15 @@ ActiveRecord::Schema.define(version: 20141120223455) do
 
   add_index "explanations", ["problem_id"], name: "index_explanations_on_problem_id"
   add_index "explanations", ["user_id"], name: "index_explanations_on_user_id"
+
+  create_table "hintsets", force: true do |t|
+    t.text     "hints"
+    t.integer  "solution_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "hintsets", ["solution_id"], name: "index_hintsets_on_solution_id"
 
   create_table "problems", force: true do |t|
     t.text     "body"

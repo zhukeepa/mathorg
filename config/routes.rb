@@ -11,7 +11,10 @@ Mathorg::Application.routes.draw do
 
   resources :topics
   resources :problems
-  resources :solutions
+  
+  resources :solutions do 
+    resources :hintsets
+  end
 
   mathjax 'mathjax'
 
