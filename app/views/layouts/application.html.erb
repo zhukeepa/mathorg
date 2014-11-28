@@ -11,9 +11,10 @@
     <div class="container-fluid">
         <%= link_to 'MathOrg', root_path, class: "navbar-brand" %>
 
-        <form class="navbar-form navbar-left" role="search">
+        <form class="navbar-form navbar-left" role="search" action="/search/results" method="get">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search topics...">
+            <input class="form-control" placeholder="Search topics..." data-autocomplete="/topics/autocomplete_topic_name" id="search_name" name="search[name]" type="text" class="ui-autocomplete-input" autocomplete="off">
+            <input id="search_search_type" name="search[search_type]" type="hidden" value="topic">
           </div>
           <button type="submit" class="btn btn-default">Submit</button>
         </form>

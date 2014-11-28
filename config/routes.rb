@@ -1,4 +1,7 @@
 Mathorg::Application.routes.draw do
+  get "search/results"
+  get "search" => "search#index"
+
   devise_for :users
   root "welcome#index"
   
