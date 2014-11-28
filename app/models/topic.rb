@@ -9,7 +9,7 @@ class Topic < ActiveRecord::Base
 
   ##::TODO:: replace with global method
   def self.topics_string_to_topics_array(tag_string)
-    topic_string_array = tag_string.split(",").map(&:strip).uniq
+    topic_string_array = tag_string.split(",").map(&:strip).uniq.reject(&:empty?)
     Topic.find_all_by_name(topic_string_array)
   end
 

@@ -1,7 +1,7 @@
 = form_for @solution do |f|
   = f.label :topics
   %br/
-  = f.text_field :topics, value: Topic.topics_array_to_topics_string(@solution.topics)
+  = f.autocomplete_field :topics, autocomplete_topic_name_topics_path, 'data-delimiter' => ', ', value: Topic.topics_array_to_topics_string(@solution.topics)
   %br/
   %br/
   = f.label :body

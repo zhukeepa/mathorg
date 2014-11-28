@@ -6,12 +6,7 @@
   %br/
   = f.label :parents
   %br/
-  = f.text_field :parents, value: Topic.topics_array_to_topics_string(@topic.parents)
-  %br/
-  %br/
-  = f.label :children
-  %br/
-  = f.text_field :children, value: Topic.topics_array_to_topics_string(@topic.children)
+  = f.autocomplete_field :parents, autocomplete_topic_name_topics_path, 'data-delimiter' => ', ', value: Topic.topics_array_to_topics_string(@topic.parents)
   %br/
   %br/
   = f.submit

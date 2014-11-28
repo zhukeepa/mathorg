@@ -9,7 +9,10 @@ Mathorg::Application.routes.draw do
     end
   end
 
-  resources :topics
+  resources :topics do
+    get :autocomplete_topic_name, on: :collection
+  end
+  
   resources :problems
   
   resources :solutions do 
