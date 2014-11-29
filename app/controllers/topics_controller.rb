@@ -1,5 +1,6 @@
 class TopicsController < ApplicationController
   autocomplete :topic, :name
+
   def show
     @topic = Topic.find(params[:id])
   end

@@ -1,8 +1,6 @@
 %h1= @explanation.title
 
-%strong Topic(s):
-- @explanation.topics.each do |topic|
-  = link_to topic.name, topic
+= render 'shared/topic_list', name: 'Topic', topics: @explanation.topics
 %br/
 
 %strong Description:

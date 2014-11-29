@@ -1,14 +1,10 @@
 %h1= @topic.name
 
-%strong Parent(s): 
-- @topic.parents.each do |parent| 
-  = link_to parent.name, parent
+= render 'shared/topic_list', name: 'Parent',   topics: @topic.parents
+%br/
+= render 'shared/topic_list', name: 'Subtopic', topics: @topic.children
 %br/
 
-%strong Children: 
-- @topic.children.each do |child| 
-  = link_to child.name, child
-%br/
 %br/
 = link_to 'Edit', edit_topic_path
 |

@@ -1,0 +1,9 @@
+%strong 
+  = name.pluralize(topics.size) + ':'
+
+- if topics.size > 0
+  = raw(topics.map do |t|
+    - link_to t.name, t
+  - end.join(', '))
+- else
+  %emph None
