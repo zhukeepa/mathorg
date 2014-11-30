@@ -31,7 +31,6 @@ GEM
     bcrypt (3.1.7)
     bootstrap-sass (3.2.0.0)
       sass (~> 3.2)
-    bootstrap_form (2.2.0)
     builder (3.1.4)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -107,6 +106,9 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    simple_form (3.1.0)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     sprockets (2.11.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -139,7 +141,6 @@ DEPENDENCIES
   acts_as_votable
   bb-ruby
   bootstrap-sass (= 3.2.0.0)
-  bootstrap_form
   coffee-rails (~> 4.0.0)
   devise
   haml
@@ -153,6 +154,7 @@ DEPENDENCIES
   rails_12factor
   sass-rails (~> 4.0.2)
   sdoc
+  simple_form
   sqlite3
   turbolinks
   uglifier (>= 1.3.0)

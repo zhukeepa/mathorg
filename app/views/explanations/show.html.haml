@@ -10,6 +10,9 @@
 %strong Author: 
 = #@explanation.user.email
 %br/
+
+= link_to 'Edit', edit_explanation_path(@explanation)
+
 #dispvotes
   = render 'votes'
 %br/
@@ -22,3 +25,5 @@
 %br/
 
 = raw(@explanation.body.bbcode_to_html.gsub("\n", "<br/>"))
+
+= poo

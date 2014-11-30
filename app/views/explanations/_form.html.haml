@@ -1,22 +1,8 @@
-= form_for @explanation do |f|
-  = f.label :title
-  %br/
-  = f.text_field :title
-  %br/
-  %br/
-  = f.label :description
-  %br/
-  = f.text_field :description
-  %br/
-  %br/
-  = f.label :topics
-  %br/
-  = f.autocomplete_field :topics, autocomplete_topic_name_topics_path, 'data-delimiter' => ', ', value: Topic.topics_array_to_topics_string(@explanation.topics)
-  %br/
-  %br/
-  = f.label :body
-  %br/
-  = f.text_area :body
-  %br/
-  %br/
-  = f.submit
+= simple_form_for @explanation, remote: true do |f|
+  = f.input :title
+  = f.input :description
+  = f.input :topics, url: autocomplete_topic_name_topics_path, as: :autocomplete, 'data-delimiter' => ', ', input_html: { value: Topic.topics_array_to_topics_string(@explanation.topics), class: "text optional form-control" }
+  = f.input :body
+  = f.button :submit
+
+- ##:TODO:: autocomplete is fugly
