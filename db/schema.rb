@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141125230509) do
+ActiveRecord::Schema.define(version: 20141209221106) do
 
   create_table "explanation_parts", force: true do |t|
     t.datetime "created_at"
@@ -27,20 +27,9 @@ ActiveRecord::Schema.define(version: 20141125230509) do
     t.datetime "updated_at"
     t.text     "body"
     t.integer  "user_id"
-    t.integer  "problem_id"
   end
 
-  add_index "explanations", ["problem_id"], name: "index_explanations_on_problem_id"
   add_index "explanations", ["user_id"], name: "index_explanations_on_user_id"
-
-  create_table "hintsets", force: true do |t|
-    t.text     "hints"
-    t.integer  "solution_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "hintsets", ["solution_id"], name: "index_hintsets_on_solution_id"
 
   create_table "problems", force: true do |t|
     t.text     "body"
@@ -50,6 +39,16 @@ ActiveRecord::Schema.define(version: 20141125230509) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "solutions", force: true do |t|
+    t.text     "hints"
+    t.integer  "problem_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "body"
+  end
+
+  add_index "solutions", ["problem_id"], name: "index_solutions_on_problem_id"
 
   create_table "topic_child_parents", force: true do |t|
     t.float    "weight"
@@ -69,6 +68,17 @@ ActiveRecord::Schema.define(version: 20141125230509) do
 
   add_index "topic_explanations", ["explanation_id"], name: "index_topic_explanations_on_explanation_id"
   add_index "topic_explanations", ["topic_id"], name: "index_topic_explanations_on_topic_id"
+
+  create_table "topic_solutions", force: true do |t|
+    t.float    "weight"
+    t.integer  "topic_id"
+    t.integer  "solution_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "topic_solutions", ["solution_id"], name: "index_topic_solutions_on_solution_id"
+  add_index "topic_solutions", ["topic_id"], name: "index_topic_solutions_on_topic_id"
 
   create_table "topics", force: true do |t|
     t.string   "name"

@@ -12,9 +12,7 @@
 
 %br/
 %br/
-= link_to 'Add explanation', new_explanation_path
+= link_to 'Add explanation', new_explanation_path(topic: @topic.id)
 
 - @topic.explanations.each do |explanation|
   = render partial: 'explanation', object: explanation
-
-= poo

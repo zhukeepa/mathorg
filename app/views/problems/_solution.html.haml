@@ -1,0 +1,10 @@
+.list-group-item
+  %button{type: 'button', class: "btn btn-default", onclick: "toggleVisibility('solution#{solution.id}')"} Show solution
+
+  .solution{id: "solution#{solution.id}", style: "display:none"}
+    %strong Solution: 
+    = raw(solution.body.bbcode_to_html.gsub("\n", "<br/>"))
+
+  %br/
+  %br/
+  = link_to "Edit", edit_problem_solution_path(@problem, solution)

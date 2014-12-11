@@ -1,6 +1,7 @@
 class ExplanationsController < ApplicationController
   def new 
     @explanation = Explanation.new
+    @explanation.topics = [Topic.find(params[:topic])] unless params[:topic].nil?
   end
 
   def edit
@@ -12,10 +13,8 @@ class ExplanationsController < ApplicationController
     @explanation.user = current_user
     @topics = Topic.topics_string_to_topics_array(params[:explanation][:topics])
 
-    #::TODO:: is this the best way to implement?
+    @explanation.topics = @topics
     @explanation.save
-    @explanation.topics << @topics
-
 
     redirect_to action: :show, id: @explanation.id
   end

@@ -1,13 +1,7 @@
-= form_for @solution do |f|
-  = f.label :topics
-  %br/
-  = f.autocomplete_field :topics, autocomplete_topic_name_topics_path, 'data-delimiter' => ', ', value: Topic.topics_array_to_topics_string(@solution.topics)
-  %br/
-  %br/
-  = f.label :body
-  %br/
-  = f.text_area :body
-  %br/
-  %br/
-  = f.hidden_field :problem_id, value: params[:problem_id]
-  = f.submit
+= simple_form_for [@problem, @solution] do |f|
+  = f.input :topics, url: autocomplete_topic_name_topics_path, as: :autocomplete, |
+    'data-delimiter' => ', ', input_html: { value: Topic.topics_array_to_topics_string(@solution.topics), |
+    class: "text optional form-control" }
+  = f.input :body
+  = f.input :hints, input_html: { value: Solution.hint_array_to_string(@solution.hints) }
+  = f.button :submit

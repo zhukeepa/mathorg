@@ -1,8 +1,17 @@
+:javascript
+  function toggleVisibility(id)
+  {
+    if (document.getElementById(id).style.display == "none")
+      document.getElementById(id).style.display = "block";
+    else
+      document.getElementById(id).style.display = "none"; 
+  }
+
 %strong Source:
 = @problem.source
 %br/
 
-%strong Author
+%strong Author:
 = @problem.author
 %br/
 
@@ -15,17 +24,10 @@
 
 = raw(@problem.body.bbcode_to_html.gsub("\n", "<br/>"))
 
-%h2 Hints
-= @problem.all_hintsets
-
 %h2 Solutions
 
-- @problem.solutions.each do |solution|
-  = solution.body.bbcode_to_html.gsub("\n", "<br/>")
-  %br/
-  = link_to "Add hintset", new_solution_hintset_path(solution)
-  %br/
-  %br/
+.row.list-group 
+  - @problem.solutions.each do |solution|
+    = render partial: 'solution', object: solution
 
-- #::TODO:: this seems like a blah way to pass in variables. 
-= link_to 'Add solution', new_solution_path(problem_id: @problem.id)
+= link_to 'Add solution', new_problem_solution_path(@problem)

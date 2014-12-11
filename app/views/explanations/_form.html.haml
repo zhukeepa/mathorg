@@ -1,8 +1,10 @@
-= simple_form_for @explanation, remote: true do |f|
+= simple_form_for @explanation do |f|
   = f.input :title
   = f.input :description
-  = f.input :topics, url: autocomplete_topic_name_topics_path, as: :autocomplete, 'data-delimiter' => ', ', input_html: { value: Topic.topics_array_to_topics_string(@explanation.topics), class: "text optional form-control" }
+  = f.input :topics, url: autocomplete_topic_name_topics_path, as: :autocomplete, |
+  'data-delimiter' => ', ', input_html: { value: Topic.topics_array_to_topics_string(@explanation.topics), |
+  class: "text optional form-control" }
   = f.input :body
   = f.button :submit
 
-- ##:TODO:: autocomplete is fugly
+- ##:TODO:: autocomplete is fugly. 
