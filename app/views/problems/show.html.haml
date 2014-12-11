@@ -2,9 +2,19 @@
   function toggleVisibility(id)
   {
     if (document.getElementById(id).style.display == "none")
-      document.getElementById(id).style.display = "block";
+      document.getElementById(id).style.display = "inline";
     else
       document.getElementById(id).style.display = "none"; 
+  }
+
+  var latest_hint_shown = [];
+  function show_next_hint(solution_id)
+  {
+    if (typeof(latest_hint_shown[solution_id]) == 'undefined')
+      latest_hint_shown[solution_id] = 0; 
+
+    document.getElementById("hint_" + solution_id + "_" + latest_hint_shown[solution_id]).style.display = "inline";
+    ++latest_hint_shown[solution_id];
   }
 
 %strong Source:
