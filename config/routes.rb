@@ -1,4 +1,5 @@
 Mathorg::Application.routes.draw do
+  post "services/preview" => "services#preview"
   get "search/results"
   get "search" => "search#index"
 
@@ -7,8 +8,8 @@ Mathorg::Application.routes.draw do
   
   resources :explanations do 
     member do
-      get 'vote' => 'explanations#vote'
-      patch 'vote' => 'explanations#vote'
+      get :vote
+      patch :vote
     end
   end
 

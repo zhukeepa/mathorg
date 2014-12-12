@@ -5,3 +5,7 @@
   = f.input :body
   = f.input :hints, input_html: { value: Solution.hint_array_to_string(@solution.hints) }
   = f.button :submit
+
+%button{type: 'button', class: "btn btn-default", onclick: "preview('solution_body');"} Preview
+
+#preview

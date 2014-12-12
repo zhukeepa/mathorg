@@ -13,6 +13,9 @@ class SolutionsController < ApplicationController
     @problem = Problem.find(params[:problem_id])
   	@solution = @problem.solutions.create(params[:solution].permit(:body))
 
+    ##::TODO:: why not @solution = Solution.create blah, @solution.problem = @problem? 
+    ## what eacxtly does @problem.solutions.new do? as a method on an array?
+
     @solution.hints = Solution.hint_string_to_array(params[:solution][:hints])
 
     @topics = Topic.topics_string_to_topics_array(params[:solution][:topics])

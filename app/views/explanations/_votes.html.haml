@@ -1,7 +1,4 @@
-(+|-): 
-= @explanation.get_upvotes.size
-|
-= @explanation.get_downvotes.size
+= "(+ #{@explanation.get_upvotes.size} | - #{@explanation.get_downvotes.size})"
 
 %br/
 = link_to "Upvote", vote_explanation_path(user_id: current_user.id, pos: true), remote: true

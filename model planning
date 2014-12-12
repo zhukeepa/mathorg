@@ -1,3 +1,15 @@
+create method votable.get_by_type_and_id
+votable controller implement get_by_type_and_id , vote. user, just access from 
+create route, including id 
+e.g. post explanation/5 --> votable::upvote(5)
+
+
+for preview -- create a Services controller that handles previews
+
+
+
+
+
 # if an explanation doesn’t have a topic, it doesn’t “really” count as an explanation. 
 Explanation < ExplanationPart
 has_many :topic_explanations

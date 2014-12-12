@@ -1,5 +1,10 @@
 = simple_form_for @problem do |f|
   = f.input :source
   = f.input :author
-  = f.input :body 
+  = f.input :body
   = f.button :submit
+
+%button{type: 'button', class: "btn btn-default", onclick: "preview('problem_body');"} Preview
+
+#preview
+  

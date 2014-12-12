@@ -5,7 +5,18 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-
+  <script type="text/javascript">
+    function preview(class_name)
+    {
+      var obj = $("#" + class_name); 
+      body = obj.val();
+      $.post('/services/preview', {text: body}, function(data) { $('#preview').html(data.preview_html); });
+      
+      //Without the delay, MathJax doesn't seem to recognize the new math 
+      //that's appeared quickly enough. 
+      setTimeout(function(){MathJax.Hub.Queue(["Typeset", MathJax.Hub, $('#preview')[0]])}, 40);
+    }
+  </script>
 
   <header class="navbar navbar-fixed-top navbar-inverse navbar-default" role="navigation">
     <div class="container-fluid">
