@@ -12,6 +12,9 @@ gem 'mathjax-rails'
 # BBcode! 
 gem 'bb-ruby'
 
+# Searching!
+gem 'searchkick'
+
 # Voting! 
 gem 'acts_as_votable'
 

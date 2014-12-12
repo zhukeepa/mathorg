@@ -1,4 +1,6 @@
 class Topic < ActiveRecord::Base
+  searchkick
+
   has_many :topic_explanations, dependent: :destroy
   has_many :explanations, through: :topic_explanations
 

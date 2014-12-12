@@ -11,6 +11,6 @@ class SearchController < ApplicationController
 private 
 
   def topic_search_results(params)
-  	@topic_results = Topic.where(name: params[:name])
+  	@topic_results = Topic.search(params[:name])
   end
 end
