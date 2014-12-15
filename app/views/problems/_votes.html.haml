@@ -1,0 +1,7 @@
+%strong Quality: 
+= raw("(#{link_to '++', quality_upvote_problem_path, remote: true} #{@problem.get_upvotes(vote_scope: 'quality').size} | #{link_to '--', quality_downvote_problem_path, remote: true} #{@problem.get_downvotes(vote_scope: 'quality').size})")
+%br/
+%strong Instructiveness: 
+= raw("(#{link_to '++', instructiveness_upvote_problem_path, remote: true} #{@problem.get_upvotes(vote_scope: 'instructiveness').size} | #{link_to '--', instructiveness_downvote_problem_path, remote: true} #{@problem.get_downvotes(vote_scope: 'instructiveness').size})")
+%br/
+

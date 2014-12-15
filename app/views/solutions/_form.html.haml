@@ -2,8 +2,8 @@
   = f.input :topics, url: autocomplete_topic_name_topics_path, as: :autocomplete, |
     'data-delimiter' => ', ', input_html: { value: Topic.topics_array_to_topics_string(@solution.topics), |
     class: "text optional form-control" }
-  = f.input :body
-  = f.input :hints, input_html: { value: Solution.hint_array_to_string(@solution.hints) }
+  = f.input :body, input_html: { rows: long_entry_row_num }
+  = f.input :hints, input_html: { value: Solution.hint_array_to_string(@solution.hints), rows: long_entry_row_num }
   = f.button :submit
 
 %button{type: 'button', class: "btn btn-default", onclick: "preview('solution_body');"} Preview
