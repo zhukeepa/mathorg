@@ -1,0 +1,5 @@
+%li
+  = link_to topic.name, topic
+  %ul
+    - topic.children.each do |stopic|
+      = render 'topic', topic: stopic

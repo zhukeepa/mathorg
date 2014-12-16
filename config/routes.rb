@@ -6,12 +6,12 @@ Mathorg::Application.routes.draw do
   devise_for :users
   root "welcome#index"
   
-  resources :explanations do 
-    member do
-      get :vote
-      patch :vote
-    end
-  end
+  #resources :explanations do 
+  #  member do
+  #    get :vote
+  #    patch :vote
+  #  end
+  #end
 
   resources :topics do
     get :autocomplete_topic_name, on: :collection

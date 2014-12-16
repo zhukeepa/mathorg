@@ -5,6 +5,6 @@
 %br/
 %br/
 
-- @topics.each do |topic| 
-  = link_to topic.name, topic
-  %br/
+%ul
+  - @root_topics.each do |topic| 
+    = render 'topic', topic: topic

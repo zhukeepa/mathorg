@@ -1,10 +1,7 @@
 :javascript
-  function toggleVisibility(id)
+  function makeVisible(id)
   {
-    if (document.getElementById(id).style.display == "none")
-      document.getElementById(id).style.display = "inline";
-    else
-      document.getElementById(id).style.display = "none"; 
+     document.getElementById(id).style.display = "inline";
   }
 
   var latest_hint_shown = [];
@@ -13,8 +10,12 @@
     if (typeof(latest_hint_shown[solution_id]) == 'undefined')
       latest_hint_shown[solution_id] = 0; 
 
-    document.getElementById("hint_" + solution_id + "_" + latest_hint_shown[solution_id]).style.display = "inline";
+    $("#hint_" + solution_id + "_" + latest_hint_shown[solution_id])[0].style.display = "inline";
+    $("#hint_button" + solution_id).html('Show next hint');
     ++latest_hint_shown[solution_id];
+
+    if (typeof($("#hint_" + solution_id + "_" + latest_hint_shown[solution_id])[0]) == 'undefined')
+      $("#hint_button" + solution_id)[0].style.display = "none"; 
   }
 
 %strong Source:
@@ -34,7 +35,7 @@
 
 = raw(@problem.body.bbcode_to_html.gsub("\n", "<br/>"))
 
-%h2 Solutions
+%h3 Solutions
 
 .row.list-group 
   - @problem.solutions.each do |solution|

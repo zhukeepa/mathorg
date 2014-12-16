@@ -6,7 +6,7 @@ class TopicsController < ApplicationController
   end
 
   def index
-  	@topics = Topic.all
+  	@root_topics = Topic.all.keep_if { |t| t.parents.size == 0 }
   end
 
   def new

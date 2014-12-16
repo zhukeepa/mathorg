@@ -1,22 +1,21 @@
 .list-group-item
-  %button{type: 'button', class: "btn btn-default", onclick: "toggleVisibility('solution#{solution.id}')"} Show solution
+  - if solution.hints.size > 0
+    %button{type: 'button', id: "hint_button#{solution.id}", class: "btn btn-default", onclick: "show_next_hint(#{solution.id})"} Show hint
+    - for i in 0...solution.hints.size
+      .hint{id: "hint_#{solution.id}_#{i}", style: "display:none"}
+        %br/
+        %strong 
+          = "Hint #{i+1}:"
+        = raw(solution.hints[i].bbcode_to_html.gsub("\n", "<br/>"))
+    %br/
+    %br/
+
+  %button{type: 'button', class: "btn btn-default", onclick: "makeVisible('solution#{solution.id}')"} Show solution
 
   %br/
   .solution{id: "solution#{solution.id}", style: "display:none"}
     %strong Solution: 
     = raw(solution.body.bbcode_to_html.gsub("\n", "<br/>"))
-
-  %br/
-  %br/
-  %button{type: 'button', class: "btn btn-default", onclick: "show_next_hint(#{solution.id})"} Show next hint
-  - for i in 0...solution.hints.size
-    .hint{id: "hint_#{solution.id}_#{i}", style: "display:none"}
-      %br/
-      %strong 
-        = "Hint #{i+1}:"
-      = raw(solution.hints[i].bbcode_to_html.gsub("\n", "<br/>"))
-
-
-  %br/
-  %br/
-  = link_to "Edit", edit_problem_solution_path(@problem, solution)
+    %br/
+    %br/
+    = link_to "Edit solution", edit_problem_solution_path(@problem, solution)

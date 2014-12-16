@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mathorg</title>
+  <title>Math Olympiad Organization Project</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -20,7 +20,7 @@
 
   <header class="navbar navbar-fixed-top navbar-inverse navbar-default" role="navigation">
     <div class="container-fluid">
-        <%= link_to 'MathOrg', root_path, class: "navbar-brand" %>
+        <%= link_to raw('MO<sup>2</sup>P'), root_path, class: "navbar-brand" %>
 
         <form class="navbar-form navbar-left" role="search" action="/search/results" method="get">
           <div class="form-group">

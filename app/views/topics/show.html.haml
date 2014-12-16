@@ -6,13 +6,16 @@
 %br/
 
 %br/
-= button_to('Edit', { action: "edit" }, { class: "btn btn-default", method: 'get' })
-= button_to('Destroy', {}, { class: "btn btn-default", method: 'delete' })
 
+.btn-group{role: "group"}
+  %button 
+  = button_to('Edit', { action: "edit" }, { class: "btn btn-default", method: 'get' }) 
+  = button_to('Destroy', {}, { class: "btn btn-default", method: 'delete' })
 
 %br/
 %br/
-= link_to 'Add explanation', new_explanation_path(topic: @topic.id)
 
-- @topic.explanations.each do |explanation|
-  = render partial: 'explanation', object: explanation
+/ = #link_to 'Add explanation', new_explanation_path(topic: @topic.id)
+
+/ - #@topic.explanations.each do |explanation|
+/  = #render partial: 'explanation', object: explanation
