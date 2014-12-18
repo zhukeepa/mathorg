@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   
   has_many :explanations
+  has_many :solutions
+  
   #has_many :comments
   #attributes: name, background [string. for now]
 end

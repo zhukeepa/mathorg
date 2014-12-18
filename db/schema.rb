@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141209221106) do
+ActiveRecord::Schema.define(version: 20141218025140) do
 
   create_table "explanation_parts", force: true do |t|
     t.datetime "created_at"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20141209221106) do
     t.boolean  "show_solution"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "description"
   end
 
   create_table "solutions", force: true do |t|
@@ -46,8 +47,10 @@ ActiveRecord::Schema.define(version: 20141209221106) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "body"
+    t.integer  "author_id"
   end
 
+  add_index "solutions", ["author_id"], name: "index_solutions_on_author_id"
   add_index "solutions", ["problem_id"], name: "index_solutions_on_problem_id"
 
   create_table "topic_child_parents", force: true do |t|

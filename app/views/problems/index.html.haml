@@ -1,0 +1,11 @@
+= render 'search/problem'
+
+%br/
+%br/
+%br/
+
+- if user_signed_in? 
+  %em
+    %h2
+      Or...
+      = link_to "add your own problem!", new_problem_path

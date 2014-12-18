@@ -18,4 +18,9 @@
     = raw(solution.body.bbcode_to_html.gsub("\n", "<br/>"))
     %br/
     %br/
-    = link_to "Edit solution", edit_problem_solution_path(@problem, solution)
+    %em 
+      = "Solution submitted by #{solution.author}"
+    - if solution.author == current_user
+      %br/
+      %br/
+      = link_to "Edit solution", edit_problem_solution_path(@problem, solution)

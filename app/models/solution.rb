@@ -2,6 +2,7 @@ class Solution < ActiveRecord::Base
   serialize  :hints
 
   belongs_to :problem
+  belongs_to :author, class_name: 'User'
 
   has_many :topic_solutions, dependent: :destroy
   has_many :topics, through: :topic_solutions

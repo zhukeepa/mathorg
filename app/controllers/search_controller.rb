@@ -9,8 +9,11 @@ class SearchController < ApplicationController
   end
 
 private 
-
   def topic_search_results(params)
   	@topic_results = Topic.search(params[:name])
+  end
+
+  def problem_search_results(params)
+  	render text: params
   end
 end

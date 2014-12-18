@@ -1,16 +1,11 @@
-= form_for :search, url: :search_results, method: :get do |f|
-  = f.label :topics
-  %br/
-  = f.autocomplete_field :topics, autocomplete_topic_name_topics_path, 'data-delimiter' => ', '
-  %br/
-  = f.label :keywords
-  %br/
-  = f.text_field :keywords
-  %br/
-  = f.label :sort_by
-  %br/
-  = f.select :sort_by, [['Best match','best_match'],['Niceness','niceness'],['Instructiveness','instructiveness']]
-  %br/
-  %br/
-  = f.hidden_field :search_type, value: "problem"
-  = f.submit "Search"
+%h1 Search Problems
+
+= simple_form_for :search, url: :search_results, method: :get do |f|
+  = f.input :topics, required: false, url: autocomplete_topic_name_topics_path, as: :autocomplete, |
+    'data-delimiter' => ', ', input_html: { class: "text optional form-control" }
+  = f.input :keywords, required: false
+  = f.input "Sort by:", required: false do 
+    %br/
+    = f.select :sort_by, [['Best match','best_match'],['Niceness','niceness'],['Instructiveness','instructiveness']]
+  = f.input :search_type, as: :hidden, input_html: { value: "problem" }
+  = f.button :submit, "Search"

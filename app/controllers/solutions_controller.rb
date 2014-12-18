@@ -17,6 +17,7 @@ class SolutionsController < ApplicationController
     ## what eacxtly does @problem.solutions.new do? as a method on an array?
 
     @solution.hints = Solution.hint_string_to_array(params[:solution][:hints])
+    @solution.author = current_user
 
     @topics = Topic.topics_string_to_topics_array(params[:solution][:topics])
     @solution.topics = @topics

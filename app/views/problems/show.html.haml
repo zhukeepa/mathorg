@@ -18,6 +18,9 @@
       $("#hint_button" + solution_id)[0].style.display = "none"; 
   }
 
+%h2
+  = @problem.description
+
 %strong Source:
 = @problem.source
 %br/
@@ -41,4 +44,5 @@
   - @problem.solutions.each do |solution|
     = render partial: 'solution', object: solution
 
-= link_to 'Add solution', new_problem_solution_path(@problem)
+- if user_signed_in?
+  = link_to 'Add solution', new_problem_solution_path(@problem)
