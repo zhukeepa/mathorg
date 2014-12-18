@@ -4,7 +4,7 @@ Mathorg::Application.routes.draw do
   get "search" => "search#index"
 
   devise_for :users
-  root "welcome#index"
+  root "problems#index"
   
   #resources :explanations do 
   #  member do
@@ -12,6 +12,8 @@ Mathorg::Application.routes.draw do
   #    patch :vote
   #  end
   #end
+
+  resources :problem_resources
 
   resources :topics do
     get :autocomplete_topic_name, on: :collection

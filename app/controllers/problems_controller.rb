@@ -13,15 +13,20 @@ class ProblemsController < ApplicationController
 
   def create
   	@problem = Problem.new(params[:problem].permit(:source, :author, :body, :description))
-  	@problem.save
-
-  	redirect_to action: :show, id: @problem.id
+  	if @problem.save
+    	redirect_to action: :show, id: @problem.id
+    else
+      render 'new'
+    end
   end
 
   def update
     @problem = Problem.find(params[:id])
-    @problem.update(params[:problem].permit(:source, :author, :body, :description))
-  	redirect_to @problem
+    if @problem.update(params[:problem].permit(:source, :author, :body, :description))
+    	redirect_to @problem
+    else
+      render 'edit'
+    end
   end
 
   def destroy

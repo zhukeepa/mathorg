@@ -22,13 +22,20 @@
     <div class="container-fluid">
         <%= link_to raw('MO<sup>2</sup>P'), root_path, class: "navbar-brand" %>
 
-        <form class="navbar-form navbar-left" role="search" action="/search/results" method="get">
+
+        <!-- <form class="navbar-form navbar-left" role="search" action="/search/results" method="get">
           <div class="form-group">
             <input class="form-control" placeholder="Search topics..." data-autocomplete="/topics/autocomplete_topic_name" id="search_name" name="search[name]" type="text" class="ui-autocomplete-input" autocomplete="off">
             <input id="search_search_type" name="search[search_type]" type="hidden" value="topic">
           </div>
           <button type="submit" class="btn btn-default">Submit</button>
-        </form>
+        </form> -->
+
+        <ul class="nav navbar-nav navbar-left">
+          <li><%= link_to 'Problem Resources', problem_resources_path, :class => 'navbar-link' %></li>
+          <li><%= link_to 'Problem Search', search_path, :class => 'navbar-link' %></li>
+          <li><%= link_to 'Topic List', topics_path, :class => 'navbar-link' %></li>
+        </ul>
 
         <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>

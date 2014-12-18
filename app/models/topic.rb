@@ -1,6 +1,8 @@
 class Topic < ActiveRecord::Base
   searchkick
 
+  validates :name, presence: true, length: { minimum: 5 }
+
   has_many :topic_explanations, dependent: :destroy
   has_many :explanations, through: :topic_explanations
 

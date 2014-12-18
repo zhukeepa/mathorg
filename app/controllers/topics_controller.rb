@@ -21,18 +21,23 @@ class TopicsController < ApplicationController
     @topic = Topic.new(params[:topic].permit(:name))
     @parents = Topic.topics_string_to_topics_array(params[:topic][:parents])
     @topic.parents = @parents
-    @topic.save
-
-    redirect_to action: :show, id: @topic.id
+    
+    if @topic.save
+      redirect_to action: :show, id: @topic.id
+    else
+      render 'new'
+    end
   end
 
   def update
     @topic = Topic.find(params[:id])
-    @topic.update(params[:topic].permit(:name))
-    @parents = Topic.topics_string_to_topics_array(params[:topic][:parents])
-    @topic.parents  = @parents
-
-    redirect_to @topic
+    if @topic.update(params[:topic].permit(:name))
+      @parents = Topic.topics_string_to_topics_array(params[:topic][:parents])
+      @topic.parents  = @parents
+      redirect_to @topic
+    else
+      render 'edit'
+    end
   end
 
   def destroy
