@@ -14,6 +14,6 @@ private
   end
 
   def problem_search_results(params)
-  	render text: params
+  	@problem_results = Problem.search params[:keywords], fields: [:description, :body]
   end
 end

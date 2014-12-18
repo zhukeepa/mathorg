@@ -1,0 +1,10 @@
+.row.list-group 
+  - @problem_results.each do |pr|
+    .list-group-item
+      %strong
+        = pr.description
+      %br/
+      %br/
+      = raw(pr.body.bbcode_to_html.gsub("\n", "<br/>"))
+      %br/
+      = link_to "(Link)", pr
