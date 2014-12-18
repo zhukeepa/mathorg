@@ -1,7 +1,4 @@
-= "(+ #{@explanation.get_upvotes.size} | - #{@explanation.get_downvotes.size})"
-
+%strong Votes: 
+= raw("(#{link_to '++', upvote_explanation_path, remote: true}) #{upvote_num} | ")
+= raw("(#{link_to '--', downvote_explanation_path, remote: true}) #{downvote_num}")
 %br/
-= link_to "Upvote", vote_explanation_path(user_id: current_user.id, pos: true), remote: true
-| 
-= link_to "Downvote", controller: 'explanations', action: 'vote', user_id: current_user.id, pos: false, remote: true
-%br/ 

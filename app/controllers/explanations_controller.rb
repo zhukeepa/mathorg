@@ -42,13 +42,12 @@ class ExplanationsController < ApplicationController
   end
 
   def vote
-    if params[:pos] == 'true'
-      Explanation.find(params[:id]).liked_by User.find(params[:user_id])
-    else
-      Explanation.find(params[:id]).disliked_by User.find(params[:user_id])
-    end
+    e = Explanation.find(params[:id])
+    e.vote_by voter: current_user, vote: params[:vote]
 
-    #::TODO:: smells very hacky
-    @explanation = Explanation.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.js { render 'vote', locals: { upvote_num: e.get_upvotes.size, downvote_num: e.get_downvotes.size } }
+    end
   end
 end

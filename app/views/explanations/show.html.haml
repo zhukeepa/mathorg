@@ -14,7 +14,7 @@
 = link_to 'Edit', edit_explanation_path(@explanation)
 
 #dispvotes
-  = render 'votes'
+  = render 'votes', { upvote_num: @explanation.get_upvotes.size, downvote_num: @explanation.get_downvotes.size }
 %br/
 
 - if current_user == @explanation.user
