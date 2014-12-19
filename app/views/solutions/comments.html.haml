@@ -1,0 +1,19 @@
+- if @comments.size > 0
+  .row.list-group
+    - @comments.each do |comment| 
+      .list-group-item
+        %strong
+          = comment.user
+        %br/
+        = raw(comment.comment.bbcode_to_html.gsub("\n", "<br/>"))
+
+- else
+  %em No comments have been submitted yet. 
+
+- if user_signed_in?
+  %h3 Add Comment
+  = simple_form_for @solution.comments.build do |f|
+    = f.input :comment, input_html: { rows: long_entry_row_num } ##::TODO:: long_entry_row_num lmao
+    = f.input :commentable_type, as: :hidden, input_html: { value: 'Solution'} 
+    = f.input :commentable_id  , as: :hidden, input_html: { value: @solution.id }
+    = f.button :submit, 'Add comment'

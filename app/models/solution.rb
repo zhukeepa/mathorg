@@ -1,4 +1,6 @@
 class Solution < ActiveRecord::Base
+  acts_as_commentable
+
   serialize  :hints
 
   belongs_to :problem

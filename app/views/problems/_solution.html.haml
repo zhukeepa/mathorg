@@ -2,20 +2,19 @@
   - if solution.hints.size > 0
     %strong 
       %u
-        = link_to 'Show hint', '#', { style: 'color:#000000;', id: "hint_button#{solution.id}", onclick: "show_next_hint(#{solution.id})" } 
+        = link_to 'Show hint', 'javascript:;', { style: 'color:#000000;', id: "hint_button#{solution.id}", onclick: "show_next_hint(#{solution.id})" } 
 
     - for i in 0...solution.hints.size
       .hint{id: "hint_#{solution.id}_#{i}", style: "display:none"}
-        %br/
         %strong 
           = "Hint #{i+1}:"
         = raw(solution.hints[i].bbcode_to_html.gsub("\n", "<br/>"))
-  %br/
-  %br/
+        %br/
+    %br/
 
   %strong
     %u
-      = link_to ' Show solution', '#', { style: 'color:#000000;', id: "hint_button#{solution.id}", onclick: "makeVisible('solution#{solution.id}')" } 
+      = link_to ' Show solution', 'javascript:;', { style: 'color:#000000;', id: "hint_button#{solution.id}", onclick: "makeVisible('solution#{solution.id}')" } 
   /%button{type: 'button', class: "btn btn-default", onclick: "makeVisible('solution#{solution.id}')"} Show solution
 
   %br/
@@ -26,7 +25,10 @@
     %br/
     %em 
       = "Solution submitted by #{solution.author}"
+    %br/
+    %br/
+    = link_to "View comments", comments_problem_solution_path(@problem, solution) 
     - if solution.author == current_user
       %br/
       %br/
-      = link_to "Edit solution", edit_problem_solution_path(@problem, solution)
+      = link_to "Edit solution", edit_problem_solution_path(@problem, solution), { class: "btn btn-default" }

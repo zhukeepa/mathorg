@@ -14,9 +14,15 @@ Mathorg::Application.routes.draw do
   resources :topics do
     get :autocomplete_topic_name, on: :collection
   end
+
+  resources :comments
   
   resources :problems do 
-    resources :solutions
+    resources :solutions do
+      member do
+        get :comments
+      end
+    end
   end
 
   mathjax 'mathjax'

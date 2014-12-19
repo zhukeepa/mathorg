@@ -9,6 +9,11 @@ class SolutionsController < ApplicationController
     @problem = Problem.find(params[:problem_id])
   end
 
+  def comments
+    @solution = Solution.find(params[:id])
+    @comments = @solution.comments
+  end
+
   def create
     @problem = Problem.find(params[:problem_id])
   	@solution = @problem.solutions.create(params[:solution].permit(:body))
