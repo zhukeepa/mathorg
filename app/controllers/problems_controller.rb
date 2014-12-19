@@ -30,6 +30,9 @@ class ProblemsController < ApplicationController
   end
 
   def destroy
+    @problem = Problem.find(params[:id])
+    @problem.destroy
+
     render text: "The problem has been destroyed."
   end
 end

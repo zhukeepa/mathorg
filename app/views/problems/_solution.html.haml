@@ -1,16 +1,22 @@
 .list-group-item
   - if solution.hints.size > 0
-    %button{type: 'button', id: "hint_button#{solution.id}", class: "btn btn-default", onclick: "show_next_hint(#{solution.id})"} Show hint
+    %strong 
+      %u
+        = link_to 'Show hint', '#', { style: 'color:#000000;', id: "hint_button#{solution.id}", onclick: "show_next_hint(#{solution.id})" } 
+
     - for i in 0...solution.hints.size
       .hint{id: "hint_#{solution.id}_#{i}", style: "display:none"}
         %br/
         %strong 
           = "Hint #{i+1}:"
         = raw(solution.hints[i].bbcode_to_html.gsub("\n", "<br/>"))
-    %br/
-    %br/
+  %br/
+  %br/
 
-  %button{type: 'button', class: "btn btn-default", onclick: "makeVisible('solution#{solution.id}')"} Show solution
+  %strong
+    %u
+      = link_to ' Show solution', '#', { style: 'color:#000000;', id: "hint_button#{solution.id}", onclick: "makeVisible('solution#{solution.id}')" } 
+  /%button{type: 'button', class: "btn btn-default", onclick: "makeVisible('solution#{solution.id}')"} Show solution
 
   %br/
   .solution{id: "solution#{solution.id}", style: "display:none"}

@@ -15,7 +15,7 @@
     ++latest_hint_shown[solution_id];
 
     if (typeof($("#hint_" + solution_id + "_" + latest_hint_shown[solution_id])[0]) == 'undefined')
-      $("#hint_button" + solution_id)[0].style.display = "none"; 
+      $("#hint_button" + solution_id)[0].remove(); 
   }
 
 %h2
@@ -30,9 +30,9 @@
 %br/
 
 - if user_signed_in?
-  = link_to 'Edit', edit_problem_path(@problem)
-  | 
-  = link_to 'Destroy', problem_path(@problem), method: :delete, data: { confirm: 'Are you sure?' }
+  .btn-group
+    = link_to 'Edit', edit_problem_path(@problem), { class: "btn btn-default" }
+    = link_to 'Destroy', problem_path(@problem), { class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } }
 %br/
 %br/
 
@@ -40,9 +40,14 @@
 
 %h3 Solutions
 
-.row.list-group 
-  - @problem.solutions.each do |solution|
-    = render partial: 'solution', object: solution
+- if @problem.solutions.size > 0
+  .row.list-group 
+    - @problem.solutions.each do |solution|
+      = render partial: 'solution', object: solution
+- else
+  %em No solutions have been contributed yet for this problem.
+  %br/
+  %br/
 
 - if user_signed_in?
-  = link_to 'Add solution', new_problem_solution_path(@problem)
+  = link_to 'Add solution', new_problem_solution_path(@problem), { class: "btn btn-default" }
