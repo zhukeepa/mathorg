@@ -18,7 +18,7 @@
       $("#hint_button" + solution_id)[0].remove(); 
   }
 
-%h2
+%h3
   = @problem.description
 
 %strong Source:
@@ -28,15 +28,17 @@
 %strong Author:
 = @problem.author
 %br/
+%br/
+= raw(@problem.body.bbcode_to_html.gsub("\n", "<br/>"))
 
 - if user_signed_in?
+  %br/
+  %br/
   .btn-group
     = link_to 'Edit', edit_problem_path(@problem), { class: "btn btn-default" }
     = link_to 'Destroy', problem_path(@problem), { class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } }
 %br/
 %br/
-
-= raw(@problem.body.bbcode_to_html.gsub("\n", "<br/>"))
 
 %h3 Solutions
 
