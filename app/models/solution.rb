@@ -1,5 +1,6 @@
 class Solution < ActiveRecord::Base
   acts_as_commentable
+  acts_as_votable
 
   serialize  :hints
 

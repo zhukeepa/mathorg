@@ -27,7 +27,12 @@
       = "Solution submitted by #{solution.author}"
     %br/
     %br/
-    = link_to "View comments", comments_problem_solution_path(@problem, solution) 
+    = render 'shared/votes', { votable: solution, scope: 'quality', disp_text: 'Writeup quality' }
+    = render 'shared/votes', { votable: solution, scope: 'elegance' }
+    = render 'shared/votes', { votable: solution, scope: 'instructiveness' }
+    %br/
+    %em
+      = link_to "View comments", comments_problem_solution_path(@problem, solution) 
     - if solution.author == current_user
       %br/
       %br/

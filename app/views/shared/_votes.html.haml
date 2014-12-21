@@ -4,16 +4,20 @@
 - if not defined? disp_text
   - disp_text = nil
 
-.vote{id: "#{votable.class}_#{votable.id}_#{scope}_vote"}
+.vote{id: "#{votable.class}_#{votable.id}_#{format_scope(scope)}_vote"}
   %strong
-    = (disp_text || scope || "Votes").capitalize
-    = ':'
-  (
-  = link_to "++", upvote_path(votable_id: votable.id, votable_type: votable.class, scope: scope), | 
-    method: :post, remote: true
-  = votable.get_upvotes(vote_scope: scope).size
-  ) | (
-  = link_to "--", downvote_path(votable_id: votable.id, votable_type: votable.class, scope: scope), |
-    method: :post, remote: true
-  = votable.get_downvotes(vote_scope: scope).size
-  )
+    = (disp_text || scope || "Votes").capitalize + ':'
+  = surround '( ', ' )' do 
+    - if user_signed_in?
+      = link_to "++", upvote_path(votable_id: votable.id, votable_type: votable.class, scope: scope, disp_text: disp_text), | 
+      method: :post, remote: true
+    - else
+      ++
+    = votable.get_upvotes(vote_scope: scope).size
+    |
+    - if user_signed_in?
+      = link_to "--", downvote_path(votable_id: votable.id, votable_type: votable.class, scope: scope, disp_text: disp_text), |
+      method: :post, remote: true
+    - else
+      = '--'
+    = votable.get_downvotes(vote_scope: scope).size

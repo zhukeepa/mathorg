@@ -25,10 +25,10 @@ group :development, :test do
   gem 'sqlite3'
 end
 
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
-end
+# group :production, :development, :test do
+#   gem 'pg'
+#   gem 'rails_12factor'
+# end
 
 # Use devise for users
 gem 'devise'
