@@ -3,6 +3,9 @@ Mathorg::Application.routes.draw do
   get "search/results"
   get "search" => "search#index"
 
+  post "upvote" => "votes#upvote"
+  post "downvote" => "votes#downvote"
+
   devise_for :users
   root "problems#index"
   

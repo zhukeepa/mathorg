@@ -31,6 +31,12 @@
 %br/
 = raw(@problem.body.bbcode_to_html.gsub("\n", "<br/>"))
 
+
+= render 'shared/votes', { votable: @problem }
+
+%br/
+%br/
+
 - if user_signed_in?
   %br/
   %br/

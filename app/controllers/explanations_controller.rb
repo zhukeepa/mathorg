@@ -45,9 +45,6 @@ class ExplanationsController < ApplicationController
     e = Explanation.find(params[:id])
     e.vote_by voter: current_user, vote: params[:vote]
 
-    respond_to do |format|
-      format.html
-      format.js { render 'vote', locals: { upvote_num: e.get_upvotes.size, downvote_num: e.get_downvotes.size } }
-    end
+    render 'vote', locals: { upvote_num: e.get_upvotes.size, downvote_num: e.get_downvotes.size }
   end
 end

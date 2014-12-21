@@ -1,0 +1,11 @@
+.vote{id: "#{votable.class}_#{votable.id}_vote"}
+  %strong Votes
+  (
+  = link_to "++", upvote_path(votable_id: votable.id, votable_type: votable.class), | 
+    method: :post, remote: true
+  = votable.get_upvotes.size
+  ) | (
+  = link_to "--", downvote_path(votable_id: votable.id, votable_type: votable.class), |
+    method: :post, remote: true
+  = votable.get_downvotes.size
+  )
