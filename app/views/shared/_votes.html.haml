@@ -1,11 +1,19 @@
-.vote{id: "#{votable.class}_#{votable.id}_vote"}
-  %strong Votes
+- if not defined? scope 
+  - scope = nil
+
+- if not defined? disp_text
+  - disp_text = nil
+
+.vote{id: "#{votable.class}_#{votable.id}_#{scope}_vote"}
+  %strong
+    = (disp_text || scope || "Votes").capitalize
+    = ':'
   (
-  = link_to "++", upvote_path(votable_id: votable.id, votable_type: votable.class), | 
+  = link_to "++", upvote_path(votable_id: votable.id, votable_type: votable.class, scope: scope), | 
     method: :post, remote: true
-  = votable.get_upvotes.size
+  = votable.get_upvotes(vote_scope: scope).size
   ) | (
-  = link_to "--", downvote_path(votable_id: votable.id, votable_type: votable.class), |
+  = link_to "--", downvote_path(votable_id: votable.id, votable_type: votable.class, scope: scope), |
     method: :post, remote: true
-  = votable.get_downvotes.size
+  = votable.get_downvotes(vote_scope: scope).size
   )

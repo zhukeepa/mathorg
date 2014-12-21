@@ -1,1 +1,1 @@
-$("#<%= votable.class %>_<%= votable.id %>_vote").html("<%= j (render 'shared/votes', { votable: votable }) %>");
+$("#<%= votable.class %>_<%= votable.id %>_<%= scope %>_vote").html("<%= j (render 'shared/votes', { votable: votable, scope: scope }) %>");

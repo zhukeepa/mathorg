@@ -9,9 +9,9 @@ class VotesController < ApplicationController
 
   def vote(pos, params)
     v = get_votable_from_id_and_class(params[:votable_id], params[:votable_type])
-    v.vote_by voter: current_user, vote: pos
+    v.vote_by voter: current_user, vote_scope: params[:scope], vote: pos
 
-    render 'shared/vote', locals: { votable: v }
+    render 'shared/vote', locals: { votable: v, scope: params[:scope] }
   end
 
   def get_votable_from_id_and_class(id, type)

@@ -31,9 +31,6 @@
 %br/
 = raw(@problem.body.bbcode_to_html.gsub("\n", "<br/>"))
 
-
-= render 'shared/votes', { votable: @problem }
-
 %br/
 %br/
 

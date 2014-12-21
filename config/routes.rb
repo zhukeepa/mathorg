@@ -8,14 +8,6 @@ Mathorg::Application.routes.draw do
 
   devise_for :users
   root "problems#index"
-  
-  resources :explanations do 
-    member do
-      get   :upvote  , action: :vote, vote: 'good'
-      get   :downvote, action: :vote, vote: 'bad'
-      patch :vote
-    end
-  end
 
   resources :problem_resources
 
