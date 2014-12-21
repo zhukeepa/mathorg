@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20141219001229) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "comments", force: true do |t|
     t.string   "title",            limit: 50, default: ""
     t.text     "comment"
@@ -24,9 +27,9 @@ ActiveRecord::Schema.define(version: 20141219001229) do
     t.datetime "updated_at"
   end
 
-  add_index "comments", ["commentable_id"], name: "index_comments_on_commentable_id"
-  add_index "comments", ["commentable_type"], name: "index_comments_on_commentable_type"
-  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
+  add_index "comments", ["commentable_id"], name: "index_comments_on_commentable_id", using: :btree
+  add_index "comments", ["commentable_type"], name: "index_comments_on_commentable_type", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "explanation_parts", force: true do |t|
     t.datetime "created_at"
@@ -35,33 +38,33 @@ ActiveRecord::Schema.define(version: 20141219001229) do
 
   create_table "explanations", force: true do |t|
     t.text     "description"
-    t.string   "title"
+    t.text     "title"
     t.integer  "depth"
-    t.string   "ordering"
+    t.text     "ordering"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "body"
     t.integer  "user_id"
   end
 
-  add_index "explanations", ["user_id"], name: "index_explanations_on_user_id"
+  add_index "explanations", ["user_id"], name: "index_explanations_on_user_id", using: :btree
 
   create_table "problem_resources", force: true do |t|
     t.text     "problem_ids"
-    t.string   "title"
-    t.string   "name"
+    t.text     "title"
+    t.text     "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "problems", force: true do |t|
     t.text     "body"
-    t.string   "source"
-    t.string   "author"
+    t.text     "source"
+    t.text     "author"
     t.boolean  "show_solution"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "description"
+    t.text     "description"
   end
 
   create_table "solutions", force: true do |t|
@@ -73,8 +76,8 @@ ActiveRecord::Schema.define(version: 20141219001229) do
     t.integer  "author_id"
   end
 
-  add_index "solutions", ["author_id"], name: "index_solutions_on_author_id"
-  add_index "solutions", ["problem_id"], name: "index_solutions_on_problem_id"
+  add_index "solutions", ["author_id"], name: "index_solutions_on_author_id", using: :btree
+  add_index "solutions", ["problem_id"], name: "index_solutions_on_problem_id", using: :btree
 
   create_table "topic_child_parents", force: true do |t|
     t.float    "weight"
@@ -84,16 +87,16 @@ ActiveRecord::Schema.define(version: 20141219001229) do
     t.datetime "updated_at"
   end
 
-  add_index "topic_child_parents", ["child_id"], name: "index_topic_child_parents_on_child_id"
-  add_index "topic_child_parents", ["parent_id"], name: "index_topic_child_parents_on_parent_id"
+  add_index "topic_child_parents", ["child_id"], name: "index_topic_child_parents_on_child_id", using: :btree
+  add_index "topic_child_parents", ["parent_id"], name: "index_topic_child_parents_on_parent_id", using: :btree
 
   create_table "topic_explanations", force: true do |t|
     t.integer "topic_id"
     t.integer "explanation_id"
   end
 
-  add_index "topic_explanations", ["explanation_id"], name: "index_topic_explanations_on_explanation_id"
-  add_index "topic_explanations", ["topic_id"], name: "index_topic_explanations_on_topic_id"
+  add_index "topic_explanations", ["explanation_id"], name: "index_topic_explanations_on_explanation_id", using: :btree
+  add_index "topic_explanations", ["topic_id"], name: "index_topic_explanations_on_topic_id", using: :btree
 
   create_table "topic_solutions", force: true do |t|
     t.float    "weight"
@@ -103,48 +106,48 @@ ActiveRecord::Schema.define(version: 20141219001229) do
     t.datetime "updated_at"
   end
 
-  add_index "topic_solutions", ["solution_id"], name: "index_topic_solutions_on_solution_id"
-  add_index "topic_solutions", ["topic_id"], name: "index_topic_solutions_on_topic_id"
+  add_index "topic_solutions", ["solution_id"], name: "index_topic_solutions_on_solution_id", using: :btree
+  add_index "topic_solutions", ["topic_id"], name: "index_topic_solutions_on_topic_id", using: :btree
 
   create_table "topics", force: true do |t|
-    t.string   "name"
+    t.text     "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
+    t.text     "email",                  default: "", null: false
+    t.text     "encrypted_password",     default: "", null: false
+    t.text     "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
+    t.text     "current_sign_in_ip"
+    t.text     "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "username"
+    t.text     "username"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  add_index "users", ["username"], name: "index_users_on_username", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
   create_table "votes", force: true do |t|
     t.integer  "votable_id"
-    t.string   "votable_type"
+    t.text     "votable_type"
     t.integer  "voter_id"
-    t.string   "voter_type"
+    t.text     "voter_type"
     t.boolean  "vote_flag"
-    t.string   "vote_scope"
+    t.text     "vote_scope"
     t.integer  "vote_weight"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "votes", ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope"
-  add_index "votes", ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
+  add_index "votes", ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope", using: :btree
+  add_index "votes", ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope", using: :btree
 
 end

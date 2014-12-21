@@ -21,14 +21,14 @@ gem 'searchkick'
 gem 'acts_as_votable'
 
 # Use sqlite3 as the database for Active Record
-group :development, :test do
-  gem 'sqlite3'
-end
-
-# group :production, :development, :test do
-#   gem 'pg'
-#   gem 'rails_12factor'
+# group :development, :test do
+#   gem 'sqlite3'
 # end
+
+group :production, :development, :test do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
 # Use devise for users
 gem 'devise'

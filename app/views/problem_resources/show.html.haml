@@ -4,7 +4,7 @@
 %ol
   - @problems.each do |p|
     %li
-      = p.body
+      = raw(p.body.bbcode_to_html.gsub("\n", "<br/>"))
       %br/
       = link_to "(Link)", p 
       - if p.solutions.empty?
