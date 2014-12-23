@@ -14,6 +14,11 @@ private
   end
 
   def problem_search_results(params)
-  	@problem_results = Problem.search params[:keywords], fields: [:description, :body]
+    # ::TODO:: not DRY
+    if params[:source] == ''
+    	@problem_results = Problem.search params[:keywords], fields: [:description, :body]
+    else
+      @problem_results = Problem.search params[:keywords], fields: [:description, :body], where: { source: [params[:source]]}
+    end
   end
 end

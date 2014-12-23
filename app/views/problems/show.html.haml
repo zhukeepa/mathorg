@@ -25,9 +25,13 @@
 = @problem.source
 %br/
 
-%strong Author:
-= @problem.author
+= render 'shared/topic_list', name: 'Topic', topics: @problem.topics
 %br/
+
+- if not @problem.author.nil? and @problem.author != ''
+  %strong Author:
+  = @problem.author
+  %br/
 %br/
 = raw(@problem.body.bbcode_to_html.gsub("\n", "<br/>"))
 

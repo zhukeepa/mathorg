@@ -14,6 +14,11 @@ class ProblemsController < ApplicationController
   def create
   	@problem = Problem.new(params[:problem].permit(:source, :author, :body, :description))
   	if @problem.save
+      @topics = Topic.topics_string_to_topics_array(params[:problem][:topics])
+      @problem.topics = @topics
+
+      ##::TODO:: ^^ Maybe you can put the above elsewhere?
+
     	redirect_to action: :show, id: @problem.id
     else
       render 'new'
@@ -23,6 +28,9 @@ class ProblemsController < ApplicationController
   def update
     @problem = Problem.find(params[:id])
     if @problem.update(params[:problem].permit(:source, :author, :body, :description))
+      @topics = Topic.topics_string_to_topics_array(params[:problem][:topics])
+      @problem.topics = @topics
+      
     	redirect_to @problem
     else
       render 'edit'

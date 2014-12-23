@@ -6,6 +6,9 @@ class Topic < ActiveRecord::Base
   has_many :topic_explanations, dependent: :destroy
   has_many :explanations, through: :topic_explanations
 
+  has_many :topic_problems, dependent: :destroy
+  has_many :problems, through: :topic_problems
+
   has_many :topic_solutions, dependent: :destroy
   has_many :solutions, through: :topic_solutions
 

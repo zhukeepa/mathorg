@@ -6,11 +6,17 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <script type="text/javascript">
-    function preview(class_name)
+    function preview(body_id, title_id)
     {
-      var obj = $("#" + class_name); 
-      body = obj.val();
-      $.post('/services/preview', {text: body}, function(data) { $('#preview').html(data.preview_html); });
+      var body_text  = $("#" + body_id).val(); 
+      if (typeof title_id !== 'undefined')
+        var title_text = '[b]' + $("#" + title_id).val() + '[/b]\n\n'
+      else
+        var title_text = ''; 
+
+      var preview_text = title_text + body_text; 
+      
+      $.post('/services/preview', {text: preview_text}, function(data) { $('#preview').html(data.preview_html); });
       
       //Without the delay, MathJax doesn't seem to recognize the new math 
       //that's appeared quickly enough. 

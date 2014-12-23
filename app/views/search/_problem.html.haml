@@ -3,6 +3,7 @@
 = simple_form_for :search, url: :search_results, method: :get do |f|
   = f.input :topics, required: false, url: autocomplete_topic_name_topics_path, as: :autocomplete, |
     'data-delimiter' => ', ', input_html: { class: "text optional form-control" }
+  = f.input :source, required: false
   = f.input :keywords, required: false
   = f.input "Sort by:", required: false do 
     %br/

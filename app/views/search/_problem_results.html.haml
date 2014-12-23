@@ -2,9 +2,17 @@
   - @problem_results.each do |pr|
     .list-group-item
       %strong
-        = pr.description
+        = link_to pr.description, pr
       %br/
       %br/
+
+      %strong Source:
+      = pr.source
+      %br/
+
+      = render 'shared/topic_list', name: 'Topic', topics: pr.topics
+      %br/
+      %br/
+
       = raw(pr.body.bbcode_to_html.gsub("\n", "<br/>"))
       %br/
-      = link_to "(Link)", pr
