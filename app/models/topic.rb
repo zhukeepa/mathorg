@@ -3,14 +3,10 @@ class Topic < ActiveRecord::Base
 
   validates :name, presence: true, uniqueness: true, length: { minimum: 5 }
 
-  has_many :topic_explanations, dependent: :destroy
-  has_many :explanations, through: :topic_explanations
-
-  has_many :topic_problems, dependent: :destroy
-  has_many :problems, through: :topic_problems
-
-  has_many :topic_solutions, dependent: :destroy
-  has_many :solutions, through: :topic_solutions
+  has_many :topic_categorizables
+  has_many :problems,     through: :topic_categorizables
+  has_many :explanations, through: :topic_categorizables
+  has_many :solutions,    through: :topic_categorizables
 
   has_many :topic_child_parents, foreign_key: :child_id, dependent: :destroy 
   has_many :parents, through: :topic_child_parents, source: :parent

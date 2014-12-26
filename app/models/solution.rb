@@ -7,8 +7,8 @@ class Solution < ActiveRecord::Base
   belongs_to :problem
   belongs_to :author, class_name: 'User'
 
-  has_many :topic_solutions, dependent: :destroy
-  has_many :topics, through: :topic_solutions
+  has_many :topic_categorizables, as: :categorizable
+  has_many :topics, through: :topic_categorizables
 
   def initialize(*args)
     super 

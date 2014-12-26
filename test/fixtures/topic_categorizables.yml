@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  weight: 1.5
+  categorizable_id: 
+  categorizable_type: Categorizable
+
+two:
+  weight: 1.5
+  categorizable_id: 
+  categorizable_type: Categorizable

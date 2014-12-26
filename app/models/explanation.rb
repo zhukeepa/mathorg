@@ -3,6 +3,6 @@ class Explanation < ActiveRecord::Base
 
   belongs_to :user
     
-  has_many :topic_explanations, dependent: :destroy
-  has_many :topics, through: :topic_explanations
+  has_many :topic_categorizables, as: :categorizable
+  has_many :topics, through: :topic_categorizables
 end

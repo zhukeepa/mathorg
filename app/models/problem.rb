@@ -7,6 +7,6 @@ class Problem < ActiveRecord::Base
 
   has_many :solutions
 
-  has_many :topic_problems, dependent: :destroy
-  has_many :topics, through: :topic_problems
+  has_many :topic_categorizables, as: :categorizable
+  has_many :topics, through: :topic_categorizables
 end

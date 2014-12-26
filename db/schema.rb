@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141223105657) do
+ActiveRecord::Schema.define(version: 20141226225303) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -79,6 +79,18 @@ ActiveRecord::Schema.define(version: 20141223105657) do
   add_index "solutions", ["author_id"], name: "index_solutions_on_author_id", using: :btree
   add_index "solutions", ["problem_id"], name: "index_solutions_on_problem_id", using: :btree
 
+  create_table "topic_categorizables", force: true do |t|
+    t.float    "weight"
+    t.integer  "categorizable_id"
+    t.string   "categorizable_type"
+    t.integer  "topic_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "topic_categorizables", ["categorizable_id"], name: "topic_categorizables_index", using: :btree
+  add_index "topic_categorizables", ["topic_id"], name: "index_topic_categorizables_on_topic_id", using: :btree
+
   create_table "topic_child_parents", force: true do |t|
     t.float    "weight"
     t.integer  "parent_id"
@@ -89,36 +101,6 @@ ActiveRecord::Schema.define(version: 20141223105657) do
 
   add_index "topic_child_parents", ["child_id"], name: "index_topic_child_parents_on_child_id", using: :btree
   add_index "topic_child_parents", ["parent_id"], name: "index_topic_child_parents_on_parent_id", using: :btree
-
-  create_table "topic_explanations", force: true do |t|
-    t.integer "topic_id"
-    t.integer "explanation_id"
-  end
-
-  add_index "topic_explanations", ["explanation_id"], name: "index_topic_explanations_on_explanation_id", using: :btree
-  add_index "topic_explanations", ["topic_id"], name: "index_topic_explanations_on_topic_id", using: :btree
-
-  create_table "topic_problems", force: true do |t|
-    t.float    "weight"
-    t.integer  "topic_id"
-    t.integer  "problem_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "topic_problems", ["problem_id"], name: "index_topic_problems_on_problem_id", using: :btree
-  add_index "topic_problems", ["topic_id"], name: "index_topic_problems_on_topic_id", using: :btree
-
-  create_table "topic_solutions", force: true do |t|
-    t.float    "weight"
-    t.integer  "topic_id"
-    t.integer  "solution_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "topic_solutions", ["solution_id"], name: "index_topic_solutions_on_solution_id", using: :btree
-  add_index "topic_solutions", ["topic_id"], name: "index_topic_solutions_on_topic_id", using: :btree
 
   create_table "topics", force: true do |t|
     t.text     "name"
