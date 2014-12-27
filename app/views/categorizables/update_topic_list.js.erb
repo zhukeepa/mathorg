@@ -1,0 +1,1 @@
+$("#<%= @categorizable.class %>_<%= @categorizable.id %>_topiclist").html("<%= j (render 'categorizables/topic_list', { categorizable: @categorizable, name: @name }) %>")

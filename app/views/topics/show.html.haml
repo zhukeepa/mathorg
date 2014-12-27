@@ -1,5 +1,6 @@
 %h1= @topic.name
 
+- ##::TODO:: need to fix this up
 = render 'shared/topic_list', name: 'Parent'  , topics: @topic.parents
 %br/
 = render 'shared/topic_list', name: 'Subtopic', topics: @topic.children

@@ -6,6 +6,9 @@ Mathorg::Application.routes.draw do
   post "upvote" => "votes#upvote"
   post "downvote" => "votes#downvote"
 
+  get "categorizables/edit_topic_list"
+  patch "categorizables/update_topic_list"
+
   devise_for :users
   root "problems#index"
 

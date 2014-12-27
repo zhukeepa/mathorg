@@ -27,7 +27,7 @@
       = "Solution submitted by #{solution.author}"
     %br/
     %br/
-    = render 'shared/topic_list', name: 'Topic', topics: solution.topics
+    = render 'categorizables/topic_list', categorizable: solution
     %br/
     %br/
     = render 'shared/votes', { votable: solution, scope: 'quality', disp_text: 'Writeup quality' }

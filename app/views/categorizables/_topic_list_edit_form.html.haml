@@ -1,0 +1,12 @@
+- topics = categorizable.topics
+- if not defined? name
+  - name = nil
+
+.topic-list{id: "#{categorizable.class}_#{categorizable.id}_topiclist"}
+  - #::TODO:: VV does it have to be so fugly
+  = simple_form_for :categorizable, url: categorizables_update_topic_list_path(categorizable_id: categorizable.id, categorizable_klass: categorizable.class, name: name), method: :patch, html: { class: 'form-inline' }, remote: true do |f|
+    = f.input :topics, required: false, label: (name || "Topic").pluralize(topics.size) + ':', | 
+    url: autocomplete_topic_name_topics_path, as: :autocomplete, |
+    'data-delimiter' => ', ', input_html: { value: Topic.topics_array_to_topics_string(topics), |
+     class: "text optional form-control" } 
+    = f.button :submit, value: 'Update topics'

@@ -25,7 +25,7 @@
 = @problem.source
 %br/
 
-= render 'shared/topic_list', name: 'Topic', topics: @problem.topics
+= render 'categorizables/topic_list', categorizable: @problem
 %br/
 
 - if not @problem.author.nil? and @problem.author != ''

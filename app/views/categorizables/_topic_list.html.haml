@@ -1,0 +1,19 @@
+- topics = categorizable.topics
+- if not defined? name
+  - name = nil
+
+.topic-list{id: "#{categorizable.class}_#{categorizable.id}_topiclist"}
+  %strong 
+    = (name || "Topic").pluralize(topics.size) + ':'
+
+  - if topics.size > 0
+    = raw(topics.map do |t|
+      - link_to t.name, t
+    - end.join(', '))
+  - else
+    %emph None
+
+  - if user_signed_in?
+    = link_to '', categorizables_edit_topic_list_path(categorizable_id: categorizable.id, |
+      categorizable_klass: categorizable.class, name: name),  | 
+      { class: "glyphicon glyphicon-edit", remote: true }
