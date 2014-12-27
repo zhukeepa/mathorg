@@ -30,9 +30,9 @@
     = render 'categorizables/topic_list', categorizable: solution
     %br/
     %br/
-    = render 'shared/votes', { votable: solution, scope: 'quality', disp_text: 'Writeup quality' }
-    = render 'shared/votes', { votable: solution, scope: 'elegance' }
-    = render 'shared/votes', { votable: solution, scope: 'instructiveness' }
+    = render 'votables/votes', { votable: solution, scope: 'quality', disp_text: 'Writeup quality' }
+    = render 'votables/votes', { votable: solution, scope: 'elegance' }
+    = render 'votables/votes', { votable: solution, scope: 'instructiveness' }
     %br/
     %em
       = link_to "View comments", comments_problem_solution_path(@problem, solution) 

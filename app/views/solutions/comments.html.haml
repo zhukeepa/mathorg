@@ -8,7 +8,7 @@
         = raw(comment.comment.bbcode_to_html.gsub("\n", "<br/>"))
         %br/
         %br/
-        = render 'shared/votes', { votable: comment }
+        = render 'votables/votes', { votable: comment }
 
 - else
   %em No comments have been submitted yet. 

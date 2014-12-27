@@ -1,4 +1,4 @@
-class VotesController < ApplicationController
+class VotablesController < ApplicationController
   def upvote
     vote('good', params)
   end
@@ -11,7 +11,7 @@ class VotesController < ApplicationController
     v = get_votable_from_id_and_class(params[:votable_id], params[:votable_type])
     v.vote_by voter: current_user, vote_scope: params[:scope], vote: pos
 
-    render 'shared/vote', locals: { votable: v, scope: params[:scope], disp_text: params[:disp_text] }
+    render 'votables/vote', locals: { votable: v, scope: params[:scope], disp_text: params[:disp_text] }
   end
 
   def get_votable_from_id_and_class(id, type)
