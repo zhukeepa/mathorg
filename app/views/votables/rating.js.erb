@@ -1,0 +1,2 @@
+obj = $("#<%= votable.class %>_<%= votable.id %>_<%= format_scope(scope) %>_rate");
+obj.html("<%= j (render 'votables/ratings', { lower: lower.to_i, upper: upper.to_i, votable: votable, scope: scope, disp_text: disp_text }) %>");

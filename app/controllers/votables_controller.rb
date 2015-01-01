@@ -7,6 +7,13 @@ class VotablesController < ApplicationController
     vote('bad', params)
   end
 
+  def rate
+    v = get_votable_from_id_and_class(params[:votable_id], params[:votable_type])
+    v.vote_by voter: current_user, vote_scope: params[:scope], vote_weight: params[:rating]
+
+    render 'votables/rating', locals: { lower: params[:lower], upper: params[:upper], votable: v, scope: params[:scope], disp_text: params[:disp_text] }
+  end
+
   def vote(pos, params)
     v = get_votable_from_id_and_class(params[:votable_id], params[:votable_type])
     v.vote_by voter: current_user, vote_scope: params[:scope], vote: pos

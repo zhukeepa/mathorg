@@ -3,8 +3,9 @@ Mathorg::Application.routes.draw do
   get "search/results"
   get "search" => "search#index"
 
-  post "upvote" => "votables#upvote"
+  post "upvote"   => "votables#upvote"
   post "downvote" => "votables#downvote"
+  post "rate"     => "votables#rate"
 
   get "categorizables/edit_topic_list"
   patch "categorizables/update_topic_list"

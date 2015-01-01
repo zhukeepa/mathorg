@@ -1,1 +1,2 @@
-$("#<%= votable.class %>_<%= votable.id %>_<%= format_scope(scope) %>_vote").html("<%= j (render 'votables/votes', { votable: votable, scope: scope, disp_text: disp_text }) %>");
+obj = $("#<%= votable.class %>_<%= votable.id %>_<%= format_scope(scope) %>_vote");
+obj.html("<%= j (render 'votables/votes', { votable: votable, scope: scope, disp_text: disp_text }) %>");
