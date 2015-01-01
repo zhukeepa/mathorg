@@ -12,7 +12,7 @@ Mathorg::Application.routes.draw do
   devise_for :users
   root "problems#index"
 
-  resources :problem_resources
+  resources :problem_sets
 
   resources :topics do
     get :autocomplete_topic_name, on: :collection

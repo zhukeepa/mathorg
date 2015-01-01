@@ -44,4 +44,11 @@ class SolutionsController < ApplicationController
 
     redirect_to @solution.problem
   end
+
+  def destroy
+    @solution = Solution.find(params[:id])
+    @solution.destroy
+
+    render text: 'Your solution has been deleted.'
+  end
 end

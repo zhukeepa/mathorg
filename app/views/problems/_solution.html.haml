@@ -39,4 +39,6 @@
     - if solution.author == current_user
       %br/
       %br/
-      = link_to "Edit solution", edit_problem_solution_path(@problem, solution), { class: "btn btn-default" }
+      .btn-group
+        = link_to "Edit solution", edit_problem_solution_path(@problem, solution), { class: "btn btn-default" }
+        = link_to('Destroy solution', problem_solution_path(@problem, solution), { class: "btn btn-default", method: 'delete' })

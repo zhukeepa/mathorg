@@ -1,0 +1,10 @@
+- sources = problem.sources
+%strong 
+  = "Source".pluralize(sources.size) + ':'
+
+- if sources.size > 0
+  = raw(sources.map do |s|
+    - link_to s.name, s
+  - end.join(', '))
+- else
+  %emph None

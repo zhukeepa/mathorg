@@ -21,8 +21,7 @@
 %h3
   = @problem.description
 
-%strong Source:
-= @problem.source
+= render 'sources', problem: @problem
 %br/
 
 = render 'categorizables/topic_list', categorizable: @problem

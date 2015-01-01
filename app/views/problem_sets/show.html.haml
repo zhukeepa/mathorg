@@ -1,0 +1,17 @@
+%h1 
+  = @ps.name
+
+%ol
+  - @problems.each do |p|
+    %li
+      = raw(p.body.bbcode_to_html.gsub("\n", "<br/>"))
+      %br/
+      = link_to "(Link)", p 
+      - if p.solutions.empty?
+        %strong <font color="red">(Needs solution!)</font>
+
+
+%br/
+.btn-group
+  = link_to('Edit', { action: "edit" }, { class: "btn btn-default", method: 'get' }) 
+  = link_to('Destroy', {}, { class: "btn btn-default", method: 'delete' })

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141226225303) do
+ActiveRecord::Schema.define(version: 20150101015843) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,13 +49,21 @@ ActiveRecord::Schema.define(version: 20141226225303) do
 
   add_index "explanations", ["user_id"], name: "index_explanations_on_user_id", using: :btree
 
-  create_table "problem_resources", force: true do |t|
-    t.text     "problem_ids"
-    t.text     "title"
-    t.text     "name"
+  create_table "problem_sets", force: true do |t|
+    t.text     "problem_order"
+    t.string   "name"
+    t.boolean  "official"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "problem_sets_problems", id: false, force: true do |t|
+    t.integer "problem_id"
+    t.integer "problem_set_id"
+  end
+
+  add_index "problem_sets_problems", ["problem_id"], name: "index_problem_sets_problems_on_problem_id", using: :btree
+  add_index "problem_sets_problems", ["problem_set_id"], name: "index_problem_sets_problems_on_problem_set_id", using: :btree
 
   create_table "problems", force: true do |t|
     t.text     "body"
