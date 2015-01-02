@@ -1,7 +1,5 @@
-%h1 USAMO Problems
+%h1 Contest problems
 
-= link_to 'USAMO 2014', problem_set_path('USAMO 2014')
-%br/
-= link_to 'USAMO 2013', problem_set_path('USAMO 2013')
-%br/
-= link_to 'USAMO 2012', problem_set_path('USAMO 2012')
+- @problem_sets.each do |ps|
+  = link_to ps.name, problem_set_path(ps)
+  %br/

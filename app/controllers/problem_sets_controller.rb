@@ -7,6 +7,11 @@ class ProblemSetsController < ApplicationController
     @ps = ProblemSet.find_by(name: params[:id])
   end
 
+  def index
+    @problem_sets = ProblemSet.all
+    @problem_sets.sort_by!(&:name)
+  end
+
   def create
     @ps = ProblemSet.new(params[:problem_set].permit(:name, :official))
     @ps.problems, @ps.problem_order = ProblemSet.problem_ids_string_to_problems_array_and_ordering(params[:problem_set][:problems])
