@@ -9,19 +9,24 @@
 
 .vote{id: "#{votable.class}_#{votable.id}_#{format_scope(scope)}_rate"}
   %strong
+    - # if disp_text is supplied, use that. Otherwise use the name of scope. Otherwise go with "Rating".
     = (disp_text || scope || "Rating").capitalize + ':'
 
   - if user_signed_in?
+    - # votable.get_upvotes(stuff) should be an array with either 1 or 0 elements
     - current_user_vote = votable.get_upvotes(vote_scope: scope, voter_id: current_user.id)[0]
     - current_user_vote = current_user_vote[:vote_weight] unless current_user_vote.nil?
 
-    .btn-group
+    = surround '( ', ' )' do
       - for i in lower..upper
         - path = rate_path(rating: i, votable_id: votable.id, votable_type: votable.class, | 
           scope: scope, disp_text: disp_text, lower: lower, upper: upper)
-        - ##::TODO:: there is probably a better implementation of this
         - text = (current_user_vote == i) ? raw("<strong>#{i}</strong>") : i
-        = link_to text, path, { method: :post, remote: true, class: "btn btn-default" }
+        = link_to text, path, { method: :post, remote: true }
+
+        - # Don't display a separator pipe if you're at the end
+        - if i != upper
+          | 
 
 
   = surround '( ', ' )' do

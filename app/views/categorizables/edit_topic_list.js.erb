@@ -1,1 +1,2 @@
-$("#<%= @categorizable.class %>_<%= @categorizable.id %>_topiclist").html("<%= j (render 'categorizables/topic_list_edit_form', { categorizable: @categorizable, name: @name }) %>")
+obj = $("#<%= @categorizable.class %>_<%= @categorizable.id %>_topiclist");
+obj.html("<%= j (render 'categorizables/topic_list_edit_form', { categorizable: @categorizable, name: @name }) %>");

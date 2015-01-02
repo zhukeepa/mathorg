@@ -3,7 +3,7 @@
   - name = nil
 
 .topic-list{id: "#{categorizable.class}_#{categorizable.id}_topiclist"}
-  - #::TODO:: VV does it have to be so fugly
+  - #::TODO_LATER:: there must be some way to prettify this...
   = simple_form_for :categorizable, url: categorizables_update_topic_list_path(categorizable_id: categorizable.id, categorizable_klass: categorizable.class, name: name), method: :patch, html: { class: 'form-inline' }, remote: true do |f|
     = f.input :topics, required: false, label: (name || "Topic").pluralize(topics.size) + ':', | 
     url: autocomplete_topic_name_topics_path, as: :autocomplete, |

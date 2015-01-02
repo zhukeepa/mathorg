@@ -17,8 +17,6 @@ class ProblemsController < ApplicationController
       @topics = Topic.topics_string_to_topics_array(params[:problem][:topics])
       @problem.topics = @topics
 
-      ##::TODO:: ^^ Maybe you can put the above elsewhere?
-
     	redirect_to action: :show, id: @problem.id
     else
       render 'new'

@@ -22,7 +22,7 @@ class VotablesController < ApplicationController
   end
 
   def get_votable_from_id_and_class(id, type)
-    ## ::TODO:: some safety shit to make sure class is real and shit
+    ## ::TODO_LATER:: implement safety check
     type.constantize.find(id)
   end
 end

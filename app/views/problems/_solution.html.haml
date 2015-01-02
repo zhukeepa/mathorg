@@ -2,7 +2,8 @@
   - if solution.hints.size > 0
     %strong 
       %u
-        = link_to 'Show hint', 'javascript:;', { style: 'color:#000000;', id: "hint_button#{solution.id}", onclick: "show_next_hint(#{solution.id})" } 
+        / %span> is to get rid of the space that would've otherwise been at the end of 'hint'
+        %span>= link_to 'Show hint', 'javascript:;', { style: 'color:#000000;', id: "hint_button#{solution.id}" }
 
     - for i in 0...solution.hints.size
       .hint{id: "hint_#{solution.id}_#{i}", style: "display:none"}
@@ -14,8 +15,7 @@
 
   %strong
     %u
-      = link_to ' Show solution', 'javascript:;', { style: 'color:#000000;', id: "hint_button#{solution.id}", onclick: "makeVisible('solution#{solution.id}')" } 
-  /%button{type: 'button', class: "btn btn-default", onclick: "makeVisible('solution#{solution.id}')"} Show solution
+      %span>= link_to 'Show solution', 'javascript:;', { style: 'color:#000000;', id: "solution_button#{solution.id}" } 
 
   %br/
   .solution{id: "solution#{solution.id}", style: "display:none"}
@@ -30,7 +30,7 @@
     = render 'categorizables/topic_list', categorizable: solution
     %br/
     %br/
-    = render 'votables/votes', { votable: solution, scope: 'quality', disp_text: 'Writeup quality' }
+    = render 'votables/votes'  , { votable: solution, scope: 'quality', disp_text: 'Writeup quality' }
     = render 'votables/ratings', { votable: solution, scope: 'elegance', lower: -2, upper: 2 }
     = render 'votables/ratings', { votable: solution, scope: 'instructiveness', lower: 0, upper: 2 }
     = render 'votables/ratings', { votable: solution, scope: 'difficulty', lower: -2, upper: 2, show_average: false }

@@ -6,6 +6,7 @@
 
 .vote{id: "#{votable.class}_#{votable.id}_#{format_scope(scope)}_vote"}
   %strong
+    - # if disp_text is supplied, use that. Otherwise use the name of scope. Otherwise go with "Rating".
     = (disp_text || scope || "Votes").capitalize + ':'
   = surround '( ', ' )' do 
     - if user_signed_in?
