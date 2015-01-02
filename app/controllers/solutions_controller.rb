@@ -17,9 +17,8 @@ class SolutionsController < ApplicationController
   def create
     @problem = Problem.find(params[:problem_id])
     
-  	@solution = @problem.solutions.create(params[:solution].permit(:body))
+  	@solution = @problem.solutions.create(params[:solution].permit(:body, :hints_string))
     @solution.author = current_user
-    @solution.hints = Solution.hint_string_to_array(params[:solution][:hints])
     @solution.topics = Topic.topics_string_to_topics_array(params[:solution][:topics])
     @solution.save
     
@@ -28,8 +27,7 @@ class SolutionsController < ApplicationController
 
   def update
     @solution = Solution.find(params[:id])
-    @solution.update(params[:solution].permit(:body))
-    @solution.hints = Solution.hint_string_to_array(params[:solution][:hints])
+    @solution.update(params[:solution].permit(:body, :hints_string))
     @solution.topics = Topic.topics_string_to_topics_array(params[:solution][:topics])
     @solution.save
 

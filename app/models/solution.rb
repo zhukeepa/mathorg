@@ -15,11 +15,21 @@ class Solution < ActiveRecord::Base
     self.hints ||= []
   end
 
-  def self.hint_string_to_array(hints_string)
-    "\n#{hints_string}".split("\n*").map { |h| h.strip }.reject(&:empty?)
+  # ex: if hints == ["Hint 1", "Hint 2"], hint_string returns:
+  # * Hint 1 
+  # 
+  # * Hint 2
+  def hints_string
+    hints.map { |h| "* #{h}\n\n" }.join.rstrip
   end
 
-  def self.hint_array_to_string(hints_array)
-    hints_array.map { |h| "* #{h}\n\n" }.join.rstrip
+  # Takes in a list of hints, listed by asterisks, like: 
+  # --- 
+  # * Hint 1
+  # * Hint 2
+  # ---
+  # and sets hints to ["Hint 1", "Hint 2"]
+  def hints_string=(hints_string)
+    self.hints = "\n#{hints_string}".split("\n*").map { |h| h.strip }.reject(&:empty?)
   end
 end
