@@ -8,12 +8,10 @@ class ExplanationsController < ApplicationController
     @explanation = Explanation.find(params[:id])
   end
 
+  # ::TODO:: test the below code
   def create
-    @explanation = Explanation.new(params[:explanation].permit(:title, :description, :body))
+    @explanation = Explanation.new(explanation_params)
     @explanation.user = current_user
-    @topics = Topic.topics_string_to_topics_array(params[:explanation][:topics])
-
-    @explanation.topics = @topics
     @explanation.save
 
     redirect_to action: :show, id: @explanation.id
@@ -21,11 +19,9 @@ class ExplanationsController < ApplicationController
 
   def update
     @explanation = Explanation.find(params[:id])
+    @explanation.update(explanation_params)
     @explanation.user = current_user
-    @topics = Topic.topics_string_to_topics_array(params[:explanation][:topics])
-    
-    @explanation.update(params[:explanation].permit(:title, :description, :body))
-    @explanation.topics = @topics
+    @explanation.save
 
     redirect_to @explanation
   end
@@ -41,10 +37,8 @@ class ExplanationsController < ApplicationController
       render text: 'Your explanation has been deleted.'
   end
 
-  def vote
-    e = Explanation.find(params[:id])
-    e.vote_by voter: current_user, vote: params[:vote]
-
-    render 'vote', locals: { upvote_num: e.get_upvotes.size, downvote_num: e.get_downvotes.size }
+private
+  def explanation_params
+    params[:explanation].permit(:title, :description, :body, :topics_string)
   end
 end

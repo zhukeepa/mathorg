@@ -4,6 +4,7 @@ class ProblemSet < ActiveRecord::Base
 
   has_many :topic_categorizables, as: :categorizable
   has_many :topics, through: :topic_categorizables
+  include Categorizable
 
   has_and_belongs_to_many :problems
 

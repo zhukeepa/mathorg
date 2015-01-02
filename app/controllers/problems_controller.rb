@@ -12,11 +12,8 @@ class ProblemsController < ApplicationController
   end
 
   def create
-  	@problem = Problem.new(params[:problem].permit(:source, :author, :body, :description))
+  	@problem = Problem.new(problem_params)
   	if @problem.save
-      @topics = Topic.topics_string_to_topics_array(params[:problem][:topics])
-      @problem.topics = @topics
-
     	redirect_to action: :show, id: @problem.id
     else
       render 'new'
@@ -25,11 +22,8 @@ class ProblemsController < ApplicationController
 
   def update
     @problem = Problem.find(params[:id])
-    if @problem.update(params[:problem].permit(:source, :author, :body, :description))
-      @topics = Topic.topics_string_to_topics_array(params[:problem][:topics])
-      @problem.topics = @topics
-      
-    	redirect_to @problem
+    if @problem.update(problem_params)  
+      redirect_to @problem
     else
       render 'edit'
     end
@@ -40,5 +34,10 @@ class ProblemsController < ApplicationController
     @problem.destroy
 
     render text: "The problem has been destroyed."
+  end
+
+private 
+  def problem_params
+    params[:problem].permit(:source, :author, :body, :description, :topics_string)
   end
 end

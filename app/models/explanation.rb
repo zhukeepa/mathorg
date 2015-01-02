@@ -5,4 +5,5 @@ class Explanation < ActiveRecord::Base
     
   has_many :topic_categorizables, as: :categorizable
   has_many :topics, through: :topic_categorizables
+  include Categorizable
 end

@@ -9,8 +9,12 @@ class Problem < ActiveRecord::Base
 
   has_and_belongs_to_many :sources, class_name: 'ProblemSet'
 
+
+  ##::TODO:: there should be some way to DRY this across all categorizables 
+  ## [analogous for solution.rb; problem_set.rb; explanation.rb]
   has_many :topic_categorizables, as: :categorizable
   has_many :topics, through: :topic_categorizables
+  include Categorizable
 
   def sources_string
     sources.map(&:name).join(', ')

@@ -9,6 +9,7 @@ class Solution < ActiveRecord::Base
 
   has_many :topic_categorizables, as: :categorizable
   has_many :topics, through: :topic_categorizables
+  include Categorizable
 
   def initialize(*args)
     super 
@@ -20,7 +21,7 @@ class Solution < ActiveRecord::Base
   # 
   # * Hint 2
   def hints_string
-    hints.map { |h| "* #{h}\n\n" }.join.rstrip
+    self.hints.map { |h| "* #{h}\n\n" }.join.rstrip
   end
 
   # Takes in a list of hints, listed by asterisks, like: 

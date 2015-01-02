@@ -1,8 +1,7 @@
 = simple_form_for @problem do |f|
   = f.input :description
-  = f.input :topics, url: autocomplete_topic_name_topics_path, as: :autocomplete, |
-    'data-delimiter' => ', ', input_html: { value: Topic.topics_array_to_topics_string(@problem.topics), |
-    class: "text optional form-control" }
+  = f.input :topics_string, label: 'Topics', url: autocomplete_topic_name_topics_path, as: :autocomplete, |
+    'data-delimiter' => ', ', input_html: { class: "text optional form-control" }
   = f.hidden_field :author, value: nil
   = f.input :body, input_html: { rows: long_entry_row_num }
   = f.button :submit

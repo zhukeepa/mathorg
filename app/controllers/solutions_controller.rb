@@ -17,9 +17,8 @@ class SolutionsController < ApplicationController
   def create
     @problem = Problem.find(params[:problem_id])
     
-  	@solution = @problem.solutions.create(params[:solution].permit(:body, :hints_string))
+  	@solution = @problem.solutions.create(solution_params)
     @solution.author = current_user
-    @solution.topics = Topic.topics_string_to_topics_array(params[:solution][:topics])
     @solution.save
     
     redirect_to @problem
@@ -27,9 +26,7 @@ class SolutionsController < ApplicationController
 
   def update
     @solution = Solution.find(params[:id])
-    @solution.update(params[:solution].permit(:body, :hints_string))
-    @solution.topics = Topic.topics_string_to_topics_array(params[:solution][:topics])
-    @solution.save
+    @solution.update(solution_params)
 
     redirect_to @solution.problem
   end
@@ -39,5 +36,10 @@ class SolutionsController < ApplicationController
     @solution.destroy
 
     render text: 'Your solution has been deleted.'
+  end
+
+private
+  def solution_params
+    params[:solution].permit(:body, :hints_string, :topics_string)
   end
 end
