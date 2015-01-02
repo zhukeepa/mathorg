@@ -25,9 +25,8 @@ class ProblemSetsController < ApplicationController
 
   def update
     @ps = ProblemSet.find_by(name: params[:id])
-    @ps.problems, @ps.problem_order = ProblemSet.problem_ids_string_to_problems_array_and_ordering(params[:problem_set][:problems])
       
-    if @ps.update(params[:problem_set].permit(:name, :official))
+    if @ps.update(params[:problem_set].permit(:name, :official, :problem_ids_string))
       redirect_to action: :show, id: @ps.name
     else
       render 'edit'
@@ -36,8 +35,7 @@ class ProblemSetsController < ApplicationController
 
   def show
     @ps = ProblemSet.find_by(name: params[:id])
-    @problems = @ps.problem_ids.sort.map { |id| Problem.find(id) }
-    @problems = ProblemSet.sort_array_by_order(@problems, @ps.problem_order)
+    @problems = @ps.problems_sorted
   end
 
   def destroy
