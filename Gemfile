@@ -14,6 +14,8 @@ gem 'mathjax-rails'
 # BBcode! 
 gem 'bb-ruby'
 
+gem 'opml_saw', :git => "git://github.com/feedbin/opml_saw.git", :branch => "master"
+
 # Searching!
 gem 'searchkick'
 

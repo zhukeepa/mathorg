@@ -11,6 +11,8 @@ class TopicsController < ApplicationController
 
   def new
     @topic = Topic.new
+    #::TODO:: temporary, for topic list loading. remove later
+    @topic.parents = Topic.find_all_by_id([params[:parent_id]])
   end
 
   def edit

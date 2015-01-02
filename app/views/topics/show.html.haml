@@ -15,6 +15,9 @@
 %br/
 %br/
 
+- #::TODO:: temporary, for topic list loading. remove later
+= link_to 'Add child', new_topic_path(parent_id: @topic.id)
+
 / = #link_to 'Add explanation', new_explanation_path(topic: @topic.id)
 
 / - #@topic.explanations.each do |explanation|
