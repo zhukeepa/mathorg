@@ -1,3 +1,5 @@
+// get this to work with paloma, maybe??
+
 var latest_hint_shown = [];
 function show_next_hint(solution_id)
 {
@@ -15,7 +17,6 @@ function show_next_hint(solution_id)
 
 $(function(){ 
   $("a").on("click", function(event) {
-  	//console.log(this.id.substring(0,15));
     if (this.id.substring(0,15) == "solution_button")
     {
       sol_id = this.id.substring(15);
