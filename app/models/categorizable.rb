@@ -29,13 +29,17 @@ module Categorizable
   end
 
   def topics_string
-    leaf_topics.map(&:name).join(', ')
+    self.topics.map(&:name).join(', ')
   end
 
-  # When a topic is stored, also assign it all the parents of the topic at hand
+  def topics_all_ancestors
+    self.topics.map(&:ancestor_topics).reduce(:|).uniq
+  end
+  
   def topics_string=(ts)
     topic_names_array = ts.split(",").map(&:strip).uniq.reject(&:empty?)
-    topics_array = Topic.find_all_by_name(topic_names_array)
-    self.topics = topics_array.empty? ? [] : topics_array.map(&:ancestor_topics).reduce(:|).uniq
+    self.topics = Topic.find_all_by_name(topic_names_array)
+    self.topics = topics_all_ancestors
+    self.topics = leaf_topics
   end
 end

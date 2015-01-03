@@ -20,11 +20,11 @@ class Problem < ActiveRecord::Base
     sources.map(&:name).join(', ')
   end
 
-  def show_desc
+  def show_description
     if description.length > 0
       description
     else 
-      "No description -- please add one!"
+      "No description yet — click to add one!"
     end
   end
 end

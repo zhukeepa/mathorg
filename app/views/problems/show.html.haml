@@ -1,5 +1,5 @@
 %h3
-  = best_in_place_if user_signed_in?, @problem, :description, as: :input
+  = best_in_place_if user_signed_in?, @problem, :description, as: :input, display_as: :show_description
 
 = render 'sources', problem: @problem
 %br/
@@ -27,7 +27,7 @@
   %br/
   %br/
 
-  %span>= link_to 'Report repeat', 'javascript:;', {id: "merge_button_#{@problem.id}" } 
+  %span>= link_to 'Repeated problem?', 'javascript:;', {id: "merge_button_#{@problem.id}" } 
   = render 'merge'
 %br/
 %br/

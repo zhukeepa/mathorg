@@ -15,8 +15,36 @@
 %br/
 %br/
 
+%h2 Problems
+
+- if @topic.problems.size > 10 
+  %em 
+    Only the first 10 results will be shown. 
+
+- if @topic.problems.size == 0
+  %em
+    There are currently no problems found under this topic. 
+
+.row.list-group  
+  - @topic.problems[0...10].each do |pr|
+    .list-group-item
+      %strong
+        = link_to pr.show_description, pr
+      %br/
+      %br/
+
+      = render '/problems/sources', problem: pr
+      = render 'categorizables/topic_list', categorizable: pr
+      %br/
+      %br/
+
+      = raw(pr.body.bbcode_to_html.gsub("\n", "<br/>"))
+      %br/
+      %br/
+
+
 - #::TODO:: temporary, for topic list loading. remove later
-= link_to 'Add child', new_topic_path(parent_id: @topic.id)
+= #link_to 'Add child', new_topic_path(parent_id: @topic.id)
 
 / = #link_to 'Add explanation', new_explanation_path(topic: @topic.id)
 

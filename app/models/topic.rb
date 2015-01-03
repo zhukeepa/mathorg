@@ -4,7 +4,7 @@ class Topic < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true, length: { minimum: 5 }
 
   has_many :topic_categorizables
-  has_many :problems,     through: :topic_categorizables
+  has_many :problems,     through: :topic_categorizables, source: :categorizable, source_type: "Problem"
   has_many :explanations, through: :topic_categorizables
   has_many :solutions,    through: :topic_categorizables
 

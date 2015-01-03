@@ -2,7 +2,7 @@
   - @problem_results.each do |pr|
     .list-group-item
       %strong
-        = link_to pr.description, pr
+        = link_to pr.show_description, pr
       %br/
       %br/
 
@@ -10,9 +10,11 @@
       = pr.source
       %br/
 
-      = render 'shared/topic_list', name: 'Topic', topics: pr.topics
+      = render '/problems/sources', problem: pr
+      = render 'categorizables/topic_list', categorizable: pr
       %br/
       %br/
 
       = raw(pr.body.bbcode_to_html.gsub("\n", "<br/>"))
+      %br/
       %br/
