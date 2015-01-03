@@ -1,4 +1,6 @@
 Mathorg::Application.routes.draw do
+  root "problem_sets#index"
+
   post "services/preview" => "services#preview"
   get "search/results"
   get "search" => "search#index"
@@ -11,7 +13,6 @@ Mathorg::Application.routes.draw do
   patch "categorizables/update_topic_list"
 
   devise_for :users
-  root "problems#index"
 
   resources :problem_sets
 
