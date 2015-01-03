@@ -3,7 +3,7 @@ module VotesHelper
   	if not s
   	  return nil
   	else
-  	  return s.sub ' ', '-'
+  	  return s.gsub ' ', '-'
   	end
   end
 end

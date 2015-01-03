@@ -5,8 +5,8 @@ class Topic < ActiveRecord::Base
 
   has_many :topic_categorizables
   has_many :problems,     through: :topic_categorizables, source: :categorizable, source_type: "Problem"
-  has_many :explanations, through: :topic_categorizables
-  has_many :solutions,    through: :topic_categorizables
+  has_many :explanations, through: :topic_categorizables, source: :categorizable, source_type: "Explanation"
+  has_many :solutions,    through: :topic_categorizables, source: :categorizable, source_type: "Solution"
 
   has_many :topic_child_parents, foreign_key: :child_id, dependent: :destroy 
   has_many :parents, through: :topic_child_parents, source: :parent

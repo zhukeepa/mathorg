@@ -33,7 +33,7 @@ module Categorizable
   end
 
   def topics_all_ancestors
-    self.topics.map(&:ancestor_topics).reduce(:|).uniq
+    !self.topics.empty? ? self.topics.map(&:ancestor_topics).reduce(:|).uniq : []
   end
   
   def topics_string=(ts)

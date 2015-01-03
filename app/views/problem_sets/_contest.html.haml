@@ -1,0 +1,18 @@
+%h3
+  %strong
+    .contest_link{id: "#{format_scope(name)}"}
+      = link_to name, "javascript:;"
+
+.contests{id: "#{format_scope(name)}_list", style: "display:none" }
+  - if subcontests.empty?
+    - for i in lower..upper
+      - ps = ProblemSet.find_by_name("#{name} #{i}")
+      = link_to ps.name, problem_set_path(ps)
+      %br/
+  - else
+    - for i in lower..upper
+      - subcontests.each do |s|
+        - ps = ProblemSet.find_by_name("#{name} #{i} #{s}")
+        = link_to ps.name, problem_set_path(ps)
+        %br/
+      %br/

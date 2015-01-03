@@ -14,6 +14,10 @@
 
 %br/
 %br/
+= link_to 'Add subtopic', new_topic_path(parent_id: @topic.id), { class: "btn btn-default" }
+
+%br/
+%br/
 
 %h2 Problems
 
@@ -41,10 +45,6 @@
       = raw(pr.body.bbcode_to_html.gsub("\n", "<br/>"))
       %br/
       %br/
-
-
-- #::TODO:: temporary, for topic list loading. remove later
-= #link_to 'Add child', new_topic_path(parent_id: @topic.id)
 
 / = #link_to 'Add explanation', new_explanation_path(topic: @topic.id)
 

@@ -19,12 +19,7 @@
 
   %br/
   .solution{id: "solution#{solution.id}", style: "display:none"}
-    %strong Solution: 
     = raw(solution.body.bbcode_to_html.gsub("\n", "<br/>"))
-    %br/
-    %br/
-    %em 
-      = "Solution submitted by #{solution.author}"
     %br/
     %br/
     %em
@@ -43,3 +38,7 @@
       .btn-group
         = link_to "Edit solution", edit_problem_solution_path(@problem, solution), { class: "btn btn-default" }
         = link_to('Destroy solution', problem_solution_path(@problem, solution), { class: "btn btn-default", method: 'delete' })
+    
+  %br/
+  %em 
+    = "Solution submitted by #{solution.author}"
