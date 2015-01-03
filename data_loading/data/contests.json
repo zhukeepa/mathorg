@@ -1,0 +1,115 @@
+[
+  {
+    "name": "IMO Shortlist 2013",
+    "problems": [
+      {
+        "number": "1",
+        "text": "Let $n$ be a positive integer and let $a_1, \\ldots, a_{n-1}$ be arbitrary real numbers. Define the sequences $u_0, \\ldots, u_n$ and $v_0, \\ldots, v_n$ inductively by $u_0 = u_1  = v_0 = v_1 = 1$, and $u_{k+1} = u_k + a_k u_{k-1}$,  $v_{k+1} = v_k + a_{n-k} v_{k-1}$ for $k=1, \\ldots, n-1.$\n\nProve that $u_n = v_n.$"
+      },
+      {
+        "number": "2",
+        "text": "Prove that in any set of $2000$ distinct real numbers there exist two pairs $a&gt;b$ and $c&gt;d$ with $a \\neq c$ or $b \\neq d$, such that  \n$$\\left| \\frac{a-b}{c-d} - 1 \\right|&lt; \\frac{1}{100000}.$$"
+      },
+      {
+        "number": "3",
+        "text": "Let $\\mathbb Q_{&gt;0}$ be the set of all positive rational numbers. Let $f: \\mathbb Q_{&gt;0}\\to\\mathbb R$ be a function satisfying the following three conditions:\n\n(i) for all $x,y\\in\\mathbb Q_{&gt;0}$, $f(x)f(y)\\geq f(xy)$;\n(ii) for all $x,y\\in\\mathbb Q_{&gt;0}$, $f(x+y)\\geq f(x)+f(y)$ ;\n(iii) there exists a rational number $a&gt;1$ such that $f(a)=a$.\n\nProve that $f(x) = x$ for all $x \\in \\mathbb Q_{&gt;0}$.\n\n<span style=\"font-style: italic\">Proposed by Nikolai Nikolov, Bulgaria</span>"
+      },
+      {
+        "number": "4",
+        "text": "Let $n$ be a positive integer, and consider a sequence $a_1 , a_2 , \\cdots , a_n$ of positive integers. Extend it periodically to an infinite sequence $a_1 , a_2 , \\cdots$ by defining $a_{n+i} = a_i$ for all $i \\ge 1$. If \n$$a_1 \\le a_2 \\le \\cdots \\le a_n \\le a_1 +n$$\n and \n$$a_{a_i } \\le n+i-1 \\quad\\text{for}\\quad i=1,2,\\cdots, n,$$\n prove that \n$$a_1 + \\cdots +a_n \\le n^2.$$"
+      },
+      {
+        "number": "5",
+        "text": "Let $\\mathbb{Z}_{\\ge 0}$ be the set of all nonnegative integers. Find all the functions $f: \\mathbb{Z}_{\\ge 0} \\rightarrow \\mathbb{Z}_{\\ge 0}$ satisfying the relation\n\n$$f(f(f(n))) = f(n+1 ) +1$$\n\nfor all $n\\in \\mathbb{Z}_{\\ge 0}$."
+      },
+      {
+        "number": "6",
+        "text": "Let $m \\neq 0$ be an integer. Find all polynomials $P(x)$ with real coefficients such that \n\n$$(x^3 - mx^2 +1 ) P(x+1)  + (x^3+mx^2+1) P(x-1) =2(x^3 - mx +1 ) P(x)$$\n\nfor all real number $x$."
+      },
+      {
+        "number": "1",
+        "text": "Let $n$ be an positive integer. Find the smallest integer $k$ with the following property; Given any real numbers $a_1 , \\cdots , a_d$ such that $a_1 + a_2 + \\cdots + a_d = n$ and $0 \\le a_i \\le 1$ for $i=1,2,\\cdots ,d$, it is possible to partition these numbers into $k$ groups (some of which may be empty) such that the sum of the numbers in each group is at most $1$."
+      },
+      {
+        "number": "2",
+        "text": " configuration of $4027$ points in the plane is called <span style=\"font-style: italic\">Colombian</span> if it consists of $2013$ red points and $2014$ blue points, and no three of the points of the configuration are collinear. By drawing some lines, the plane is divided into several regions. An arrangement of lines is <span style=\"font-style: italic\">good</span> for a Colombian configuration if the following two conditions are satisfied:\n\n<ul>no line passes through any point of the configuration;\n\nno region contains points of both colours.</ul>\nFind the least value of $k$ such that for any Colombian configuration of $4027$ points, there is a good arrangement of $k$ lines.\n\n<span style=\"font-style: italic\">Proposed by Ivan Guo, Australia</span>"
+      },
+      {
+        "number": "3",
+        "text": " crazy physicist discovered a new kind of particle wich he called an imon, after some of them mysteriously appeared in his lab. Some pairs of imons in the lab can be entangled, and each imon can participate in many entanglement relations. The physicist has found a way to perform the following two kinds of operations with these particles, one operation at a time.\n(i) If some imon is entangled with an odd number of other imons in the lab, then the physicist can destroy it.\n(ii) At any moment, he may double the whole family of imons in the lab by creating a copy $I'$ of each imon $I$. During this procedure, the two copies $I'$ and $J'$ become entangled if and only if the original imons $I$ and $J$ are entangled, and each copy $I'$ becomes entangled with its original imon $I$; no other entanglements occur or disappear at this moment.\n\nProve that the physicist may apply a sequence of much operations resulting in a family of imons, no two of which are entangled."
+      },
+      {
+        "number": "4",
+        "text": "Let $n$ be a positive integer, and let $A$ be a subset of $\\{ 1,\\cdots ,n\\}$. An $A$-partition of $n$ into $k$ parts is a representation of n as a sum $n = a_1 + \\cdots + a_k$, where the parts $a_1 , \\cdots , a_k$ belong to $A$ and are not necessarily distinct. The number of different parts in such a partition is the number of (distinct) elements in the set $\\{ a_1 , a_2 , \\cdots , a_k \\}$.\nWe say that an $A$-partition of $n$ into $k$ parts is optimal if there is no $A$-partition of $n$ into $r$ parts with $r. Prove that any optimal $A$-partition of $n$ contains at most $\\sqrt[3]{6n}$ different parts."
+      },
+      {
+        "number": "5",
+        "text": "Let $r$ be a positive integer, and let $a_0 , a_1 , \\cdots$ be an infinite sequence of real numbers. Assume that for all nonnegative integers $m$ and $s$ there exists a positive integer $n \\in [m+1, m+r]$ such that\n\n$$a_m + a_{m+1} +\\cdots +a_{m+s} = a_n + a_{n+1} +\\cdots +a_{n+s}$$\n \nProve that the sequence is periodic, i.e. there exists some $p \\ge 1$ such that $a_{n+p} =a_n$ for all $n \\ge 0$."
+      },
+      {
+        "number": "6",
+        "text": "In some country several pairs of cities are connected by direct two-way flights. It is possible to go from any city to any other by a sequence of flights. The distance between two cities is defined to be the least possible numbers of flights required to go from one of them to the other. It is known that for any city there are at most $100$ cities at distance exactly three from it. Prove that  there is no city such that more than $2550$ other cities have distance exactly four from it."
+      },
+      {
+        "number": "7",
+        "text": "Let $n\\geq 3$ be an integer, and consider a circle with $n+1$ equally spaced points marked on it. Consider all labellings of these points with the numbers $0,1,\\dots, n$ such that each label is used exactly once; two such labellings are considered to be the same if one can be obtained from the other by a rotation of the circle. A labelling is called <span style=\"font-style: italic\">beautiful</span> if, for any four labels $a with $a+d=b+c$, the chord joining the points labelled $a$ and $d$ does not intersect the chord joining the points labelled $b$ and $c$.\n\nLet $M$ be the number of beautiful labellings, and let $N$ be the number of ordered pairs $(x,y)$ of positive integers such that $x+y\\leq n$ and $\\gcd(x,y)=1$. Prove that \n$$M=N+1.$$\n\n\n<span style=\"font-style: italic\">Proposed by Alexander S. Golovanov and Mikhail A. Ivanov, Russia</span>"
+      },
+      {
+        "number": "8",
+        "text": "Players $A$ and $B$ play a \"paintful\" game on the real line. Player $A$ has a pot of paint with four units of black ink. A quantity $p$ of this ink suffices to blacken a (closed) real interval of length $p$. In every round, player $A$ picks some positive integer $m$ and provides $1/2^m$ units of ink from the pot. Player $B$ then picks an integer $k$ and blackens the interval from $k/2^m$ to $(k+1)/2^m$ (some parts of this interval may have been blackened before). The goal of player $A$ is to reach a situation where the pot is empty and the interval $[0,1]$ is not completely blackened.\nDecide whether there exists a strategy for player $A$ to win in a finite number of moves."
+      },
+      {
+        "number": "1",
+        "text": "Let $ABC$ be an acute triangle with orthocenter $H$, and let $W$ be a point on the side $BC$, lying strictly between $B$ and $C$. The points $M$ and $N$ are the feet of the altitudes from $B$ and $C$, respectively. Denote by $\\omega_1$ is the circumcircle of $BWN$, and let $X$ be the point on $\\omega_1$ such that $WX$ is a diameter of $\\omega_1$. Analogoously, denote by $\\omega_2$ the circumcircle of triangle $CWM$, and let $Y$ be the point such that $WY$ is a diameter of $\\omega_2$. Prove that $X,Y$ and $H$ are collinear.\n\n<span style=\"font-style: italic\">Proposed by Warut Suksompong and Potcharapol Suteparuk, Thailand</span>"
+      },
+      {
+        "number": "2",
+        "text": "Let $\\omega$ be the circumcircle of a triangle $ABC$. Denote by $M$ and $N$ the midpoints of the sides $AB$ and $AC$, respectively, and denote by $T$ the midpoint of the arc $BC$ of $\\omega$ not containing $A$. The circumcircles of the triangles $AMT$ and $ANT$ intersect the perpendicular bisectors of $AC$ and $AB$ at points $X$ and $Y$, respectively; assume that $X$ and $Y$ lie inside the triangle $ABC$. The lines $MN$ and $XY$ intersect at $K$. Prove that $KA=KT$."
+      },
+      {
+        "number": "3",
+        "text": "In a triangle $ABC$, let $D$ and $E$ be the feet of the angle bisectors of angles $A$ and $B$, respectively. A rhombus is inscribed into the quadrilateral $AEDB$ (all vertices of the rhombus lie on different sides of $AEDB$). Let $\\varphi$ be the non-obtuse angle of the rhombus. Prove that $\\varphi \\le \\max \\{  \\angle BAC, \\angle ABC  \\}$."
+      },
+      {
+        "number": "4",
+        "text": "Let $ABC$ be a triangle with $\\angle B &gt; \\angle C$. Let $P$ and $Q$ be two different points on line $AC$ such that $\\angle PBA = \\angle QBA = \\angle ACB$ and $A$ is located between $P$ and $C$. Suppose that there exists an interior point $D$ of segment $BQ$ for which $PD=PB$. Let the ray $AD$ intersect the circle $ABC$ at $R \\neq A$. Prove that $QB = QR$."
+      },
+      {
+        "number": "5",
+        "text": "Let $ABCDEF$ be a convex hexagon with $AB=DE$, $BC=EF$, $CD=FA$, and $\\angle A-\\angle D = \\angle B -\\angle E = \\angle C -\\angle F$. Prove that the diagonals $AD$, $BE$, and $CF$ are concurrent."
+      },
+      {
+        "number": "6",
+        "text": "Let the excircle of triangle $ABC$ opposite the vertex $A$ be tangent to the side $BC$ at the point $A_1$. Define the points $B_1$ on $CA$ and $C_1$ on $AB$ analogously, using the excircles opposite $B$ and $C$, respectively. Suppose that the circumcentre of triangle $A_1B_1C_1$ lies on the circumcircle of triangle $ABC$. Prove that triangle $ABC$ is right-angled.\n\n<span style=\"font-style: italic\">Proposed by Alexander A. Polyansky, Russia</span>"
+      },
+      {
+        "number": "1",
+        "text": "Let $\\mathbb{Z} _{&gt;0}$ be the set of positive integers. Find all functions  $f: \\mathbb{Z} _{&gt;0}\\rightarrow \\mathbb{Z} _{&gt;0}$ such that \n\n$$m^2 + f(n) \\mid mf(m) +n$$\n\nfor all positive integers $m$ and $n$."
+      },
+      {
+        "number": "2",
+        "text": "Prove that for any pair of positive integers $k$ and $n$, there exist $k$ positive integers $m_1, m_2, \\ldots, m_k$ (not necessarily different) such that\n\n$$1+\\frac{2^k-1}{n}=\\left(1+\\frac{1}{m_1}\\right)\\left(1+\\frac{1}{m_2}\\right)\\dots\\left(1+\\frac{1}{m_k}\\right).$$\n\n\n<span style=\"font-style: italic\">Proposed by Japan</span>"
+      },
+      {
+        "number": "3",
+        "text": "Prove that there exist infinitely many positive integers $n$ such that the largest prime divisor of $n^4 + n^2 + 1$ is equal to the largest prime divisor of $(n+1)^4 + (n+1)^2 +1$."
+      },
+      {
+        "number": "4",
+        "text": "Determine whether there exists an infinite sequence of nonzero digits $a_1 , a_2 , a_3 , \\cdots$ and a positive integer $N$ such that for every integer $k &gt; N$, the number $\\overline{a_k a_{k-1}\\cdots a_1 }$ is a perfect square."
+      },
+      {
+        "number": "5",
+        "text": "Fix an integer $k&gt;2$. Two players, called Ana and Banana, play the following game of numbers. Initially, some integer $n \\ge k$ gets written on the blackboard. Then they take moves in turn, with Ana beginning. A player making a move erases the number $m$ just written on the blackboard and replaces it by some number $m'$ with $k \\le m' &lt; m$ that is coprime to $m$. The first player who cannot move anymore loses.\n\nAn integer $n \\ge k$ is called good if Banana has a winning strategy when the initial number is $n$, and bad otherwise.\n\nConsider two integers $n,n' \\ge k$ with the property that each prime number $p \\le k$ divides $n$ if and only if it divides $n'$. Prove that either both $n$ and $n'$ are good or both are bad."
+      },
+      {
+        "number": "6",
+        "text": "Determine all function $f: \\mathbb{Q} \\rightarrow \\mathbb{Z}$ satisfying \n\n$$f \\left( \\frac{f(x)+a} {b}\\right) = f \\left( \\frac{x+a}{b} \\right)$$\n\nfor all  $x \\in \\mathbb{Q}$, $a \\in \\mathbb{Z}$, and $b \\in \\mathbb{Z}_{&gt;0}$. (Here, $\\mathbb{Z}_{&gt;0}$ denotes the set of positive integers.)"
+      },
+      {
+        "number": "7",
+        "text": "Let $\\nu$ be an irrational positive number, and let $m$ be a positive integer. A pair of $(a,b)$ of positive integers is called <span style=\"font-style: italic\">good</span> if\n\n$$a \\left \\lceil b\\nu \\right \\rceil - b \\left \\lfloor a \\nu \\right \\rfloor = m.$$\n A good pair $(a,b)$ is called <span style=\"font-style: italic\">excellent</span> if neither of the pair $(a-b,b)$ and $(a,b-a)$ is good.\n\nProve that the number of excellent pairs is equal to the sum of the positive divisors of $m$."
+      }
+    ]
+  }
+]
