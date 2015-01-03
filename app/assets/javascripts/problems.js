@@ -15,6 +15,7 @@ function show_next_hint(solution_id)
     $("#hint_button" + solution_id).slideUp(350); 
 }
 
+// ::TODO_LATER:: is this the best practice way for dynamic id's?
 $(function(){ 
   $("a").on("click", function(event) {
     if (this.id.substring(0,15) == "solution_button")
@@ -27,5 +28,16 @@ $(function(){
       sol_id = this.id.substring(11);
       show_next_hint(sol_id);
     }
+    else if (this.id.substring(0,13) == "merge_button_")
+    {
+      prob_id = this.id.substring(13);
+      $("#problem_merge_" + prob_id).slideDown(350);
+    }
   });
+});
+
+
+$(document).ready(function() {
+  /* Activating Best In Place */
+  jQuery(".best_in_place").best_in_place();
 });

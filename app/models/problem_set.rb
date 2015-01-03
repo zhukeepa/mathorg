@@ -30,7 +30,7 @@ class ProblemSet < ActiveRecord::Base
   end
 
   def problems_sorted
-    ProblemSet.sort_array_by_order(self.problems, self.problem_order)
+    ProblemSet.sort_array_by_order(self.problems.sort_by(&:id), self.problem_order)
   end
 
 private

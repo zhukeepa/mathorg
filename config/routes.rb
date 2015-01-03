@@ -22,6 +22,7 @@ Mathorg::Application.routes.draw do
   resources :comments
   
   resources :problems do 
+    post "merge"
     resources :solutions do
       member do
         get :comments

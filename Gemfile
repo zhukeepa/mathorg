@@ -16,6 +16,8 @@ gem 'bb-ruby'
 
 gem 'opml_saw', :git => "git://github.com/feedbin/opml_saw.git", :branch => "master"
 
+gem 'best_in_place'
+
 # Searching!
 gem 'searchkick'
 

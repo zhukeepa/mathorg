@@ -19,4 +19,12 @@ class Problem < ActiveRecord::Base
   def sources_string
     sources.map(&:name).join(', ')
   end
+
+  def show_desc
+    if description.length > 0
+      description
+    else 
+      "No description -- please add one!"
+    end
+  end
 end

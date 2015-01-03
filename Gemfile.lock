@@ -38,6 +38,9 @@ GEM
     arel (4.0.2)
     bb-ruby (1.0.4)
     bcrypt (3.1.7)
+    best_in_place (3.0.2)
+      actionpack (>= 3.2)
+      railties (>= 3.2)
     bootstrap-sass (3.2.0.0)
       sass (~> 3.2)
     builder (3.1.4)
@@ -168,6 +171,7 @@ DEPENDENCIES
   acts_as_commentable
   acts_as_votable
   bb-ruby
+  best_in_place
   bootstrap-sass (= 3.2.0.0)
   coffee-rails (~> 4.0.0)
   devise

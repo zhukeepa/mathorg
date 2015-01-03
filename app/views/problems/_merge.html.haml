@@ -1,0 +1,6 @@
+.merge{id: "problem_merge_#{@problem.id}", style: "display:none"}
+  = simple_form_for :problem_merge, url: problem_merge_path(@problem), html: { class: 'form-inline' }  do |f|
+    = f.input :original_problem_id, label: "Problem id: ", required: false
+    = f.button :submit, value: "Merge"
+
+  Enter the id of the original problem. 
