@@ -4,9 +4,9 @@
 %ol
   - @problems.each do |p|
     %li
-      = raw(p.body.bbcode_to_html.gsub("\n", "<br/>"))
-      %br/
       = link_to "(Link)", p 
+      %br/
+      = raw(p.body.bbcode_to_html.gsub("\n", "<br/>"))
       %br/
       %br/
 

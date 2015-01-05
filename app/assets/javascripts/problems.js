@@ -40,5 +40,6 @@ ready = function() {
   });
 }
 
+// Relevant when Turbolinks screwed things up. 
 $(document).ready(ready);
 $(document).on('page:load', ready);

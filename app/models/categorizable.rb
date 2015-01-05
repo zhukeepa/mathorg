@@ -29,7 +29,7 @@ module Categorizable
   end
 
   def topics_string
-    self.topics.map(&:name).join(', ')
+    leaf_topics.map(&:name).join(', ')
   end
 
   def topics_all_ancestors
@@ -40,6 +40,5 @@ module Categorizable
     topic_names_array = ts.split(",").map(&:strip).uniq.reject(&:empty?)
     self.topics = Topic.find_all_by_name(topic_names_array)
     self.topics = topics_all_ancestors
-    self.topics = leaf_topics
   end
 end

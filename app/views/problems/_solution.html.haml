@@ -18,6 +18,7 @@
       %span>= link_to 'Show solution', 'javascript:;', { style: 'color:#000000;', id: "solution_button#{solution.id}" } 
 
   %br/
+  %br/
   .solution{id: "solution#{solution.id}", style: "display:none"}
     = raw(solution.body.bbcode_to_html.gsub("\n", "<br/>"))
     %br/
@@ -31,7 +32,7 @@
     = render 'votables/ratings', { votable: solution, scope: 'elegance', lower: -2, upper: 2 }
     = render 'votables/ratings', { votable: solution, scope: 'instructiveness', lower: 0, upper: 2 }
     = render 'votables/ratings', { votable: solution, scope: 'difficulty', lower: -2, upper: 2, show_average: false }
-
+    = link_to 'Confused about the ratings?', ratings_guide_path
     - if solution.author == current_user
       %br/
       %br/

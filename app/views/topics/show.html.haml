@@ -21,17 +21,53 @@
 
 %h2 Problems
 
-- if @topic.problems.size > 10 
+- if @topic_problems.size > 10 
   %em 
     Only the first 10 results will be shown. 
 
-- if @topic.problems.size == 0
+- if @topic_problems.size == 0
   %em
-    There are currently no problems found under this topic. 
+    There are currently no problems categorized under this topic. 
 
 .row.list-group  
-  - @topic.problems[0...10].each do |pr|
+  - @topic_problems[0...10].each do |pr|
     .list-group-item
+      %strong
+        = link_to pr.show_description, pr
+      %br/
+      %br/
+
+      = render '/problems/sources', problem: pr
+      = render 'categorizables/topic_list', categorizable: pr
+      %br/
+      %br/
+
+      = raw(pr.body.bbcode_to_html.gsub("\n", "<br/>"))
+      %br/
+      %br/
+
+/ = #link_to 'Add explanation', new_explanation_path(topic: @topic.id)
+
+/ - #@topic.explanations.each do |explanation|
+/  = #render partial: 'explanation', object: explanation
+
+%br/
+%br/
+
+%h2 Problems with a solution involving this topic
+
+- if @topic_solutions.size > 10 
+  %em 
+    Only the first 10 results will be shown. 
+
+- if @topic_solutions.size == 0
+  %em
+    There are currently no problems with a a solutions categorized under this topic. 
+
+.row.list-group  
+  - @topic_solutions[0...10].each do |s|
+    .list-group-item
+      - pr = s.problem
       %strong
         = link_to pr.show_description, pr
       %br/

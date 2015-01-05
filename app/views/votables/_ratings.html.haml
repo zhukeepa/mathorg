@@ -20,7 +20,7 @@
     = surround '( ', ' )' do
       - for i in lower..upper
         - path = rate_path(rating: i, votable_id: votable.id, votable_type: votable.class, | 
-          scope: scope, disp_text: disp_text, lower: lower, upper: upper)
+          scope: scope, disp_text: disp_text, lower: lower, upper: upper, show_average: show_average)
         - text = (current_user_vote == i) ? raw("<strong>#{i}</strong>") : i
         = link_to text, path, { method: :post, remote: true }
 
@@ -31,7 +31,7 @@
 
   = surround '( ', ' )' do
     - n = votable.get_upvotes(vote_scope: scope).size
-    - if show_average
+    - if show_average && show_average != "false"
       = votable.get_upvotes(vote_scope: scope).sum(:vote_weight).to_f / n
       avg, 
     = n

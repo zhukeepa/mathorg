@@ -3,10 +3,18 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.find(params[:id])
+
+    # ::TODO:: once you finalize how you want to internally store Topics, either choose to replace
+    # @topic_problems in the view with @topic.problems (resp solutions) or revert back
+    # to commented versions. 
+    descendant_topics = @topic.descendant_topics
+    @topic_problems  = @topic.problems#descendant_topics.map(&:problems).reduce(:|)
+    @topic_solutions = @topic.solutions#descendant_topics.map(&:solutions).reduce(:|)
   end
 
   def index
-  	@root_topics = Topic.all.keep_if { |t| t.parents.size == 0 }
+  	#@root_topics = Topic.all.keep_if { |t| t.parents.size == 0 }
+    @topic = Topic.find_by_name("Math contests")
   end
 
   def new

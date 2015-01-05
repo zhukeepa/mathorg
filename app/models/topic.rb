@@ -26,4 +26,8 @@ class Topic < ActiveRecord::Base
   def ancestor_topics
     (self.parents.empty? ? [self] : self.parents.map(&:ancestor_topics).flatten.append(self)).uniq
   end
+
+  def descendant_topics
+    (self.children.empty? ? [self] : self.children.map(&:descendant_topics).flatten.append(self)).uniq
+  end
 end
