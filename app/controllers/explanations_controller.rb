@@ -10,6 +10,7 @@ class ExplanationsController < ApplicationController
 
   # ::TODO:: test the below code
   def create
+    #render text: explanation_params
     @explanation = Explanation.new(explanation_params)
     @explanation.user = current_user
     @explanation.save
@@ -31,14 +32,14 @@ class ExplanationsController < ApplicationController
   end
 
   def destroy
-      @explanation = Explanation.find(params[:id])
-      @explanation.destroy
+    @explanation = Explanation.find(params[:id])
+    @explanation.destroy
 
-      render text: 'Your explanation has been deleted.'
+    render text: 'Your explanation has been deleted.'
   end
 
 private
   def explanation_params
-    params[:explanation].permit(:title, :description, :body, :topics_string)
+    params[:explanation].permit(:title, :description, :body_text, :topics_string)
   end
 end

@@ -22,6 +22,8 @@ Mathorg::Application.routes.draw do
     get :autocomplete_topic_name, on: :collection
   end
 
+  resources :explanations
+
   resources :comments
   
   resources :problems do 

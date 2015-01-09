@@ -13,8 +13,7 @@
 
 = link_to 'Edit', edit_explanation_path(@explanation)
 
-#dispvotes
-  = render 'votes', { upvote_num: @explanation.get_upvotes.size, downvote_num: @explanation.get_downvotes.size }
+= render 'votables/votes', { votable: @explanation }
 %br/
 
 - if current_user == @explanation.user
@@ -24,4 +23,4 @@
 %br/
 %br/
 
-= raw(@explanation.body.bbcode_to_html.gsub("\n", "<br/>"))
+= raw(@explanation.body.to_html)
