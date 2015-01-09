@@ -2,17 +2,17 @@ class ExplanationsController < ApplicationController
   def new 
     @explanation = Explanation.new
     @explanation.topics = [Topic.find(params[:topic])] unless params[:topic].nil?
+    @explanation.body = RichText.new
   end
 
   def edit
     @explanation = Explanation.find(params[:id])
   end
 
-  # ::TODO:: test the below code
   def create
-    #render text: explanation_params
+    #::TODO:: maybe there's a more succint way? or maybe this is alright as is...
     @explanation = Explanation.new(explanation_params)
-    @explanation.user = current_user
+    @explanation.body = RichText.new(body_params)
     @explanation.save
 
     redirect_to action: :show, id: @explanation.id
@@ -21,6 +21,8 @@ class ExplanationsController < ApplicationController
   def update
     @explanation = Explanation.find(params[:id])
     @explanation.update(explanation_params)
+    @explanation.body.update(body_params)
+
     @explanation.user = current_user
     @explanation.save
 
@@ -40,6 +42,10 @@ class ExplanationsController < ApplicationController
 
 private
   def explanation_params
-    params[:explanation].permit(:title, :description, :body_text, :topics_string)
+    params[:explanation].permit(:title, :description, :body_attributes, :topics_string)
+  end
+
+  def body_params
+    params[:explanation][:rich_text].permit(:text)
   end
 end
