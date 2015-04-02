@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'annotate'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
@@ -60,6 +62,11 @@ gem 'jquery-ui-rails'
 gem 'rails4-autocomplete'
 
 gem 'simple_form'
+
+group :development, :test do 
+  gem 'rspec-rails'
+  gem 'pry'
+end
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'

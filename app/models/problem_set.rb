@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: problem_sets
+#
+#  id            :integer          not null, primary key
+#  problem_order :text
+#  name          :string(255)
+#  official      :boolean
+#  created_at    :datetime
+#  updated_at    :datetime
+#
+
 class ProblemSet < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true, length: { minimum: 5 }
 
