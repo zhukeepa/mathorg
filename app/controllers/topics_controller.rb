@@ -7,7 +7,6 @@ class TopicsController < ApplicationController
     # ::TODO:: once you finalize how you want to internally store Topics, either choose to replace
     # @topic_problems in the view with @topic.problems (resp solutions) or revert back
     # to commented versions. 
-    descendant_topics = @topic.descendant_topics
     @topic_problems  = @topic.problems#descendant_topics.map(&:problems).reduce(:|)
     @topic_solutions = @topic.solutions#descendant_topics.map(&:solutions).reduce(:|)
   end

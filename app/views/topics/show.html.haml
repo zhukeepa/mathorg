@@ -1,11 +1,7 @@
 %h1= @topic.name
 
-- ##::TODO:: does not jibe with categorizable
-= render 'shared/topic_list', name: 'Parent'  , topics: @topic.parents
-%br/
-= render 'shared/topic_list', name: 'Subtopic', topics: @topic.children
-%br/
-
+- # Parents 
+= render 'categorizables/topic_list', categorizable: @topic
 %br/
 
 .btn-group

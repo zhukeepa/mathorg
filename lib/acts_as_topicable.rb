@@ -7,6 +7,18 @@ def acts_as_topicable(options = {})
     has_many :topic_categorizables, as: :categorizable
     has_many topics_name, through: :topic_categorizables, source: :topic
 
+    define_singleton_method "topics_name" do 
+      topics_name 
+    end 
+
+    define_method "__topics" do |*args|
+      send topics_name, args
+    end
+
+    define_method "__topics=" do |*args|
+      send "#{topics_name}=".to_sym, *args
+    end
+
     include Categorizable
   end
 
