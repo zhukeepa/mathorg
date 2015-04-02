@@ -35,6 +35,9 @@ GEM
       tzinfo (~> 0.3.37)
     acts_as_commentable (4.0.2)
     acts_as_votable (0.10.0)
+    annotate (2.6.5)
+      activerecord (>= 2.3.0)
+      rake (>= 0.8.7)
     arel (4.0.2)
     bb-ruby (1.0.4)
     bcrypt (3.1.7)
@@ -44,6 +47,7 @@ GEM
     bootstrap-sass (3.2.0.0)
       sass (~> 3.2)
     builder (3.1.4)
+    coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -57,6 +61,7 @@ GEM
       railties (>= 3.2.6, < 5)
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    diff-lcs (1.2.5)
     elasticsearch (1.0.6)
       elasticsearch-api (= 1.0.6)
       elasticsearch-transport (= 1.0.6)
@@ -88,6 +93,7 @@ GEM
       treetop (~> 1.4.8)
     mathjax-rails (2.3.0)
       railties (>= 3.0)
+    method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile (0.6.2)
     minitest (4.7.5)
@@ -98,6 +104,10 @@ GEM
     orm_adapter (0.5.0)
     pg (0.17.1)
     polyglot (0.3.5)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -124,6 +134,23 @@ GEM
     rake (10.3.2)
     rdoc (4.1.2)
       json (~> 1.4)
+    rspec-core (3.2.1)
+      rspec-support (~> 3.2.0)
+    rspec-expectations (3.2.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.2.0)
+    rspec-mocks (3.2.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.2.0)
+    rspec-rails (3.2.1)
+      actionpack (>= 3.0, < 4.3)
+      activesupport (>= 3.0, < 4.3)
+      railties (>= 3.0, < 4.3)
+      rspec-core (~> 3.2.0)
+      rspec-expectations (~> 3.2.0)
+      rspec-mocks (~> 3.2.0)
+      rspec-support (~> 3.2.0)
+    rspec-support (3.2.2)
     sass (3.2.19)
     sass-rails (4.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -140,6 +167,7 @@ GEM
     simple_form (3.1.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
+    slop (3.6.0)
     sprockets (2.11.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -168,6 +196,7 @@ PLATFORMS
 DEPENDENCIES
   acts_as_commentable
   acts_as_votable
+  annotate
   bb-ruby
   best_in_place
   bootstrap-sass (= 3.2.0.0)
@@ -180,9 +209,11 @@ DEPENDENCIES
   mathjax-rails
   opml_saw!
   pg
+  pry
   rails (= 4.0.4)
   rails4-autocomplete
   rails_12factor
+  rspec-rails
   sass-rails (~> 4.0.2)
   sdoc
   searchkick

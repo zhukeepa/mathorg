@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: problems
+#
+#  id            :integer          not null, primary key
+#  body          :text
+#  source        :text
+#  author        :text
+#  show_solution :boolean
+#  created_at    :datetime
+#  updated_at    :datetime
+#  description   :text
+#
+
 class Problem < ActiveRecord::Base
   acts_as_votable
   searchkick
@@ -12,8 +26,6 @@ class Problem < ActiveRecord::Base
 
   ##::TODO:: there should be some way to DRY this across all categorizables 
   ## [analogous for solution.rb; problem_set.rb; explanation.rb]
-  has_many :topic_categorizables, as: :categorizable
-  has_many :topics, through: :topic_categorizables
   include Categorizable
 
   def sources_string

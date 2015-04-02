@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: solutions
+#
+#  id         :integer          not null, primary key
+#  hints      :text
+#  problem_id :integer
+#  created_at :datetime
+#  updated_at :datetime
+#  body       :text
+#  author_id  :integer
+#
+
 class Solution < ActiveRecord::Base
   acts_as_commentable
   acts_as_votable
@@ -7,8 +20,6 @@ class Solution < ActiveRecord::Base
   belongs_to :problem
   belongs_to :author, class_name: 'User'
 
-  has_many :topic_categorizables, as: :categorizable
-  has_many :topics, through: :topic_categorizables
   include Categorizable
 
   def initialize(*args)

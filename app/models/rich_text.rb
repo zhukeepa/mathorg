@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: rich_texts
+#
+#  id            :integer          not null, primary key
+#  text          :text
+#  bodyable_id   :integer
+#  bodyable_type :string(255)
+#  created_at    :datetime
+#  updated_at    :datetime
+#  format        :string(255)
+#
+
 class RichText < ActiveRecord::Base
   belongs_to :bodyable, polymorphic: true
   
