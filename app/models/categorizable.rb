@@ -1,16 +1,15 @@
 # require 'active_support/concerns'
 
 module Categorizable
-  extend ActiveSupport::Concern
-
   # If A and B are included and A is a parent of B, only keep B. 
   def leaf_topics # rename this to be less confusing ::TODO::
-  	# We make the onceassumption here that if A is an ancestor of B, then 
+  	# We make the assumption here that if A is an ancestor of B, then 
   	# everything in between A and B is included as well. 
   	
     # Working set of topics, which we'll extract branches from
     w_topics = self.__topics
     finished = []
+
 
     # ::TODO_LATER:: can almost certainly be made more efficient, but whatever. 
     # ::TODO_LATER:: test this more extensively to see if it's actually bug-free; 
@@ -36,7 +35,8 @@ module Categorizable
     leaf_topics.map(&:name).join(', ')
   end
   
-  # ::TODO:: doesn't handle __topics with commas in it
+
+  # ::TODO:: doesn't handle topics with commas in it
   def topics_string=(ts)
     topic_names_array = ts.split(",").map(&:strip).uniq.reject(&:empty?)
     self.__topics = Topic.find_all_by_name(topic_names_array)

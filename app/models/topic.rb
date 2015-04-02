@@ -8,13 +8,8 @@
 #  updated_at :datetime
 #
 
-  # has_many :problems,     through: :topic_categorizables, source: :categorizable, source_type: "Problem"
-  # has_many :explanations, through: :topic_categorizables, source: :categorizable, source_type: "Explanation"
-  # has_many :solutions,    through: :topic_categorizables, source: :categorizable, source_type: "Solution"
-
 #::TODO:: remove
 require './lib/acts_as_topicable.rb'
-
 class Topic < ActiveRecord::Base
   searchkick
   has_many :topic_categorizables
