@@ -3,18 +3,9 @@
 module Categorizable
   extend ActiveSupport::Concern
 
-  included do
-    has_many :topic_categorizables, as: :categorizable
-    has_many :topics, through: :topic_categorizables
-
-    Topic.class_eval do 
-      has_many name.tableize.to_sym, through: :topic_categorizables, source: :categorizable, source_type: name
-    end 
-  end
-
   # If A and B are included and A is a parent of B, only keep B. 
   def leaf_topics # rename this to be less confusing ::TODO::
-  	# We make the assumption here that if A is an ancestor of B, then 
+  	# We make the onceassumption here that if A is an ancestor of B, then 
   	# everything in between A and B is included as well. 
   	
     # Working set of topics, which we'll extract branches from

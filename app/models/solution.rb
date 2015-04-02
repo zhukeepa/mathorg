@@ -11,6 +11,9 @@
 #  author_id  :integer
 #
 
+#::TODO:: remove
+require './lib/acts_as_topicable.rb'
+
 class Solution < ActiveRecord::Base
   acts_as_commentable
   acts_as_votable
@@ -20,7 +23,7 @@ class Solution < ActiveRecord::Base
   belongs_to :problem
   belongs_to :author, class_name: 'User'
 
-  include Categorizable
+  acts_as_topicable 
 
   def initialize(*args)
     super 

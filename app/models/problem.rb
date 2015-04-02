@@ -12,6 +12,9 @@
 #  description   :text
 #
 
+#::TODO:: remove
+require './lib/acts_as_topicable.rb'
+
 class Problem < ActiveRecord::Base
   acts_as_votable
   searchkick
@@ -24,9 +27,7 @@ class Problem < ActiveRecord::Base
   has_and_belongs_to_many :sources, class_name: 'ProblemSet'
 
 
-  ##::TODO:: there should be some way to DRY this across all categorizables 
-  ## [analogous for solution.rb; problem_set.rb; explanation.rb]
-  include Categorizable
+  acts_as_topicable
 
   def sources_string
     sources.map(&:name).join(', ')
