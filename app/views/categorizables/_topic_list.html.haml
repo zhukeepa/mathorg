@@ -3,15 +3,7 @@
   - name = categorizable.class.topics_name.capitalize.to_s
 
 .topic-list{id: "#{categorizable.class}_#{categorizable.id}_topiclist"}
-  %strong 
-    = name.pluralize(topics.size) + ':'
-
-  - if topics.size > 0
-    = raw(topics.map do |t|
-      - link_to t.name, t
-    - end.join(', '))
-  - else
-    %emph None
+  = render 'shared/topic_list', name: name, topics: topics
 
   - if user_signed_in?
     = link_to '', categorizables_edit_topic_list_path(categorizable_id: categorizable.id, |

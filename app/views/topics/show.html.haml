@@ -2,6 +2,8 @@
 
 - # Parents 
 = render 'categorizables/topic_list', categorizable: @topic
+= render 'shared/topic_list', topics: @topic.children, name: "Children"
+
 %br/
 
 .btn-group

@@ -10,12 +10,7 @@ module Categorizable
   	
     # Working set of topics, which we'll extract branches from
     w_topics = self.__topics
-
-    # ::TODO_LATER:: obviously not this
-    return w_topics 
-
     finished = []
-
 
     # ::TODO_LATER:: can almost certainly be made more efficient, but whatever. 
     # ::TODO_LATER:: test this more extensively to see if it's actually bug-free; 
@@ -33,12 +28,12 @@ module Categorizable
     finished
   end
 
-  def topics_string
-    leaf_topics.map(&:name).join(', ')
-  end
-
   def topics_all_ancestors
     !self.__topics.empty? ? self.__topics.map(&:ancestor_topics).reduce(:|).uniq : []
+  end
+
+  def topics_string
+    leaf_topics.map(&:name).join(', ')
   end
   
   # ::TODO:: doesn't handle __topics with commas in it

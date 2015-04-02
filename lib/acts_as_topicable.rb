@@ -4,8 +4,10 @@ def acts_as_topicable(options = {})
   topicable_class = options[:topicable_class] || name
 
   self.class_eval do 
-    has_many :topic_categorizables, as: :categorizable
-    has_many topics_name, through: :topic_categorizables, source: :topic
+    # prevents naming conflicts when e.g. included in Topic
+    pseudo_join_name = "#{topics_name.to_s.singularize}_#{topicable_name}".to_sym
+    has_many pseudo_join_name, class_name: 'TopicCategorizable', as: :categorizable
+    has_many topics_name, through: pseudo_join_name, source: :topic
 
     define_singleton_method "topics_name" do 
       topics_name 
