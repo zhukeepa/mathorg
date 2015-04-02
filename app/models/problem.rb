@@ -16,18 +16,14 @@
 require './lib/acts_as_topicable.rb'
 
 class Problem < ActiveRecord::Base
+  acts_as_topicable
   acts_as_votable
   searchkick
 
-  #validates :description, presence: true, length: { minimum: 5 }
   validates :body, presence: true, length: { minimum: 5 }
 
   has_many :solutions
-
   has_and_belongs_to_many :sources, class_name: 'ProblemSet'
-
-
-  acts_as_topicable
 
   def sources_string
     sources.map(&:name).join(', ')

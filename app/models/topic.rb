@@ -18,6 +18,8 @@ class Topic < ActiveRecord::Base
 
   has_many :topic_categorizables
 
+  acts_as_topicable topics_name: :parents, topicable_name: :children, topicable_class: 'Topic'
+
   has_many :topic_child_parents, foreign_key: :child_id, dependent: :destroy 
   has_many :parents, through: :topic_child_parents, source: :parent
   has_many :topic_parent_children, class_name: 'TopicChildParent', foreign_key: :parent_id, dependent: :destroy 
@@ -39,5 +41,18 @@ class Topic < ActiveRecord::Base
 
   def descendant_topics
     (self.children.empty? ? [self] : self.children.map(&:descendant_topics).flatten.append(self)).uniq
+  end
+
+  # ::TODO:: this is SO HACKY there must be a better way...??
+  # if 
+  def method_missing(m, *args, &block)
+    klass = m.to_s.titleize.gsub(' ', '').singularize.constantize
+    if Topic.instance_methods.include?(m)
+      self.send m
+    else
+      super 
+    end
+  rescue
+    super
   end
 end
