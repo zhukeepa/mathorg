@@ -10,6 +10,9 @@
 #  updated_at    :datetime
 #
 
+#::TODO:: remove
+require './lib/acts_as_topicable.rb'
+
 class ProblemSet < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true, length: { minimum: 5 }
   acts_as_topicable
@@ -36,12 +39,13 @@ class ProblemSet < ActiveRecord::Base
   def problem_ids=(problem_ids)
     problem_ids_array = problem_ids.split(",").map(&:strip).reject(&:empty?).map(&:to_i)
     sorted_problem_ids_array = problem_ids_array.sort
+    
     self.problem_order = problem_ids_array.map { |i| sorted_problem_ids_array.index(i) }
     self.problems = Problem.find_all_by_id(problem_ids_array)
   end
 
   def problems
-    ProblemSet.sort_array_by_order(super.sort_by(&:id), self.problem_order)
+    ProblemSet.sort_array_by_order(super.sort_by(&:id), problem_order)
   end
 
 private
