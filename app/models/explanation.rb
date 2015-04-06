@@ -18,11 +18,6 @@ require './lib/acts_as_topicable.rb'
 class Explanation < ActiveRecord::Base
   acts_as_votable
 
-
-
-  acts_as_topicable :topic, :explanation
-  acts_as_topicable :topic, :solution 
-
   belongs_to :user
 
   has_one :body, as: :bodyable, class_name: 'RichText'

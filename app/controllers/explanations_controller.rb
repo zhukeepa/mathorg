@@ -1,4 +1,5 @@
 class ExplanationsController < ApplicationController
+  before_action :set_explanation, only: [:edit, :update, :show, :destroy]
   def new 
     @explanation = Explanation.new
     @explanation.topics = [Topic.find(params[:topic])] unless params[:topic].nil?
@@ -6,7 +7,6 @@ class ExplanationsController < ApplicationController
   end
 
   def edit
-    @explanation = Explanation.find(params[:id])
   end
 
   def create
@@ -19,7 +19,6 @@ class ExplanationsController < ApplicationController
   end
 
   def update
-    @explanation = Explanation.find(params[:id])
     @explanation.update(explanation_params)
     @explanation.body.update(body_params)
 
@@ -30,11 +29,9 @@ class ExplanationsController < ApplicationController
   end
 
   def show
-    @explanation = Explanation.find(params[:id])
   end
 
   def destroy
-    @explanation = Explanation.find(params[:id])
     @explanation.destroy
 
     render text: 'Your explanation has been deleted.'
@@ -47,5 +44,9 @@ private
 
   def body_params
     params[:explanation][:rich_text].permit(:text)
+  end
+
+  def set_explanation
+    @explanation = Explanation.find(params[:id])
   end
 end
