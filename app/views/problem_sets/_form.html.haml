@@ -1,7 +1,5 @@
 = simple_form_for @ps do |f|
   = f.input :name
-  = f.input :problem_ids_string, label: "Problem ids"
+  = f.input :problem_ids, label: "Problem ids"
   = f.input :official, label: "Official?"
   = f.button :submit
-
-/ /  = f.input :problems, input_html: { value: ProblemSet.problems_array_and_ordering_to_problem_ids_string(@ps.problems, @ps.problem_order) }

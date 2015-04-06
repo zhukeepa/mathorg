@@ -21,9 +21,9 @@ class ProblemsController < ApplicationController
     @original_problem.solutions << @problem.solutions
 
     @problem.sources.each do |s|
-      p_ids_array = s.problem_ids_string.split(',').map(&:strip).reject(&:empty?).map(&:to_i)
+      p_ids_array = s.problem_ids.split(',').map(&:strip).reject(&:empty?).map(&:to_i)
       p_ids_array[ p_ids_array.index(@problem.id) ] = @original_problem.id
-      s.problem_ids_string = p_ids_array.join(',')
+      s.problem_ids = p_ids_array.join(',')
       s.save
     end
 

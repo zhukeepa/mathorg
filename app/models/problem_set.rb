@@ -12,14 +12,12 @@
 
 class ProblemSet < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true, length: { minimum: 5 }
-
-
-  has_many :topic_categorizables, as: :categorizable
-  has_many :topics, through: :topic_categorizables
-  include Categorizable
+  acts_as_topicable
 
   has_and_belongs_to_many :problems
 
+  # represents the permutation of the sorted list of problem id's corresponding to 
+  # the ordering of the list of problems. 
   serialize :problem_order, Array
 
   def to_param
@@ -31,29 +29,23 @@ class ProblemSet < ActiveRecord::Base
   	self.problem_order ||= []
   end
 
-  def problem_ids_string
-    ProblemSet.sort_array_by_order(problem_ids.sort, self.problem_order).join(', ')
+  def problem_ids
+    problems.map(&:id).join(', ')
   end
 
-  def problem_ids_string=(problem_ids_string)
-    problem_ids_array = problem_ids_string.split(",").map(&:strip).reject(&:empty?).map(&:to_i)
-    self.problem_order = problem_ids_array.map { |i| problem_ids_array.sort.index(i) }
+  def problem_ids=(problem_ids)
+    problem_ids_array = problem_ids.split(",").map(&:strip).reject(&:empty?).map(&:to_i)
+    sorted_problem_ids_array = problem_ids_array.sort
+    self.problem_order = problem_ids_array.map { |i| sorted_problem_ids_array.index(i) }
     self.problems = Problem.find_all_by_id(problem_ids_array)
   end
 
-  def problems_sorted
-    ProblemSet.sort_array_by_order(self.problems.sort_by(&:id), self.problem_order)
+  def problems
+    ProblemSet.sort_array_by_order(super.sort_by(&:id), self.problem_order)
   end
 
 private
   def self.sort_array_by_order(array, ordering)
-    s = array.length
-    sorted_array = Array.new(s)
-
-    for i in 0...s
-      sorted_array[i] = array[ordering[i]]
-    end
-
-    sorted_array 
+    (0...array.length).map { |i| array[ordering[i]] }
   end
 end

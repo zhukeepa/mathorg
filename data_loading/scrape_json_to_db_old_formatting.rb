@@ -19,7 +19,7 @@ problems_hashes.each do |ph|
 end
 
 psd.each do |foo|
-  foo[:ps].problem_ids_string = foo[:problem_indexes].compact.join(',')
+  foo[:ps].problem_ids = foo[:problem_indexes].compact.join(',')
   foo[:ps].save
 end
 

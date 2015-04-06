@@ -18,7 +18,7 @@ contest_hashes.each do |c|
   	p_ids.append(p_db.id)
   end
 
-  ps.problem_ids_string = p_ids.join(',')
+  ps.problem_ids = p_ids.join(',')
   ps.save
 end
 
