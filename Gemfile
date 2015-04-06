@@ -26,10 +26,16 @@ gem 'searchkick'
 # Voting! 
 gem 'acts_as_votable'
 
-# Use sqlite3 as the database for Active Record
-# group :development, :test do
-#   gem 'sqlite3'
-# end
+group :development, :test do 
+  gem 'rspec-rails'
+  gem 'pry'
+
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'factory_girl'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+end
 
 group :production, :development, :test do
   gem 'pg'
@@ -62,11 +68,6 @@ gem 'jquery-ui-rails'
 gem 'rails4-autocomplete'
 
 gem 'simple_form'
-
-group :development, :test do 
-  gem 'rspec-rails'
-  gem 'pry'
-end
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'
