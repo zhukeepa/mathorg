@@ -19,3 +19,30 @@ RSpec.describe Categorizable, type: :model do
     end
   end
 end
+
+ #           A 
+ # Equation     Geometry problems 
+ #           D 
+
+
+# # topic.yml
+# A: 
+#   name: Topic A 
+
+# B: 
+#   name: Topic B
+
+# C: 
+#   name: Topic C 
+
+# D: 
+#   name: Topic D 
+
+# #topic_categorizable.yml 
+# AB:
+#   topic: A
+#   categorizable: B
+
+# factory :A, class: Topic do 
+#   name "Topic A"
+# end 

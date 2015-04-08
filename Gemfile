@@ -66,6 +66,8 @@ gem 'simple_form'
 group :development, :test do 
   gem 'rspec-rails'
   gem 'pry'
+  gem 'capybara'
+  gem 'poltergeist'
 end
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

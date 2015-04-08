@@ -13,7 +13,7 @@ class TopicsController < ApplicationController
 
   def index
   	#@root_topics = Topic.all.keep_if { |t| t.parents.size == 0 }
-    @topic = Topic.find_by_name("Math contests")
+    @topic = Topic.new# find_by_name("Math contests")
   end
 
   def new
@@ -27,9 +27,7 @@ class TopicsController < ApplicationController
   end
 
   def create
-    @topic = Topic.new(params[:topic].permit(:name))
-    @parents = Topic.topics_string_to_topics_array(params[:topic][:parents])
-    @topic.parents = @parents
+    @topic = Topic.new(params[:topic].permit(:name, :topics_string))
     
     if @topic.save
       redirect_to action: :show, id: @topic.id
