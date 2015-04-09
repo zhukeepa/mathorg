@@ -4,12 +4,9 @@ FactoryGirl.define do
   end
 
   factory :problem do 
+    description "Description"
     body "Problem body"
   end 
-
-  factory :explanation do 
-    body "Explanaton body" 
-  end
 
   factory :solution do 
     body "Solution body"

@@ -3,8 +3,8 @@ require_relative 'user_actions/signins_helper'
 require_relative 'user_actions/problems_helper'
 
 RSpec.feature "Add, edit, and delete problems", type: :feature do
-  let(:problem) { Problem.new(description: "description", body: "body fat", topics_string: "Topic 1") }
-  let(:problem_edited) { Problem.new(description: "new description", body: "edited body", topics_string: "Topic 2") }
+  let(:problem) { FactoryGirl.build(:problem) } 
+  let(:problem_edited) { FactoryGirl.build(:problem, description: "new description", body: "edited body", topics_string: "Topic 2") }
 
   scenario "User creates new problem" do 
     sign_up('example@example.com', 'password')
