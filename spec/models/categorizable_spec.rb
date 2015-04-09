@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Categorizable, type: :model do
-  let!(:topic1) { Topic.create!(name: "Topic 1") }
-  let!(:topic2) { Topic.create!(name: "Topic 2") }
+  let!(:topic1) { FactoryGirl.create(:topic, name: "Topic 1") }
+  let!(:topic2) { FactoryGirl.create(:topic, name: "Topic 2") } 
   let(:problem) { Problem.create!(body: "asdfdsdafsd") }
 
   describe "#topics_string=" do 

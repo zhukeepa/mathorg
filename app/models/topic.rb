@@ -13,6 +13,7 @@ require './lib/acts_as_topicable.rb'
 class Topic < ActiveRecord::Base
   searchkick
   has_many :topic_categorizables
+  
   validates :name, presence: true, uniqueness: true, length: { minimum: 5 }
   acts_as_topicable topics_name: :parents, topicable_name: :children, topicable_class: 'Topic'
 
