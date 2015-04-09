@@ -9,6 +9,18 @@
 
   </script>
 
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+       tex2jax: {
+         inlineMath: [ ['$','$'] ],
+         processEscapes: true
+       }
+      });
+  </script>
+  <%= mathjax_tag %>
+</head>
+
+<body>
   <header class="navbar navbar-fixed-top navbar-inverse navbar-default" role="navigation">
     <div class="container-fluid">
         <%= link_to raw('MO<sup>2</sup>P'), root_path, class: "navbar-brand" %>
@@ -39,19 +51,6 @@
         </ul>
     </div>
   </header>
-
-  <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-       tex2jax: {
-         inlineMath: [ ['$','$'] ],
-         processEscapes: true
-       }
-      });
-  </script>
-  <%= mathjax_tag %>
-</head>
-
-<body>
 
 <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
