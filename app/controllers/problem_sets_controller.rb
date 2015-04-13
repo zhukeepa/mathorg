@@ -1,10 +1,10 @@
 class ProblemSetsController < ApplicationController
+  before_action :set_problem_set, only: [:edit, :update, :show, :destroy]
   def new
   	@ps = ProblemSet.new 
   end
 
   def edit
-    @ps = ProblemSet.find_by(name: params[:id])
   end
 
   def index
@@ -13,7 +13,7 @@ class ProblemSetsController < ApplicationController
   end
 
   def create
-    @ps = ProblemSet.new(params[:problem_set].permit(:name, :official, :problem_ids))
+    @ps = ProblemSet.new(problem_set_params)
 
     if @ps.save
       redirect_to action: :show, id: @ps.name
@@ -23,9 +23,7 @@ class ProblemSetsController < ApplicationController
   end
 
   def update
-    @ps = ProblemSet.find_by(name: params[:id])
-      
-    if @ps.update(params[:problem_set].permit(:name, :official, :problem_ids))
+    if @ps.update(problem_set_params)
       redirect_to action: :show, id: @ps.name
     else
       render 'edit'
@@ -33,14 +31,21 @@ class ProblemSetsController < ApplicationController
   end
 
   def show
-    @ps = ProblemSet.find_by(name: params[:id])
     @problems = @ps.problems
   end
 
   def destroy
-    @ps = ProblemSet.find_by(name: params[:id])
     @ps.destroy
 
     render text: 'The problem set has been destroyed. '
+  end
+
+private
+  def problem_set_params 
+    params[:problem_set].permit(:name, :official, :problem_ids)
+  end 
+  
+  def set_problem_set
+    @ps = ProblemSet.find_by(name: params[:id])
   end
 end

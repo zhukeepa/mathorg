@@ -1,14 +1,10 @@
 class TopicsController < ApplicationController
+  before_action :set_topic, only: [:show, :edit, :update,:destroy]
   autocomplete :topic, :name
 
   def show
-    @topic = Topic.find(params[:id])
-
-    # ::TODO:: once you finalize how you want to internally store Topics, either choose to replace
-    # @topic_problems in the view with @topic.problems (resp solutions) or revert back
-    # to commented versions. 
-    @topic_problems  = @topic.problems#descendants.map(&:problems).reduce(:|)
-    @topic_solutions = @topic.solutions#descendants.map(&:solutions).reduce(:|)
+    @topic_problems  = @topic.problems
+    @topic_solutions = @topic.solutions
   end
 
   def index
@@ -23,7 +19,6 @@ class TopicsController < ApplicationController
   end
 
   def edit
-  	@topic = Topic.find(params[:id])
   end
 
   def create
@@ -37,8 +32,6 @@ class TopicsController < ApplicationController
   end
 
   def update
-    @topic = Topic.find(params[:id])
-
     if @topic.update(topic_params)
       redirect_to @topic
     else
@@ -47,7 +40,6 @@ class TopicsController < ApplicationController
   end
 
   def destroy
-  	@topic = Topic.find(params[:id])
   	@topic.destroy
 
   	render text: 'The topic has been destroyed. '
@@ -56,5 +48,9 @@ class TopicsController < ApplicationController
 private 
   def topic_params
     params[:topic].permit(:name, :parents_string)
+  end
+
+  def set_topic
+    @topic = Topic.find(params[:id])
   end
 end

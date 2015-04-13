@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150408205933) do
+ActiveRecord::Schema.define(version: 20150408210311) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,9 +33,9 @@ ActiveRecord::Schema.define(version: 20150408205933) do
 
   create_table "explanations", force: true do |t|
     t.text     "description"
-    t.string   "title"
+    t.text     "title"
     t.integer  "depth"
-    t.string   "ordering"
+    t.text     "ordering"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
@@ -61,12 +61,12 @@ ActiveRecord::Schema.define(version: 20150408205933) do
 
   create_table "problems", force: true do |t|
     t.text     "body"
-    t.string   "source"
-    t.string   "author"
+    t.text     "source"
+    t.text     "author"
     t.boolean  "show_solution"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "description"
+    t.text     "description"
   end
 
   create_table "rich_texts", force: true do |t|
@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(version: 20150408205933) do
     t.string   "bodyable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "format"
   end
 
   create_table "solutions", force: true do |t|
@@ -102,25 +103,25 @@ ActiveRecord::Schema.define(version: 20150408205933) do
   add_index "topic_categorizables", ["topic_id"], name: "index_topic_categorizables_on_topic_id", using: :btree
 
   create_table "topics", force: true do |t|
-    t.string   "name"
+    t.text     "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
+    t.text     "email",                  default: "", null: false
+    t.text     "encrypted_password",     default: "", null: false
+    t.text     "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
+    t.text     "current_sign_in_ip"
+    t.text     "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "username"
+    t.text     "username"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
@@ -129,11 +130,11 @@ ActiveRecord::Schema.define(version: 20150408205933) do
 
   create_table "votes", force: true do |t|
     t.integer  "votable_id"
-    t.string   "votable_type"
+    t.text     "votable_type"
     t.integer  "voter_id"
-    t.string   "voter_type"
+    t.text     "voter_type"
     t.boolean  "vote_flag"
-    t.string   "vote_scope"
+    t.text     "vote_scope"
     t.integer  "vote_weight"
     t.datetime "created_at"
     t.datetime "updated_at"

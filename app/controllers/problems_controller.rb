@@ -1,8 +1,8 @@
 class ProblemsController < ApplicationController
+  before_action :set_problem, only: [:show, :edit, :update, :destroy]
   respond_to :html, :json
 
   def show
-  	@problem = Problem.find(params[:id])
   end
 
   def new
@@ -10,7 +10,6 @@ class ProblemsController < ApplicationController
   end
 
   def edit
-  	@problem = Problem.find(params[:id])
   end
 
   def merge
@@ -41,7 +40,6 @@ class ProblemsController < ApplicationController
   end
 
   def update
-    @problem = Problem.find(params[:id])
     if @problem.update(problem_params)  
       respond_with(@problem)
     else
@@ -50,7 +48,6 @@ class ProblemsController < ApplicationController
   end
 
   def destroy
-    @problem = Problem.find(params[:id])
     @problem.destroy
 
     render text: "The problem has been destroyed."
@@ -59,5 +56,9 @@ class ProblemsController < ApplicationController
 private 
   def problem_params
     params[:problem].permit(:source, :author, :body, :description, :topics_string)
+  end
+
+  def set_problem 
+    @problem = Problem.find(params[:id])
   end
 end
