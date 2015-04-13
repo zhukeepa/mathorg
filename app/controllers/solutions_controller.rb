@@ -1,22 +1,19 @@
 class SolutionsController < ApplicationController
+  before_action :set_problem, only: [:edit, :new, :create]
+  before_action :set_solution, only: [:edit, :update, :destroy]
+
   def edit
-    @solution = Solution.find(params[:id])
-    @problem = Problem.find(params[:problem_id])
   end
 
   def new
   	@solution = Solution.new
-    @problem = Problem.find(params[:problem_id])
   end
 
   def comments
-    @solution = Solution.find(params[:id])
     @comments = @solution.comments
   end
 
   def create
-    @problem = Problem.find(params[:problem_id])
-    
   	@solution = @problem.solutions.create(solution_params)
     @solution.author = current_user
     @solution.save
@@ -25,14 +22,12 @@ class SolutionsController < ApplicationController
   end
 
   def update
-    @solution = Solution.find(params[:id])
     @solution.update(solution_params)
 
     redirect_to @solution.problem
   end
 
   def destroy
-    @solution = Solution.find(params[:id])
     @solution.destroy
 
     render text: 'Your solution has been deleted.'
@@ -41,5 +36,13 @@ class SolutionsController < ApplicationController
 private
   def solution_params
     params[:solution].permit(:body, :hints_string, :topics_string)
+  end
+
+  def set_problem
+    @problem = Problem.find(params[:problem_id])
+  end
+
+  def set_solution
+    @solution = Solution.find(params[:id])
   end
 end
