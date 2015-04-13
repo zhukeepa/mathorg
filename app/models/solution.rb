@@ -45,6 +45,6 @@ class Solution < ActiveRecord::Base
   # ---
   # and sets hints to ["Hint 1", "Hint 2"]
   def hints_string=(hints_string)
-    self.hints = "\n#{hints_string}".split("\n*").map { |h| h.strip }.reject(&:empty?)
+    self.hints = "\n#{hints_string}".split("\n*").map(&:strip).reject(&:empty?)
   end
 end

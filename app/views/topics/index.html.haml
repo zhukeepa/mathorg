@@ -6,4 +6,5 @@
 %br/
 
 %ul
-= render 'topic', topic: @topic
+- @topics.each do |t|
+  = render 'topic', topic: t

@@ -7,13 +7,13 @@ class TopicsController < ApplicationController
     # ::TODO:: once you finalize how you want to internally store Topics, either choose to replace
     # @topic_problems in the view with @topic.problems (resp solutions) or revert back
     # to commented versions. 
-    @topic_problems  = @topic.problems#descendant_topics.map(&:problems).reduce(:|)
-    @topic_solutions = @topic.solutions#descendant_topics.map(&:solutions).reduce(:|)
+    @topic_problems  = @topic.problems#descendants.map(&:problems).reduce(:|)
+    @topic_solutions = @topic.solutions#descendants.map(&:solutions).reduce(:|)
   end
 
   def index
   	#@root_topics = Topic.all.keep_if { |t| t.parents.size == 0 }
-    @topic = Topic.new# find_by_name("Math contests")
+    @topics = Topic.all # find_by_name("Math contests")
   end
 
   def new
@@ -27,7 +27,7 @@ class TopicsController < ApplicationController
   end
 
   def create
-    @topic = Topic.new(params[:topic].permit(:name, :topics_string))
+    @topic = Topic.new(topic_params)
     
     if @topic.save
       redirect_to action: :show, id: @topic.id
@@ -38,9 +38,8 @@ class TopicsController < ApplicationController
 
   def update
     @topic = Topic.find(params[:id])
-    if @topic.update(params[:topic].permit(:name))
-      @parents = Topic.topics_string_to_topics_array(params[:topic][:parents])
-      @topic.parents  = @parents
+
+    if @topic.update(topic_params)
       redirect_to @topic
     else
       render 'edit'
@@ -52,5 +51,10 @@ class TopicsController < ApplicationController
   	@topic.destroy
 
   	render text: 'The topic has been destroyed. '
+  end
+
+private 
+  def topic_params
+    params[:topic].permit(:name, :parents_string)
   end
 end

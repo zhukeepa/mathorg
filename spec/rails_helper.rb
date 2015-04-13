@@ -47,3 +47,15 @@ RSpec.configure do |config|
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
 end
+
+def topics_diamond
+  @t1 = FactoryGirl.create(:topic, name: "Topic 1")
+  @t2 = FactoryGirl.create(:topic, name: "Topic 2")
+  @t3 = FactoryGirl.create(:topic, name: "Topic 3")
+  @t4 = FactoryGirl.create(:topic, name: "Topic 4")
+
+  @t1.children = [@t2, @t3]
+  @t4.parents = [@t2, @t3]
+
+  [@t1, @t2, @t3, @t4]
+end

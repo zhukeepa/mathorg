@@ -13,19 +13,21 @@ require './lib/acts_as_topicable.rb'
 class Topic < ActiveRecord::Base
   searchkick
   has_many :topic_categorizables
-  
-  validates :name, presence: true, uniqueness: true, length: { minimum: 5 }
+
+  # regex: no commas
+  validates :name, presence: true, uniqueness: true, length: { minimum: 5 }, format: { with: /\A[^,]*\Z/ }
+
   acts_as_topicable topics_name: :parents, topicable_name: :children, topicable_class: 'Topic'
 
-  def ancestor_topics
-    (self.parents.empty? ? [self] : self.parents.map(&:ancestor_topics).flatten.append(self)).uniq
+  def ancestors
+    (self.parents.empty? ? [self] : self.parents.map(&:ancestors).flatten.append(self)).uniq
   end
 
-  def descendant_topics
-    (self.children.empty? ? [self] : self.children.map(&:descendant_topics).flatten.append(self)).uniq
+  def descendants
+    (self.children.empty? ? [self] : self.children.map(&:descendants).flatten.append(self)).uniq
   end
 
-  # ::TODO:: this is SO HACKY there must be a better way...??
+  # ::TODO:: this is SO HACKY there must be a better way...?? also, doesn't fully work...
   def method_missing(m, *args, &block)
     # e.g. if doing topic.problems, touch the Problem class, so that it loads and
     # adds the problems method to Problem from acts_as_topicable. 

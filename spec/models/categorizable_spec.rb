@@ -1,48 +1,46 @@
 require 'rails_helper'
 
 RSpec.describe Categorizable, type: :model do
-  let!(:topic1) { FactoryGirl.create(:topic, name: "Topic 1") }
-  let!(:topic2) { FactoryGirl.create(:topic, name: "Topic 2") } 
-  let(:problem) { FactoryGirl.create(:problem) }
+  before(:each) do
+    @t1, @t2, @t3, @t4 = topics_diamond
+
+    @t5 = FactoryGirl.create(:topic, name: "Topic 5")
+    @t6 = FactoryGirl.create(:topic, name: "Topic 6")
+
+    @problem = FactoryGirl.create(:problem)
+  end
+
+  describe "#specificest_topics" do 
+    it "gives the list of most specific topics categorized under" do 
+      @problem.topics = [@t1, @t2, @t3, @t4]
+      expect(@problem.specificest_topics).to eq [@t4]
+    end
+  end
 
   describe "#topics_string=" do 
-    it "sets topics from strings" do 
-      problem.topics_string = "Topic 1, Topic 2"
-      expect(problem.topics.sort).to eq [topic1, topic2].sort
+    context "topics have no ancestry relation" do 
+      it "sets topics from strings" do 
+        @problem.topics_string = "Topic 5, Topic 6"
+        expect(@problem.topics.sort).to eq [@t5, @t6].sort
+      end
     end
+
+    # it "does not "
   end 
 
   describe "#topics_string" do 
-    it "its topic strings reflect its topics" do 
-      problem.topics << topic1 << topic2
-      expect(problem.topics_string).to eq "Topic 1, Topic 2"
+    context "topics have no ancestry relation" do 
+      it "shows all topics" do 
+        @problem.topics = [@t5, @t6]
+        expect(["Topic 6, Topic 5", "Topic 5, Topic 6"].include?(@problem.topics_string)).to be true
+      end
+    end
+
+    context "topics have ancestry relations" do 
+      it "only shows the most specific topics" do 
+        @problem.topics = [@t1, @t2, @t3, @t4]
+        expect(@problem.topics_string).to eq "Topic 4"
+      end
     end
   end
 end
-
- #           A 
- # Equation     Geometry problems 
- #           D 
-
-
-# # topic.yml
-# A: 
-#   name: Topic A 
-
-# B: 
-#   name: Topic B
-
-# C: 
-#   name: Topic C 
-
-# D: 
-#   name: Topic D 
-
-# #topic_categorizable.yml 
-# AB:
-#   topic: A
-#   categorizable: B
-
-# factory :A, class: Topic do 
-#   name "Topic A"
-# end 

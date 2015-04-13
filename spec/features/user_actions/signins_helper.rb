@@ -31,3 +31,10 @@ end
 def signed_in?
   has_content?('Logout')
 end
+
+def log_in_with(email, password)
+  sign_up(email, password)
+  if !signed_in? 
+    sign_in(email, password)
+  end
+end

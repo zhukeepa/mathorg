@@ -1,6 +1,6 @@
 .form-group
   = simple_form_for @topic do |f|
     = f.input :name
-    = f.input :topics_string, url: autocomplete_topic_name_topics_path, as: :autocomplete, | 
+    = f.input :parents_string, url: autocomplete_topic_name_topics_path, as: :autocomplete, | 
       'data-delimiter' => ', ', label: "Parents", input_html: { class: "text optional form-control" }
     = f.button :submit

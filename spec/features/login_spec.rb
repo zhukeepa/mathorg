@@ -2,11 +2,11 @@ require 'rails_helper'
 require_relative 'user_actions/signins_helper'
 
 RSpec.feature "Logins", type: :feature do
-  let(:problem) { Problem.create!(description: "description", body: "body fat", topics_string: "Topic 1") }
+  let(:problem) { FactoryGirl.build(:problem) }
   let(:user) { User.new(email: "example@example.com") }
 
   scenario "A visitor registers an account" do
-    sign_up(user.email, "password")
+    log_in_with(user.email, "password")
     expect(signed_in?).to be true
   end
 
