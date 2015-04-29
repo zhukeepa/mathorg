@@ -36,7 +36,7 @@
 
 - if @problem.solutions.size > 0
   .row.list-group 
-    - @problem.solutions.sort_by(&:id).each do |solution| ##::TODO:: find a better problem sort. 
+    - @problem.solutions.sort_by(&:id).each do |solution| ##::TODO_LATER:: find a better problem sort. 
       = render partial: 'solution', object: solution
 - else
   %em No solutions have been contributed yet for this problem.

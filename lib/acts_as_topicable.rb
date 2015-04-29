@@ -1,4 +1,3 @@
-binding.pry
 def acts_as_topicable(options = {})
   topics_name     = options[:topics_name]     || :topics
   topicable_name  = options[:topicable_name]  || name.tableize.to_sym

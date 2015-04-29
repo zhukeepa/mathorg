@@ -3,7 +3,7 @@
   = f.input :description
   = f.input :topics_string, label: 'Topics', url: autocomplete_topic_name_topics_path, as: :autocomplete, |
     'data-delimiter' => ', ', input_html: { class: "text optional form-control" }
-  = f.simple_fields_for @explanation.body do |b|
+  = f.simple_fields_for :body_attributes, @explanation.body do |b|
     = b.input :text, input_html: { rows: long_entry_row_num }
   = f.button :submit
 

@@ -42,7 +42,7 @@ RSpec.feature "Add, edit, and delete explanations", type: :feature do
         fill_in :explanation_title, with: explanation_edited.title
         fill_in :explanation_description, with: explanation_edited.description
         fill_in :explanation_topics_string, with: explanation_edited.topics_string
-        fill_in :explanation_rich_text_text, with: explanation_edited.body.text
+        fill_in :explanation_body_attributes_text, with: explanation_edited.body.text
 
         click_button 'Update Explanation'
       end
@@ -61,7 +61,7 @@ RSpec.feature "Add, edit, and delete explanations", type: :feature do
       explanation.body = RichText.new(text: "Hello [problem]#{problem.id}[/problem]")
 
       within '.edit_explanation' do
-        fill_in :explanation_rich_text_text, with: explanation.body.text
+        fill_in :explanation_body_attributes_text, with: explanation.body.text
 
         click_button 'Update Explanation'
       end
