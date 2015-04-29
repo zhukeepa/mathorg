@@ -8,9 +8,6 @@
 #  updated_at :datetime
 #
 
-#::TODO:: remove
-require './lib/acts_as_topicable.rb'
-
 class Topic < ActiveRecord::Base
   searchkick
   has_many :topic_categorizables

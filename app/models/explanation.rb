@@ -12,9 +12,6 @@
 #  user_id     :integer
 #
 
-#::TODO:: remove
-require './lib/acts_as_topicable.rb'
-
 class Explanation < ActiveRecord::Base
   acts_as_votable
   acts_as_topicable

@@ -10,9 +10,6 @@
 #  updated_at    :datetime
 #
 
-#::TODO:: remove
-require './lib/acts_as_topicable.rb'
-
 class ProblemSet < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true, length: { minimum: 5 }
   acts_as_topicable

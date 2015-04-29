@@ -12,9 +12,6 @@
 #  description   :text
 #
 
-#::TODO:: remove
-require './lib/acts_as_topicable.rb'
-
 class Problem < ActiveRecord::Base
   acts_as_topicable
   acts_as_votable

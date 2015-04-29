@@ -11,9 +11,6 @@
 #  author_id  :integer
 #
 
-#::TODO:: remove
-require './lib/acts_as_topicable.rb'
-
 class Solution < ActiveRecord::Base
   acts_as_commentable
   acts_as_votable
