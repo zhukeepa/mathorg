@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: problem_sets
+#
+#  id            :integer          not null, primary key
+#  problem_order :text
+#  name          :string(255)
+#  official      :boolean
+#  created_at    :datetime
+#  updated_at    :datetime
+#
+
 require 'rails_helper'
 
 RSpec.describe ProblemSet, type: :model do

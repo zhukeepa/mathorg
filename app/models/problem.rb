@@ -30,10 +30,17 @@ class Problem < ActiveRecord::Base
   end
 
   def show_description
-    if description.length > 0
-      description
-    else 
-      "No description yet — click to add one!"
+    (description.length > 0) ? description : "No description yet — click to add one!"
+  end
+
+  def merge_with_duplicate(duplicate_problem)
+    self.topics    << duplicate_problem.topics 
+    self.solutions << duplicate_problem.solutions 
+
+    duplicate_problem.sources.each do |s|
+      s.problem_ids = s.problem_ids.gsub("#{duplicate_problem.id}", "#{id}")
     end
+
+    duplicate_problem.destroy
   end
 end

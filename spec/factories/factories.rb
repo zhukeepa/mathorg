@@ -8,9 +8,9 @@ FactoryGirl.define do
     body "Problem body"
   end 
 
-  factory :problem_edited, class: 'Problem' do 
-    description "new description"
-    body "edited body"
+  factory :problem2, class: 'Problem' do 
+    description "other description"
+    body "Other problem body"
   end
 
   factory :solution do 
@@ -18,8 +18,8 @@ FactoryGirl.define do
     hints = ["Hint 1", "Hint 2", "Hint 3"]
   end
 
-  factory :solution_edited, class: 'Solution' do 
-    body "Edited solution body"
+  factory :solution2, class: 'Solution' do 
+    body "Another solution body"
     hints = ["Hint 3", "Hint 2", "Hint 1"]
   end
 

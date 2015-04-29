@@ -4,7 +4,7 @@ require_relative 'user_actions/problems_helper'
 
 RSpec.feature "Add, edit, and delete problems", type: :feature do
   let(:problem) { FactoryGirl.build(:problem) } 
-  let(:problem_edited) { FactoryGirl.build(:problem_edited) }
+  let(:problem_edited) { FactoryGirl.build(:problem2) }
 
   context "User is signed in and has added a problem" do 
     before(:each) do 

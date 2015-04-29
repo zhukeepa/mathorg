@@ -4,7 +4,7 @@
 
 # RSpec.feature "Add and edit topics", type: :feature do
 #   let(:problem) { FactoryGirl.build(:problem) } 
-#   let(:problem_edited) { FactoryGirl.build(:problem, description: "new description", body: "edited body", topics_string: "Topic 2") }
+#   let(:problem2) { FactoryGirl.build(:problem, description: "new description", body: "edited body", topics_string: "Topic 2") }
 
 #   scenario "User creates new problem" do 
 #     sign_up('example@example.com', 'password')

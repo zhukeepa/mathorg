@@ -6,7 +6,7 @@ require_relative 'user_actions/solutions_helper'
 RSpec.feature "Add, edit, and delete solutions", type: :feature do
   let(:problem) { FactoryGirl.build(:problem) } 
   let(:solution) { FactoryGirl.build(:solution) } 
-  let(:solution_edited) { FactoryGirl.build(:solution_edited) } 
+  let(:solution_edited) { FactoryGirl.build(:solution2) } 
 
   context "User is signed in, added a new problem, and added a new solution." do 
 

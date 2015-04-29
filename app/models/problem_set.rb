@@ -39,9 +39,10 @@ class ProblemSet < ActiveRecord::Base
   def problem_ids=(problem_ids)
     problem_ids_array = problem_ids.split(",").map(&:strip).reject(&:empty?).map(&:to_i)
     sorted_problem_ids_array = problem_ids_array.sort
-    
+
     self.problem_order = problem_ids_array.map { |i| sorted_problem_ids_array.index(i) }
     self.problems = Problem.find_all_by_id(problem_ids_array)
+    save
   end
 
   def problems
