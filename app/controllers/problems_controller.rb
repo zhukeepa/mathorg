@@ -16,7 +16,7 @@ class ProblemsController < ApplicationController
     @problem = Problem.find(params[:problem_id])
     @original_problem = Problem.find(params[:problem_merge][:original_problem_id])
     
-    @original_problem.merge_with_duplicate(@problem)
+    @original_problem.merge_with_duplicate(@problem, params[:problem_merge][:should_merge_solutions])
 
     redirect_to @original_problem
   end

@@ -22,6 +22,14 @@ class Problem < ActiveRecord::Base
   has_many :solutions
   has_and_belongs_to_many :sources, class_name: 'ProblemSet'
 
+  belongs_to :original, class_name: 'Problem'
+  has_many :duplicates, class_name: 'Problem', foreign_key: :original_id
+
+  def initialize(*args)
+    super
+    self.original ||= self 
+  end 
+
   def sources_string
     sources.map(&:name).join(', ')
   end
@@ -30,14 +38,22 @@ class Problem < ActiveRecord::Base
     (description.length > 0) ? description : "No description yet — click to add one!"
   end
 
-  def merge_with_duplicate(duplicate_problem)
-    self.topics    << duplicate_problem.topics 
-    self.solutions << duplicate_problem.solutions 
+  def is_duplicate?
+    self.original != self
+  end 
 
-    duplicate_problem.sources.each do |s|
-      s.problem_ids = s.problem_ids.gsub("#{duplicate_problem.id}", "#{id}")
-    end
+  def is_original?
+    !is_duplicate?
+  end
 
-    duplicate_problem.destroy
+  def duplicates
+    super - [self]
+  end 
+
+  def merge_with_duplicate(duplicate_problem, should_merge_solutions = true)
+    self.topics |= duplicate_problem.topics 
+    self.solutions << duplicate_problem.solutions if should_merge_solutions
+
+    duplicate_problem.update(original: self.original)
   end
 end

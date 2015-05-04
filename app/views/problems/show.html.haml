@@ -7,6 +7,12 @@
 = render 'categorizables/topic_list', categorizable: @problem
 %br/
 
+- if @problem.is_duplicate?
+  %br/
+  This problem is a duplicate. The original can be found 
+  = link_to 'here.', @problem.original
+  %br/
+
 - if not @problem.author.nil? and @problem.author != ''
   %strong Author:
   = @problem.author
@@ -30,6 +36,13 @@
   %span>= link_to 'Repeated problem?', 'javascript:;', {id: "merge_button_#{@problem.id}" } 
   = render 'merge'
 %br/
+
+- if @problem.is_original? && @problem.duplicates.size > 0
+  Duplicate problems: 
+  = raw(@problem.duplicates.map do |p|
+    - link_to p.description, p
+  - end.join(', '))
+
 %br/
 
 %h3 Solutions
