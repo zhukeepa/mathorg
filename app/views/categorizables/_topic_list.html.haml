@@ -6,6 +6,4 @@
   = render 'shared/topic_list', name: name, topics: topics
 
   - if user_signed_in?
-    = link_to '', categorizables_edit_topic_list_path(categorizable_id: categorizable.id, |
-      categorizable_klass: categorizable.class, name: name),  | 
-      { class: "glyphicon glyphicon-edit", remote: true }
+    = link_to '', categorizables_edit_topic_list_path(categorizable_id: categorizable.id, categorizable_klass: categorizable.class, name: name), { class: "glyphicon glyphicon-edit", remote: true }

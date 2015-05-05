@@ -33,7 +33,7 @@
   %br/
   %br/
 
-  %span>= link_to 'Repeated problem?', 'javascript:;', {id: "merge_button_#{@problem.id}" } 
+  %a{class: "merge_button", href:"javascript:;"} Repeated problem?
   = render 'merge'
 %br/
 

@@ -1,42 +1,39 @@
 // get this to work with paloma, maybe??
 
 var latest_hint_shown = [];
-function show_next_hint(solution_id)
+function show_next_hint(hint_button)
 {
-  if (typeof(latest_hint_shown[solution_id]) == 'undefined')
+  var solution_id = hint_button.data('id');
+  if (typeof(latest_hint_shown[solution_id]) == 'undefined') {
     latest_hint_shown[solution_id] = 0; 
+    hint_button.html('Show next hint<br>');
+  }
   
-  $("#hint_button" + solution_id).html('Show next hint<br>');
-  $("#hint_" + solution_id + "_" + latest_hint_shown[solution_id]).slideDown(350);
+  var hints = hint_button.closest("div").find(".hint");
+  var hint = $.grep(hints, function(h) { return ($(h).data('id') == latest_hint_shown[solution_id]); })[0];
+  $(hint).slideDown(350);
  
   ++latest_hint_shown[solution_id];
 
-  if (typeof($("#hint_" + solution_id + "_" + latest_hint_shown[solution_id])[0]) == 'undefined')
-    $("#hint_button" + solution_id).slideUp(350); 
+  if ($.grep(hints, function(h) { return ($(h).data('id') == latest_hint_shown[solution_id]); }).length == 0)
+    hint_button.slideUp(350); 
 }
 
-// ::TODO_LATER:: is this the best practice way for dynamic id's?
 var ready;
 ready = function() {
   /* Activating Best In Place */
   jQuery(".best_in_place").best_in_place();
 
-  $("a").on("click", function(event) {
-    if (this.id.substring(0,15) == "solution_button")
-    {
-      sol_id = this.id.substring(15);
-      $("#solution" + sol_id).slideToggle(350);
-    }
-    else if (this.id.substring(0,11) == "hint_button")
-    {
-      sol_id = this.id.substring(11);
-      show_next_hint(sol_id);
-    }
-    else if (this.id.substring(0,13) == "merge_button_")
-    {
-      prob_id = this.id.substring(13);
-      $("#problem_merge_" + prob_id).slideToggle(350);
-    }
+  $(".show_solution").on("click", function(e) { 
+    $(this).closest("div").find(".solution").slideToggle(350);
+  });
+
+  $(".show_hint").on("click", function(e) { 
+    show_next_hint($(this));
+  });
+
+  $(".merge_button").on("click", function(e) { 
+    $(this).parent().find(".merge").slideToggle(350);
   });
 }
 
