@@ -10,6 +10,6 @@
       = link_to '', 'javascript:;', { class: "glyphicon glyphicon-edit" }
 
   .edit{style: "display:none"}
-    = simple_form_for :categorizable, url: "javascript:;", html: { class: 'form-inline' } do |f|
+    = simple_form_for categorizable, url: "javascript:;", html: { class: 'form-inline' } do |f|
       = f.input :__topics_string, required: false, label: label
       = f.button :submit, value: 'Update topics', class: 'categorizable-submit'

@@ -9,7 +9,7 @@ var ready = function() {
     var data = { 'klass': section.data('class'), 
                  'id': section.data('id'), 
                  'name': section.data('name'), 
-                 'topics_string': section.find('#categorizable___topics_string').val() };
+                 'topics_string': section.find('.form-control').val() };
     
     $.ajax({
       url: '/categorizables/update_topic_list', 
