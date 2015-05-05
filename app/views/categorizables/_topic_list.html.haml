@@ -1,11 +1,16 @@
 - topics = categorizable.specificest_topics
 - if !(defined? name) || name.nil?
   - name = categorizable.class.topics_name.capitalize.to_s
+- label = (name || "Topic").pluralize(topics.size) + ':'
 
-.topic-list{id: "#{categorizable.class}_#{categorizable.id}_topiclist"}
-  = render 'shared/topic_list', name: name, topics: topics
+.topic-list{ data: { class: "#{categorizable.class}", id: "#{categorizable.id}", name: name } }
+  .show
+    = render 'shared/topic_list', name: name, topics: topics
+    - if user_signed_in?
+      = link_to '', 'javascript:;', { class: "glyphicon glyphicon-edit" }
 
-  - if user_signed_in?
-    = link_to '', categorizables_edit_topic_list_path(categorizable_id: categorizable.id, |
-      categorizable_klass: categorizable.class, name: name),  | 
-      { class: "glyphicon glyphicon-edit", remote: true }
+  .edit{style: "display:none"}
+    - url = categorizables_update_topic_list_path(categorizable_id: categorizable.id, categorizable_klass: categorizable.class, name: name)
+    = simple_form_for :categorizable, url: url, remote: true, html: { class: 'form-inline', onsubmit: 'updateTopics();' } do |f|
+      = f.input :__topics_string, required: false, label: label
+      = f.button :submit, value: 'Update topics'

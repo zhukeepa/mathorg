@@ -15,13 +15,16 @@ function show_next_hint(solution_id)
     $("#hint_button" + solution_id).slideUp(350); 
 }
 
-// ::TODO_LATER:: is this the best practice way for dynamic id's?
 var ready;
 ready = function() {
   /* Activating Best In Place */
-  jQuery(".best_in_place").best_in_place();
+  $(".best_in_place").best_in_place();
+
+  //::TODO:: create classes 
+  //$("a.solution").on("click", function())
 
   $("a").on("click", function(event) {
+    // ::TODO:: use regexes instead
     if (this.id.substring(0,15) == "solution_button")
     {
       sol_id = this.id.substring(15);
@@ -40,6 +43,6 @@ ready = function() {
   });
 }
 
-// Relevant when Turbolinks screwed things up. 
+// Relevant when Turbolinks screws things up. 
 $(document).ready(ready);
 $(document).on('page:load', ready);
