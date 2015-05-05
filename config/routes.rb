@@ -11,8 +11,8 @@ Mathorg::Application.routes.draw do
   post "downvote" => "votables#downvote"
   post "rate"     => "votables#rate"
 
-  get "categorizables/edit_topic_list"
-  patch "categorizables/update_topic_list"
+  get "topicables/edit_topic_list"
+  patch "topicables/update_topic_list"
 
   devise_for :users
 

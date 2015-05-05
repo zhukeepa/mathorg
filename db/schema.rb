@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150504164451) do
+ActiveRecord::Schema.define(version: 20150505183330) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -93,17 +93,17 @@ ActiveRecord::Schema.define(version: 20150504164451) do
   add_index "solutions", ["author_id"], name: "index_solutions_on_author_id", using: :btree
   add_index "solutions", ["problem_id"], name: "index_solutions_on_problem_id", using: :btree
 
-  create_table "topic_categorizables", force: true do |t|
+  create_table "topic_topicables", force: true do |t|
     t.float    "weight"
-    t.integer  "categorizable_id"
-    t.string   "categorizable_type"
+    t.integer  "topicable_id"
+    t.string   "topicable_type"
     t.integer  "topic_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "topic_categorizables", ["categorizable_id"], name: "topic_categorizables_index", using: :btree
-  add_index "topic_categorizables", ["topic_id"], name: "index_topic_categorizables_on_topic_id", using: :btree
+  add_index "topic_topicables", ["topic_id"], name: "index_topic_topicables_on_topic_id", using: :btree
+  add_index "topic_topicables", ["topicable_id"], name: "topic_topicables_index", using: :btree
 
   create_table "topics", force: true do |t|
     t.text     "name"

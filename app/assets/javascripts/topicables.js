@@ -9,10 +9,10 @@ var ready = function() {
     var data = { 'klass': section.data('class'), 
                  'id': section.data('id'), 
                  'name': section.data('name'), 
-                 'topics_string': section.find('#categorizable___topics_string').val() };
+                 'topics_string': section.find('#topicable___topics_string').val() };
     
     $.ajax({
-      url: '/categorizables/update_topic_list', 
+      url: '/topicables/update_topic_list', 
       data: JSON.stringify(data),
       type: 'PATCH', 
       contentType: 'application/json', 

@@ -1,0 +1,15 @@
+- topics = topicable.specificest_topics
+- if !(defined? name) || name.nil?
+  - name = topicable.class.topics_name.capitalize.to_s
+- label = (name || "Topic").pluralize(topics.size) + ':'
+
+.topic-list{ data: { class: "#{topicable.class}", id: "#{topicable.id}", name: name } }
+  .links_list
+    = render 'shared/topic_list', name: name, topics: topics
+    - if user_signed_in?
+      = link_to '', 'javascript:;', { class: "glyphicon glyphicon-edit" }
+
+  .edit{style: "display:none"}
+    = simple_form_for :topicable, url: "javascript:;", html: { class: 'form-inline' } do |f|
+      = f.input :__topics_string, required: false, label: label
+      = f.button :submit, value: 'Update topics', class: 'topicable-submit'

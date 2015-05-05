@@ -7,7 +7,7 @@ def acts_as_topicable(options = {})
   pseudo_join_name = "#{topics_name.to_s.singularize}_#{topicable_name}".to_sym
 
   self.class_eval do 
-    has_many pseudo_join_name, class_name: 'TopicCategorizable', as: :categorizable
+    has_many pseudo_join_name, class_name: 'TopicTopicable', as: :topicable
     has_many topics_name, through: pseudo_join_name, source: :topic
 
     define_singleton_method "topics_name" do 
@@ -30,10 +30,10 @@ def acts_as_topicable(options = {})
       send '__topics_string=', *args
     end
 
-    include Categorizable
+    include Topicable
   end
 
   Topic.class_eval do 
-    has_many topicable_name, through: :topic_categorizables, source: :categorizable, source_type: topicable_class
+    has_many topicable_name, through: :topic_topicables, source: :topicable, source_type: topicable_class
   end 
 end

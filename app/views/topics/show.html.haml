@@ -1,7 +1,7 @@
 %h1= @topic.name
 
 - # Parents 
-= render 'categorizables/topic_list', categorizable: @topic
+= render 'topicables/topic_list', topicable: @topic
 = render 'shared/topic_list', topics: @topic.children, name: "Children"
 
 %br/
@@ -36,7 +36,7 @@
       %br/
 
       = render '/problems/sources', problem: pr
-      = render 'categorizables/topic_list', categorizable: pr
+      = render 'topicables/topic_list', topicable: pr
       %br/
       %br/
 
@@ -72,7 +72,7 @@
       %br/
 
       = render '/problems/sources', problem: pr
-      = render 'categorizables/topic_list', categorizable: pr
+      = render 'topicables/topic_list', topicable: pr
       %br/
       %br/
 

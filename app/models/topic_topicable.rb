@@ -1,17 +1,17 @@
 # == Schema Information
 #
-# Table name: topic_categorizables
+# Table name: topic_topicables
 #
 #  id                 :integer          not null, primary key
 #  weight             :float
-#  categorizable_id   :integer
-#  categorizable_type :string(255)
+#  topicable_id   :integer
+#  topicable_type :string(255)
 #  topic_id           :integer
 #  created_at         :datetime
 #  updated_at         :datetime
 #
 
-class TopicCategorizable < ActiveRecord::Base
-  belongs_to :categorizable, polymorphic: true
+class TopicTopicable < ActiveRecord::Base
+  belongs_to :topicable, polymorphic: true
   belongs_to :topic
 end
