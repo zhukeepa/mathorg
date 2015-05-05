@@ -1,0 +1,16 @@
+- comments = commentable.comments
+
+.comment-list
+  - if comments.size > 0
+    .row.list-group
+      - comments.each do |comment| 
+        .list-group-item
+          %strong
+            = comment.user
+          %br/
+          = raw(comment.comment.bbcode_to_html.gsub("\n", "<br/>"))
+          %br/
+          %br/
+          = render 'votables/votes', { votable: comment }
+  - else
+    %em No comments have been submitted yet. 

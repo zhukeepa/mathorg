@@ -1,6 +1,6 @@
 class SolutionsController < ApplicationController
   before_action :set_problem, only: [:edit, :new, :create]
-  before_action :set_solution, only: [:edit, :update, :destroy]
+  before_action :set_solution, only: [:edit, :update, :comments, :destroy]
 
   def edit
   end

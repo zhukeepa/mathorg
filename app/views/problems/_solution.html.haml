@@ -1,44 +1,42 @@
-.list-group-item
-  - if solution.hints.size > 0
-    %strong 
-      %u
-        %a{href:"javascript:;", style: 'color:#000000;', class: 'show_hint', data: {id: "#{solution.id}"}} Show hint
-
-    - for i in 0...solution.hints.size
-      .hint{style: "display:none", class: "hint", data: {id: "#{i}"}}
-        %strong 
-          = "Hint #{i+1}:"
-        = raw(solution.hints[i].bbcode_to_html.gsub("\n", "<br/>"))
-        %br/
-    %br/
-
-  %strong
+- if solution.hints.size > 0
+  %strong 
     %u
-      %a{href:"javascript:;", style: 'color:#000000;', class: "show_solution" } Show solution
+      %a{href:"javascript:;", style: 'color:#000000;', class: 'show_hint', data: {id: "#{solution.id}"}} Show hint
 
-  %br/
-  %br/
-  .solution{id: "solution#{solution.id}", style: "display:none"}
-    = raw(solution.body.bbcode_to_html.gsub("\n", "<br/>"))
-    %br/
-    %br/
-    %em
-      = link_to "View comments", comments_problem_solution_path(@problem, solution) 
-    %br/
-    %br/
-    = render 'topicables/topic_list', topicable: solution
-    = render 'votables/votes'  , { votable: solution, scope: 'quality', disp_text: 'Writeup quality' }
-    = render 'votables/ratings', { votable: solution, scope: 'elegance', lower: -2, upper: 2 }
-    = render 'votables/ratings', { votable: solution, scope: 'instructiveness', lower: 0, upper: 2 }
-    = render 'votables/ratings', { votable: solution, scope: 'difficulty', lower: -2, upper: 2, show_average: false }
-    = link_to 'Confused about the ratings?', ratings_guide_path
-    - if solution.author == current_user
+  - for i in 0...solution.hints.size
+    .hint{style: "display:none", class: "hint", data: {id: "#{i}"}}
+      %strong 
+        = "Hint #{i+1}:"
+      = raw(solution.hints[i].bbcode_to_html.gsub("\n", "<br/>"))
       %br/
-      %br/
-      .btn-group
-        = link_to "Edit solution", edit_problem_solution_path(@problem, solution), { class: "btn btn-default" }
-        = link_to('Destroy solution', problem_solution_path(@problem, solution), { class: "btn btn-default", method: 'delete' })
-    
   %br/
-  %em 
-    = "Solution submitted by #{solution.author}"
+
+%strong
+  %u
+    %a{href:"javascript:;", style: 'color:#000000;', class: "show_solution" } Show solution
+
+%br/
+%br/
+.solution{id: "solution#{solution.id}", style: "display:none"}
+  = raw(solution.body.bbcode_to_html.gsub("\n", "<br/>"))
+  %br/
+  %br/
+  = render 'comments/comments', commentable: solution 
+  %br/
+  %br/
+  = render 'topicables/topic_list', topicable: solution
+  = render 'votables/votes'  , { votable: solution, scope: 'quality', disp_text: 'Writeup quality' }
+  = render 'votables/ratings', { votable: solution, scope: 'elegance', lower: -2, upper: 2 }
+  = render 'votables/ratings', { votable: solution, scope: 'instructiveness', lower: 0, upper: 2 }
+  = render 'votables/ratings', { votable: solution, scope: 'difficulty', lower: -2, upper: 2, show_average: false }
+  = link_to 'Confused about the ratings?', ratings_guide_path
+  - if solution.author == current_user
+    %br/
+    %br/
+    .btn-group
+      = link_to "Edit solution", edit_problem_solution_path(@problem, solution), { class: "btn btn-default" }
+      = link_to('Destroy solution', problem_solution_path(@problem, solution), { class: "btn btn-default", method: 'delete' })
+  
+%br/
+%em 
+  = "Solution submitted by #{solution.author}"
