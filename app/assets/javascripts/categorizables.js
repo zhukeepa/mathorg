@@ -1,10 +1,10 @@
 var ready = function() {
-  $('.topic-list .links_list .glyphicon-edit').on("click", function(e) {
+  $('body').on("click", '.topic-list .links_list .glyphicon-edit', function(e) {
     $(this).closest('.topic-list').find('.edit').show();
     $(this).closest('.topic-list').find('.links_list').hide();
   });
 
-  $('.topic-list .edit .btn').on("click", function(e) {
+  $("body").on("click", ".topic-list .edit .btn", function(e) {
     var section = $(this).closest('.topic-list'); 
     var data = { 'klass': section.data('class'), 
                  'id': section.data('id'), 
