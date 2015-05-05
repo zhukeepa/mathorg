@@ -12,7 +12,7 @@ var ready = function() {
                  'topics_string': section.find('.form-control').val() };
     
     $.ajax({
-      url: '/categorizables/update_topic_list', 
+      url: '/topicables/update_topic_list', 
       data: JSON.stringify(data),
       type: 'PATCH', 
       contentType: 'application/json', 

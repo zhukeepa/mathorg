@@ -1,6 +1,5 @@
 # require 'active_support/concern'
-
-module Categorizable
+module Topicable
   extend ActiveSupport::Concern
 
   # included do 

@@ -26,7 +26,7 @@
       = link_to "View comments", comments_problem_solution_path(@problem, solution) 
     %br/
     %br/
-    = render 'categorizables/topic_list', categorizable: solution
+    = render 'topicables/topic_list', topicable: solution
     = render 'votables/votes'  , { votable: solution, scope: 'quality', disp_text: 'Writeup quality' }
     = render 'votables/ratings', { votable: solution, scope: 'elegance', lower: -2, upper: 2 }
     = render 'votables/ratings', { votable: solution, scope: 'instructiveness', lower: 0, upper: 2 }

@@ -10,7 +10,7 @@
 
 class Topic < ActiveRecord::Base
   searchkick
-  has_many :topic_categorizables
+  has_many :topic_topicables
 
   # regex: no commas
   validates :name, presence: true, uniqueness: true, length: { minimum: 5 }, format: { with: /\A[^,]*\Z/ }

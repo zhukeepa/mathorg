@@ -80,7 +80,7 @@ RSpec.feature "Add, edit, and delete explanations", type: :feature do
     #   page.find('.glyphicon-edit').click
 
     #   within '.simple_form' do 
-    #     fill_in 'categorizable___topics_string', with: "#{t1.name}, #{t4.name}, #{t3.name}, #{t2.name}"
+    #     fill_in 'topicable___topics_string', with: "#{t1.name}, #{t4.name}, #{t3.name}, #{t2.name}"
     #     click_button 'Update topics'
     #   end
 

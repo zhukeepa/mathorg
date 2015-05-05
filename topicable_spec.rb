@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Categorizable, type: :model do
+RSpec.describe Topicable, type: :model do
   before(:each) do
     @t1, @t2, @t3, @t4 = topics_diamond
 
