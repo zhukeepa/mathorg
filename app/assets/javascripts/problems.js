@@ -19,8 +19,7 @@ function show_next_hint(hint_button)
     hint_button.slideUp(350); 
 }
 
-var ready;
-ready = function() {
+var ready = function() {
   /* Activating Best In Place */
   jQuery(".best_in_place").best_in_place();
 
@@ -35,7 +34,7 @@ ready = function() {
   $(".merge_button").on("click", function(e) { 
     $(this).parent().find(".merge").slideToggle(350);
   });
-}
+};
 
 // Relevant when Turbolinks screwed things up. 
 $(document).ready(ready);
