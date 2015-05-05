@@ -4,13 +4,12 @@
 - label = (name || "Topic").pluralize(topics.size) + ':'
 
 .topic-list{ data: { class: "#{categorizable.class}", id: "#{categorizable.id}", name: name } }
-  .show
+  .links_list
     = render 'shared/topic_list', name: name, topics: topics
     - if user_signed_in?
       = link_to '', 'javascript:;', { class: "glyphicon glyphicon-edit" }
 
   .edit{style: "display:none"}
-    - url = categorizables_update_topic_list_path(categorizable_id: categorizable.id, categorizable_klass: categorizable.class, name: name)
-    = simple_form_for :categorizable, url: url, remote: true, html: { class: 'form-inline', onsubmit: 'updateTopics();' } do |f|
+    = simple_form_for :categorizable, url: "javascript:;", html: { class: 'form-inline' } do |f|
       = f.input :__topics_string, required: false, label: label
-      = f.button :submit, value: 'Update topics'
+      = f.button :submit, value: 'Update topics', class: 'categorizable-submit'
