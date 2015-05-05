@@ -21,7 +21,10 @@ function show_next_hint(hint_button)
 
 var ready = function() {
   /* Activating Best In Place */
-  jQuery(".best_in_place").best_in_place();
+  $(".best_in_place").best_in_place();
+
+  //::TODO:: create classes 
+  //$("a.solution").on("click", function())
 
   $(".show_solution").on("click", function(e) { 
     $(this).closest("div").find(".solution").slideToggle(350);
@@ -36,6 +39,6 @@ var ready = function() {
   });
 };
 
-// Relevant when Turbolinks screwed things up. 
+// Relevant when Turbolinks screws things up. 
 $(document).ready(ready);
 $(document).on('page:load', ready);
