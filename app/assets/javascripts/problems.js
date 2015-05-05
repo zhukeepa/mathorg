@@ -23,9 +23,6 @@ var ready = function() {
   /* Activating Best In Place */
   $(".best_in_place").best_in_place();
 
-  //::TODO:: create classes 
-  //$("a.solution").on("click", function())
-
   $(".show_solution").on("click", function(e) { 
     $(this).closest("div").find(".solution").slideToggle(350);
   });
