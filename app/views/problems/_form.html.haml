@@ -1,5 +1,5 @@
 = simple_form_for @problem do |f|
-  = f.input :description
+  = f.input :description, as: :string
   = f.input :topics_string, label: 'Topics', url: autocomplete_topic_name_topics_path, as: :autocomplete, |
     'data-delimiter' => ', ', input_html: { class: "text optional form-control" }
   = f.hidden_field :author, value: nil
