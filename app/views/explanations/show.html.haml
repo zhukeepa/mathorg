@@ -1,25 +1,19 @@
 %h1= @explanation.title
-
-= render 'topicables/topic_list', topicable: @explanation
+%em 
+  by 
+  = render 'author_list', explanation: @explanation
 %br/
-
+%br/
 %strong Description:
 = @explanation.description
-%br/
-
-%strong Author: 
-= #@explanation.user.email
-%br/
-
-= link_to 'Edit', edit_explanation_path(@explanation)
-
+= render 'topicables/topic_list', topicable: @explanation
 = render 'votables/votes', { votable: @explanation }
 %br/
 
 - if current_user == @explanation.user
-  = link_to 'Edit', edit_explanation_path(@explanation)
-  | 
-  = link_to 'Destroy', explanation_path(@explanation), method: :delete, data: { confirm: 'Are you sure?' }
+  .btn-group
+    = link_to('Edit', { action: "edit" }, { class: "btn btn-default", method: 'get' }) 
+    = link_to('Destroy', {}, { class: "btn btn-default", method: 'delete' })
 %br/
 %br/
 

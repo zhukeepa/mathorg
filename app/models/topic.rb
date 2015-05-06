@@ -25,16 +25,19 @@ class Topic < ActiveRecord::Base
     (self.children.empty? ? [self] : self.children.map(&:descendants).flatten.append(self)).uniq
   end
 
-  # def method_missing(m, *args, &block)
-  #   # e.g. if doing topic.problems, touch the Problem class, so that it loads and
-  #   # adds the problems method to Problem from acts_as_topicable. 
-  #   klass = m.to_s.titleize.gsub(' ', '').singularize.constantize
-  #   if Topic.instance_methods.include?(m)
-  #     self.send m
-  #   else
-  #     super 
-  #   end
-  # rescue
-  #   super
-  # end
+  # ::TODO_LATER:: this still has a bug. if, e.g., Problem has_many preqresuites, for exampl, and
+  # we need to reference it via topic.prerequisites_from_problems rather than topic.problems, 
+  # we're going to run into trouble. 
+  def method_missing(m, *args, &block)
+    # e.g. if doing topic.problems, touch the Problem class, so that it loads and
+    # adds the problems method to Problem from acts_as_topicable. 
+    klass = m.to_s.titleize.gsub(' ', '').singularize.constantize
+    if Topic.instance_methods.include?(m)
+      self.send m
+    else
+      super 
+    end
+  rescue
+    super
+  end
 end

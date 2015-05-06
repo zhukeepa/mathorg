@@ -1,4 +1,4 @@
 %h1 Search Results
 
 - #@search_type is either 'problem', 'topic', or 'explanation'; its value is passed in through the search form.
-= render "#{@search_type}_results"
+= render "search_results", results: @results

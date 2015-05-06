@@ -1,11 +1,6 @@
 %h1 Contest problems
 
-/ = render 'contest', name: 'IMO Shortlist', lower: 1998, upper: 2013, subcontests: ["Algebra", "Geometry", "Number Theory", "Combinatorics"]
-/ = render 'contest', name: 'IMO', lower: 1959, upper: 2014, subcontests: {}
-/ = render 'contest', name: 'Romanian Masters In Mathematics', lower: 2008, upper: 2013, subcontests: {}
-/ = render 'contest', name: 'USAMO', lower: 1972, upper: 2014, subcontests: {}
-
-/ 1998 - 2013
-/ - @problem_sets.each do |ps|
-/  = link_to ps.name, problem_set_path(ps)
-/  %br/
+= #render 'contest', name: 'IMO Shortlist', lower: 1998, upper: 2013, subcontests: ["Algebra", "Geometry", "Number Theory", "Combinatorics"]
+= #render 'contest', name: 'IMO', lower: 1959, upper: 2014, subcontests: {}
+= #render 'contest', name: 'Romanian Masters In Mathematics', lower: 2008, upper: 2013, subcontests: {}
+= render 'contest', name: 'USA USAMO', lower: 1972, upper: 2014, subcontests: {}

@@ -1,0 +1,3 @@
+= raw(explanation.authors.map do |t|
+  - (u = User.find_by_username t) ? (link_to t, u) : t 
+- end.to_sentence)

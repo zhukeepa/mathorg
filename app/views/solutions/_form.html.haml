@@ -3,8 +3,7 @@
 %br/
 %br/
 = simple_form_for [@problem, @solution] do |f|
-  = f.input :topics_string, label: 'Topics', url: autocomplete_topic_name_topics_path, as: :autocomplete, |
-    'data-delimiter' => ', ', input_html: { class: "text optional form-control" }
+  - #f.input :topics_string, label: 'Topics', url: autocomplete_topic_name_topics_path, as: :autocomplete, 'data-delimiter' => ', ', input_html: { class: "text optional form-control" }
   = f.input :body, input_html: { rows: long_entry_row_num }
   = f.input :hints_string, label: "Hints", as: :text, input_html: { rows: 4 }
   = f.button :submit

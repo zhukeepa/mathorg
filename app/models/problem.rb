@@ -18,7 +18,7 @@ class Problem < ActiveRecord::Base
   acts_as_votable
   searchkick
 
-  validates :body, presence: true, length: { minimum: 5 }
+  validates :body, presence: true
 
   has_many :solutions
   has_and_belongs_to_many :sources, class_name: 'ProblemSet'
@@ -35,7 +35,7 @@ class Problem < ActiveRecord::Base
     sources.map(&:name).join(', ')
   end
 
-  def show_description
+  def description_maybe_empty
     (description.length > 0) ? description : "No description yet — click to add one!"
   end
 

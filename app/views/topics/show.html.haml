@@ -3,7 +3,8 @@
 - # Parents 
 = render 'topicables/topic_list', topicable: @topic
 = render 'shared/topic_list', topics: @topic.children, name: "Children"
-
+= link_to '(Add child)', new_topic_path(parent_id: @topic.id)
+%br/
 %br/
 
 .btn-group
@@ -12,73 +13,25 @@
 
 %br/
 %br/
-= link_to 'Add subtopic', new_topic_path(parent_id: @topic.id), { class: "btn btn-default" }
-
-%br/
 %br/
 
-%h2 Problems
+%ul{class: "nav nav-tabs", id: "myTab"}
+  %li{class: "active"}
+    %a{href: "#problems", data: {toggle: "tab"}}Problems
+  %li
+    %a{href: "#solutions", data: {toggle: "tab"}}
+      Problems with solutions under 
+      = "#{@topic.name}"
+  %li
+    %a{href: "#explanations", data: {toggle: "tab"}}Explanations
 
-- if @topic_problems.size > 10 
-  %em 
-    Only the first 10 results will be shown. 
-
-- if @topic_problems.size == 0
-  %em
-    There are currently no problems categorized under this topic. 
-
-.row.list-group  
-  - @topic_problems[0...10].each do |pr|
-    .list-group-item
-      %strong
-        = link_to pr.show_description, pr
-      %br/
-      %br/
-
-      = render '/problems/sources', problem: pr
-      = render 'topicables/topic_list', topicable: pr
-      %br/
-      %br/
-
-      = raw(pr.body.bbcode_to_html.gsub("\n", "<br/>"))
-      %br/
-      %br/
-
-/ = #link_to 'Add explanation', new_explanation_path(topic: @topic.id)
-
-/ - #@topic.explanations.each do |explanation|
-/  = #render partial: 'explanation', object: explanation
-
-%br/
-%br/
-
-%h2 Problems with a solution involving this topic
-
-- if @topic_solutions.size > 10 
-  %em 
-    Only the first 10 results will be shown. 
-
-- if @topic_solutions.size == 0
-  %em
-    There are currently no problems with a a solutions categorized under this topic. 
-
-.row.list-group  
-  - @topic_solutions[0...10].each do |s|
-    .list-group-item
-      - pr = s.problem
-      %strong
-        = link_to pr.show_description, pr
-      %br/
-      %br/
-
-      = render '/problems/sources', problem: pr
-      = render 'topicables/topic_list', topicable: pr
-      %br/
-      %br/
-
-      = raw(pr.body.bbcode_to_html.gsub("\n", "<br/>"))
-      %br/
-      %br/
+.tab-content
+  #problems{class: "tab-pane fade in active"}
+    = render 'search/search_results', results: @topic.problems, empty_message: "There are currently no problems classified under this topic."
+  #solutions{class: "tab-pane fade"}
+    = render 'search/search_results', results: @topic.solutions.map(&:problem).uniq, empty_message: "There are currently no problems with solutions classified under this topic."
+  #explanations{class: "tab-pane fade"}
+    = render 'search/search_results', results: @topic.explanations, empty_message: "There are currently no explanations classified under this topic."
 
 / = #link_to 'Add explanation', new_explanation_path(topic: @topic.id)
 
