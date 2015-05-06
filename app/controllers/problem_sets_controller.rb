@@ -1,5 +1,7 @@
 class ProblemSetsController < ApplicationController
   before_action :set_problem_set, only: [:edit, :update, :show, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+
   def new
   	@ps = ProblemSet.new 
   end

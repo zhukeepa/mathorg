@@ -1,5 +1,6 @@
 class TopicablesController < ApplicationController
   respond_to :html, :json
+  before_action :authenticate_user!
 
   def update_topic_list
   	@topicable = params[:klass].constantize.find(params[:id])

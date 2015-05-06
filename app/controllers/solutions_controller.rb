@@ -1,6 +1,7 @@
 class SolutionsController < ApplicationController
   before_action :set_problem, only: [:edit, :new, :create]
   before_action :set_solution, only: [:edit, :update, :comments, :destroy]
+  before_action :authenticate_user!, except: [:comments]
 
   def edit
   end

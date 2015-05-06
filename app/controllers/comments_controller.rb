@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
+  
   def create
     @commentable = params[:klass].constantize.find(params[:id])
     @c = @commentable.comments.create(params.permit(:comment))
