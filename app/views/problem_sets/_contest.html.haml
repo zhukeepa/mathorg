@@ -13,6 +13,6 @@
     - for i in lower..upper
       - subcontests.each do |s|
         - ps = ProblemSet.find_by_name("#{name} #{i} #{s}")
-        = link_to ps.name, problem_set_path(ps)
+        - # link_to ps.name, problem_set_path(ps)
         %br/
       %br/

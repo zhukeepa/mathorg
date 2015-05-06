@@ -15,9 +15,10 @@ private
 
   def problem_search_results(params)
     if params[:source] == ''
-    	@problem_results = Problem.search params[:keywords], fields: [:description, :body]
+    	#@results = Problem.search params[:keywords], fields: [:description, :body]
+      @results = Problem.all
     else
-      @problem_results = Problem.search params[:keywords], fields: [:description, :body], where: { source: [params[:source]]}
+      @results = Problem.search params[:keywords], fields: [:description, :body], where: { source: [params[:source]]}
     end
   end
 end

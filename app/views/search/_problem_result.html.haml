@@ -1,0 +1,17 @@
+%strong
+  = link_to problem.show_description, problem
+%br/
+%br/
+
+%strong Source:
+= problem.source
+%br/
+
+= render '/problems/sources', problem: problem
+= render 'topicables/topic_list', topicable: problem
+%br/
+%br/
+
+= raw(problem.body.bbcode_to_html.gsub("\n", "<br/>"))
+%br/
+%br/

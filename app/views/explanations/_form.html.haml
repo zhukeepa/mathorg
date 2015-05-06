@@ -1,6 +1,7 @@
 = simple_form_for @explanation do |f|
   = f.input :title, as: :string
   = f.input :description
+  = f.input :authors, label: "Author(s)"
   = f.input :topics_string, label: 'Topics', url: autocomplete_topic_name_topics_path, as: :autocomplete, |
     'data-delimiter' => ', ', input_html: { class: "text optional form-control" }
   = f.simple_fields_for :body_attributes, @explanation.body do |b|

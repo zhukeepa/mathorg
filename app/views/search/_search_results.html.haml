@@ -1,0 +1,15 @@
+- # ::TODO:: definitely should be a way to DRY these views
+
+%br/
+- if results.size == 0
+  %em
+    = empty_message || ""
+
+.row.list-group 
+  - results.each do |r|
+    .list-group-item
+      - case r.class.to_s
+      - when "Problem"
+        = render 'search/problem_result', problem: r
+      - when "Explanation"
+        = render 'search/explanation_result', explanation: r

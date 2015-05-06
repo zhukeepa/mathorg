@@ -1,7 +1,8 @@
 - if solution.hints.size > 0
   %strong 
     %u
-      %a{href:"javascript:;", style: 'color:#000000;', class: 'show_hint', data: {id: "#{solution.id}"}} Show hint
+      %span>
+        %a{href:"javascript:;", style: 'color:#000000;', class: 'show_hint', data: {id: "#{solution.id}"}} Show hint
 
   - for i in 0...solution.hints.size
     .hint{style: "display:none", class: "hint", data: {id: "#{i}"}}
@@ -13,7 +14,8 @@
 
 %strong
   %u
-    %a{href:"javascript:;", style: 'color:#000000;', class: "show_solution" } Show solution
+    %span>
+      %a{href:"javascript:;", style: 'color:#000000;', class: "show_solution" } Show solution
 
 %br/
 %br/

@@ -37,7 +37,8 @@ class ExplanationsController < ApplicationController
 
 private
   def explanation_params
-    params.require(:explanation).permit(:title, :description, :topics_string, body_attributes: [:text])
+    params.merge({user: current_user}).require(:explanation)
+      .permit(:user, :title, :description, :topics_string, body_attributes: [:text])
   end
 
   def set_explanation

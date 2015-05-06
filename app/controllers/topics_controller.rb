@@ -3,8 +3,6 @@ class TopicsController < ApplicationController
   autocomplete :topic, :name
 
   def show
-    @topic_problems  = @topic.problems
-    @topic_solutions = @topic.solutions
   end
 
   def index
