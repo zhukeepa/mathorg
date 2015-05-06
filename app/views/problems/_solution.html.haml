@@ -39,4 +39,5 @@
   
 %br/
 %em 
-  = "Solution submitted by #{solution.author}"
+  = "Solution submitted by "
+  = link_to solution.author.username, solution.author

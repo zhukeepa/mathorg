@@ -2,13 +2,13 @@
 #
 # Table name: topic_topicables
 #
-#  id                 :integer          not null, primary key
-#  weight             :float
+#  id             :integer          not null, primary key
+#  weight         :float
 #  topicable_id   :integer
 #  topicable_type :string(255)
-#  topic_id           :integer
-#  created_at         :datetime
-#  updated_at         :datetime
+#  topic_id       :integer
+#  created_at     :datetime
+#  updated_at     :datetime
 #
 
 class TopicTopicable < ActiveRecord::Base

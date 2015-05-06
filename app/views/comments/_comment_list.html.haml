@@ -6,7 +6,7 @@
       - comments.each do |comment| 
         .list-group-item
           %strong
-            = comment.user
+            = link_to comment.user.username, comment.user
           %br/
           = raw(comment.comment.bbcode_to_html.gsub("\n", "<br/>"))
           %br/

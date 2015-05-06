@@ -15,6 +15,7 @@ Mathorg::Application.routes.draw do
   patch "topicables/update_topic_list"
 
   devise_for :users
+  resources :users, :only => [:show]
 
   resources :problem_sets
 

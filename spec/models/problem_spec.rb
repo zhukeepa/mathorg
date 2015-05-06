@@ -10,6 +10,7 @@
 #  created_at    :datetime
 #  updated_at    :datetime
 #  description   :text
+#  original_id   :integer
 #
 
 require 'rails_helper'
