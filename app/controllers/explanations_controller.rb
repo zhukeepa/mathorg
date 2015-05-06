@@ -1,6 +1,5 @@
 class ExplanationsController < ApplicationController
   before_action :set_explanation, only: [:edit, :update, :show, :destroy]
-  #::TODO:: add signed in validations
   def new 
     @explanation = Explanation.new(body: RichText.new, authors_string: current_user.username)
     binding.pry

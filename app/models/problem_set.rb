@@ -11,7 +11,7 @@
 #
 
 class ProblemSet < ActiveRecord::Base
-  validates :name, presence: true, uniqueness: true, length: { minimum: 5 }
+  validates :name, presence: true, uniqueness: true
   acts_as_topicable
 
   has_and_belongs_to_many :problems

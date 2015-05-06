@@ -1,10 +1,6 @@
 %strong
-  = link_to problem.show_description, problem
+  = link_to problem.description_maybe_empty, problem
 %br/
-%br/
-
-%strong Source:
-= problem.source
 %br/
 
 = render '/problems/sources', problem: problem

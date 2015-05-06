@@ -11,5 +11,5 @@
 
   .edit{style: "display:none"}
     = simple_form_for categorizable, url: "javascript:;", html: { class: 'form-inline' } do |f|
-      = f.input :__topics_string, required: false, label: label
+      = f.input :__topics_string, required: false, label: label, autofocus: true
       = f.button :submit, value: 'Update topics', class: 'categorizable-submit'
