@@ -28,14 +28,17 @@ class Explanation < ActiveRecord::Base
     self.authors.join(', ')
   end
 
-  def authors_string=(as)
-    self.authors = as.split(",").map(&:strip).uniq.reject(&:empty?)
-    
+  def authors=(as)
+    super
     self.users = []
     self.authors.each do |author| 
       if (u = User.find_by_username author) 
         self.users << u
       end
     end
+  end
+
+  def authors_string=(as)
+    self.authors = as.split(",").map(&:strip).uniq.reject(&:empty?)
   end
 end

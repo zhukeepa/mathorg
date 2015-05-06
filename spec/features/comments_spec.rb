@@ -9,7 +9,7 @@ RSpec.feature "Add comments", type: :feature do
 
   context "User is signed in, added a new problem, and added a new solution." do 
     before(:each) do 
-      log_in_with('example@example.com', 'password')
+      log_in_with('Bob', 'example@example.com', 'password')
       expect(signed_in?).to be true
       
       add_problem(problem)

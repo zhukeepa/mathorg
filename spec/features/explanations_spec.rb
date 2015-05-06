@@ -8,7 +8,7 @@ RSpec.feature "Add, edit, and delete explanations", type: :feature do
 
   context "User is signed in and has added a new explanation" do 
     before(:each) do 
-      log_in_with('example@example.com', 'password')
+      log_in_with('Bob', 'example@example.com', 'password')
       add_explanation(explanation)
       expect(signed_in?).to be true
     end
@@ -55,7 +55,6 @@ RSpec.feature "Add, edit, and delete explanations", type: :feature do
 
     scenario "User includes a problem tag in the explanation" do 
       click_link 'Edit'
-      expect(current_path).to match /\/explanations\/\d*\/edit\Z/
 
       problem = FactoryGirl.create(:problem)
       explanation.body = RichText.new(text: "Hello [problem]#{problem.id}[/problem]")
@@ -71,6 +70,19 @@ RSpec.feature "Add, edit, and delete explanations", type: :feature do
       end 
 
       expect(page).to have_content(problem.body.bbcode_to_html.gsub("\n", "<br/>"))
+    end
+
+    scenario "User adds authors aside from himself and visits page" do 
+      click_link 'Edit'
+
+      within '.edit_explanation' do
+        fill_in :explanation_authors_string, with: "Bob, Jones"
+
+        click_button 'Update Explanation'
+      end
+
+      expect(page).to have_content("Bob and Jones")
+      click_link 'Bob'
     end
 
     # ::TODO:: doesn't work

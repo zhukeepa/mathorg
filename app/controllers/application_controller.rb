@@ -37,9 +37,4 @@ protected
   def after_sign_out_path_for(resource_or_scope)
     request.referrer
   end
-
-private
-  def record_not_found
-    render plain: "404 Not Found", status: 404
-  end
 end

@@ -11,7 +11,7 @@ RSpec.feature "Add, edit, and delete solutions", type: :feature do
   context "User is signed in, added a new problem, and added a new solution." do 
 
     before(:each) do 
-      log_in_with('example@example.com', 'password')
+      log_in_with('Bob', 'example@example.com', 'password')
       expect(signed_in?).to be true
       
       add_problem(problem)
@@ -42,7 +42,6 @@ RSpec.feature "Add, edit, and delete solutions", type: :feature do
       within '.edit_solution' do
         fill_in :solution_body, with: solution_edited.body
         fill_in :solution_hints_string, with: solution_edited.hints_string
-        fill_in :solution_topics_string, with: solution_edited.topics_string
 
         click_button 'Update Solution'
       end

@@ -6,7 +6,13 @@ FactoryGirl.define do
   factory :problem do 
     description "Description"
     body "Problem body"
-  end 
+  end
+
+  factory :user do 
+    username "Alex"
+    email "alexzhu@mit.edu"
+    password "password"
+  end
 
   factory :problem2, class: 'Problem' do 
     description "other description"

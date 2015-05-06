@@ -18,13 +18,13 @@ require 'rails_helper'
 RSpec.describe Problem, type: :model do
   let(:problem) { FactoryGirl.create(:problem) }
 
-  describe "#show_description" do 
+  describe "#description_maybe_empty" do 
     it "gives the description, or asks the user to add one if there is none" do 
       expect(problem.description.length > 0).to be true
-      expect(problem.show_description).to eq problem.description 
+      expect(problem.description_maybe_empty).to eq problem.description 
 
       problem.description = ""
-      expect(problem.show_description).to eq "No description yet — click to add one!"
+      expect(problem.description_maybe_empty).to eq "No description yet — click to add one!"
     end
   end
 
