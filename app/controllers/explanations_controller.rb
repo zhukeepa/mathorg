@@ -2,8 +2,6 @@ class ExplanationsController < ApplicationController
   before_action :set_explanation, only: [:edit, :update, :show, :destroy]
   def new 
     @explanation = Explanation.new(body: RichText.new, authors_string: current_user.username)
-    binding.pry
-    #@explanation.topics = [Topic.find(params[:topic])] unless params[:topic].nil?
   end
 
   def edit
