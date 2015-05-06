@@ -29,7 +29,9 @@ class User < ActiveRecord::Base
 
   validates :username, :presence => true, :uniqueness => { :case_sensitive => false }
   
-  has_many :explanations
+  has_many :explanation_authors
+  has_many :explanations, through: :explanation_authors
+
   has_many :solutions
 
   attr_accessor :login

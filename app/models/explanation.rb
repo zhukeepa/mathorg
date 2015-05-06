@@ -17,7 +17,8 @@ class Explanation < ActiveRecord::Base
   acts_as_topicable
   serialize :authors, Array
 
-  belongs_to :user
+  has_many :explanation_authors
+  has_many :users, through: :explanation_authors
 
   has_one :body, as: :bodyable, class_name: 'RichText'
   include Bodyable
@@ -30,8 +31,11 @@ class Explanation < ActiveRecord::Base
   def authors_string=(as)
     self.authors = as.split(",").map(&:strip).uniq.reject(&:empty?)
     
+    self.users = []
     self.authors.each do |author| 
-      self.user ||= User.find_by_username author
+      if (u = User.find_by_username author) 
+        self.users << u
+      end
     end
   end
 end
