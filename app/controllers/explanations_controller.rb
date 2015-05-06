@@ -1,8 +1,10 @@
 class ExplanationsController < ApplicationController
   before_action :set_explanation, only: [:edit, :update, :show, :destroy]
+  #::TODO:: add signed in validations
   def new 
-    @explanation = Explanation.new(body: RichText.new)
-    @explanation.topics = [Topic.find(params[:topic])] unless params[:topic].nil?
+    @explanation = Explanation.new(body: RichText.new, authors_string: current_user.username)
+    binding.pry
+    #@explanation.topics = [Topic.find(params[:topic])] unless params[:topic].nil?
   end
 
   def edit
@@ -20,9 +22,6 @@ class ExplanationsController < ApplicationController
   def update
     @explanation.update(explanation_params)
 
-    @explanation.user = current_user
-    @explanation.save
-
     redirect_to @explanation
   end
 
@@ -37,8 +36,8 @@ class ExplanationsController < ApplicationController
 
 private
   def explanation_params
-    params.merge({user: current_user}).require(:explanation)
-      .permit(:user, :title, :description, :topics_string, body_attributes: [:text])
+    params.require(:explanation)
+      .permit(:authors_string, :title, :description, :topics_string, body_attributes: [:text])
   end
 
   def set_explanation
