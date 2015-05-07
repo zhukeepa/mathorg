@@ -4,12 +4,13 @@ require_relative 'user_actions/problems_helper'
 require_relative 'user_actions/solutions_helper'
 
 RSpec.feature "Add comments", type: :feature do
+  let(:user) {FactoryGirl.create(:user) }
   let(:problem) { FactoryGirl.build(:problem) } 
   let(:solution) { FactoryGirl.build(:solution) } 
 
   context "User is signed in, added a new problem, and added a new solution." do 
     before(:each) do 
-      log_in_with('Bob', 'example@example.com', 'password')
+      sign_in(user)
       expect(signed_in?).to be true
       
       add_problem(problem)

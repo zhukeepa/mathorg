@@ -4,22 +4,24 @@ require_relative 'user_actions/problems_helper'
 require_relative 'user_actions/solutions_helper'
 
 RSpec.feature "Add, edit, and delete solutions", type: :feature do
-  let(:problem) { FactoryGirl.build(:problem) } 
+  let(:user) { FactoryGirl.create(:user) }
+  let(:problem) { FactoryGirl.create(:problem) } 
   let(:solution) { FactoryGirl.build(:solution) } 
-  let(:solution_edited) { FactoryGirl.build(:solution2) } 
+  let(:solution2) { FactoryGirl.build(:solution2) } 
 
-  context "User is signed in, added a new problem, and added a new solution." do 
-
+  context "User is signed in and visits the problem" do
     before(:each) do 
-      log_in_with('Bob', 'example@example.com', 'password')
+      sign_in(user)
       expect(signed_in?).to be true
-      
-      add_problem(problem)
-      add_solution(solution)
+
+      solution.author = user
+      problem.solutions << solution
+      visit "/problems/#{problem.id}"
     end
 
-    scenario "User finishes creating solution" do
-      expect(current_path).to match /\/problems\/\d*\Z/ # /problems/[some number]
+    scenario "User adds new solution" do 
+      add_solution(solution2)
+      expect(current_path).to eq "/problems/#{problem.id}"
     end
 
     scenario "User clicks on 'Show hints' to see all hints", js: true do 
@@ -40,14 +42,14 @@ RSpec.feature "Add, edit, and delete solutions", type: :feature do
       click_link 'Edit solution'
 
       within '.edit_solution' do
-        fill_in :solution_body, with: solution_edited.body
-        fill_in :solution_hints_string, with: solution_edited.hints_string
+        fill_in :solution_body, with: solution2.body
+        fill_in :solution_hints_string, with: solution2.hints_string
 
         click_button 'Update Solution'
       end
 
       click_link 'Show solution'
-      expect(page).to have_content(solution_edited.body) 
+      expect(page).to have_content(solution2.body) 
     end
   end
 end

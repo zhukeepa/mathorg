@@ -3,16 +3,17 @@ FactoryGirl.define do
     name "Topic name"
   end
 
-  factory :problem do 
-    description "Description"
-    body "Problem body"
-  end
-
   factory :user do 
     username "Alex"
     email "alexzhu@mit.edu"
     password "password"
   end
+
+  factory :problem do 
+    description "Description"
+    body "Problem body"
+  end
+
 
   factory :problem2, class: 'Problem' do 
     description "other description"
@@ -29,16 +30,26 @@ FactoryGirl.define do
     hints = ["Hint 3", "Hint 2", "Hint 1"]
   end
 
+  factory :rich_text do 
+    text "Hello" 
+  end
+
   factory :explanation do 
     title "Explanation title"
     description "Here is a description of an explanation"
-    body RichText.new(text: "Hello")
+
+    factory :explanation_with_author do 
+      authors_string FactoryGirl.build(:user).username
+    end 
+
+    association :body, factory: :rich_text
   end
 
-  factory :explanation_edited, class: 'Explanation' do 
+  factory :explanation2, class: 'Explanation' do 
     title "Explanation title edited!!1!"
     description "Here is another description of an explanation"
-    body RichText.new(text: "GOODBYE FOREVER")
+
+    association :body, factory: :rich_text, text: "World"
   end
 
   factory :problem_set do 

@@ -24,17 +24,17 @@
 #     expect(current_path).to match /\/problems\/\d*\/edit\Z/
 
 #     within '.edit_problem' do
-#       fill_in :problem_description, with: problem_edited.description
-#       fill_in :problem_topics_string, with: problem_edited.topics_string
-#       fill_in :problem_body, with: problem_edited.body
+#       fill_in :problem_description, with: problem2.description
+#       fill_in :problem_topics_string, with: problem2.topics_string
+#       fill_in :problem_body, with: problem2.body
 
 #       click_button 'Update Problem'
 #     end
 
 #     expect(current_path).to match /\/problems\/\d*\Z/
-#     expect(page).to have_content(problem_edited.description)
-#     expect(page).to have_content(problem_edited.body)
-#     expect(page).to have_content(problem_edited.topics_string)
+#     expect(page).to have_content(problem2.description)
+#     expect(page).to have_content(problem2.body)
+#     expect(page).to have_content(problem2.topics_string)
 #   end
 
 #   scenario "User deletes a problem" do 

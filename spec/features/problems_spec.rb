@@ -2,39 +2,45 @@ require 'rails_helper'
 require_relative 'user_actions/signins_helper'
 require_relative 'user_actions/problems_helper'
 
-RSpec.feature "Add, edit, and delete problems", type: :feature do
-  let(:problem) { FactoryGirl.build(:problem) } 
-  let(:problem_edited) { FactoryGirl.build(:problem2) }
+# poltergeist -- what does it actually do when js:true is set
+# factory girl -- how it actually stubs out db. what happens on create? why do we have two different behaviors? 
 
-  context "User is signed in and has added a problem" do 
+RSpec.feature "Add, edit, and delete problems", type: :feature do
+  let(:user) { FactoryGirl.create(:user) }
+  let(:problem) { FactoryGirl.create(:problem) } 
+  let(:problem2) { FactoryGirl.build(:problem2) }
+
+  context "User is signed in and visited the page of a problem" do 
     before(:each) do 
-      log_in_with('Bob', 'example@example.com', 'password')
-      add_problem(problem)
+      sign_in(user)
       expect(signed_in?).to be true
+
+      visit "/problems/#{problem.id}"
     end
 
+    scenario "User adds a new problem" do 
+      add_problem(problem2)
+      expect(current_path).to match /\/problems\/(\d*)\Z/
 
-    scenario "User finishes creating problem" do
-      expect(current_path).to match /\/problems\/\d*\Z/ # /problems/[some number]
       [:description, :body, :topics_string].each do |method| 
-        expect(page).to have_content(problem.send method)
+        expect(page).to have_content(problem2.send method)
       end
     end
 
     scenario "User edits a problem" do 
       click_link 'Edit'
-      expect(current_path).to match /\/problems\/\d*\/edit\Z/
+      expect(current_path).to eq "/problems/#{problem.id}/edit"
 
       within '.edit_problem' do
-        fill_in :problem_description, with: problem_edited.description
-        fill_in :problem_body, with: problem_edited.body
+        fill_in :problem_description, with: problem2.description
+        fill_in :problem_body, with: problem2.body
 
         click_button 'Update Problem'
       end
 
-      expect(current_path).to match /\/problems\/\d*\Z/
+      expect(current_path).to eq "/problems/#{problem.id}"
       [:description, :body, :topics_string].each do |method| 
-        expect(page).to have_content(problem_edited.send method)
+        expect(page).to have_content(problem2.send method)
       end
     end
 
@@ -71,18 +77,24 @@ RSpec.feature "Add, edit, and delete problems", type: :feature do
       expect(page).to have_content(problem2.description)
       expect(page).to have_content(problem3.description)
     end
+  end
 
-    # scenario "User edits topic", js: true do 
-    #   t1, t2, t3, t4 = topics_diamond
+  context "User is not signed in" do 
+    scenario "User visits a problem" do 
+      visit "/problems/#{problem.id}"
+    end
 
-    #   page.find('.glyphicon-edit').click
+    scenario "User tries to add a problem" do 
+      visit "/problems/new"
+      expect(page).to have_content "You need to sign in or sign up before continuing."
+    end
 
-    #   within '.simple_form' do 
-    #     fill_in 'topicable___topics_string', with: "Topic 4, Topic 1, Topic 3, Topic 2"# "#{t1.name}, #{t4.name}, #{t3.name}, #{t2.name}"
-    #     click_button 'Update topics'
-    #   end
+    scenario "User tries to edit a problem" do 
+      visit "/problems/#{problem.id}"
+      expect(page).not_to have_content "Edit" 
 
-    #   expect(page).to have_content("Topic 2")
-    # end
+      visit "/problems/#{problem.id}/edit"
+      expect(page).to have_content "You need to sign in or sign up before continuing."
+    end
   end
 end
