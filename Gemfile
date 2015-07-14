@@ -7,6 +7,8 @@ gem 'rails', '4.0.4'
 
 gem 'acts_as_commentable'
 
+gem 'kramdown'
+
 # Bootstrap! 
 gem 'bootstrap-sass',       '3.2.0.0'
 

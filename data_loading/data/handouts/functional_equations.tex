@@ -1,0 +1,75 @@
+## Functional Equations
+
+This handout will cover three common techniques for dealing with functional equations. 
+
+
+### Injectivity / Surjectivity
+
+A function $f$ is _injective_ if, whenever $f(a) = f(b)$, we have $a = b$. A function $f$ is _surjective_ if for all $r$ in the codomain of $f$, there is some $x$ such that $f(x) = r$. (So if $f$ is a real-valued function, $f$ is surjective if each real number is in the range of $f$.)
+
+**Example 1.** [[[The function $f : \mathbb{R} \to \mathbb{R}$ satisfies $x + f(x) = f(f(x))$ for every $x \in \mathbb{R}$. Find all solutions of the equation $f(f(x)) = 0$.]]]
+
+_Solution._ (((If $f(x) = f(y)$ for some $x$ and $y$, then $x = f(f(x)) - f(x) = f(f(y)) - f(y) = y$, so $f$ is injective. Setting $x = 0$ gives $0 + f(0) = f(f(0))$. Since $f$ is injective, this means $f(0) = 0$. Thus, $f(f(0)) = 0$, so $x = 0$ is a solution to $f(f(x)) = 0$. It is also the only solution, since $f(f(x)) = 0 = f(f(0))$ implies $f(x) = f(0)$, so $x = 0$.)))
+
+**Example 2.** (ISL 2002) [[[Find all functions $f$ from the reals to the reals such that 
+  \[ f(f(x) + y) = 2x + f(f(y) - x) \]
+  holds for all real $x$ and $y$.]]]
+
+**Solution.** (((If $y = -f(x)$, then $f(f(-x) - x) = f(0) - 2x$. Since $f(0) - 2x$ is surjective, so is $f(x)$. Take $c$ so that $f(c) = 0$, and set $x = c$. We have $f(y) = 2c + f(f(y) - c)$. Since $f$ is surjective, $f(y)$ takes on all real values, so for all $z$, we have $z = 2c + f(z - c)$. Thus, $f(z) = z - c$ for all $z$. It is easy to verify that any function of this form satisfies the functional equation. )))
+
+### Easy Values
+
+When approaching a functional equations, there are a number of simple values that one should try substituting, like $x = 0$, $x = 1$, or $x = y$.
+
+**Example 3.** [[[Find all functions $f : \mathbb{R} \to \mathbb{R}$ such that $f(xf(y)+y) = f(x)f(y) + y$ for all real $x$ and $y$. ]]]
+
+**Solution.** (((Substitute $x = 0$ to get $f(y) = f(0)f(y) + y$ for all $y$. Setting $y = 0$ yields $f(0) = f(0)^2$, so $f(0) = 0$ or $f(0) = 1$. If $f(0) = 1$, then $f(y) = f(0)f(y) + y = f(y) + y$ for all $y$, so $y = 0$ for all $y$, which is absurd. Thus, $f(0) = 0$, so $f(y) = y$ for all $y$. It is easy to verify that this function satisfies the functional equation. )))
+
+### Cauchy's Equation
+
+Often, functional equations get reduced to something of the form $f(x+y) = f(x) + f(y)$. If some weak condition holds, we can conclude that $f(x) = cx$ for some constant $c$. In particular, if we can show that $f$ is continuous, that $f$ is monotonic over some interval, or that $f$ is bounded from above or below over some interval, then $f(x) = cx$ for all $x$. Here, we will show that if $f(x+y) = f(x) + f(y)$ and $f$ is increasing over $\mathbb{R}$, then $f(x) = cx$ for some $c$. (The other cases are left as an exercise.)
+
+Setting $x=y=0$ gives $f(0) = 0$. For any positive integer $n$ and any real $x$, we have $f(\underbrace{x + x + \cdots + x}_n) = \underbrace{f(x) + f(x) + \cdots + f(x)}_n$, so $f(nx) = nf(x)$ for all positive integers $n$. Additionally, since $0 = f(-x + x) = f(-x) + f(x)$, we have $f(-x) = -f(x)$ for all $x$, whence $f(nx) = nf(x)$ for all integers $n$. Additionally, we have $f(n(x/n)) = n f(x/n)$, so $f(x/n) = f(x)/n$ for each integer $n$. It follows that for any rational $q = \frac{m}{n}$, we have $f(qx) = f(mx/n) = mf(x/n) = (m/n)f(x) = qf(x)$. 
+
+Let $c = f(1)$. We have $f(q) = qf(1) = cq$ for all rational $q$. Take any real number $x$. For any positive real number $\epsilon$, we can find rationals $r$ and $s$ such that $r < x < s$, and $r,s \in (x - \epsilon/c, x + \epsilon/c)$. We have $f(r) = cq \leq f(x) \leq f(s) = cs$. Thus, $c(q - x) \leq f(x) - cx \leq c(s - x)$. Since $|q-x| < \epsilon/c$ and $|s - x| < \epsilon/c$, we have $|f(x) - cx| < \epsilon$. Since this holds for each positive $\epsilon$, we must have $f(x) = cx$ for all $x$, as desired. 
+
+### Additional Tips
+
+1.  When you get a solution for the functional equation, don't forget to verify that the solution works. 
+1.  Often you will be able to deduce that a function $f$ satisfying the functional equation always equals one function or some other---say, you may deduce $f(x)^2 = x^2$, and conclude that for all $x$, $f(x) = x$ or $f(x) = -x$. From this, you cannot conclude directly that $f(x) = x$ for all $x$ or $f(x) = -x$ for all $x$. 
+
+## Problems
+
+1.  [[[Find all increasing functions $f : \mathbb{R} \to \mathbb{R}$ such that $f(x+y) = f(x)f(y)$ for all real $x$ and $y$. ]]]
+  
+1. [[[Find all functions $f : \mathbb{R} \to \mathbb{R}$ such that $f(x+y) = f(x) + f(y)$ and $f(xy) = f(x)f(y)$ for all real $x$ and $y$. ]]]
+  
+1. [[[Find all functions $f : \mathbb{R} \to \mathbb{R}$ such that $f(x^2 + y) = f(x) + f(y^2)$ for all real $x$ and $y$. ]]]
+  
+1. [[[Find all increasing functions $f : \mathbb{R} \to \mathbb{R}$ such that $f(f(x) + y) = x + f(y)$ for all real $x$ and $y$. ]]]
+  
+1. (USAMO 2002) [[[Let $\mathbb{R}$ be the set of real numbers. Determine all functions $f : \mathbb{R} \to \mathbb{R}$ such that
+  \[ f(x^2 - y^2) = xf(x) - yf(y) \]
+  for all pairs of real numbers $x$ and $y$. ]]]
+  
+1. (EGMO 2012) [[[Find all functions $f : \mathbb{R} \to \mathbb{R}$ such that \[ f(yf(x+y) + f(x)) = 4x + 2y f(x+y) \] for all $x, y \in \mathbb{R}$. ]]]
+  
+1. [[[Find all functions $f : \mathbb{R} \to \mathbb{R}$ such that $f(xf(x) + f(y)) = f(x)^2 + y$. ]]]
+  
+1. (IMO 1992) [[[Find all functions $f : \mathbb{R} \to \mathbb{R}$ such that $f(x^2 + f(y)) = y + f(x)^2$ for all $x,y \in \mathbb{R}$.]]]
+  
+1. (USAMO 2000) [[[Call a real-valued function $f$ \emph{very convex} if 
+  \[ \frac{f(x) + f(y)}{2} \geq f \left( \frac{x+y}{2} \right) + |x - y| \]
+  holds for all real numbers $x$ and $y$. Prove that no very convex function exists. ]]]
+    
+1. (IMO 2008) [[[Find all functions $ f: (0, \infty) \mapsto (0, \infty)$ such that
+\[ \frac {\left( f(w) \right)^2 + \left( f(x) \right)^2}{f(y^2) + f(z^2) } = \frac {w^2 + x^2}{y^2 + z^2} \]
+for all positive real numbes $ w,x,y,z,$ satisfying $ wx = yz.$]]]
+
+1. [[[Find all polynomials $f$ with real coefficients such that $f(x) f(2x^2) = f(2x^3 + x)$. ]]]
+  
+1. (IMO 2009) [[[Determine all functions $ f$ from the set of positive integers to the set of positive integers such that, for all positive integers $ a$ and $ b$, there exists a non-degenerate triangle with sides of lengths 
+  \[ a, f(b), \text{ and } f(b + f(a) - 1). \]
+  (A triangle is non-degenerate if its vertices are not collinear.) ]]]
+  
+1. (ISL 2007) [[[Find all functions $f : \mathbb{R}^+ \to \mathbb{R}^+$ satisfying $f(x+f(y)) = f(x+y) + f(y)$ for all pairs of positive reals $x$ and $y$. ($\mathbb{R}^+$ is the set of positive reals.)]]]

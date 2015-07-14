@@ -1,5 +1,5 @@
 class ServicesController < ApplicationController
   def preview
-    render json: { preview_html: params[:text].bbcode_to_html.gsub("\n", "<br/>") }
+    render json: { preview_html: RichText.new(text: params[:text]).to_html }
   end
 end

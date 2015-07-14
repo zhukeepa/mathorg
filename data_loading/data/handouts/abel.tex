@@ -1,0 +1,152 @@
+This lecture focuses on the Abel Summation formula, which is most often useful as a way to take advantage
+of unusual given conditions such as ordering or majorization, or simply as a way to put a new look on an
+expression. But in addition to learning to use this formula, I want to emphasize good, motivated thinking
+for all of these problems. Don’t simply hunt for the time and place to apply Abel Summation; hopefully,
+when and if the occasion arises, you’ll recognize it.
+
+## Abel Summation
+
+Let $n$ be a positive integer, and let $a_1, a_2, \ldots, a_n$ and $b_1, b_2, \ldots, b_n$ be two sequences. Then if $S_k = a_1 + \cdots + a_k$, 
+\[ \sum_{k=1}^n a_k b_k = S_n b_n + \sum_{k=1}^{n-1} S_k (b_k - b_{k+1}) \]
+\[ = (a_1) (b_1 - b_2) + (a_2)(b_2 - b_3) + \cdots + (a_1 + \cdots + a_{n-1})(b_{n-1} - b_n) + (a_1 + \cdots + a_n)(b_n). \]
+
+This is often called “Summation by Parts” due to its continuous analog, Integration by Parts:
+
+\[ \int f(x) \cdot g'(x) dx = f(x) \cdot g(x) - \int f'(x) \cdot g(x) dx. \]
+
+(Here, differentiation corresponds to differencing and antidifferentiation corresponds to partial sums.) Indeed, the equivalence of (1) and (2) can be established directly: one direction with Riemann sums, and the other with appropriate choice of functions.
+
+**Problem 1.** Do this. 
+
+The following problems can explain the usefulness of this formula better than I could while waving my
+hands, so let’s get started.
+
+**Problem 2.** [[[Given two sets of real numbers $a_1, a_2, \ldots, a_n; b_1, b_2, \ldots, b_n$, prove that the following two statements are equivalent:  
+**(i).** For any numbers $x_1 \leq x_2 \leq \cdots \leq x_n$,  
+\[ a_1 x_1 + a_2 x_2 + \cdots + a_n x_n \leq b_1 x_1 + b_2 x_2 + \cdots + b_n x_n. \]
+**(ii).** $a_1 + \cdots + a_n = b_1 + \cdots + b_n$ and $a_1 + \cdots + a_k \geq b_1 + \cdots + b_k$ for each $1 \leq k \leq n$.]]]
+
+_Proof._ (((Suppose the first condition is true. Setting $x_i = 1$ for each $i$ gives $\sum a_i \leq \sum b_i$, and similarly setting $x_i = -1$ for each $i$ gives $\sum a_i \geq \sum b_i$, so the sums are equal. Next, for each $k$, setting $x_1 = \cdots + x_k = -1, x_{k+1} = \cdots = x_n = 0$ shows that $a_1 + \cdots + a_k \geq b_1 + \cdots + b_k$ for each $k$, which is exactly the condition in (ii). 
+
+Now suppose (ii) holds, and take any sequence $x_1 \leq \cdots \leq x_n$. Define $A_k = a_1 + a_2 + \cdots + a_k$ and $B_k = b_1 + b_2 + \cdots + b_k$. By Abel Summation, we have
+
+$\begin{align*}
+a_1 x_2 + \cdots + a_n x_n 
+&= A(x_1 - x_2) + A_2(x_2 - x_3) + \cdots + A_{n-1}(x_{n-1} - x_n) + A_nx_n \\
+&\geq B_1(x_1 - x_2) + B_2(x_2 - x_3) + \cdots + B_{n-1}(x_{n-1} - x_n) + B_n x_n \tag{3} \\
+&= b_1 x_1 + \cdots + b_n x_n,
+\end{align*}$
+
+where line (3) follows because $x_i - x_{i+1} \leq 0$ and $A_n = B_n$. This shows (i), and we're done. $\square$  )))
+
+**Problem 3** (Romania 1999).  
+[[[**(a)** Let $x_1, y_1, x_2, y_2, \ldots, x_n, y_n$ be positive real numbers such that:  
+**(i).** $x_1 y_1 < x_2 y_2 < \cdots < x_n y_n$;  
+**(ii).** $x_1 + x_2 + \cdots + x_k \geq y_1 + y_2 + \cdots + y_k$ for all $k = 1, 2, \ldots, n$. Prove that 
+\[ \frac{1}{x_1} + \frac{1}{x_2} + \cdots + \frac{1}{x_n} \leq \frac{1}{y_1} + \frac{1}{y_2} + \cdots + \frac{1}{y_n}. \]  
+**(b).** Let $A = \{a_1, a_2, \ldots, a_n\} \subseteq N$ be a set such that for all distinct subsets $B, C \subseteq A$, $\sum_{x \in B} x \neq \sum_{x \in C} x$. Prove that
+\[ \frac{1}{a_1} + \frac{1}{a_2} + \cdots + \frac{1}{a_n} < 2. \]  ]]]
+
+_Proof._ (((**(a).** The difference of the two sides can be expressed as  
+\[ \sum_{i=1}^n \frac{1}{y_i} - \frac{1}{x_i} = \sum_{i=1}^n \frac{x_i - y_i}{x_i y_i}. \]  
+By Abel summation, we can manipulate this to make use of the given conditions:  
+
+$\begin{align*}
+\sum_{i=1}^n \frac{x_i - y_i}{x_i y_i}
+&= \frac{1}{x_n y_n} ((x_1 - y_1) + \cdots + (x_n - y_n)) + \sum_{i=1}^{n-1} \left( \frac{1}{x_i y_i} - \frac{1}{x_{i+1}y_{i+1}} \right) ((x_1 - y_1) + \cdots + (x_i - y_i)) \\
+&\geq 0,  
+\end{align*}$
+
+as needed.  
+
+
+**(b).** Order the numbers as $a_1 < a_2 < \cdots < a_n$. The $2^k - 1$ nonempty subsets of $\{a_1, \ldots, a_k\}$ have all different sums, so $a_1 + \cdots + a_k \geq 2^k - 1$ for each $k$. If we set $y_k = 2^{k-1}$, this reads  
+\[ a_1 + \cdots + a_k \geq y_1 + \cdots + y_k. \]  
+
+Also, we clearly have $a_1 y_1 < a_2 y_2 < \cdots < a_n y_n$, since both sequences strictly increase. Thus, by part (a), we have  
+\[ \frac{1}{a_1} + \cdots + \frac{1}{a_n} \leq \frac{1}{y_1} + \cdots + \frac{1}{y_n} = 2 - \frac{1}{2^{n-1}} < 2, \]  
+as desired. $\square$)))
+
+**Problem 4.**  [[[Define the sequence $u_1, \ldots, u_n$ by $u_1 = 2$ and $u_n = u_1 \cdots u_{n-1} + 1$ for $n = 2, 3, \ldots.$ Prove that for all $n$, the closest under-approximation of 1 by $n$ Egyptian fractions is $1 - \frac{1}{u_1 \cdots u_n}$. I.e., if $x_1 < x_2 < \cdots < x_n$ are distinct positive integers such that $\frac{1}{x_1} + \cdots + \frac{1}{x_n} \leq 1$, then in fact  
+\[ \frac{1}{x_1} + \cdots + \frac{1}{x_n} \leq \frac{1}{u_1} + \cdots + \frac{1}{u_n}. \tag{4} \]  ]]]
+
+_Proof._ (((First, notice that $\frac{1}{u_1} + \cdots + \frac{1}{u_n} = 1 - \frac{1}{u_1 \cdots u_n}$. Since $\frac{1}{x_1} + \cdots + \frac{1}{x_n}$ can be expressed as a fraction with denominator at most $x_1 \cdots x_n$, if $x_1 \cdots x_n < u_1 \cdots u_n$, then inequality (4) must hold. So suppose that $x_1 \cdots x_n \geq u_1 \cdots u_n$.  
+
+The proof is by induction. The base case is clear, as $x_1 \geq u_1 = 2$. Now, we'd like to prove $\frac{1}{x_1} + \cdots + \frac{1}{x_n} \leq \frac{1}{u_1} + \cdots + \frac{1}{u_n}$. By hypothesis we know that $\frac{1}{x_1} + \cdots + \frac{1}{x_{n-1}} \leq \frac{1}{u_1} + \cdots + \frac{1}{u_{n-1}}$, so if we knew that $x_n \geq u_n$, the result would follow. Unfortunately, we don't know much about the size of $x_n$, so this fails.  
+
+What if we pull off the terms $x_{\ell}, x_{\ell + 1}, \ldots, x_n$ instead of just $x_n$, for some $\ell$? If we could show that $\frac{1}{x_1} + \cdots + \frac{1}{x_n} \leq \frac{1}{u_{\ell}} + \cdots + \frac{1}{u_n}$, the result would follow by adding this to the inductive hypothesis applied to index $\ell - 1$. The same problem that the $x_i$'s may be much smaller than the $u_i$'s might occur, but this would seem to go against the assumption that $x_1 x_2 \cdots x_n \geq u_1 u_2 \cdots u_n$. This idea is what saves us.  
+
+Let $\ell$ be the largest index $j$ so that $x_j \cdot x_{j+1} \cdots x_n \geq u_j \cdot u_{j+1} \cdots u_n$. This implies  
+\[ x_{\ell} \geq u_{\ell}, x_{\ell} x_{\ell + 1} \geq u_{\ell} u_{\ell + 1}, x_{\ell} x_{\ell + 1} x_{\ell + 2} \geq u_{\ell} u_{\ell + 1} u_{\ell + 2}, \]  
+etc., because otherwise we could increase $\ell$. It turns out that these inequalities alone are enough to prove that  
+\[ \frac{1}{x_{\ell}} + \frac{1}{x_{\ell + 1}} + \cdots + \frac{1}{x_n} \leq \frac{1}{u_{\ell}} + \frac{1}{u_{\ell + 1}} + \cdots + \frac{1}{u_n}, \]
+which lets us finish by induction as mentioned. We'll show this fact in the following form (which is equivalent to the original by taking reciprocals):  
+
+
+**Lemma 1.** If $p_1 \geq p_2 \geq \cdots \geq p_n$, and $q_1 \geq q_2 \geq \cdots \geq q_n$, are two decreasing sequences of positive numbers and if $p_! p_2 \cdots p_k \leq q_1 q_2 \cdots q_k$ for each $1 \leq k \leq n$, then $p_1 + \cdots + p_n \leq q_1 + \cdots + q_n$.  
+
+
+_Proof._ We can use Abel summation in the following way (why would we think to use Abel Summation?):  
+
+$\begin{align*}
+q_1 + \cdots + q_n
+&= \sum_{k=1}^n p_k \cdot \frac{q_k}{p_k} \\
+&= \sum_{k=1}^n (p_k - p_{k+1}) \left( \frac{q_1}{p_1} + \cdots + \frac{q_k}{p_k} \right) \\
+&\geq \sum_{k=1}^n (p_k - p_{k+1}) \cdot k \sqrt[k]{\frac{q_1 \cdot q_k}{p_1 \cdot p_k}} \\
+&\geq \sum_{k=1}^n (p_k - p_{k+1}) \cdot k \\
+&= \sum_{k=1}^n p_k, 
+\end{align*}$  
+
+where we use the convention $p_{n+1} = 0$. This is the desired inequality. $\square$  )))
+
+**Problem 5.** [[[For any real number $x$ and positive integer $n$, prove that  
+\[ \left | \sum_{k=1}^n \frac{\sin kx}{k} \right | \leq 2 \sqrt{\pi}. \] ]]]
+
+_Proof._ (((After playing at the series for a while, one of the difficulties that seems to arise is the existence of two types of terms: the early ones where $\sin kx$ influences the sum more than the denominator, and the later ones where the $\frac{1}{k}$ takes over. So, a natural idea is to split the sum into two parts, namely  
+\[ \sum_{k=1}^m \frac{\sin kx}{k} \text{ and } \sum_{k=m+1}^n \frac{\sin kx}{k}, \]  
+for some index $m$ yet to be determined.  
+
+Consider the first of these sums. These are the ones where the sin terms seem to dominate. So assuming WLOG that $0 \leq x < \pi$ (in fact $0 < x < \pi$, as the $x=0$ case is easy), we can use the inequality $\sin t \leq t$ to (perhaps somewhat stupidly) form the bound  
+\[  \left | \sum_{k=1}^m \frac{\sin kx}{k} \right | \leq \sum_{k=1}^m \frac{kx}{x} = mx. \]  
+
+Let’s be a bit more clever for the second of the sums. Recall that these are the terms where we consider the denominators more influential, so we’d like to do something simple like simply say $\sin t \leq 1$ and then let the $k$'s in the denominator carry the rest. While this doesn’t quite work in its current form (the harmonic series diverges), we can use Abel Summation to rewrite the sum as follows: 
+\[ \sum_{k=m+1}^n \frac{\sin kx}{x} = \frac{1}{n} S_n + \sum_{k=m+1}^{n-1} \frac{1}{n(n+1)} S_k, \tag{5} \]  
+where $S_k = \sin((m+1)x) + \cdots + \sin(kx)$. But notice that we can make each $S_k$ telescope as follows: 
+
+\[ S_k = \sum_{t=m+1} \sin(tx) = \sum_{t=m+1}^k \frac{1}{\sin \frac{x}{2}} \left( \cos \left( t + \frac{1}{2} \right) x) - \cos \left(t - \frac{1}{2} \right)x \right) = \frac{1}{2 \sin \frac{x}{2}} \left( \cos \left(n + \frac{1}{2} \right)x - \cos \left(m + \frac{1}{2} \right) x \right). \]  
+
+_Now_ we can use the $|\sin t| \leq 1$ bound: we find $|S_k| \leq \frac{2}{2 \sin \frac{x}{2}} = \frac{1}{2 \sin \frac{x}{2}}$, and so (5) produces the following:  
+\[  \left | \sum_{k=m+1}^n \frac{\sin kx}{k} \right | \leq \frac{1}{\sin \frac{x}{2}} \cdot \left( \frac{1}{n} + \sum_{k=m+1}^{n-1} \frac{1}{k} - \frac{1}{k+1} \right) = \frac{1}{(m+1) \sin \frac{x}{2}}. \] 
+So we have the bound $mx + \frac{1}{(m+1) \sin \frac{x}{2}}$ on the given sum, where $m$ is some integer that has not yet been chosen. As this expression is probably minimized when both terms are equal, perhaps we should try to show each term is bounded by $\sqrt{\pi}$, i.e., we should try choosing $m = \lfloor \frac{\sqrt{\pi}}{x} \rfloor$. Then $m + 1 > \frac{\sqrt{\pi}}{x}$, so we would need $\sin \frac{x}{2} \geq \frac{x}{\pi}$. But this is indeed true, as the line $y = \frac{2x}{\pi}$ connecting $(0, \sin 0) = (0,0)$ with $(\frac{\pi}{2}, \sin \frac{\pi}{2}) = (\frac{\pi}{2}, 1)$ lies below the curve $y = \sin x$ on the interval $[0, \frac{\pi}{2}]$ (since $\sin$ is concave down here). $\square$  )))
+
+## Problems 
+
+**Problem 6.** (Abel's Inequality) [[[Let $n$ be a positive integer, and let $a_1, a_2, \ldots, a_n$ and $b_1, b_2, \ldots, b_n$ be two sequences of real numbers with $b_1 \geq \cdots \geq b_n \geq 0$. Then if $S_k = a_1 + \cdots + a_k$, $m = \min_k S_k$, and $M = \max S_k$, we have  
+\[ m b_1 \leq \sum_{i=1}^n a_i b_i \leq M b_1. \] ]]]
+
+**Problem 7.** [[[Calculate the values of $\sum_{k=1}^n kx^k$ and $\sum_{k=1}^n k^2 x^k$ using both Abel Summation and differentiation of geometric series. Compare to the previous discussion of Abel Summation and Integration by Parts. Which derivation was quicker?  ]]]
+
+**Problem 8.** [[[Let $a,b,c,d \geq 0$ be such that $a \leq 1, a+b \leq 5, a+b+c \leq 14$, and $a+b+c+d \leq 30$. Show that $\sqrt{a} + \sqrt{b} + \sqrt{c} + \sqrt{d} \leq 10$.  ]]]
+
+**Problem 9.** (1982 USAMO) [[[If $x$ is a positive real number and $n$ is a positive integer, then prove that  
+\[ [nx] \geq \frac{[x]}{1} + \frac{[2x]}{2} + \frac{[3x]}{3} + \cdots + \frac{[nx]}{n}, \]  
+where $[t]$ denotes the greatest integer less than or equal to $t$.  ]]]
+
+**Problem 10.** (USA TST 2007) [[[Let $n$ be a positive integer and let $a_! \leq a_2 \leq \cdots \leq a_n$, and $b_1 \leq b_2 \leq \cdots \leq b_n$ be two non-decreasing sequences of real numbers such that  
+\[ a_1 + \cdots + a_i \leq b_1 + \cdots + b_i \text{ for every } i = 1, \ldots, n-1 \]  
+and  
+\[ a_1 + \cdots + a_n = b_1 + \cdots + b_n. \]  
+Suppose that for any real number $m$, the number of pairs $(i,j)$ with $a_i - a_j = m$ equals the number of pairs $(k, \ell)$ with $b_k - b_{\ell} = m$. Prove that $a_i = b_i$ for $i = 1, \ldots, n$.  ]]]
+
+**Problem 11.** [[[Consider a polygonal line $P_0 P_1 \cdots P_n$ such that $\angle P_0 P_1 P_2 = \angle P_1 P_2 P_3 = \cdots = \angle P_{n-2} P_{n-1} P_n$, with all angles measured counterclockwise. If $P_0 P_1 > P_1 P_2 > \cdots > P_{n-1} P_n$, show that $P_0$ and $P_n$ cannot coincide.  ]]]
+
+**Problem 12.** (Romania TST 2007) [[[Let $a_1, a_2, \ldots, a_n$ be real numbers such that $|a_i| \leq 1$ for all $i$, and $a_1 + a_2 + \cdots + a_n = 0$. Prove that there exists $k \leq n$ such that  
+\[ |a_1 + 2a_2 + \cdots + k a_k| \leq \frac{2k+1}{4}. \]  
+Can this bound be improved?  ]]]
+
+**Problem 13.** (MOP 2006) [[[Let $x_1, x_2, \ldots, x_n$ and $y_1, y_2, \ldots, y_n$ be real numbers with $1 < x_1 < x_2 < \cdots < x_n$ and $1 < y_1 < y_2 < \cdots < y_n$. Given that $x_1 \cdots x_k \geq y_! \cdots y_k$ for every integer $k$ with $1 \leq k \leq n$, prove that 
+\[ \left(1 - \frac{1}{x_1} \right)\left(1 - \frac{1}{x_2} \right) \cdots \left(1 - \frac{1}{x_n} \right) \geq \left(1 - \frac{1}{y_1} \right)\left(1 - \frac{1}{y_2} \right) \cdots \left(1 - \frac{1}{y_n} \right). \]  ]]]
+
+**Problem 14.** (Oleg Golberg, MOP 2006). [[[Given real numbers $a_1, a_2, \ldots, a_n$, where $n$ is an integer greater than 1, prove that there exist real numbers $b_1, b_2, \ldots, b_n$ satisfying the following conditions:  
+**(a).** $a_i - b_i$ are positive integers for $1 \leq i \leq n$; and  
+**(b).** $\sum_{1 \leq i < j \leq n} (b_i - b_j)^2 \leq \frac{n^2 - 1}{12}. $]]]

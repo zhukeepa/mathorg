@@ -15,13 +15,27 @@ class RichText < ActiveRecord::Base
   belongs_to :bodyable, polymorphic: true
   
   def to_html
-    replace_problems.bbcode_to_html.gsub("\n", "<br/>")
+    markdown_to_html(replace_problems(clean_problems_solutions_markers(self.text)).bbcode_to_html)
   end
 
 private
-  def replace_problems
+  def clean_problems_solutions_markers(text) 
+    text.gsub("(((", "").gsub(")))", "").gsub("[[[", "").gsub("]]]", "")
+  end
+
+  def markdown_to_html(text)
+    escaped = text.gsub("\\\\", "\\newline")
+                  .gsub("\\[", "\\\\\\\\[")
+                  .gsub("\\]", "\\\\\\\\]")
+                  .gsub("\\{", "\\\\\\{")
+                  .gsub("\\}", "\\\\\\}")
+                  .gsub("*}", "\\*}")
+    Kramdown::Document.new(escaped, input: 'markdown').to_html
+  end
+
+  def replace_problems(text)
     problem_re = /\[problem\]([0-9]*)\[\/problem\]/
-    text_with_problems_replaced = self.text.gsub(problem_re) do |id|
+    text_with_problems_replaced = text.gsub(problem_re) do |id|
       problem = Problem.find_by_id($1)
       if problem
         next problem.body + "([url=\"/problems/#{problem.id}\"]Link[/url])"
