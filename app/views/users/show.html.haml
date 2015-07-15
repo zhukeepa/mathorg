@@ -1,10 +1,23 @@
-= @user.username
+%h1
+  = @user.username
 
-%h1 Solutions
+- if @user == current_user
+  %h2 Notifications
+  %br/
+  %br/
 
-.row.list-group 
-  - @user.solutions.each do |s|
-    .list-group-item
-      = link_to s.problem.description, s.problem
-      %br/
-      = s.body
+%ul{class: "nav nav-tabs", id: "myTab"}
+  %li{class: "active"}
+    %a{href: "#favorites", data: {toggle: "tab"}}Favorites
+  %li
+    %a{href: "#working_on", data: {toggle: "tab"}}Working on
+  %li
+    %a{href: "#solved", data: {toggle: "tab"}}Solved
+
+.tab-content
+  #favorites{class: "tab-pane fade in active"}
+    = render 'search/search_results', results: @user.favorite_problems, empty_message: "#{@user.username} has not favorited any problems."
+  #working_on{class: "tab-pane fade"}
+    = render 'search/search_results', results: @user.working_on_problems, empty_message: "#{@user.username} is not working on any problems."
+  #solved{class: "tab-pane fade"}
+    = render 'search/search_results', results: @user.solved_problems, empty_message: "#{@user.username} has not marked any problems as solved."

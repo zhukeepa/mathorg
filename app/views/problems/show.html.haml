@@ -29,6 +29,9 @@
   .btn-group
     = link_to 'Edit', edit_problem_path(@problem), { class: "btn btn-default" }
     = link_to 'Destroy', problem_path(@problem), { class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } }
+  %br/
+  %br/
+  = render 'markings', {problem: @problem}
   
   %br/
   %br/

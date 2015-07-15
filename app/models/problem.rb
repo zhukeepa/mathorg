@@ -20,6 +20,8 @@ class Problem < ActiveRecord::Base
 
   validates :body, presence: true
 
+  markable_as :favorite, :working_on, :solved
+
   has_many :solutions
   has_and_belongs_to_many :sources, class_name: 'ProblemSet'
 
