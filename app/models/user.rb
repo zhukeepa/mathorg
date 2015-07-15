@@ -32,7 +32,7 @@ class User < ActiveRecord::Base
   has_many :explanation_authors
   has_many :explanations, through: :explanation_authors
 
-  has_many :solutions
+  has_many :solutions, foreign_key: :author_id
 
   attr_accessor :login
   

@@ -1,1 +1,10 @@
 = @user.username
+
+%h1 Solutions
+
+.row.list-group 
+  - @user.solutions.each do |s|
+    .list-group-item
+      = link_to s.problem.description, s.problem
+      %br/
+      = s.body
