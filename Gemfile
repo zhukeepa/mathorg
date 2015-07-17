@@ -7,14 +7,14 @@ gem 'annotate'
 gem 'markable'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.4'
+gem 'rails'
 
 gem 'acts_as_commentable'
 
 gem 'kramdown'
 
 # Bootstrap! 
-gem 'bootstrap-sass',       '3.2.0.0'
+gem 'bootstrap-sass'
 
 # Mathjax
 gem 'mathjax-rails'
@@ -55,13 +55,13 @@ gem 'devise'
 gem 'haml'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.2'
+gem 'sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -79,7 +79,7 @@ gem 'simple_form'
 # gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
