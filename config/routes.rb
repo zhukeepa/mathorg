@@ -16,6 +16,7 @@ Mathorg::Application.routes.draw do
 
   devise_for :users
   resources :users, :only => [:show]
+  post "users/delete_notification"
 
   resources :problem_sets
 

@@ -1,0 +1,11 @@
+- if user.notifications.size > 0
+  .row.list-group 
+    - user.notifications.each_with_index do |n, i|
+      .notification{data: {index: i}}
+        .list-group-item
+          = raw(n)
+          %a{href:"javascript:;"} (Delete)
+          = #= link_to '(Delete)', {action: :delete_notification, index: i}, remote: true
+- else
+  %em
+    You have no notifications right now. 

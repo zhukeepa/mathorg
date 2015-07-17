@@ -13,7 +13,7 @@ var ready = function() {
                  'id': section.data('id'), 
                  'comment': section.find('#comment_comment').val() };
     
-    $.ajax({
+  $.ajax({
       url: '/comments', 
       data: JSON.stringify(data),
       type: 'POST', 

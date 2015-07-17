@@ -1,16 +1,17 @@
 # == Schema Information
 #
-# Table name: problems
+# Table name: explanations
 #
-#  id            :integer          not null, primary key
-#  body          :text
-#  source        :text
-#  author        :text
-#  show_solution :boolean
-#  created_at    :datetime
-#  updated_at    :datetime
-#  description   :text
-#  original_id   :integer
+#  id          :integer          not null, primary key
+#  description :text
+#  title       :text
+#  depth       :integer
+#  ordering    :text
+#  created_at  :datetime
+#  updated_at  :datetime
+#  user_id     :integer
+#  authors     :text
+#
 
 require 'rails_helper'
 

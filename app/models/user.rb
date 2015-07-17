@@ -16,6 +16,7 @@
 #  created_at             :datetime
 #  updated_at             :datetime
 #  username               :text
+#  notifications          :text
 #
 
 class User < ActiveRecord::Base

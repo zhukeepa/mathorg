@@ -1,0 +1,1 @@
+$('.notifications').html("<%= j (render 'users/notifications', { user: u }) %>");

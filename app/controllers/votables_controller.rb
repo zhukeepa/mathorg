@@ -13,12 +13,24 @@ class VotablesController < ApplicationController
     v = get_votable_from_id_and_class(params[:votable_id], params[:votable_type])
     v.vote_by voter: current_user, vote_scope: params[:scope], vote_weight: params[:rating]
 
+    ##::TODO_LATER:: refactor
+    if v.respond_to?(:author)
+      v.author.notifications << "#{current_user.username} voted on your solution to a <a href=\"/problems/#{v.problem.id}\">problem</a>."
+      v.author.update(notifications: v.author.notifications)
+    end
+
     render 'votables/rating', locals: { lower: params[:lower], upper: params[:upper], votable: v, scope: params[:scope], disp_text: params[:disp_text], show_average: params[:show_average] }
   end
 
   def vote(pos, params)
     v = get_votable_from_id_and_class(params[:votable_id], params[:votable_type])
     v.vote_by voter: current_user, vote_scope: params[:scope], vote: pos
+
+    ##::TODO_LATER:: refactor
+    if v.respond_to?(:author)
+      v.author.notifications << "#{current_user.username} voted on your solution to a <a href=\"/problems/#{v.problem.id}\">problem</a>."
+      v.author.update(notifications: v.author.notifications)
+    end
 
     render 'votables/vote', locals: { votable: v, scope: params[:scope], disp_text: params[:disp_text] }
   end
