@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150717023039) do
+ActiveRecord::Schema.define(version: 20150715053711) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,9 +54,9 @@ ActiveRecord::Schema.define(version: 20150717023039) do
 
   create_table "marks", id: false, force: :cascade do |t|
     t.integer  "marker_id"
-    t.string   "marker_type",   limit: 255
+    t.string   "marker_type"
     t.integer  "markable_id"
-    t.string   "markable_type", limit: 255
+    t.string   "markable_type"
     t.string   "mark",          limit: 128
     t.datetime "created_at"
   end
@@ -146,7 +146,6 @@ ActiveRecord::Schema.define(version: 20150717023039) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "username"
-    t.text     "notifications"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

@@ -38,7 +38,7 @@ class ProblemSet < ActiveRecord::Base
     sorted_problem_ids_array = problem_ids_array.sort
 
     self.problem_order = problem_ids_array.map { |i| sorted_problem_ids_array.index(i) }
-    self.problems = Problem.find_all_by_id(problem_ids_array)
+    self.problems = Problem.where(id: problem_ids_array).to_a
     save
   end
 

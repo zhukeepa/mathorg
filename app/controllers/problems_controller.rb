@@ -1,5 +1,5 @@
 class ProblemsController < ApplicationController
-  before_action :set_problem, only: [:show, :edit, :update, :destroy, :merge]
+  before_action :set_problem, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show]
   respond_to :html, :json
 
@@ -14,6 +14,8 @@ class ProblemsController < ApplicationController
   end
 
   def merge
+    # ::TODO:: xcxc ugly param pass
+    @problem = Problem.find(params[:problem_id])
     @original_problem = Problem.find(params[:problem_merge][:original_problem_id])
     @original_problem.merge_with_duplicate(@problem, params[:problem_merge][:should_merge_solutions])
 

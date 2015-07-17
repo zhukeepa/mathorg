@@ -11,7 +11,7 @@ class ProblemSetsController < ApplicationController
 
   def index
     @problem_sets = ProblemSet.all
-    @problem_sets.sort_by!(&:name)
+    @problem_sets = @problem_sets.sort_by(&:name)
   end
 
   def create

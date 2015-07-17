@@ -13,7 +13,7 @@ class TopicsController < ApplicationController
 
   def new
     @topic = Topic.new
-    @topic.parents = Topic.find_all_by_id([params[:parent_id]])
+    @topic.parents = Topic.where(id: params[:parent_id]).to_a
   end
 
   def edit

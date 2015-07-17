@@ -7,7 +7,7 @@ module Topicable
 
   #   def topics_string_all_valid_topics
   #     topic_names_array = __topics_string.split(",").map(&:strip).uniq.reject(&:empty?)
-  #     leftovers = topic_names_array - Topic.find_all_by_name(topic_names_array)
+  #     leftovers = topic_names_array - Topic.where(name: topic_names_array).to_a
   #     errors.add(:__topics_string, "has invalid topics #{leftovers.to_sentence}") unless leftovers.empty?
   #   end
   # end
@@ -18,7 +18,7 @@ module Topicable
   
   def __topics_string=(ts)
     topic_names_array = ts.split(",").map(&:strip).uniq.reject(&:empty?)
-    self.__topics = Topic.find_all_by_name(topic_names_array)
+    self.__topics = Topic.where(name: topic_names_array).to_a
     self.__topics = all_topic_ancestors
   end
 
