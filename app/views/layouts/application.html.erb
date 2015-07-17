@@ -40,7 +40,12 @@
 
         <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
-            <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
+            <% if current_user.notifications.size == 0 %>
+              <li><%= link_to 'My Account', user_path(current_user), :class => 'navbar-link' %></li>
+            <% else %>
+              <% n = current_user.notifications.size %>
+              <li><%= link_to "My Account (#{n} #{'notifications'.pluralize(n)})", user_path(current_user), :class => 'navbar-link' %></li>
+            <% end %>
             <li> <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></li>
           <% else %>
             <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link' %></li>
