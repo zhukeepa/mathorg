@@ -23,7 +23,7 @@ class Solution < ActiveRecord::Base
   acts_as_topicable 
 
   def initialize(*args)
-    super 
+    super
     self.hints ||= []
   end
 

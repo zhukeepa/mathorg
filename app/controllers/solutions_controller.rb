@@ -36,7 +36,7 @@ class SolutionsController < ApplicationController
 
 private
   def solution_params
-    params[:solution].permit(:body, :hints_string, :topics_string)
+    params.require(:solution).permit(:body, :hints_string, :topics_string)
   end
 
   def set_problem
