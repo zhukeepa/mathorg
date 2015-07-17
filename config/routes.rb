@@ -11,6 +11,10 @@ Mathorg::Application.routes.draw do
   post "downvote" => "votables#downvote"
   post "rate"     => "votables#rate"
 
+  get "feedback" => "feedbacks#index"
+  resources :feedbacks do 
+  end
+
   get "topicables/edit_topic_list"
   patch "topicables/update_topic_list"
 
