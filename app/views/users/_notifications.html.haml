@@ -4,8 +4,8 @@
       .notification{data: {index: i}}
         .list-group-item
           = raw(n)
-          %a{href:"javascript:;"} (Delete)
-          = #= link_to '(Delete)', {action: :delete_notification, index: i}, remote: true
+          .notification-delete
+            %a{href:"javascript:;"} (Delete)
 - else
   %em
     You have no notifications right now. 

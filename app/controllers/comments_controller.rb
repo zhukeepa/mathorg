@@ -7,10 +7,8 @@ class CommentsController < ApplicationController
     @c.user = current_user ##::TODO_LATER:: refactor
     @c.save
 
-    ##::TODO_LATER:: refactor
-    if @commentable.respond_to?(:author)
-      @commentable.author.notifications << "#{current_user.username} left a comment on your solution to a <a href=\"problems/#{@commentable.problem.id}\">problem</a>."
-      @commentable.author.update(notifications: @commentable.author.notifications)
+    if @commentable.kind_of?(Solution) && @commentable.author != current_user
+      @commentable.author.notify!(:solution_comment, current_user, @commentable)
     end
 
     render partial: 'comments/comment_list', locals: { commentable: @commentable }

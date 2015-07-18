@@ -1,5 +1,5 @@
 var ready = function() {
-  $('body').on('click', '.notification a', function(e) { 
+  $('body').on('click', '.notification-delete a', function(e) { 
     var i = $(this).closest('.notification').data('index'); 
     var self = $(this); 
 
