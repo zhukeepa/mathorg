@@ -13,7 +13,6 @@
 FactoryGirl.define do
   factory :feedback do
     name "MyString"
-    string "MyString"
     email "MyString"
     content "MyString"
   end

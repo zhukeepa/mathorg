@@ -1,5 +1,5 @@
 %br/
-= raw(@problem.body.bbcode_to_html.gsub("\n", "<br/>"))
+= raw(RichText.new(text: @problem.body).to_html)
 %br/
 %br/
 = simple_form_for [@problem, @solution] do |f|

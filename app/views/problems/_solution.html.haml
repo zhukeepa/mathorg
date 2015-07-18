@@ -8,7 +8,7 @@
     .hint{style: "display:none", class: "hint", data: {id: "#{i}"}}
       %strong 
         = "Hint #{i+1}:"
-      = raw(solution.hints[i].bbcode_to_html.gsub("\n", "<br/>"))
+      = raw(RichText.new(text: solution.hints[i]).to_html)
       %br/
   %br/
 
@@ -20,7 +20,7 @@
 %br/
 %br/
 .solution{id: "solution#{solution.id}", style: "display:none"}
-  = raw(solution.body.bbcode_to_html.gsub("\n", "<br/>"))
+  = raw(RichText.new(text: solution.body).to_html)
   %br/
   %br/
   = render 'comments/comments', commentable: solution 

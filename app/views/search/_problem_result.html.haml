@@ -8,6 +8,6 @@
 %br/
 %br/
 
-= raw(problem.body.bbcode_to_html.gsub("\n", "<br/>"))
+= raw(RichText.new(text: problem.body))
 %br/
 %br/

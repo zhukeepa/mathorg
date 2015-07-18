@@ -19,7 +19,7 @@ RSpec.describe RichText, type: :model do
 
   describe "#to_html" do 
     it "should replace problems in tags with the problem's body" do
-      htmlified = RichText.new(text: "Blah [problem]#{problem.id}[/problem] [problem]#{problem2.id}[/problem]").to_html
+      htmlified = RichText.new(text: "Blah [problem]#{problem.id}[/problem] [problem]#{problem2.id}[/problem]").to_html_with_custom_replacements
       expect(htmlified.include?(problem.body)).to be true
       expect(htmlified.include?(problem2.body)).to be true
     end

@@ -15,14 +15,14 @@ class RichText < ActiveRecord::Base
   belongs_to :bodyable, polymorphic: true
   
   def to_html
-    markdown_to_html(replace_problems(clean_problems_solutions_markers(self.text)).bbcode_to_html)
+    markdown_to_html(self.text.bbcode_to_html)
+  end
+
+  def to_html_with_custom_replacements
+    markdown_to_html(replace_solutions(replace_problems(self.text)).bbcode_to_html)
   end
 
 private
-  def clean_problems_solutions_markers(text) 
-    text.gsub("(((", "").gsub(")))", "").gsub("[[[", "").gsub("]]]", "")
-  end
-
   def markdown_to_html(text)
     escaped = text.gsub("\\\\", "\\newline")
                   .gsub("\\[", "\\\\\\\\[")
@@ -38,9 +38,23 @@ private
     text_with_problems_replaced = text.gsub(problem_re) do |id|
       problem = Problem.find_by_id($1)
       if problem
-        next problem.body + "([url=\"/problems/#{problem.id}\"]Link[/url])"
+        next problem.body + " ([url=\"/problems/#{problem.id}\"]Link[/url])"
       else
         next "[color=red][i]Problem not found[/i][/color]"
+      end
+    end
+
+    text_with_problems_replaced
+  end
+
+  def replace_solutions(text)
+    solution_re = /\[solution\]([0-9]*)\.([0-9]*)\[\/solution\]/
+    text_with_problems_replaced = text.gsub(solution_re) do |id|
+      problem = Problem.find_by_id($1)
+      if problem && problem.solutions.size >= 1 + $2.to_i
+        next problem.solutions[$2.to_i].body
+      else
+        next "[color=red][i]Solution not found[/i][/color]"
       end
     end
 

@@ -10,11 +10,11 @@
 = render 'votables/votes', { votable: @explanation }
 %br/
 
-- if @explanation.users.include?(current_user)
+- if @explanation.users.include?(current_user) || @explanation.users.empty?
   .btn-group
     = link_to('Edit', { action: "edit" }, { class: "btn btn-default", method: 'get' }) 
     = link_to('Destroy', {}, { class: "btn btn-default", method: 'delete' })
 %br/
 %br/
 
-= raw(@explanation.body.to_html)
+= raw(@explanation.body.to_html_with_custom_replacements)

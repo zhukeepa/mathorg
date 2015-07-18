@@ -8,7 +8,7 @@
           %strong
             = link_to comment.user.username, comment.user
           %br/
-          = raw(comment.comment.bbcode_to_html.gsub("\n", "<br/>"))
+          = raw(RichText.new(text: comment.comment).to_html)
           %br/
           %br/
           = render 'votables/votes', { votable: comment }
