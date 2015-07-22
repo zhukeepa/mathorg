@@ -1,0 +1,117 @@
+<<<
+Title: Weights & Coloring
+Author(s): Josh Nichols-Barrer
+Description: Handout from Red MOP 2008
+Topics: Weights and coloring
+>>>
+1.  [[[We have $n\geq 2$ lamps $L_1,L_2,\ldots,L_n$ in a row, each
+    of them being either *on* or *off*. Every second we simultaneously
+    modify the state of each lamp as follows:  
+    1.  if the lamp $L_i$ and its neighbors (only one neighbor for
+        $i=1$ and $i=n$, two neighbors for other $i$) are in
+        the same state, then $L_i$ is switched off;  
+    2.  otherwise, $L_i$ is switched on.  
+    Initially all the lamps are off except the leftmost one which is on.  
+    1.  Prove that there are infinitely many integers $n$ for
+        which all the lamps will eventually be off.  
+    2.  Prove that there are infinitely many integers $n$ for
+        which all the lamps will eventually be on.]]]
+
+2.  [[[An $n\times n$ checkerboard is divided into $1\times 1$
+    squares. It is allowed to place dominoes on the checkerboard, each
+    of which exactly covers two adjacent squares, provided that no two
+    dominoes cover the same square, and no two dominoes cover squares
+    which share an edge. (It is allowed for two dominoes to cover
+    squares which share only a corner.) Find the largest constant
+    $c$ such that for any $n\geq 2008$, once can always fit at
+    least $cn^2-n$ dominoes on the board.]]]
+
+3.  [[[A large rectangle in the plane is partitioned into smaller
+    rectangles, each of which has either integer height or integer width
+    (or both). Prove that the large rectangle also has this property.]]]
+
+4.  [[[Let $n$ be a given integer greater than one. There are
+    $n$ bags of balls. The weight, in grams, of each ball is a
+    perfect power of two. (A bag can have balls of the same weight.) If
+    the total weight of the balls in each bag is the same, then there
+    exist $k_n$ balls (in all the bags) of the same weight.
+    Determine the maximum value of $k_n$.]]]
+
+5.  [[[Let $n$ be a given integer greater than $2$. We wish to
+    label each side and each diagonal of a regular $n$-gon
+    $P_1P_2\cdots P_n$ with a positive integer less than or equal to
+    $r$ so that
+
+    1.  every integer between $1$ and $r$ occurs as a label;
+
+    2.  in each triangle $P_iP_jP_k$ two of the labels are equal and
+        greater than the third.
+
+    Given these conditions:
+
+    1.  Determine the largest positive integer $r$ for which this
+        can be done.
+
+    2.  For that maximum value of $r$, how many such labelings are
+        there?]]]
+
+6.  [[[In an $m\times n$ rectangular board of $mn$ unit squares,
+    two squares are *adjacent* if they share a common edge. A *path*[[[
+    is a sequence of squares in which any two consecutive squares are
+    adjacent. Each square of the board can be colored black or white.
+    Let $N$ denote the number of coloring schemes of the board such
+    that there exists at least one black path from the left edge of the
+    board to its right edge, and let $M$ denote the number of
+    coloring schemes in which there exist at least two non-intersecting
+    black paths from the left edge to the right edge. Prove that
+    $N^2\geq M\cdot 2^{mn}$.]]]
+
+7.  [[[Points $P_1,P_2,\ldots,P_n$, with no three collinear, are given
+    in the plane. Each point is colored in either red or blue. A
+    nonempty set $S$ of the triangles with $P_1,P_2,\ldots,P_n$
+    as their vertices is called *good* if for every pair of segments
+    $P_iP_j$ and $P_uP_v$, the number of triangles in $S$
+    containing side $P_iP_j$ is equal to the number of triangles in
+    $S$ containing side $P_uP_v$. A triangle is called
+    *monochromatic*[[[ if all its vertices are of the same color.
+    Determine the minimum value of $n$ such that there are always
+    two monochromatic triangles in any good set.]]]
+
+8.  [[[There is a set of $n$ coins with distinct integer weights
+    $w_1,w_2,\ldots,w_n$. It is known that if any coin with weight
+    $w_k$, $1\leq k\leq n$, is removed from the set, the
+    remaining coins can be split into two groups of the same weight.
+    (The number of coins in the two groups can be different.) Find all
+    $n$ for which such a set of coins exists.]]]
+
+9.  [[[Can we tile a $13\times 13$ table from which we remove the
+    central unit square using only $1\times 4$ or $4\times 1$
+    rectangles?]]]
+
+10. [[[In the Cartesian coordinate plane define the strip
+    \[S_n=\{(x,y):n\leq x\leq n+1\}\] for every integer $n$.
+    Assume that each strip $S_n$ is colored either red or blue, and
+    let $a$ and $b$ be two distinct positive integers. Prove
+    that there exists a rectangle with side lengths $a$ and $b$
+    such that its vertices have the same color.]]]
+
+11. [[[A (simple and finite) graph is called *balanced*[[[ if it has
+    $n$ edges, and it is possible to assign each of the numbers
+    $1,2,\ldots,n$ to an edge (one number per edge) in such a way
+    that the sum of the numbers assigned to the edges connecting to each
+    vertex is the same. Determine if every balanced graph is
+    connected.]]]
+
+12. [[[Find all positive integers $n$, for which the numbers in the set
+    $S=\{1,2,\ldots,n\}$ can be colored red and blue, with the
+    following condition being satisfied: the set $S\times S\times S$
+    contains exactly 2007 ordered triples $(x,y,z)$ such that (i)
+    $x,y,z$ are of the same color and (ii) the integer $x+y+z$
+    is divisible by $n$.]]]
+
+13. [[[For what values of $n$ is it possible to color every square in
+    an $n\times n$ grid red, blue, yellow, green, or orange, so that
+    for all $i,j,k$ between $1$ and $n$ with $i\neq j$
+    and $j\neq k$, the square in row $i$ and column$j$ is
+    assigned a different color from the square in row $j$ and column
+    $k$?]]]

@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+
+\input{preamble}
+
+\begin{document}
+
+\pagestyle{fancy}
+\setlength{\headheight}{15.2pt}
+
+% Above the line stuff.
+
+\lhead{\textit{MOSP 2011}}
+\chead{\textit{Green}}
+\rhead{\textit{Joshua Nichols-Barrer}}
+
+% Title here.
+
+{\bfseries \Large Sums \& Products}
+
+% Get to work.
+
+\begin{enumerate}
+
+\item Let $n$ be a positive integer.
+  Evaluate \[\sum_{k=1}^n\sum_{1\leq i_1<\cdots<i_k\leq n}\frac {2^k}{(i_1+1)(i_2+1)\cdots(i_k+1)}.\]
+\item Let $k$ be an odd positive integer, and let $x$ be an arbitrary
+  real number.  Prove that \[\tan(kx) =
+  (-1)^{\frac{k-1}2}\prod_{j=0}^{k-1}\tan\left(x-\frac {j\pi} k\right)\]
+\item Prove that for any positive integer $n$, $n!$ is a divisor of \[\prod_{k=0}^{n-1}(2^n-2^k).\]
+\item Let $f(n)$ be a function defined on the set of positive integers
+  such that $f(1)=2$ and \[f(n+1) = (f(n))^2-f(n)+1\qquad\textrm{for
+    every positive integer } n.\]  Prove that for
+  $n=2,3,\ldots$, \[1-\frac 1{2^{2^{n-1}}}<\frac 1{f(1)}+\frac
+  1{f(2)}+\cdots+\frac 1{f(n)}<1-\frac 1{2^{2^n}}.\]
+\item Let $n$ be an integer greater than 1, and let $A$ be a set of
+  real numbers with less than $n$ elements.  Suppose that
+  $2^0,2^1,2^2,\ldots,2^{n-1}$ can be written as the sum of distinct
+  elements in $A$.  Prove that $A$ contains at least one negative
+  number.
+\item Prove that for every positive integer $n$, \[\sum_{k=1}^n\frac
+  1{k\binom nk} = \frac 1{2^{n-1}}\sum_{\substack{k=1 \\ k \textrm{ odd}}}^n
+  \frac{\binom nk}k.\]
+\item For a nonnegative integer $N$, let $u(N)$ denote the number of
+  ones in $N$ when expressed in binary (so that for example
+  $u(10)=u(1010_2)=2$).  Let $m,n\geq 0$ be integers and $k\geq mn$ a
+  third integer.  Express \[\sum_{i=0}^{2^k-1}(-1)^{u(i)}\binom{\binom
+    im}n\] in closed form.
+\item For a finite set $S$ of numbers, let $|S|$ denote its cardinality,
+  $\sigma(S)$ the sum of its
+  elements and $\pi(S)$ the product.  Suppose that $S$ is a finite set
+  of nonnegative integers, and let $N\geq\sigma(S)$ be a nonnegative integer.  Prove that \[\sum_{T\subseteq
+    S}(-1)^{|T|}\binom {N - \sigma(T)}{|S|} = \pi(S).\]
+\item Given a positive integer $n$, express the sum \[\frac 1{\binom
+  {2n}1} - \frac 1{\binom {2n}2}+ \frac 1{\binom{2n}3}-\cdots-\frac
+  1{\binom{2n}{2n-2}}+\frac 1{\binom{2n}{2n-1}}\] in closed form.
+\item Let $a_1,a_2,\ldots,a_n$ be real numbers satisfying the system
+  of equations \begin{eqnarray*} \frac
+    {a_1}2+\frac{a_2}3+\cdots+\frac{a_n}{n+1}&=&\frac 43, \\ \frac
+    {a_1}3+\frac {a_2}4+\cdots+\frac {a_n}{n+2}&=& \frac 45 \\ \vdots
+    \qquad&\vdots& \quad\vdots \\ \frac {a_1}{n+1}+\frac
+    {a_2}{n+2}+\cdots+\frac{a_n}{2n}&=& \frac 4{2n+1}.\end{eqnarray*}  Express
+    $\sum_{i=1}^n\frac{a_i}{2i+1}$ in closed form.
+\item Let $S=\{x_1,x_2,\ldots,x_{k+\ell}\}$ be a $(k+\ell)$-element
+  set of real numbers contained in the interval $[0,1]$; $k$ and $\ell$
+  are positive integers.  A $k$-element subset $A\subset S$ is called
+  \emph{nice} if \[\left|\frac 1k\sum_{x_i\in A}x_i - \frac
+  1\ell\sum_{x_j\in S\backslash A} x_j\right|\leq
+  \frac{k+\ell}{2k\ell}.\]  Prove that the number of nice subsets is
+  at least \[\frac 2{k+\ell}\binom{k+\ell}k.\]
+\item Prove that for every pair $m,k$ of natural numbers, $m$ has a
+  unique representation in the form \[m=\binom
+  {a_k}k+\binom{a_{k-1}}{k-1}+\cdots+\binom{a_t}t,\]
+    where \[a_k>a_{k-1}>\cdots>a_t\geq t\geq 1.\]
+\item Let $n$ be a positive integer and let $a_1\leq a_2\leq\cdots\leq
+  a_n$ and $b_1\leq b_2\leq\cdots\leq b_n$ be two nondecreasing
+  sequences of real numbers such that \[a_1+\cdots+a_i\leq
+  b_1+\cdots+b_i\textrm{ for every } i=1,2,\ldots,n-1\]
+  and \[a_1+a_2+\cdots+a_n = b_1+b_2+\cdots+b_n.\]  Suppose that for
+  any real number $m$, the number of pairs $(i,j)$ with $a_i-a_j=m$
+  equals the number of pairs $(k,\ell)$ with $b_k-b_\ell=m$.  Prove
+  that $a_i=b_i$ for $i=1,2,\ldots,n$.
+\item Let $A$ and $B$ be two sets each with $n$ positive real numbers,
+  such that the sum of the elements in $A$ equals the sum of the
+  elements in $B$.  Show that there exists an $n\times n$ array of
+  nonnegative real numbers such that \begin{enumerate} \item The set
+    of row sums is $A$; \item The set of column sums is $B$; \item
+    There are at least $(n-1)^2+|A\cap B|$ zeroes in the array. \end{enumerate}
+\item Let $n$ be a given integer greater than 1, and let
+  $a_1,a_2,\ldots,a_n$ be real numbers (not all zero).  Prove that the
+  following statements are equivalent:
+\begin{enumerate}
+\item There exist integers $0<x_1<x_2<\cdots<x_n$ such
+  that \[a_1x_1+a_2x_2+\cdots +a_nx_n\geq 0.\] \item There exists $k$,
+  $1\leq k\leq n$, such that $a_k+a_{k+1}+\cdots+a_n>0.$
+\end{enumerate}
+\item (Tricky) Let $\mathcal P$ be a convex polygon in the plane.  A
+  real number is assigned to each point in the plane so that the sum
+  of the numbers assigned to the vertices of any polygon similar to
+  $\mathcal P$ is equal to 0.  Prove that all the assigned numbers are
+  equal to 0.
+\item Let $S$ denote the set of rational numbers in the interval
+  $(0,1)$.  Determine, with proof, if there exists a subset $T$ of $S$
+  such that every element of $S$ can be uniquely written as a sum of
+  finitely many distinct elements in $T$.
+\end{enumerate}
+
+\end{document}

@@ -1,3 +1,5 @@
+latest = "YS-trig-blue.txt"
+
 # Format:
 # <<<Title: [explanation title]
 # Author(s): [comma-separated list of explanation titles]
@@ -5,7 +7,7 @@
 # Topics: [comma-separated list of topics]>>>
 # [Everything after is the body of the post]
 default_user = User.find(1)
-filenames = ["#{Rails.root}/data_loading/data/handouts/functional_equations.tex", "#{Rails.root}/data_loading/data/handouts/abel.tex"]
+filenames = ["#{Rails.root}/data_loading/data/handouts/#{latest}"]
 filenames.each do |fn|
   file = File.open(fn, "rb")
   content = file.read 

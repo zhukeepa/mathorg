@@ -19,17 +19,27 @@ class RichText < ActiveRecord::Base
   end
 
   def to_html_with_custom_replacements
-    markdown_to_html(replace_solutions(replace_problems(self.text)).bbcode_to_html)
+    markdown_to_html(lol(replace_solutions(replace_problems(self.text))).bbcode_to_html)
   end
 
 private
+  def lol(text)
+    foo = text.gsub("(((", "[color=red]")
+              .gsub(")))", "[/color]")
+              .gsub("[[[", "[color=blue]")
+              .gsub("]]]", "[/color]")
+
+    foo
+  end
   def markdown_to_html(text)
     escaped = text.gsub("\\\\", "\\newline")
                   .gsub("\\[", "\\\\\\\\[")
                   .gsub("\\]", "\\\\\\\\]")
-                  .gsub("\\{", "\\\\\\{")
-                  .gsub("\\}", "\\\\\\}")
+                  .gsub("\\{", "\\\\\\\\{")
+                  .gsub("\\}", "\\\\\\\\}")
                   .gsub("*}", "\\*}")
+                  .gsub("_{", "\\_{")
+
     Kramdown::Document.new(escaped, input: 'markdown').to_html
   end
 

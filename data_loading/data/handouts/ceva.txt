@@ -1,0 +1,190 @@
+<<<
+Title: Ceva's Theorem
+Author(s): Alex Zhu
+Description: Tutoring handout
+Topics: Ceva
+>>>
+Ceva’s Theorem
+==============
+
+Regular Ceva
+------------
+
+Ceva’s theorem states that if $ABC$ is a triangle, and $D$,
+$E$, and $F$ are points on $BC$, $CA$, and $AB$,
+respectively, then segments $AD$, $BE$, and $CF$ are
+concurrent if and only if 
+\[ \frac{BD}{DC} \cdot \frac{CE}{EA} \cdot \frac{AF}{FB} = 1. \]
+
+I will first outline two proof of the only if direction. Suppose that
+$AD$, $BE$, and $CF$ intersect at a point $P$. We wish
+to show that in this case, equation (1) holds.
+
+1.  Find the ratio of the areas of triangles $ABD$ and $ADC$,
+    and the ratio of the areas of triangles $PBD$ and $PDC$.
+    Using this, determine the ratio $\frac{[APB]}{[APC]}$, and use
+    this ratio to prove equation (1).
+
+2.  Let $\ell$ be a line through $A$ parallel to $BC$. Let
+    $BP$ and $CP$ meet $\ell$ at points $Y$ and $Z$,
+    respectively. Compute $\frac{CE}{EA}$ and $\frac{AF}{FB}$ in
+    terms of ratios involving $AZ$ or $AY$.
+
+Now for the other direction. Suppose that $D, E, F$ are points on
+the sides of $ABC$ so that (1) holds. Define $P$ to be the point
+where $BE$ and $CF$ intersect, and let $D'$ be the point
+where $AP$ meets $BC$. Use the only if direction of the proof to
+show that $D' = D$, and explain why this proves Ceva’s theorem.
+
+Generalized Angle Bisector Theorem
+----------------------------------
+
+This result is not directly related to Ceva’s theorem, but will often be
+helpful when chasing ratios of lengths.
+
+1.  Let $ABC$ be a triangle, and let $D$ be a point on side
+    $BC$. Show that
+    \[\frac{AC \sin \angle DAC}{AB \sin \angle BAD} = \frac{CD}{DB}.\]
+
+
+Trig Ceva
+---------
+
+There is an analogous statement of Ceva’s theorem, concering the
+sines of the angles made by the cevians instead of the side lengths. If
+$ABC$ is a triangle, and $D$, $E$, and $F$ are points on
+$BC$, $CA$, and $AB$, respectively, then segments $AD$,
+$BE$, and $CF$ are concurrent if and only if \[\begin{aligned}
+ \frac{\sin \angle CAD}{\sin \angle DAB} \cdot \frac{\sin \angle ABE}{\sin \angle EBC} \cdot \frac{\sin \angle BCF}{\sin \angle FCA} = 1. \end{aligned}\]
+Show directly that equation (2) holds if and only if equation (1) holds
+using the generalized angle bisector theorem.
+
+Basic Applications
+==================
+
+1.  [[[Prove that the medians of a triangle are concurrent.]]]
+
+2.  [[[Prove that the angle bisectors of a triangle are concurrent.]]]
+
+3.  [[[Prove that the altitudes of a triangle are concurrent.]]]
+
+4.  [[[Let $ABC$ be a triangle, and let its incircle touch sides
+    $BC$, $CA$, and $AB$ at $D$, $E$, and $F$,
+    respectively. Show that $AD$, $BE$, and $CF$ are
+    concurrent. (This point of concurrency is called the *Gergonne
+    point* of $ABC$.)]]]
+
+5.  [[[Let $P$ be a point inside a triangle $ABC$. Let $\ell_a$
+    be the reflection of $AP$ across the bisector of $\angle A$,
+    $\ell_b$ be the reflection of $BP$ across the bisector of
+    $\angle B$, and $\ell_c$ be the reflection of $CP$
+    across the bisector of $\angle C$.
+
+    1.  Show that $\ell_a, \ell_b,$ and $\ell_c$ are
+        concurrent at a point $P'$. (This point $P'$ is called
+        the *isogonal conjugate* of $P$.)
+
+    2.  Show that the isogonal conjugate of $P'$ is $P$.
+
+    3.  Show that the circumcenter and the orthocenter of $ABC$
+        are isogonal conjugates.]]]
+
+6.  [[[Let $ABC$ be a triangle, and let $D$, $E$, and
+    $F$ be points on sides $BC$, $CA$, and $AB$,
+    respectively, such that $AD$, $BE$, and $CF$ are
+    concurrent at a point $P$. Let $D', E'$, and $F'$ be the
+    reflections of $D$, $E$, and $F$ across the midpoints of
+    sides $BC$, $CA$, and $AB$, respectively. Show that
+    $AD'$, $BE'$, and $CF'$ are concurrent at a point
+    $P'$. (The point $P'$ is called the *isotomic conjugate* of
+    $P$. Isotomic conjugates are not as important as isogonal
+    conjugates, though knowing about isogonal conjugates isn’t
+    particularly important either—I just threw these here as
+    tidbits.)]]]
+
+Other Problems
+==============
+
+1.  [[[
+    Let $ABC$ be a triangle, and let $P$ and $Q$ be on sides
+    $AB$ and $AC$, respectively, such that $PQ \, || \, BC$.
+    Let $CP$ and $BQ$ meet at $R$. Show that $AR$ passes
+    through the midpoints of $PQ$ and $BC$.
+    ]]]
+
+2.  [[[
+    Let $ABC$ be an acute triangle and $D,E,F$ be the feet of
+    the altitudes from $A$, $B$, and $C$ to sides $BC$,
+    $CA$, and $AB$, respectively. Let $P, Q, R$ be the feet
+    of the perpendiculars from $A, B$, and $C$ to $EF$,
+    $FD$, and $DE$, respectively. Prove that lines $AP, BQ$,
+    and $CR$ are concurrent.
+    ]]]
+
+3.  [[[
+    Let $ABC$ be a triangle. Points $A_1, B_1$, and $C_1$
+    are chosen outside of $\triangle ABC$ so that $A_1B = A_1C$,
+    $B_1 C = B_1 A$, and $C_1 A = C_1 B$. Show that the
+    perpendicular from $A$ to line $B_1 C_1$, the perpendicular
+    from $B$ to line $A_1 C_1$, and the perpendicular from
+    $C$ to line $C_1 A_1$ are concurrent. (Don’t use radical
+    axes for this. Drop perpendiculars from $A_1, B_1, C_1$ to the
+    sides, do some angle chasing, and use Ceva’s theorem..
+    ]]]
+
+4.  [[[
+    Let $ABC$ be a triangle, and let $A'B'C'$ be a triangle in
+    the interior of $ABC$ such that $AB || A'B'$,
+    $BC || B'C'$, and $CA || C'A'$. Show that $AA', BB',$
+    and $CC'$ are concurrent.
+    ]]]
+
+5.  [[[
+    Let $A, B, C, D, E, F$ be points on a cicle, in that order. Show
+    that chords $AD$, $BE$, and $CF$ are concurrent if and
+    only if
+    \[\frac{AB}{BC} \cdot \frac{CD}{DE} \cdot \frac{EF}{FA} = 1.\.
+    ]]]
+
+6.  [[[
+    (Ceva nest theorem) Let $ABC$ be a triangle. Let
+    $A_1, B_1, C_1$ be points on sides $BC, CA$, and $AB$,
+    respectively, and let $A_2, B_2, C_2$ be points on sides
+    $B_1 C_1, C_1 A_1$, and $A_1 B_1$, respectively. Prove that
+    if any of the following two statements hold, then all three must
+    hold:
+
+    1.  $AA_1, BB_1, CC_1$ are concurrent.
+
+    2.  $A_1A_2$, $B_1B_2, C_1C_2$ are concurrent.
+
+    3.  $AA_2, BB_2, CC_2$ are concurrent.
+    ]]]
+
+7.  [[[
+    Let $\Gamma$ be a circle, and let
+    $\omega_1, \omega_2, \omega_3, \omega_4, \omega_5, \omega_6$ be
+    circles such that each $\omega_i$ is internally tangent to
+    $\Gamma$ at a point $T_i$, and each $\omega_i$ is
+    externally tangent to $\omega_{i+1}$ and $\omega_{i-1}$
+    (where indices are taken modulo 6.) Show that $T_1T_4, T_2T_5$,
+    and $T_3T_6$ are concurrent.
+    ]]]
+
+8.  [[[
+    (Jacobi’s theorem) Let $ABC$ be a triangle, and let
+    $A', B', C'$ be points in its exterior such that
+    $\angle C'BA = \angle CBA'$, $\angle A'CB = \angle ACB'$,
+    and $\angle B'AC = \angle BAC'$. Show that $AA', BB'$, and
+    $CC'$ are concurrent.
+    ]]]
+
+9.  [[[
+    (USAMO 2011) Let $P$ be a given point inside quadrilateral
+    $ABCD$. Points $Q_1$ and $Q_2$ are located within
+    $ABCD$ such that
+    \[\angle Q_1BC =\angle ABP, \,\, \angle Q_1CB =\angle DCP, \,\, \angle Q_2AD = \angle BAP, \text{ and } \angle Q_2DA = \angle CDP.\]
+    Prove that $\overline{Q_1Q_2}||\overline{AB}$ if and only if
+    $\overline{Q_1Q_2}||\overline{CD}$.
+    ]]]
+

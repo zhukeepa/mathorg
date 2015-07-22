@@ -1,0 +1,41 @@
+<<<
+Title: Red Inequalities
+Author(s): Josh Nichols-Barrer
+Description: Handout from Red MOP 2008
+Topics: Inequalities
+>>>
+**Blue MOP 2009; Josh  
+Squares!**
+
+[[[For which primes $p$ is $-15$ a square? Prove that the
+equation $x^2+5xy-3y^2 = 131$ has no integer solutions. Suppose
+$p=12^n+1$ is prime. Under what circumstances does
+$p|5^{\frac{p-1}2}+1$?]]]
+
+[[[A pentagonal number is a number of the form $\frac{n(3n-1)}2$,
+where $n$ is a positive integer. Find the first pentagonal number
+greater than 1 that is also a perfect square. Find all pairs of
+consecutive cubes whose difference is a perfect square. Find the
+smallest positive integer $n$ such that $19n+1$ and $95n+1$
+are both integer squares. Consider the sequence of reals
+$(a_n)_{n=0}^\infty$ defined recursively by $a_1=1$ and
+\[a_{n+1} = 2a_n + \sqrt{3a_n^2-3}.\] Prove that $a_n$ is an
+integer for all $n$. Prove that the equation
+\[x^3+y^3+z^3+t^3 = 1999\] has infinitely many integer solutions.
+Determine all positive integers $n$ for which there exists an
+integer $m$ such that $2^n-1$ is a divisor of $m^2 + 9$.
+(MOP ’98) Find all pairs of positive integers $(x,y)$ satisfying the
+equation
+\[x^{2} + (x+1)^{2} + \cdots + (x+99)^{2} = y^{2} + (y+1)^{2} + \cdots
++ (y+100)^{2}.\] (MOP ’09) Find all solutions in nonnegative integers
+to \[2^m+7^n = 9^k.\] Find all solutions in positive integers to
+$3^x-2=y^2$. (MOP ’97) Does there exist a row of Pascal’s Triangle
+containing four distinct elements $a, b, c$, and $d$ such that
+$b=2a$ and $d= 2c$? Prove that the equation
+\[x^3+y^3 = z^4 - t^2\] has infinitely many integer solutions with
+$\gcd(x,y,z,t) = 1$. (MOP ’95) The integer $n$ is a square mod
+$p$ for every prime $p$. Prove that $n$ is a perfect
+square.]]]
+
+Find all pairs of nonnegative integers $(m, n)$ such that
+\[(m+n-5)^2 = 9mn.\]

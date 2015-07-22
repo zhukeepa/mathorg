@@ -1,0 +1,122 @@
+<<<
+Title: Extremal Arguments
+Author(s): Josh Nichols-Barrer
+Description: Handout from Blue MOP 2005
+Topics: Extremal combinatorics
+>>>
+These problems focus on the method of taking extremal values,
+extremal elements, etc. Arguments of this sort take the form “let
+$x$ be the least such that blah” or ”let $y$ be the largest so
+that foo.” This is not a concept so much as an approach to many types of
+problems, and so we practice it.
+
+[[[Let $f(x)$ be a polynomial in $\mathbb{R}[x]$ of degree $n$ such
+that $f(x)\geq 0$ for all $x\in\mathbb{R}$. Show that
+$f(x)+f'(x)+\cdots
++f^{(n)}(x)\geq0$ for all $x\in\mathbb{R}$.]]]
+
+[[[Prove that every sequence of $n^2+1$ real numbers must have an
+$(n+1)$-element monotone subsequence. (\`\`Monotone" here does not
+mean *strictly* monotone!)]]]
+
+[[[(Putnam 93/A4) Let $x_1,x_2,\ldots, x_{19}$ be positive integers
+each of which is less than or equal to 93. Let
+$y_1,y_2,\ldots, y_{93}$ be positive integers each of which is less
+than or equal to 19. Prove that there exists a (nonempty) sum of some
+$x_i$’s equal to a sum of some $y_j$’s.]]]
+
+[[[  (IMO ’68) Prove that in every tetrahedron there is a vertex such
+that the three edges meeting there have lengths which are the sides of a
+triangle.]]]
+
+[[[(Russian) Several pieces are placed on a chessboard. At each move one
+of them goes to one of the adjacent squares. After several moves it
+turns out that each piece has visited every square on the board, and
+finally returned back to its initial square. Prove that there was a move
+after which none of the pieces occupied its initial position.]]]
+
+[[[Prove that in each closed polygonal line there exists a side $AB$
+and a vertex $C$ ($C\neq A,B$), such that the foot of the
+perpendicular from $C$ to the line $AB$ lies on the line-segment
+$AB$, and not on its extension.]]]
+
+[[[(Russian, 1977) The Seven Dwarfs sit around a circular table waiting for
+Snow White. Each of them has a big cup, and some of the cups contain
+milk. The first dwarf pours out all his milk into the other six cups,
+dividing it into six equal portions. The dwarf to his right follows
+suit. And so they continue, until the seventh dwarf pours out all his
+milk into the other six cups (dividing it into six equal portions). Then
+it turns out that each of the dwarfs has exactly as much milk as when
+they started. Find the amount of milk originally contained in each cup
+if the total amount was 3 liters.]]]
+
+[[[(Hungary, 1990) We wander the coordinate plane according to the
+following rules. From a given point $P(x,y)$ we are allowed to move
+to one of the four points $(x,y+2x),(x,y-2x),(x-2y,y),(x+2y,y)$.
+There is only one restriction: if we have moved from $P$ to $Q$
+then we cannot go back to $P$ immediately on the next move. Prove
+that, starting from the point $(1,\sqrt2)$, we cannot return to it,
+ever.]]]
+
+[[[Given any $n+2$ distinct numbers from the first $3n$ positive
+integers, prove that it is always possible to find two numbers, say
+$a$ and $b$ such that $n < a - b < 2n.$]]]
+
+[[[  Twenty-three people, each with integral weight, decide to play
+football, separating into two teams of eleven people, plus a referee. To
+keep things fair, the teams chosen must have equal ** weight. It turns
+out that no matter who is chosen to be the referee, this can always be
+done. Prove that the 23 people must all have the same weight.]]]
+
+[[[Given a $2n+1$ convex polygon. Determine if it is possible to
+assign numbers 1, 2, $\cdots,$ $4n+2$ to the vertices and
+midpoints of the sides of the sides of the polygon such that for each
+side the sum of the three numbers assigned to it is the same.]]]
+
+[[[Lines $\ell_1,$ $\ell_2,$ $\cdots,$ $\ell_k$ are in
+general position in the plane (no two are parallel and no three are
+concurrent). For which values of $k$ can we label the intersection
+points of these lines by the numbers $1, 2, \cdots ,
+k-1$ so that for each of the lines $\ell_1,$ $\ell_2,$
+$\cdots,$ $\ell_k$ all the labels appear exactly once?]]]
+
+[[[(Romanian selection test, 1986) Let $f,g:\mathbb{N}\to\mathbb{N}$ be functions
+such that $f$ is surjective, $g$ is injective and
+$f(n)\geq g(n)$ for all $n\in \mathbb{N}$. Prove that $f(n)=g(n)$
+for all $n\in\mathbb{N}$.]]]
+
+[[[  Let $z_1, z_2, \cdots , z_n$ be complex numbers such that
+$|z_1| + |z_2| + \cdots + |z_n| = 1.$ Prove that the sum $s$ of
+a subset of $\{ z_1, z_2, \cdots , z_n \}$ satisfies
+$|s| \ge 1/4.$]]]
+
+[[[(Eastern European, 1986) Consider a finite number (at least two)
+lines in space, all sharing a common point. Suppose that for each two of
+these lines there exists a third one which is perpendicular to them.
+Prove that the number of lines must be odd and that all of them but one
+are coplanar.]]]
+
+[[[  (IMO ’03 Shortlist)Let $x_1, x_2, \dots , x_n$ and $y_1,
+y_2, \dots , y_n$ be real numbers. Let $\mathbf{M} =
+(a_{ij})_{1\le i, j\le n}$ be the matrix with entries
+\[a_{ij} = \left\{
+\begin{array}{ll}
+1, & \mbox{if $x_i+y_j \ge 0;$} \\
+0, & \mbox{if $x_i+y_j < 0.$}
+\end{array}
+\right.\] Suppose that $\mathbf{N}$ is an $n\times n$ matrix
+with entries 0 or 1 in such a way that the sum of the elements in each
+row and column of $\mathbf{N}$ is equal to the corresponding sum for
+the matrix $\mathbf{M}$. Prove that
+$\mathbf{M} = \mathbf{N}$.]]]
+
+[[[(IMO 88/6) Let $a,b$ be positive integers such that
+\[{a^2+b^2\over ab+1}=x\] is an integer. Show that $x$ must be the
+square of an integer.]]]
+
+[[[Given a square board of size $n \times n$, where $n$ is an
+integer greater than 1, we label some of the squares by distinct numbers
+from the set $\{1,2,\dots,n^2\}$. What is the largest number of
+board squares we can label in this way without creating a difference of
+$n$ or higher between any two labels on neighboring squares on the
+board?]]]

@@ -1,0 +1,181 @@
+<<<
+Title: Graph Theory
+Author(s): Jenny Iglesias
+Description: Handout from Red MOP 2013
+Topics: Graph theory
+>>>
+Trees
+=====
+
+There are many equivalent definitions of trees. We let $n$ denote
+the number of vertices. Some definitions of trees are given below:
+
+-   A connected graph without cycles
+
+-   A minimal connected graph (removing any edge disconnects the graph)
+
+-   A maximal graph without cycles (adding any edge causes a cycle)
+
+-   A graph with $n-1$ edges without a cycle.
+
+-   A connected graph with $n-1$ edges.
+
+*Cayley’s Theorem* There are $n^{n-2}$ spanning trees of a $K_n$
+with labeled vertices.
+
+1.  [[[Given a spanning tree of graph $G$, we are allowed to remove
+    an edge from the tree and insert and edge from the graph $G$ so
+    that a new spanning tree is created. Show that every spanning tree
+    can be reached by a succession of such operations.]]]
+
+2.  [[[Some pairs of the 100 towns in a country are connected by two-way
+    flights. It is given that one can reach any town from any other by a
+    sequence of flights. Prove that one can fly and visit every town,
+    with a total of at most 198 flights. (Can you get it down to
+    196?)]]]
+
+3.  [[[Alice and Bob play the following game on a given simple connected
+    graph $G$. Alice starts the game. At each of her turns, she
+    deletes an edge of $G$. Following Alice, Bob fixed an edge at
+    each of his turns. A fixed edge can not be deleted. Bob wins if he
+    builds a spanning tree of $G$, otherwise Alice wins. Show that
+    if $G$ has two edge-disjoint spanning trees, then Bob wins the
+    game (In fact, this is also the necessary condition).]]]
+
+Hamiltonian Cycles
+==================
+
+A Hamiltonian cycle is a cycle which visits all the vertices in a graph.
+A graph is called Hamiltonian if it has a Hamiltonian cycle.
+
+*Dirac’s Theorem* A graph with $n$ vertices, where each vertex has
+degree $\geq n/2$, has a Hamiltonian cycle.
+
+Dirac’s Theorem can be strengthened slightly to:
+
+*Ore’s Theorem* A graph with $n$ vertices is Hamiltonian if for
+every pair of non-adjacent vertices the sum of their degrees is at least
+$n$.
+
+1.  Show Dirac’s Theorem.
+
+2.  [[[Show that if for all $i \leq n/2$ there are at most $i-1$
+    vertices of degree $i$ or less then there is a Hamiltonian
+    cycle.]]]
+
+3.  [[[An $n$-cube is a cube in $n$ dimensions. A cube in one
+    dimension is a line segment; in two dimensions,it’s a square,in
+    three, a normal cube, and in general,to go to the next dimension, a
+    copy of the cube is made and all corresponding vertices are
+    connected. If we consider the cube to be composed of the vertices
+    and edges only, show that every $n$-cube has a Hamiltonian
+    cycle.]]]
+
+Coloring
+========
+
+A proper coloring of the graph is a coloring of the vertices such that
+the no two adjacent vertices have the same color. The minimum number of
+colors to properly color a graph $G$ is called the *chromatic
+number* of $G$, and is sometimes written as $\chi(G)$.
+
+Let $\Delta(G)$ be the maximum degree of $G$. Clearly,
+$\Delta(G)+1$ is an upper bound on $\chi(G)$. A vertex can have
+at most $\Delta(G)$ different colors adjacent to it, so with
+$\Delta(G)+1$ colors we can always pick a color for each vertex no
+matter what order we color the vertices in. In most cases, the bound on
+chromatic number is actually $\Delta(G)$.
+
+*Brook’s Theorem* If $G$ is a connected graph then
+$\chi(G) \leq \Delta(G)$ unless $G$ is a complete graph or an
+odd cycle.
+
+*The Four Color Theorem* Any planar graph can be colored with at most
+four colors. (Interestingly, this proof required computers to do a bunch
+of case checking and there is currently no proof that doesn’t require
+checking a few hundred cases.)
+
+1.  [[[Given a graph $G$, prove that there exists a polynomial
+    $\chi_G(x)$ such that, $\chi_G(k)$ is the number of ways to
+    properly color the vertices of $G$ in $k$ colors.]]]
+
+2.  [[[Prove that every planar graph can be properly colored with at
+    most 5 colors (without using the four color theorem).]]]
+
+Problems
+========
+
+1.  [[[
+    Prove that every graph with average degree $d$ contains a
+    subgraph in which every vertex has degree at least $d/2$.
+
+    ]]]
+
+2.  [[[
+    Prove that any two longest paths in a connected graph have a vertex
+    in common.
+
+    ]]]
+
+3.  [[[
+    (BAMO 2004) Given a positive integer $n$, find the smallest
+    $e$ such that every graph on $n$ vertices with $e$ edges
+    is connected.
+
+    ]]]
+
+4.  [[[
+    (BMC, 2006) There are 2008 managers in a boring corporate meeting.
+    Each manager has exactly one boss, who may or not be among the other
+    managers present at the meeting. A manager is *powerful* if he is
+    the boss of at least four other managers at the meeting. What is the
+    maximum possible number of powerful managers?
+
+    ]]]
+
+5.  [[[
+    Let $G$ be a graph where all degrees are even. Find a way to
+    trace out an Eulerian circuit on $G$ by following a simple rule.
+    (examples of a simple rule (but which don’t work): always go to the
+    vertex with highest remaining degree, or always go to a vertex which
+    has been visited the least number of times.)
+
+    ]]]
+
+6.  [[[
+    Given a graph $G$, we start modifying it as follows: In each
+    round, as long as $G$ is cyclic, pick an arbitrary cycle of
+    $G$, e.g. $C$, and remove all the edges of $C$ from
+    $G$. Then, add a new vertex to the graph, e.g. $v_C$, and
+    connect $v_C$ to all the vertices of $C$ (note that the
+    newly added vertex can be on the cycles that we pick in the next
+    rounds). Show that regardless of the choice of cycles, $G$
+    becomes a forest (collection of trees) after a finite number of
+    rounds
+
+    ]]]
+
+7.  [[[
+    A connected graph with at least two vertices has the property that,
+    if any $k$ edges are removed, it is still connected. Prove that
+    any two vertices $v, w$, there are at least $k+1$ edge
+    disjoint paths connecting $v$ to $w$.
+
+    ]]]
+
+8.  [[[
+    Given a connected graph $G$, find the necessary and sufficient
+    conditions for coloring its edges with two colors, black and white,
+    such that for any vertex, both colors occur among its edges. (*Hint:
+    This is impossible to do in an odd cycle*)
+
+    ]]]
+
+9.  [[[
+    A complete graph on $6n$ vertices has its edges colored red and
+    blue. Prove that we can find $n$ triangles, all of whose
+    vertices are distinct, and with all $3n$ of their edges the same
+    color.
+
+    ]]]
+

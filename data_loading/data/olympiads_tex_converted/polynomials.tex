@@ -1,0 +1,57 @@
+\documentclass[11pt]{article} 
+\usepackage{amsfonts, amsmath, amssymb, amsthm, fullpage, mdwlist, fancyhdr} 
+ 
+\setlength{\textheight}{9.25in} 
+\setlength{\textwidth}{6.5in} 
+\setlength{\topmargin}{0.0in} 
+\setlength{\headheight}{0.0in} 
+\setlength{\headsep}{0.0in} 
+\setlength{\leftmargin}{0.0in} 
+\setlength{\oddsidemargin}{0.0in} 
+\setlength{\parindent}{0pc} 
+ 
+ 
+\begin{document} 
+
+\title{Polynomials II}
+\author{Alex Zhu}
+\date{KSA Math Olympiad Training 2013}
+% date?
+
+\maketitle
+
+\section{Problems}
+  
+\begin{enumerate} 
+  \item (HMMT 2008) Let $S$ be the set of points $(a,b)$ with $0 \leq a,b \leq 1$ such that the equation \[ x^4 + ax^3 - bx^2 + ax + 1 = 0 \] has at least one real root. Determine the area of the graph of $S$. 
+  
+  \item Let $n$ be a positive odd integer, and let $P$ be a degree $n$ polynomial with $n$ distinct real roots. Prove that $P(P(x))$ has at least $n$ real roots. 
+  
+  \item Let $x_1, x_2, \ldots, x_n$ be distinct real numbers. Let $b_i = \prod_{j \neq i} (x_i - x_j)$, and let $d_i = \prod_{j \neq i} x_j$. Find $\sum_{i=1}^n \frac{d_i}{b_i}.$
+  
+  \item (IMO 1974) Let $P(x)$ be a polynomial of degree $d \geq 1$ with integer coefficients. Let $n(P)$ be the number of integers $k$ for which $P(k)^2 = 1$. Prove that $n(P) - d \leq 2$. 
+
+  \item $P$ is a polynomial of degree $n$ with integer coefficients, with $n$ distinct real roots lying between 0 and 1 inclusive. Show that the leading coefficient of $P$ is larger than $2^n$. 
+  
+  \item Suppose $P$ is a polynomial of degree $n$ with distinct complex roots $\alpha_1, \alpha_2, \ldots, \alpha_n$. The polynomials $Q_1, Q_2, \ldots, Q_n$ are defined so that $P(z) = (z - \alpha_k) Q_k(z)$ for each $z$. Prove that
+  \[ Q_1(\alpha_1)^{-1} + Q_2(\alpha_2)^{-1} + \cdots + Q_n(\alpha_n)^{-1} = 0. \]
+        
+  \item (IMO 1976) Let $P_1(x) = x^2 - 2$ and $P_j(x) = P_1(P_{j-1}(x))$ for $j \geq 2$. Prove that for any positive integer $n$, the roots of the equation $P_n(x) = x$ are all real and distinct. 
+
+  \item (IMO 1975) Determine all polynomials $P$ of two variables satisfying the following three properties: 
+  \begin{enumerate}
+    \item There is a positive integer $n$ such that for any real numbers $t,x,y$, we have $P(tx,ty) = t^n P(x,y)$. 
+    \item For any real numbers $a,b,c$ we have $P(a+b,c) + P(b+c,a) + P(c+a,b) = 0$. 
+    \item $P(1,0) = 1$. 
+  \end{enumerate}
+
+  \item Suppose $p$ is a polynomial with integer coefficients such that $p(n) > n$ for all positive integers $n$. Define the sequence $x_1, x_2, \ldots$ so that $x_1 = 1$ and $x_{n+1} = p(x_n)$ for $n \geq 1$. Suppose that for each positive integer $N$, there exists some $n$ such that $N$ divides $x_n$. Show that $p(x) = x + 1$. 
+    
+  \item Let $P$ be a polynomial of degree $n$ with real coefficients such that for all $x \in [-1, 1]$, we have $P(x) \in [-1, 1]$. Show that the leading coefficient of $P$ has absolute value at most $2^{n-1}$. 
+
+  %\item Let $f$ be a primitive polynomial with integer coefficients of degree $n$ for which there exist distinct integers $x_1, x_2, \ldots, x_n$ such that
+  %\[ 0 < |f(x_i)| < \frac{\lfloor \frac{n+1}{2} \rfloor}{2^{\lfloor \frac{n+1}{2} \rfloor}}. \]
+  %Prove that $f$ is irreducible in $\mathbb{Z}[x]$. 
+\end{enumerate} 
+ 
+\end{document}

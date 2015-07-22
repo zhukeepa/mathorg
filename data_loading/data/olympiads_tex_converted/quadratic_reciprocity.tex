@@ -1,0 +1,117 @@
+\documentclass[11pt]{article}
+\usepackage{amsfonts, amsmath, amssymb, amsthm, fullpage, mdwlist, fancyhdr}
+
+\setlength{\textheight}{9.25in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{0.0in}
+\setlength{\headheight}{0.0in}
+\setlength{\headsep}{0.0in}
+\setlength{\leftmargin}{0.0in}
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\parindent}{0pc}
+
+%- arrange by difficulty
+%- include some more trivial exercises 
+
+\begin{document}
+\title{Quadratic Reciprocity}
+\author{Alex Zhu}
+
+\maketitle
+
+\section{Useful Facts and Definitions}
+
+\textbf{Definition 1.} Let $p$ be a prime number. An integer $n$ is called a \emph{quadratic residue} mod $p$ if there is a number $x$ such that $x^2 \equiv n \pmod{p}$. 
+\\\\
+\textbf{Definition 2.} Let $p$ be a prime, and let $a$ be an integer. The \emph{Legendre symbol} is a function of $a$ and $p$, denoted by $\left( \frac{a}{p} \right)$, which equals 1 if $a$ is a nonzero quadratic residue mod $p$, -1 if $a$ is a quadratic nonresidue mod $p$, and 0 if $p$ divides $a$.
+\\\\
+\textbf{Fact 1.} If $a,b$ are integers and $p$ is a prime, then $\left( \frac{a}{p} \right) \left( \frac{b}{p} \right) = \left( \frac{ab}{p} \right)$. 
+\\\\
+\textbf{Fact 2.} (Euler's criterion) If $a$ is an integer and $p$ is an odd prime, then $a^{\frac{p-1}{2}} \equiv \left( \frac{a}{p} \right) \pmod{p}$. 
+\\\\
+\textbf{Fact 3.} (Eistenstein's lemma) If $p$ and $q$ are distinct odd primes, then \[ \left( \frac{q}{p} \right) = (-1)^{\sum_u \lfloor \frac{qu}{p} \rfloor}, \] where $u$ is summed over the even integers $2, 4, \ldots, p-1$. 
+\\\\
+\textbf{Fact 4.} (Law of quadratic reciprocity) If $p$ and $q$ are distinct odd primes, then \[ \left( \frac{q}{p} \right) \left( \frac{p}{q} \right) = (-1)^{\frac{(p-1)(q-1)}{4}}. \]
+\\\\
+\textbf{Fact 5.} Let $p$ be an odd prime. Then \[ \left( \frac{-1}{p} \right) = (-1)^{\frac{p-1}{2}} \mbox{ and } \left( \frac{2}{p} \right) = (-1)^{\frac{p^2-1}{8}}. \] 
+
+\section{Basic Applications}
+
+\begin{enumerate}
+  \item Find the order of 3 mod 107. 
+  \item Find the order of 10 mod 65537. 
+  \item Determine whether 2013 is a quadratic residue mod 3001. 
+\end{enumerate}
+
+\section{Problems}
+
+\begin{enumerate}  
+  \item Partition the $p-1$ nonzero residue classes mod $p$ into sets of the form $\{x, x^{-1}, -x, -x^{-1} \}$. Conclude that $-1$ is a quadratic residue mod 4 if and only if $p \equiv 1 \pmod{4}$.  
+  
+  \item Let $p$ be a prime. Prove that if $p = 2q + 1$ where $q$ is a prime congruent to 1 mod 4, then 2 is a primitive root mod $p$. 
+
+  \item Let $F_n$ be the $n$th Fibonacci number, where $F_0 = 0$, $F_1 = 1$, and $F_{k+1} = F_k + F_{k-1}$ for all $k \geq 1$. Let $p$ be a prime number. Show that: 
+  \begin{enumerate}
+    \item If $p \equiv 1, 4 \pmod{5}$, then $F_p \equiv 1 \pmod{p}$. 
+    \item If $p \equiv 2, 3 \pmod{5}$, then $F_p \equiv -1 \pmod{p}$. 
+  \end{enumerate}
+
+  \item Let $m$ and $n$ be positive integers such that $\sqrt{23} > \frac{m}{n}$. Prove that $\sqrt{23} > \frac{m}{n} + \frac{3}{mn}$. 
+
+  \item (Bulgaria 1998) Let $m$ and $n$ be natural numbers such that \[ A = \frac{(m+3)^n + 1}{3m} \] is an integer. Prove that $A$ is odd. 
+  
+  \item (ELMO 2011) Let $p>13$ be a prime of the form $2q+1$, where $q$ is prime. Find the number of ordered pairs of integers $(m,n)$ such that $0\le m<n<p-1$ and 
+\[3^m+(-12)^m\equiv 3^n+(-12)^n\pmod{p}.\] 
+  
+  \item Let $a$ be a positive integer, and suppose that $a$ is a quadratic residue modulo all sufficiently large primes. Prove that $a$ is a perfect square. 
+  
+  \item (APMO 1997) Find an integer $n$, where $100 \leq n \leq 1997$, such that \[ \frac{2^n + 2}{n} \] is also an integer. 
+
+  \item Let $a, b, c$ be integers and let $p$ be an odd prime with \[p \not\vert a \;\; \text{and}\;\; p \not\vert b^{2}-4ac.\] Show that \[\sum_{k=1}^{p}\left( \frac{ak^{2}+bk+c}{p}\right) = -\left(\frac{a}{p}\right).\]
+  
+  \item (Taiwan 2000) Suppose that for some $m,n \in \mathbb{N}$, we have $\varphi(5^m - 1) = 5^n - 1$, where $\varphi$ denotes the Euler function. Show that $\gcd(m,n) > 1$. 
+  
+  \item Find all positive integers $n$ such that $2^n - 1$ divides $3^n - 1$. 
+  
+  \item Does there exist a quadratic polynomial with integer coefficients that is irreducible over $\mathbb{Z}$ but reducible mod $p$ for any prime $p$? What about a polynomial of higher degree? 
+\end{enumerate}
+
+\end{document}
+
+    
+%  \item Find the number of pairs of positive integers $(a,b)$ with $0 \leq a,b < p$ and $a^2 + b^2 \equiv 1 \pmod{p}$. 
+  
+%  \item Let $p$ be an odd prime number. Show that the smallest positive quadratic nonresidue of $p$ is smaller than $\sqrt{p}+1$.
+  
+%  \item Let $p$ be an odd prime. Prove that there is an integer $x$ such that $p | x^4 + 1$ if and only if $p \equiv 1 \pmod{8}$. 
+  
+%  \item We will outline here a proof of quadratic reciprocity, due to V.A. Lebesgue. Suppose $p$ and $q$ are odd primes, and let $N$ count the number of solutions to $x_1^2 + x_2^2 + \cdots + x_p^2 \equiv 1 \pmod{q}$. 
+%  \begin{enumerate}
+%    \item Show that the number of solutions to $x^2 \equiv a \pmod{q}$ is $1 + \left( \frac{a}{q} \right)$. 
+%    \item By performing cyclic shifts on indices (i.e., grouping together solutions of the form $(x_1, x_2, \ldots)$ with $(x_i, x_{i+1}, \ldots)$, etc.), prove that $N \equiv 1 + \left( \frac{p}{q} \right) \pmod{q}$. 
+%    \item Show that 
+%    \[ N = \sum_{t_1 + t_2 + \cdots + t_p \equiv 1 \pmod{q}} \left( 1 + \left( \frac{t_1}{q} \right) \right) \left( 1 + \left( \frac{t_1}{q} \right) \right) \cdots \left( 1 + \left( \frac{t_p}{q} \right) \right) \pmod{q} \]
+%    \item Show that, when expanded, all the terms in the above sum vanish except \[ 1 + \sum_{t_1 + t_2 + \cdots + t_p \equiv 1 \pmod{q}} \left( \frac{t_1 t_2 \cdots t_p}{q} \right), \] and show that the latter sum evaluates to mod $q$. Deduce the law of quadratic reciprocity. 
+%  \end{enumerate}
+  
+  
+\section{Quadratic Residues}
+
+Let $p$ be a prime number. An integer $n$ is called a \emph{quadratic residue} mod $p$ if there is a number $x$ such that $x^2 \equiv n \pmod{p}$. 
+\begin{enumerate}
+  \item How many quadratic residues are there mod $p$? 
+  \item Prove that the product of any two quadratic residues is a quadratic residue. 
+  \item Prove that the product of a quadratic residue and a quadratic nonresidue is a quadratic nonresidue. 
+  \item With a counting argument, show that the product of a quadratic nonresidue and a quadratic nonresidue is a quadratic residue. 
+  \item If $p > 2$, prove that -1 is a quadratic residue mod $p$ if and only if $p \equiv 1 \pmod{4}$. 
+\end{enumerate}
+
+\section{Legendre Symbol and Euler Criterion}
+
+Let $p$ be a prime, and let $a$ be an integer. The \emph{Legendre symbol} is a function of $a$ and $p$, denoted by $\left( \frac{a}{p} \right)$, which equals 1 if $a$ is a nonzero quadratic residue mod $p$, -1 if $a$ is a quadratic nonresidue mod $p$, and 0 if $p$ divides $a$. 
+
+\begin{enumerate}
+  \item Prove that if $a$ and $b$ are integers and $p$ is a prime, then $\left( \frac{a}{p} \right) \left( \frac{b}{p} \right) = \left( \frac{ab}{p} \right)$. 
+  \item (Euler's criterion) Prove that $a^{\frac{p-1}{2}} \equiv \left( \frac{a}{p} \right) \pmod{p}$. 
+  \item Using Euler's criterion, give one-line proofs of every problem in the previous section. 
+\end{enumerate} 

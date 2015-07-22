@@ -1,0 +1,100 @@
+<<<
+Title: Red Inequalities
+Author(s): Josh Nichols-Barrer
+Description: Handout from Red MOP 2008
+Topics: Inequalities
+>>>
+Problems
+========
+
+1.  [[[
+    (HMMT 2008) Let $S$ be the set of points $(a,b)$ with
+    $0 \leq a,b \leq 1$ such that the equation
+    \[x^4 + ax^3 - bx^2 + ax + 1 = 0\] has at least one real root.
+    Determine the area of the graph of $S$.
+
+    ]]]
+
+2.  [[[
+    Let $n$ be a positive odd integer, and let $P$ be a degree
+    $n$ polynomial with $n$ distinct real roots. Prove that
+    $P(P(x))$ has at least $n$ real roots.
+
+    ]]]
+
+3.  [[[
+    Let $x_1, x_2, \ldots, x_n$ be distinct real numbers. Let
+    $b_i = \prod_{j \neq i} (x_i - x_j)$, and let
+    $d_i = \prod_{j \neq i} x_j$. Find
+    $\sum_{i=1}^n \frac{d_i}{b_i}.$
+
+    ]]]
+
+4.  [[[
+    (IMO 1974) Let $P(x)$ be a polynomial of degree $d \geq 1$
+    with integer coefficients. Let $n(P)$ be the number of integers
+    $k$ for which $P(k)^2 = 1$. Prove that
+    $n(P) - d \leq 2$.
+
+    ]]]
+
+5.  [[[
+    $P$ is a polynomial of degree $n$ with integer coefficients,
+    with $n$ distinct real roots lying between 0 and 1 inclusive.
+    Show that the leading coefficient of $P$ is larger than
+    $2^n$.
+
+    ]]]
+
+6.  [[[
+    Suppose $P$ is a polynomial of degree $n$ with distinct
+    complex roots $\alpha_1, \alpha_2, \ldots, \alpha_n$. The
+    polynomials $Q_1, Q_2, \ldots, Q_n$ are defined so that
+    $P(z) = (z - \alpha_k) Q_k(z)$ for each $z$. Prove that
+    \[Q_1(\alpha_1)^{-1} + Q_2(\alpha_2)^{-1} + \cdots + Q_n(\alpha_n)^{-1} = 0.\]
+
+    ]]]
+
+7.  [[[
+    (IMO 1976) Let $P_1(x) = x^2 - 2$ and
+    $P_j(x) = P_1(P_{j-1}(x))$ for $j \geq 2$. Prove that for
+    any positive integer $n$, the roots of the equation
+    $P_n(x) = x$ are all real and distinct.
+
+    ]]]
+
+8.  [[[
+    (IMO 1975) Determine all polynomials $P$ of two variables
+    satisfying the following three properties:
+
+    1.  There is a positive integer $n$ such that for any real
+        numbers $t,x,y$, we have $P(tx,ty) = t^n P(x,y)$.
+
+    2.  For any real numbers $a,b,c$ we have
+        $P(a+b,c) + P(b+c,a) + P(c+a,b) = 0$.
+
+    3.  $P(1,0) = 1$.
+
+    ]]]
+
+9.  [[[
+    Suppose $p$ is a polynomial with integer coefficients such that
+    $p(n) > n$ for all positive integers $n$. Define the
+    sequence $x_1, x_2, \ldots$ so that $x_1 = 1$ and
+    $x_{n+1} = p(x_n)$ for $n \geq 1$. Suppose that for each
+    positive integer $N$, there exists some $n$ such that
+    $N$ divides $x_n$. Show that $p(x) = x + 1$.
+
+    ]]]
+
+10. [[[
+    Let $P$ be a polynomial of degree $n$ with real coefficients
+    such that for all $x \in [-1, 1]$, we have
+    $P(x) \in [-1, 1]$. Show that the leading coefficient of $P$
+    has absolute value at most $2^{n-1}$.
+
+    ]]]
+
+11. [[[Let $f$ be a primitive polynomial with integer coefficients of degree $n$ for which there exist distinct integers $x_1, x_2, \ldots, x_n$ such that
+  %\[ 0 < |f(x_i)| < \frac{\lfloor \frac{n+1}{2} \rfloor}{2^{\lfloor \frac{n+1}{2} \rfloor}}. \]
+  %Prove that $f$ is irreducible in $\mathbb{Z}[x]$. ]]]

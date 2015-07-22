@@ -1,0 +1,71 @@
+<<<
+Title: Red Number Theory 4: Diophantine Equations, Multiplicative Functions
+Author(s): Josh Nichols-Barrer
+Description: Handout from Red MOP 2009
+Topics: Diophantine equations, Multiplicative functions
+>>>
+1.  [[[(USAMO 1979/1) Determine all non-negative integral solutions
+$(n_1,n_2,\ldots,n_{14})$, if any, apart from permutations, to the
+Diophantine equation
+
+\[n_1^4 + n_2^4 + \ldots + n_{14}^4 = 1599.\]
+]]]
+
+1.  [[[(USAMO 1976/3) Find all solutions $(a,b,c)$ over the integers to
+the equation
+
+\[a^2 + b^2 + c^2 = a^2 b^2.\]
+]]]
+
+1.  [[[Find all solutions in integers to the equation
+$x^2 + y^2 + z^2 = 2xyz$.]]]
+
+1.  [[[(MOP 1996/8/2) Find all integers $a,b,c$ such that
+
+\[(1 + 1/a)(1 + 1/b)(1 + 1/c) = 2.\]
+]]]
+
+1.  [[[(Italy, 1996) Prove that the equation $a^2 + b^2 = c^2 + 3$ has
+infinitely many integral solutions.]]]
+
+1.  [[[(Ireland, 1996) Let $p$ be a prime number and let $a$ and
+$n$ be positive integers. Prove that if $2^p + 3^p = a^n$, then $n = 1$. ]]]
+
+1.  [[[(India, 1998) Find all
+triples $(x,y,n)$ of positive integers with $x$ and $n+1$
+relatively prime such that $x^n + 1 = y^{n+1}$.]]]
+
+1.  [[[(Bulgaria, 1998) Prove that the equation
+$x^2 y^2 = z^2 (z^2-x^2-y^2)$ does not have any solutions in the
+natural numbers.]]]
+
+1.  [[[(IMO 1998/4) Determine all pairs of integers $a,b$ such that
+$ab^2+b+7$ divides $a^2 b+a+b$.]]]
+
+1.  [[[(IMO 1988/6) (Hard) Let $a,b$ be positive integers such that
+\[\frac{a^2 + b^2}{ab + 1} = x\]
+is an integer. Show that $x$ must be the square of an integer.]]]
+
+1.  [[[Let $n$ be a positive integer. Find, with proof, an expression for
+the *product* of the positive divisors of $n$, in terms of $n$
+and $\tau(n)$.]]]
+
+1.  [[[For $n \in \mathbb{N}$, prove that
+${\displaystyle \sum_{d|n} \phi(d) = n}$.]]]
+
+1.  [[[(1997 Harvard PhD Exam) Fermat proved that the number
+$2^{37} - 1 = 137438953471$ was composite by finding a small prime
+factor $p$. Suppose it is given that $200 < p < 300$. What is $p$?]]]
+
+1.  [[[For $n \ge 2$, show that any prime divisor of the Fermat number
+$2^{2^n} + 1$ is of the form $2^{n+2}k + 1$.]]]
+
+1.  [[[For $n > 1$ and $d$ a positive divisor of $n$, find
+expressions for \[\sum_{d|n} \mu(d)\] and
+\[\sum_{d|n} \frac{1}{d}.\]
+]]]
+
+1.  [[[(St. Petersburg, 1998) Let $d(n)$ denote the number of divisors
+of the natural number $n$. Prove that there is not a natural number
+$k$ such that the sequence $\{ d(n^2+1) \}_{n=k}^{\infty}$ is
+monotonic.]]]

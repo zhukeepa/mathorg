@@ -1,0 +1,161 @@
+<<<
+Title: Generating Functions
+Author(s): Alex Zhu
+Description: 
+Topics: Generating functions
+>>>
+For a sequence $a_0, a_1, a_2, \ldots$, the *generating function* of
+that sequence is the series $a_0 + a_1 x + a_2 x^2 + \cdots$.
+Generating functions are generally useful for two reasons:
+
+1.  we can manipulate generating functions as *functions* in ways we
+    can’t directly manipulate sequences of numbers. In particular, it
+    often allows for a clear algebraic approach for dealing with
+    sequences of numbers.
+
+2.  if $a_0, a_1, \ldots$ is a combinatorial sequence (i.e., if
+    it is defined in terms of counting something), there might be a
+    function constructed in such a way that its coefficients count the
+    same objects for $a_0, a_1, \ldots$ (This will be clarified in
+    an example below.)
+
+Here are some basic properties of generating functions. Let $A(x)$
+be the generating functions of $a_0, a_1, a_2, \ldots$, and let
+$B(x)$ be the generating function of $b_0, b_1, b_2, \ldots$
+
+1.  For any constant $c$, the generating function of
+    $c a_0, c a_1, c a_2, \ldots$ is $c A(x)$.
+
+2.  $x^k A(x)$ is the generating function of
+    $\underbrace{0, 0, \ldots, 0}_k, a_0, a_1, \ldots$
+
+3.  The generating function of $a_0+b_0, a_1+b_1. \ldots$ is
+    $A(x) + B(x)$.
+
+4.  The generating function of
+    $a_0b_0, a_0 b_1 + a_1 b_0, a_0 b_2 + a_1 b_1 + a_2 b_0, \ldots$
+    is $A(x)B(x)$.
+
+Below are some examples of applications of generating functions:
+  
+**Example 1.** [[[If $a_0, a_1, a_2, \ldots$ is a sequence with
+generating function $A(x)$, then the generating function of
+$a_0, a_0 + a_1, a_0 + a_1 + a_2, \ldots$ is
+$\frac{A(x)}{1-x}$.]]]  
+  
+**Solution.** (((The generating function of $1, 1, 1, \ldots$ is
+$\frac{1}{1-x}$. Multiplying this with $A(x)$ gives
+$a_0 + (a_0 + a_1) x + (a_0 + a_1 + a_2)x^2 + \cdots$.)))  
+  
+**Example 2.** [[[Let $k$ and $n$ be positive integers. Show
+that the number of nonnegative integer solutions to the equation
+$a_1 + a_2 + \cdots + a_k = n$ is $\binom{n+i-1}{i-1}$.]]]  
+  
+**Solution.** (((The number of such solutions is the coefficient of
+$x^n$ in $(1 + x + x^2 + \cdots)^k$. (To see this, write out
+$1 + x + x^2 + \cdots$ out $k$ times, and for each of the
+$k$ factors, we get one solution $(a_1, a_2, \ldots, a_k)$ by
+choosing the $x^{a_i}$ from the $i$th factor of
+$1 + x + x^2 + \cdots$ to contribute to the $x^n$th term.) Since
+$1 + x + x^2 + \cdots = \frac{1}{1-x}$, we seek the coefficient of
+$x^n$ in $\frac{1}{(1 - x)^k}$. We find this coefficient with
+the binomial theorem: \[\begin{aligned}
+\frac{1}{(1 - x)^k}
+&= (1-x)^{-k} = \sum_{i=0}^{\infty} \binom{-k}{i} x^i (-1)^i \\
+&= \sum_{i=0}^{\infty} \frac{(-k)(-k-1) \cdots (-k-(i-1))}{i!} (-1)^i x^i \\
+&= \sum_{i=0}^{\infty} \frac{(k+(i-1))(k+(i-2)) \cdots (k)}{i!} x^i = \sum_{i=0}^{\infty} \binom{k+i-1}{i} x^k.\end{aligned}\]
+The coefficient of $x^n$ is thus $\binom{n+i-1}{i}$.)))  
+  
+**Example 3.** [[[Find a closed-form formula for the Fibonacci
+numbers.]]]  
+  
+**Solution.** (((Let $F(x) = F_0 + F_1 x + F_2 x^2 + \cdots$. Note
+that \[\begin{aligned}
+F(x) 
+&= F_0 + F_1 x + F_2 x^2 + F_3 x^3 + \cdots \\
+&= x(1 + F_0) + (F_0 + F_1)x^2 + (F_1 + F_2)x^3 + (F_3 + F_4)x^4 + \cdots \\
+&= x + (F_0 + F_1 x + F_2 x^2 + \cdots)(x + x^2) = x + F(x)(x + x^2).\end{aligned}\]
+Thus, $F(x)(1 - x - x^2) = x$, so
+$F(x) = \frac{x}{1 - x - x^2}$. Now, decomposing $F$ using
+partial fractions, we find
+\[F(x) = \frac{1}{\sqrt{5}} \left( \frac{1}{1 - \alpha_1 x} - \frac{1}{1 - \alpha_2 x} \right) = \sum_{k=0}^{\infty} \frac{1}{\sqrt{5}} (\alpha_1^k - \alpha_2^k) x^k,\]
+where $\alpha_1 = \frac{1 + \sqrt{5}}{2}$ and
+$\alpha_2 = \frac{1 - \sqrt{5}}{2}$. Thus, we have
+\[F_n = \frac{1}{\sqrt{5}} \left( \left( \frac{1 + \sqrt{5}}{2} \right)^n - \left( \frac{1 - \sqrt{5}}{2} \right)^n \right),\]
+as desired.)))
+
+Problems
+========
+
+1.  [[[
+    For a positive integer $n$, let $p(n)$ be the number of ways
+    to express $n$ as a sum of natural numbers, where order is
+    irrelevant. For example, $p(4) = 5$, since
+    $4 = 1 + 1 + 1 + 1, 2 + 2, 2 + 1 + 1, 3 + 1$, and 4. Show that
+    \[1 + p(1)x + p(2)x^2 + \cdots = \prod_{k=1}^{\infty} \frac{1}{1-x^k}.\]
+    ]]]
+
+2.  [[[
+    How many 5-digit numbers are there whose digits sum to 14?
+    ]]]
+
+3.  [[[
+    Let $m,n,r$ be positive integers. Show that
+    \[\binom{m+n}{r} = \sum_{k=0}^r \binom{m}{k} \binom{n}{r-k}.\]
+    ]]]
+
+4.  [[[
+    Given that $a_0, a_1, a_2, \ldots$ is a sequence of real
+    numbers, and that $\sum_{i=0}^n a_i a_{n-i} = 1$ for all
+    nonnegative integers $i$, evaluate
+    $\sum_{i=0}^{\infty} \frac{a_j}{2^j}$.
+    ]]]
+
+5.  [[[
+    Let $n$ be a positive integer.
+
+    1.  Find a closed-form formula for
+        \[\binom{n}{0} + \binom{n}{2} + \binom{n}{4} + \cdots\]
+
+    2.  Find a closed-form formula for
+        \[\binom{n}{0} + \binom{n}{3} + \binom{n}{6} + \cdots\]
+    ]]]
+
+6.  [[[
+    Suppose that $n$ arithmetic progressions
+    $\{a_1 + d_1 n\}_{k \geq 0}, \{a_2 + d_2 n\}_{k \geq 0}, \ldots, \{a_n + d_n k\}_{k \geq 0}$,
+    partition the positive integers. Show that
+    \[\frac{1}{d_1} + \frac{1}{d_2} + \cdots + \frac{1}{d_n} = 1.\]
+    ]]]
+
+7.  [[[
+    Find the number of subsets of $\{ 1, 2, ..., 2000 \}$ whose
+    elements sum to a number divisible by 5.
+    ]]]
+
+8.  [[[
+    Let $n$ be a positive integer. Prove that
+    \[\sum_{i=0}^n \binom{2i}{i} \binom{2(n-i)}{n-i} = 4^n.\]
+    ]]]
+
+9.  [[[
+    For any positive integer $n$, let $C_n$ count the number of
+    ways to write $n$ pairs of parentheses that are properly
+    matched. (For example, $C_3 = 5$, since ()(()), (())(), ()()(),
+    ((())), and (()()) are the only ways to write 3 pairs of parentheses
+    that are properly matched.)
+
+    1.  Find a recursive formula that $C_1, C_2, \ldots$ satisfies.
+
+    2.  Find a generating function for $C_1, C_2, \ldots$.
+
+    3.  Using the generating function, prove that
+        $C_n = \frac{\binom{2n}{n}}{n+1}$.
+    ]]]
+
+10. [[[
+    (IMO) Let $p$ be an odd prime number. How many $ p$-element
+    subsets $ A$ of $ \{1,2,\cdots \ 2p\}$ are there, the sum of
+    whose elements is divisible by $p$?
+    ]]]
+

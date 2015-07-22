@@ -1,4 +1,4 @@
-function preview(body_id, title_id)
+function preview(body_id, title_id, custom_replacements)
 {
   var body_text  = $("#" + body_id).val(); 
   if (typeof title_id !== 'undefined')
@@ -7,8 +7,11 @@ function preview(body_id, title_id)
     var title_text = ''; 
 
   var preview_text = title_text + body_text; 
-  
-  $.post('/services/preview', {text: preview_text}, function(data) { $('#preview').html(data.preview_html); console.log(data.preview_html); });
+
+  $.post('/services/preview', {text: preview_text, custom_replacements: custom_replacements}, function(data) { 
+    $('#preview').html(data.preview_html); 
+    console.log(data.preview_html); 
+  });
   
   //If we don't give it a delay, MathJax doesn't seem to notice the preview content 
   //quickly enough. 

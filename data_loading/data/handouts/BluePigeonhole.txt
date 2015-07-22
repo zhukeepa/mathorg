@@ -1,0 +1,180 @@
+<<<
+Title: Pigeonhole
+Author(s): Jenny Iglesias
+Description: Handout from Blue MOP 2013
+Topics: Pigeonhole principle
+>>>
+The pigeonhole principle says
+
+-   If $n+1$ pigeons are put into $n$ holes then some hole has
+    at least 2 pigeons.
+
+-   If you put $kn+1$ pigeons into $n$ holes, then some hole has
+    at least $k+1$ pigeons.
+
+Pigeonhole can even be applied when there are an infinite number of
+pigeons! If you put an infinite number of pigeons in a finite number of
+holes, then some hole has an infinite number of pigeons.
+
+Pigeonhole may seem very simple, but it can be extremely useful and can
+be used in many interesting ways. Sometimes it is very clear what the
+“pigeons” and “holes” should be. Other times one will have to be
+creative and come up with the proper “pigeons” and “holes”.
+
+Problems
+========
+
+1.  [[[
+    Consider that we have a $5\times 5$ board. In each square, there
+    is a flea. At the same time all the fleas jump and move to a square
+    which is adjacent to their current square. Is it possible that after
+    they jump that all the squares have one flea on them?
+
+    ]]]
+
+2.  [[[
+    If every pair of people are acquaintances or are strangers. Show
+    that in any group of 6 people that there are 3 who all know each
+    other or 3 who are all strangers.
+
+    ]]]
+
+3.  [[[
+    (Handshake Problem) At a party, everyone shakes hands with some
+    other people at the party (possibly 0 people). Show that there are 2
+    people at the party who had the same number of handshakes.
+
+    ]]]
+
+4.  [[[
+    In a $2\times 2$ square, show that for any 5 points, there is a
+    pair which are at most $\sqrt{2}$ apart.
+
+    ]]]
+
+5.  [[[
+    If $ABCDE$ is a convex pentagon with all its vertices on lattice
+    points, prove that there exists a lattice point strictly in the
+    interior of $ABCDE$.
+
+    ]]]
+
+6.  [[[
+    If $n+1$ numbers are selected from the set
+    $\{1,2,\dots 2n\}$ show that there are two of them such that one
+    divides the other.
+
+    ]]]
+
+7.  [[[
+    Let $n$ be odd and $\pi$ a permutation of
+    $\{1,2,\dots, n\}$. Prove that
+    \[(1+\pi(1))(2+\pi(2))\dots(n+\pi(n))\] is even.
+
+    ]]]
+
+8.  [[[
+    Given two disks, one smaller than the other. Each disk is divided
+    into 200 congruent sectors. In the larger disk 100 sectors are
+    chosen arbitrarily and painted red; the other 100 sectors are
+    painted blue. In the smaller disk each sector is painted either red
+    or blue with no stipulation on the number of red and blue sectors.
+    The smaller disk is placed on the larger disk so that the centers
+    and sectors coincide. Show that it is possible to align the two
+    disks so that the number of sectors of the smaller disk whose color
+    matches the corresponding sector of the larger disk is at least 100.
+
+    ]]]
+
+9.  [[[
+    Show that for any sequence of $mn+1$ distinct real numbers. Show
+    there is either an increasing sequence of length $m$ or a
+    decreasing sequence of length $n$.
+
+    ]]]
+
+10. [[[
+    A $10\times 10$ table is filled with positive integers such that
+    any 2 adjacent squares differ by at most 5. Show that there exists
+    two identical integers.
+
+    ]]]
+
+11. [[[
+    If every pair of people are friends, acquaintances, or strangers.
+    Show that in any group of 17 people that there are 3 who are all
+    friends, or 3 who are all acquaintances or 3 who are all strangers.
+
+    ]]]
+
+12. [[[
+    There are 2009 clubs, each with 45 members, any two of which have
+    exactly one person in common. Show that there is one person who is a
+    member of all the clubs.
+
+    ]]]
+
+13. [[[
+    (USAMO 2000) Find the smallest positive integer $n$ such that if
+    $n$ squares of a $1000\times 1000$ chessboard are colored,
+    then there will exist three colored squares whose centers form a
+    right triangle with sides parallel to the edges of the board.
+
+    ]]]
+
+14. [[[
+    (St. Petersburg 2001) In a $10\times 10$ table are written
+    natural numbers not exceeding 10. Any two numbers that appear in
+    adjacent or diagonally adjacent spaces are relatively prime. Prove
+    that some number appears in the table at least 17 times.
+
+    ]]]
+
+15. [[[
+    A chess master who has 11 weeks to prepare for a tournament decides
+    to play at least one game every day but, in order to not tire
+    himself out, he decides to play at most 12 games in a given calendar
+    week. Show that there exists a succession of consecutive days during
+    which the chess master will have played exactly 21 games.
+
+    ]]]
+
+16. [[[
+    For $i=1,2,\dots 7$, $a_i$ and $b_i$ are nonnegative
+    numbers such that $a_i+b_i \leq 2$. Prove that there exist
+    distinct indices $i,j$ such that
+    $|a_i-a_j|+|b_i-b_j|\leq 1$.
+
+    ]]]
+
+17. [[[
+    (Russia 1999) Each cell of a $50\times 50$ square is colored in
+    one of four colors. Show that there exists a square which has cells
+    of the same color as it directly above, directly below, directly to
+    the left, and directly to the right of it (though not necessarily
+    adjacent to it).
+
+    ]]]
+
+18. [[[
+    Show that in every convex finite three dimensional polyhedron there
+    exist two faces with the same number of sides.
+
+    ]]]
+
+19. [[[
+    Let $a,b,c$ be positive integers. Define the sequence
+    $x_0=c$ and $x_{n+1}=ax_n+b$ for $n\geq 0$. Prove that
+    the set of terms of the sequence which are composite is infinite.
+
+    ]]]
+
+20. [[[
+    (Putnam 1993)Let $x_1, x_2,\dots x_{19}$ be positive integers
+    each of which is less than or equal to 93. Let
+    $y_1, y_2\dots y_{93}$ be positive integers each of which is
+    less than or equal to 19. Prove that there exists a (nonempty) sum
+    of some $x_i$’s equal to a sum of some $y_j$’s
+
+    ]]]
+

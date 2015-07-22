@@ -1,0 +1,316 @@
+<<<
+Title: Ways to Solve Recurrences
+Author(s): Jenny Iglesias
+Description: Handout from Blue MOP 2013
+Topics: Recurrences
+>>>
+What is a Recurrence?
+---------------------
+
+A recurrence is an equation which defines terms in a sequence based
+on earlier terms. Often times the first few terms (bases cases) will be
+defined explicitly. Many combinatorial problems are easier to solve by
+first finding the recurrence and then using it to find the answer. 
+
+Make a Guess! (and Then Check!)
+-------------------------------
+
+Many times your intuition will give you a reasonable guess at the
+solution to the recurrence.
+
+Often times in it’s original form the recurrence may not give you any
+ideas. So, you may want to try and give yourself some idea what is going
+on. A good start is to write out the first few terms and see if they are
+a sequence you are familiar with (i.e. squares Fibonacci). Another
+technique is to try are to rewrite the recurrence by simplifying it. One
+way to do this is to take differences of the expression for $a_n$
+and the expression for $a_{n+1}$. Another approach is to substitute
+one equation into another.
+
+Linear Recurrences
+------------------
+
+A linear recurrence has each term look like $ca_n$ where $c$ is
+a constant. So they can be written as:
+\[c_0a_n+c_1a_{n+1}+\dots+c_ka_{n+k}=0\] In this case we now guess
+that $a_n=x^n$ where $x>0$. Plugging this in we get the
+characteristic polynomial: \[c_0x^n+c_1x^{n+1}+\dots+c_kx^{n+k}=0\]
+\[c_0+c_1x+\dots+c_kx^{k}=0\]
+
+Now we just have a polynomial and we can solve for its roots. Let
+the roots be $r_1, \dots r_k$ (and for now we assume that the roots
+are distinct). Now we know that any solution to the recurrence looks
+like: \[a_n=\sum_{i=1}^k b_i r_i^n\] using the base cases we can solve
+for $b_i$ explicitly. 
+
+If $r_i$ is a root with multiplicity $m$, then we also have to
+consider that $n^jr_i^n$ are terms in the recurrence where
+$j <m$.
+
+Before we assumed that the recurrence was homogeneous (the constant
+term is zero). In the case, where the recurrence is not homogeneous it
+will have the form: \[c_0a_n+c_1a_{n+1}+\dots+c_ka_{n+k}=C\] The
+solution to this will be the same as before just shifted by a
+constant.
+
+Generating Functions
+--------------------
+
+An ordinary generating function of the sequence $a_0,a_1, \dots$ is
+the power series defined by: \[\sum_{i=0}^\infty a_ix^i\]
+
+The main generating function to remember is the one for the sequence of
+all 1’s: \[\frac{1}{1-x}=1+x+x^2+x^3+\dots\]
+
+We can substitute the generating function into our recurrence to solve
+for the generating function. Once we have solved for the generating
+function we want to use partial fraction decomposition to break the
+generating function into parts we understand. Partial fraction
+decomposition involves breaking the function into pieces of the form
+$\frac{c}{(1-kx)^n}$.
+
+Examples
+========
+
+Arithmetic and Geometric Sequences
+----------------------------------
+
+You are probably most familiar seeing a arithmetic sequence written in
+the form $a_n=a+dn$. It can also be written as a recurrence where
+$a_0=a$ and $a_n=a_{n-1}+d$. Likewise a geometric sequence can
+be written either as $g_n=ar^n$ or as $g_0=a$ and
+$g_n=rg_{n-1}$.
+
+Towers of Hanoi
+---------------
+
+In the game Towers of Hanoi, there are three rods and $n$ discs of
+distinct sizes. The discs start on the first rod sorted by size with the
+largest on the bottom. The goal of the game is to move all the discs
+from the first rod to the third rod. The only moves allowed are to move
+one disc from one rod to any other rod as long as it is not placed on a
+smaller disc. What is the minimum number of moves required?
+
+We will let $h_n$ be the minimum number of moves required when there
+are $n$ discs. Clearly $h_1=1$ as we need at least move to get
+the disc from the first rod to third disc, and we can do it in one move.
+Now for $n \geq 2$ we will consider what the largest disc must do.
+It must have all the $n-1$ discs on top of it moved from on top of
+it to the second rod so that it may be moved to the third rod. Then all
+the $n-1$ discs must be moved back on top of it. So we get the
+following recurrence: \[h_n=2h_{n-1}+1\] If we solve for the first few
+terms in the sequence we get $1,3,7,15,\dots$. Now one might guess
+that $h_n=2^n-1$, this can be verified by plugging it into the
+recurrence and checking the base case.
+
+The Fibonacci Sequence
+----------------------
+
+The Fibonacci sequence is defined to start as $F_0=0,F_1=1$ and any
+term is the sum of the two previous terms; $F_{n+2}=F_{n+1}+F_n$.
+What is the explicit formula for the Fibonacci numbers?
+
+Finding the characteristic polynomial we get $x^2=x+1$. The roots of
+this are $\frac{1-\sqrt{5}}{2},\frac{1+\sqrt{5}}{2}$. Now we know:
+\[F_n=c_1\left(\frac{1-\sqrt{5}}{2}\right)^n+c_2\left(\frac{1+\sqrt{5}}{2}\right)^n\]
+Solving for $c_1, c_2$ with the initial constraints we get that
+$c_1+c_2=0$ and
+$c_1\frac{1-\sqrt{5}}{2}+c_2\frac{1+\sqrt{5}}{2}=1$. So we get that
+$c_1=-\frac{1}{\sqrt{5}}$ and $c_2=\frac{1}{\sqrt{5}}$.
+Therefore the Fibonacci numbers can be expressed as
+\[F_n=-\frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^n+\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n\]
+
+The Catalan Numbers
+-------------------
+
+The Catalan numbers $C_n$ count the number of ways to properly
+arrange $n$ open parenthesis \`\`(\`\` and $n$ close parenthesis
+\`\`)\`\`. For example, ()()(()) and (()())are a proper arrangements
+whereas )(())( and ())(() are not.
+
+The recursive formula for the Catalan numbers is $C_0=1$ and
+$C_{n+1}=\sum_{i=0}^n C_iC_{n-i}$. We can use generating functions
+to solve for the explicit form. Let $C(x)$ be the generating
+function for the Catalan numbers. The sum here resembles a convolution
+of two sequences (the product of two generating functions) in this case
+the product is simply the convolution of $C(x)$ with itself. Putting
+in a $x^{n+1}$ term on both sides we get:
+\[C_{n+1}x^{n+1}=x\sum_{i=0}^n C_ix^i C_{n-i}x^{n-i}\] Now we will sum
+over all possible $n$ and then plug in $C(x)$.
+\[\sum_{n=0}^\infty C_{n+1}x^{n+1}=x\sum_{n=0}^\infty\sum_{i=0}^n C_ix^i C_{n-i}x^{n-i}\]
+\[C(x)-C_0=xC(x)C(x)\] \[xC(x)^2-C(x)+1=0\] Solving for $C(x)$
+we get $\frac{1\pm\sqrt{1-4x}}{2x}$. We know $C(0)=1$, therefore
+we know the correct form is $\frac{1-\sqrt{1-4x}}{2x}$. Now we can
+expand the square root using binomial coefficients.
+\[\sqrt{1-4x}=(1-4x)^{1/2}=\sum_{n=0}^\infty (-4x)^n \binom{1/2}{n}\]
+\[=\sum_{n=0}^\infty (-4x)^n \frac{(1/2)(-1/2)\dots (3-2n)/2}{n!}=\sum_{n=0}^\infty -(4x)^n \frac{1(3)(5)\dots(2n-3)}{2^n n!}\]
+\[=\sum_{n=0}^\infty -x^n 4^n\frac{(2n-2)!}{2^n n! 2^{n-1} (n-1)!}=\sum_{n=0}^\infty -x^n \frac{2}{n}\frac{(2n-2)!}{(n-1)! (n-1)!}\]
+\[=\sum_{n=0}^\infty -x^n \frac{2}{n}\binom{2n-2}{n-1}\] If we plug
+this into the expression for $C(x)$ we get:
+\[C(x)=\sum_{n=1}^\infty x^{n-1} \frac{1}{n}\binom{2n-2}{n-1}=\sum_{n=0}^\infty x^{n} \frac{1}{n+1}\binom{2n}{n}\]
+Therefore the explicit formula for the Catalan numbers is
+$C_n=\frac{1}{n+1}\binom{2n}{n}$. The first few terms of the Catalan
+numbers are 1,1,2,5,14,42.
+
+Problems
+========
+
+1.  [[[
+    Let $a_n$ be the number of ways to tile a $1\times n$ board
+    with $1\times 1$ tiles and $1\times 2$ dominoes. What is the
+    sequence $a_n$?
+
+    ]]]
+
+2.  [[[
+    Consider this variant on the Towers of Hanoi problem. You want to
+    move all the disks from one pole to another pole. You are now only
+    allowed to move disks between adjacent poles though (moving a disc
+    from the leftmost pole to rightmost pole now takes two moves). Let
+    $M_n$ be the number of moves needed to move $n$ disks from
+    the leftmost pole to the rightmost pole. Derive a recurrence for
+    $M_n$ and solve it.
+
+    ]]]
+
+3.  [[[
+    (Hong Kong 2002) Find the number of 10-digit positive integers such
+    that each digit is either 1 or 2 and there exist two consecutive
+    1’s.
+
+    ]]]
+
+4.  [[[
+    (West German Olympiad 1982) What is the sum of the greatest odd
+    divisors of the first $2^n$ positive integers;
+    $1, 2, \dots 2^n$?
+
+    ]]]
+
+5.  [[[
+    Another variant on Towers of Hanoi: Double Tower. Consider that now
+    you have $2n$ disks and there are 2 of each size. As usual, we
+    can move a disk from a pole to another pole as long as we don’t
+    place a larger disk on a smaller disk.
+
+    -   How many moves does it take to transfer a double tower from one
+        pole to another, if disks of equal size are indistinguishable?
+
+    -   How many moves does it take to transfer a double tower from one
+        pole to another, if the final arrangement must have the same
+        top-to-bottom order as in the original arrangement?
+
+    ]]]
+
+6.  [[[
+    A subset of the set $\{1,\dots, n\}$ is called *alternating* if
+    its elements, when arranged in increasing order, follow the pattern:
+    odd, even, odd, etc. For example, $\{3\},\{1,2,5\},\{3,4\}$ and
+    the empty set are alternating subsets of $\{1,2,3,4,5\}$, while
+    $\{2,3,4,5\}$ and $\{1,3,4\}$ aren’t. Let $a_n$ denote
+    the number of alternating subsets of $\{1,\dots n\}$. Derive a
+    recurrence relation for $a_n$.
+
+    ]]]
+
+7.  [[[
+    Let $a_n$ be the number of ways to tile a $3\times 2n$ with
+    $1\times 2$ dominoes where the dominoes can be oriented
+    vertically or horizontally. Derive and solve a recurrence relation
+    for $a_n$.
+
+    ]]]
+
+8.  [[[
+    Let $a_n$ equal the number of ternary strings of length $n$
+    such that the substrings 00, 01, 10 and 11 never occur. Derive and
+    solve a recurrence relation for $a_n$.
+
+    ]]]
+
+9.  [[[
+    (AIME 2001) A mail carrier delivers mail to the nineteen houses on
+    the east side of Elm Street. The carrier notices that no two
+    adjacent houses ever get mail on the same day, but that there are
+    never more than two houses in a row that get no mail on the same
+    day. How many different patterns of mail delivery are possible?
+
+    ]]]
+
+10. [[[
+    Find a pair of dice which gives the same distribution for their sum
+    as a normal pair of dice (and is not a normal pair of dice).
+
+    ]]]
+
+11. [[[
+    (Putnam 2006) Let
+    $1,2,3,\dots, 2005, 2006, 2007, 2009, 2012,\dots$ be a sequence
+    defined as $x_k=k$ for $k\leq 2006$ and
+    $x_{k+1}=x_k+x_{k-2005}$ for $k\geq 2005$. Show that the
+    sequence has 2005 consecutive terms each divisible by 2006.
+
+    ]]]
+
+12. [[[
+    Let $t_n$ be the number of rooted full binary trees are there
+    with $n+1$ leaves (each node must have 0 or 2 children and the
+    children have a fixed left to right order). Derive a recurrence
+    relation for $t_n$.
+
+    ]]]
+
+13. [[[
+    (Putnam 2004) Define a sequence $u_n$ by $u_0=u_1=u_2=1$ and
+    thereafter by $u_{n}u_{n+3}-u_{n+2}u_{n+1}=n!$ for
+    $n\geq 0$. Show that $u_n$ is an integer for all $n$.
+
+    ]]]
+
+14. [[[
+    (British Math Olympiad 1997) For positive integers $n$, the
+    sequence $a_1, a_2,\dots$ is defined by
+    \[a_1=1; a_n=\left(\frac{n+1}{n-1}\right)(a_1+a_2+\dots+a_{n-1}), n>1\]
+    Determine the value of $a_{1997}$.
+
+    ]]]
+
+15. [[[
+    (Putnam 1998) Let $A_1=0$ and $A_2=1$. For $n>2$, the
+    number $A_n$ is defined by concatenating the decimal expansions
+    of $A_{n-1}$ and $A_{n-2}$ from left to right. For example,
+    $A_3=A_2A_1=10, A_4=A_3A_2=101, A_5=A_4A_3=10110$. Determine all
+    $n$ such that 11 divides $A_n$.
+
+    ]]]
+
+16. [[[
+    (Putnam 2000) Let $f(x)$ be a polynomial with integer
+    coefficients. Define a sequence $a_0, a_1,\dots$ of integers
+    such that $a_0=0$ and $a_{n+1}=f(a_n)$ for all
+    $n\geq 0$. Prove that if there exists a positive integer $m$
+    for which $a_m=0$ then either $a_1=0$ or $a_2=0$.
+
+    ]]]
+
+17. [[[
+    Use generating functions to solve for the number of solutions to
+    $a+b+c+d=30$ if each variable is
+
+    -   a non-negative integer
+
+    -   a positive integer
+
+    -   an odd positive integer
+
+    -   an integer between 4 and 10 (inclusive)
+
+    ]]]
+
+18. [[[
+    Prove that the number of partitions of an integer into distinct odd
+    parts has the same parity as the total number of partitions of
+    $n$. (Hint: Use Generating Functions)
+
+    ]]]
+

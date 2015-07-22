@@ -1,0 +1,73 @@
+<<<
+Title: Number Theory Handout the Sixth: Pell’s Equation
+Author(s): Josh Nichols-Barrer
+Description: Handout from Red MOP 2008
+Topics: Pell equations
+>>>
+Pell’s equation is a tool that comes up quite often in olympiad-type
+diophantine equations. The equation itself is simple: we let $D$ be
+a positive squarefree integer, and we look for solutions in positive
+integers $(x,y)$ to
+\[x^2 - Dy^2 = 1\qquad \textrm{(Pell's equation)}.\] We will discuss
+variants below, but for now we consider this example alone.
+
+There is a general solution to Pell’s equation, but it is
+*implicit* in the sense that there is no closed-form expression for
+$(x,y)$, only a method for calculating same involving a single
+formula. There is a theorem that solutions to Pell’s equation exist;
+therefore let $(x_1,y_1)$ be the solution with the smallest
+$x$-value (indeed, we can find this one by expanding $\sqrt D$
+in a continued fraction and take $x_1/y_1$ to be the first rational
+approximation that gives a solution). The theorem states that all
+solutions to Pell’s equation can be enumerated $(x_n,y_n)$, where
+\[x_n + y_n\sqrt D = \left( x_1+y_1\sqrt D\right)^n.\] For example, to find
+solutions to \[x^2 - 3y^2 = 1,\] we notice that $(2,1)$ is a
+solution, and then the second solution is
+$(2+\sqrt 3)^2 = 7+4\sqrt 3$, i.e. $(7,4)$, the third
+$(2+\sqrt 3)^3 = 26+15\sqrt 3$, or $(26,15)$, and so on. 
+
+There are a few variants to Pell’s equation, but the method of
+producing solutions is usually similar. A good example is
+$x^2 - Dy^2 = -1$, which we consider in the exercises. Note that
+*existence* in these cases is no longer guaranteed in general, but if
+solutions exist they fall into families similar to that for the ordinary
+Pell’s equations.
+
+**Problems**
+
+1.  [[[(QR) Determine all positive integers $n$ for which there exists
+an integer $m$ such that $2^n-1$ is a divisor of
+$m^2 + 9$.]]]
+
+1.  [[[(QR) The integer $n$ is a square mod $p$ for every prime
+$p$. Prove that $n$ is a perfect square.]]]
+
+1.  [[[Given $D$ squarefree and a solution $(x_1,y_1)$ to
+$x^2-Dy^2=4$ in positive integers with minimal $x$-value, show
+that all other solutions may be written as
+\[\frac{x_n+y_n\sqrt{D}}2 = \left(\frac{x_1+y_1\sqrt D}2\right)^n.\] 
+]]]
+
+1.  [[[Given
+$D$ squarefree and a solution $(x_1,y_1)$ to $x^2-Dy^2=-1$
+in positive integers with minimal $x$-value, find all other
+solutions in positive integers.]]]
+
+1.  [[[Find all solutions in positive integers
+to $3^x-2=y^2$.]]]
+
+1.  [[[(MOP ’98) Find all pairs of positive integers $(x,y)$ satisfying the equation
+\[x^{2} + (x+1)^{2} + \cdots + (x+99)^{2} = y^{2} + (y+1)^{2} + \cdots + (y+100)^{2}.\] ]]]
+
+1.  [[[(MOP ’09) Find all solutions in nonnegative integers
+to \[2^m+7^n = 9^k.\]
+]]] 
+
+1.  [[[(MOP ’97) Does there exist a row of Pascal’s Triangle containing four distinct elements $a, b, c$, and $d$ such that $b=2a$ and $d= 2c$?]]]
+
+1.  [[[Prove that the equation
+\[x^3+y^3 = z^4 - t^2\] has infinitely many integer solutions with $\gcd(x,y,z,t) = 1$.]]]
+
+1.  [[[Find all pairs of nonnegative integers
+$(m, n)$ such that \[(m+n-5)^2 = 9mn.\]
+]]]

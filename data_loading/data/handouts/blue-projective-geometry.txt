@@ -1,0 +1,299 @@
+<<<
+Title: Projective Geometry
+Author(s): Maria Monks
+Description: Handout from Blue MOP 2013
+Topics: Projective geometry
+>>>
+Projective planes
+=================
+
+Let’s start with some general theory. A **projective plane** is any set
+$P$, which we call the set of *points*, and a nonempty collection
+$L$ of subsets of $P$ called *lines*, such that the following
+four axioms hold:
+
+**P1:** Every pair of distinct points are contained in exactly one line.
+
+**P2:** Every pair of distinct lines intersect in exactly one point.
+
+**P3:** There are four distinct points $a,b,c,d\in P$ no three of
+which lie on a line.
+
+**P4:** Every line contains at least three points.
+
+There are many interesting projective planes. The smallest example of
+a projective plane is known as the *Fano plane*, or $F_7$,
+consisting of seven points and seven lines.
+
+Notice the terms “point” and “line” are interchangeable in the axioms
+above. We can in fact interchange the roles of points and lines in any
+projective plane to obtain another projective plane, called the “dual”
+projective plane.
+
+What is the projective dual of the Fano plane?
+
+The projective plane we’ll be dealing with is the *real projective
+plane*, which is essentially the Euclidean plane plus a line at
+infinity. Let’s take a look.
+
+The real projective plane
+-------------------------
+
+The real projective plane was first defined by Desargues as an extension
+of the Euclidean plane $\mathbb{R}^2$ that forces parallel lines to
+intersect “at infinity”, hence creating a plane that satisfies axiom
+**P2** rather than the parallel postulate. [^1]
+
+Define a *pencil of parallel lines* in $\mathbb{R}^2$ to be the set
+of all lines parallel to a given line in the plane. Then the **real
+projective plane** is the set $\mathbb{R}^2\bigcup l^\infty$ where
+$l^\infty$ is a set consisting of one point for each pencil of
+parallel lines in $\mathbb{R}^2$. A **line** in this plane is one
+of:
+
+-   $l^\infty$,
+
+-   Any subset of $\mathbb{R}^2\bigcup l^\infty$ consisting of a line
+    in $\mathbb{R}^2$ along with the associated point in
+    $l^\infty$.
+
+Homogeneous coordinates
+-----------------------
+
+There is another, more symmetric way to define the real projective
+plane. We can think of a point in the real projective plane as a ratio
+$(a:b:c)$ of three real numbers, not all zero, called its
+*homogeneous coordinates*. Since we only care about the ratio between
+the numbers, $(2:4:5)$ and $(6:12:15)$ describe the same point.
+
+A *line* is then defined as the set of solutions $(a:b:c)$ to a
+linear equation \[\alpha x +\beta y + \gamma z=0\] for some fixed
+$\alpha$, $\beta$, $\gamma$.
+
+Can you see why these are equivalent ways of defining the real
+projective plane? What are the points in $l^\infty$ in homogeneous
+coordinates? The points in $\mathbb{R}^2$?
+
+Show that the unit circle, expressed in homogeneous coordinates, is
+described by the equation \[x^2+y^2=z^2.\] Why doesn’t the equation
+$x^2+y^2=1$ make sense in the projective plane?
+
+Reciprocation (pole and polar)
+------------------------------
+
+Like the Fano plane, the real projective plane is self-dual. How can
+we exchange the points and lines in such a way that collinearity becomes
+concurrency and vice versa? The answer lies in the pole of a line and
+the polar of a point.
+
+**Polar:** Fix a circle $\omega$ in the Euclidean plane with center
+$O$. Let $A$ be any point in the projective plane, and let
+$A'$ be its inverse about $\omega$ (where all the points at
+infinity invert to $O$), and let $a$ be the line through
+$A'$ that is perpendicular to line $OA'$ (or $OA$, if
+$A'=O$). Then $a$ is the *polar* of $A$.
+
+**Pole:** of a line $a$ is the reverse construction. First, the pole
+of the line at infinity is $O$. Now, given a line $a$ other than
+the line at infinity, let $A'$ be the foot of the altitude from
+$O$ to $a$ and let $A$ be the inverse of $A'$ about
+$\omega$. Then $A$ is the *pole* of $a$ (and $a$ is the
+polar of $A$.)
+
+[image]
+
+Show that $A$ lies on the polar of $B$ iff the polar of
+$A$ passes through $B$.
+
+We now know that *reciprocation*, the transformation about a circle that
+replaces each point with its polar and each line with its pole,
+interchanges lines and points in a way that preserves indicence. This
+enables us to “dualize” many theorems about concurrency to obtain a
+theorem about collinearity, or vice versa.
+
+Reciprocation has the added benefit that it preserves **conics**. One
+way to define a conic is as the reciprocal of some circle.
+Alternatively, we can define a conic as the locus of solutions
+$(a:b:c)$ to some homogeneous equation of degree $2$ in $x$,
+$y$, and $z$, such as $x^2+2y^2-z^2=0$ or $x^2-yz=0$.
+
+What kind of conics do the two quadratic equations above describe when
+restricted to the Euclidean plane ($c\neq 0$)?
+
+The following theorems should be kept in your toolbox at all times. Can
+you see why reciprocation sends each theorem to its dual?
+
+**Theorem** & **Dual**  
+**Ceva’s theorem:** If $ABC$ is a triangle, cevians $AY$,
+$BZ$, $CX$ concur if and only if
+$\frac{AX}{XB}\cdot\frac{BY}{YC}\cdot\frac{CZ}{ZA}=1$. &
+**Menelaus’s theorem:** If $ABC$ is a triangle, points $X$,
+$Y$, and $Z$ on lines $AB$, $BC$, and $CA$
+respectively are collinear if and only if
+$\frac{AX}{XB}\cdot\frac{BY}{YC}\cdot\frac{CZ}{ZA}=-1$.  
+**Desargues’ theorem:** If $ABC$ and $DEF$ are two triangles,
+then $AD$, $BE$, and $CF$ are concurrent if and only if
+$AB\cap DE$, $BC\cap EF$, and $CA\cap FD$ are collinear. &
+**Desargues’ theorem:** If $ABC$ and $DEF$ are two triangles,
+then $AD$, $BE$, and $CF$ are concurrent if and only if
+$AB\cap DE$, $BC\cap EF$, and $CA\cap FD$ are collinear.  
+**Pascal’s theorem:** Given a hexagon inscribed in a conic, the
+intersection points of the pairs of opposite sides are collinear. &
+**Brianchon’s theorem:** Given a hexagon circumscribed about a conic,
+the lines joining the pairs of opposite points are concurrent.  
+
+Projective transformations
+--------------------------
+
+In homogeneous coordinates, a *projective transformation* is a map of
+the form \[(x:y:z)\mapsto (ax+by+cz:dx+ey+fz:gx+hy+iz)\] for some real
+$a,b,c,d,e,f,g,h,i$. The main facts we need to know about projective
+transformations are:
+
+1.  Projective transformations send lines to lines and conics to conics.
+
+2.  Projective transformations preserve incidence (collinearity and
+    concurrency).
+
+3.  Projective transformations preserve **cross ratios** of collinear
+    points. (The *cross ratio* of four collinear points $A,B,C,D$ is
+    \[(A,B;C,D)=\frac{AC\cdot BD}{AD\cdot BC}.\] Each factor is a
+    directed length according to a fixed orientation of the line.)
+
+4.  Given four points $A,B,C,D$ in the projective plane, no three
+    collinear, and another such choice of points $X,Y,Z,W$, there is
+    a unique projective transformation sending $A$ to $X$,
+    $B$ to $Y$, $C$ to $Z$, and $D$ to $W$.
+
+It is often useful to choose an important line in a diagram and apply a
+projective transformation sending that line to the line at infinity.
+
+Use a projective transformation to prove Desargues’ Theorem.
+
+Problems [problems]
+========
+
+1.  [[[
+    Given a line $l$ and a line $l_1$ parallel to line $l$
+    drawn in the plane, and two points $A$ and $B$ on $l$,
+    construct the midpoint of $AB$ using *only a straightedge* (no
+    compass..
+    ]]]
+
+2.  [[[
+    Given a circle $\omega$ and a point $P$ outside the circle
+    drawn in the plane, construct the tangent lines from $P$ to
+    $\omega$ using *only a straightedge*.
+    ]]]
+
+3.  [[[
+    Let $ABCD$ be a quadrilateral inscribed in a circle. Let
+    $a,b,c,d$ be the tangent lines at these points respectively, and
+    let $E$, $F$, and $G$ be the intersections
+    $AB\cap CD$, $AD\cap BC$, and $AC\cap BD$, respectively.
+    Show that:
+
+    -   $EF$ is the polar of $G$, and contains $a\cap c$ and
+        $b\cap d$,
+
+    -   $FG$ is the polar of $E$, and contains $a\cap b$ and
+        $c\cap d$,
+
+    -   $GE$ is the polar of $F$, and contains $a\cap d$ and
+        $b\cap c$.
+    ]]]
+
+4.  [[[
+    An important special case of Pascal’s theorem is **Pappus’s
+    theorem**: If $A,B,C$ are collinear and $X,Y,Z$ are
+    collinear, then $AY\cap BX$, $AZ\cap CX$, and
+    $BZ\cap CY$ are collinear as well. (Why is this a special case
+    of Pascal?)
+
+    1.  Prove Pappus’s theorem using a projective transformation.
+
+    2.  State the dual theorem to Pappus’s theorem.
+    ]]]
+
+5.  [[[
+    **Harmonic conjugates:** Suppose $A$, $B$, and $C$ are
+    three collinear points. Let $X$ be a point not on line $AB$,
+    and let $m$ be any line passing through $C$ and intersecting
+    $AX$ at $Y$ and $BX$ at $Z$. Let $P$ be the
+    intersection point of $AZ$ and $BY$, and let $XP$
+    intersect line $AB$ at $D$. The point $D$ is called the
+    *harmonic conjugate* of point $C$ with respect to points $A$
+    and $B$. Prove that:
+
+    1.  The point $D$ is independent of the choice of $L$ and
+        $m$, and
+
+    2.  The cross-ratio $(AB;CD)$ is $-1$.
+
+    3.  Given a point $C$ outside a circle $\omega$, construct a
+        line through $C$ that intersects $\omega$ at two points
+        $A$ and $B$. Then the harmonic conjugate of $C$ with
+        respect to $A$ and $B$ lies on the polar of $C$.
+    ]]]
+
+6.  [[[
+    (China, 1997.) Let $ABCD$ be a cyclic quadrilateral. The lines
+    $AB$ and $CD$ meet at $P$, and the lines $AD$ and
+    $BC$ meet at $Q$. Let $E$ and $F$ be the points
+    where the tangents from $Q$ meet the circumcircle of $ABCD$.
+    Prove that points $P$, $E$, and $F$ are collinear.
+    ]]]
+
+7.  [[[
+    Show that if two triangles are perspective from a point, then the
+    triangles polar to them are also perspective from a point.
+    ]]]
+
+8.  [[[
+    (China, 1996.) Let $H$ be the orthocenter of acute triangle
+    $ABC$. The tangents from $A$ to the circle with diameter
+    $BC$ touch the circle at $P$ and $Q$. Prove that
+    $P$, $Q$, and $H$ are collinear.
+    ]]]
+
+9.  [[[
+    Show that if $ABCD$ is a quadrilateral circumscribed about a
+    circle, and $AB$, $BC$, $CD$, and $DA$ are tangent
+    to the circle at $K$, $L$, $M$, and $N$,
+    respectively, then lines $AC$, $BD$, $KM$, and $LN$
+    are concurrent.
+    ]]]
+
+10. [[[
+    (1997 IMO Shortlist.) Let $A_1A_2A_3$ be a non-isosceles
+    triangle with the incenter $I$. Let $C_i$, $i=1,2,3$, be
+    the smaller circle through $I$ tangent to $A_iA_{i+1}$ and
+    $A_iA_{i+2}$ (the addition of indices being mod $3$.) Let
+    $B_i$, $i=1,2,3$, be the second point of intersection of
+    $C_{i+1}$ and $C_{i+2}$. Prove that the circumcenters of the
+    triangles $A_1B_1I$, $A_2B_2I$, and $A_3B_3I$ are
+    collinear.
+    ]]]
+
+11. [[[
+    Let $\omega_1$, $\omega_2$, and $\omega_3$ be any three
+    circles in the plane. Let $A_1$ be the center of the positive
+    homothety taking $\omega_2$ to $\omega_3$, $A_2$ the
+    center of the positive homothety taking $\omega_1$ to
+    $\omega_3$, and $A_3$ the center of the positive homothety
+    taking $\omega_1$ to $\omega_2$. Prove that $A_1$,
+    $A_2$, and $A_3$ are collinear. Do the same in the case
+    where we choose one of the centers of positive homothety and the
+    other two centers of negative homothety.
+    ]]]
+
+12. [[[
+    (IMO Shortlist 2007.) A point $P$ lies on side $AB$ of
+    convex quadrilateral $ABCD$. Let $\omega$ be the incircle of
+    triangle $CPD$, and let $I$ be its incenter. Suppose that
+    $\omega$ is tangent to the incircles of triangles $APD$ and
+    $BPC$ at points $K$ and $L$, repsectively. Let the lines
+    $AC$ and $BD$ meet at $E$, and let the lines $AK$
+    and $BL$ meet at $F$. Prove that the points $E$,
+    $I$, and $F$ are collinear.
+    ]]]

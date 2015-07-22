@@ -1,0 +1,148 @@
+<<<
+Title: Inequalities II
+Author(s): Jenny Iglesias
+Description: Handout from Red MOP 2013
+Topics: Inequalities
+>>>
+
+Inequalities from last time
+===========================
+
+The trivial inequality
+----------------------
+
+Let $x$ be a real number, then \[x^2\geq 0\]
+
+QM-AM-GM-HM
+-----------
+
+Let $x_1,\dots, x_n$ be positive real numbers. Then, we have:
+\[\sqrt{\frac{x_1^2+\dots+x_n^2}{n}}\geq\frac{x_1+\dots+x_n}{n}\geq \sqrt[n]{x_1\dots x_n}\geq \frac{n}{\frac{1}{x_1}+\dots+\frac{1}{x_n}}.\]
+Equality holds when $x_1=\dots=x_n$.
+
+Weighted AM-GM
+--------------
+
+Let $x_1,\dots, x_n$ and $a_1,\dots a_n$ be positive real
+numbers with $\sum_{i=1}^n a_i=1$. Then
+\[a_1x_1+\dots+a_nx_n\geq x_1^{a_1}\dots x_n^{a_n}.\] Again equality
+holds when $x_1=x_2=\dots=x_n$.
+
+Cauchy-Schwarz
+--------------
+
+Let $x_1,\dots, x_n$ and $y_1,\dots, y_n$ be non-negative real
+numbers. Then, we have
+\[(x_1^2+\dots +x_n^2)(y_1^2+\dots +y_n^2)\geq (x_1y_1+\dots +x_ny_n)^2.\]
+Equality holds if and only if $\frac{x_i}{y_i}$ is constant.
+
+Rearrangement
+-------------
+
+-   Let $a_1,a_2,\dots a_n$ and $b_1,b_2,\dots b_n$ be two
+    increasing sequences of real numbers. Let $\pi$ be any
+    permutation of $\{1,2,\dots, n\}$. Then we have:
+    \[a_1b_n+a_2b_{n-1}+\dots+a_nb_1 \leq a_1b_{\pi(i)}+a_2b_{\pi(2)}+\dots+a_nb_{\pi(n)} \leq a_1b_1+a_2b_2+\dots+a_nb_n\]
+
+-   Another way to think about rearrangement is to consider the sum
+    $a_1b_1+a_2b_2+\dots+a_nb_n$. The sum is maximized when
+    $a_1,a_2,\dots, a_n$ and $b_1,b_2,\dots b_n$ are both
+    increasing. The sum is minimized when one of
+    $a_1,a_2,\dots, a_n$ and $b_1,b_2,\dots b_n$ is increasing
+    and the other is decreasing.
+
+-   You should try proving the rearrangement inequality!
+
+Schur
+=====
+
+-   If $a,b,c$ are non-negative reals and $k \geq 1$. Then we
+    have: \[a^k(a-b)(a-c)+b^k(b-a)(b-c)+c^k(c-a)(c-b)\geq 0\]
+
+-   Proof: The inequality is symmetric, so we may assume that
+    $a\geq b\geq c$. We can rewrite the left hand side of the
+    inequality now as: \[(a-b)(a^k(a-c)-b^k(b-c))+c^k(c-a)(c-b)\] We
+    know that $a-b$ is non-negative. Likewise, since
+    $a \geq b \geq c$ then we know that $a^k\geq b^k$ and
+    $a-c\geq b-c$. Therefore the term $a^k(a-c)-b^k(b-c)$ is
+    also non-negative. $c^k(c-a)(c-b)$ is also non-negative. All the
+    terms in the above expression are non-negative giving the desired
+    result.
+
+Problems
+========
+
+1.  [[[
+    Show that if $a_i$ are reals with $\sum_{i=1}^n a_i =1$ then
+    $\sum_{i=1}^n a_i^2\geq 1/n$.
+
+    ]]]
+
+2.  [[[
+    Let $(a_i)_{i=1}^n$ be a sequence of positive reals and let
+    $(b_i)_{i=1}^n$ be a permutation of $(a_i)$. Prove that
+    $\sum_{i=1}^n a_i/b_i \geq n$.
+
+    ]]]
+
+3.  [[[
+    Let $x,y,z$ be real numbers with $x+y+z=xyz$. Prove that:
+    \[\frac{1}{1+xy}+\frac{1}{1+zx}+\frac{1}{1+yz}\leq \frac{3}{4}\]
+
+    ]]]
+
+4.  [[[
+    If $a,b,c >0$, prove that
+    \[\frac{a}{b+c}+\frac{b}{a+c}+\frac{c}{a+b} \geq \frac{3}{2}\]
+
+    ]]]
+
+5.  [[[
+    $a,b,c$ are non-negative reals such that $a+b+c=1$. Prove
+    that \[a^3+b^3+c^3+6abc \geq \frac{1}{4}\]
+
+    ]]]
+
+6.  [[[
+    Let $a,b,c,d$ be positive reals. Prove that
+    \[\frac{1}{a}+\frac{1}{b}+\frac{4}{c}+\frac{16}{d} \geq \frac{64}{a+b+c+d}\]
+
+    ]]]
+
+7.  [[[
+    (CGMO 2008/2) Let $\phi(x)=ax^3+bx^2+cx+d$ be a polynomial with
+    real coefficients. Given that $\phi(x)$ has three positive real
+    roots and that $\phi(0) < 0$, prove that
+    \[2b^3+9a^2d-7abc \leq 0\]
+
+    ]]]
+
+8.  [[[
+    (CGMO 2007/3) Let $n$ be an integer greater than 3, and let
+    $a_1,a_2,\dots a_n$ be non-negative real numbers with
+    $a_1+a_2+\dots+a_n=2$. Determine the minimum value of
+    \[\frac{a_1}{a_2^2+1}+\frac{a_2}{a^2_3+1}+\cdots+\frac{a_n}{a^2_1+1}.\]
+
+    ]]]
+
+9.  [[[
+    (IMO 74/5) Determine all possible values of
+    \[\frac{a}{a+b+d}+\frac{b}{a+b+c}+\frac{c}{b+c+d}+\frac{d}{a+c+d}\]
+    where $a,b,c,d$ are arbitrary positive numbers.
+
+    ]]]
+
+10. [[[
+    (IMO 1984/1) Prove that $0\leq yz+zx+xy-2xyz \leq 7/27$, where
+    $x,y$ and $z$ are non-negative real numbers for which
+    $x+y+z=1$.
+
+    ]]]
+
+11. [[[
+    Let $a,b,c$ be positive reals such that
+    $a+b\geq c; b+c\geq a;$ and $c+a\geq b$, we have
+    \[2a^2(b+c)+2b^2(c+a)+2c^2(a+b)\geq a^3+b^3+c^3+9abc.\]
+
+    ]]]
+

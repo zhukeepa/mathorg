@@ -1,0 +1,193 @@
+<<<
+Title: Red Inequalities
+Author(s): Josh Nichols-Barrer
+Description: Handout from Red MOP 2008
+Topics: Inequalities
+>>>
+Useful Facts
+============
+
+1.  **Jensen’s inequality:** Suppose $f$ is a function convex over
+    some interval $I$. Then if $x_1, x_2, \ldots, x_n$ lie in
+    $I$, then
+    \[\frac{f(x_1) + f(x_2) + \cdots + f(x_n)}{n} \geq f \left( \frac{x_1 + x_2 + \cdots + x_n}{n} \right).\]
+    In other words, if $f$ is convex and $\sum x_i$ is fixed,
+    $\sum f(x_i)$ is minimized when all $x_i$’s are equal.
+
+2.  **Karamata’s inequality:** Suppose $f$ is a convex function over
+    some interval $I$. If $x_1 \geq x_2 \geq \cdots \geq x_n$
+    and $y_1 \geq y_2 \geq \cdots \geq y_n$ are reals in $I$
+    such that the sequence $(x_1, x_2, \ldots, x_n)$ majorizes
+    $(y_1, y_2, \ldots, y_n)$, then
+    \[f(x_1) + f(x_2) + \cdots + f(x_n) \geq f(y_1) + f(y_2) + \cdots + f(y_n).\]
+    (The sequence $(x_1, x_2, \ldots, x_n)$ is said to *majorize*
+    $(y_1, y_2, \ldots, y_n)$ if
+    $x_1 + x_2 + \cdots + x_n = y_1 + y_2 + \cdots + y_n$, and
+    $x_1 + x_2 + \cdots + x_k \geq y_1 + y_2 + \cdots + y_k$ for
+    $1 \leq k \leq n-1$.)
+
+3.  **Convex maxima:** If $f$ is a convex function over an interval
+    $I$, then the maximum of $f$ is attained at an endpoint of
+    $I$.
+
+Common Techniques
+=================
+
+-   **Tangent line approximation:** If we are trying to minimize the sum
+    $f(x_1) + f(x_2) + \cdots + f(x_n)$ given that
+    $x_1 + x_2 + \cdots + x_n = S$, it can be helpful to compare
+    $f$ with the linear function $ax + b$ that is tangent to
+    $f$ at $\frac{S}{n}$.
+
+-   **Ad hoc comparisons:** Suppose $f$ is a function. The crux of
+    smoothing is that pushing variables $x$ and $y$ together or
+    apart can guarantee $f(x) + f(y)$ to increase or decrease.
+    Knowing whether $f$ is convex can significantly facilitate
+    smoothing, but analyzing the change of $f(x) + f(y)$ is possible
+    even when, say, $x$ lies in a concave region of $f$ while
+    $y$ lies in a convex region. In such a case, an ad hoc algebraic
+    comparison could be used instead.
+
+-   **Introducing a constraint:** Sometimes, adding a constraint to a
+    homogeneous inequality makes it equivalent to minimizing
+    $\sum f(x_i)$ for some function $f$, making it susceptible
+    to the smoothing methods.
+
+-   **Variable substitution:**[[[ Smoothing works best when the
+    variables have a fixed sum. If the variables satisfy some other sort
+    of constraint, it can be helpful to perform a variable substitution
+    such that the new variables have a fixed sum. For example, if we
+    have variables $a,b,c$ subject to $abc = 1$, then if we
+    perform the substitution $a = e^x, b = e^y, c = e^z$, our new
+    constraint becomes $x+y+z=0$.]]]
+
+Problems
+========
+
+1.  [[[
+    (Nesbitt) Show that if $a,b$, and $c$ are positive real
+    numbers, then
+    \[\frac{a}{b+c} + \frac{b}{a+c} + \frac{c}{a+b} \geq \frac{3}{2}.\]
+
+    ]]]
+
+2.  [[[
+    If $x,y$, and $z$ are positive real numbers satisfying
+    $x + y + z = xyz$, show that
+    \[\sqrt{1+x^2} + \sqrt{1+y^2} + \sqrt{1+z^2} \geq 6.\]
+
+    ]]]
+
+3.  [[[
+    (USAMO 1980) Prove that for real numbers $a,b,c$ in the interval
+    $[0,1]$,
+    \[\frac{a}{b+c+1}+\frac{b}{c+a+1}+\frac{c}{a+b+1}+(1-a)(1-b)(1-c) \le 1.\]
+
+    ]]]
+
+4.  [[[
+    (USAMO 1977) If $ a,b,c,d,e$ are positive numbers bounded by
+    $ p$ and $ q$, i.e, if they lie in $ [p,q], 0 < p$,
+    prove that
+    \[(a + b + c + d + e)\left(\frac {1}{a} + \frac {1}{b} + \frac {1}{c} + \frac {1}{d} + \frac {1}{e}\right) \le 25 + 6\left(\sqrt {\frac {p}{q}} - \sqrt {\frac {q}{p}}\right)^2\]
+    and determine when there is equality.
+
+    ]]]
+
+5.  [[[
+    (USAMO 1999) Let $a_{1}, a_{2}, \dots, a_{n}$ ($n > 3$) be
+    real numbers such that
+    \[a_{1} + a_{2} + \cdots + a_{n} \geq n \qquad \mbox{and} \qquad a_{1}^{2} + a_{2}^{2} + \cdots + a_{n}^{2} \geq n^{2}.\]
+    Prove that $\max(a_{1}, a_{2}, \dots, a_{n}) \geq 2$.
+
+    ]]]
+
+6.  [[[
+    (USAMO 2003) Let $ a$, $ b$, $ c$ be positive real
+    numbers. Prove that
+    \[\dfrac{(2a + b + c)^2}{2a^2 + (b + c)^2} + \dfrac{(2b + c + a)^2}{2b^2 + (c + a)^2} + \dfrac{(2c + a + b)^2}{2c^2 + (a + b)^2} \le 8.\]
+
+    ]]]
+
+7.  [[[
+    (Poland 1996) Suppose $x,y,z$ are real numbers such that
+    $x + y + z = 1$ and $x,y,z > -\frac{3}{4}$. Prove that
+    \[\frac{x}{1+x^2} + \frac{y}{1+y^2} + \frac{z}{1+z^2} \leq \frac{9}{10}.\]
+
+    ]]]
+
+8.  [[[
+    (2009 ISL) Let $a,b,c$ be positive real numbers such that
+    $\frac{1}{a} + \frac{1}{b} + \frac{1}{c} = a + b + c$. Prove
+    that:
+    \[\frac{1}{(2a+b+c)^2} + \frac{1}{(a+2b+c)^2} + \frac{1}{(a+b+2c)^2} \leq \frac{3}{16}.\]
+
+    ]]]
+
+9.  [[[
+    (Romania 99) Show that for all positive reals
+    $x_1, x_2, \ldots, x_n$ with $x_1 x_2 \cdots x_n = 1$, we
+    have
+    \[\frac{1}{n-1 + x_1} + \cdots + \frac{1}{n - 1 + x_n} \leq 1.\]
+
+    ]]]
+
+10. [[[
+    (Japan 1997) Show that for all positive reals $a,b,c$,
+    \[\frac{(a+b-c)^2}{(a+b)^2+c^2} + \frac{(b+c-a)^2}{(b+c)^2 + a^2} + \frac{(c+a-b)^2}{(c+a)^2 + b^2} \geq \frac{3}{5}.\]
+
+    ]]]
+
+11. [[[
+    Show that if $r > 1$ and $x_1, x_2, \ldots, x_n$ are $n$
+    positive real numbers such that $x_1 x_2 \cdots x_n = 1$, then
+    \[x_1^r + x_2^r + \cdots + x_n^r \geq x_1 + x_2 + \cdots + x_n.\]
+
+    ]]]
+
+12. [[[
+    (USAMO 1998) Let $a_0,a_1,\cdots ,a_n$ be numbers from the
+    interval $(0,\pi/2)$ such that
+    \[\tan (a_0-\frac{\pi}{4})+ \tan (a_1-\frac{\pi}{4})+\cdots +\tan (a_n-\frac{\pi}{4})\geq n-1.\]
+    Prove that \[\tan a_0\tan a_1 \cdots \tan a_n \geq n^{n+1}.\]
+
+    ]]]
+
+13. [[[
+    The numbers $x_1, x_2, \ldots, x_n$ obey
+    $-1 \leq x_1, x_2, \ldots, x_n \leq 1$ and
+    $x_1^3 + x_2^3 + \cdots + x_n^3 = 0$. Prove that
+    \[x_1 + x_2 + \cdots + x_n \leq \frac{n}{3}.\]
+
+    ]]]
+
+14. [[[
+    Let $\, a_1, a_2, a_3, \ldots \,$ be a sequence of positive real
+    numbers satisfying $\, \sum_{j=1}^n a_j \geq \sqrt{n} \,$ for
+    all $\, n \geq 1$. Prove that, for all $\, n \geq 1, \,$
+    \[\sum_{j=1}^n a_j^2 > \frac{1}{4} \left( 1 + \frac{1}{2} + \cdots + \frac{1}{n} \right).\]
+
+    ]]]
+
+15. [[[
+    Let $a_1, a_2, \ldots, a_n$ be distinct positive integers such
+    that each subset of $\{a_1, a_2, \ldots, a_n\}$ has a different
+    sum. Prove that
+    \[\frac{1}{a_1} + \frac{1}{a_2} +  \cdots + \frac{1}{a_n} < 2.\]
+
+    ]]]
+
+16. [[[
+    (USA TST 2007) Let $ n$ be a positive integer and let
+    $ a_1 \leq a_2 \leq \cdots \leq a_n$ and
+    $ b_1 \leq b_2 \leq \cdots \leq b_n$ be two nondecreasing
+    sequences of real numbers such that
+    \[a_1 + \cdots + a_i \leq b_1 + \cdots + b_i \text{ for every } i = 1,\ldots,n - 1\]
+    and \[a_1 + \cdots + a_n = b_1 + \cdots + b_n.\] Suppose that for
+    any real number $ m$, the number of pairs $ (i,j)$ with
+    $ a_i - a_j = m$ equals to the number of pairs $ (k,l)$ with
+    $ b_k - b_l = m$. Prove that $ a_i = b_i$ for
+    $ i = 1,\ldots,n$.
+
+    ]]]
+
