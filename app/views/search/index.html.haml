@@ -1,2 +1,15 @@
--#something something something Ajax to decide which form to render
-= render 'problem'
+%ul{class: "nav nav-tabs", id: "myTab"}
+  %li{class: "active"}
+    %a{href: "#problems", data: {toggle: "tab"}}Problems
+  %li
+    %a{href: "#explanations", data: {toggle: "tab"}}Explanations
+  %li
+    %a{href: "#topics", data: {toggle: "tab"}}Topics
+
+.tab-content
+  #problems{class: "tab-pane fade in active"}
+    = render 'problem'
+  #explanations{class: "tab-pane fade"}
+    = render 'explanation'
+  #topics{class: "tab-pane fade"}
+    = render 'topic'

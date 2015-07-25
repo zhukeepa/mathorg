@@ -10,7 +10,7 @@ class SearchController < ApplicationController
 
 private 
   def topic_search_results(params)
-  	@topic_results = Topic.search(params[:name])
+  	@results = Topic.search(params[:name])
   end
 
   def problem_search_results(params)
@@ -20,5 +20,9 @@ private
     else
       @results = Problem.search params[:keywords], fields: [:description, :body], where: { source: [params[:source]]}
     end
+  end
+
+  def explanation_search_results(params)
+    @results = Explanation.all
   end
 end

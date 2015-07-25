@@ -3,8 +3,9 @@
 %br/
 - if results.size == 0
   %em
-    = empty_message || ""
+    = "No results found"
 
+- foo = 'search/topic_result'
 .row.list-group 
   - results.each do |r|
     .list-group-item
@@ -13,3 +14,5 @@
         = render 'search/problem_result', problem: r
       - when "Explanation"
         = render 'search/explanation_result', explanation: r
+      - when "Topic" 
+        = render 'search/topic_result', topic: r
