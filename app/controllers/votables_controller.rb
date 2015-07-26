@@ -3,12 +3,6 @@ class VotablesController < ApplicationController
   
   def upvote
     vote('good', params)
-
-    # ::TODO_LATER:: refactor ?? 
-    v = get_votable_from_id_and_class(params[:votable_id], params[:votable_type])
-    if v.kind_of?(Solution) && v.author != current_user
-      v.author.notify!(:solution_upvote, current_user, v)
-    end
   end
 
   def downvote

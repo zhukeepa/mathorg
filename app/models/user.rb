@@ -16,15 +16,12 @@
 #  created_at             :datetime
 #  updated_at             :datetime
 #  username               :text
-#  notifications          :text
 #
 
 class User < ActiveRecord::Base
   acts_as_voter
   
   acts_as_marker 
-
-  serialize :notifications, Array
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -52,31 +49,5 @@ class User < ActiveRecord::Base
     else
       where(conditions.to_h).first
     end
-  end
-
-  def notify!(type, *args)
-    notification = "error" # should never show this
-
-    case type 
-    when :solution_comment 
-      user = args[0]
-      solution = args[1]
-
-      notification = "(#{Time.now.strftime('%m/%d/%Y %H:%M')}) <a href=\"/users/#{user.id}\">#{user.username}</a> left a comment on your solution to a <a href=\"/problems/#{solution.problem.id}\">problem</a>."
-      if solution.problem.description.length > 0
-        notification += " (#{solution.problem.description})"
-      end
-    when :solution_upvote
-      user = args[0]
-      solution = args[1]
-
-      notification = "(#{Time.now.strftime('%m/%d/%Y %H:%M')}) <a href=\"/users/#{user.id}\">#{user.username}</a> upvoted your solution to a <a href=\"/problems/#{solution.problem.id}\">problem</a>."
-      if solution.problem.description.length > 0
-        notification += " (#{solution.problem.description})"
-      end
-    end
-
-    self.notifications.unshift(notification)
-    save!
   end
 end

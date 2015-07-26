@@ -5,13 +5,6 @@
 - if @user == current_user
   = link_to "Edit account information", edit_user_registration_path
   %br/
-  %h2 Notifications
-  %br/
-
-  .notifications
-    = render 'notifications', user: @user
-
-  %br/
 
 %ul{class: "nav nav-tabs", id: "myTab"}
   %li{class: "active"}

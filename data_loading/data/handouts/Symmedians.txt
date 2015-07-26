@@ -28,14 +28,14 @@ Basic Properties
 Harmonic Quadrilaterals
 -----------------------
 
-1.  Let $ABCD$ be a cyclic quadrilateral. Then the tangents to the
+1.  [[[Let $ABCD$ be a cyclic quadrilateral. Then the tangents to the
     circumcircle at $B$ and $D$ concur with diagonal $AC$ if
     and only if $AB \cdot CD = AD \cdot BC$. Conclude that the
     tangents to the circumcircle at $B$ and $D$ concur with
     diagonal $AC$ if and only if the tangents to the circumcircle at
     $A$ and $C$ concur with diagonal $BD$. (A quadrilateral
     satisfying $AB \cdot CD = AD \cdot BC$ is called a *harmonic
-    quadrilateral*.)
+    quadrilateral*.)]]]
 
 2.  [[[Let $ABCD$ be a harmonic quadrilateral. Let its diagonals
     intersect at $E$, and let the tangents to its circumcircle at
@@ -72,34 +72,27 @@ at $S$.
 Problems
 ========
 
-1.  [[[
-    (Poland 2000) Let $ABC$ be a triangle with $AC = BC$, and
+1.  [[[(Poland 2000) Let $ABC$ be a triangle with $AC = BC$, and
     $P$ a point inside the triangle such that
     $\angle PAB = \angle PBC$. Show that if $M$ is the midpoint
     of $AB$, then $\angle APM + \angle BPC = 180^{\circ}$.
-
     ]]]
 
-2.  [[[
-    Let $ABC$ be a triangle with $\angle A = 60^{\circ}$. Let
+2.  [[[Let $ABC$ be a triangle with $\angle A = 60^{\circ}$. Let
     $O$ be its circumcenter, and let $F$ be its Fermat point.
     Show that $OF \perp FA$.
-
     ]]]
 
-3.  [[[
-    Let $ABC$ be a triangle. Squares $BCC_2B_1$, $ABB_2A_1$,
+3.  [[[Let $ABC$ be a triangle. Squares $BCC_2B_1$, $ABB_2A_1$,
     and $CAA_2C_1$ are erected externally on sides $BC$,
     $AB$, and $CA$. Let lines $C_1 A_2$ and $B_2 A_1$
     meet at $A_3$, lines $C_2 B_1$ and $A_1 B_2$ meet at
     $B_3$, and lines $B_1C_2$ and $A_2 C_1$ meet at
     $C_3$. Show that $AA_3, BB_3$, and $CC_3$ concur at the
     symmedian point of $ABC$.
-
     ]]]
 
-4.  [[[
-    (ISL 2003) Three distinct points $A$, $B$, and $C$ lie
+4.  [[[(ISL 2003) Three distinct points $A$, $B$, and $C$ lie
     on a line in that order. Let $\Gamma$ be a circle passing
     through $A$ and $C$ whose center does not lie on the line
     $AC$. The tangents to $\Gamma$ at $A$ and $C$
@@ -107,41 +100,33 @@ Problems
     $\Gamma$ at $Q$. Show that the point of intersection of the
     angle bisector of the angle $AQC$ with the line $AC$ does
     not depend on the choice of the circle $\Gamma$.
-
     ]]]
 
-5.  [[[
-    (Russia 2009) Let $ABC$ be a triangle, and let the internal
+5.  [[[(Russia 2009) Let $ABC$ be a triangle, and let the internal
     bisector of angle $B$ meet $AC$ at $D$ and the
     circumcircle $\Omega$ of triangle $ABC$ at a point $E$
     distinct from $B$. The circle with diameter $DE$ intersects
     $\Omega$ at a point $F$ distinct from $E$. Prove that
     $BF$ is a symmedian of triangle $ABC$.
-
     ]]]
 
-6.  [[[
-    Let $ABC$ be a triangle. The incircle $\omega$ of triangle
+6.  [[[Let $ABC$ be a triangle. The incircle $\omega$ of triangle
     $ABC$ touches side $BC$ at $A'$, and the line $AA'$
     meets $\omega$ again at a point $P$. Let the lines $CP$
     and $BP$ meet $\omega$ again at $N$ and $M$,
     respectively. Prove that the tangents to $\omega$ at $M$ and
     $N$ meet on line $AA'$.
-
     ]]]
 
-7.  [[[
-    (Vietnam TST 2001) Two circles in a plane meet at two points,
+7.  [[[(Vietnam TST 2001) Two circles in a plane meet at two points,
     $A$ and $B$. Suppose a line is tangent to the circles at
     distinct points $P$ and $T$. The tangents at $P$ and
     $T$ of the circumcircle of triangle $APT$ meet at $S$.
     Let $H$ be the reflection of $B$ across $PT$. Show that
     $A, S$, and $H$ are collinear.
-
     ]]]
 
-8.  [[[
-    (USAMO 2008) Let $ ABC$ be an acute, scalene triangle, and let
+8.  [[[(USAMO 2008) Let $ ABC$ be an acute, scalene triangle, and let
     $ M$, $ N$, and $ P$ be the midpoints of
     $ \overline{BC}$, $ \overline{CA}$, and
     $ \overline{AB}$, respectively. Let the perpendicular bisectors
@@ -150,41 +135,33 @@ Problems
     lines $ BD$ and $ CE$ intersect in point $ F$, inside of
     triangle $ ABC$. Prove that points $ A$, $ N$, $ F$,
     and $ P$ all lie on one circle.
-
     ]]]
 
-9.  [[[
-    Triangle $ABC$ has circumenter $O$. Let $P$ be a point
+9.  [[[Triangle $ABC$ has circumenter $O$. Let $P$ be a point
     on the $A$-symmedian of $ABC$, and let $O_B$ and
     $O_C$ be the circumcenters of triangles $ABP$ and $ACP$,
     respectively. Prove that $AO$ bisects segment $O_B O_C$.
-
     ]]]
 
-10. [[[
-    (USA TST 2007) Triangle $ ABC$ is inscribed in circle
+10. [[[(USA TST 2007) Triangle $ ABC$ is inscribed in circle
     $ \omega$. The tangent lines to $ \omega$ at $ B$ and
     $ C$ meet at $ T$. Point $S$ lies on ray $ BC$ such
     that $AS \perp AT$. Points $ B_1$ and $ C_1$ lie on ray
     $ ST$ (with $ C_1$ in between $ B_1$ and $ S$) such
     that $ B_1T = BT = C_1T$. Prove that triangles $ ABC$ and
     $ AB_1C_1$ are similar to each other.
-
     ]]]
 
-11. [[[
-    (APMO 2013) Let $ABCD$ be a quadrilateral inscribed in a circle
+11. [[[(APMO 2013) Let $ABCD$ be a quadrilateral inscribed in a circle
     $\omega$, and let $P$ be a point on the extension of
     $AC$ such that $PB$ and $PD$ are tangent to
     $\omega$. The tangent at $C$ intersects $PD$ at $Q$
     and the line $AD$ at $R$. Let $E$ be the second point of
     intersection between $AQ$ and $\omega$. Prove that $B$,
     $E$, $R$ are collinear.
-
     ]]]
 
-12. [[[
-    (ISL 2000) Let $ABC$ be an acute-angled triangle, and let
+12. [[[(ISL 2000) Let $ABC$ be an acute-angled triangle, and let
     $\omega$ be its circumcircle. Let $\ell$ be the tangent to
     $\omega$ at $C$. The tangents to $\omega$ at $A$ and
     $B$ meet $\ell$ at $B'$ and $A'$, respectively, and
@@ -192,22 +169,18 @@ Problems
     $E$, respectively. Let $M$ be the midpoint of $AD$, and
     let $N$ be the midpoint of $BE$. Show that
     $\angle ABM = \angle BAN$.
-
     ]]]
 
-13. [[[
-    (ELMO shortlist 2012) Let $\triangle ABC$ be an acute triangle
+13. [[[(ELMO shortlist 2012) Let $\triangle ABC$ be an acute triangle
     with circumcenter $O$ such that $AB<AC$, let $Q$ be the
     intersection of the external bisector of $\angle A$ with
     $BC$, and let $P$ be a point in the interior of
     $\triangle ABC$ such that $\triangle BPA$ is similar to
     $\triangle APC$. Show that
     $\angle QPA + \angle OQB = 90^{\circ}$.
-
     ]]]
 
-14. [[[
-    (ELMO 2009) Let $ABC$ be a triangle such that $AB < AC$. Let
+14. [[[(ELMO 2009) Let $ABC$ be a triangle such that $AB < AC$. Let
     $P$ lie on a line through $A$ parallel to line $BC$ such
     that $C$ and $P$ are on the same side of line $AB$. Let
     $M$ be the midpoint of segment $BC$. Define $D$ on
@@ -217,11 +190,9 @@ Problems
     $AD$ intersect at $Q$, that lines $PD$ and $AB$
     intersect at $R$, and that $S$ is the midpoint of segment
     $DT$, prove that $Q$, $R$, and $S$ are collinear.
-
     ]]]
 
-15. [[[
-    (Mock USAMO 2008) Let $ABC$ be a triangle, and let the excircle
+15. [[[(Mock USAMO 2008) Let $ABC$ be a triangle, and let the excircle
     opposite $A$ be tangent to $BC$, $CA$, and $AB$ at
     $D$, $E$, and $F$, respectively. Let $AD$ meet
     $EF$ at $P$ and intersect the excircle again at $G$. Let
@@ -229,11 +200,9 @@ Problems
     intersection point of the circumcircles of $\triangle MFB$ and
     $\triangle MEC$. Prove that $PQ$ is perpendicular to
     $BC$.
-
     ]]]
 
-16. [[[
-    (RMM 2010) Let $A_1A_2A_3A_4$ be a quadrilateral with no pair of
+16. [[[(RMM 2010) Let $A_1A_2A_3A_4$ be a quadrilateral with no pair of
     parallel sides. For each $i=1, 2, 3, 4$, define $\omega_1$
     to be the circle touching the quadrilateral externally, and which is
     tangent to the lines $A_{i-1}A_i, A_iA_{i+1}$ and
@@ -243,16 +212,13 @@ Problems
     Prove that the lines $A_1A_2, A_3A_4$ and $T_2T_4$ are
     concurrent if and only if the lines $A_2A_3, A_4A_1$ and
     $T_1T_3$ are concurrent.
-
     ]]]
 
-17. [[[
-    (ISL 2004) Given a cyclic quadrilateral $ABCD$, let $M$ be
+17. [[[(ISL 2004) Given a cyclic quadrilateral $ABCD$, let $M$ be
     the midpoint of the side $CD$, and let $N$ be a point on the
     circumcircle of triangle $ABM$. Assume that the point $N$ is
     different from the point $M$ and satisfies
     $\frac{AN}{BN}=\frac{AM}{BM}$. Prove that the points $E$,
     $F$, $N$ are collinear, where $E=AC\cap BD$ and
     $F=BC\cap DA$.
-
     ]]]

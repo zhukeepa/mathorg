@@ -32,7 +32,9 @@
       %br/
       = render 'search/search_results', results: results, empty_message: ""
     - else 
-      There are currently no problems classified under this topic, and no problems with solutions classified under this topic.
+      %br/
+      %em
+        There are currently no problems classified under this topic, and no problems with solutions classified under this topic.
   #explanations{class: "tab-pane fade"}
     = render 'search/search_results', results: @topic.explanations, empty_message: "There are currently no explanations classified under this topic."
 
