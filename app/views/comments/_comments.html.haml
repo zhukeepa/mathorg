@@ -1,16 +1,15 @@
 %div
   %em
-    %strong
-      %a{href:"javascript:;", class: 'show-comments-button'} Comments
+    %a{href:"javascript:;", class: 'show-comments-button'} View comments
 
-  .comments{style: 'display:none', data: {class: "#{commentable.class.to_s}", id: "#{commentable.id}"}}
-    %br/
+  .comments{style: 'padding:15px; display:none', data: {class: "#{commentable.class.to_s}", id: "#{commentable.id}"}}
     = render 'comments/comment_list', commentable: commentable
 
     - if user_signed_in?
-      %em 
-        %a{href:"javascript:;", class: 'show-comment-form-button'} Add comment
+      %a{href:"javascript:;", class: 'show-comment-form-button btn btn-default'} Add comment
+      %br/
+      %br/
       .comment-form{style: 'display:none'}
         = simple_form_for commentable.comments.build, url: "javascript:;" do |f|
           = f.input :comment, input_html: { rows: long_entry_row_num }, label: false  ##::TODO_LATER:: long_entry_row_num lmao; fix this when actual design happens
-          = f.button :submit, 'Add comment'
+          = f.button :submit, 'Submit comment'

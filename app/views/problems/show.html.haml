@@ -9,14 +9,18 @@
 = @problem.id
 
 = render 'topicables/topic_list', topicable: @problem
-%br/
-
+- if @problem.is_original? && @problem.duplicates.size > 0
+  %strong Duplicate problem(s): 
+  = raw(@problem.duplicates.map do |p|
+    - link_to p.description, p
+  - end.join(', '))
 - if @problem.is_duplicate?
   %br/
-  This problem is a duplicate. The original can be found 
-  = link_to 'here.', @problem.original
-  %br/
+  %em
+    This problem is a duplicate. The original can be found 
+    = link_to 'here.', @problem.original
 
+%br/
 - if not @problem.author.nil? and @problem.author != ''
   %strong Author:
   = @problem.author
@@ -28,8 +32,6 @@
 %br/
 
 - if user_signed_in?
-  %br/
-  %br/
   .btn-group
     = link_to 'Edit', edit_problem_path(@problem), { class: "btn btn-default" }
     = link_to 'Destroy', problem_path(@problem), { class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } }
@@ -38,18 +40,15 @@
   = render 'markings', { problem: @problem }
   
   %br/
-  %br/
-
   %a{class: "merge_button", href:"javascript:;"} Repeated problem?
   = render 'merge'
+
+  = render 'votables/votes'  , { votable: @problem, scope: 'quality', disp_text: 'Writeup quality' }
+  = render 'votables/ratings', { votable: @problem, scope: 'elegance', lower: -2, upper: 2 }
+  = render 'votables/ratings', { votable: @problem, scope: 'instructiveness', lower: 0, upper: 2 }
+  = render 'votables/ratings', { votable: @problem, scope: 'difficulty', lower: -2, upper: 2, show_average: false }
+
 %br/
-
-- if @problem.is_original? && @problem.duplicates.size > 0
-  Duplicate problems: 
-  = raw(@problem.duplicates.map do |p|
-    - link_to p.description, p
-  - end.join(', '))
-
 %br/
 
 %h3 Solutions

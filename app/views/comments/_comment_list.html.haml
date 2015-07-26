@@ -6,11 +6,18 @@
       - comments.each do |comment| 
         .list-group-item
           %strong
-            = link_to comment.user.username, comment.user
+            = link_to "#{comment.user.username}", comment.user
+          %br/
+          = comment.created_at.strftime('%B %d, %Y %H:%M:%S')
+          %br/
           %br/
           = raw(RichText.new(text: comment.comment).to_html)
-          %br/
-          %br/
-          = render 'votables/votes', { votable: comment }
+          - if comment.user == current_user
+            = surround '(', ')' do 
+              = link_to raw('<em>Edit</em>'), edit_comment_path(comment)
+              | 
+              = link_to raw('<em>Delete</em>'), comment_path(comment), { method: :delete, data: { confirm: 'Are you sure?' } }
   - else
     %em No comments have been submitted yet. 
+    %br/
+    %br/

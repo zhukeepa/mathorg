@@ -1,44 +1,35 @@
 - if solution.hints.size > 0
   %strong 
     %u
-      %span>
-        %a{href:"javascript:;", style: 'color:#000000;', class: 'show_hint', data: {id: "#{solution.id}"}} Show hint
+      %a{href:"javascript:;", style: 'color:#000000;', class: 'show_hint', data: {id: "#{solution.id}"}}> Show hint
 
   - for i in 0...solution.hints.size
     .hint{style: "display:none", class: "hint", data: {id: "#{i}"}}
       %strong 
         = "Hint #{i+1}:"
       = raw(RichText.new(text: solution.hints[i]).to_html)
-      %br/
   %br/
 
 %strong
   %u
-    %span>
-      %a{href:"javascript:;", style: 'color:#000000;', class: "show_solution" } Show solution
+    %a{href:"javascript:;", style: 'color:#000000;', class: "show_solution"}> Show solution
 
 %br/
 %br/
 .solution{id: "solution#{solution.id}", style: "display:none"}
-  = raw(RichText.new(text: solution.body).to_html)
-  %br/
-  %br/
-  = render 'comments/comments', commentable: solution 
-  %br/
-  %br/
   = render 'topicables/topic_list', topicable: solution
-  = render 'votables/votes'  , { votable: solution, scope: 'quality', disp_text: 'Writeup quality' }
-  = render 'votables/ratings', { votable: solution, scope: 'elegance', lower: -2, upper: 2 }
-  = render 'votables/ratings', { votable: solution, scope: 'instructiveness', lower: 0, upper: 2 }
-  = render 'votables/ratings', { votable: solution, scope: 'difficulty', lower: -2, upper: 2, show_average: false }
-  = link_to 'Confused about the ratings?', ratings_guide_path
+  %br/
+  = raw(RichText.new(text: solution.body).to_html)
   - if solution.author == current_user
     %br/
     %br/
     .btn-group
       = link_to "Edit solution", edit_problem_solution_path(@problem, solution), { class: "btn btn-default" }
       = link_to('Destroy solution', problem_solution_path(@problem, solution), { class: "btn btn-default", method: 'delete', data: { confirm: 'Are you sure?' } })
-  
+  %br/
+  %br/
+  = render 'comments/comments', commentable: solution
+
 %br/
 %em 
   = "Solution submitted by "

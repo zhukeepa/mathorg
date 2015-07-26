@@ -37,7 +37,7 @@ class ExplanationsController < ApplicationController
   def destroy
     @explanation.destroy
 
-    render text: 'Your explanation has been deleted.'
+    render text: "Your explanation has been destroyed." 
   end
 
 private

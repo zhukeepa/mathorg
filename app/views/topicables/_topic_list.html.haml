@@ -1,6 +1,6 @@
 - topics = topicable.specificest_topics
 - if !(defined? name) || name.nil?
-  - name = topicable.class.topics_name.capitalize.to_s
+  - name = topicable.class.topics_name.capitalize.to_s.singularize
 - label = (name || "Topic").pluralize(topics.size) + ':'
 
 .topic-list{ data: { class: "#{topicable.class}", id: "#{topicable.id}", name: name } }
