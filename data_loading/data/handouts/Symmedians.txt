@@ -4,8 +4,8 @@ Author(s): Alex Zhu
 Description: Handout from Blue MOP 2014
 Topics: Symmedians
 >>>
-*Note:*[[[ Many problems here are taken from Yufei Zhao’s olympiad
-geometry handout.]]]
+*Note:* Many problems here are taken from Yufei Zhao’s olympiad
+geometry handout.
 
 Useful Facts
 ============
@@ -28,14 +28,14 @@ Basic Properties
 Harmonic Quadrilaterals
 -----------------------
 
-1.  [[[Let $ABCD$ be a cyclic quadrilateral. Then the tangents to the
+1.  Let $ABCD$ be a cyclic quadrilateral. Then the tangents to the
     circumcircle at $B$ and $D$ concur with diagonal $AC$ if
     and only if $AB \cdot CD = AD \cdot BC$. Conclude that the
     tangents to the circumcircle at $B$ and $D$ concur with
     diagonal $AC$ if and only if the tangents to the circumcircle at
     $A$ and $C$ concur with diagonal $BD$. (A quadrilateral
     satisfying $AB \cdot CD = AD \cdot BC$ is called a *harmonic
-    quadrilateral*.)]]]
+    quadrilateral*.)
 
 2.  [[[Let $ABCD$ be a harmonic quadrilateral. Let its diagonals
     intersect at $E$, and let the tangents to its circumcircle at
@@ -256,4 +256,3 @@ Problems
     $F=BC\cap DA$.
 
     ]]]
-

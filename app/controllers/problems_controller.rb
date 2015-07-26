@@ -32,9 +32,6 @@ class ProblemsController < ApplicationController
     else 
       @problem.unmark(markable)
     end
-
-    # ::TODO:: xcxc what to render for nothing's? 
-    render text: "cool"
   end
 
   def create

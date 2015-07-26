@@ -1,0 +1,1 @@
+$(".markings").html("<%= j (render 'markings', { problem: @problem }) %>");

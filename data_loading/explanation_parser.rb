@@ -1,13 +1,16 @@
 latest = "YS-trig-blue.txt"
 
-# Format:
+# Format:             "#{Rails.root}/data_loading/data/handouts/#{latest}",
 # <<<Title: [explanation title]
 # Author(s): [comma-separated list of explanation titles]
 # Description: [description]
 # Topics: [comma-separated list of topics]>>>
 # [Everything after is the body of the post]
 default_user = User.find(1)
-filenames = ["#{Rails.root}/data_loading/data/handouts/#{latest}"]
+filenames = ["#{Rails.root}/data_loading/data/handouts/Symmedians.txt", 
+             "#{Rails.root}/data_loading/data/handouts/blue-weights-and-coloring.txt",
+             "#{Rails.root}/data_loading/data/handouts/black-integer-polynomials.txt",
+             "#{Rails.root}/data_loading/data/handouts/inversion.txt"]
 filenames.each do |fn|
   file = File.open(fn, "rb")
   content = file.read 
@@ -29,7 +32,7 @@ filenames.each do |fn|
   prev_problem = nil
   content.gsub!(/\[\[\[(.*?)\]\]\]|\(\(\((.*?)\)\)\)/m) do |match| 
     if !$1.nil? && !$1.empty? 
-      prev_problem = Problem.new(description: "Problem from #{e.title} handout", body: $1, topics_string: e.topics_string)
+      prev_problem = Problem.new(description: "Problem from handout \"#{e.title}\"", body: $1, topics_string: e.topics_string)
       prev_problem.save!
       next "[problem]#{prev_problem.id}[/problem]"
     end

@@ -4,6 +4,10 @@
 = render 'sources', problem: @problem
 %br/
 
+%strong
+  Id: 
+= @problem.id
+
 = render 'topicables/topic_list', topicable: @problem
 %br/
 
@@ -31,7 +35,7 @@
     = link_to 'Destroy', problem_path(@problem), { class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } }
   %br/
   %br/
-  = render 'markings', {problem: @problem}
+  = render 'markings', { problem: @problem }
   
   %br/
   %br/

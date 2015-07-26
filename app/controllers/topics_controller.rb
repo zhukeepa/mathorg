@@ -8,7 +8,7 @@ class TopicsController < ApplicationController
 
   def index
   	#@root_topics = Topic.all.keep_if { |t| t.parents.size == 0 }
-    @topics = Topic.all # find_by_name("Math contests")
+    @topic = Topic.where(name: "Math contests").first
   end
 
   def new

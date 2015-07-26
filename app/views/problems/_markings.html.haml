@@ -1,18 +1,18 @@
-- ##::TODO:: make this page a little less retarded
-- if current_user.problems_marked_as(:favorite).include?(problem)
-  %em 
-    = link_to 'Favorited', problem_mark_path(problem, markable: :favorite), remote: true 
-- else 
-  = link_to 'Favorite', problem_mark_path(problem, markable: :favorite), remote: true 
-| 
-- if current_user.problems_marked_as(:working_on).include?(problem)
-  %em 
-    = link_to 'Working on', problem_mark_path(problem, markable: :working_on), remote: true 
-- else 
-  = link_to 'Mark as working on ', problem_mark_path(problem, markable: :working_on), remote: true 
-| 
-- if current_user.problems_marked_as(:solved).include?(problem)
-  %em
-    = link_to 'Solved', problem_mark_path(problem, markable: :solved), remote: true
-- else
-  = link_to 'Mark as solved', problem_mark_path(problem, markable: :solved), remote: true
+.markings
+  - if current_user.problems_marked_as(:favorite).include?(problem)
+    %em 
+      = link_to 'Favorited', problem_mark_path(problem, markable: :favorite), remote: true 
+  - else 
+    = link_to 'Favorite', problem_mark_path(problem, markable: :favorite), remote: true 
+  | 
+  - if current_user.problems_marked_as(:working_on).include?(problem)
+    %em 
+      = link_to 'Working on', problem_mark_path(problem, markable: :working_on), remote: true 
+  - else 
+    = link_to 'Mark as working on ', problem_mark_path(problem, markable: :working_on), remote: true 
+  | 
+  - if current_user.problems_marked_as(:solved).include?(problem)
+    %em
+      = link_to 'Solved', problem_mark_path(problem, markable: :solved), remote: true
+  - else
+    = link_to 'Mark as solved', problem_mark_path(problem, markable: :solved), remote: true

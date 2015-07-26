@@ -18,6 +18,13 @@ class ExplanationsController < ApplicationController
     end
   end
 
+  def index 
+    @explanations = Explanation.where(title: ["Symmedians", 
+                                              "Weights & Coloring", 
+                                              "Integer Polynomials", 
+                                              "Inversion"])
+  end
+
   def update
     @explanation.update(explanation_params)
 

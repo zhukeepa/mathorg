@@ -128,7 +128,7 @@ Topics: Integer polynomials
     $f(n)|n^{n-1}-1$ for all sufficiently large $n$.]]]
 
 25. [[[For a non-zero integer $n$, let $d(n)$ denote the number of
-    positive integer divisors of $|n|$.]]]
+    positive integer divisors of $|n|$.
 
     1.  For any polynomial $f(x)$ having integer coefficients and
         no integer roots, prove that the largest primes divisor of

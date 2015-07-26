@@ -1,6 +1,6 @@
 Mathorg::Application.routes.draw do
   get "static_pages/ratings_guide"
-  root "problem_sets#index"
+  root "explanations#index"
 
   get "ratings_guide" => "static_pages#ratings_guide" 
   post "services/preview" => "services#preview"
