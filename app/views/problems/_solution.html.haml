@@ -17,11 +17,11 @@
 %br/
 %br/
 .solution{id: "solution#{solution.id}", style: "display:none"}
-  = render 'topicables/topic_list', topicable: solution
-  %br/
   = raw(RichText.new(text: solution.body).to_html)
+  %br/
+  %br/
+  = render 'topicables/topic_list', topicable: solution
   - if solution.author == current_user
-    %br/
     %br/
     .btn-group
       = link_to "Edit solution", edit_problem_solution_path(@problem, solution), { class: "btn btn-default" }
