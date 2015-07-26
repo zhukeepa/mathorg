@@ -8,9 +8,11 @@
 %br/
 %br/
 
-.btn-group
-  = link_to('Edit', { action: "edit" }, { class: "btn btn-default", method: 'get' }) 
-  = link_to('Destroy', {}, { class: "btn btn-default", method: 'delete' })
+
+- if user_signed_in?
+  .btn-group
+    = link_to('Edit', { action: "edit" }, { class: "btn btn-default", method: 'get' }) 
+    = link_to('Destroy', {}, { class: "btn btn-default", method: 'delete', data: { confirm: 'Are you sure?' } })
 
 %br/
 %br/

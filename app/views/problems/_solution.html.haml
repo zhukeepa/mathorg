@@ -37,7 +37,7 @@
     %br/
     .btn-group
       = link_to "Edit solution", edit_problem_solution_path(@problem, solution), { class: "btn btn-default" }
-      = link_to('Destroy solution', problem_solution_path(@problem, solution), { class: "btn btn-default", method: 'delete' })
+      = link_to('Destroy solution', problem_solution_path(@problem, solution), { class: "btn btn-default", method: 'delete', data: { confirm: 'Are you sure?' } })
   
 %br/
 %em 

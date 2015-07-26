@@ -1,6 +1,6 @@
 class ExplanationsController < ApplicationController
   before_action :set_explanation, only: [:edit, :update, :show, :destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:show]
   
   def new 
     @explanation = Explanation.new(body: RichText.new, authors_string: current_user.username)
