@@ -1,5 +1,5 @@
 ready = function(){ 
-  $(".contest_link").on("click", function(event) {
+  $(".contest-link").on("click", function(event) {
     //console.log("#" + this.id + "_list");
     $("#" + this.id + "_list").slideToggle(350);
   });

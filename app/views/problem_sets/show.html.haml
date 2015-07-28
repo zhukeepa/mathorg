@@ -4,15 +4,12 @@
 %ol
   - @problems.each do |p|
     %li
-      = link_to "(Link)", p 
-      %br/
       = raw(RichText.new(text: p.body).to_html)
+      = link_to "(Link)", p 
       %br/
       %br/
 
 
 %br/
 - if user_signed_in? 
-  .btn-group
-    = link_to('Edit', { action: "edit" }, { class: "btn btn-default", method: 'get' }) 
-    = link_to('Destroy', {}, { class: "btn btn-default", method: 'delete', data: { confirm: 'Are you sure?' } })
+  = link_to('Edit', { action: "edit" }, { class: "btn btn-default", method: 'get' }) 
