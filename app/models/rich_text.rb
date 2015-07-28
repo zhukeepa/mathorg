@@ -15,7 +15,7 @@ class RichText < ActiveRecord::Base
   belongs_to :bodyable, polymorphic: true
   
   def to_html
-    markdown_to_html(self.text.bbcode_to_html).gsub(/<pre><code>(.*?)<\/code><\/pre>/m) { next $1 }
+    self.text.bbcode_to_html.gsub("\n", "<br/>").gsub(/<pre><code>(.*?)<\/code><\/pre>/m) { next $1 }
   end
 
   def to_html_with_custom_replacements

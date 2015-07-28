@@ -38,7 +38,11 @@ class Problem < ActiveRecord::Base
   end
 
   def description_maybe_empty
-    (description.length > 0) ? description : "No description yet — click to add one!"
+    (description.length > 0) ? description : "No description"
+  end
+
+  def body_formatted
+    RichText.new(text: self.body).to_html
   end
 
   def is_duplicate?

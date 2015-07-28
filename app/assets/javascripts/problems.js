@@ -25,14 +25,23 @@ var ready = function() {
 
   $(".show_solution").on("click", function(e) { 
     $(this).closest("div").find(".solution").slideToggle(350);
+    $(this).blur(); 
   });
 
   $(".show_hint").on("click", function(e) { 
     show_next_hint($(this));
+    $(this).blur(); 
   });
 
-  $(".merge_button").on("click", function(e) { 
+  $(".merge-button").on("click", function(e) { 
     $(this).parent().find(".merge").slideToggle(350);
+    $(this).blur(); 
+  });
+
+  $('body').on('click', '.best_in_place', function(e) { 
+    if (e.target.value == "Update") { 
+      setTimeout(function(){MathJax.Hub.Queue(["Typeset", MathJax.Hub, $('#preview')[0]])}, 500);
+    }
   });
 };
 

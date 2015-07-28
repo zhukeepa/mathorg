@@ -35,6 +35,10 @@ class Solution < ActiveRecord::Base
     self.hints.map { |h| "* #{h}\n\n" }.join.rstrip
   end
 
+  def body_formatted
+    RichText.new(text: self.body).to_html
+  end
+
   # Takes in a list of hints, listed by asterisks, like: 
   # --- 
   # * Hint 1

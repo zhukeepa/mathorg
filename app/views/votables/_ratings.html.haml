@@ -12,6 +12,15 @@
     - # if disp_text is supplied, use that. Otherwise use the name of scope. Otherwise go with "Rating".
     = (disp_text || scope || "Rating").capitalize + ':'
 
+  - n = votable.get_upvotes(vote_scope: scope).size
+  - if n > 0
+    - average = votable.get_upvotes(vote_scope: scope).sum(:vote_weight).to_f / n
+    - hovertext = (defined? rating_meanings) ? rating_meanings.map { |k, v| "#{k}: #{v}" }.join("\n").strip : ""
+    %span{title: hovertext}
+      = "#{average} (#{n} #{'rating'.pluralize(n)})"
+  -  else 
+    No ratings yet
+
   - if user_signed_in?
     - # votable.get_upvotes(stuff) should be an array with either 1 or 0 elements
     - current_user_vote = votable.get_upvotes(vote_scope: scope, voter_id: current_user.id)[0]
@@ -22,17 +31,9 @@
         - path = rate_path(rating: i, votable_id: votable.id, votable_type: votable.class, | 
           scope: scope, disp_text: disp_text, lower: lower, upper: upper, show_average: show_average)
         - text = (current_user_vote == i) ? raw("<strong>#{i}</strong>") : i
-        = link_to text, path, { method: :post, remote: true }
+        - title = ((defined? rating_meanings) && (rating_meanings != nil) && (rating_meanings[i.to_s] != nil)) ? rating_meanings[i.to_s] : ""
+        = link_to text, path, { method: :post, remote: true, title: title }
 
         - # Don't display a separator pipe if you're at the end
         - if i != upper
           | 
-
-
-  = surround '( ', ' )' do
-    - n = votable.get_upvotes(vote_scope: scope).size
-    - if show_average && show_average != "false"
-      = votable.get_upvotes(vote_scope: scope).sum(:vote_weight).to_f / n
-      avg, 
-    = n
-    = "rating".pluralize(n) + " total"

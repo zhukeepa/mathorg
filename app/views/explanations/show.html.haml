@@ -7,13 +7,11 @@
 %strong Description:
 = @explanation.description
 = render 'topicables/topic_list', topicable: @explanation
-= render 'votables/votes', { votable: @explanation }
+= #render 'votables/votes', { votable: @explanation }
 %br/
 
-- if user_signed_in? && (@explanation.users.include?(current_user) || @explanation.users.empty?)
-  .btn-group
-    = link_to('Edit', { action: "edit" }, { class: "btn btn-default", method: 'get' }) 
-    = link_to('Destroy', {}, { class: "btn btn-default", method: 'delete', data: { confirm: 'Are you sure?' } })
+- if user_signed_in?
+  = link_to('Edit', { action: "edit" }, { class: "btn btn-default", method: 'get' }) 
 %br/
 %br/
 

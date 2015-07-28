@@ -4,21 +4,33 @@
 - if not defined? disp_text
   - disp_text = nil
 
+- if not defined? no_colon
+  - no_colon = false
+
+- if not defined? up_sym
+  - up_sym = "++"
+
+- if not defined? down_sym
+  - down_sym = "--"
+
 .vote{id: "#{votable.class}_#{votable.id}_#{format_scope(scope)}_vote"}
-  %strong
-    - # if disp_text is supplied, use that. Otherwise use the name of scope. Otherwise go with "Rating".
-    = (disp_text || scope || "Votes").capitalize + ':'
+  - if disp_text != ""
+    %strong
+      - # if disp_text is supplied, use that. Otherwise use the name of scope. Otherwise go with "Rating".
+      = (disp_text || scope || "Rating").capitalize + (no_colon ? '' : ':')
   = surround '( ', ' )' do 
     - if user_signed_in?
-      = link_to "++", upvote_path(votable_id: votable.id, votable_type: votable.class, scope: scope, disp_text: disp_text), | 
-      method: :post, remote: true
+      - has_upvoted = !votable.get_upvotes(vote_scope: scope, voter_id: current_user.id)[0].nil?
+      - text = has_upvoted ? raw("<strong>#{up_sym}</strong>") : up_sym
+      = link_to text, upvote_path(votable_id: votable.id, votable_type: votable.class, scope: scope, disp_text: disp_text, no_colon: no_colon, up_sym: up_sym, down_sym: down_sym), method: :post, remote: true
     - else
       ++
     = votable.get_upvotes(vote_scope: scope).size
     |
     - if user_signed_in?
-      = link_to "--", downvote_path(votable_id: votable.id, votable_type: votable.class, scope: scope, disp_text: disp_text), |
-      method: :post, remote: true
+      - has_upvoted = !votable.get_downvotes(vote_scope: scope, voter_id: current_user.id)[0].nil?
+      - text = has_upvoted ? raw("<strong>#{down_sym}</strong>") : down_sym
+      = link_to text, downvote_path(votable_id: votable.id, votable_type: votable.class, scope: scope, disp_text: disp_text, no_colon: no_colon, up_sym: up_sym, down_sym: down_sym), method: :post, remote: true
     - else
       = '--'
     = votable.get_downvotes(vote_scope: scope).size

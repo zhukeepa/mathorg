@@ -13,24 +13,23 @@
 %strong
   %u
     %a{href:"javascript:;", style: 'color:#000000;', class: "show_solution"}> Show solution
-
-%br/
-%br/
 .solution{id: "solution#{solution.id}", style: "display:none"}
+  %br/
   = raw(RichText.new(text: solution.body).to_html)
   %br/
   %br/
-  = render 'topicables/topic_list', topicable: solution
-  - if solution.author == current_user
-    %br/
-    .btn-group
-      = link_to "Edit solution", edit_problem_solution_path(@problem, solution), { class: "btn btn-default" }
-      = link_to('Destroy solution', problem_solution_path(@problem, solution), { class: "btn btn-default", method: 'delete', data: { confirm: 'Are you sure?' } })
-  %br/
+  %div
+    %div{style: "float:right;"}
+      - if solution.author == current_user
+        = link_to '(Edit)', edit_problem_solution_path(solution.problem, solution)
+    %div
+      = render 'topicables/topic_list', topicable: solution
   %br/
   = render 'comments/comments', commentable: solution
-
 %br/
-%em 
+%br/
+%em
   = "Solution submitted by "
   = link_to solution.author.username, solution.author
+
+= render 'votables/votes', { votable: solution, disp_text: "" }

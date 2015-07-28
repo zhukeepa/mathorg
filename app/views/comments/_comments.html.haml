@@ -1,6 +1,5 @@
 %div
-  %em
-    %a{href:"javascript:;", class: 'show-comments-button'} View comments
+  %a{href:"javascript:;", class: 'show-comments-button btn btn-default'} View comments
 
   .comments{style: 'padding:15px; display:none', data: {class: "#{commentable.class.to_s}", id: "#{commentable.id}"}}
     = render 'comments/comment_list', commentable: commentable

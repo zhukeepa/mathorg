@@ -1,0 +1,10 @@
+- if problem.is_original? && problem.duplicates.size > 0
+  %strong Duplicate problem(s): 
+  = raw(problem.duplicates.map do |p|
+    - link_to p.description, p
+  - end.join(', '))
+- if problem.is_duplicate?
+  %br/
+  %em
+    This problem is a duplicate. The original can be found 
+    = link_to 'here.', problem.original

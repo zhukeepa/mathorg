@@ -1,24 +1,18 @@
-%h3
-  = best_in_place_if user_signed_in?, @problem, :description, as: :input, display_as: :description_maybe_empty
+%div
+  %div{style: "float:right;"}
+    - if user_signed_in?
+      = link_to '(Edit)', edit_problem_path(@problem)
+  %div
+    %h3
+      = raw(RichText.new(text: @problem.description_maybe_empty).to_html)
 
 = render 'sources', problem: @problem
 %br/
 
-%strong
-  Id: 
-= @problem.id
-
 = render 'topicables/topic_list', topicable: @problem
-- if @problem.is_original? && @problem.duplicates.size > 0
-  %strong Duplicate problem(s): 
-  = raw(@problem.duplicates.map do |p|
-    - link_to p.description, p
-  - end.join(', '))
-- if @problem.is_duplicate?
-  %br/
-  %em
-    This problem is a duplicate. The original can be found 
-    = link_to 'here.', @problem.original
+= render 'votables/ratings', { votable: @problem, scope: 'difficulty', lower: 1, upper: 8, rating_meanings: difficulty_rating_meanings }
+= render 'votables/ratings', { votable: @problem, scope: 'elegance', lower: -2, upper: 2, rating_meanings: elegance_rating_meanings }
+= render 'duplicate_problems', problem: @problem
 
 %br/
 - if not @problem.author.nil? and @problem.author != ''
@@ -30,23 +24,16 @@
 
 %br/
 %br/
-
 - if user_signed_in?
-  .btn-group
-    = link_to 'Edit', edit_problem_path(@problem), { class: "btn btn-default" }
-    = link_to 'Destroy', problem_path(@problem), { class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } }
-  %br/
   %br/
   = render 'markings', { problem: @problem }
-  
   %br/
-  %a{class: "merge_button", href:"javascript:;"} Repeated problem?
+  %br/
+
+- if user_signed_in? 
+  %a{class: "merge-button", href:"javascript:;"} Repeated problem?
   = render 'merge'
 
-  = render 'votables/votes'  , { votable: @problem, scope: 'quality', disp_text: 'Writeup quality' }
-  = render 'votables/ratings', { votable: @problem, scope: 'elegance', lower: -2, upper: 2 }
-  = render 'votables/ratings', { votable: @problem, scope: 'instructiveness', lower: 0, upper: 2 }
-  = render 'votables/ratings', { votable: @problem, scope: 'difficulty', lower: -2, upper: 2, show_average: false }
 %br/
 %br/
 
