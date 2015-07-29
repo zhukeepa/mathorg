@@ -1,8 +1,7 @@
-- favorite_text = current_user.problems_marked_as(:favorite).include?(problem) ? '<em>Favorited</em>' : 'Mark as favorite'
-- working_on_text = current_user.problems_marked_as(:working_on).include?(problem) ? '<em>Working on</em>' : 'Mark as working on'
-- solved_text = current_user.problems_marked_as(:solved).include?(problem) ? '<em>Solved</em>' : 'Mark as solved'
+- favorite_text = current_user.problems_marked_as(:favorite).include?(problem) ? '<strong>Favorited</strong>' : 'Mark as favorite'
+- working_on_text = current_user.problems_marked_as(:working_on).include?(problem) ? '<strong>Working on</strong>' : 'Mark as working on'
+- solved_text = current_user.problems_marked_as(:solved).include?(problem) ? '<strong>Solved</strong>' : 'Mark as solved'
 .markings
-  .btn-group
-    = link_to raw(favorite_text), problem_mark_path(problem, markable: :favorite), { class: "btn btn-default btn-smll", remote: true }
-    = link_to raw(working_on_text), problem_mark_path(problem, markable: :working_on), { class: "btn btn-default btn-small", remote: true } 
-    = link_to raw(solved_text), problem_mark_path(problem, markable: :solved), { class: "btn btn-default btn-small", remote: true }
+  = link_to raw(favorite_text), problem_mark_path(problem, markable: :favorite), { class: "btn btn-default btn-small", remote: true, style: "width: 150px !important;" }
+  = link_to raw(working_on_text), problem_mark_path(problem, markable: :working_on), { class: "btn btn-default btn-small", remote: true, style: "width: 150px !important;" } 
+  = link_to raw(solved_text), problem_mark_path(problem, markable: :solved), { class: "btn btn-default btn-small", remote: true, style: "width: 150px !important;" }
