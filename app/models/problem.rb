@@ -23,7 +23,7 @@ class Problem < ActiveRecord::Base
   markable_as :favorite, :working_on, :solved
 
   has_many :solutions
-  has_and_belongs_to_many :sources, class_name: 'ProblemSet'
+  belongs_to :problem_set
 
   belongs_to :original, class_name: 'Problem'
   has_many :duplicates, class_name: 'Problem', foreign_key: :original_id
@@ -33,8 +33,12 @@ class Problem < ActiveRecord::Base
     self.original ||= self 
   end 
 
-  def sources_string
-    sources.map(&:name).join(', ')
+  def solutions_sorted
+    self.solutions.sort_by { |s| -s.rating }
+  end
+
+  def problem_set_with_name_source
+    ProblemSet.where(name: source).first
   end
 
   def description_maybe_empty

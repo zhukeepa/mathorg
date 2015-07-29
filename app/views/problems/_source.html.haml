@@ -1,0 +1,10 @@
+- source = problem.source
+- if !source.nil? && !source.empty? 
+  %strong 
+    = "Source:"
+  - ps = problem.problem_set_with_name_source
+  - if ps.nil?
+    = source
+  - else 
+    = link_to ps.name, ps
+  %br/

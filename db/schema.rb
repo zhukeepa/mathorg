@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150726035619) do
+ActiveRecord::Schema.define(version: 20150729030745) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -97,9 +97,11 @@ ActiveRecord::Schema.define(version: 20150726035619) do
     t.datetime "updated_at"
     t.text     "description"
     t.integer  "original_id"
+    t.integer  "problem_set_id"
   end
 
   add_index "problems", ["original_id"], name: "index_problems_on_original_id", using: :btree
+  add_index "problems", ["problem_set_id"], name: "index_problems_on_problem_set_id", using: :btree
 
   create_table "rich_texts", force: :cascade do |t|
     t.text     "text"
@@ -175,4 +177,5 @@ ActiveRecord::Schema.define(version: 20150726035619) do
   add_index "votes", ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope", using: :btree
   add_index "votes", ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope", using: :btree
 
+  add_foreign_key "problems", "problem_sets"
 end

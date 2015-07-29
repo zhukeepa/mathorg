@@ -22,6 +22,8 @@
     %div{style: "float:right;"}
       - if solution.author == current_user
         = link_to '(Edit)', edit_problem_solution_path(solution.problem, solution)
+        |
+        = link_to '(Destroy)', problem_solution_path(solution.problem, solution), { method: :delete, data: { confirm: 'Are you sure?' } }
     %div
       = render 'topicables/topic_list', topicable: solution
   %br/

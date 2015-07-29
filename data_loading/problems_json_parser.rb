@@ -9,7 +9,7 @@ filenames.each do |filename|
   contest_hashes = ActiveSupport::JSON.decode(problems_json)
 
   contest_hashes.each do |c|
-    ps = ProblemSet.new({name: c["name"]})
+    ps = ProblemSet.create({name: c["name"]})
     p_ids = []
 
     problems = c["problems"] 
@@ -23,7 +23,6 @@ filenames.each do |filename|
     end
 
     ps.problem_ids = p_ids.join(',')
-    ps.save
   end
 
   file.close

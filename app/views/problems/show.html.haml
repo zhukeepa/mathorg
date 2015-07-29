@@ -6,19 +6,15 @@
     %h3
       = raw(RichText.new(text: @problem.description_maybe_empty).to_html)
 
-= render 'sources', problem: @problem
-%br/
-
-= render 'topicables/topic_list', topicable: @problem
-= render 'votables/ratings', { votable: @problem, scope: 'difficulty', lower: 1, upper: 8, rating_meanings: difficulty_rating_meanings }
-= render 'votables/ratings', { votable: @problem, scope: 'elegance', lower: -2, upper: 2, rating_meanings: elegance_rating_meanings }
-= render 'duplicate_problems', problem: @problem
-
-%br/
+= render 'source', problem: @problem
 - if not @problem.author.nil? and @problem.author != ''
   %strong Author:
   = @problem.author
   %br/
+= render 'topicables/topic_list', topicable: @problem
+= render 'votables/ratings', { votable: @problem, scope: 'difficulty', lower: 1, upper: 8, rating_meanings: difficulty_rating_meanings }
+= render 'votables/ratings', { votable: @problem, scope: 'elegance', lower: -2, upper: 2, rating_meanings: elegance_rating_meanings }
+= render 'duplicate_problems', problem: @problem
 %br/
 = raw(RichText.new(text: @problem.body).to_html)
 
@@ -41,7 +37,7 @@
 
 - if @problem.solutions.size > 0
   .row.list-group 
-    - @problem.solutions.sort_by(&:id).each do |solution| ##::TODO_LATER:: find a better problem sort. 
+    - @problem.solutions_sorted.each do |solution| ##::TODO_LATER:: find a better problem sort. 
       .list-group-item
         = render 'solution', solution: solution
 - else

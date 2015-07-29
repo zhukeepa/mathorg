@@ -27,6 +27,11 @@ class Solution < ActiveRecord::Base
     self.hints ||= []
   end
 
+  # ::TODO:: test this! and the sorting
+  def rating
+    (get_upvotes.size + 2)/(get_downvotes.size + 2)
+  end
+
   # ex: if hints == ["Hint 1", "Hint 2"], hint_string returns:
   # * Hint 1 
   # 

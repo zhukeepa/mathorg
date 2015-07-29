@@ -2,7 +2,7 @@ function preview(body_id, title_id, custom_replacements)
 {
   var body_text  = $("#" + body_id).val(); 
   if (typeof title_id !== 'undefined')
-    var title_text = '[b]' + $("#" + title_id).val() + '[/b]\n\n'
+    var title_text = '[size=24]' + $("#" + title_id).val() + '[/size]\n\n'
   else
     var title_text = ''; 
 

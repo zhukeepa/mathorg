@@ -14,7 +14,7 @@ class ProblemSet < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true
   acts_as_topicable
 
-  has_and_belongs_to_many :problems
+  has_many :problems
 
   # represents the permutation of the sorted list of problem id's corresponding to 
   # the ordering of the list of problems. 

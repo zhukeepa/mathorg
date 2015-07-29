@@ -1,5 +1,9 @@
 %li
-  = link_to topic.name, topic
+  - if topic.problems.empty? && topic.solutions.empty? && topic.explanations.empty?
+    - color = "red"
+  - else
+    - color = "green"
+  = link_to topic.name, topic, { style: "color:#{color}" }
   %ul
     - topic.children.each do |stopic|
       = render 'topic', topic: stopic
