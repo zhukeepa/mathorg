@@ -33,5 +33,5 @@
 %em
   = "Solution submitted by "
   = link_to solution.author.username, solution.author
-
-= render 'votables/votes', { votable: solution, disp_text: "" }
+%div{style: "float:right;"}
+  = render 'votables/votes', { votable: solution, disp_text: "" }
