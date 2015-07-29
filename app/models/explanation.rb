@@ -17,6 +17,7 @@ class Explanation < ActiveRecord::Base
   acts_as_votable
   acts_as_topicable
   serialize :authors, Array
+  searchkick
 
   has_many :explanation_authors
   has_many :users, through: :explanation_authors

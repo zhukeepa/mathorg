@@ -1,8 +1,8 @@
 Mathorg::Application.routes.draw do
-  get "static_pages/ratings_guide"
-  root "explanations#index"
+  root "topics#index"
 
-  get "ratings_guide" => "static_pages#ratings_guide" 
+  get "about" => "static_pages#about"
+
   post "services/preview" => "services#preview"
   get "search/results"
   get "search" => "search#index"
@@ -10,10 +10,6 @@ Mathorg::Application.routes.draw do
   post "upvote"   => "votables#upvote"
   post "downvote" => "votables#downvote"
   post "rate"     => "votables#rate"
-
-  get "feedback" => "feedbacks#index"
-  resources :feedbacks do 
-  end
 
   get "topicables/edit_topic_list"
   patch "topicables/update_topic_list"

@@ -1,17 +1,22 @@
-%h1= @explanation.title
+%div
+  %div{style: "float:right;"}
+    - if user_signed_in?
+      = link_to '(Edit)', edit_explanation_path(@explanation)
+  %div
+    %h1
+      = @explanation.title
 %em 
   by 
   = render 'author_list', explanation: @explanation
 %br/
 %br/
-%strong Description:
-= @explanation.description
+- if !@explanation.description.nil? && @explanation.description != '' 
+  %strong Description:
+  = @explanation.description
 = render 'topicables/topic_list', topicable: @explanation
-= #render 'votables/votes', { votable: @explanation }
+= render 'votables/votes', { votable: @explanation }
 %br/
 
-- if user_signed_in?
-  = link_to('Edit', { action: "edit" }, { class: "btn btn-default", method: 'get' }) 
 %br/
 %br/
 

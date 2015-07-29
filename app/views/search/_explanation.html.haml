@@ -5,6 +5,5 @@
   = f.input :authors, required: false
   = f.input :topics, required: false, url: autocomplete_topic_name_topics_path, as: :autocomplete, |
     'data-delimiter' => ', ', input_html: { class: "text optional form-control" }
-  = f.input :keywords, required: false
-  = f.input :search_type, as: :hidden, input_html: { value: "Explanation" }
+  = f.input :search_type, as: :hidden, input_html: { value: "explanation" }
   = f.button :submit, "Search"

@@ -9,20 +9,40 @@ class SearchController < ApplicationController
   end
 
 private 
-  def topic_search_results(params)
-  	@results = Topic.search(params[:name])
-  end
-
   def problem_search_results(params)
-    if params[:source] == ''
-    	#@results = Problem.search params[:keywords], fields: [:description, :body]
-      @results = Problem.all
-    else
-      @results = Problem.search params[:keywords], fields: [:description, :body], where: { source: [params[:source]]}
+    # ::TODO_LATER::
+    results = Problem.search params[:keywords], fields: [:body]
+    @results = []
+    results.each do |r| 
+      @results << r 
+    end
+
+    if params[:source] != ""
+      @results.keep_if { |p| p.source == params[:source] }
+    end
+    if params[:topics] != ""
+      topics = Set.new(params[:topics].split(',').map(&:strip))
+      @results.keep_if { |p| topics <= Set.new(p.topics.map(&:name)) }
     end
   end
 
   def explanation_search_results(params)
-    @results = Explanation.all
+    title = !params[:title].empty? ? params[:title] : "*"
+    
+    # ::TODO_LATER::
+    results = Explanation.search title, fields: [:title]
+    @results = []
+    results.each do |r| 
+      @results << r 
+    end
+
+    if params[:authors] != ""
+      authors = Set.new(params[:authors].split(',').map(&:strip))
+      @results.keep_if { |e| authors <= Set.new(e.authors) }
+    end
+    if params[:topics] != ""
+      topics = Set.new(params[:topics].split(',').map(&:strip))
+      @results.keep_if { |e| topics <= Set.new(e.topics.map(&:name)) }
+    end
   end
 end

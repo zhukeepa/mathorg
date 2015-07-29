@@ -1,4 +1,17 @@
 %h1 Search Results
 
 - #@search_type is either 'problem', 'topic', or 'explanation'; its value is passed in through the search form.
-= render "search_results", results: @results
+%br/
+- if @results.size == 0
+  %em
+    = "No results found"
+
+- foo = 'search/topic_result'
+.row.list-group 
+  - @results.each do |r|
+    .list-group-item
+      - case r.class.to_s
+      - when "Problem"
+        = render 'search/problem_result', problem: r
+      - when "Explanation"
+        = render 'search/explanation_result', explanation: r

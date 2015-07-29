@@ -37,6 +37,11 @@ class Problem < ActiveRecord::Base
     self.solutions.sort_by { |s| -s.rating }
   end
 
+  def problem_set=(ps)
+    super(ps)
+    self.source = ps.name 
+  end
+
   def problem_set_with_name_source
     ProblemSet.where(name: source).first
   end

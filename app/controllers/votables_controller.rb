@@ -28,7 +28,7 @@ class VotablesController < ApplicationController
       v.unliked_by current_user, vote_scope: params[:scope], vote: pos
     end
 
-    render 'votables/vote', locals: { votable: v, scope: params[:scope], disp_text: params[:disp_text], no_colon: params[:no_colon], up_sym: params[:up_sym], down_sym: params[:down_sym] }
+    render 'votables/vote', locals: { votable: v, scope: params[:scope], disp_text: params[:disp_text], up_sym: params[:up_sym], down_sym: params[:down_sym] }
   end
 
   def get_votable_from_id_and_class(id, type)

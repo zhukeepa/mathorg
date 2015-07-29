@@ -7,7 +7,7 @@
       = raw(RichText.new(text: @problem.description_maybe_empty).to_html)
 
 = render 'source', problem: @problem
-- if not @problem.author.nil? and @problem.author != ''
+- if !@problem.author.nil? and @problem.author != ''
   %strong Author:
   = @problem.author
   %br/
