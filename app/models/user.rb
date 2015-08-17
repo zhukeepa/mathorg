@@ -50,4 +50,16 @@ class User < ActiveRecord::Base
       where(conditions.to_h).first
     end
   end
+
+  def solved_problem?(problem)
+    problems_marked_as_solved.include?(problem)
+  end
+
+  def favorited_problem?(problem)
+    problems_marked_as_favorite.include?(problem)
+  end
+
+  def currently_working_on_problem?(problem)
+    problems_marked_as_working_on.include?(problem)
+  end
 end

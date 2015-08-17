@@ -33,13 +33,13 @@ class Problem < ActiveRecord::Base
     self.original ||= self 
   end 
 
-  def solutions_sorted
-    self.solutions.sort_by { |s| -s.rating }
+  def difficulty
+    votes = get_upvotes(vote_scope: "difficulty")
+    votes.sum(:vote_weight).to_f / votes.size
   end
 
-  def problem_set=(ps)
-    super(ps)
-    self.source = ps.name 
+  def solutions_sorted
+    self.solutions.sort_by { |s| -s.rating }
   end
 
   def problem_set_with_name_source

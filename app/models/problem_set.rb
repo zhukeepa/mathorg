@@ -39,6 +39,7 @@ class ProblemSet < ActiveRecord::Base
 
     self.problem_order = problem_ids_array.map { |i| sorted_problem_ids_array.index(i) }
     self.problems = Problem.where(id: problem_ids_array).to_a
+    self.problems.each { |p| p.update(source: self.name) }
     save
   end
 

@@ -5,8 +5,15 @@
     'data-delimiter' => ', ', input_html: { class: "text optional form-control" }
   = f.input :source, required: false
   = f.input :keywords, required: false
-  = f.input "Sort by:", required: false do 
-    %br/
-    = f.select :sort_by, [['Best match','best_match'],['Niceness','niceness'],['Instructiveness','instructiveness']]
+  .form-inline
+    = f.input :min_difficulty, collection: 1..8, required: false, selected: 1
+    = f.input :max_difficulty, collection: 1..8, required: false, selected: 8
+  %br/
+  - if user_signed_in?
+    .form-inline
+      = f.input :currently_working_on, as: :boolean, required: false
+      = f.input :solved_by_me, as: :boolean, required: false
+      = f.input :favorited_by_me, as: :boolean, required: false
   = f.input :search_type, as: :hidden, input_html: { value: "problem" }
+  %br/
   = f.button :submit, "Search"
