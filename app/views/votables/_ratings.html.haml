@@ -7,6 +7,9 @@
 - if not defined? show_average
   - show_average = true
 
+- if not defined? show_rating_options
+  - show_rating_options = true
+
 .vote{id: "#{votable.class}_#{votable.id}_#{format_scope(scope)}_rate"}
   %strong
     - # if disp_text is supplied, use that. Otherwise use the name of scope. Otherwise go with "Rating".
@@ -21,7 +24,7 @@
   -  else 
     No ratings yet
 
-  - if user_signed_in?
+  - if user_signed_in? && show_rating_options
     - # votable.get_upvotes(stuff) should be an array with either 1 or 0 elements
     - current_user_vote = votable.get_upvotes(vote_scope: scope, voter_id: current_user.id)[0]
     - current_user_vote = current_user_vote[:vote_weight] unless current_user_vote.nil?

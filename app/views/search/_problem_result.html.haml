@@ -9,8 +9,8 @@
   = problem.author
   %br/
 = render 'topicables/topic_list', topicable: problem
-= render 'votables/ratings', { votable: problem, scope: 'difficulty', lower: 1, upper: 8, rating_meanings: difficulty_rating_meanings }
-= render 'votables/ratings', { votable: problem, scope: 'elegance', lower: -2, upper: 2, rating_meanings: elegance_rating_meanings }
+= render 'votables/ratings', { votable: problem, scope: 'difficulty', lower: 1, upper: 8, rating_meanings: difficulty_rating_meanings, show_rating_options: false }
+= render 'votables/ratings', { votable: problem, scope: 'elegance', lower: -2, upper: 2, rating_meanings: elegance_rating_meanings, show_rating_options: false }
 
 %br/
 %br/
