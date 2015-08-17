@@ -7,10 +7,13 @@ latest = "YS-trig-blue.txt"
 # Topics: [comma-separated list of topics]>>>
 # [Everything after is the body of the post]
 default_user = User.find(1)
-filenames = ["#{Rails.root}/data_loading/data/handouts/Symmedians.txt", 
-             "#{Rails.root}/data_loading/data/handouts/blue-weights-and-coloring.txt",
-             "#{Rails.root}/data_loading/data/handouts/black-integer-polynomials.txt",
-             "#{Rails.root}/data_loading/data/handouts/inversion.txt"]
+#filenames = ["#{Rails.root}/data_loading/data/handouts/Symmedians.txt", 
+#             "#{Rails.root}/data_loading/data/handouts/blue-weights-and-coloring.txt",
+#             "#{Rails.root}/data_loading/data/handouts/black-integer-polynomials.txt",
+#             "#{Rails.root}/data_loading/data/handouts/inversion.txt"]
+
+filenames = Dir["#{Rails.root}/data_loading/data/handouts/*.txt"]
+
 filenames.each do |fn|
   file = File.open(fn, "rb")
   content = file.read 

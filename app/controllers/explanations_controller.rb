@@ -1,6 +1,6 @@
 class ExplanationsController < ApplicationController
   before_action :set_explanation, only: [:edit, :update, :show, :destroy]
-  before_action :authenticate_user!, except: [:show]
+  before_action :authenticate_user!, except: [:show, :index]
   
   def new 
     @explanation = Explanation.new(body: RichText.new, authors_string: current_user.username)
@@ -19,10 +19,10 @@ class ExplanationsController < ApplicationController
   end
 
   def index 
-    @explanations = Explanation.where(title: ["Symmedians", 
-                                              "Weights & Coloring", 
-                                              "Integer Polynomials", 
-                                              "Inversion"])
+    @explanations = Explanation.all#where(title: ["Symmedians", 
+                                   #           "Weights & Coloring", 
+                                   #           "Integer Polynomials", 
+                                   #           "Inversion"])
   end
 
   def update
