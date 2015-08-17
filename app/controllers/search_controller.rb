@@ -12,7 +12,7 @@ private
   def problem_search_results(params)
     # ::TODO_LATER::
     query = !params[:keywords].empty? ? params[:keywords] : "*"
-    results = Problem.search params[:keywords], fields: [:body, :source]
+    results = Problem.search query, fields: [:body, :source]
     @results = []
     results.each do |r| 
       @results << r 
