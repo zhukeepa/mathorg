@@ -1,0 +1,29 @@
+<<<Title: Functional Equations
+Author(s): Ali Gurel
+Description: 2010 Black MOP Handout
+Topics: Functional equations
+>>>
+
+[ol]
+[li]{{{Find all $f: \mathbb{R} \to \mathbb{R}$ s.t. $f(f(x))=x^2-2$.}}}[/li]
+  [li]{{{(Bulgaria-98) Prove that there is no function $f: \mathbb{R}^+ \to \mathbb{R}^+$ s.t.
+$$f(x)^2\geq f(x+y)(f(x)+y).$$}}}[/li]
+  [li]{{{Find all $h:\mathbb{N} \to\mathbb{N}$ s.t. $h(h(n))+h(n+1)=n+2$.}}}[/li]
+  [li]{{{Find all $f: \mathbb{R}^+ \to \mathbb{R}^+$ s.t.  $f(x)f(yf(x))=f(x+y)$.}}}[/li]
+  [li]{{{Find all $f: \mathbb{R}^+ \to \mathbb{R}^+$ s.t.  $f(f(x)+y)xf(1+xy)$.}}}[/li]
+  [li]{{{(BMO-97) Find all $f: \mathbb{R} \to \mathbb{R}$ s.t. $f(xf(x)+f(y))=y+f(x)^2$.}}}[/li]
+  [li]{{{(APMO-89) Find all strictly increasing $f: \mathbb{R} \to \mathbb{R}$ s.t. $f(x)+f^{-1}(x)=2x$.}}}[/li]
+  [li]{{{Find all $f: \mathbb{R} \to \mathbb{R}$ for which $f(xy)=f(x)f(y)-f(x+y)+1$.}}}[/li]
+  [li]{{{(Vietnam-03) Let $F$ be the set of all $f: \mathbb{R}^+ \to \mathbb{R}^+$ satisfying $f(3x)\geq f(f(2x))+x$. Find the largest real number $\alpha$ s.t. for all $f\in F$ we have $f(x)\geq\alpha x$.}}}[/li]
+  [li]{{{(Belarus-97) Find all $g: \mathbb{R} \to \mathbb{R}$  satisfying $g(x+y)+g(x)g(y)=g(xy)+g(x)+g(y)$.}}}[/li]
+  [li]{{{Find all $f:[1,\infty)\to [1,\infty)$ s.t. $f(x)\leq2(1+x)$ and $xf(x+1)=f(x)^2-1$.}}}[/li]
+  [li]{{{Let $n$ be a positive integer and $f: \mathbb{R} \to \mathbb{R}$ be a continuous function s.t.
+$$f(0)=0,\ \ f(1)=1,\ \ f^{(n)}(x)=x,\ \forall x\in[0,1].$$
+Prove that $f(x)=x$ for each $x\in[0,1]$.}}}[/li]
+  [li]{{{(Romania-08) Determine for what values of $a\in [0,\infty)$ there exist continuous functions $f:\mathbb{R}\rightarrow\mathbb{R}$,
+such that
+$$f(f(x))=(x-a)^2,\ \mbox{ for all } x\in\mathbb{R}.$$}}}[/li]
+  [li]{{{(Shortlist-08) Let $f: \mathbb{R}\rightarrow\mathbb{N}$ be a function which satisfies
+$$f\left(x+\frac{1}{f(y)}\right)=f\left(y+\frac{1}{f(x)}\right)\ \mbox{for all } x,y\in\mathbb{R}.$$
+Prove that there is a positive integer which is not a value of $f$.}}}[/li]
+[/ol]

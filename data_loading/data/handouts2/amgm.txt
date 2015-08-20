@@ -1,0 +1,38 @@
+<<<Title: Red Inequalities
+Author(s): Josh Nichols-Barrer
+Description: Red MOP 2008 Handout
+Topics: Inequalities
+>>>
+
+[ol] [li]{{{Show that if $a_i$ are reals with $\sum_{i=1}^n a_i = 1$,
+  then $\sum_{i=1}^n a_i^2 \geq 1/n.$}}}[/li]
+  [li]{{{If $a,b,c>0$, prove that $(a^2b+b^2c+c^2a)(ab^2+bc^2+ca^2)\geq
+  9a^2b^2c^2.$}}}[/li]
+  [li]{{{Let $(a_i)_{i=1}^n$ be a sequence of positive reals and let
+  $(b_i)_{i=1}^n$ be a permutation of $(a_i)$. Prove that
+  $\sum_{i=1}^n a_i/b_i \geq n$.}}}[/li]
+  [li]{{{Let $x,y,z>0$ with $xyz=1$.  Prove that $x+y+z\leq
+  x^2+y^2+z^2$.}}}[/li]
+  [li]{{{(Romanian selection test) Let $a,b,x,y,z>0$. Prove that
+  \[\frac x{ay+bz}+\frac y{az+bx} + \frac z{ax+by} \geq \frac 3{a+b}.\]}}}[/li]
+  [li]{{{(IMO 95/2) Let $a, b, c$ be positive real numbers such that
+  $abc = 1$. Prove that
+  \[
+  \frac{1}{a^3(b+c)} + \frac{1}{b^3(c+a)} + \frac{1}{c^3(a+b)}
+  \geq\frac{3}{2}.
+  \]}}}[/li]
+  [li]{{{Let $a,b,c,d>0$.  Prove that
+  \[\frac{1}{a}+\frac{1}{b}+\frac{4}{c} + \frac{16}{d}\geq\frac{64}{a+b+c+d}.\]}}}[/li]
+  [li]{{{(Part of USAMO 79/3) Let $x,y,z\geq 0$ with $x+y+z=1$.  Prove
+  that
+  \[x^3+y^3+z^3+6xyz\geq \frac14.\]}}}[/li]
+  [li]{{{(IMO 74/5) Determine all possible values of
+  \[ S= \frac{a}{a+b+d} +\frac{b}{a + b+c} + \frac{c}{b+c+d} +\frac{d}{a+c+d}\]
+  where $a,b,c,d$ are arbitrary positive numbers.}}}[/li]
+  [li]{{{(USAMO 77/5) If $a,b,c,d,e$ are positive numbers bounded by
+  $p$ and $q$, $0<p<q$, prove that
+  \[(a+b+c+d+e)\left(\frac{1}{a}+\frac{1}{b}+\frac{1}{c}+\frac{1}{d}+\frac{1}{e}\right) \leq 25+6\left(\sqrt{\frac{p}{q}}-\sqrt{\frac{q}{p}}\right)^2,\] and
+  determine when there is equality.}}}[/li]
+  [li]{{{(IMO 1984/1) Prove that $0\leq yz+zx+xy-2xyz\leq 7/27$, where
+  $x,y$ and $z$ are non-negative real numbers for which $x+y+z=1$.}}}[/li]
+[/ol]

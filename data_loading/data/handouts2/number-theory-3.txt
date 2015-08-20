@@ -1,0 +1,68 @@
+<<<Title: Number Theory 3: Fermat, Euler, Wilson
+Author(s): Josh Nichols-Barrer
+Description: Red MOP 2011 Handout
+Topics: Fermat's theorem, Euler's theorem, Wilson's theorem
+>>>
+
+Today we expand the toolkit with a handful of practical results.  The first is perhaps the easiest to understand.
+
+[b]Theorem 1.[/b] (Wilson's Theorem) Let $p$ be a prime.  Then \[(p-1)!\equiv-1\bmod p.\]
+
+While simple, the proof is a little sneaky (and typifies smart number theory arguments).  In the same vein, we have the following classical result:
+
+[b]Theorem 2.[/b] (Fermat's Little Theorem) Let $p$ be a prime and $a$ an integer.  Then \[a^p\equiv a\bmod p.\]  If $p\not | a$, we may write this equivalently as \[a^{p-1}\equiv 1\bmod p.\]
+
+We gave three distinct proofs of this.  The last proof was so clever that it gives a generalization:
+
+[b]Theorem 3.[/b] (Euler's Theorem) Let $a$ and $m$ be integers with $(a,m)=1$.  Then \[a^{\varphi(m)}\equiv 1\bmod m,\] where $\varphi(m)$, Euler's [i]totient function[/i], denotes the number of residue classes mod $m$ relatively prime to the modulus.
+
+If the distinct primes dividing $m$ are denoted $p_1,p_2,\ldots,p_n$, then the following formula holds:
+
+\[\varphi(m) = m\left(1-\frac 1{p_1}\right)\left(1-\frac 1{p_2}\right)\cdots\left(1-\frac 1{p_n}\right).\]
+
+We gave two proofs of this.
+
+Euler's theorem revelas that whenever $(a,m)=1$, there exists an exponent $r>0$ such that $a^r\equiv 1\bmod m$.  This motivates a definition:
+
+[b]Definition 1.[/b] Let $(a,m)=1$.  The [i]order[/i] of $a\bmod m$ is the smallest positive integer $r$ such that $a^r\equiv 1\bmod m.$  We might write $r=\mathrm{ord}_m(a).$
+
+Orders will be useful.  For example, we have the following easy fact:
+
+[b]Theorem 4.[/b] Suppose $(a,m)=1$, and suppose $a^s\equiv 1\bmod m$.  Then $\mathrm{ord}_m(a) | s$.  As a corollary, we get that \[\mathrm{ord}_m(a) | \varphi(m).\]
+
+In other words, orders may only range through factors of $\varphi(m)$.  Tomorrow we will talk about [i]primitive roots $\bmod m$[/i], residue classes whose order is exactly $\varphi(m)$.
+
+[h3]Problems[/h3]
+
+[ol]
+  [li]{{{Compute $42!\bmod 2021$.}}}[/li]
+  [li]{{{Find all solutions to the congruence \[304x^{303} + 204x^{202} - 104x^{101}\equiv 0\bmod {101}.\]}}}[/li]
+  [li]{{{Find the smallest positive integer $a$ such that $7n^{11} + 11n^7 + 9an$ is divisible by 77 for every integer $n$.}}}[/li]
+  [li]{{{Let $f(x_1,x_2,\ldots,x_n)$ be a polynomial with integer coefficients.  Prove that, coefficient by coefficient, \[f(x_1,x_2,\ldots,x_n)^p\equiv f(x_1^p,x_2^p,\ldots,x_n^p)\bmod p.\]}}}[/li]
+  [li]{{{Let $p$ be an odd prime.  Prove that $x^2+1\equiv 0\bmod p$ has
+    a solution if and only if $p\equiv 1\bmod 4$.  Conclude that there
+    are infinitely many primes of the form $4k+1$.}}}[/li]
+  [li]{{{(Gaussian primes).  Prove that there are three distinct classes of Gaussian primes:
+   [ol][li]Those of the form $\pm 1\pm i$;[/li]
+    [li]Ordinary integer primes of the form $4k+3$ and unit multiples;[/li]
+    [li]Gaussian integers $a+bi$ where $a^2+b^2$ is a prime of the form $4k+1$.[/li][/ol]
+  Conclude that every $4k+1$ prime can be written as a sum of squares in a unique way.}}}[/li]
+  [li]{{{Let $N$ be an integer.  In how many ways may we write $N=a^2+b^2$, where $0\leq a\leq b$?}}}[/li]
+  [li]{{{(Gaussian Euler).  Let $z$ be a nonzero Gaussian integer.  Adapt Euler's theorem to work for arithmetic mod $z$.  Is there a version of Fermat that works when $z$ is prime?}}}[/li]
+  [li]{{{Find all primes $p,q$ such that $pq | (5^p-2^p)(5^q-2^q)$.}}}[/li]
+  [li]{{{(Lucas' Theorem) Let $p$ be a prime, and let $n$ and $m$ be nonnegative integers with base $p$ representations \[n=(a_ra_{r-1}\cdots a_1a_0)_p\textrm{ and } m=(b_rb_{r-1}\cdots b_1b_0)_p,\] so that the $a_i$ and $b_i$ are all between $0$ and $p-1$ inclusive.  Prove that \[\binom nm = \binom{(a_ra_{r-1}\cdots a_1a_0)_p}{(b_rb_{r-1}\cdots b_1b_0)_p} \equiv \binom {a_r}{b_r}\binom{a_{r-1}}{b_{r-1}}\cdots\binom {a_0}{b_0}\bmod p.\]}}}[/li]
+  [li]{{{The number 21982145917308330487013369 is the thirteenth power of a positive integer.  Which positive integer?}}}[/li]
+  [li]{{{Does there exist an integer $n$ such that the set \[\{n,n+1,n+2,\ldots,n+17\}\] may be partitioned into two disjoint subsets $S$ and $T$ the product of whose elements is the same?}}}[/li]
+  [li]{{{Show that, for any fixed integer $n\geq 1$, the
+    sequence \[2,2^2,2^{2^2},2^{2^{2^2}},\ldots\bmod n\] is eventually
+    constant.  (The tower of exponents is defined by $a_1=2$, $a_{i+1}=2^{a_i}$.)}}}[/li]
+  [li]{{{(IMO 1978/1) Let $m$ and $n$ be distinct nonnegative integers for which $1978^m$ and $1978^n$ have the same last three digits.  Find the least possible value of $m+n$.}}}[/li]
+  [li]{{{(IMO) Determine all integers which are relatively prime to every number of the form \[2^n+3^n+6^n-1\textrm{, }n=1,2,\ldots.\]}}}[/li]
+  [li]{{{Determine whether or not there exist positive integers $a$ and
+    $b$ such that $a$ does not divide $b^n-n$ for all positive integers $n$.}}}[/li]
+  [li]{{{(IMO) Find all ordered pairs of integers $(n,p)$ such that:
+   [ul][li]$p$ is a prime;[/li]
+    [li]$n\leq 2p$;[/li]
+    [li]$n^{p-1}|(p-1)^n + 1$.[/li][/ul]}}}[/li]
+  [li]{{{Let $a$ and $b$ be positive integers such that for each positive integer $n$, $a^n+n$ divides $b^n+n$.  Prove that $a=b$.}}}[/li]
+[/ol]

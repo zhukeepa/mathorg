@@ -1,0 +1,20 @@
+<<<Title: Floors and Ceilings
+Author(s): Josh Nichols-Barrer
+Description: Red MOP 2008 Handout
+Topics: Floors and ceilings
+>>>
+
+[ol] 
+  [li]{{{Let $n$ be a positive integer and $p$ be a prime.  Compute, as a function of $n$ and $p$, the largest power of $p$ that divides $n!$.}}}[/li]
+  [li]{{{Let $n$ and $k$ be nonnegative integers.  Using the previous problem, prove that $\binom n k$ is an integer.}}}[/li]
+  [li]{{{Let $n$ be a positive integer, and let $p$ be a prime number.  Prove that if $p^p|n!$, then $p^{p+1}|n!$.}}}[/li]
+  [li]{{{The sequence $f(1),f(2),\ldots$ is defined by \[f(n)=\frac 1n\left(\lfloor\frac n1\rfloor + \lfloor\frac n2\rfloor+\cdots+\lfloor\frac nn\rfloor\right).\]  Prove that:  [ol][li]There are infinitely many $n$ such that $f(n+1)>f(n)$.[/li]
+    [li]There are infinitely many $n$ such that $f(n+1)<f(n)$.[/li][/ol]}}}[/li]
+  [li]{{{The equation $x^2-mx+n=0$ has real roots $\alpha$ and $\beta$, where $m$ and $n$ are positive integers.  Prove that $\alpha$ and $\beta$ are integers if and only if $\lf m\alpha\rf+\lf m\beta\rf$ is a perfect square.}}}[/li]
+  [li]{{{Let $A$ be the largest subset of $\{1,2,\ldots,n\}$ such that for each $x\in A$, $x$ divides at most one other element in $A$.  Prove that \[\frac {2n}3\leq |A|\leq\lceil\frac {3n}4\rceil.\]}}}[/li]
+  [li]{{{Determine all positive real numbers $a$ such that there exists a positive integer $n$ and partition $A_1,A_2,\ldots,A_n$ of infinite subsets of the set of integers satisfying the following condition: for every set $A_i$, the positive difference of any pair of elements in $A_i$ is at least $a^i$.}}}[/li]
+  [li]{{{Show that the sequence given by $a_n=\lfloor n\sqrt 2\rfloor + \lfloor n\sqrt 3\rfloor$ contains infinitely many even numbers and infinitely many odd numbers.}}}[/li]
+  [li]{{{Let $n$ be a positive integer, $a_1,a_2,\ldots,a_n$ a sequence of nonnegative integers, and $m$ the arithmetic mean of the $\{a_i\}$.  Prove that \[a_1!a_2!\cdots a_n!\geq (\lfloor m\rfloor!)^n.\]  When does equality hold?}}}[/li]
+  [li]{{{Prove that \[\lfloor\frac{(n-1)!}{n(n+1)}\rfloor\] is even for every positive integer $n$.}}}[/li]
+  [li]{{{Given positive integers $a$, $b$, and $m$ with $(a,b)=1$.  Let $A$ be a nonempty set of positive integers such that for every positive integer $n$ either $an\in A$ or $bn\in A$.  Determine the minimum number of elements the set $A\cap\{1,2,\ldots,m\}$ can have.}}}[/li]
+[/ol]

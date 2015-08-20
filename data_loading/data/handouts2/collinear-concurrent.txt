@@ -1,0 +1,109 @@
+<<<Title: Collinearity and concurrency
+Author(s): Carlos Shine
+Description: MOP Handout
+Topics: Collinearity and concurrency
+>>>
+
+[b]Abstract.[/b] Some tips on proving that lines are concurrent or points are collinear.
+
+There are many, many ways to prove that lines are concurrent and points are collinear. Here are some ways, but be aware that there are many others (like, for instance, projective geometry in general).
+
+[h2]Collinearity[/h2]
+[h3]Menelaus' theorem[/h3]
+Let $ABC$ be a triangle and $P$, $Q$, $R$ be points on lines $BC$, $CA$ and $AB$, respectively. Then $P$, $Q$ and $R$ are collinear if and only if
+$$\frac{BP}{PC}\cdot \frac{CQ}{QA}\cdot \frac{AR}{RB} = -1.$$
+
+[h3]Pappus' theorem[/h3]
+Let $A_1,A_2,A_3$ be points in a line $r$ and $B_1,B_2,B_3$ points in a line $s$. Then $A_1B_2\cap A_2B_1$, $A_1B_3\cap A_3B_1$ and $A_2B_3\cap A_3B_2$ are collinear.
+
+[h3]Pascal's theorem[/h3]
+Let $ABCDEF$ be a hexagon inscribed in a circle. Then the intersections of opposite sides $AB\cap DE$, $BC\cap EF$ and $CD\cap FA$ are collinear. The hexagon doesn't need to be convex, and degenerate cases (for example, $A=B$) are allowed (in the mentioned case, $AB = AA$ is the tangent line through $A$).
+
+[h2]Concurrency[/h2]
+[h3]Ceva's theorem[/h3]
+Let $ABC$ be a triangle and $P$, $Q$, $R$ be points on lines $BC$, $CA$ and $AB$, respectively. Then $AP$, $BQ$ and $CR$ are concurrent if and only if
+$$\frac{BP}{PC}\cdot \frac{CQ}{QA}\cdot \frac{AR}{RB} = 1.$$
+
+This also holds if some points are on extensions of sides.
+
+[h3]Trig Ceva[/h3]
+Let $ABC$ be a triangle and $P$, $Q$, $R$ be points on lines $BC$, $CA$ and $AB$, respectively. Then $AP$, $BQ$ and $CR$ are concurrent if and only if
+$$\frac{\sin\angle BAP}{\sin\angle PAC}\cdot \frac{\sin\angle CBQ}{\sin\angle QBA}\cdot \frac{\sin\angle ACR}{\sin\angle RCB} = 1.$$
+
+This also holds if some points are on extensions of sides.
+
+[h3]Brianchon's theorem[/h3]
+Let $ABCDEF$ be a hexagon circumscribed to a circle. Then the lines connecting opposite vertices, that is, $AD$, $BE$ and $CF$, are concurrent. The hexagon doesn't need to be convex, and degenerate cases are allowed.
+
+[h3]Radical axes and center[/h3]
+Let $\Gamma_1$, $\Gamma_2$ and $\Gamma_3$. Then the radical axes of $\Gamma_1,\Gamma_2$, $\Gamma_2,\Gamma_3$ and $\Gamma_3,\Gamma_1$ are either all parallel or concurrent at the radical center of the three circles.
+
+[h2]Collinearity and concurrency[/h2]
+[h3]Desargues' theorem[/h3]
+Let $A_1B_1C_1$ and $A_2B_2C_2$ be triangles in space (yes, this works in 3D!). Then the lines connecting corresponding vertices $A_1A_2$, $B_1B_2$, $C_1C_2$ are concurrent (or all parallel) if and only if the intersections of corresponding sides $A_1B_1\cap A_2B_2$, $A_1C_1\cap A_2C_2$ and $B_1C_1\cap B_2C_2$ are collinear.
+
+[h3]Homothety[/h3]
+[ul][li]If two diagrams are homothetic then all lines connecting corresponding points are concurrent at the homothety center.[/li]
+  [li]In a homothety, the homothety center and two corresponding points are collinear.[/li][/ul]
+
+[h3]Composition of homotheties[/h3]
+If $\sigma_1$ and $\sigma_2$ are homotheties with center $O_1,O_2$ respectively and ratios $k_1,k_2$ respectively ($k_1,k_2$ might be negative), $k_1k_2\neq 1$, then the composition $\sigma_1\circ\sigma_2$ is a homothety with center $O$ and ratio $k_1k_2$, and $O$, $O_1$ and $O_2$ are collinear. If $k_1k_2 = 1$, then $\sigma_1\circ\sigma_2$ is a translation.
+
+This can be proved via Desargues' theorem. Try it!
+
+[h3]Inversion[/h3]
+As much as in homothety:
+[ul][li]If two diagrams are inverse then all lines connecting corresponding points are concurrent at the inversion center.[/li]
+  [li]In an inversion, the inversion center and two corresponding points are collinear.[/li][/ul]
+
+[h3]Some final hints[/h3]
+[ul][li]Guessing the common point of concurrent lines or the line passing through collinear points can be really helpful. Another good reason to make good, big diagrams.[/li]
+  [li]Any concurrency problem is a collinearity problem: just prove that the intersection $P$ of two of these lines lies on the other line; if this line is defined by two points $A$ and $B$, then you have to prove that $A$, $B$ and $P$ are collinear.[/li]
+  [li]Good ol' angle chasing is helpful as well![/li][/ul]
+
+[h2]Problems[/h2]
+[ol]
+  [li]{{{(Brazil 2009) Let $ABC$ be a triangle and $O$ its circumcenter. Lines $AB$ and $AC$ meet the circumcircle of $OBC$ again in $B_1\neq B$ and $C_1 \neq C$, respectively, lines $BA$ and $BC$ meet the circumcircle of $OAC$ again in $A_2\neq A$ and $C_2\neq C$, respectively, and lines $CA$ and $CB$ meet the circumcircle of $OAB$ in $A_3\neq A$ and $B_3\neq B$, respectively. Prove that lines $A_2A_3$, $B_1B_3$ and $C_1C_2$ have a common point.}}}[/li]
+  [li]{{{(Iberoamerican 2010) Let $ABCD$ be a cyclic quadrilateral whose diagonals $AC$ and $BD$ are perpendicular. Let $O$ be the circumcenter of $ABCD$, $K$ the intersection of the diagonals, $L\neq O$ the intersection of the circles circumscribed to $OAC$ and $OBD$, and $G$ the intersection of the diagonals of the quadrilateral whose vertices are the midpoints of the sides of $ABCD$. Prove that $O$, $K$, $L$ and $G$ are collinear.}}}[/li]
+  [li]{{{(Russia 2012) The point $E$ is the midpoint of the segment connecting the orthocenter of the scalene triangle $ABC$ and the point $A$. The incircle of triangle $ABC$ is tangent to $AB$ and $AC$ at points $B'$ and $C'$ respectively. Prove that point $F$, the point symmetric to point $E$ with respect to line $B'C'$, lies on the line that passes through both the circumcenter and the incenter of triangle $ABC$.}}}[/li]
+  [li]{{{Six circles $C_i$, $i = 1, 2, \ldots, 6$ are all externally tangent to circle $C$, and $C_i$ is externally tangent to $C_{i+1}$ for all $i$ (in which $C_7 = C_1$). Let $P_i$ be the tangency point between $C_i$ and $C$. Show that $P_1P_4$, $P_2P_5$ and $P_3P_6$ are concurrent.}}}[/li]
+  [li]{{{Let $ABCDEF$ be a convex hexagon. Prove that if each diagonal $AD$, $BE$, $CF$ bisects the hexagon area, then they are concurrent.}}}[/li]
+  [li]{{{Let $I$ be the incenter of triangle $ABC$. Let the line passing through $I$ perpendicular to $AI$ intersect side $BC$ at $A'$. Points $B'$ and $C'$ are defined in a similar fashion. Prove that $A'$, $B'$ and $C'$ lie on a line perpendicular to line $IO$, where $O$ is the circumcenter of $ABC$.}}}[/li]
+  [li]{{{(Brazil 2006) Let $P$ be a convex $2006$-gon. The $1003$ diagonals connecting opposite vertices and the $1003$ lines connecting the midpoints of opposite sides are concurrent, that is, all $2006$ lines have a common point. Prove that the opposite sides of $P$ are parallel and congruent.}}}[/li]
+  [li]{{{(Iberoamerican Shortlist 2010) Let $ABC$ be an acute triangle and $AA_1$, $BB_1$ and $CC_1$ be its altitudes ($A_1$, $B_1$, $C_1$ lying on the sides). Let $A_2$ be a point on segment $AA_1$ such that $\angle BA_2C = 90^\circ$; define $B_2$ and $C_2$ in the same fashion. Lines $B_2C$ and $BC_2$ meet at $A_3$; define $B_3$ and $C_3$ in an analogous way. Prove that $A_2A_3$, $B_2B_3$ and $C_2C_3$ have a point in common.}}}[/li]
+  [li]{{{Given are six distinct points on a circle. The orthocenter of a triangle with vertices on three of these points is connected to the centroid of the triangle with vertices on the three remaining points. Prove that all twenty line segments that may be defined in this fashion meet at a single point.}}}[/li]
+  [li]{{{Prove one of the [i]Fonten\'e's theorems[/i]: let $Q$ be a point inside triangle $ABC$. The orthogonal projections of $Q$ onto sides $BC$, $CA$ and $AB$ are $D$, $E$ and $F$, respectively. Let $M$, $N$ and $P$ be the midpoints of sides $BC$, $CA$ and $AB$. Let $X$, $Y$ and $Z$ be the intersections of lines $EF,NP$; $FD,PM$; $DE,MN$ respectively. Prove that lines $DX$, $EY$ and $FZ$ concur at one of the intersections of the circumcircles of $MNP$ and $DEF$.}}}[/li]
+  [li]{{{(IMO 1978, generalized) Let $ABC$ be a triangle. A circle which is internally tangent with the circumscribed circle of the triangle is also tangent to the sides $AB$, $AC$ in the points $P$, respectively $Q$. Prove that the midpoint of $PQ$ is the center of the inscribed circle of the triangle $ABC$.}}}[/li]
+  [li]{{{(IMO 1981) Three circles of equal radius have a common point $O$ and lie inside a given triangle. Each circle touches a pair of sides of the triangle. Prove that the incenter and the circumcenter of the triangle are collinear with the point $O$.}}}[/li]
+  [li]{{{(IMO 1982) A non-isosceles triangle $A_{1}A_{2}A_{3}$ has sides $a_{1}, a_{2}, a_{3}$ with the side $a_{i}$ lying opposite to the vertex $A_{i}$. Let $M_{i}$ be the midpoint of the side $a_{i}$, and let $T_{i}$ be the point where the inscribed circle of triangle $A_{1}A_{2}A_{3}$ touches the side $a_{i}$. Denote by $S_{i}$ the reflection of the point $T_{i}$ in the interior angle bisector of the angle $A_{i}$. Prove that the lines $M_{1}S_{1}$, $M_{2}S_{2}$ and $M_{3}S_{3}$ are concurrent.}}}[/li]
+  [li]{{{(IMO 1995) Let $A,B,C,D$ be four distinct points on a line, in that order. The circles with diameters $AC$ and $BD$ intersect at $X$ and $Y$. The line $XY$ meets $BC$ at $Z$. Let $P$ be a point on the line $XY$ other than $Z$. The line $CP$ intersects the circle with diameter $AC$ at $C$ and $M$, and the line $BP$ intersects the circle with diameter $BD$ at $B$ and $N$. Prove that the lines $AM,DN,XY$ are concurrent.}}}[/li]
+  [li]{{{(IMO 1996) Let $P$ be a point inside a triangle $ABC$ such that
+  $$\angle APB - \angle ACB = \angle APC - \angle ABC.$$
+  Let $D$, $E$ be the incenters of triangles $APB$, $APC$, respectively. Show that the lines $AP, BD, CE$ meet at a point.}}}[/li]
+  [li]{{{(IMOSL 1997) Let $A_1A_2A_3$ be a non-isosceles triangle with incenter $I$. Let $C_i$, $i = 1, 2, 3$, be the smaller circle through $I$ tangent to $A_iA_{i+1}$ and $A_iA_{i+2}$ (the addition of indices being mod 3). Let $B_i$, $i = 1, 2, 3$, be the second point of intersection of $C_{i+1}$ and $C_{i+2}$. Prove that the circumcenters of the triangles $A_1B_1I,A_2B_2I,A_3B_3I$ are collinear.}}}[/li]
+  [li]{{{(IMOSL 1997) Let $X,Y,Z$ be the midpoints of the small arcs $BC,CA,AB$ respectively (arcs of the circumcircle of $ABC$). $M$ is an arbitrary point on $BC$, and the parallels through $M$ to the internal bisectors of $\angle B$, $\angle C$ cut the external bisectors of $\angle C$, $\angle B$  in $N$, $P$ respectively. Show that $XM,YN,ZP$ concur.}}}[/li]
+  [li]{{{(IMOSL 2000) Let $O$ be the circumcenter and $H$ the orthocenter of an acute triangle $ABC$. Show that there exist points $D$, $E$ and $F$ on sides $BC$, $CA$ and $AB$ respectively such that $OD + DH = OE + EH = OF + FH$ and the lines $AD$, $BE$ and $CF$ are concurrent.}}}[/li]
+  [li]{{{(IMOSL 2001) Let $A_1$ be the center of the square inscribed in acute triangle $ABC$ with two vertices of the square on side $BC$. Thus one of the two remaining vertices of the square is on side $AB$ and the other is on $AC$. Points $B_1$, $C_1$ are defined in a similar way for inscribed squares with two vertices on sides $AC$ and $AB$, respectively. Prove that lines $AA_1, BB_1, CC_1$ are concurrent.}}}[/li]
+  [li]{{{(Iran TST 2002) Let $I$ be the incenter of triangle $ABC$.  Let $A_1$ and $A_2$ be points on side $BC$ such that $\angle BIA_1 = \angle CIA_2 = 90^\circ$, let $B_1$ and $B_2$ be points on side $AC$ such that $\angle CIB_1 = \angle AIB_2 = 90^\circ$, and let $C_1$ and $C_2$ be points on side $AB$ such that $\angle AIC_1 = \angle BIC_2 = 90^\circ$.
+  
+  Let $A'$, $B'$, and $C'$ be the midpoints of arcs $BC$, $AC$, and $AB$ on the circumcircle of triangle $ABC$.  Let $A'A_1$ intersect $AC$ at $A_1'$, let $A'A_2$ intersect $AB$ at $A_2'$, let $B'B_1$ intersect $AB$ at $B_1'$, let $B'B_2$ intersect $BC$ at $B_2'$, let $C'C_1$ intersect $BC$ at $C_1'$, and let $C'C_2$ intersect $AC$ at $C_2'$.  Prove that $A_1'A_2'$, $B_1'B_2'$, and $C_1'C_2'$ are concurrent.}}}[/li]
+  [li]{{{(Olympic Revenge 2002) Let $ABCD$ be a quadrilateral inscribed in a circle with center $O$. Diagonals $AC$ and $BD$ meet at $P$. Let $\Gamma_1$ and $\Gamma_2$ be the circumcircles of triangles $ABO$ and $CDO$, respectively. Finally, let $M$ and $N$ be the midpoints of arcs $AB$ of $\Gamma_1$ and $CD$ of $\Gamma_2$ that do not contain $O$. Prove that $M$, $N$ and $P$ are collinear.}}}[/li]
+  [li]{{{(IMOSL 2003) Let $ABC$ be an isosceles triangle with $AC=BC$, whose incenter is $I$. Let $P$ be a point on the circumcircle of the triangle $AIB$ lying inside the triangle $ABC$. The lines through $P$ parallel to $CA$ and $CB$ meet $AB$ at $D$ and $E$, respectively. The line through $P$ parallel to $AB$ meets $CA$ and $CB$ at $F$ and $G$, respectively. Prove that the lines $DF$ and $EG$ intersect on the circumcircle of the triangle $ABC$.}}}[/li]
+  [li]{{{(IMOSL 2004) Let $\Gamma$ be a circle and let $d$ be a line such that $\Gamma$ and $d$ have no common points. Further, let $AB$ be a diameter of the circle $\Gamma$; assume that this diameter $AB$ is perpendicular to the line $d$, and the point $B$ is nearer to the line $d$ than the point $A$. Let $C$ be an arbitrary point on the circle $\Gamma$, different from the points $A$ and $B$. Let $D$ be the point of intersection of the lines $AC$ and $d$. One of the two tangents from the point $D$ to the circle $\Gamma$ touches this circle $\Gamma$ at a point $E$; hereby, we assume that the points $B$ and $E$ lie in the same halfplane with respect to the line $AC$. Denote by $F$ the point of intersection of the lines $BE$ and $d$. Let the line $AF$ intersect the circle $\Gamma$ at a point $G$, different from $A$.
+  
+  Prove that the reflection of the point $G$ in the line $AB$ lies on the line $CF$.}}}[/li]
+  [li]{{{(Iberoamerican 2004) Given a scalene triangle $ABC$. Let $A', B', C'$ be the points where the internal bisectors of the angles $\angle CAB, \angle ABC, \angle BCA$ meet the sides $BC, CA, AB$, respectively. Let the line $BC$ meet the perpendicular bisector of $AA'$ at $A"$. Let the line $CA$ meet the perpendicular bisector of $BB'$ at $B'$. Let the line $AB$ meet the perpendicular bisector of $CC'$ at $C"$. Prove that $A"$, $B"$ and $C"$ are collinear.}}}[/li]
+  [li]{{{(IMOSL 2006) Circles $w_{1}$ and $w_{2}$ with centers $O_{1}$ and $O_{2}$ are externally tangent at point $D$ and internally tangent to a circle $w$ at points $E$ and $F$ respectively. Line $t$ is the common tangent of $w_{1}$ and $w_{2}$ at $D$. Let $AB$ be the diameter of $w$ perpendicular to $t$, so that $A, E, O_{1}$ are on the same side of $t$. Prove that lines $AO_{1}$, $BO_{2}$, $EF$ and $t$ are concurrent.}}}[/li]
+  [li]{{{(IMOSL 2007) Let $ABC$ be a fixed triangle, and let $A_1, B_1, C_1$ be the midpoints of sides $BC$, $CA$, $AB$, respectively. Let $P$ be a variable point on the circumcircle. Let lines $PA_1, PB_1, PC_1$ meet the circumcircle again at $A', B', C'$, respectively. Assume that the points $A, B, C, A', B', C'$ are distinct, and lines $AA', BB', CC'$ form a triangle. Prove that the area of this triangle does not depend on $P$.}}}[/li]
+  [li]{{{(IMOSL 2007) Point $P$ lies on side $AB$ of a convex quadrilateral $ABCD$. Let $\omega$ be the incircle of triangle $CPD$, and let $I$ be its incenter. Suppose that $\omega$ is tangent to the incircles of triangles $APD$ and $BPC$ at points $K$ and $L$, respectively. Let lines $AC$ and $BD$ meet at $E$, and let lines $AK$ and $BL$ meet at $F$. Prove that points $E$, $I$, and $F$ are collinear.}}}[/li]
+  [li]{{{(IMO 2008) Let $ABCD$ be a convex quadrilateral with $BA$ different from $BC$. Denote the incircles of triangles $ABC$ and $ADC$ by $k_{1}$ and $k_{2}$ respectively. Suppose that there exists a circle $k$ tangent to ray $BA$ beyond $A$ and to the ray $BC$ beyond $C$, which is also tangent to the lines $AD$ and $CD$.
+  
+  Prove that the common external tangents to $k_1$ and $k_{2}$ intersects on $k$.}}}[/li]
+  [li]{{{(Sharygin 2008) Let $BM$ and $CN$ be two medians of triangle $ABC$. Let $\omega_B$ and $\omega_C$ be circles with chords $BM$ and $CN$ such that smallest arcs $BM$ from $\omega_B$ and $CN$ from $\omega_C$ have the same angular measure. Suppose $\omega_B$ and $\omega_C$ intersect at two points $P$ and $Q$. Prove that $A$, $P$ and $Q$ are collinear.}}}[/li]
+  [li]{{{(Romanian Master 2009) Given four points $A_1, A_2, A_3, A_4$  in the plane, no three collinear, such that
+  $$A_1A_2 \cdot A_3 A_4 = A_1 A_3 \cdot A_2 A_4 = A_1 A_4 \cdot A_2 A_3,$$
+  denote by $O_i$ the circumcenter of the triangle $A_j A_k A_l$ with $\{i,j,k,l\} = \{1,2,3,4\}$. Assuming $A_i \neq O_i$ for all $i=1,2,3,4$, prove that the four lines $A_iO_i$ are concurrent or parallel.}}}[/li]
+  [li]{{{(Olympic Revenge 2010) Let $ABC$ be a triangle inscribed in its circumcircle $\Gamma$. Points $D,F,G,E$, arranged in this order, belong to the arc $BC$ that does not contain $A$ and are such that $\angle BAD = \angle CAE$ and $\angle BAF = \angle CAG$. Let $D',F',G',E'$ be the intersections of $AD,AF,AG,AE$ with $BC$, respectively. Lines $DF'$ and $EG'$ meet at $X$, lines $D'F$ and $E'G$ meet at $Y$, lines $D'G$ and $E'F$ meet at $Z$ and lines $EF'$ and $DG'$ meet at $W$. Prove that $X$, $Y$ and $A$ are collinear, $Z$, $W$ and $A$ are collinear and that $\angle BAX = \angle CAZ$.}}}[/li]
+  [li]{{{(Romanian Master 2010) Let $A_1A_2A_3A_4$ be a quadrilateral with no pair of parallel sides. For each $i=1, 2, 3, 4$, define $\omega_i$ to be the circle touching the quadrilateral externally, and which is tangent to the lines $A_{i-1}A_i$, $A_iA_{i+1}$ and $A_{i+1}A_{i+2}$ (indices are considered modulo $4$ so $A_0=A_4$, $A_5=A_1$ and $A_6=A_2$). Let $T_i$ be the point of tangency of $\omega_i$ with $A_iA_{i+1}$. Prove that the lines $A_1A_2$, $A_3A_4$ and $T_2T_4$ are concurrent if and only if the lines $A_2A_3$, $A_4A_1$ and $T_1T_3$ are concurrent.}}}[/li]
+  [li]{{{(Sharygin 2010) A point $E$ lies on the altitude $BD$ of triangle $ABC$, and $\angle AEC = 90^\circ$. Points $O_1$ and $O_2$ are the circumcenters of triangles $AEB$ and $CEB$; points $F$ and $L$ are the midpoints of the segments $AC$ and $O_1O_2$. Prove that the points $E$, $F$ and $L$ are collinear.}}}[/li]
+[/ol]

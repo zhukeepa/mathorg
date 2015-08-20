@@ -1,0 +1,94 @@
+<<<Title: Algebra and Number Theory
+Author(s): Josh Nichols-Barrer
+Description: MOP Handout
+Topics: Algebra, Number theory
+>>>
+
+[ol]
+    [li]{{{(Zuming) Let $(a_1, a_2, \dots , a_n)$ and $(b_1,
+    b_2, \dots , b_n)$ be two different unordered $n$-tuples of integers
+    such that the sequences
+    \[
+    a_1+a_2, a_1+a_3, \dots , a_{n-1}+a_n \ \mbox{(all pairwise sums
+    $a_i+a_j$, $1\le i < j\le n$)}
+    \]
+    and
+    \[
+    b_1+b_2, b_1+b_3,\dots , b_{n-1}+b_n \ \mbox{(all pairwise sums
+    $b_i+b_j$, $1\le i < j\le n$)}
+    \]
+    coincide up to permutation. Prove that $n$ is a power of two.}}}[/li]
+  [li]{{{(USAMO 1989/3) Let $P(z)= z^n + c_1 z^{n-1} + c_2 z^{n-2} + \cdots + c_n$ be a 
+    polynomial in the complex variable $z$, with real coefficients $c_k$. 
+    Suppose that $|P(i)| < 1$. Prove that there exist real numbers $a$ and 
+    $b$ such that $P(a + bi) = 0$ and $(a^2 + b^2 + 1)^2 < 4 b^2 + 1$.}}}[/li]
+  [li]{{{(China, via Zuming) Let $A_n$ and $B_n$ be sets of
+    nonnegative integers defined by $A_1=\emptyset$, $B_1=\{0\}$, and
+    \[A_{n+1}=\{x+1\mid x\in B_n\}, B_{n+1}=A_n\cup B_n - A_n\cap
+    B_n.\]  Find all values of $n$ with $B_n = \{0\}$.}}}[/li]
+  [li]{{{Let $\mathbb N = S_1\cup S_2\cup\cdots\cup S_n$ be a (disjoint) partition of the natural numbers into finitely many arithmetic sequences (an arithmetic sequence is a set of integers of the form $\{a+bk|k\in\mathbb N\}$ for some integers $a$ and $b$ where $b$ is nonzero).  Prove that two of these arithmetic sequences must have the same common difference.}}}[/li]
+  [li]{{{(IMO 1993/1) Let $f(x) = x^n + 5x^{n-1} + 3$, where $n > 1$ is an integer. Prove that $f(x)$
+    cannot be expressed as the product of two polynomials, each of which has all its coefficients
+    integers and degree at least 1.}}}[/li]
+  [li]{{{(IMO 1981/3) Determine the maximum value of $m^{3}+n^{3},$where $m$ and $n$ are
+    integers satisfying $m,n\in \{1,2,...,1981\}$ and $(n^{2}-mn-m^{2})^{2}=1.$}}}[/li]
+  [li]{{{(IMO 1982/4) Prove that if $n$ is a positive integer such that the equation 
+    \[
+    x^{3}-3xy^{2}+y^{3}=n 
+    \]
+    has a solution in integers $(x,y),$ then it has at least three such
+    solutions.
+  
+    Show that the equation has no solutions in integers when $n=2891.$}}}[/li]
+  [li]{{{(USAMO 1992/5) Let $\, P(z) \,$ be a polynomial with complex coefficients which
+    is of degree $\, 1992 \,$ and has distinct zeros.  Prove that 
+    there exist complex numbers $\, a_1, a_2, \ldots, a_{1992} \,$ 
+    such that $\, P(z) \, $ divides the polynomial 
+    \[ 
+    \left( \cdots \left( (z-a_1)^2 - a_2 \right)^2 \cdots - a_{1991}
+    \right)^2 - a_{1992}. 
+    \]}}}[/li]
+  [li]{{{(USAMO 1993/1) For each integer $\, n \geq 2, \,$ determine, with proof, which
+    of the two positive real numbers $\, a \,$ and $\, b \,$
+    satisfying
+    \[
+    a^n = a + 1,   \hspace{.3in} b^{2n} = b + 3a
+    \]
+    is larger.}}}[/li]
+  [li]{{{(USAMO 1996/6) Determine (with proof) whether there is a subset $X$ of the
+    integers with the following property: for any integer $n$
+    there is exactly one solution of $a + 2b = n$ with
+    $a,b \in X$.}}}[/li]
+  [li]{{{(USAMO 1997/3) Prove that for any integer $n$, there exists a unique polynomial
+    $Q$ with coefficients in $\{0,1,\ldots,9\}$ such that
+    $Q(-2) = Q(-5) = n$.}}}[/li]
+  [li]{{{The positive integer $n$ is a square mod $p$ for all primes $p$.
+    Prove that $n$ is a square.}}}[/li]
+  [li]{{{(IMO 1996/4) The positive integers $a$ and $b$ are such that the numbers $15a + 16b$
+    and $16a - 15b$ are both squares of positive integers. What is the least possible
+    value that can be taken on by the smaller of these two squares?}}}[/li]
+  [li]{{{(IMO 1990/3) Determine all integers $n > 1$ such that
+    $$ \frac{2^n + 1}{n^2} $$
+    is an integer.}}}[/li]
+  [li]{{{(IMO 2002/3) Find all pairs of integers $m, n \ge 3$ such that there
+    exist infinitely many positive integers $a$ for which
+    $$ \frac{a^m + a - 1}{a^n + a^2 - 1} $$
+    is an integer.}}}[/li]
+  [li]{{{(IMO 1987/6) Let $n$ be an integer greater than or equal to 2.  Prove that if $k^2 + k + n$
+    is prime for all integers $k$ such that $0 \leq k \leq \sqrt{n/3}$, then $k^2 +
+    k + n$ is prime for all integers $k$ such that $0 \leq k \leq n - 2$.}}}[/li]
+  [li]{{{(IMO 1988/6) Let $a$ and $b$ be positive integers such that $ab + 1$ divides $a^2 + b^2$.
+    Show that
+    $$\frac{a^2 + b^2}{ab + 1}$$
+    is the square of an integer.}}}[/li]
+  [li]{{{(Romanian MO 1997/2.2) Consider $A$ the set of integers that can be written as  $a^2+2\cdot b^2$
+    where  $a,b\in \mathbb{Z}$ and $b\neq0$. If $p$ is prime and $p^2\in A$, prove that $p\in A$.}}}[/li]
+  [li]{{{(USAMO 1995/4) Suppose $\, q_0, \, q_1, \,  q_2, \ldots \; \,$ is an infinite
+    sequence of integers satisfying the following two conditions:
+     [ul][li]$\, m-n \,$ divides $\, q_m - q_n \,$ for
+      $\, m > n \geq 0,$[/li]
+    [li]there is a polynomial $\, P \,$ such that
+      $\, |q_n| < P(n) \,$ for all $\, n$.[/li][/ul]
+    Prove that there is a polynomial $\, Q \,$ such that
+    $\, q_n = Q(n) \,$ for all $\, n$.}}}[/li]
+[/ol]

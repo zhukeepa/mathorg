@@ -1,0 +1,82 @@
+<<<Title: Basic Combinatorics Problems
+Author(s): Josh Nichols-Barrer
+Description: Blue MOP 2005 Handout
+Topics: Combinatorics
+>>>
+
+[ol]
+  
+  [li]{{{Let $m$ be a positive integer. The numbers $1, 2, \dots ,
+  m$ are evenly spaced around a circle. A red marble is placed next
+  to each number. The marbles are indistinguishable. Adrian wants to
+  choose $k$ marbles ($k \le \frac{m}{2}$), color them blue, and
+  place them back in their original positions in such a way that
+  there are no neighboring blue marbles in the resulting
+  configuration. In how many ways can he do this?}}}[/li]
+  [li]{{{Let $p$ be any prime number. Prove that
+  \[
+  \binom{2p}{p} \equiv 2 \pmod{p^2}.
+  \]}}}[/li]
+  [li]{{{Let
+  \[
+  \prod_{n=1}^{1996}\left(1+nx^{3^{n}} \right) = 1 + a_{1}x^{k_{1}}
+  + a_{2}x^{k_{2}} + \dots + a_{m}x^{k_{m}},
+  \]
+  where $a_{1}, a_{2}, \dots, a_{m}$ are nonzero and $k_{1} < k_{2}
+  < \dots < k_{m}$. Find $a_{1234}$.}}}[/li]
+  [li]{{{Claudia wants to use 8 indistinguishable red beads and 32
+  indistinguishable blue beads to make a necklace such that there
+  are at least 2 blue beads between any 2 red beads. In how many
+  ways can she do this?}}}[/li]
+  [li]{{{Let $n$ be a positive integer. Points $A_1, A_2, \dots ,
+  A_n$ lie on a circle. For $1\le i < j \le n$, we construct
+  $\overline{A_iA_j}$. Let $S$ denote the set of all such segments.
+  Determine the maximum number of intersection points that can be
+  produced by the elements of $S$.}}}[/li]
+  [li]{{{Let $n$ be a positive integer. Prove that
+  \[
+  \sum_{k=0}^{n} k^2\binom{n}{k} = n(n+1)2^{n-2} \mbox{and}
+   \sum_{k=0}^{n} \frac{(-1)^k}{k+1} \binom{n}{k} =
+  \frac{1}{n+1}.
+  \]}}}[/li]
+  [li]{{{Suppose that $P_1P_2\dots P_{325}$ is a regular 325-sided
+  polygon. Determine the number of incongruent triangles of the form
+  $P_iP_jP_k$, where $i, j$, and $k$ are distinct integers between 1
+  and 325, inclusive.}}}[/li]
+  [li]{{{Let $n$ be a nonnegative integer. Show that
+  \[
+  \sum_{k=0}^{n} k\binom{n}{k}^2 = n\binom{2n-1}{n-1}.
+  \]}}}[/li]
+  [li]{{{[USAMO 1996, by Kiran Kedlaya] An ordered $n$-tuple
+  \[
+  (x_1, x_2, \ldots, x_n)
+  \]
+  in which each term is either 0 or 1 is called a [i]binary
+  sequence of length[/i] $n$. Let $a_n$ be the number of binary
+  sequences of length $n$ containing no three consecutive terms
+  equal to 0, 1, 0 in that order.  Let $b_n$ be the number of binary
+  sequences of length $n$ that contain no four consecutive terms
+  equal to 0, 0, 1, 1 or 1, 1, 0, 0 in that order. Prove that
+  $b_{n+1} = 2a_n$ for all positive integers $n$.}}}[/li]
+  [li]{{{[IMO 1964] Suppose five points in a plane are situated
+  in such a way that no two of the straight lines joining them are
+  parallel, perpendicular, or coincident. From each point
+  perpendiculars are drawn to all the lines joining the other four
+  points. Determine the maximum number of intersections that these
+  perpendiculars can have.}}}[/li]
+  [li]{{{[Putnam 2002] Let $n$ be an integer greater than one,
+  and let $T_n$ be the number of nonempty subsets $S$ of $\{1, 2, 3,
+  \dots, n\}$ with the property that the average of the elements of
+  $S$ is an integer. Prove that $T_n - n$ is always even.}}}[/li]
+  [li]{{{[MOSP 2001, Cecil Rousseau] Let $a_n$ denote the number of
+  nonempty sets $S$ such that  [ol][li]$S\subseteq \{ 1, 2,
+  \dots , n\}$;[/li]
+    [li]all elements of $S$ have the same parity;[/li]
+    [li]each element $k \in S$ satisfies $k \ge 2|S|$, where
+  $|S|$ denotes the number of elements in $S$.[/li][/ol] Prove that
+  \[
+  a_{2m-1} = 2(F_{m+1} - 1)\mbox{and} a_{2m} = F_{m+3}
+  - 2
+  \]
+  for all $m \ge 1$, where $F_n$ is the $n^{\mathrm {th}}$ Fibonacci number.}}}[/li]
+[/ol]

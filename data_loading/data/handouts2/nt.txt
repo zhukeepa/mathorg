@@ -1,0 +1,41 @@
+<<<Title: Number Theory 1: Modular Calisthenics
+Author(s): Josh Nichols-Barrer
+Description: 2007 Red MOP Handout
+Topics: Number theory
+>>>
+
+Let $a,b,m$ be integers.  We say that $a\equiv b \bmod m$ ("$a$ is congruent to $b$ modulo $m$") if $m | b-a$ ($m$ divides $b-a$), which is to say that there is some integer $k$ such that $b-a = km$.  We might say that $b$ and $a$ differ by a multiple of $m$.  We almost always assume $m\neq 0$; what happens if $m=0$?
+
+The algebra of integers modulo $m$ shares many properties with the algebra of real numbers, but there are a number of things which are considerably different.  Therefore, let us explore what things break and what things do not.  What follows is a list of statements about modular arithmetic, some of which are true, others of which are not so true, but which are all true if we use equality instead of congruence modulo $m$.  If true, let's prove it, and if it is false we should find a counterexample and (if possible) explore to what extent the statement can be adapted to still be true.  Some of these things we won't be able to address properly until later.  Don't forget to mark the things which are wrong, so this can be a reference!
+
+[ol]
+  [li]{{{Equivalence relation:
+   [ol][li]For any $a$, $a\equiv a\bmod m$.[/li]
+    [li]For any $a$ and $b$, if $a\equiv b\bmod m$ then $b\equiv a\bmod m$.[/li]
+    [li]For any $a,b,c$, if $a\equiv b\bmod m$ and $b\equiv c\bmod m$, then $a\equiv c\bmod m$.[/li][/ol]}}}[/li]
+  [li]{{{Addition and subtraction: if $a\equiv b\bmod m$ and $c\equiv d\bmod m$, then $a+c\equiv b+d\bmod m$ and $a-c\equiv b-d\bmod m$.}}}[/li]
+  [li]{{{Multiplication: if $a\equiv b\bmod m$ and $c\equiv d\bmod m$, then $ac\equiv bd\bmod m$.}}}[/li]
+  [li]{{{Division: if $c\not\equiv 0\bmod m$ and $ac\equiv bc \bmod m$, then $a\equiv b\bmod m$ (why phrase it this way?).}}}[/li]
+  [li]{{{Powers: if $n\geq 0$ is an integer and $a\equiv b\bmod m$ then $a^n\equiv b^n\bmod m$.}}}[/li]
+  [li]{{{Square Roots: if $a^2\equiv b^2\bmod m$, then $a\equiv\pm b\bmod m$.}}}[/li]
+  [li]{{{Polynomials: If $f(x)$ is an integer polynomial and $a\equiv b \bmod m$, then $f(a)\equiv f(b)\bmod m$.}}}[/li]
+  [li]{{{Multiplicative Inverses: If $a\not\equiv 0\bmod m$, then there is an integer $b$ with $ab\equiv 1\bmod m$.}}}[/li]
+  [li]{{{If $ab\equiv 0\bmod m$ then $a\equiv 0\bmod m$ or $b\equiv 0\bmod m$.}}}[/li]
+[/ol]
+
+Now that we've established some of the ground rules for this game, let's explore some of the things we can do here.
+
+[ol]
+  [li]{{{Express the fact that integers $a$ and $b$ share the same last $n$ digits using modular notation.  Using this, write down and prove a (crude) divisibility rule for $2^n$.}}}[/li]
+  [li]{{{Prove the usual divisibility rule for 9: If you add the base 10 digits of an integer $a$, then the result is divisible by 9 if and only if $a$ is.  Do the same thing for 3 and 11, and concoct (reasonable!) divibility rules for 7 and 13.  What goes wrong with 17?}}}[/li]
+  [li]{{{Prove that if $x^3 + y^3 + z^3 = 0$ has a solution in integers, then at least one of $x,y,z$ must
+  be a multiple of 7.}}}[/li]
+  [li]{{{(1984 Leningrad Olympiad) Find all primes $a,b$ such that $a^b + b^a$ is also a prime.}}}[/li]
+  [li]{{{Are there any natural numbers $n$ for which $2^n+1$ is a perfect cube?}}}[/li]
+  [li]{{{(Mathematics Magazine \#1471) Let $k$, $m$, and $n$ be positive integers.
+   [ol][li]Find all solutions to $2^k+9^m=7^n$.[/li]
+    [li]Find all solutions to $2^k=9^m+7^n$.[/li][/ol]}}}[/li]
+  [li]{{{(UK, 1998) Show that there is a unique sequence of positive integers $\{a_n\}$ with $a_1 = 1, a_2 = 2, a_4 = 12$ such that
+  $$ a_{n+1} a_{n-1} = a_n^2 \pm 1. $$}}}[/li]
+[/ol]
+Next we'll look in-depth into some of the facts about the integers we have been using implicitly, and derive some facts that will greatly enhance our toolkit.

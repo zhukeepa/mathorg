@@ -1,0 +1,46 @@
+<<<Title: Diophantine Equations
+Author(s): Josh Nichols-Barrer
+Description: Black MOP 2009
+Topics: Diophantine equations
+>>>
+
+[ol]
+  [li]{{{(MOP '06) Let $a$ and $b$ be positive integers such that $a^n+n$ divides $b^n+n$ for every positive integer $n$.  Prove that $a=b$.}}}[/li]
+  [li]{{{Prove that the equation \[x^3+y^3 = z^4 - t^2\] has infinitely many integer solutions with $\gcd(x,y,z,t) = 1$.}}}[/li]
+  [li]{{{Find all nonnegative integers $(x,y,z)$ such that \[3^z - 2^y = 19^z.\]}}}[/li]
+  [li]{{{Find all triples $(x,y,z)$ such that $3^x+4^y = 5^z$.}}}[/li]
+  [li]{{{(MOP '98) Find all pairs of positive integers $(x,y)$ satisfying the equation
+  \[
+  x^{2} + (x+1)^{2} + \cdots + (x+99)^{2} = y^{2} + (y+1)^{2} + \cdots
+  + (y+100)^{2}.
+  \]}}}[/li]
+  [li]{{{Determine all integers $n$ that can be written in the form
+  \[
+  a^3 + b^3 + c^3 - 3abc,
+  \]
+  where $a, b$, and $c$ are integers.}}}[/li]
+  [li]{{{Find all triples $(x,y,z)$ of positive integers such that $y$ is a
+  prime number, $y$ and 3 do not divide $z$, and $x^3-y^3=z^2$.}}}[/li]
+  [li]{{{Find all positive integers $(x, n)$ such that $x^{n} + 2^{n} + 1$ is
+  a divisor of $x^{n+1} + 2^{n+1} + 1$.}}}[/li]
+  [li]{{{(MOP '97) Does there exist a row of Pascal's Triangle containing four distinct
+  elements $a, b, c$, and $d$ such that $b=2a$ and $d= 2c$?}}}[/li]
+  [li]{{{Determine all positive integers $n$ for which there exists an
+  integer $m$ such that $2^n-1$ is a divisor of $m^2 + 9$.}}}[/li]
+  [li]{{{Find all pairs of nonnegative integers $(m, n)$ such that
+  \[
+  (m+n-5)^2 = 9mn.
+  \]}}}[/li]
+  [li]{{{Consider the system
+  \[
+  \left\{
+  \begin{array}{l}
+  x + y  = z + u \\
+  2xy  = zu.
+  \end{array}
+  \right.
+  \]
+  Find the greatest value of the real constant $m$ such that $m \leq
+  \frac{x}{y}$ for any positive integer solution $(x,y,z,u)$ of the
+  system, with $x\geq y$.}}}[/li]
+[/ol]

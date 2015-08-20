@@ -25,6 +25,10 @@ opml.feeds.each do |p|
     topics[p[:tag]] ||= Topic.new({ name: p[:tag] })
     topics[p[:text]].parents.append(topics[p[:tag]])
   end
+
+  if !topics[p[:text]].valid?
+    binding.pry
+  end
 end
 
 topics.each { |n, t| t.save }

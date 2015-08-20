@@ -1,0 +1,47 @@
+<<<Title: Classical Inequalities-1
+Author(s): Ali Gurel
+Description: 2012 Blue MOP Handout
+Topics: Inequalities
+>>>
+
+Unless otherwise mentioned, all the variables are assumed to be positive.
+
+[ol]
+[li]{{{(Manfrino, Ortega, & Delgado, Inequalities, p.10) Let $x\in(0,1)$. Find the maximum value of $x-x^4$ (without using Calculus).}}}[/li]
+  [li]{{{(Brazil-2001) $\displaystyle (a+b)(a+c)\geq2\sqrt{abc(a+b+c)}$.}}}[/li]
+  [li]{{{(Manfrino, Ortega, & Delgado, Inequalities, p.11) If $a,b,c>0$, prove that
+$$\frac{1}{a}+\frac{1}{b}+\frac{1}{c}\geq2\left(\frac{1}{a+b}+\frac{1}{b+c}+\frac{1}{c+a}\right)\geq\frac{9}{a+b+c}\cdot$$}}}[/li]
+  [li]{{{(Manfrino, Ortega, & Delgado, Inequalities, p.11) Let $x_1,x_2,\ldots,x_n>0$ such that
+$$\frac{1}{1+x_1}+\frac{1}{1+x_2}+\cdots+\frac{1}{1+x_n}=1.$$ Prove that
+$x_1x_2\cdots x_n\geq(n-1)^n.$}}}[/li]
+  [li]{{{(Manfrino, Ortega, & Delgado, Inequalities, p.20) Let $a,b,c$ be positive numbers with $abc=1$, prove that
+$$\frac{a}{b}+\frac{b}{c}+\frac{c}{a}\geq a+b+c.$$}}}[/li]
+  [li]{{{(IMO-1995) Let $a,b$, and $c$ be positive real numbers such that $abc=1$. Prove that
+$$\frac{1}{a^3(b+c)}+\frac{1}{b^3(c+a)}+\frac{1}{c^3(a+b)}\geq\frac{3}{2}\cdot$$}}}[/li]
+  [li]{{{(Latvia-2002) Prove that $abcd\geq3$ if
+$$\frac{1}{1+a^4}+\frac{1}{1+b^4}+\frac{1}{1+c^4}+\frac{1}{1+d^4}=1$$}}}[/li]
+  [li]{{{(Poland-1996) Let $n\geq2$, $a_1,...,a_n$ positive numbers whose sum is 1 and $x_1,...,x_n$ positive numbers whose sum is also 1. Prove that
+$$2\sum_{i<j}x_ix_j\leq \frac{n-2}{n-1}+\sum_{i=1}^{n}\frac{a_ix_i^2}{1-a_i}\cdot$$}}}[/li]
+  [li]{{{(USAMO-2004) Let $a, b$ and $c$ be positive real numbers. Prove that
+$$(a^5-a^2+3)(b^5-b^2+3)(c^5-c^2+3)\geq(a+b+c)^3.$$}}}[/li]
+  [li]{{{(Russia-1999) Let $x,y>0$. If $x^2+y^3\geq x^3+y^4$, prove that $x^3+y^3\leq2$.}}}[/li]
+  [li]{{{(Russia-1999) If $abc=1$ and $\displaystyle a+b+c\leq\frac{1}{a}+\frac{1}{b}+\frac{1}{c}$, then for every $n\in\mathbb{Z}^+$,
+$$a^n+b^n+c^n\leq\frac{1}{a^n}+\frac{1}{b^n}+\frac{1}{c^n}\cdot$$}}}[/li]
+  [li]{{{(Czech and Slovak-1999) $\displaystyle\ \frac{a}{b+2c}+\frac{b}{c+2a}+\frac{c}{a+2b}\geq1$.}}}[/li]
+  [li]{{{(Balkan-2002) $\displaystyle \frac{2}{b(a+b)}+\frac{2}{c(b+c)}+\frac{2}{a(c+a)}\geq\frac{27}{(a+b+c)^2}\cdot$}}}[/li]
+  [li]{{{(IMO-2005) Let $x,y,z$ be positive real numbers such that $xyz\geq1$. Prove that
+$$\frac{x^5-x^2}{x^5+y^2+z^2}+\frac{y^5-y^2}{y^5+z^2+x^2}+\frac{z^5-z^2}{z^5+x^2+y^2}\geq0.$$}}}[/li]
+  [li]{{{(Vietnam-2008) Let $x,y,z$ be distinct non-negative real numbers. Prove that
+$$\frac{1}{(x-y)^2}+\frac{1}{(y-z)^2}+\frac{1}{(z-x)^2}\geq\frac{4}{xy+yz+zx}\cdot$$}}}[/li]
+  [li]{{{(Japan-2005) Let $a,b,c$ be positive real numbers such that $a+b+c=1$. Prove that
+$$a\sqrt[3]{1+b-c}+b\sqrt[3]{1+c-a}+c\sqrt[3]{1+a-b}\leq1.$$}}}[/li]
+  [li]{{{(Balkan-2006) Let $a,b,c$ be positive real numbers. Prove that
+$$\frac{1}{a(b+1)}+\frac{1}{b(c+1)}+\frac{1}{c(a+1)}\geq\frac{3}{1+abc}\cdot$$}}}[/li]
+  [li]{{{(Iran-2007) If $a,b,c$ are different positive real numbers, prove that
+$$\left|\frac{a+b}{a-b}+\frac{b+c}{b-c}+\frac{c+a}{c-a}\right|>1.$$}}}[/li]
+  [li]{{{(Romania-2007) Let $a,b,c$ be positive real numbers such that
+$$\frac{1}{a+b+1}+\frac{1}{b+c+1}+\frac{1}{c+a+1}\geq1.$$
+Prove that $a+b+c\geq ab+bc+ca$.}}}[/li]
+  [li]{{{(Romania-2008) If $a,b,c$ are positive real numbers with $ab+bc+ca=3$, prove that
+$\displaystyle\frac{1}{1+a^2(b+c)}+\frac{1}{1+b^2(c+a)}+\frac{1}{1+c^2(a+b)}\leq\frac{1}{abc}\cdot$}}}[/li]
+[/ol]

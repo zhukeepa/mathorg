@@ -1,0 +1,49 @@
+<<<Title: Counting in 2 Ways
+Author(s): Ali Gurel
+Description: 2012 Blue MOP Handout
+Topics: Counting in two ways
+>>>
+
+Many of the following problems are selected from the Putnam and Beyond by Gelca and Andreescu.
+
+[ol]
+[li]{{{(Gelca & Andreescu, P&B, p.304) Prove the combinatorial identity $$\sum_{k=1}^nk{n \choose k}^2=n{2n-1 \choose n-1}.$$}}}[/li]
+  [li]{{{(Gelca & Andreescu, P&B, p.303) Find in closed form
+$$1\cdot 2{n \choose 2}+2\cdot 3{n \choose 3}+\ldots+(n-1)\cdot n{n \choose n}.$$}}}[/li]
+  [li]{{{(France-1985) Show that for any positive integers $p$ and $q$,
+$$\sum_{k=0}^q\dfrac{1}{2^{p+k}}{p+k \choose k}+\sum_{k=0}^p\dfrac{1}{2^{q+k}}{q+k \choose k}=2.$$}}}[/li]
+  [li]{{{(Gelca & Andreescu, P&B, p.303) Let $m$ and $n$ be two integers, $m\leq \dfrac{n-1}{2}$. Prove the identity
+$$\sum_{k=m}^{\frac{n-1}{2}} {n \choose 2k+1}{k \choose m}=2^{n-2m-1}{n-m-1 \choose m}.$$}}}[/li]
+  [li]{{{(Gelca & Andreescu, P&B, p.304) Prove the identity
+$$\sum_{k=0}^m{m \choose k}{n+k \choose m}=\sum_{k=0}^m{m \choose k}{n \choose k}2^k$$}}}[/li]
+  [li]{{{(Gelca & Andreescu, P&B, p.304) For integers $0\leq k\leq n, 1\leq m\leq n$, prove the identity
+$$\sum_{j=0}^m{m \choose j}{n-j \choose k}=\sum_{i=0}^m{m \choose i}{n-m \choose k-i}2^{m-i}$$}}}[/li]
+  [li]{{{(International Mathematical Competition for University Students-2002) Two hundred students took part in a mathematics contest. They had 6 problems to solve. It is known that each problem was correctly solved by at least 120 participants. Prove that there exist two participants such that every problem was solved by at least one of them.}}}[/li]
+  [li]{{{(USAMO-1986) During a certain lecture, each of five mathematicians fell asleep exactly twice. For each pair of these mathematicians, there was some moment when both were sleeping simultaneously. Prove that, at some moment, some three were sleeping simultaneously.}}}[/li]
+  [li]{{{(China-1996) Eight singers participate in an art festival where m songs are performed. Each song is performed by 4 singers, and each pair of singers performs together in the same number of songs. Find the smallest $m$ for which this is possible.}}}[/li]
+  [li]{{{(IMO Shortlist-2004) There are $n$ students at a university, $n$ an odd number. Some students join together to form several clubs (a student may belong to different clubs). Some clubs join together to form several societies (a club may belong to different societies). There are $k$ societies. Suppose that the following hold:
+  [ul]
+  [li]each pair of students is in exactly one club,[/li]
+  [li]for each student and each society, the student is in exactly one club of the society,[/li]
+  [li]each club has an odd number of students; in addition, a club with $2m + 1$ students $(m > 0)$ is in exactly $m$ societies.[/li]
+  [/ul]
+Find all possible values of $k$.}}}[/li]
+  [li]{{{(IMO-2001) Twenty-one girls and twenty-one boys took part in a mathematical competition. It turned out that
+  [ul]
+  [li]each contestant solved at most six problems, and[/li]
+  [li]for each pair of a girl and a boy, there was at least one problem that was solved by both the girl and the boy.[/li]
+  [/ul]
+Show that there is a problem that was solved by at least three girls and at least three boys.}}}[/li]
+  [li]{{{(IMO-1989) Given a set S in the plane containing n points and satisfying the conditions
+  [ul]
+  [li]no three points of S are collinear,[/li]
+  [li]for every point $P$ of $S$ there exist at least $k$ points in $S$ that have the same distance to $P$,[/li]
+  [/ul]
+prove that the following inequality holds:
+$$k<\dfrac{1}{2}+\sqrt{2n}$$}}}[/li]
+  [li]{{{(IMO-1998) In a contest, there are $m$ candidates and $n$ judges, where $n\geq 3$ is an odd integer. Each candidate is evaluated by each judge as either pass or fail. Suppose that each pair of judges agrees on at most $k$ candidates. Prove that
+$$\dfrac{k}{m}\geq \dfrac{n-1}{2n}$$}}}[/li]
+  [li]{{{(USAMO-1979) A certain organization has $n$ members and it has $n+1$ three-member committees, no two of which have identical membership. Prove that there are two committees which share exactly one member.}}}[/li]
+  [li]{{{(Russia-1996) In the Duma there are 1600 delegates, who have formed 16000 committees of 80 persons each. Prove that one can find two committees having no fewer than four common members.}}}[/li]
+  [li]{{{(Bulgaria-1999) In a competition 8 judges marked the contestants by [i]pass[/i] or [i]fail[/i]. It is known that for any two contestants, two judges marked both with [i]pass[/i]; two judges marked the first contestant with [i]pass[/i] and the second contestant with [i]fail[/i]; two judges marked the first contestant with [i]fail[/i] and the second contestant with [i]pass[/i]; and finally, two judges marked both with [i]fail[/i]. What is the largest possible number of contestant?}}}[/li]
+[/ol]

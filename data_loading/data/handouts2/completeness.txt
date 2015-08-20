@@ -1,0 +1,86 @@
+<<<Title: Completeness 
+Author(s): Josh Nichols-Barrer
+Description: Green MOP 2011 Handout
+Topics: Completeness
+>>>
+
+[ol]
+  
+  [li]{{{Determine all functions $f:\mathbb R\rightarrow \mathbb R$ such
+    that for each $x,y\in\mathbb R$, $f(x+y)=f(x)+f(y)$ and $f(xy)=f(x)f(y)$.}}}[/li]
+  [li]{{{Prove [b]Kronecker's Theorem[/b]: Let $\alpha$ be an irrational
+    real.  Prove that for any interval $I\subseteq [0,1)$, there is a
+    positive integer $n$ with $\{n\alpha\}\in I$.}}}[/li]
+  [li]{{{Let $x_1,x_2,\ldots,x_k$ be real numbers and let $\epsilon>0$.
+    Prove that there exists a positive integer $n$ such that
+    $\{nx_i\}<\epsilon$ for all $i$.}}}[/li]
+  [li]{{{Consider the sequence defined by $a_1=1$, and
+    $a_{n+1}=a_n+1/a_n^2$ for $n\geq 1$.  
+   [ol][li]Is the
+    sequence $(a_n)_{n=1}^\infty$ bounded?[/li]
+    [li]Prove that $a_{9000}>30$.[/li][/ol]}}}[/li]
+  [li]{{{Let $x_1,x_2,\ldots,x_{2n+1}$ be real numbers with the property
+    that for any $1\leq i\leq 2n+1$ one can make two groups of $n$
+    numbers from the $x_j$, $j\neq i$, in such a way that the two groups
+    each have the same sum.  Prove that all the numbers must be equal.}}}[/li]
+  [li]{{{Let $k,m,n$ be positive integers with $k,m<n$ and $(k,m)=1$.
+    Suppose that $a_1,a_2,\ldots, a_n$ are real numbers such that for
+    any indices $1\leq i_1<i_2<\cdots<i_k\leq n$ there exist indices
+    $1\leq j_1<j_2<\cdots<j_m\leq n$
+    with \[\frac{a_{i_1}+a_{i_2}+\cdots+a_{i_k}}k =
+    \frac{a_{j_1}+a_{j_2}+\cdots+a_{j_m}}m.\]  Prove that $a_1=a_2=\cdots=a_n$.}}}[/li]
+  [li]{{{Let $\{x_n\}_{n=0}^\infty$ be a sequence of real numbers such
+    that $x_0=1$ and $x_{i+1}\leq x_i$ for
+    $i=0,1,2,\ldots$.   [ol][li]Prove that for every such
+      sequence there is an $n>0$ such
+      that \[\frac{x_0^2}{x_1}+\frac{x_1^2}{x_2}+\cdots+\frac{x_{n-1}^2}{x_n}\geq
+      3.999.\][/li]
+    [li]Find such a sequence in
+      which  \[\frac{x_0^2}{x_1}+\frac{x_1^2}{x_2}+\cdots+\frac{x_{n-1}^2}{x_n}<4\]
+      for all $n$.[/li][/ol]}}}[/li]
+  [li]{{{Define the sequence of rational numbers $\{t_n\}$ as follows.
+    Let $c_1$ be a given positive integer, and let $t_1=\frac 1c_1$.
+    For a positive integer $n$, let $t_{n+1}=t_n$ if $t_n=1$.
+    Otherwise, let $c_{n+1}$ be the least integer such that
+    $c_{n+1}>c_n$ and \[t_{n+1}=t_n+\frac 1{c_{n+1}}\leq 1.\]  Show that
+    the sequence$\{t_n\}$ is eventually constant.}}}[/li]
+  [li]{{{Two sequences of positive real numbers $(x_n)_{n=0}^\infty$ and
+    $(y_n)_{n=1}^\infty$, satisfy $x_{n+2}=x_n+x_{n+1}^2$ and
+    $y_{n+2}=y_n^2+y_{n+1}$. for all $n>0$.  Prove that if
+    $x_1,x_2,y_1,y_2>1$, then $x_k>y_k$ for some $k$.}}}[/li]
+  [li]{{{Let $\{a_n\}_{n=1}^\infty$ and $\{b_n\}_{n=1}^\infty$ be two
+    sequences of real numbers such that $a_{n+1}=2b_n-a_n$ and
+    $b_{n+1}=2a_n-b_n$ for every positive integer $n$.  Prove that if
+    $a_n>0$ for all $n$, then $a_1=b_1$.}}}[/li]
+  [li]{{{Find all functions $f:\mathbb R^{>0}\rightarrow\mathbb R^{>0}$
+    such that for all $x,y\in\mathbb R^{>0}$, \[f(x)^2\geq f(x+y)(f(x)+y).\]}}}[/li]
+  [li]{{{An infinite set $S$ of points on the plane has the property that
+    no $1\times 1$ square of the plane contains infinitely many points
+    from $S$.  Prove that there exist two points $A$ and $B$ from $S$
+    such that $\min\{XA,XB\}\geq 0.999AB$ for any other point $X$ in $S$.}}}[/li]
+  [li]{{{Determine whether there exists a polynomial $P(x)$ with real
+    coefficients, not identically zero, for which we can find a function
+    $f:\mathbb R\rightarrow \mathbb R$ that satisfies the
+    relation \[f(x) - \frac {x^3}3\cdot f\left(\frac{3x-3}{3+x}\right) =
+    P\left(\frac{3x+3}{3-x}\right)\] for all irrational numbers $x$.}}}[/li]
+  [li]{{{Find all strictly increasing $f:\mathbb R\rightarrow \mathbb R$ such
+    that $f(x)+f^{-1}(x)=2x$.}}}[/li]
+  [li]{{{Find all $f:\mathbb R\rightarrow \mathbb R$ for which $f(xy)=f(x)f(y)-f(x+y)+1$.}}}[/li]
+  [li]{{{The sequence $f_1,f_2,\ldots,f_n,\ldots$ is defined for $x>0$
+    recursively by \[f_1(x)=x,\qquad f_{n+1}(x) =
+    f_n(x)\left(f_n(x)+\frac 1n\right).\]  Prove that there exists one
+    and only one positive number $a$ such that $0<f_n(a)<f_{n+1}(a)<1$
+    for all integers $n\geq 1$.}}}[/li]
+  [li]{{{Let $\mathcal S$ be the set of all polygonal areas in the
+    plane.  Prove that there is a function $f:\mathcal S\rightarrow
+    (0,1)$ which satisfies \[f(S_1\cup S_2) = f(S_1)+f(S_2)\] for any
+    $S_1,S_2\in\mathcal S$ which have common points only on their
+    borders.}}}[/li]
+  [li]{{{The infinite sequence of 2's and 3's \begin{eqnarray*}
+    &&2,3,3,2,3,3,3,2,3,3,3,2,3,3,2,3,3,\&&3,2,3,3,3,2,3,3,3,2,3,3,2,3,3,3,2,\ldots\end{eqnarray*}
+    has the property that, if one forms a second sequence that records
+    the number of 3's between successive 2's, the result is identical to
+    the given sequence.  Show that there exists a real number $r$ such
+    that, for any $n$, the $n^{\mathrm {th}}$ term of the sequence if 2 if and only
+    if $n=1+\lfloor rm\rfloor$ for some nonnegative integer $m$.}}}[/li]
+[/ol]

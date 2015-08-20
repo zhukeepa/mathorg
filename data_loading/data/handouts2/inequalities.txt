@@ -1,0 +1,62 @@
+<<<Title: Inequalities
+Author(s): Josh Nichols-Barrer
+Description: Red MOP 2011 Handout
+Topics: Inequalities
+>>>
+
+[ol]
+  
+  [li]{{{Prove [b]Schur's Inequality[/b]: if $x,y,z\geq 0$ and $r>0$,
+    then \[x^r(x-y)(x-z) + y^r(y-z)(y-x) + z^r(z-x)(z-y)\geq0\] with
+    equality if and only if $x=y=z$.}}}[/li]
+  [li]{{{Prove [b]Nesbitt's Inequality[/b]: if $a,b,c>0$, then \[\frac
+    a{b+c}+\frac b{c+a} + \frac c{a+b}\geq \frac 32.\]}}}[/li]
+  [li]{{{Prove [b]Titu's Lemma[/b]: if $x,y,z$ are real and $a,b,c>0$,
+    then \[\frac {x^2}a+\frac{y^2}b+\frac{z^2}c \geq
+    \frac{(x+y+z)^2}{a+b+c}.\]}}}[/li]
+  [li]{{{Let $a,b,c$ be nonnegative real numbers.  Prove
+    that \[(a+b+c)^3-27abc\leq 4(a^3+b^3+c^3-3abc).\]}}}[/li]
+  [li]{{{Let $x,y,z$ be positive real numbers with $x+y+z=xyz$.  Prove
+    that \[\frac 1{1+xy}+\frac 1{1+yz} + \frac 1{1+zx}\leq \frac 34.\]}}}[/li]
+  [li]{{{Let $a,b,c$ be positive real numbers with $abc=1$.  Prove
+    that \[\frac 1{a^3(b+c)}+\frac 1{b^3(c+a)}+\frac 1{c^3(a+b)}\geq
+    \frac 32.\]}}}[/li]
+  [li]{{{Let $x_1,x_2,x_3,x_4$ and $x_5$ be positive real numbers
+    with \[\frac 1{1+x_1}+\frac 1{1+x_2}+\cdots+\frac 1{1+x_5}=1.\]
+    Prove that \[\sum_{i=1}^5\frac 4{4+x_i^2}\geq 1\qquad\textrm{ and
+    }\qquad \sum_{i=1}^5\frac{x_i}{4+x_i^2}\leq 1.\]}}}[/li]
+  [li]{{{Let $a,b,c,d$ be positive real numbers satisfying $a+b+c+d=1$.
+    Prove that \[ 6(a^3+b^3+c^3+d^3)\geq a^2+b^2+c^2+d^2+\frac 18.\]}}}[/li]
+  [li]{{{Let $x,y,z$ be positive real numbers with $xy+yz+zx=1$.  Prove
+    that \[\frac {x^2y^2}z+\frac {y^2z^2}x+\frac {z^2x^2}y+6xyz\geq x+y+z.\]}}}[/li]
+  [li]{{{Let $ABC$ be an acute triangle.  Prove that \[\frac{\cos A}{\cos
+    (B-C)}+\frac{\cos B}{\cos (C-A)}+\frac {\cos C}{\cos (A-B)}\geq
+    \frac 32.\]}}}[/li]
+  [li]{{{Let $a,b,c$ be positive real numbers with $a+b+c=1$.  Prove
+    that \[\frac{a^3+b}{a(b+c)}+\frac {b^3+c}{b(c+a)}+\frac
+    {c^3+a}{c(a+b)}\geq 5.\]}}}[/li]
+  [li]{{{A finite real sequence $\{a_k\}_{k=1}^n$ is called [i]concave[/i] if $2a_k\geq a_{k-1}+a_{k+1}$ for $k=2,3,\ldots,n-1$.  Find the largest constant
+    $C$ such that for every positive concave sequence
+    $\{a_k\}_{k=1}^n$, \[(a_1+a_2+\cdots+a_n)^2\geq C(n-1)(a_1^2+a_2^2+\cdots+a_n^2).\]}}}[/li]
+  [li]{{{Let $x_1,x_2,\ldots,x_{2001}$ be positive numbers such that
+    $x_i\geq x_1$ for $1\leq i\leq 2001$.  Prove that \[\sum_{i=2}^{2001}\frac{x_i}{x_1+x_2+\cdots+x_{i-1}}>5.\]}}}[/li]
+  [li]{{{Let $a,b,c$ be positive real numbers.  Prove that \[\frac
+    {a^3}{a^2+ab+b^2}+\frac {b^3}{b^2+bc+c^2}+\frac
+    {c^3}{c^2+ca+a^2}\geq \frac {a+b+c}3.\]}}}[/li]
+  [li]{{{Let $a,b,c$ be the sides of a triangle.  Prove that \[\frac
+    {(c+a-b)^4}{a(a+b-c)}+\frac {(a+b-c)^4}{b(b+c-a)}+\frac
+    {(b+c-a)^4}{c(c+a-b)}\geq ab+bc+ca.\]}}}[/li]
+  [li]{{{Given real numbers $x_1,x_2,\ldots,x_n$ with
+    $\sum_{i=1}^n|x_i|=1$ and $\sum_{i=1}^n x_i = 0$, prove that \[\left
+    |\sum_{i=1}^n \frac {x_i}i\right|\leq \frac 12 - \frac 1{2n}.\]}}}[/li]
+  [li]{{{Find all polynomials $P(x)$ with only real roots and whose
+    coefficients are each $\pm 1$.}}}[/li]
+  [li]{{{Let $a,b,c$ be positive real numbers with $a+b+c\geq abc$.
+    Prove that \[a^2+b^2+c^2\geq \sqrt 3 abc.\]}}}[/li]
+  [li]{{{Let $a,b$ and $c$ be positive real numbers.  Prove
+    that \[\sqrt{(a^2b+b^2c+c^2a)(ab^2+bc^2+ca^2)}\geq abc +
+    \sqrt[3]{(a^3+abc)(b^3+abc)(c^3+abc)}.\]}}}[/li]
+  [li]{{{Let $a,b,c$ be nonnegative real numbers.  Prove that \[\frac
+    {a+b+c}3-\sqrt[3]{abc}\leq\max\{(\sqrt a-\sqrt b)^2,(\sqrt b-\sqrt
+    c)^2,(\sqrt c-\sqrt z)^2\}.\]}}}[/li]
+[/ol]

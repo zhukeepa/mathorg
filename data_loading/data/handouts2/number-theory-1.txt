@@ -1,0 +1,134 @@
+<<<Title: Number Theory 1: Foundations
+Author(s): Josh Nichols-Barrer
+Description: Red MOP 2011 Handout
+Topics: Number theory foundations
+>>>
+
+We start with a short axiom list.  Keep in mind that we do not put all
+into code here; if you want to see the axiom way done fully, free up a
+month or two and find a book on Recursion and/or Set Theory.
+
+In the following, we regard the integers $\mathbb Z$ as an abstract
+set that comes equipped with algebraic operations $+$ and $\cdot$ satisfying a few rules.
+
+
+[ol]
+  [li]For any $a,b,c\in\mathbb Z$, the following equations hold:
+   [ul][li]$(a+b)+c = a+(b+c)$.[/li]
+    [li]$(ab)c = a(bc)$.[/li][/ul]
+  In practice, this allows us to omit parentheses when only considering one operation or the other.[/li]
+  [li]For any $a,b\in Z$, the following equations hold:
+   [ul][li]$a+b = b+a$.[/li]
+    [li]$ab = ba$.[/li][/ul][/li]
+  [li]Multiplication distributes over addition.[/li]
+  [li]Addition and multiplication have what are called identities.[/li]
+  [li]Every element of $\mathbb Z$ has an additive inverse.[/li]
+[/ol]
+
+[h3]Exercises A.[/h3]
+
+[ol]
+  [li]{{{Think about associativity.
+   [ol][li]Prove that $((a+b)+c)+d = a+(b+(c+d))$ in two different ways.[/li]
+    [li]What is the shortest proof you can find that $((((ab)c)d)e)f = a(b(c(d(ef))))$?[/li][/ol]}}}[/li]
+  [li]{{{Prove that identities are unique, so we may write $0$ for the additive identity and $1$ for the multiplicative identity.}}}[/li]
+  [li]{{{Prove that $0\cdot a=0$ for any $a\in\mathbb Z$.}}}[/li]
+  [li]{{{Prove that additive inverses are unique.}}}[/li]
+  [li]{{{Prove that $(-1)a = -a$ for any $a\in\mathbb Z$.}}}[/li]
+[/ol]
+
+From here, we assume also a special subset $\mathbb N\subset\mathbb Z$ of [i]natural numbers[/i] (which you ought to think of as positive).  We will understand $a>b$ to mean that there is a natural number $c\in \mathbb N$ with $a = b+c$.  
+
+[ol]  
+  [li]The set $\mathbb N$ is closed under addition and multiplication.[/li]
+  [li]Trichotomy: For every integer $a$, either $a>0$, $a<0$ or $a=0$, and no two of these hold simultaneously.[/li]
+  [li]Nontriviality: $0\neq 1$.[/li]
+  [li]Well-Ordering: Every nonempty subset $T\subseteq \mathbb N$ has a least element.[/li]
+[/ol]
+
+[h3]Exercises B[/h3]
+[ol]
+  [li]{{{Prove that for any $a,b\in Z$, either $a<b$, $a=b$, or $a>b$, and no two of these may occur simultaneously.}}}[/li]
+  [li]{{{Prove that the relation $<$ is transitive, and that the relation $\leq$ is transitive and reflexive.}}}[/li]
+  [li]{{{Prove that if $a<b$ and $c>0$, then $ca>cb$.  If $a<b$ and $c<0$, prove that $ca < cb$.}}}[/li]
+  [li]{{{Prove that the "least element" from the Well-Ordering Principle is unique in that regard.}}}[/li]
+  [li]{{{Prove that every set of integers bounded below has a least element, and every set of integers bounded above has a greatest element.}}}[/li]
+  [li]{{{Prove that Mathematical Induction is a corollary of Well-Ordering.}}}[/li]
+  [li]{{{Prove that $0<1$.}}}[/li]
+  [li]{{{Prove that there are no integers between $0$ and $1$.}}}[/li]
+[/ol]
+
+Let's look at what we will do with this.
+
+[b]Theorem 1.[/b] (Division Algorithm) Let $a,b\in\mathbb Z$ with $b\neq 0$.  Then there exist unique integers $q,r$ with $0\leq r < |b|$ such that $a=bq+r$.
+
+[b]Definition 1.[/b] We say that $a | b$, $a$ [i]divides[/i] $b$, if there is an integer $q$ with $a = bq$.
+
+[b]Definition 2.[/b] Let $a_1,a_2,\ldots,a_n$ be integers not all zero.  We define the greatest common divisor \[\gcd(a_1,a_2,\ldots,a_n) = (a_1,a_2,\ldots,a_n)\] to be the greatest divisor the numbers have in common, and the least common multiple \[\mathrm{lcm}(a_1,a_2,\ldots,a_n) = [a_1,a_2,\ldots,a_n]\] to be the least multiple the numbers have in common (why do these exist?).
+
+[b]Theorem 2.[/b] (Euclidean Algorithm) Let $a$ and $b$ be integers, not both zero.  Then there are integers $m$ and $n$ with \[(a,b) = ma+nb,\] and there is an effective algorithm for finding such $m$ and $n$ without knowing $(a,b)$.
+
+[b]Theorem 3.[/b] (Bezout's Theorem) Let $a_1,\ldots,a_n$ be integers, not all zero.  Then there exist integers $m_1,\ldots,m_n$ with \[(a_1,a_2,\ldots,a_n) = m_1a_1+m_2a_2+\cdots+m_na_n.\]
+
+[b]Definition 3.[/b] A [i]prime[/i] is an integer $p>1$ whose only divisors are 1 and itself.
+
+[b]Theorem 4.[/b] Let $p$ be a prime, and let $a$ and $b$ be integers with $p | ab$.  Then $p | a$ or $p | b$.
+
+[b]Theorem 5.[/b] (Unique Prime Factorization) Given a positive integer $N$, we can find a unique (possibly empty) sequence of primes $p_1\leq p_2\leq\cdots\leq p_m$ with \[N = p_1p_2\cdots p_m.\]
+
+
+[h3]Problems[/h3]
+
+[ol]
+  
+    [li]{{{(Euclid) Prove that there are infinitely many primes.}}}[/li]
+  [li]{{{Find the greatest common divisor:
+     [ol][li](1020,3451)[/li]
+    [li](5006,9001)[/li]
+    [li](161803,100007)[/li]
+    [li](100001,10000001)[/li][/ol]}}}[/li]
+  [li]{{{Determine all values of $n$ for which the fraction $\frac{55n+32}{22n+13}$ is in lowest terms.}}}[/li]
+  [li]{{{Suppose we are given positive integers $a,b$.
+     [ol][li]Compute $(2^a-1,2^b-1)$.[/li]
+    [li]If $a$ and $b$ are odd, compute $(2^a+1,2^b+1)$.[/li][/ol]}}}[/li]
+  [li]{{{Suppose that $a,b,c$ are positive integers.  Prove that \[\frac{(a,b,c)}{(a,b)(b,c)(c,a)} = \frac[a,b,c][a,b][b,c][c,a].\]}}}[/li]
+  [li]{{{(Rational Root Theorem) Suppose that $f(x) = a_nx^n+ a_{n-1}x^{n-1}+\cdots +a_0$ is a polynomial with integer coefficients, and suppose that $r$ is a rational number with $f(r)=0$.  Let $r=\frac pq$ in lowest terms.  Prove that $p | a_0$ and $q | a_n$.}}}[/li]
+  [li]{{{Compute \[\textrm{gcd}\left(5^{5^{2008}}+5^{5^{2007}}+1,5^{5^{2009}}+5^{5^{2008}}+1\right).\]}}}[/li]
+  [li]{{{Show that for every integer $a>1$ there exists an odd integer
+      $c$ such that $a^n+1$ is not a multiple of $cn$ for every positive
+      integer $n$.}}}[/li]
+  [li]{{{(Gaussian Integers) Suppose we define $ \mathbb Z[i ] = \{a+bi | a,b\in\mathbb{Z}\}$, where here $i^2=-1$ as usual.
+     [ol][li]Prove that a division algorithm holds in $\mathbb Z[i ]$: if $z,w\in \mathbb Z[i ]$ with $w\neq 0$, prove that there exist $q,r\in\mathbb Z[i ]$ with $|r| < |w|$ and $z = wq+r$.[/li]
+    [li]Prove that a Euclidean algorithm holds in $\mathbb Z[i ]$: if $z,w\in \mathbb Z[i ]$, not both 0, then there are $m,n\in \mathbb Z[i ]$ with $y=mz+nw$ a greatest common divisor in the sense that $y$ divides all common divisors of $z$ and $w$.  ([i]Hint:[/i] $|z|^2$ is an integer).[/li]
+    [li]A [i]unit[/i] is a divisor of 1.  What are the units in $\mathbb Z$?  What are the units in $\mathbb Z[i ]$?[/li]
+    [li]Define an element $\pi\in\mathbb Z[i ]$ to be [i]prime[/i] if its only divisors are units and unit multiples of itself.  Prove that if $\pi | zw$ then $\pi | z$ or $\pi | w$.[/li]
+    [li]For each prime in $\mathbb{Z}[i ]$, choose one of its unit multiples to stand for all.  Prove that every Gaussian integer $N$ has a unique factorization into a product of a unit and powers of these primes.[/li][/ol]}}}[/li]
+  [li]{{{Factorize 585 in the Gaussian integers.}}}[/li]
+  [li]{{{Use the Euclidean algorithm to find a greatest common divisor of $-1+22i$ and $14+17i$.  Is there a less labor-intensive approach?}}}[/li]
+  [li]{{{Consider $\mathbb Z[i\sqrt 2]$ analogously to the Gaussian integers above; do we have unique prime factorization here?  What about $\mathbb Z[i\sqrt 5]$?}}}[/li]
+  [li]{{{Suppose that a prime $p$ can be written $p=a^2+b^2$.  Prove that this is the only way that $p$ will be represented as a sum of squares, up to rearrangement.}}}[/li]
+  [li]{{{Let $p$ be a prime, and consider the equation \[x^2+xy+y^2 = p.\]  Prove that if this equation has a solution $(x,y)$ in integers, then it has exactly six such solutions.}}}[/li]
+  [li]{{{Determine all positive integers $N$ such that the leftmost
+      digits of $2^N$ form the number $2^{2006}$ and the rightmost digits
+      of $5^N$ form the number $5^{2006}$.}}}[/li]
+  [li]{{{Find a set of positive integers $n_1,n_2,\ldots, n_{2006}$, each
+      greater than one billion, satisfying the
+      equation \[n_1^2+n_2^3+n_3^4+\cdots+n_{2005}^{2006} = n_{2006}^{2007}.\]}}}[/li]
+  [li]{{{Let $n$ be a positive integer.  Prove
+      that  [ol][li]There are infinitely many triples
+        $(a,b,c)$ of distinct integers such that $\min\{a,b,c\}\geq n$ and
+        $abc+1$ divides one of the numbers $(a-b)^2$, $(b-c)^2$,
+        $(c-a)^2$.[/li]
+    [li]There is no triple $(a,b,c)$ of distinct positive integers such
+      that $abc+1$ divides more than one of the numbers $(a-b)^2$,
+      $(b-c)^2$, $(c-a)^2$.[/li][/ol]}}}[/li]
+  [li]{{{Consider the set of polynomials with rational coefficients $\mathbb Q[x]$.
+     [ol][li]Prove that a division algorithm holds in $\mathbb Q[x]$: if $f(x),g(x)\in\mathbb Q[x]$ with $f\neq 0$, prove that there exist polynomials $q(x),r(x)\in\mathbb Q[x]$ with $\deg r < \deg q$ and $f = gq+r$.[/li]
+    [li]Prove a Euclidean algorithm in $\mathbb Q[x]$.[/li]
+    [li]What are the units in $\mathbb Q[x]$?[/li]
+    [li]Define a polynomial $p(x)\in\mathbb Q[x]$ to be [i]prime[/i] (often called [i]irreducible[/i]) if its only divisors are units and unit multiples of itself.  Prove that if $p(x) | f(x)g(x)$ then $p(x)|f(x)$ or $p(x)| g(x)$.[/li]
+    [li]Prove that every nonzero real polynomial will be uniquely expressed as a product of a unit and powers of monic irreducibles.[/li]
+    [li]Does this discussion work for $\mathbb R[x]$, $\mathbb C[x]$ (polynomials with real and complex coefficients, respectively)?[/li]
+    [li]Assume the Fundamental Theorem of Algebra.  What are the monic irreducibles in $\mathbb R[x]$ and $\mathbb C[x]$?[/li]
+    [li]Show that the Euclidean Algorithm fails in $\mathbb Z[x]$.[/li][/ol]}}}[/li]
+[/ol]

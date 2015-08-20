@@ -1,0 +1,33 @@
+<<<Title: Inequalities-2
+Author(s): Ali Gurel
+Description: 2012 Blue MOP Handout
+Topics: Inequalities
+>>>
+
+[ol]
+[li]{{{(Manfrino&Ortega&Delgado, Inequalities an Olympiad Approach, p.48) If $a, b, c$ are non-negative real numbers, prove that
+$$a^3+b^3+c^3+abc\geq\frac{1}{7}(a+b+c)^3.$$}}}[/li]
+  [li]{{{(Manfrino&Ortega&Delgado, Inequalities an Olympiad Approach, p.48) Prove that
+$$a+b+c\leq \frac{a^2+b^2}{2c}+\frac{b^2+c^2}{2a}+\frac{c^2+a^2}{2b}\leq\frac{a^3}{bc}+\frac{b^3}{ca}+\frac{c^3}{ab}\cdot$$}}}[/li]
+  [li]{{{(MOP-2010, Zeb & Ali) For positive numbers $x,y,z$, prove that
+$$2\left(x^2+y^2+z^2\right)^2\geq3\left(xy(x^2+y^2)+yz(y^2+z^2)+zx(z^2+x^2)\right).$$}}}[/li]
+  [li]{{{(Croatia-2004) Prove that the inequality
+$$\frac{a^2}{(a+b)(a+c)}+\frac{b^2}{(b+c)(b+a)}+\frac{c^2}{(c+a)(c+b)}\geq\frac{3}{4}\cdot$$
+holds for all positive real numbers $a,b,c$.}}}[/li]
+  [li]{{{(Serbia-2008) Let $a,b,c$ be positive real numbers such that $a+b+c=1$. Prove that
+$$a^2+b^2+c^2+3abc\geq\frac{4}{9}\cdot$$}}}[/li]
+  [li]{{{(Tournament of Towns-97) Let $a,b,c$ be positive numbers such that $abc=1$. Prove that
+$$\frac{1}{a+b+1}+\frac{1}{b+c+1}+\frac{1}{c+a+1}\leq1.$$}}}[/li]
+  [li]{{{(Shortlist Iberoamerican, 2003) Let $a, b, c$ be positive real numbers. Prove that
+$$\frac{a^3}{b^2-bc+c^2}+\frac{b^3}{c^2-ca+a^2}+\frac{c^3}{a^2-ab+b^2}\geq a+b+c.$$}}}[/li]
+  [li]{{{(Zdravko Cvetkovski, Inequalities p.125) Let $a,b,c$ be positive real numbers. Prove that
+$$27+\left(2+\frac{a^2}{bc}\right)\left(2+\frac{b^2}{ca}\right)\left(2+\frac{c^2}{ab}\right)\geq6(a+b+c)\left(\frac{1}{a}+\frac{1}{b}+\frac{1}{c}\right).$$}}}[/li]
+  [li]{{{(Zdravko Cvetkovski, Inequalities p.126) Let $a,b,c$ be non-negative real numbers. Prove the inequality
+$$\frac{a}{4b^2+bc+4c^2}+\frac{b}{4c^2+ca+4a^2}+\frac{c}{4a^2+ab+4b^2}\geq\frac{1}{a+b+c}\cdot$$}}}[/li]
+  [li]{{{(Zdravko Cvetkovski, Inequalities p.127) Let $a,b,c$ be positive real numbers. Prove the inequality
+$$a^2+b^2+c^2+2abc+1\geq2(ab+bc+ca).$$}}}[/li]
+  [li]{{{(Zdravko Cvetkovski, Inequalities p.129) Let $a, b, c$ be positive real numbers such that $a + b + c = 1$. Prove the inequality
+$$0\leq ab+bc+ca-2abc\leq\frac{7}{27}\cdot$$}}}[/li]
+  [li]{{{(Zdravko Cvetkovski, Inequalities p.130) Let $a,b,c\in\mathbb{R}^+$ such that $abc=1$. Prove the inequality
+$$\frac{1}{a^3(b+c)}+\frac{1}{b^3(c+a)}+\frac{1}{c^3(a+b)}\geq\frac{3}{2}\cdot$$}}}[/li]
+[/ol]

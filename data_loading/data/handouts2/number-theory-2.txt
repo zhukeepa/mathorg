@@ -1,0 +1,94 @@
+<<<Title: Number Theory 2: Stuff $\bmod$ Other Stuff
+Author(s): Josh Nichols-Barrer
+Description: Red MOP 2011 Handout
+Topics: Modular arithmetic
+>>>
+
+
+Today we set up modular arithmetic formally (without this exercise, it may be difficult to tell intuition from mathematical fact).  To begin, we make a simple definition.
+
+[b]Definition 1.[/b] Let $a,b,m\in\mathbb Z$ with $m\neq 0$.  We say that [i]$a$ is congruent to $b$ modulo $m$[/i] if $m | b-a$.  We denote this relation in symbols like so:
+\[a\equiv b\bmod m.\]
+
+The first thing to notice is that this relation has much in common with the ordinary equality relation.  In particular, it is an example of what we call an [i]equivalence relation.[/i]
+
+[b]Definition 2.[/b] A relation $\sim$ on a set $S$ is called an [i]equivalence relation[/i] if the three following axioms are satisfied:
+
+[ol]
+  [li]Reflexivity.  For any $a\in S$, $a\sim a$.[/li]
+  [li]Symmetry. For any $a,b\in S$, if $a\sim b$ then $b\sim a$.[/li]
+  [li]Transitivity.  For any $a,b,c\in S$, if $a\sim b$ and $b\sim c$ then $a\sim c$.[/li]
+[/ol]
+
+
+Exercise: Show that an equivalence relation $\sim$ on a set $S$ partitions the set completely (into disjoint subsets whose union is all of $S$ itself).
+
+[b]Theorem 1.[/b] Congruence mod $m$ is an equivalence relation on $\mathbb Z$, partitioning the integers into [i]residue classes[/i], corresponding to the $m$ distinct remainders upon division by $m$.
+
+What this means is that with practice we may learn (as you probably have already) to use modular congruence algebraically as a stand-in for algebraic equality in a world of only $m$ "numbers."  Algebraic operations also go through, to an extent:
+
+
+[b]Theorem 2.[/b] Let $a,b,c,m\in\mathbb Z$ with $m\neq 0$.  Then:
+
+[ol]
+  
+  [li](Addition and Multiplication) If $a\equiv b\bmod m$ and $c\equiv d\bmod m$ then $a+c\equiv b+d\bmod m$ and $ac\equiv bd\bmod m$.[/li]
+  [li](Exponents) If $a\equiv b\bmod m$ and $n$ is a positive integer, then $a^n\equiv b^n\bmod m$.[/li]
+  [li](Polynomials) If $a\equiv b\bmod m$ and $f(x)$ is a polynomial with integer coefficients, then $f(a)\equiv f(b)\bmod m$.[/li]
+  [li](Cancellation) If $ca\equiv cb\bmod m$, then \[a\equiv b\bmod \frac m{(c,m)}.\]  In particular, if $(c,m)=1$, then $a\equiv b\bmod m$.[/li]
+  [li](Multiplicative inverses) The residue class $a$ has a multiplicative inverse mod $m$ (that is, there exists a $b$ with $ab\equiv 1\bmod m$) if and only if $(a,m)=1$.[/li]
+[/ol]
+
+A simple problem from algebra is systems of linear equations; modular arithmetic has its own analogue, the Chinese Remainder Theorem.
+
+[b]Theorem 3.[/b] (Chinese Remainder Theorem) Let $a_1,a_2,\ldots,a_n,m_1,m_2\ldots,m_n\in\mathbb Z$, with the $m_i$ nonzero and pairwise relatively prime.  Then the system of $n$ congruences \[x\equiv a_i\bmod m_i, i=1,2,\ldots,n\] has a solution $x=N$, unique modulo $m_1m_2\cdots m_n$, and there is an effective argument for computing it.
+
+Notice that such a system "degenerates" when two or more of the $m_i$ have a common factor.
+
+
+
+
+[h3]Problems[/h3]
+
+[ol]
+  [li]{{{Consider equations of the form $x^2\equiv a\bmod 1001$.  As $a$ ranges over all residue classes mod 1001, what are the different numbers of solutions that this equation might have?  Provide examples in each case.}}}[/li]
+  [li]{{{Find all solutions in integers to \[x_1^4+x_2^4+\cdots+x_{14}^4 = 99,999.\]}}}[/li]
+  [li]{{{Find all solutions in integers to $x^2+3x+5\equiv 0\bmod 121$.}}}[/li]
+  [li]{{{Find all nonnegative integers $a$ such that $3\cdot 2^a$ differs
+    by at most 1 from a perfect square.}}}[/li]
+  [li]{{{Find all solutions in integers $(x,y,z)$ to \[x^2+y^2+z^2 = x^2y^2.\]}}}[/li]
+  [li]{{{Find all triples of positive integers $(k,m,n)$ such that:
+   [ol][li]$7^k=9^m+2^n$;[/li]
+    [li]$7^k+9^m=2^n$.[/li][/ol]}}}[/li]
+  [li]{{{Find all solutions in integers to $x^3 = 2^y+1$.}}}[/li]
+  [li]{{{Find all positive integer triples $(m,n,r)$ such that
+    $2^m+3^n=r^2$.}}}[/li]
+  [li]{{{Addenda to Euclid's Theorem (cf. Dirichlet's Theorem).
+   [ol][li]Prove that there are infinitely many primes of the form $4k+3$.[/li]
+    [li]What other infinite classes of primes exist by virtue of this argument?[/li][/ol]}}}[/li]
+  [li]{{{Prove that there exist 57 consecutive composite positive
+    integers less than $11\times 10^{10}$.}}}[/li]
+  [li]{{{Determine if there exists a 17-term nonconstant arithmetic
+    progression of positive integers such that the product of these
+    numbers is a perfect $2008^{\mathrm {th}}$ power of an integer.}}}[/li]
+  [li]{{{(Hensel's Lemma) Let $f(x) = a_nx^n+a_{n-1}x^{n-1}+\cdots+a_0$ be an integer polynomial, and define \[f'(x) = na_nx^{n-1}+(n-1)a_{n-1}x^{n-2}+\cdots+a_1.\]  Let $p$ be a prime, and let $m$ be a positive integer.  Suppose that $r\in\mathbb Z$ is a [i]simple root of $f(x)$ mod $p$[/i] in the sense that $f(r)\equiv 0\bmod p$ and $f'(r)\not\equiv 0\bmod p$.  Prove that there is a unique residue class $\tilde r$ mod $p^m$ such that $f(\tilde r)\equiv 0\bmod {p^m}$ and $\tilde r\equiv r\bmod p$.}}}[/li]
+  [li]{{{Show that for every integer $a>1$ there exist infinitely many
+    integers $n$ such that $a^n+1$ is a multiple of $n$.}}}[/li]
+  [li]{{{Let $b,n>1$ be integers.  Suppose that for each $k>1$ there
+    exists an integer $a_k$ such that $b-a_k^n$ is divisible by $k$.
+    Prove that $b=A^n$ for some integer $A$.}}}[/li]
+  [li]{{{(Modular arithmetic in the Gaussian integers) Let $z= a+bi$ be a Gaussian integer, and define modular arithmetic mod $z$ similarly to the same setting in the ordinary integers.
+   [ol][li]How many distinct residue classes are there in modular arithmetic mod $z$?[/li]
+    [li]Suppose that $|z|^2$ is a prime $p$.  What does this tell us about the structure of mod $z$ arithmetic?[/li]
+    [li]Suppose that $z$ is a Gaussian prime which is also an integer prime.  Prove that mod $z$ arithmetic is an algebraic system which is strictly different from any modular arithmetic in the integers.[/li][/ol]}}}[/li]
+  [li]{{{(Factorization in $\mathbb Z[x]$)  We don't have a Euclidean algorithm in $\mathbb Z[x]$.  However, we can use what we know about $\mathbb Q[x]$ to get a unique factorization theorem here.
+   [ol][li]What are the units in $\mathbb Z[x]$?[/li]
+    [li]If two polynomials $f(x),g(x)\in\mathbb Z[x]$ each have coefficients whose greatest common divisor is 1 (altogether, not pairwise), prove that $f(x)g(x)$ also has this property.[/li]
+    [li]Prove that a polynomial $f(x)\in \mathbb Z[x]$ is irreducible in $\mathbb Z[x]$ if and only if it is irreducible in $\mathbb Q[x]$.[/li]
+    [li]Prove that every polynomial in $\mathbb Z[x]$ factors uniquely as a product of an integer (with its own unique factorization in $\mathbb Z$) and irreducibles with positive leading coefficients.[/li][/ol]}}}[/li]
+  [li]{{{(Eisenstein's Criterion) Suppose that $f(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_0$ is a polynomial with integer coefficients so that for some prime $p$, we have  [ul][li]$p\not | a_n$;[/li]
+    [li]$p | a_j$ for each $j<n$;[/li]
+    [li]$p^2\not | a_0$.[/li][/ul]  Prove that $f(x)$ is irreducible in $\mathbb Q[x]$.}}}[/li]
+  [li]{{{Let $n>1$ be a positive integer.  Prove that $x^n+5x^{n-1}+3$ is
+    irreducible.}}}[/li]
+[/ol]

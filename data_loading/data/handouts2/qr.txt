@@ -1,0 +1,22 @@
+<<<Title: Don't be a Square
+Author(s): Josh Nichols-Barrer
+Description: 2008 MOP Black Handout
+Topics: Quadratic reciprocity
+>>>
+
+[ol]
+  [li]{{{(Bulgaria Balkan Selection Test 2007) Let $p$ be a prime of the form $4k+3$.  For any two integers $x,y$ not divisible by $p$, let $f(x,y)$ denote the remainder upon dividing $(x^2+y^2)^2$ by $p$.  How many values can $f$ take?}}}[/li]
+  [li]{{{(Romanian TST 1997) Let $A$ be the set of integers which can be written as $a^2+2b^2$ for some integers $a,b$ with $b\neq 0$.  If $p$ is a prime with $p^2\in A$, show that $p\in A$.}}}[/li]
+  [li]{{{(Romanian TST 1999) Find all positive integers $n$ for which there exists an integer $a$ with \[2^n-1 | a^2+9.\]}}}[/li]
+  [li]{{{(IMO 1996/4) The positive integers $a$ and $b$ are such that the numbers $15a + 16b$
+  and $16a - 15b$ are both squares of positive integers. What is the least possible
+  value that can be taken on by the smaller of these two squares?}}}[/li]
+  [li]{{{The positive integer $n$ is a square mod $p$ for all primes $p$.
+  Prove that $n$ is a square.}}}[/li]
+  [li]{{{(Romanian TST 2004) Let $p$ be an odd prime and define \[f(x)=\sum_{k=1}^{p-1}\left(\frac kp\right) x^{k-1}.\]  Prove that  [ol][li]If $p\equiv 3\bmod 4$ then $f(x)\equiv x-1\bmod {(x-1)^2}$[/li]
+    [li]If $p\equiv 5\bmod 8$ then $f(x)\equiv 0\bmod {(x-1)^2}$.[/li][/ol]}}}[/li]
+  [li]{{{(Bulgarian MO 2001) Let $p$ be a prime number of the form $4k+3$.  Consider the equation \[(p+2)x^2-(p+1)y^2+px+(p+2)y = 1.\]  Prove that:  [ol][li]If $(x_0,y_0)$ is an integer solution, then $p$ divides $x_0$.[/li]
+    [li]the equation has infinitely many solutions in positive integers.[/li][/ol]}}}[/li]
+  [li]{{{(Bulgarian MO 2007) Let $f(x)$ be a monic polynomial of even degree with integer coefficients.  Suppose that $f(x)$ is a perfect square for infinitely many integers $x$.  Prove that there is a polynomial $g(x)$ with integer coefficients such that $f(x)=g(x)^2$.}}}[/li]
+  [li]{{{(Austrian-Polish MO 2000) A sequence of integers $(a_n)_{n=1}^\infty$ satisfies $a_{n+1}=a_n^3+1999$ for $n\geq 1$.  Prove that there exists at most one $n$ for which $a_n$ is a perfect square.}}}[/li]
+[/ol]

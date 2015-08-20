@@ -1,0 +1,65 @@
+<<<Title: Some useful constructions
+Author(s): Carlos Shine
+Description: 
+Topics: Geometry constructions
+>>>
+
+[b]Abstract.[/b] Suppose you have a geometry problem and some really weird relation between sides and/or angles. What do you do then? Trig-bash? Complex-bash? Bash? You [b]can[/b] do that, of course, but you can save a lot of computations just by making a simple construction.
+
+[h2]Some tricks[/h2]
+[ul][li][b]Midpoints and angle chasing.[/b] Midpoints can be really annoying in a geometry problem, specially if mixed with a lot of angles. How do you relate midpoints with angles? There are at least two possibilities:
+   [ul][li][b]Midlines.[/b] You should know that if $M$ and $N$ are the midpoints of segments $AB$ and $AC$ then $BC$ is parallel to $MN$. So you might want to construct another midpoint![/li]
+    [li][b]Paralellograms.[/b] In paralellograms, the diagonals meet at their respective midpoints. You might want to take advantage of that.[/li]
+    [li]Another nice ratio is $2:1$: it is the centroid ratio. So if a point $X$ divides $AB$ in a $1:2$ ratio, you can try to construct a triangle with centroid $X$ and median $AB$.[/li][/ul][/li]
+  [li][b]Divide and conquer.[/b] You can divide some segments and/or angles in parts, especially when you have relations like "this angle is three times that other" or $AB = AC + DE$.[/li]
+  [li][b]More on segments.[/b] If a broken line has the same length as a segment or another broken line, a good idea is to straighten all broken lines. This usually generates a lot of isosceles triangles, and you know good things happen when isosceles triangles are around.[/li]
+  [li][b]Circles with radius $0$.[/b] Sometimes it's handy to consider a point a circle with radius $0$. Especially if you apply power of a point.[/li]
+  [li][b]Segment ratios and angles.[/b] Suppose you have some segment ratios, but still have to deal with angles. One good bridge between these two apparently disparate worlds is the Apolonius circle: let $A$ and $B$ be two distinct fixed points; the locus of the points $X$ such that $\frac{AX}{BX}$ is fixed and different from $1$ is a circle with $AB$ as an axis of symmetry.[/li]
+  [li][b]Point redefinition.[/b] You want a point to have a property, but can't get a proof of it! So try to construct a point with the same property and prove that it is actually the same point.[/li]
+  [li][b]Projecting a point onto the sides of a polygon.[/b] I know it sounds a bit random, but projecting a point onto the sides of a polygon generates a lot of cyclic quads, and some nice angles may appear.[/li][/ul]
+
+[h2]Problems[/h2]
+[ol]
+  
+  [li]{{{(Peru Cono Sur TST 2008) Let $ABCDEF$ be a convex hexagon such that $\angle FAB = \angle CDE = 90^\circ$ and the quadrilateral $BCEF$ has an inscribed circle. Prove that $AD \leq BC + FE$.}}}[/li]
+  [li]{{{(Iberoamerican 2003) In a square $ABCD$, let $P$ and $Q$ be points on the sides $BC$ and $CD$ respectively, different from its endpoints, such that $BP = CQ$. Consider points $X$ and $Y$ such that $X\neq Y$, in the segments $AP$ and $AQ$ respectively. Show that, for every $X$ and $Y$ chosen, there exists a triangle whose sides have lengths $BX$, $XY$ and $DY$.}}}[/li]
+  [li]{{{Prove the [i]Erd\H os-Mordell inequality[/i]: Let $P$ be a point inside triangle $ABC$ and $d_a$, $d_b$, $d_c$ be the distances from $P$ to sides $BC$, $CA$, $AB$ respectively. Then $PA + PB + PC \geq 2(d_a + d_b + d_c)$.}}}[/li]
+  [li]{{{(Iberoamerican Shortlist 2010, Brazil TST 2011) Two circles $C_1$ and $C_2$, with centers $O_1$ and $O_2$ respectively, intersect at points $A$ and $B$. Let $X$ and $Y$ be points on $C_1$ distinct from $A$ and $B$. Lines $XA$ and $YA$ meet $C_2$ again at $Z$ and $W$, respectively.
+  
+  Let $M$ be the midpoint of $O_1O_2$, $S$ be the midpoint of $XA$ and $T$ be the midpoint of $WA$. Prove that $MS = MT$ if and only if $X$, $Y$, $Z$ and $W$ lie on the same circle.}}}[/li]
+  [li]{{{(IMO 1996) Let $ABCDEF$ be a convex hexagon such that $AB$ is parallel to $DE$, $BC$ is parallel to $EF$, and $CD$ is parallel to $FA$. Let $R_A$, $R_C$, $R_E$ denote the circumradii of triangles $FAB$, $BCD$, $DEF$, respectively, and let $P$ denote the perimeter of the hexagon. Prove that 
+  $$R_{A}+R_{C}+R_{E}\geq\frac{P}{2}.$$}}}[/li]
+  [li]{{{(IMO 1995) Let $ABCDEF$ be a convex hexagon with $AB = BC = CD$ and $DE = EF = FA$, such that $\angle BCD =\angle EFA =\frac{\pi}3$. Suppose $G$ and $H$ are points in the interior of the hexagon such that $\angle AGB =\angle DHE =\frac{2\pi}3$. Prove that $AG+GB+GH+DH+HE\geq CF$.}}}[/li]
+  [li]{{{(Brazil 2006) Let $ABC$ be a triangle. The internal bisector of $\angle B$ meets $AC$ in $P$. Let $I$ be the incenter of $ABC$. Prove that if $AP+AB = CB$, then $API$ is an isosceles triangle.}}}[/li]
+  [li]{{{(IMO 1997) It is known that $\angle BAC$ is the smallest angle in the triangle $ABC$. The points $B$ and $C$ divide the circumcircle of the triangle into two arcs. Let $U$ be an interior point of the arc between $B$ and $C$ which does not contain $A$. The perpendicular bisectors of $AB$ and $AC$ meet the line $AU$ at $V$ and $W$, respectively. The lines $BV$ and $CW$ meet at $T$.
+  
+  Show that $AU = TB + TC$.}}}[/li]
+  [li]{{{(IMO 2001) Let $ABC$ be a triangle with $\angle BAC = 60^\circ$. Let $AP$ bisect $\angle BAC$ and let $BQ$ bisect $\angle ABC$, with $P$ on $BC$ and $Q$ on $AC$. If $AB + BP = AQ + QB$, what are the angles of the triangle?}}}[/li]
+  [li]{{{(Brazil 2001) In a convex quadrilateral, the {\sl altitude} relative to a side is defined to be the line perpendicular to this side through the midpoint of the opposite side. Prove that the four altitudes have a common point if and only if the quadrilateral is cyclic, that is, if and only if, there exists a circle which contains its four vertices.}}}[/li]
+  [li]{{{(IMO 2007) Consider five points $A$, $B$, $C$, $D$ and $E$ such that $ABCD$ is a parallelogram and $BCED$ is a cyclic quadrilateral. Let $\ell$ be a line passing through $A$. Suppose that $\ell$ intersects the interior of the segment $DC$ at $F$ and intersects line $BC$ at $G$. Suppose also that $EF = FG = EC$. Prove that $\ell$ is the bisector of angle $\angle DAB$.}}}[/li]
+  [li]{{{(IMOSL 2007) Denote by $M$ the midpoint of side $BC$ in an isosceles triangle $ABC$ with $AC = AB$. Take a point $X$ on the smaller arc $MA$ of circumcircle of triangle $ABM$. Denote by $T$ the point inside of angle $\angle BMA$ such that $\angle TMX = 90^\circ$ and $TX = BX$.
+  
+  Prove that $\angle MTB - \angle CTM$ does not depend on choice of $X$.}}}[/li]
+  [li]{{{Triangle $ABC$ is such that $AB = AC$. Let $D$ be a point on side $BC$ such that $BD = 2DC$. Point $P$ lies on segment $AD$ and satisfies $\angle ABP = \angle PAC$. Prove that $\angle BAC = 2\angle DPC$.}}}[/li]
+  [li]{{{(Bosnia and Herzegovina 2011) Let $ABC$ be a triangle such that $AB + AC = 2BC$. Prove that the midpoints $M$ of $AB$ and $N$ of $AC$, the incenter $I$ of $ABC$ and $A$ lie on the same circle.}}}[/li]
+  [li]{{{(Iran 2011) Let $ABC$ be a triangle. Line $r$ intersects the extension of $AB$ at $D$ ($B$ between $A$ and $D$) and the extension of $AC$ in $E$ ($C$ between $A$ and $E$). Suppose that reflection of line $\ell$ with respect to the perpendicular bisector of side $BC$ intersects the mentioned extensions in $D'$ and $E'$ respectively. Prove that if $BD + CE = DE$, then $BD' + CE' = D'E'$.}}}[/li]
+  [li]{{{Let $A$ be a point in the interior of triangle $BCD$ such that $AB\cdot CD = AD\cdot BC$. Point $P$ is the symmetrical of point $A$ with respect to $BD$. Prove that $\angle PCB=\angle ACD$.}}}[/li]
+  [li]{{{(USAMO 2005) Let $ABC$ be an acute-angled triangle, and let $P$ and $Q$ be two points on its side $BC$. Construct a point $C_1$ in such a way that the convex quadrilateral $APBC_1$ is cyclic, $QC_1  \parallel CA$, and the points $C_1$ and $Q$ lie on opposite sides of the line $AB$. Construct a point $B_1$ in such a way that the convex quadrilateral $APCB_1$ is cyclic, $QB_1\parallel BA$, and the points $B_1$ and $Q$ lie on opposite sides of the line $AC$.
+  
+  Prove that the points $B_1$, $C_1$, $P$, and $Q$ lie on a circle.}}}[/li]
+  
+  [li]{{{(USAMO 2009) Trapezoid $ABC$, with $AB \parallel CD$, is inscribed in circle $\omega$ and point $G$ lies inside triangle $BCD$. Rays $AG$ and  $BG$ meet $\omega$ again at points $P$ and $Q$, respectively. Let the line through $G$ parallel to $AB$ intersect $BD$ and $BC$ at points $R$ and $S$, respectively. Prove that quadrilateral $PQRS$ is cyclic if and only if $BG$ bisects $\angle CBD$.}}}[/li]
+  
+  [li]{{{(Iran TST 2011) In acute triangle $ABC$, $\angle B > \angle C$. Let $M$ be the midpoint of $BC$, $D$ and $E$ be the feet of the altitudes from $C$ and $B$ respectively. $K$ and $L$ are midpoints of $ME$ and $MD$ respectively. If $KL$ intersects the line through $A$ parallel to $BC$ at $T$, prove that $TA = TM$.}}}[/li]
+  [li]{{{(USAMO 1999) Let $ABCD$ be an isosceles trapezoid with $AB \parallel CD$. The inscribed circle $\omega$ of triangle $BCD$ meets $CD$ at $E$. Let $F$ be a point on the (internal) angle bisector of $\angle DAC$ such that $EF \perp CD$. Let the circumscribed circle of triangle $ACF$ meet line $CD$ at $C$ and $G$. Prove that the triangle $AFG$ is isosceles. }}}[/li]  
+  [li]{{{(USA TST 2000) $ABCD$ is a cyclic quadrilateral. The projections of the intersection of its diagonals to sides $AB$ and $CD$ are $E$, $F$ respectively. Show that the line $EF$ is perpendicular to the line containing the midpoints of the sides of $BC$ and $DA$.}}}[/li]
+  [li]{{{(USA TST 2001) In triangle $ABC$, $\angle B = 2\angle C$. Let $P$ and $Q$ be points on the perpendicular bisector of segment $BC$ such that rays $AP$ and $AQ$ trisect $\angle BAC$. Prove that $PQ < AB$ if and only if $\angle ABC$ is obtuse.}}}[/li]
+  [li]{{{(IMOSL 2009) Let $ABC$ be a triangle. The incircle of $ABC$ touches the sides $AB$ and $AC$ at the points $Z$ and $Y$, respectively. Let $G$ be the point where the lines $BY$ and $CZ$ meet, and let $R$ and $S$ be points such that the two quadrilaterals $BCYR$ and $BCSZ$ are parallelograms.
+  
+  Prove that $GR = GS$.}}}[/li]
+  [li]{{{(IMOSL 2009) Given a cyclic quadrilateral $ABCD$, let the diagonals $AC$ and $BD$ meet at $E$ and the lines $AD$ and $BC$ meet at $F$. The midpoints of $AB$ and $CD$ are $G$ and $H$, respectively. Show that $EF$ is tangent at $E$ to the circle through the points $E$, $G$ and $H$.}}}[/li]
+  [li]{{{(IMOSL 2008) Let $ABCD$ be a convex quadrilateral. Prove that there exists a point $P$ inside the quadrilateral such that 
+  $$\angle PAB+\angle PDC =\angle PBC+\angle PAD =\angle PCD+\angle PBA =\angle PDA+\angle PCB = 90^{\circ}$$
+  if and only if the diagonals $AC$ and $BD$ are perpendicular.}}}[/li]
+  [li]{{{(IMOSL 2010) Let $ABCDE$ be a convex pentagon such that $BC \parallel AE$, $AB = BC + AE$ and $\angle ABC = \angle CDE$. Let $M$ be the midpoint of $CE$ and let $O$ be the circumcenter of triangle $BCD$. Given that $\angle DMO = 90^\circ$, prove that $2\angle BDA = \angle CDE$.}}}[/li]
+ [/ol]

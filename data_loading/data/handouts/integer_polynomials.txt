@@ -1,0 +1,40 @@
+<<<Title: Integer Polynomials
+Author(s): Alex Zhu
+Description: 
+Topics: Integer polynomials
+>>>
+
+While a great range of techniques exist for dealing with problems involving integer polynomials, most basic integer polynomial problems can be solved by one of the following: 
+[ul]
+  [li]working with the polynomial directly. This includes the standard techniques for dealing with polynomials, e.g., expanding a polynomial, looking at its coefficients, bounding it, factoring it, finding that it agrees with some other polynomial at infinitely many points...[/li]
+  [li]invoking the fact that if $P$ is an integer polynomial, then $a - b \mid P(a) - P(b)$ for all integers $a,b$. Equivalently, if $n$ is a positive integer and $a,b$ are integers, then $a \equiv b \pmod{n}$ implies $P(a) \equiv P(b) \pmod{n}$. [/li]
+[/ul]
+
+[h2]Examples[/h2]
+
+[b]Example 1.[/b] (Rational root theorem) If $P(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_0$ is a polynomial with integer coefficients, and $r = \frac{p}{q}$ is a root of $P$, where $p$ and $q$ are coprime integers, then $q \mid a_n$ and $p \mid a_0$. 
+
+[b]Solution.[/b] If $P(p/q) = 0$, then 
+\[ 0 = q^n P(p/q) = a_n p^n + a_{n-1} p^{n-1} q + \cdots + a_0 q^n. \]
+Each term on the right-hand side except $a_0 q^n$ is divisible by $p$, and 0 is divisible by $p$, so $a_0 q^n$ is divisible by $p$. Since $\gcd(p,q) = 1$, we have that $p \mid a_0$. Similarly, every term on the right-hand side except $a_n p^n$ is divisible by $q$, and 0 is divisible by $q$, so $a_n p^n$ is divisible by $q$. Since $\gcd(p,q) = 1$, we have that $q \mid a_n$, as desired. 
+
+[b]Example 2.[/b] Show that if $P$ is a polynomial with integer coefficients such that $P(n)$ is prime for all integers $n$, then $P$ must be constant. 
+
+[b]Solution.[/b] We have that $(P(n) + n) - n$ divides $P(P(n) + n) - P(n)$ for all $n$, so $P(n)$ divides $P(P(n) + n) - P(n)$, i.e, $P(n)$ divides $P(P(n) + n)$ for all positive $n$. If $P$ is nonconstant, then there must be some $k$ for which $P(n) > 1$ for all $n \geq k$. Define $a_0 = k$, and for each positive integer $n$, define $a_{n+1} = P(a_n) + a_n$. Note that $a_0 < a_1 < a_2 < \ldots$. Since $P(a_n) \mid P(a_{n+1})$ for each $n$, $P(m)$ is prime for all $m$, and $P(a_n) > 1$, we must have $P(a_n) = P(a_{n+1})$ for each $n$. Thus, $P(a_0) = P(a_1) = P(a_2) = \cdots$, so $P$ attains the same value over an infinite set of integers. Since $P$ is a polynomial, this means that $P$ must be constant. 
+
+
+[h2]Problems[/h2]
+
+[ol] 
+  [li]{{{Let $P(x)$ be a polynomial with integer coefficients that satisfies $P(17) = 10$ and $P(24) = 17$. Given that $P(n) = n + 3$ has two distinct integer solutions $n_1$ and $n_2$, find the product $n_1 \cdot n_2$.}}}[/li]
+  [li]{{{Let $f(x)=ax^2+bx+c$, where $a$, $b$, and $c$ are integers. Suppose that $f(1)=0$, $50 < f(7) < 60$, $70 < f(8) < 80$, and $5000k < f(100) < 5000(k+1)$ for some integer $k$. What is $k$?}}}[/li]
+  [li]{{{(AIME 2011) Find the number of positive integers $m$ for which there exist nonnegative integers $x_0,x_1,\ldots,x_{2011}$ such that \[ m^{x_0} = \sum_{k=1}^{2011} m^{x_k}. \]}}}[/li]
+  [li]{{{Let $p(x)$ be a polynomial with integer coefficients. Show that if $a,b,c$ are distinct integers and $p(a) = p(b) = p(c) = -1$, then $p(x)$ has no integer zeroes.}}}[/li]
+  [li]{{{Show that if $P$ is a nonconstant polynomial with integer coefficients, then the set of primes $p$ dividing $P(n)$ for some integer $n$ is infinite.}}}[/li]
+  [li]{{{(USAMO 1974) Let $a$, $b$, and $c$ denote three distinct integers, and let $P$ be a polynomial having integer coefficients. Show that it is impossible for$P(a) = b$, $P(b) = c$, and $P(c) = a$ to hold simultaneously.}}}[/li]
+  [li]{{{Find all polynomials $P(n)$ with integer coefficients such that $P(n) \mid 2^n - 1$ for all positive integers $n$.}}}[/li]
+  [li]{{{$P$ is a polynomial with real coefficients such that $P(\alpha)$ is irrational for all irrational numbers $\alpha$. Prove that $\deg P \leq 1$.}}}[/li]
+  [li]{{{Let $a_1, a_2, \ldots, a_n$ be distinct integers. Show that if $f(x)$ and $g(x)$ are integer polynomials such that $f(x)g(x) = (x-a_1)(x-a_2) \cdots (x-a_n) - 1$, then one of $f$ and $g$ is constant.}}}[/li]
+  [li]{{{(IMO 1974) Let $P(x)$ be a nonconstant polynomial with integer coefficients. Let $n(P)$ be the number of integers $k$ for which $P(k)^2 = 1$. Prove that $n(P) - \deg(P) \leq 2$.}}}[/li]
+  [li]{{{(IMO 2006) Let $P(x)$ be a polynomial of degree $n > 1$ with integer coefficients and let $k$ be a positive integer. Consider the polynomial $Q(x) = P(P(\ldots P(P(x))\ldots))$, where $P$ occurs $k$ times. Prove that there are at most $n$ integers $t$ such that $Q(t) = t$.}}}[/li]
+[/ol]

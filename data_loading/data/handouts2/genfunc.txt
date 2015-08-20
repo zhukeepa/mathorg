@@ -1,0 +1,31 @@
+<<<Title: Generating Functions and Power Series
+Author(s): Josh Nichols-Barrer
+Description: Black MOP 2007 Handout
+Topics: Generating functions
+>>>
+
+[ol]
+  [li]{{{(IMO 1998 Shortlist) Let $a_0,a_1,a_2,\ldots$ be an increasing sequence of nonnegative integers such that every nonnegative integer can be expressed uniquely in the form $a_i+2a_j+4a_k$, where $i,j,k$ are not necessarily distinct.  Determine $a_{1998}$.}}}[/li]
+  [li]{{{(IMO 1995/6) Let $p$ be an odd prime.  Determine the number of $p$-element subsets of $\{1,2,\ldots,2p\}$ whose sum is a multiple of $p$.}}}[/li]
+  [li]{{{(IMO 2001 Shortlist) A set of three nonnegative integers $\{x,y,z\}$ is called [i]historic[/i] if $\{x-y,y-z\} = \{1776,2001\}.$  Show that the set of all nonnegative integers can be partitioned into a disjoint union of historic sets.}}}[/li]
+  [li]{{{(China 1999) For a set $A$, let $s(A)$ denote the sum of elements (we define $s(\emptyset)=0$).  Let \[S=\{1,2,\ldots,1999\},\] and define for each $r$ with $0\leq r\leq 6$, \[T_r=\{T|T\subseteq S,s(T)\equiv r\pmod 7\}.\]  For each $r$, find the number of elements in $T_r$.}}}[/li]
+  [li]{{{Let $n$ be a positive integer, and let \[f(x)=\sum_{k=0}^n \binom nk^2(1+x)^{2n-2k}(1-x)^{2k}.\]  Show that the coefficient of $x^n$ in $f(x)$ is $0$ for all odd $n$.}}}[/li]
+  [li]{{{Let $A_n$ and $B_n$ be sets of
+  nonnegative integers defined by $A_1=\emptyset$, $B_1=\{0\}$, and
+  \[A_{n+1}=\{x+1\mid x\in B_n\}, B_{n+1}=A_n\cup B_n - A_n\cap
+  B_n.\]  Find all values of $n$ with $B_n = \{0\}$.}}}[/li]
+  [li]{{{Let $(a_1, a_2, \dots , a_n)$ and $(b_1,
+  b_2, \dots , b_n)$ be two different unordered $n$-tuples of integers
+  such that the sequences
+  \[
+  a_1+a_2, a_1+a_3, \dots , a_{n-1}+a_n \ \mbox{(all pairwise sums
+  $a_i+a_j$, $1\le i < j\le n$)}
+  \]
+  and
+  \[
+  b_1+b_2, b_1+b_3,\dots , b_{n-1}+b_n \ \mbox{(all pairwise sums
+  $b_i+b_j$, $1\le i < j\le n$)}
+  \]
+  coincide up to permutation. Prove that $n$ is a power of two.}}}[/li]
+  [li]{{{Let $\mathbb N = S_1\cup S_2\cup\cdots\cup S_n$ be a (disjoint) partition of the natural numbers into finitely many arithmetic sequences (an arithmetic sequence is a set of integers of the form $\{a+bk|k\in\mathbb N\}$ for some integers $a$ and $b$ where $b$ is nonzero).  Prove that two of these arithmetic sequences must have the same common difference.}}}[/li]
+[/ol]

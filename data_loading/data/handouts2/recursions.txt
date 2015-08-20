@@ -1,0 +1,36 @@
+<<<Title: Recursions
+Author(s): Josh Nichols-Barrer
+Description: 2008 Red MOP Handout
+Topics: Recurrences
+>>>
+
+[ol] 
+  [li]{{{(USSR 1976) Let $x_1$ and $x_2$ be nonnegative integers,
+  less than or equal to 10,000.  Define a sequence recursively for
+  $n\geq 3$ by \[x_n = \min\{|x_i-x_j|, 1\leq i<j<n\}.\] Prove that
+  $x_{22} = 0.$}}}[/li]
+  [li]{{{An infinite sequence of decimal digits begins with $010101\cdots$.  Each digit after the sixth is the last digit of the sum of the previous 6 digits.  Does the subsequence $101010$ occur anywhere in the sequence?}}}[/li]
+  [li]{{{(IMO 95/4) Find the maximum value of $x_0$ for which
+  there exists a sequence $x_0, x_1 \dots, x_{1995}$ of positive
+  reals with $x_0 = x_{1995}$, such that for $i = 1, \dots, 1995$,
+  \[
+  x_{i-1} + \frac{2}{x_{i-1}} = 2x_i + \frac{1}{x_i}.
+  \]}}}[/li]
+  [li]{{{(IMO 85/6) For every real number $x_{1},$ construct the sequence $
+  x_{1},x_{2},...$ by setting
+  \[
+  x_{n+1}=x_{n}\left( x_{n}+\frac{1}{n}\right) \text{for each }n\geq
+  1.
+  \]
+  Prove that there exists exactly one value of $x_{1}$ for which
+  \[
+  0<x_{n}<x_{n+1}<1
+  \]
+  for every $n.$}}}[/li]
+  [li]{{{(Romania TST '04).  Given integers $a,b,c$, define a sequence $(x_n)_{n=0}^\infty$ by $x_0=4$, $x_1=0$, $x_2=2c$, $x_3=3b$, and for $n\geq 0$, \[x_{n+4}=ax_n+bx_{n+1}+cx_{n+2}.\]  Prove that for every prime $p$ and every positive integer $m$, $p|x_{p^m}$.}}}[/li]
+  [li]{{{(China) Let $A_n$ and $B_n$ be sets of
+  nonnegative integers defined by $A_1=\emptyset$, $B_1=\{0\}$, and
+  \[A_{n+1}=\{x+1\mid x\in B_n\}, B_{n+1}=A_n\cup B_n - A_n\cap
+  B_n.\]  Find all values of $n$ with $B_n = \{0\}$.}}}[/li]
+  [li]{{{(2004 IMO Shortlist) An infinite sequence $a_0,a_1,a_2,\ldots$ of real numbers satisfies the condition \[a_n=|a_{n+1}-a_{n+2}|\] for every $n\geq 0$, with $a_0$ and $a_1$ positive and distinct.  Can this sequence be bounded?}}}[/li]
+[/ol]

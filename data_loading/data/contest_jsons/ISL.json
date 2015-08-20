@@ -1786,7 +1786,7 @@
       },
       {
         "number": "18",
-        "text": "Let $m$ positive integers $a_1, \\dots , a_m$ be given. Prove that there exist fewer than $2^m$ positive integers $b_1, \\dots , b_n$ such that all sums of distinct $b_k$’s are distinct and all $a_i \\  (i \\leq m)$ occur among them."
+        "text": "Let $m$ positive integers $a_1, \\dots , a_m$ be given. Prove that there exist fewer than $2^m$ positive integers $b_1, \\dots , b_n$ such that all sums of distinct $b_k$'s are distinct and all $a_i \\  (i \\leq m)$ occur among them."
       },
       {
         "number": "19",
@@ -4107,7 +4107,7 @@
       },
       {
         "number": "7",
-        "text": "Ten gangsters are standing on a flat surface, and the distances between them are all distinct. At twelve o’clock, when the church bells start chiming, each of them fatally shoots the one among the other nine gangsters who is the nearest. At least how many gangsters will be killed?"
+        "text": "Ten gangsters are standing on a flat surface, and the distances between them are all distinct. At twelve o'clock, when the church bells start chiming, each of them fatally shoots the one among the other nine gangsters who is the nearest. At least how many gangsters will be killed?"
       },
       {
         "number": "8",

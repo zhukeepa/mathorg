@@ -1,0 +1,24 @@
+<<<Title: Funky Qs
+Author(s): Josh Nichols-Barrer
+Description: Black MOP 2007 Handout
+Topics: Functional equations
+>>>
+
+[ol]
+  [li]{{{(IMO 1995 Shortlist) Let $\mathbb{N}$ denote the set of all positive integers.  Prove that there exists a unique function $f:\mathbb{N}\rightarrow\mathbb{N}$ satisfying \[f(m+f(n)) = n+f(m+95)\] for all $m,n\in\mathbb{N}$.  What is the value of $\sum_{k=1}^{19}f(k)$?}}}[/li]
+  [li]{{{(IMO 1996/3) Let $\mathbb{N}_0$ denote the set of nonnegative integers.  Find all functions $f:\mathbb{N}_0\rightarrow\mathbb{N}_0$ such that \[f(m+f(n)) = f(f(m))+f(n).\]}}}[/li]
+  [li]{{{(IMO 1996 Shortlist) Let $f:\mathbb{R}\rightarrow\mathbb{R}$ such that $|f(x)|\leq 1$ and \[f(x+\frac {13}{42})=+f(x)=f(x+\frac 16)+f(x+\frac 17).\]  Prove that $f$ is a periodic function, that is, there is a $c>0$ with $f(x+c)=f(x)$ for all $x\in\mathbb{R}$.}}}[/li]
+  [li]{{{(MOP 1997/6/5) Let $S$ denote the set of nonnegative integers.  Find a bijective function $f$ from $S$ to itself such that for all $m,n\in S$, \[f(3mn+m+n)=4f(m)f(n)+f(m)+f(n).\]}}}[/li]
+  [li]{{{(IMO 1998/6) Determine the least possible value of $f(1998)$, where $f:\mathbb{N}\rightarrow\mathbb{N}$ and for all $m,n\in\mathbb{N}$ \[f(n^2f(m))=m[f(n)]^2.\]}}}[/li]
+  [li]{{{(IMO 2002 Shortlist) Find all functions $f:\mathbb{R}\rightarrow \mathbb{R}$ such that \[f(f(x)+y) = 2x+f(f(y)-x)\] for all real $x,y$.}}}[/li]
+  [li]{{{(IMO 2000 Shortlist) The function $F$ is defined on the set of nonnegative integers and takes nonnegative integer values satisfying the following conditions: For every $n\geq 0$,  [ol][li]$F(4n)=F(2n)+F(n)$;[/li]
+    [li]$F(4n+2)=F(4n)+1$;[/li]
+    [li]$F(2n+1)=F(2n)+1$.[/li][/ol]  Prove that for each positive integer $m$, the number of positive integers $n$ with $0\leq n<2^m$ and $F(4n)=F(3n)$ is $F(2^{m+1})$.}}}[/li]
+  [li]{{{(IMO 2001 Shortlist) Find all functions $f:\mathbb{R}\rightarrow\mathbb{R}$ satisfying \[f(xy)(f(x)-f(y))=(x-y)f(x)f(y).\]}}}[/li]
+  [li]{{{(IMO 2002/5) Find all functions $f:\mathbb{R}\rightarrow \mathbb{R}$ such that \[(f(x)+f(z))(f(y)+f(t)) = f(xy-zt) + f(xt+yz)\] for all real $x,y,z,t$.}}}[/li]
+  [li]{{{(IMO 2003 Shortlist) Find all nondecreasing functions $f:\mathbb{R}\rightarrow \mathbb{R}$ such that  [ol][li]$f(0)=0$, $f(1)=1)$[/li]
+    [li]$f(a)+f(b) = f(a)f(b)+f(a+b-ab)$ for all real numbers $a,b$ such that $a<1<b$.[/li][/ol]}}}[/li]
+  [li]{{{(IMO 2003 Shortlist) Let $\mathbb{R}^+$ be the set of positive real numbers.  Find all functions $f:\mathbb{R}^+\rightarrow \mathbb{R}^+$ satisfying:  [ol][li]$f(xyz)+f(x)+f(y)+f(z) =f(\sqrt{xy})f(\sqrt{yz})f(\sqrt{xz})$ for all $x,y,z\in\mathbb{R}^+$[/li]
+    [li]$f(x)<f(y)$ for all $1\leq x<y$.[/li][/ol]}}}[/li]
+  [li]{{{(IMO 2004 Shortlist) Find all functions $f:\mathbb{R}:\rightarrow \mathbb{R}$ satisfying the equation \[f(x^2+y^2+2f(xy)) = \left(f(x+y)\right)^2\qquad \textrm{for all }x,y\in\mathbb{R}\]}}}[/li]
+[/ol]

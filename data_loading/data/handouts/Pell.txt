@@ -1,0 +1,79 @@
+<<<Title: Pell's Equation
+Author(s): Ian Le
+Description: MOP 2014 handout
+Topics: Pell equations
+>>>
+
+
+[ol]
+
+[li]{{{Find all integers $n$ such that $n$ is simultaneously a triangular number and a square number.}}}[/li]
+  [li]{{{Find all Pythagorean triples $(a,b,c)$ with $a^2+b^2=c^2$ such that $b-a=1$.}}}[/li]
+  [li]{{{Find all pairs in positive integers $m, n$ such that $$1+2+\cdots+m=(m+1)+(m+2)+\cdots+n.$$}}}[/li]
+  [li]{{{Find all triangular numbers that differ by one from a square number.}}}[/li]
+  [li]{{{Find all positive integers $a, b$ such that $$\binom{a}{b} = \binom{a-1}{b+1}.$$}}}[/li]
+[/ol]
+
+[h2]Basic Properties of Pell's equation and Quadratic Fields[/h2]
+
+[ol]
+[li]{{{Consider the equation $x^2-dy^2=1$. Show that it only has solutions for $d$ a non-square number.}}}[/li]
+  [li]{{{Explain why the equation $x^2-dy^2=N$ for negative $d$ is not very interesting.}}}[/li]
+  [li]{{{Explain why we only need to consider solutions where $x, y > 0.$}}}[/li]
+  [li]{{{Show that the equation $x^2-dy^2=-1$ has no solutions for $d=3$ or $8$.}}}[/li]
+  [li]{{{Let $d$ be a fixed positive non-square integer. Show that if there is a solution to $x^2-dy^2=1$, there are infintely many. Similarly, if there is a solution to $x^2-dy^2=-1$, there are infinitely many.}}}[/li]
+  [li]{{{Show that if $x^2-dy^2=n$ and $x^2-dy^2=m$ have solutions, then we can find a solution to $x^2-dy^2=nm$.}}}[/li]
+  [li]{{{Let $d$ be a non-square integer. If $a, b \in \mathbb{Q}$, we can consider numbers of the form $a+b\sqrt{d}$. Show that if $a, b, a', b' \in \mathbb{Q}$ and $a+b\sqrt{d}=a'+b'\sqrt{d}$, then $a=a'$ and $b=b'$.}}}[/li]
+  [li]{{{Let $\alpha=a+b\sqrt{d}$. We call such a number a quadratic number. We will define the conjugate of a  quadratic number $\alpha$ as $\alpha'=a-b\sqrt{d}$. Suppose that $\alpha$ and $\beta$ have conjugates $\alpha'$ and $\beta'$. Then show that $(\alpha+\beta)'=\alpha'+\beta'$, $(\alpha-\beta)'=\alpha'-\beta'$, $(\alpha\beta)'=\alpha'\beta'$, $(\alpha/\beta)'=\alpha'/\beta'$,}}}[/li]
+  [li]{{{Show that any polynomial with rational coefficients satisfied by $\alpha$ is also satisfied by its conjugate $\alpha'$.}}}[/li]
+  [li]{{{[i]Dirichlet's Theorem.[/i] Let $\alpha$ be an irrational number. We can approximate $\alpha$ by rational numbers. Show that there are infinitely many rational numbers $\frac{x}{y}$ such that $$\left|\frac{x}{y}-\alpha\right| < \frac{1}{y^2}.$$ Hint: Use the pigeon-hole principle on numbers of the form $y\alpha$ for $0 \leq y \leq n$.}}}[/li]
+  [li]{{{Use the previous problem to show that there are infinitely many solutions to $x^2-dy^2=m$ for some $m$.}}}[/li]
+  [li]{{{There must be two distinct solutions $(x_1,y_1)$ and $(x_2,y_2)$ of $x^2-dy^2=m$ with $x_1 \equiv x_2 \mod{m}$ and $y_1 \equiv y_2 \mod{m}$. Show that $\frac{1}{m}(x_1x_2-dy_1y_2,x_1y_2-x_2y_1)$ is a solution of $x^2-dy^2=1.$}}}[/li]
+  [li]{{{Classification of Solutions: Use infinite descent on $u+v\sqrt{d}$ to show that all solutions to $x^2-dy^2=1$ come from a minimal solution.}}}[/li]
+[/ol]
+
+[h2]The Continued Fraction Method[/h2]
+
+[ol]
+[li]{{{Show that any rational number has a terminating continued fraction expansion.}}}[/li]
+  [li]{{{How can you tell when one continued fraction is larger than another?}}}[/li]
+  [li]{{{Show that the successive convergents of a number $\alpha$ are alternately smaller than and larger than $\alpha$ (unless $\alpha$ is rational, in which case the last convergent equals $\alpha$).}}}[/li]
+  [li]{{{[i]Main Theorem of Continued Fractions.[/i] Suppose $\alpha=\left\langle a_0, a_1, a_2, \dots \right\rangle$. Let $p_n/q_n$ be a the $n$-th partial convergent. Show that $$\left\langle a_0, a_1, a_2, \dots, a_n, x \right\rangle=\frac{xp_n+p_{n-1}}{xq_n+q_{n-1}}.$$}}}[/li]
+  [li]{{{Show that $p_{n+1}q_n-p_nq_{n+1}=(-1)^n$.}}}[/li]
+  [li]{{{The fundamental solution to Pell's equation is given by the $n$-th convergent of $\sqrt{d}$, where the $n$ is the length of the period of the continued fraction expansion of $\sqrt{d}$.}}}[/li]
+[/ol]
+
+[h2]Problems[/h2]
+
+[ol]
+[li]{{{Find all solutions to $x^2-dy^2=\pm 1$ for $=2, 3, 5, 6, 7$.}}}[/li]
+  [li]{{{Show that a right triangle with one angle $\pi/3$ can be well-approximated by right triangles with rational side lengths.
+
+The next five problems characterize those numbers with eventually periodic continued fraction expansion.}}}[/li]
+  [li]{{{We are interested in continued fractions that are purely periodic. Suppose that $\alpha=\left\langle \overline{a_0, a_1, \dots, a_n} \right\rangle$ and $\beta=\left\langle \overline{a_n, a_{n-1}, \dots, a_0} \right\rangle$. Then show that $\alpha'\beta=-1$.}}}[/li]
+  [li]{{{Show that any purely periodic continued fraction is a quadratic number $\alpha$ such that $\alpha>1$ and $-1<\alpha'<0$. Call such a number a reduced quadratic irrational.}}}[/li]
+  [li]{{{Show that for any $d$ there are only finitely many integers $P$ and $Q$ such that $\frac{P+\sqrt{d}}{Q}$ is a reduced quadratic irrational.}}}[/li]
+  [li]{{{If $\alpha=\left\langle a_0, a_1, a_2, \dots, a_n, \alpha_{n+1} \right\rangle$, show that if $\alpha$ is a reduced quadratic irrational, then so is $\alpha_{n+1}$.}}}[/li]
+  [li]{{{For any quadratic irrational $\alpha$ define $\alpha_i$ by $\alpha=\left\langle a_0, a_1, a_2, \dots, a_{i-1}, \alpha_{i} \right\rangle$. Show that $\alpha_i$ is eventually a reduced quadratic irrational. This is the point at which the continued fraction expansion becomes periodic. Thus any quadratic irrational number has an eventually periodic continued fraction expansion.}}}[/li]
+[/ol]
+
+[h2]Challenges[/h2]
+
+[ol]
+[li]{{{Consider the general quadratic Diophantine equation $$Ax^2+Bxy+C+Dx+Ey+F=0.$$ Show that the solution of this equation reduces to Pell's equation and case analysis.}}}[/li]
+  [li]{{{A deep theorem of Roth says that if $\alpha$ is an algebraic irrational number, then for any $\epsilon > 0$ the inequality $$\left|\frac{x}{y}-\alpha\right| < \frac{1}{y^{2+\epsilon}}$$ has only finitely many solutions $\frac{x}{y}.$ In other words, in looking for good approximations of $\alpha$, we don't get much better than what the pigeonhole principle tells us. Use this to show that $x^3-2y^3=1$ has only finitely many solutions.}}}[/li]
+  [li]{{{(IMO SL 1999) Show that there exist increasing sequences $a_n$ and $b_n$ such that $a_n(a_n + 1) | b_n^2 + 1$.}}}[/li]
+  [li]{{{When does $ab$ divide $a^2+b^2+1$? Hint: Analyze the equation $a^2+b^2+1=kab$ for different values of $k$.}}}[/li]
+  [li]{{{(IMO 1988/6) Let $m$ and $n$ be two positive integers such that $mn+1$ divides $m^2+n^2$. Show
+that $\frac{m^2+n^2}{mn+1}$ is a perfect square.}}}[/li]
+  [li]{{{(IMO SL 2000) Prove that there exist infinitely many positive integers $n$ such that $p = nr$, where $p$ and $r$ are respectively the semiperimeter and the inradius of a triangle with integer side lengths.}}}[/li]
+  [li]{{{(IMO 2007/5) Let $a$ and $b$ be positive integers. Show that if $4ab-1$ divides $(4a^2-1)^2$, then $a=b$.}}}[/li]
+[/ol]
+
+[h2]Subtle questions to ponder[/h2]
+
+[ol]
+[li]{{{What is the length of the period of the continued fraction expansion of $\sqrt{d}$?}}}[/li]
+  [li]{{{How do we obtain all solutions to $x^2-dy^2=N$? (For small $N$ such solutions must come from the continued fraction expansion of $\sqrt{d}$, while for large $N$ the answer relies on algebraic number theory.)}}}[/li]
+  [li]{{{For which $d$ does $x^2-dy^2=-1$ have a solution?}}}[/li]
+[/ol]

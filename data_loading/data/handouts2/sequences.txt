@@ -1,0 +1,72 @@
+<<<Title: Sequences
+Author(s): Josh Nichols-Barrer
+Description: Black MOP 2009 Handout
+Topics: Sequences
+>>>
+
+[ol]
+  [li]{{{(IMO 75/2) Let $a_{1},a_{2},a_{3,}\cdots $ be an infinite
+  increasing sequence of
+  positive integers. Prove that for every $p\geq 1$ there are infinitely many $a_{m}$ which can be written in the form
+  \[
+  a_{m}=xa_{p}+ya_{q}
+  \]
+  with $x,y$ positive integers and $q>p.$}}}[/li]
+  [li]{{{(IMO 94/1) Let $m$ and $n$ be positive integers. Let
+  $a_1, a_2, \dots, a_m$ be distinct elements of $\{1, 2, \dots,
+  n\}$ such that whenever $a_i + a_j \leq n$ for some $i, j$, $1
+  \leq i \leq j \leq m$, there exists $k$, $1 \leq k \leq m$, with
+  $a_i + a_j = a_k$. Prove that
+  \[
+  \frac{a_1 + a_2 + \cdots + a_m}{m} \geq \frac{n+1}{2}.
+  \]}}}[/li]
+  [li]{{{(IMO 95/4) Find the maximum value of $x_0$ for which
+  there exists a sequence $x_0, x_1 \dots, x_{1995}$ of positive
+  reals with $x_0 = x_{1995}$, such that for $i = 1, \dots, 1995$,
+  \[
+  x_{i-1} + \frac{2}{x_{i-1}} = 2x_i + \frac{1}{x_i}.
+  \]}}}[/li]
+  [li]{{{(IMO 70/3) The real numbers $a_{0},a_{1},...,a_{n},...$
+  satisfy the condition:
+  \[
+  1=a_{0}\leq a_{1}\leq a_{2}\leq \cdots \leq a_{n}\leq \cdots .
+  \]
+  
+  The numbers $b_{1},b_{2},...,b_{n},...$ are defined by
+  \[
+  b_{n}=\sum_{k=1}^{n}\left( 1-\frac{a_{k-1}}{a_{k}}\right) \frac{1}{\sqrt{a_{k}}}.
+  \]
+  
+  (a) Prove that $0\leq b_{n}<2$ for all $n.$
+  
+  (b) Given $c$ with $0\leq c<2,$ prove that there exist numbers $
+  a_{0},a_{1},...$ with the above properties such that $b_{n}>c$ for
+  large enough $n.$}}}[/li]
+  [li]{{{The sequence of real numbers $a_0,a_1,\ldots$ is defined recursively by $a_0=-1$ and \[\sum_{k=0}^n\frac{a_{n-k}}{k+1} = 0\] for every positive integer $n$.  Show that $a_n>0$ for $n\geq 1$.}}}[/li]
+  [li]{{{(IMO 96/6) Let $p,q,n$ be three positive integers with
+  $p+q < n$. Let $(x_{0}, x_{1}, \dots, x_{n})$ be an $(n+1)$-tuple
+  of integers satisfying the following conditions:
+   [ol][li]For each $i$ with $1
+  \leq i \leq n$, either $x_{i} - x_{i-1} = p$ or $x_{i} - x_{i-1} =
+  -q$.[/li][/ol]
+  Show that there exist indices $i < j$ with $(i,j) \neq (0, n)$,
+  such that $x_{i} = x_{j}$.}}}[/li]
+  [li]{{{(USSR 1982) Let $a_1,\ldots a_n$ be a sequence of reals.
+  Prove that it is possible to find a subsequence
+  $S=(a_{i_{1}},a_{i_{2}},\ldots,a_{i_{r}})$ of this sequence
+  ($1\leq i_1<i_2<\cdots<i_r\leq n$) such that:
+  
+   [ol][li]For every three successors $a_k, a_{k+1}, a_{k+2}$ in
+  the original sequence, at least one of these terms is in $S$ and
+  at least one is not.[/li]
+    [li]The following inequality holds:
+  \[\left|\sum_{s=1}^ra_{i_{s}}\right|\geq\frac{1}{6}\sum_{i=1}^n
+  |a_i|.\][/li][/ol]}}}[/li]
+  [li]{{{(2002 Shortlist) Let $a_1,a_2,\ldots$ be an infinite sequence of real numbers, for which there exists a real number $c$ with $0\leq a_i\leq c$ for all $i$, such that \[|a_i-a_j|\geq \frac 1{i+j}\textrm{ for all }i,j\textrm{ with }i\neq j.\]  Prove that $c\geq 1$.}}}[/li]
+  [li]{{{(MOP 2006) Define the sequence of rational numbers $\{t_i\}$ as follows.  Let $c_1$ be a given positive integer, and let $t=\frac 1{c_1}$.  For a positive integer $n$, let $t_{n+1}=t_n$ if $t_n=1$.  Otherwise, let $c_{n+1}$ be the least integer such that $c_{n+1}>c_n$ and \[t_{n+1} = t_n + \frac 1{c_{n+1}}\leq 1.\]  Show that the sequence $\{t_n\}$ is eventually constant.}}}[/li]
+  [li]{{{(MOP 2006) Given sequences $\{a_n\}_{n=0}^\infty$ and $\{b_n\}_{n=0}^\infty$ of positive numbers such that $a_0=1$, $a_1\leq 1$, and \[a_n(b_{n-1}+b_{n+1}) = a_{n-1}b_{n-1}+a_{n+1}b_{n+1}\textrm{and} b_0+b_1+\cdots+b_n\leq n^{\frac 32}\] for every positive integer $n$.  Determine an explicit formula for $a_n$.}}}[/li]
+  [li]{{{Determine if there exists a strictly increasing sequence of positive integers $a_1,a_2,\ldots$ such that $a_n\leq n^3$ for every positive integer $n$ and that every positive integer can be written uniquely as the difference of two terms in the sequence.}}}[/li]
+  [li]{{{Let $\{a_n\}_{n=0}^\infty$ and $\{b_n\}_{n=0}^\infty$ be two sequences of real numbers such that $a_{n+1} = 2b_n-a_n$ and $b_{n+1}=2a_n-b_n$ for every positive integer $n$.  Prove that if $a_n>0$ for all $n$, then $a_1=b_1$.}}}[/li]
+  [li]{{{(Shortlist 2004) An infinite sequence $a_0,a_1,a_2,\ldots$ of real numbers satisfies the condition \[a_n = |a_{n+1}-a_{n+2}|\textrm{for every } n\geq 0,\] with $a_0$ and $a_1$ positive and distinct.  Can this sequence be bounded?}}}[/li]
+  [li]{{{(Shortlist 2004) Let $k$ b a fixed integer and greater than 1, and let $m=4k^2-5$.  Show that there exist positive integers $a$ and $b$ such that the sequence $(x_n)$ defined by \[x_0=a, x_1=b x_{n+2} = x_{n+1}+x_n\textrm{for }n=0,1,2,\ldots,\] has all of its terms relatively prime to $m$.}}}[/li]
+[/ol]

@@ -1,0 +1,37 @@
+<<<Title: Polynomials
+Author(s): Ali Gurel
+Description: 2011 Green MOP Handout
+Topics: Polynomials
+>>>
+
+[ol]
+[li]{{{(Gelca & Andreescu, P&B, p.253) Prove that there is no polynomial $P(x)$ with integer coefficients with the property that $P(7) = 5$ and $P(15) = 9$.}}}[/li]
+  [li]{{{(USAMO-1974) If $P$ is an integer polynomial, show that there are no distinct integers $a, b, c$ such that $P(a) = b$, $P(b) = c$, $P(c) = a$.}}}[/li]
+  [li]{{{(USAMO-1973) Determine all the roots, real or complex, of the system of
+simultaneous equations
+\begin{eqnarray}
+x + y + z &=& 3,\nonumber\\
+x^2 + y^2 + z^2 &=& 3,\nonumber\\
+x^3 + y^3 + z^3 &=& 3.\nonumber\\
+\end{eqnarray}}}}[/li]
+  [li]{{{(Djukic, POV, p.10) Find the cubic polynomial $Q$ such that $Q(i) = 2^i$ for $i = 0, 1, 2, 3$.}}}[/li]
+  [li]{{{(Djukic, POV, p.5) Show that the polynomial $f(x)= x^6-2x^5+x^4-2x^3+x^2-2x+1$ has exactly four zeros of modulus 1.}}}[/li]
+  [li]{{{(Germany-97) Define the functions
+\begin{eqnarray}
+f(x)&=&x^5+5x^4+5x^3+5x^2+1,\nonumber\\
+g(x)&=&x^5+5x^4+3x^3-5x^2-1.\nonumber\\
+\end{eqnarray}
+Find all prime numbers $p$ for which there exists a natural number $0\leq x<p$, such that both $f(x)$ and $g(x)$ are divisible by $p$. Also find all such $x$.}}}[/li]
+  [li]{{{(USAMO-1977) If $a$ and $b$ are two of the roots of $x^4+x^3-1=0$, prove that $ab$ is a root of $x^6+x^4+x^3-x^2-1=0$.}}}[/li]
+  [li]{{{(Djukic, POV, p.12) Determine a real polynomial $P(x)$ of degree at most 5 which leaves remainders $-1$ and 1 upon division by $(x-1)^3$ and $(x + 1)^3$, respectively.}}}[/li]
+  [li]{{{Prove that a polynomial of degree $n$ that takes integer values at $n+1$ consecutive integers is an integer polynomial, i.e. it takes integer values at all integers.}}}[/li]
+  [li]{{{(IMO 2004) Find all polynomials $P(x)$ with real coefficients that satisfy
+$$P(a-b)+P(b-c)+P(c-a)=2P(a+b+c)$$
+for all triples $a,b,c$ of real numbers such that $ab+bc+ca=0$.}}}[/li]
+  [li]{{{(Djukic, EP, p.3) Find all polynomials $P$ satisfying $P(x^2 + 1) = P(x)^2 + 1$ for all $x$.}}}[/li]
+  [li]{{{(Compendium POV, p.9) Prove that the polynomial $P(x)=x^n+4$ is irreducible over $\mathbb{Z}[x]$ if and only if $n$ is not a multiple of 4.}}}[/li]
+  [li]{{{(IMO Shortlist-1979) Find all polynomials with real coefficients for which
+$$f(x)f(2x^2)=f(2x^3+x).$$}}}[/li]
+  [li]{{{(Compendium POV, p.16) Suppose that all zeros of a monic polynomial $P(x)$ with integer coefficients have norm 1. Prove that all the roots are roots of unity.}}}[/li]
+  [li]{{{(Djukic, POV, p.11) If $P(x)$ is a polynomial of an even degree $n$ with $P(0) =1$ and $P(i) = 2^{i-1}$ for $i = 1,\ldots,n$, prove that $P(n + 2) = 2P(n + 1)-1$.}}}[/li]
+[/ol]

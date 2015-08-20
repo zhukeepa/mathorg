@@ -1,0 +1,50 @@
+<<<Title: Fermat's Theorem and Euler's Theorem
+Author(s): Alex Zhu
+Description: 
+Topics: Fermat's theorem, Euler's theorem
+>>>
+Fermat's little theorem states that if $p$ is a prime, and $a$ is an integer not divisible by $p$, then $a^{p-1} \equiv 1 \pmod{p}$. Euler's theorem is a generalization, which states that if $n$ is a positive integer relatively prime to $a$, then $a^{\phi(n)} \equiv 1 \pmod{n}$, where $\phi(n)$ is the number of integers less than or equal to $n$ relatively prime to $n$. 
+
+We present two proofs of Fermat's little theorem. The first proof proceeds as follows. We first observe that for any integers $x$ and $y$, we have 
+\[ (x+y)^p = x^p + y^p + \sum_{k=1}^{p-1} \binom{p}{k} x^k y^{p-k}. \]
+Note that for $1 \leq k \leq p-1$, we have $\binom{p}{k} = \frac{p!}{k! (p-k)!}$. Since $p$ is prime, $p$ does not divide any term in the denominator, so $p \mid \binom{p}{k}$. Thus, 
+\[ (x+y)^p = x^p + y^p + \sum_{k=1}^{p-1} \binom{p}{k} x^k y^{p-k} \equiv x^p + y^p \pmod{p}. \]
+It is sufficient to prove that $a^p \equiv a \pmod{p}$ for all positive $a$. We have
+$\begin{align*}
+a^p 
+&= (\underbrace{1 + 1 + \cdots + 1}_{a})^p = (\underbrace{1 + 1 + \cdots + 1}_{a-1} + 1)^p \equiv (\underbrace{1 + 1 + \cdots + 1}_{a-1})^p + 1 \\
+&= (\underbrace{1 + 1 + \cdots + 1}_{a-2} + 1)^p + 1 \equiv (\underbrace{1 + 1 + \cdots + 1}_{a-2})^p + 1 + 1 \\
+&= \cdots = \underbrace{1 + 1 + \cdots + 1}_a = a \pmod{p}, 
+\end{align*}$
+as desired. 
+
+The second proof proceeds as follows. Consider the residue classes $\{a, 2a, 3a, \ldots, (p-1)a\}$ modulo $p$. Each of these must be pairwise distinct, or else we have $p \mid ai - aj = a(i-j)$ for some distinct $i,j$ with $1 \leq i, j \leq p-1$. But this is impossible, since $p$ is prime, $p \nmid a$, and $p \nmid i-j$. None of $a, 2a, \ldots, (p-1)a$ are congruent to 0 modulo $p$ either. The only collection of $p-1$ distinct nonzero residue classes is $\{1, 2, \ldots, p-1\}$, so we must have that $\{a, 2a, 3a, \ldots, (p-1)a\}$ and $\{1, 2, \ldots, p-1\}$ are equivalent modulo $p$. Thus, their products are congruent modulo $p$, so $a^{p-1}(p-1)! \equiv (p-1)! \pmod{p}$, whence $a^{p-1} \equiv 1 \pmod{p}$, as desired. 
+
+The second proof of Fermat's little theorem generalizes directly to prove Euler's theorem (where the residue classes considered are instead those coprime to $n$, rather than those from 1 through $n-1$), and is left as an exercise to the reader. 
+
+[b]Example.[/b] Prove that if $p$ is an odd prime such that there exists an integer $n$ for which $p \mid n^2 + 1$, then $p \equiv 1 \pmod{4}$. 
+
+[b]Solution.[/b] If $n^2 \equiv -1 \pmod{p}$, then 
+\[ 1 \equiv n^{p-1} \equiv (n^2)^{\frac{p-1}{2}} \equiv (-1)^{\frac{p-1}{2}} \pmod{p}. \]
+Thus, $(-1)^{\frac{p-1}{2}} = 1$, so $\frac{p-1}{2}$ must be even, that is, $p \equiv 1 \pmod{4}$. 
+
+[h2]Problems[/h2]
+  
+[ol] 
+  [li]{{{Find all solutions to the congruence $304x^{303} + 204x^{202} - 104x^{101} \equiv 0 \pmod{101}$.}}}[/li]
+  [li]{{{Find the smallest positive integer $a$ such that $7n^{11} + 11n^7 + 9an$ is divisible by 77 for every integer $n$.}}}[/li]
+  [li]{{{Let $f(x_1, x_2, \ldots, x_n)$ be a polynomial with integer coefficients. Show that all coefficients of the polynomial $f(x_1, x_2, \ldots, x_n)^p - f(x_1^p, x_2^p, \ldots, x_n^p)$ are divisible by $p$.}}}[/li]
+  [li]{{{Let $p$ be a prime, and let $a$ and $b$ be positive integers. Prove that $\binom{pa}{pb} \equiv \binom{a}{b} \pmod{p}$.}}}[/li]
+  [li]{{{Let $a$ and $n$ be integers larger than 1. Show that $n \mid \phi(a^n - 1)$.}}}[/li]
+  [li]{{{Show that, for any fixed integer $n \geq 1$, the sequence 
+  \[ 2, 2^2, 2^{2^2}, 2^{2^{2^2}}, \ldots \pmod{n} \]
+  is eventually constant.}}}[/li]
+  [li]{{{Find all integers $n$ such that $n \mid 2^n - 1$.}}}[/li]
+  [li]{{{Find all primes $p$ and $q$ such that $pq \mid (5^p - 2^p)(5^q - 2^q)$.}}}[/li]
+  [li]{{{(IMO 2005) Determine all positive integers relatively prime to all the terms of the infinite sequence defined by $a_n = 2^n + 3^n + 6^n - 1$, for integers $n \geq 1$.}}}[/li]
+  [li]{{{(USAMO 2005) Prove that the system 
+  $\begin{align*}
+  x^6+x^3+x^3y+y & = 147^{157} \\ 
+  x^3+x^3y+y^2+y+z^9 & = 157^{147}\end{align*}$
+  has no solutions in integers $x,y,z$.}}}[/li]
+[/ol]

@@ -1,0 +1,33 @@
+<<<Title: Similar Triangles
+Author(s): Ali Gurel
+Description: 2012 Blue MOP Handout
+Topics: Similar triangles
+>>>
+
+[ol]
+[li]{{{(Prasolov, PPSG, p.16) Let $M$ and $N$ be the midpoints of sides $AD$ and $BC$ in rectangle $ABCD$. Point $P$ lies on the extension of $DC$ 
+beyond $D$; point $Q$ is the intersection point of $PM$ and $AC$. Prove that $\angle QNM = \angle MNP$.}}}[/li]
+  [li]{{{(Prasolov, PPSG, p.17) Angles $\alpha$ and $\beta$ of  $\triangle ABC$ are related as $3\alpha +2\beta = 180^\circ$. Prove that $a^2 +bc = c^2$.}}}[/li]
+  [li]{{{(Prasolov, PPSG, p.17) Straight line $l$ intersects sides $AB$ and $AD$ of parallelogram $ABCD$ at $E$ and $F$, respectively. Let $G$ be the intersection point of $l$ with diagonal $AC$. Prove that
+$$\frac{AB}{AE} + \frac{AD}{AF} = \frac{AC}{AG}\cdot$$}}}[/li]
+  [li]{{{(Prasolov, PPSG, p.17) Point $P$ lies on the bisector of an angle with vertex $C$. A line passing through $P$ intercepts segments of lengths $a$ and $b$ on the angle's legs. Prove that the value of $1/a + 1/b$ does not depend on the choice of the line.}}}[/li]
+  [li]{{{(Romania-1999) Let $ABC$ be a triangle with angle bisector $AD$. One considers the points $M$, $N$ on rays $AB$ and $AC$ respectively, 
+such that $\angle MDA = \angle ABC$ and $\angle NDA = \angle BCA$. Lines $AD$ and $MN$ meet at $P$. Prove that
+$$AD^3 = AB\cdot AC\cdot AP.$$}}}[/li]
+  [li]{{{(IMO-2001) Let $ABC$ be a triangle with $\angle BAC = 60^{\circ}$. Let $AP$ bisect $\angle BAC$ and let $BQ$ bisect $\angle ABC$, with $P$ on $BC$ 
+and $Q$ on $AC$. If $AB + BP = AQ + QB$, what are the angles of the triangle?}}}[/li]
+  [li]{{{(St. Petersburg City MO-2000) Let $ABCD$ be a convex quadrilateral, and let $M$ and $N$ be the midpoints of $AD$ and $BC$, respectively. 
+Suppose $A$, $B$, $M$, $N$ lie on a circle such that $AB$ is tangent to the circumcircle of triangle $BMC$. Prove that $AB$ is also tangent to the circumcircle of triangle $AND$.}}}[/li]
+  [li]{{{(Belarus-1999) Let $P$ and $Q$ be points on the side $AB$ of the triangle $ABC$ (with $P$ between $A$ and $Q$) such that 
+$\angle ACP = \angle PCQ = \angle QCB$, and let $AD$ be the angle bisector of $\angle BAC$. Line $AD$ meets lines $CP$ and $CQ$ at $M$ and $N$ respectively. Given that $PN = CD$ and $3\angle BAC = 2\angle BCA$, prove that triangles $CQD$ and $QNB$ have the same area.}}}[/li]
+  [li]{{{(Iran-1999) Let $I$ be the incenter of triangle $ABC$ and let $AI$ meet the circumcircle of $ABC$ at $D$. Denote the feet of the perpendiculars from $I$ 
+to $BD$ and $CD$ by $E$ and $F$, respectively. If $IE+IF = AD/2$, calculate $\angle BAC$.}}}[/li]
+  [li]{{{(Romania-1999) Let $ABC$ be an acute triangle with angle bisectors $BL$ and $CM$. Prove that $\angle A = 60^{\circ}$ if and only if there exists a 
+point $K$ on $BC$ ($K \neq B,C$) such that triangle $KLM$ is equilateral.}}}[/li]
+  [li]{{{(Poland-1999) In a convex hexagon $ABCDEF$, $\angle A+\angle C+\angle E = 360^{\circ}$ and
+$$AB\cdot CD\cdot EF = BC\cdot DE\cdot FA.$$
+Prove that $AB\cdot FD\cdot EC = BF\cdot DE\cdot CA.$}}}[/li]
+  [li]{{{(IMO Shortlist 1999)The point $M$ inside the convex quadrilateral $ABCD$ is such that
+$$MA = MC, \ \angle AMB = \angle MAD+\angle MCD, \ \angle CMD = \angle MCB+\angle MAB.$$
+Prove that $AB.CM = BC.MD$ and $BM.AD = MA.CD$.}}}[/li]
+[/ol]

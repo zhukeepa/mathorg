@@ -1,0 +1,68 @@
+<<<Title: Primitive Roots
+Author(s): Alex Zhu
+Description: 
+Topics: Primitive roots
+>>>
+ 
+A [i]primitive root[/i] mod $n$ is an integer whose order mod $n$ is $\phi(n)$. A key fact about primitive roots is that there exists a primitive root mod $n$ if and only if $n = 2$, $n=4$, $n=p^k$, or $n=2p^k$ for some prime $p > 2$ and positive integer $k \geq 1$.  
+ 
+[h2]Proof Outline[/h2] 
+ 
+[h3]Existence of Primitive Root mod $p$[/h3] 
+ 
+[ol] 
+  [li]{{{Prove by induction that a polynomial mod $p$ of degree $n$ has at most $n$ roots mod $p$.}}}[/li]
+  [li]{{{Let $N$ be the lowest common multiple of the orders of all the elements mod $p$. By considering the polynomial $x^N - 1$, prove that $N = p-1$.}}}[/li]
+  [li]{{{Show that if some two elements have orders $m$ and $n$, where $m$ and $n$ are relatively prime, then there is some element with order $mn$.}}}[/li]
+  [li]{{{Show that if some two elements have orders $m$ and $n$, then some two elements have order $c$ and $d$, where $cd = \mbox{lcm}(m,n)$ and $\gcd(c,d) = 1$.}}}[/li]
+  [li]{{{Conclude that for each prime $p$, there exists a primitive root modudlo $p$.}}}[/li]
+[/ol] 
+ 
+[h3]Existence of Primitive Root mod $p^k, 2p^k$[/h3] 
+ 
+[ol] 
+  [li]{{{Show that if $g$ is a primitive root mod $p$, then at least one of $g$ and $g+p$ is a primitive root mod $p^2$.}}}[/li]
+  [li]{{{Show that if $g$ is a primitive root mod $p^2$, then $g$ is a primitive root mod $p^k$ for all $k \geq 2$.}}}[/li]
+  [li]{{{Show that if $g$ is a primitive root mod $p^k$, then exactly one of $g$ and $g + p^k$ is a primitive root mod $2p^k$.}}}[/li]
+[/ol] 
+ 
+[h3]Nonexistence in Other Mods[/h3] 
+ 
+[ol] 
+  [li]{{{Show that for $k \geq 3$, there is no primitive root mod $2^k$.}}}[/li]
+  [li]{{{Show that if $n$ has at least two odd prime factors [i]or[/i] is divisible by 4 and some odd prime, and if $a$ is an integer such that $\gcd(a,n) = 1$, then $a^{\frac{\phi(n)}{2}} \equiv 1 \pmod{n}$.}}}[/li]
+[/ol] 
+ 
+[h2]Basic Applications[/h2] 
+ 
+[ol] 
+[li]{{{Let $p$ be an odd prime. Prove that $(p-1)! \equiv -1 \pmod{p}$ using primitive roots.}}}[/li]
+  [li]{{{Let $p$ be a prime, and let $k$ be a positive integer. Evaluate $1^k + 2^k + \cdots + (p-1)^k \pmod{p}$.}}}[/li]
+  [li]{{{Let $p$ be a prime, and let $a$ and $k$ be positive integers. Prove that the congruence $x^k \equiv a \pmod{p}$ has a solution if and only if $a$ is a $\gcd(k,p-1)$th power mod $p$.}}}[/li]
+  [li]{{{(PUMaC 2007) How many pairs of integers $a$ and $b$ are there such that $a$ and $b$ are between 1 and 42 and $a^9 \equiv b^7 \pmod{43}$?}}}[/li]
+  [li]{{{Find the remainder when $\sum_{k=0}^{106} 3^{3^k}$ is divided by 107.}}}[/li]
+  [li]{{{Let $p$ be a prime number, and let $k$ be a positive integer. Compute the number of distinct remainders left by the elements of $\{1^k , 2^k, \ldots, (p-1)^k \}$ mod $p$.}}}[/li]
+  [li]{{{Prove that the product of two primitive roots mod $p$ is not a primitive root.}}}[/li]
+  [li]{{{The number 142857 has the curious property that when it is multiplied by the numbers 1 through 6, cyclic shifts of its digits are obtained:  
+\begin{eqnarray*} 
+142857 \times 1 &=& 142857 \\ 
+142857 \times 2 &=& 285714 \\ 
+142857 \times 3 &=& 428571 \\ 
+142857 \times 4 &=& 571428 \\ 
+142857 \times 5 &=& 714285 \\ 
+142857 \times 6 &=& 857142.  
+\end{eqnarray*} 
+Find an explanation for this in terms of primitive roots (hint: use 1/7 = $0.\overline{142857}$), and generalize this explanation to show how we can find larger numbers with a similar property.}}}[/li]
+[/ol] 
+   
+[h2]Harder Problems[/h2] 
+ 
+[ol] 
+  [li]{{{(ELMO 2011) Let $p>13$ be a prime of the form $2q+1$, where $q$ is prime. Find the number of ordered pairs of integers $(m,n)$ such that $0\le m<n<p-1$ and 
+\[3^m+(-12)^m\equiv 3^n+(-12)^n\pmod{p}.\]}}}[/li]
+  [li]{{{Let $p$ be a prime number. Show that the sum of all integers between $1$ and $p-1$ inclusive that are primitive roots mod $p$ is congruent to $\mu(p-1)$ mod $p$, where $\mu(n)$ is the M\"{o}bius function. ($\mu(n)$ is defined to be 1 if $n$ is squarefree and has an even number of prime factors, -1 if $n$ is squarefree and has an odd number of prime factors, and 0 if $n$ is not squarefree.)}}}[/li]
+  [li]{{{Let $p$ be an odd prime, and let $m$ be a positive multiple of $p-1$. Prove that \[ \sum_{0 \leq k \leq \frac{m}{p-1}} \binom{m}{k(p-1)} \equiv 2 + p(1+m) \pmod{p^2}. \]}}}[/li]
+  [li]{{{(USA TST 2010 $\#9$) Determine whether or not there exists a positive integer $k$ such that $p = 6k+1$ is a prime and 
+\[\binom{3k}{k} \equiv 1  \pmod{p}.\]}}}[/li]
+  [li]{{{Let $p$ and $q$ be primes and $n$ be a positive integer, where $p > n^{q-1}$, $q$ divides $p-1$, and $q$ does not divide $n$. Show that if $a_1, a_2, \ldots, a_n$ are integers such that $a_1^{\frac{p-1}{q}} + a_2^{\frac{p-1}{q}} + \cdots + a_n^{\frac{p-1}{q}}$ is a multiple of $p$, then at least one of the $a_i$ is a multiple of $p$.}}}[/li]
+[/ol] 

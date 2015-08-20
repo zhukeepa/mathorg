@@ -1,0 +1,154 @@
+<<<Title: Loci and Constructions
+Author(s): Ian Le
+Description: MOP 2013 Handout
+Topics: Loci
+>>>
+
+
+A locus is a set of points that all have some given property. For example
+
+[ol]
+
+[li]{{{The locus of points equidistant from points $A$ and $B$ is the perpendicular bisector of the segment $AB$.}}}[/li]
+  [li]{{{The locus of points distance $R$ from a given point $O$ is the circle of radius $R$ centered at $O$.}}}[/li]
+  [li]{{{The locus of points a given distance from a line $l$ is two parallel lines.}}}[/li]
+  [li]{{{Given an angle $\alpha$, the locus of points $C$ such that
+$\angle ACB=\alpha$ is the union of
+two arcs of circles symmetric through line $AB$ (points $A$ and $B$ do
+not belong to the locus).}}}[/li]
+  
+Remark: If we define the angle $\angle ACB$ to be the amount we
+need to rotate line $AC$ counterclockwise around $C$ to get line $BC$ (in other words, if we use directed angles),
+then this locus becomes a circle (the points $A$ and $B$ can be
+thought of as degenerate cases). Note that with this definition, if a
+point $A'$ lies on the line $AC$, $\angle A'CB = \angle ACB$
+
+[li]{{{Find the locus of points equidistant from two intersecting lines. Find the locus of points equidistant from two parallel lines.}}}[/li]
+  [li]{{{Find the locus of the midpoints of segments with the endpoints on two given parallel lines.}}}[/li]
+  [li]{{{A $10$-foot ladder is placed vertically against a wall, and then
+the foot of the ladder is moved outward, with the other end of the
+ladder always touching the wall, until the ladder lies flat on the
+floor with the other end touching the wall.  What is the locus of the
+midpoint of the ladder as it slides?}}}[/li]
+  [li]{{{Suppose two lines $\ell_1$ and $\ell_2$ meet at a point $O$. Let
+$X_1$ and $X_2$ be the projections of some point $X$ onto $\ell_1$ and
+$\ell_2$ resepectively. Find the locus of points $X$ such that
+$OX_1+OX_2$ is constant.}}}[/li]
+  [li]{{{Two lines $\ell_1$ and $\ell_2$ meet at a point $O$. Let $X_1$
+and $X_2$ be the projections of $X$ onto $\ell_1$ and $\ell_2$
+resepectively. Find the locus of points such that $XX_1+XX_2$ is
+constant.}}}[/li]
+  [li]{{{Two lines $\ell_1$ and $\ell_2$ meet at a point $O$. Let $X_1$
+and $X_2$ be the projections of $X$ onto $\ell_1$ and $\ell_2$
+resepectively. Find the locus of points such that $XX_1-XX_2$ is
+constant.}}}[/li]
+  [li]{{{Given two points $A$ and $B$, find the locus of points $X$ such
+that $AX^2+BX^2$ is constant.}}}[/li]
+  [li]{{{Given points $A$ and $B$ in plane, find the locus of points M for
+which $AM^2 - BM^2$ is a constant.}}}[/li]
+  [li]{{{(Carnot's formula) Prove that the perpendiculars dropped from
+points $A_1$, $B_1$ and $C_1$ to sides $BC$,
+$CA$, $AB$ of triangle $ABC$ intersect at one point if and only if
+$$A_1B^2 + C_1A^2 + B_1C^2 = B_1A^ 2 + A_1C^2 + C_1B^2.$$}}}[/li]
+  [li]{{{Prove that the altitudes of a triangle meet at one point. This
+point is called the [i]orthocenter[/i].}}}[/li]
+  [li]{{{Points $A_1$, $B_1$ and $C_1$ are such that $AB_1 = AC_1, BC_1 =
+BA_1$ and $CA_1 = CB_1$. Prove that the perpendiculars dropped from
+points $A_1$, $B_1$ and $C_1$ to lines $BC$, $CA$ and $AB$ meet at one
+point.}}}[/li]
+  [li]{{{The perpendiculars dropped from the vertices of triangle $ABC$
+to the corresponding sides of triangle $A_1B_1C_1$ meet at one point.
+Prove that the perpendiculars dropped from the vertices of triangle
+$A_1B_1C_1$ to the corresponding sides of triangle $ABC$ also meet at
+one point.}}}[/li]
+  [li]{{{The parallels from the vertices of triangle $ABC$
+to the corresponding sides of triangle $A_1B_1C_1$ meet at one point.
+Prove that the parallels from the vertices of triangle
+$A_1B_1C_1$ to the corresponding sides of triangle $ABC$ also meet at
+one point.}}}[/li]
+  [li]{{{Given a quadrilateral $ABCD$, find the locus of points $M$ such that $[MAB]+[MCD]=[MBC]+[MDA].$}}}[/li]
+  [li]{{{Show that for a circumscribed quadrilateral, the center of the inscribed circle lies on the Gauss line (the line containing the midpoints of the three diagonals of a complete quadrilateral).}}}[/li]
+  [li]{{{Given rectangle $ABCD$, find the locus of points X for which $AX+BX = CX+DX$.}}}[/li]
+  [li]{{{Find the locus of points $M$ that lie inside rhombus $ABCD$ and with the property
+that $\angle AMD + \angle BMC = 180^{\circ}.$}}}[/li]
+  [li]{{{Find the locus of the midpoints of the chords of a given circle, provided the chords
+pass through a given point.}}}[/li]
+  [li]{{{A point $A$ lies inside a circle. Consider the intersection of the tangents to the circle at the endpoints of a chord passing through $A$. How does this point vary as the chords vary?}}}[/li]
+  [li]{{{Two points, $A$ and $B$ in plane are given. Find the locus of points $M$ for which
+$AM/BM = k$. (This is the [i]circle of Apollonius[/i].)}}}[/li]
+[/ol]
+
+[h2]Constructions[/h2]
+
+For problems in this section, explain how to construct with a ruler and compass. Also explain if there are none, one, or  more than one possible answers to the following problems, and analyze under which circumstances this occurs.
+
+[ol]
+
+[li]{{{Construct the loci in all the previous problems.}}}[/li]
+  [li]{{{Construct an equilateral triangle.}}}[/li]
+  [li]{{{Given a circle, construct an inscribed square.}}}[/li]
+  [li]{{{Construct the geometric mean of two segments.}}}[/li]
+  [li]{{{Given a circle and a point, construct tangents from the point to
+the circle.}}}[/li]
+  [li]{{{Given a point and a circle, construct another circle centered at
+that point tangent to the given circle.}}}[/li]
+  [li]{{{Given a circle, draw a tangent having a given direction.}}}[/li]
+  [li]{{{Construct the common internal and external tangents of two circles.}}}[/li]
+  [li]{{{In a triangle $ABC$, we will denote the side lengths $a, b, c$
+and the angles $A, B, C$. Reconstruct triangle $ABC$ given
+  [ul][li]$a, b, c$[/li]
+  [li]$a, b, C$[/li]
+  [li]$a, B, C$[/li]
+  [li]$a, B$, the length of the altitude from $A$[/li]
+  [li]$a, b$, the length of the median from $A$[/li]
+  [li]$a, B$, the length of the angle bisector of $B$[/li]
+  [li]$a$, the length of the altitude from $A$, the length of the
+angle bisector of $A$[/li]
+  [li]$a, b, A$[/li]
+  [li]$a, c$, the length of the altitude from $B$[/li]
+  [li]$a$, the length of the altitude from $A$, the length of the median from $A$[/li]
+  [li]$a$, the length of the altitude from $A$, $b:c$[/li]
+  [li]$a$, the length of the median from $A$, $b:c$[/li]
+  [li]$a$, the length of the angle bisector from $A$, $b:c$[/li][/ul]}}}[/li]
+  [li]{{{Construct a right triangle, with right angle $A$, given
+  [ul][li]$a, B$[/li]
+  [li]$b, C$[/li]
+  [li]$a, b$[/li]
+  [li]$b, c$[/li][/ul]}}}[/li]
+  [li]{{{Construct a paralellogram $ABCD$ given
+  [ul][li]$AB, AC$ and the angle at $B$.[/li]
+  [li]an altitude and the two diagonals[/li]
+  [li]two altitudes and an angle[/li]
+  [li]two altitudes and a diagonal[/li]
+  [li]a side, an angle, and a diagonal[/li]
+  [li]a side, the corresponding altitude, and the angle between the diagonals[/li][/ul]}}}[/li]
+  [li]{{{Construct a quadrilateral $ABCD$ given
+  [ul][li]$A, B, C, AB, AD$[/li]
+  [li]$AB, BC, CD, B, C$[/li]
+  [li]$A, B, C, AD, CD$[/li]
+  [li]$AC$ and angles $ABC, ADC, BAC, DAC$[/li]
+  [li]$AB$, $BC$, $AC$ and angles $ADB, BDC$[/li]
+  [li]$AB$, $AD$, the angle $DAB$ and the radius of an inscribed circle[/li]
+  [li]three side lengths and the radius of the circumscribed circle[/li]
+  [li]$AB, BC, CD, DA$ and the length of the segment joining midpoints of opposite sides[/li]
+  [li]$AC, BD$, angles $ABC, CDA$, and the angle between $AC$ and $BD$[/li][/ul]}}}[/li]
+  [li]{{{Through a given point, draw a line making equal angles with the
+sides of a given angle.}}}[/li]
+  [li]{{{Through a given point, draw a line so that two given parallel
+lines intercept on it a segment of given length.}}}[/li]
+  [li]{{{With a given radius, draw a circle with center on a given line
+which is tangent to another given circle}}}[/li]
+  [li]{{{Construct a regular pentagon.}}}[/li]
+  [li]{{{Construct a cyclic quadrilateral given the lengths of its sides.}}}[/li]
+  [li]{{{Construct a circle 
+[ul][li]through three points[/li]
+  [li]tangent to three lines[/li]
+  [li]through one point, tangent to two lines[/li]
+  [li]through two points, tangent to one line[/li]
+  [li]through two points, tangent to a circle[/li]
+  [li]tangent to two lines and a circle[/li]
+  [li]through a point, tangent to a line and a circle[/li]
+  [li]through one point tangent to a circle[/li]
+  [li]tangent to one line and two circles[/li]
+  [li]tangent to three circles[/li][/ul]}}}[/li]
+[/ol]

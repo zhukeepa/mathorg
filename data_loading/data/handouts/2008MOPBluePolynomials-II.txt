@@ -1,0 +1,21 @@
+<<<Title: Polynomials-II
+Author(s): Ali Gurel
+Description: 2008 Blue MOP Handout
+Topics: Polynomials
+>>>
+
+[ol]
+[li]{{{Determine the polynomials $P$ for which $16P(x^2)=P(2x)^2$.}}}[/li]
+  [li]{{{If $P(x)^2$ is a polynomial in $x^2$, then show that so is either $P(x)$ or $P(x)/x$.}}}[/li]
+  [li]{{{Find all polynomials $P$ such that
+$$P(x)^2+P\left(\frac{1}{x}\right)^2=P(x^2)P\left(\frac{1}{x^2}\right).$$}}}[/li]
+  [li]{{{Are there non-linear polynomials $P$ and $Q$ such that
+$$P(Q(x))=(x-1)(x-2)...(x-15)?$$}}}[/li]
+  [li]{{{Determine all polynomials $P$ for which $$P(x)^2-2=2P(2x^2-1).$$}}}[/li]
+  [li]{{{Find all polynomials satisfying $$P(x)^2-1=4P(x^2-4x+1).$$}}}[/li]
+  [li]{{{Find all polynomials $P$ satisfying
+$$P(x^2+1)=P(x)^2+1.$$}}}[/li]
+  [li]{{{(IMO-04) Find all polynomials $P(x)$ with real coefficients that satisfy
+$$P(a-b)+P(b-c)+P(c-a)=2P(a+b+c)$$
+for all triples $a,b,c$ of real numbers such that $ab+bc+ca=0$.}}}[/li]
+[/ol]

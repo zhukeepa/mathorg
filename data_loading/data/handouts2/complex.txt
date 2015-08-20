@@ -1,0 +1,172 @@
+<<<Title: Complex Numbers in Geometry
+Author(s): Yi Sun 
+Description: MOP 2014 Handout
+Topics: Complex numbers (analytic)
+>>>
+
+[h2]Warmup[/h2]
+
+[b]Problem 1.[/b] {{{In cyclic quadrilateral $ABCD$, let $H_a$, $H_b$, $H_c$, and $H_d$ be the orthocenters of triangles $BCD$, $CDA$, $DAB$, and $ABC$, respectively. Prove that $H_aH_bH_cH_d$ is cyclic.}}}
+
+[h2]How to Use Complex Numbers[/h2]
+
+In this handout, we will identify the two dimensional real plane with the one dimensional complex plane.  To each point in vector form, we associate the corresponding complex number.  
+
+[b]Note 1.[/b] Throughout this handout, we use a lowercase letter to denote the complex number that represents the point labeled by the corresponding uppercase letter.
+
+This allows us to compute geometric transformations easily.  Sometimes, this can lead to solutions that are quite elegant:
+
+[b]Problem 2.[/b] {{{(TST 2006/6) Let $ABC$ be a triangle.  Triangles $PAB$ and $QAC$ are constructed outside of triangle $ABC$ such that $AP = AB$ and $AQ = AC$ and $\angle BAP = \angle CAQ$.  Segments $BQ$ and $CP$ meet at $R$.  Let $O$ be the circumcenter of triangle $BCR$.  Prove that $AO \perp PQ$.}}}
+
+When synthetic approaches have failed, we can use computation with complex numbers:
+
+[b]Problem 3.[/b] {{{(MOP 2010) In cyclic quadrilateral $ABCD$, diagonals $AC$ and $BD$ meet at $E$, and lines $AD$ and $BC$ meet at $F$.  Let $G$ and $H$ be the midpoints of sides $AB$ and $CD$, respectively.  Prove that $EF$ is tangent to the circumcircle of triangle $EGH$.}}}
+
+[b]Problem 4.[/b] {{{(USAMO 2012) Let $P$ be a point in the plane of $\triangle ABC$, and $\gamma$ a
+line passing through $P$. Let $A'$, $B'$, $C'$ be the points where
+the reflections of lines $PA$, $PB$, $PC$ with respect to $\gamma$
+intersect lines $BC$, $AC$, $AB$, respectively. Prove that $A'$,
+$B'$, $C'$ are collinear.}}}
+
+There are a number of general principles for this:
+[ul][li]To solve a problem using complex numbers, the general approach is reduce the desired statement to a calculation.  This can be done in a number of ways: 
+[ol][/li]
+  [li]Checking a condition (for parallel lines, cyclic quadrilaterals, collinearity) or checking a claim about angles or distances given in the problem.  In this case, you should just calculate and then check the condition.[/li]
+  [li]Reducing the claim to the fact that some two points are the same.  This is usually used to show concurrency or collinearity.  The calculation can sometimes be reduced a bit in this case; if the problem involves a triangle $ABC$ and asks to show that some lines $\ell_A, \ell_B, \ell_C$ defined symmetrically in terms of $A, B, C$ are concurrent, then it is enough to show that the coordinates of $\ell_A \cap \ell_B$ are symmetric in $a, b, c$.[/li]
+[/ol]
+[li]Before checking any conditions, it is important to set up a good set of variable points to compute with.  Some pointers:
+[ol][/li]
+  [li]If there is a circle that figures prominently in the problem, you should set this to be the unit circle so that conjugates of points are also explicitly computable.  In particular, if a triangle or quadrilateral is circumscribed rather than inscribed, take the points of tangency as your variables.[/li]
+  [li]Any synthetic observations you make (most commonly, finding a spiral similarity) might allow you to reduce the number of unknown variables.[/li]
+[/ol]
+[li]Sometimes, solutions will involve a fair amount of algebraic manipulation.  It might seem obvious, but you try to keep the algebra as clean as possible. I recommend the following: (1) Whenever possible, factor. (2) Keep your terms homogeneous so you can spot errors easily. (3) Before you begin, try to estimate the number of terms you will end up with, and prepare accordingly.  Everyone has a personal system for dealing with large expressions; you should find what works for you.[/li][/ul]
+
+[h2]When to Use Complex Numbers[/h2]
+
+There are a number of signs that suggest a problem can be approached using complex numbers:
+[ul][li]There is one primary circle in the diagram.  If this is the case, you can set this to be the unit circle, and calculate all other points in terms of some values on the circle.  In particular, the common formulas will not contain conjugates, allowing for simpler manipulations.[/li]
+  [li]A small number of points is sufficient to define the diagram. In particular, if the coordinates of each point in the diagram may be computed easily, then solving the problem with complex numbers should be simple.  This most often occurs with a cyclic complete quadrilateral.[/li][/ul]
+
+Perhaps more important is when [b]NOT[/b] to use complex numbers. Do not use complex numbers if:
+[ul][li]You have just started working on a problem.  Complex numbers should only be a method of last resort, and you should almost always try synthetic approaches first.  Regardless of what type of approach you are trying, it is almost always essential that you make some synthetic observations before plunging into calculation.[/li]
+  [li]The problem involves a large number of circles.  The condition for cyclic points is rarely very useful as a given, so the extra circle information will be quite difficult to use.[/li]
+  [li]There are ``too many'' steps in the calculation.  Each additional layer of construction will add to the number of terms that you need to deal with, and at some point, it will become impossible handle.  After using this method a couple times, you will gradually see what your limit is.  Before using complex numbers, make sure the number of terms will not exceed this![/li][/ul]
+
+[h2]Useful Facts[/h2]
+
+Below are some useful facts. You should be able to derive these easily on your own, and you might want to prove some of the more complicated ones on an actual olympiad solution.  If you plan on using complex numbers as a computational approach frequently, you will likely want to memorize the more common formulas here.	
+
+[b]Fact 1.[/b] A complex number $z$ is real iff $z = \bar{z}$ and is pure imaginary iff $z = - \bar{z}$.
+
+[b]Fact 2.[/b] For a complex number $z$ on the unit circle, we have $\bar{z} = 1 / z$.
+
+[b]Fact 3.[/b] A spiral similarity $\phi$ about a point $A$ takes the form 
+\[
+\phi(z) = c \cdot (z - a) + a
+\]
+for some complex constant $c$.
+
+[b]Fact 4.[/b] For [i]any[/i] points $A, B, C, D$, we have:
+[ul][li]$AB \parallel CD \iff \displaystyle{\frac{a - b}{c - d}}$ is real[/li]
+[li]$ABC$ collinear $\iff \displaystyle{\frac{a - b}{b - c}}$ is real[/li]
+  [li]$AB \perp CD \iff \displaystyle{\frac{a - b}{c - d}}$ is imaginary[/li]
+  [li]$ABCD$ is cyclic $\iff \displaystyle{\left.\frac{b - a}{c - a} \right/ \frac{b - d}{c - d}}$ is real[/li][/ul]
+
+[b]Fact 5.[/b] Angles $\angle ABC$ and $\angle XYZ$ are equal iff $\displaystyle{\left.\frac{a - b}{c - b}\right/\frac{x-y}{z-y}}$ is real.
+
+[b]Fact 6.[/b] For points $A, B, C, D$ [i]on the unit circle[/i], we have:
+[ul][li]the equation of chord $AB$ is $z = a + b - ab \bar{z}$[/li]
+  [li]the intersection of chords $AB$ and $CD$ is $\displaystyle{\frac{ab(c+d) - cd (a + b)}{ab - cd}}$[/li]
+  [li]the equation of the tangent at $A$ is $z = 2a - a^2 \bar{z}$[/li]
+  [li]the intersection of the tangents at $A$ and $B$ is $\frac{2ab}{a+b}$[/li][/ul]
+
+[b]Fact 7.[/b] For a triangle $ABC$ inscribed in the unit circle, we have:
+[ul][li]the centroid is given by $g = \frac{a + b + c}{3}$[/li]
+  [li]the orthocenter is given by $h = a+b+c$[/li][/ul]
+
+[b]Fact 8.[/b] For a chord $AB$ on the unit circle, the projection of any point $Z$ onto $AB$ is $\frac{1}{2} (a + b + z - ab \bar{z})$
+
+[b]Fact 9.[/b] If $ABC$ is a triangle inscribed in the unit circle, there exist $u, v, w$ such that $a = u^2$, $b = v^2$, $c = w^2$, and $-uv, -vw, -wu$ are the midpoints of the arcs $\widehat{AB}$, $\widehat{BC}$, and $\widehat{CA}$ which do not contain $C$, $A$, and $B$.
+
+[h2]Problems[/h2]
+The problems below should lend themselves well to complex number approaches.  Be careful to make sure you have the right coordinate system before starting your computation!
+
+[h3]Imaginary Problems[/h3]
+
+[b]Problem 5.[/b] {{{Solve your favorite geometry problem using complex numbers.}}}
+
+[b]Problem 6.[/b] {{{Find the area of a triangle $ABC$ in terms of the complex numbers $a$, $b$, and $c$.}}}
+
+[b]Problem 7.[/b] {{{(TST 2008/7) Let $ABC$ be a triangle with $G$ as its centroid.  Let $P$ be a variable point on segment $BC$.  Points $Q$ and $R$ lie on sides $AC$ and $AB$, respectively, such that $PQ \parallel AB$ and $PR \parallel AC$.  Prove that, as $P$ varies along segment $BC$, the circumcircle of triangle $AQR$ passes through a fixed point $X$ such that $\angle BAG = \angle CAX$.}}}
+
+[b]Problem 8.[/b] {{{(MOP 2006/$\epsilon$/2) Point $H$ is the orthocenter of triangle $ABC$.  Points $D$, $E$, and $F$ lie on the circumcircle of triangle $ABC$ such that $AD \parallel BE \parallel CF$.  Points $S$, $T$, and $U$ are the respective reflections of $D$, $E$, and $F$ across the lines $BC$, $CA$, and $AB$.  Prove that $S$, $T$, $U$, and $H$ are cyclic.}}}
+
+[b]Problem 9.[/b] {{{(WOP 2004/3/4) Convex quadrilateral $ABCD$ is inscribed in circle $\omega$.  Let $M$ and $N$ be the midpoints of diagonals $AC$ and $BD$, respectively.  Lines $AB$ and $CD$ meet at $F$, and lines $AD$ and $BC$ meet at $F$.  Prove that
+\begin{align*}
+\frac{2 MN}{EF} = \left| \frac{AC}{BD} - \frac{BD}{AC} \right|.
+\end{align*}}}}
+
+[b]Problem 10.[/b] {{{(WOOT 2006/4/5) Let $O$ be the circumcenter of triangle $ABC$.  A line through $O$ intersects sides $AB$ and $AC$ at $M$ and $N$, respectively.  Let $S$ and $R$ be the midpoints of $BN$ and $CM$, respectively.  Prove that $\angle ROS = \angle BAC$.}}}
+
+[b]Problem 11.[/b] {{{(MOP 2006/4/1) Convex quadrilateral $ABCD$ is inscribed in circle $\omega$ centered at $O$.  Point $O$ does not lie on the sides of $ABCD$.  Let $O_1, O_2, O_3, O_4$ denote the circumcenters of triangles $OAB$, $OBC$, $OCD$, and $ODA$, respectively.  Diagonals $AC$ and $BD$ meet at $P$.  Prove that $O_1 O_3$, $O_2 O_4$, and $OP$ are concurrent.}}}
+
+[b]Problem 12.[/b] {{{(USAMO 2006/6) Let $ABCD$ be a quadrilateral and let $E$ and $F$ be points on sides $AD$ and $BC$, respectively, such that $\frac{AE}{ED} = \frac{BF}{FC}$.  Ray $FE$ meets rays $BA$ and $CD$ at $S$ and $T$, respectively.  Prove that the circumcircles of triangles $SAE$, $SBF$, $TCF$, and $TDE$ pass through a common point.}}}
+
+[b]Problem 13.[/b] {{{(China 1996) Let $H$ be the orthocenter of the triangle $ABC$.  The tangents from $A$ to the circle with diameter $BC$ intersect the circle at the points $P$ and $Q$.  Prove that the points $P$, $Q$, and $H$ are collinear.}}}
+
+[h3]Real Problems[/h3]
+
+[b]Problem 14.[/b] {{{(TST 2000/2) Let $ABCD$ be a cyclic quadrilateral and let $E$ and $F$ be the feet of perpendiculars from the intersection of diagonals $AC$ and $BD$ to $AB$ and $CD$, respectively.  Prove that $EF$ is perpendicular to the line through the midpoints of $AD$ and $BC$.}}}
+
+[b]Problem 15.[/b] {{{(WOP 2004/1/2) Let $ABCD$ be a convex quadrilateral with $AB$ not parallel to $CD$, and let $X$ be a point insider $ABCD$ such that $\angle ADX = \angle BCX < 90^\circ$ and $\angle DAX = \angle CBX < 90^\circ$. If the perpendicular bisectors of segments $AB$ and $CD$ intersect at $Y$, prove that $\angle AYB = 2 \angle ADX$.}}}
+
+[b]Problem 16.[/b] {{{(MOP 2006/5/3) Let $ABCD$ be a quadrilateral circumscribed about a circle with center $O$.  Let line $AO$ intersect the perpendicular from $C$ to $BD$ at $E$, line $CO$ intersect the perpendicular from $A$ to $BD$ at $F$, and let $AC$ and $BD$ intersect at $G$, prove that $E$, $F$, and $G$ are collinear.}}}
+
+[b]Problem 17.[/b] {{{(MOP 2006/$\beta$/3) Triangle $ABC$ is inscribed in circle $\omega$.  Point $P$ lies inside the triangle.  Rays $AP$, $BP$, and $CP$ meet $\omega$ again at $A_1$, $B_1$, and $C_1$, respectively.  Let $A_2$, $B_2$, and $C_2$ be the reflections of $A_1$, $B_1$, and $C_1$ across the midpoints of sides $BC$, $CA$, and $AB$, respectively.  Prove that the circumcircle of triangle $A_2 B_2 C_2$ passes through the orthocenter of triangle $ABC$.}}}
+
+[b]Problem 18.[/b] {{{(IMO 2002/2) $BC$ is a diameter of a circle with center $O$.  $A$ is a point on the circle with $\angle AOC > 60^{\circ}$.  $EF$ is the chord which is the perpendicular bisector of $AO$.  $D$ is the midpoint of minor arc $AB$.  The line through $O$ parallel to $AD$ meets $AC$ again at $J$.  Show that $J$ is the incenter of triangle $CEF$.}}}
+
+[b]Problem 19.[/b] {{{(IMO 2004/5) In the convex quadrilateral $ABCD$ the diagonal $BD$ is not the bisector of any of the angles $ABC$ and $CDA$.  Let $P$ be the point in the interior of $ABCD$ such that
+\[
+\angle PBC = \angle DBA \text{ and } \angle PDC = \angle BDA.
+\]
+Prove that the quadrilateral $ABCD$ is cyclic if and only if $AP = CP$.}}}
+
+[b]Problem 20.[/b] {{{(Iran 2005) Let $ABC$ be an isosceles triangle such that $AB = AC$.  Let $P$ be on the extension of the side $BC$ and $X$ and $Y$ on $AB$ and $AC$ such that
+\[
+PX \parallel AC \text{ and } PY \parallel AB.
+\]
+Let $T$ be the midpoint of the arc $BC$.  Prove that $PT \perp XY$.}}}
+
+[b]Problem 21.[/b] {{{(ISL 2004) Let $A_1, A_2, \ldots, A_n$ be a regular $n$-gon.  Assume that the points $B_1, B_2, \ldots, B_{n-1}$ are determined in the following way:
+[ul][li]for $i = 1$ or $i = n - 1$, $B_i$ is the midpoint of the segment $A_i A_{i+1}$;[/li]
+  [li]for $i \neq 1$, $i \neq n-1$, and $S$ the intersection of $A_i A_{i+1}$ and $A_nA_i$, $B_i$ is the intersection of the bisectors of the angle $A_i S_{i+1}$ with $A_i A_{i+1}$.[/li][/ul]
+Prove that $\angle A_1 B_1 A_n + \angle A_1 B_2 A_n + \cdots + \angle A_1 B_{n-1} A_n = 180^\circ$.}}}
+
+[b]Problem 22.[/b] {{{(ISL 1998) Let $ABC$ be a triangle such that $\angle ACB = 2 \angle ABC$.  Let $D$ be the point of the segment $BC$ such that $CD = 2 BD$.  The segment $AD$ is extended over the point $D$ to the point $E$ for which $AD = DE$.  Prove that $\angle ECD + 180^\circ = 2 \angle EBC$.}}}
+
+[b]Problem 23.[/b] {{{(Iran 2005) Let $n$ be a prime number and $H_1$ a convex $n$-gon.  Label the vertices of $H_1$ with $0, \ldots, n-1$ clockwise around $H_1$.  The polygons $H_2, \ldots, H_n$ are defined recursively as follows: vertex $i$ of polygon $H_{k+1}$ is obtained by reflecting vertex $i$ of $H_k$ through vertex $i + k$ of $H_k$, where we consider vertex labels modulo $n$.  Prove that $H_1$ and $H_n$ are similar.}}}
+
+[b]Problem 24.[/b] {{{Suppose that the tangents to the circle $\Gamma$ at $A$ and $B$ intersect at $C$.  The circle $\Gamma_1$ which passes through $C$ and is tangent to $AB$ at $B$ intersects the circle $\Gamma$ at the point $M$.  Prove that the line $AM$ bisects the segment $BC$.}}}
+
+[b]Problem 25.[/b] {{{In triangle $ABC$, let $A_1$, $B_1$, and $C_1$ be the midpoints of $BC$, $CA$, and $AB$, respectively.  Let $P$, $Q$, and $R$ be the points of tangency of the incircle $k$ with the sides $BC$, $CA$, and $AB$.  Let $P_1$, $Q_1$, and $R_1$ be the midpoints of the arcs $QR$, $RP$, and $PQ$ on which the points $P$, $Q$, and $R$ divide the circle $k$, and let $P_2$, $Q_2$, and $R_2$ be the midpoints of arcs $QPR$, $RQP$, and $PRQ$, respectively.  Prove that the lines $A_1 P_1$, $B_1Q_1$, and $C_1R_1$ are concurrent, as well as the lines $A_1P_1$, $B_1Q_2$, and $C_1R_2$.}}}
+
+[b]Problem 26.[/b] {{{Let $P$ be the intersection of the diagonals $AC$ and $BD$ of the convex quadrilateral $ABCD$ for which $AB = AC = BD$.  Let $O$ and $I$ be the circumcenter and incenter of the triangle $ABP$.  Prove that if $O \neq I$ then $OI \perp CD$.}}}
+
+[h3]Complex Problems[/h3]
+
+[b]Problem 27.[/b] {{{(USAMO 2004/6) A circle $\omega$ is inscribed in a quadrilateral $ABCD$.  Let $I$ be the center of $\omega$.  Suppose that 
+\begin{align*}
+(AI + DI)^2 + (BI + CI)^2 = (AB + CD)^2.
+\end{align*}
+Prove that $ABCD$ is an isosceles trapezoid.}}}
+
+[b]Problem 28.[/b] {{{(IMO 2000/6) Let $AH_1$, $BH_2$, and $CH_3$ be the altitudes of an acute triangle $ABC$.  The incircle $\omega$ of triangle $ABC$ touches the sides $BC$, $CA$, and $AB$ at $T_1$, $T_2$, and $T_3$, respectively.  Consider the symmetric images of lines $H_1 H_2$, $H_2 H_3$, and $H_3 H_1$ with respect to lines $T_1 T_2$, $T_2 T_3$, and $T_3 T_1$.  Prove that these images form a triangle whose vertices lie on circle $\omega$.}}}
+
+[b]Problem 29.[/b] {{{(ISL 2004) Given a cyclic quadrilateral $ABCD$, let $M$ be the midpoint of the side $CD$, and let $N$ be a point on the circumcircle of triangle $ABM$.  Assume that the point $N$ is different from the point $M$ and satisfies $\frac{AN}{BN} = \frac{AM}{BM}$.  Prove that the points $E$, $F$, and $N$ are collinear, where $E = AC \cap BD$ and $F = BC \cap DA$.}}}
+
+[b]Problem 30.[/b] {{{(IMO 2008/6) Let $ABCD$ be a convex quadrilateral with $BA$ different from $BC$. Denote the incircles of triangles $ABC$ and $ADC$ by $k_{1}$ and $k_{2}$ respectively. Suppose that there exists a circle $k$ tangent to ray $BA$ beyond $A$ and to the ray $BC$ beyond $C$, which is also tangent to the lines $AD$ and $CD$.
+
+Prove that the common external tangents to $k_{1}$ and $k_{2}$ intersect on $k$.}}}
+
+[b]Problem 31.[/b] {{{(Vietnam 2003) The circles $k_1$ and $k_2$ touch each other at the point $M$. The radius of the circle $k_1$ is bigger than the radius of the circle $k_2$.  Let $A$ be an arbitrary point of $k_2$ which doesn't belong to the line connecting the centers of the circles.  Let $B$ and $C$ be the points of $k_1$ such that $AB$ and $AC$ are its tangents.  The lines $BM$ and $CM$ intersect $k_2$ again at $E$ and $F$, respectively.  The point $D$ is the intersection of the tangent at $A$ with the line $EF$.  Prove that the locus of points $D$ (as $A$ moves along the circle) is a line.}}}

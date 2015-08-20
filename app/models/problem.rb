@@ -2,15 +2,16 @@
 #
 # Table name: problems
 #
-#  id            :integer          not null, primary key
-#  body          :text
-#  source        :text
-#  author        :text
-#  show_solution :boolean
-#  created_at    :datetime
-#  updated_at    :datetime
-#  description   :text
-#  original_id   :integer
+#  id             :integer          not null, primary key
+#  body           :text
+#  source         :text
+#  author         :text
+#  show_solution  :boolean
+#  created_at     :datetime
+#  updated_at     :datetime
+#  description    :text
+#  original_id    :integer
+#  problem_set_id :integer
 #
 
 class Problem < ActiveRecord::Base

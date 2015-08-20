@@ -1,0 +1,51 @@
+<<<Title: Trigonometry 
+Author(s): Josh Nichols-Barrer
+Description: MOP Handout
+Topics: Trigonometry
+>>>
+
+[ol]
+  [li]{{{Let $k$ be an odd integer, and let $\theta$ be a real number which is not of the form $\frac{r\pi}{2k}$, for $r$ an odd integer.  Prove that
+  \[ \prod_{j=0}^{k-1}\tan \left( \theta+\frac{j\pi}{k} \right) = (-1)^{\frac{k-1}{2}}\tan k\theta.\]}}}[/li]
+  [li]{{{(MOP 1997/4.4) Let $P$ be a point in the plane of a triangle $ABC$.  A circle $\Gamma$ passing through $P$ intersects the circumcircles of triangles $PBC$, $PCA$, $PAB$ at $A_1$, $B_1$, and $C_1$ respectively.  Lines $PA_1$, $PB_1$, $PC_1$ intersect sides $BC$, $CA$, $AB$ at $A_2$, $B_2$, $C_2$ respectively, and lines $PA$, $PB$, $PC$ intersect $\Gamma$ at $A_3$, $B_3$, $C_3$.  Prove that
+   [ol][li]the points $A_2$, $B_2$, $C_2$ are collinear;[/li]
+    [li]the lines $A_1A_3$, $B_1B_3$, and $C_1C_3$ are concurrent.[/li][/ol]}}}[/li]
+  [li]{{{(Titu, more than ten years ago) Let $a$, $b$ and $c$ be positive numbers such that $ab+bc+ca = 1$, and such that none of them are $1/\sqrt{3}$.  Prove that \[a^2\left(\frac{a^2-3}{3a^2-1}\right)^2 + b^2\left(\frac{b^2-3}{3b^2-1}\right)^2 + c^2\left(\frac{c^2-3}{3c^2-1}\right)^2 \geq 1.\]  Under what conditions does equality hold?}}}[/li]
+  [li]{{{(MOP 1997/7.5) A line $\ell$ does not meet a circle $\omega$ with center $O$.  Let $E$ be the point on $\ell$ such that $OE$ is perpendicular to $\ell$, and let $M$ be any point on $\ell$ other than $E$.  The tangents from $M$ to $\omega$ touch $\omega$ at $A$ and $B$.  Let $C$ be the point on $MA$ such that $EC$ is perpendicular to $MA$, and let $D$ be the point on $MB$ such that $ED$ is perpendicular to $MB$.  The line $CD$ meets $OE$ at $F$.  Prove that the location of $F$ is independent of that of $M$.}}}[/li]
+  [li]{{{Prove that \[\frac{1}{\sin(\pi/7)} = \frac{1}{\sin(2\pi/7)} + \frac{1}{\sin(3\pi/7)}.\]}}}[/li]
+  [li]{{{(IMO 1996 Short List) Let $ABC$ be an acute-angled triangle, with circumcenter $O$ and circumradius $R$.  Let $AO$, $BO$, $CO$ meet the circles $BOC$, $COA$, and $AOB$ again at $A'$, $B'$, and $C'$.  Prove that \[OA'\cdot OB'\cdot OC' \geq 8R^3.\]  When does equality hold?}}}[/li]
+  [li]{{{Find the smallest $x>0$ such that \[8\cos (x) \cos(3x)\cos(5x)\cos(7x) + \cos(12x) = \frac{1}{2}.\]}}}[/li]
+  [li]{{{(USAMO 1992/2) Prove 
+  \[ 
+  \frac{1}{\cos 0^{\circ} \cos 1^{\circ}} +  
+  \frac{1}{\cos 1^{\circ} \cos 2^{\circ}} + \cdots + 
+  \frac{1}{\cos 88^{\circ} \cos 89^{\circ}} = 
+  \frac{\cos 1^{\circ}}{\sin^2 1^{\circ}}. 
+  \]}}}[/li]
+  [li]{{{(USAMO 1995/2) A calculator is broken so that the only keys that still work are
+  the $\, \sin, \; \cos, $  $\tan, \; \sin^{-1}, \; \cos^{-1}, \,$
+  and $\, \tan^{-1} \,$ buttons.  The display initially shows 0.
+  Given any positive rational number $\, q, \,$ show that pressing
+  some finite sequence of buttons will yield $\, q$.   Assume that
+  the calculator does real number calculations with infinite
+  precision.  All functions are in terms of radians.}}}[/li]
+  [li]{{{(TST 2002/1) Let $ABC$ be a triangle. Prove that
+  \[
+  \sin\frac{3A}{2} + \sin\frac{3B}{2} + \sin\frac{3C}{2} \le
+  \cos\frac{A-B}{2} + \cos\frac{B-C}{2} + \cos\frac{C-A}{2}.
+  \]}}}[/li]
+  [li]{{{(USAMO 2002/2) Let $ABC$ be a triangle such that
+  \[
+  \left( \cot \frac{A}{2} \right)^2 +
+  \left( 2\cot \frac{B}{2} \right)^2 +
+  \left( 3\cot \frac{C}{2} \right)^2 =
+   \left( \frac{6s}{7r} \right)^2,
+  \]
+  where $s$ and $r$ denote its semiperimeter and its inradius, respectively.
+  Prove that triangle $ABC$ is similar to a triangle $T$ whose side lengths
+  are all positive integers with no common divisors and
+  determine these integers.}}}[/li]
+  [li]{{{(TST 2003/5) Let $A, B, C$ be real numbers in the interval $(0,
+  \frac{\pi}{2})$. Prove that
+  \[ \frac{\sin A\sin (A-B)\sin (A-C)}{\sin (B+C)} + \frac{\sin B\sin(B-C)\sin (B-A)}{\sin (C+A)} + \frac{\sin C\sin (C-A)\sin (C-B)}{\sin (A+B)} \ge 0. \]}}}[/li]
+[/ol]

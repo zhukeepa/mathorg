@@ -19,7 +19,7 @@ class RichText < ActiveRecord::Base
   end
 
   def to_html_with_custom_replacements
-    markdown_to_html(lol(replace_solutions(replace_problems(self.text))).bbcode_to_html)
+    convert_bbcode_headers(replace_solutions(replace_problems(self.text)).bbcode_to_html.gsub("\n\n", "<br/><br/>"))
     #RichText.new(text: replace_solutions(replace_problems(self.text))).to_html
   end
 
@@ -27,8 +27,17 @@ private
   def lol(text)
     foo = text.gsub("(((", "[color=red]")
               .gsub(")))", "[/color]")
-              .gsub("[[[", "[color=blue]")
-              .gsub("]]]", "[/color]")
+              .gsub("{{{", "[color=blue]")
+              .gsub("}}}", "[/color] (Link)")
+
+    foo
+  end
+
+  def convert_bbcode_headers(text)
+    foo = text.gsub("[h1]", "<h1>").gsub("[/h1]", "</h1>")
+              .gsub("[h2]", "<h2>").gsub("[/h2]", "</h2>")
+              .gsub("[h3]", "<h3>").gsub("[/h3]", "</h3>")
+              .gsub("[h4]", "<h4>").gsub("[/h4]", "</h4>")
 
     foo
   end

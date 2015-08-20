@@ -1,0 +1,38 @@
+<<<Title: Cyclic Quadrilaterals
+Author(s): Ali Gurel
+Description: 2011 Green MOP Handout
+Topics: Cyclic quadrilaterals
+>>>
+
+[ol]
+[li]{{{(Andreescu & Enescu, MOT, p.50) Let $D,E$, and $F$ be the feet of the altitudes of the triangle $ABC$. Prove that the altitudes of $ABC$ are the angle bisectors of the triangle
+$DEF$.}}}[/li]
+  [li]{{{(Andreescu & Gelca, MOC, p.8) Let $\angle AOB$ be a right angle, $M$ and $N$ points on the half-lines $OA$, respectively $OB$, and let $MNPQ$ be a square such that
+$MN$ separates the points $O$ and $P$. Find the locus of the center of the square when $M$ and $N$ vary.}}}[/li]
+  [li]{{{(Andreescu & Gelca, MOC, p.9) In the triangle $ABC$, $\angle A=60^\circ$ and the bisectors $BB'$ and $CC'$ intersect at $I$. Prove that $IB'=IC'$.}}}[/li]
+  [li]{{{(MOP-1995) An interior point $P$ is chosen in the rectangle $ABCD$ such that $\angle APD+\angle BPC=180^\circ$.
+Find the sum of the angles $\angle DAP$ and $\angle BCP$.}}}[/li]
+  [li]{{{(Andreescu & Gelca, MOC, p.8) Let $ABCD$ be a rectangle and let $P$ be a point on its circumcircle, different from any vertex. Let $X,Y,Z$, and $W$ be the projections of $P$
+onto the lines $AB, BC, CD$, and $DA$, respectively. Prove that one of the points $X,Y,Z$, and $W$ if the orthocenter of the triangle formed by the other three.}}}[/li]
+  [li]{{{(Russia-1996) Points $E$ and $F$ are given on the side $BC$ of a conxex quadrilateral $ABCD$ (with $E$ closer than $F$ to $B$). It is known that
+$\angle BAE=\angle CDF$ and $\angle EAF=\angle FDE$. Prove that $\angle CAF=\angle EDB$.}}}[/li]
+  [li]{{{(Simpson Line) The projections of a point onto the sides (or extensions) of a triangle are on a line if and only if the point is on the circumcircle of the triangle.}}}[/li]
+  [li]{{{(Prasolov, PPSG, p107) Points $A, B$ and $C$ lie on one line, point $P$ lies outside this line. Prove that the
+centers of the circumscribed circles of triangles $ABP, BCP, ACP$ and point $P$ lie on one
+circle.}}}[/li]
+  [li]{{{Distinct points $A$ and $B$ are on a semicircle with diameter $MN$ and center $C$. Point $P$ lies on segment $CN$ and $\angle CAP=\angle CBP=\alpha$ and $\angle ACM=\beta$.
+Express $\angle BPN$ in terms of $\alpha$ and $\beta$.}}}[/li]
+  [li]{{{(Ptolemy's Theorem) Let $ABCD$ be a convex quadrilateral. Prove that
+$$AB\cdot CD+AD\cdot BC=AC\cdot BD\ \mbox{ if and only if $ABCD$ is cyclic}.$$}}}[/li]
+  [li]{{{Given a regular nonagon $COMPUTERS$, show that $$TE+ES=SP.$$}}}[/li]
+  [li]{{{(USAMO-1993) Let $ABCD$ be a convex quadrilateral such that the diagonals $AC$ and $BD$ are perpendicular, and let $P$ be their intersection.
+Prove that the reflections of $P$ with respect to $AB, BC, CD$, and $DA$ are concyclic.}}}[/li]
+  [li]{{{(Andreescu & Gelca, MOC, p.9) Let $B$ and $C$ be the endpoints and $A$ the midpoint of a semicircle. Let $M$ be a point on the line segment $AC$, and $P,Q$ the feet of
+the perpendiculars from $A$ and $C$ to the line $BM$, respectively. Prove that $BP=PQ+QC$.}}}[/li]
+  [li]{{{(Hong Kong-1999) Let $PQRS$ be a cyclic quadrilateral with $\angle PSR = 90^\circ$,
+and let $H$ and $K$ be the respective feet of perpendiculars from $Q$ to
+lines $PR$ and $PS$. Prove that line $HK$ bisects $\overline{QS}$.}}}[/li]
+  [li]{{{(9-Point Circle) In a triangle $ABC$, let $H_A, H_B, H_C$ be the feet of altitudes, $M_A, M_B, M_C$ be the midpoints and $K_A, K_B, K_C$ be the midpoints of $AH, BH, CH$
+where $H$ is the orthocenter. Then the nine points:
+$H_A, H_B,H_C, M_A, M_B,M_C, K_A, K_B,K_C$ are all cyclic.}}}[/li]
+[/ol]

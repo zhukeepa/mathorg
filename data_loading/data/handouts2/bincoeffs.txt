@@ -1,0 +1,198 @@
+<<<Title: Binomial Coefficients
+Author(s): Josh Nichols-Barrer
+Description: MOP Handout
+Topics: Binomial coefficients
+>>>
+
+[b]Definition[/b] [i]The binomial coefficient $\binom{n}{k}$ is
+defined to be[/i] $$\binom{n}{k} = \frac{n!}{k!(n-k)!}.$$
+
+The binomial coefficient $\binom{n}{k}$ can be understood as the
+number of subsets of size $k$ of an $n$-element set (in other
+words, the number of ways to choose $k$ objects from a collection
+of $n$ objects).  By way of convention, if ($k$ is an integer and)
+$k<0$ or $k>n$, $\binom{n}{k} = 0$.  Since the formula for the
+binomial coefficient can be written as $$\binom{n}{k} =
+\frac{n(n-1)(n-2)\cdots(n-k+1)}{k!},$$ we may think of the
+binomial coefficient as a polynomial in $n$, in fact defined for
+all $x$.  The convention for $k>n$ as stated above is consistent
+with this.
+
+[b]Theorem 1 (The Binomial Theorem).[/b] The following formula
+holds:
+$$(x+y)^n = \binom{n}{0}x^n + \binom{n}{1}x^{n-1}y + \binom{n}{2}
+x^{n-2}y^2 +\cdots + \binom{n}{n-1}xy^{n-1}+ \binom{n}{n} y^n.$$
+
+[i]Proof.[/i] Let us determine the coefficient of $x^ky^{n-k}$.  If
+we write out the product as $$(x+y)(x+y)(\cdots)(x+y),$$ we can
+observe that for each way of choosing $k$ of these multiplicands,
+there is a contribution of 1 to the coefficient of $x^ky^{n-k}$,
+since we can think of $x$'s from the chosen multiplicands being
+multiplied by the $y$'s from those not chosen.  Each contribution
+to the coefficient in question arises uniquely in this way, and so
+we have identified the two quantities, as we wanted.
+
+[b]Theorem 2.[/b] [i]Let $n$ and $k$ be positive integers with $n
+\ge k$. The following fundamental properties of the binomial
+coefficients $\binom{n}{k}$ hold:[/i]  [ol][li]$\binom{n}{k} =
+  \binom{n}{n-k}$;[/li]
+    [li]$\binom{n}{k+1} = \binom{n-1}{k+1} +
+  \binom{n-1}{k}$;[/li]
+    [li]$\binom{n}{0} < \binom{n}{1} <
+  \binom{n}{2} < \cdots < \binom{n}{\lceil\frac{n-1}{2}\rceil} =
+  \binom{n}{\lfloor\frac{n}{2}\rfloor}$;[/li]
+    [li]$k\binom{n}{k} =
+  n\binom{n-1}{k-1}$;[/li]
+    [li]$k\binom{n}{k} =
+  (n-k+1)\binom{n}{k-1}$;[/li]
+    [li]$\binom{n}{0} + \binom{n+1}{1} +
+  \binom{n+2}{2} + \cdots + \binom{n+k}{k} = \binom{n+k+1}{k}$;[/li]
+    [li]$\binom{n}{n} + \binom{n+1}{n} + \binom{n+2}{n} + \cdots +
+  \binom{n+k}{n} = \binom{n+k+1}{n+1}$;[/li]
+    [li]$\binom{n}{0} +
+  \binom{n}{1} + \cdots + \binom{n}{n} = 2^n$;[/li]
+    [li]$\binom{n}{0} - \binom{n}{1} + \binom{n}{2} - \cdots +
+  (-1)^n\binom{n}{n} = 0$;[/li]
+    [li]$\binom{n}{1} + 2\binom{n}{2} +
+  3\binom{n}{3} + \cdots + n\binom{n}{n} = n2^{n-1}$;[/li]
+    [li]$\binom{n}{k}$ is divisible by $n$ if $n$ is prime and $1\le k \le
+  n-1$.[/li][/ol]
+
+[i]Proof.[/i] Routine, discussed in lecture.
+
+Binomial coefficients can be viewed as entries of Pascal's
+triangle; the entry in the $n^{\mathrm {th}}$ row and $k^{\mathrm {th}}$ column (where
+row and column indexing starts at 0) is $\binom{n}{k}$.
+
+Now for some examples.
+
+[b]Example 1.[/b][AIME 1989] Ten points are marked on a
+circle. How many distinct convex polygons of three or more sides
+can be drawn using some (or all) of the ten points as vertices?
+(Polygons are distinct unless they have exactly the same
+vertices.)
+
+[b]Example 2.[/b] Evaluate
+\[
+\frac{\binom {11}{0}}{1} + \frac{\binom {11}{1}}{2} + \frac{\binom
+{11}{2}}{3} + \cdots + \frac{\binom{11}{11}}{12}.
+\]
+
+[b]Example 3.[/b] Let $n$ be a positive integer. Prove that
+\[
+\sum_{k=1}^{n} \frac{(-1)^{k-1}}{k}\binom{n}{k} = 1 + \frac{1}{2}
++ \cdots + \frac{1}{n}.
+\]
+
+[b]Example 4.[/b] Let $\{ F_n\}_{n=0}^{\infty}$ be the
+sequence defined by $F_0 = F_1 = 1$ and $F_{n+2} = F_{n+1} +
+F_{n}$ for $n \ge 0$. Prove that
+\[
+\sum_{k=0}^{n}\binom{n-k+1}{k} = F_{n+1}.
+\]
+
+[b]Example 5.[/b]
+
+[Vandermonde] Let $m, n$, and $k$ be integers with $m ,n \ge 0$.
+Prove that
+\[
+\binom{m+n}{k} = \sum_{i=0}^{k} \binom{m}{i}\binom{n}{k-i}.
+\]
+
+[b]Theorem 3.[/b] [i]{[Lucas][/i] Let $p$ be a prime, and let
+$n$ be a positive integer with $n = (\overline{n_mn_{m-1}\dots
+n_{0}})_p$. Let $i$ be a positive integer less than n. Also, write
+$i = i_0 + i_1 p + \cdots + i_m p^m$, where $0 \le i_0, i_1,
+\dots, i_m \le p-1$. Then}
+$$
+\binom{n}{i} \equiv \prod_{j=0}^{m} \binom{n_j}{i_j} \pmod{p}.
+\tag{(**)}
+$$
+[i]Here $\binom{0}{0} = 1$ and $\binom{n_j}{i_j} = 0$ if $n_j <
+i_j$ by the convention we set earlier.[/i]
+
+[i]Proof.[/i] One good argument (which you should be able to work
+out on your own) involves the identity
+$$(x+y)^p\equiv x^p + y^p \pmod{p}.$$
+
+One useful generalization of binomial coefficients are multinomial
+coefficients.  They are defined as $$\binom{n}{n_1, n_2, \dots ,
+n_m} = \frac{n!}{n_1!n_2!\cdots n_m!},$$ where $n_1+\cdots+n_m =
+n.$  The above multinomial coefficient counts the number of ways
+of partitioning an $n$-element set into parts of size
+$n_1,n_2,\ldots,n_m$.  As before, the convention is that if any of
+the (integral) $n_k$ are negative then the multinomial coefficient
+is $0$.  The expected generalization of Theorem 1 above indeed
+works:
+
+[b]Theorem 4.[/b] [i]Let $m$ and $n$ be positive integers.
+Then[/i] \[ (x_1+x_2+\cdots + x_m)^n = \sum_{\stackrel{\scriptstyle n_1, n_2, \dots , n_m \ge 0}
+{n_1+n_2+\cdots+n_m = n}} \binom{n}{n_1, n_2, \dots , n_m}
+x_1^{n_1}x_2^{n_2}\cdots x_m^{n_m}. \]
+
+[i]Proof.[/i] Similar to the Binomial Theorem.
+
+
+[b]Exercises and Problems[/b]
+
+
+
+
+[ol] [li]{{{Let $n, m, k$ be nonnegative integers such that $m\le
+  n$. Show that
+  \[
+  \binom{n}{k} \binom{k}{m} = \binom{n}{m}\binom{n-m}{k-m}.
+  \]}}}[/li]
+  [li]{{{What is the value of the constant term in the expansion
+  of $\left({x^2+ \frac{1}{x^2}-2}\right)^{10}$?}}}[/li]
+  [li]{{{Let $n$ be a positive integer. Prove that
+  \[
+  \sum_{k=0}^{n} k^2\binom{n}{k} = n(n+1)2^{n-2} \mbox{and}
+   \sum_{k=0}^{n} \frac{(-1)^k}{k+1} \binom{n}{k} =
+  \frac{1}{n+1}.
+  \]}}}[/li]
+  [li]{{{Let $n$ be a nonnegative integer. Prove that
+  \[
+  \sum_{i = 0}^k (-1)^i\binom{n}{i} = (-1)^k \binom{n-1}{k}.
+  \]}}}[/li]
+  [li]{{{Let $n$ be an odd positive integer. Prove that the array
+  \[
+  \binom{n}{0},\ \binom{n}{1},\ \dots,\ \binom{n}{\frac{n-1}{2}}
+  \]
+  contains an even number of odd numbers.}}}[/li]
+  [li]{{{Let $n$ be a positive integer. Determine the number of odd numbers
+  in $\binom{n}{0}, \binom{n}{1}, \dots , \binom{n}{n}$.}}}[/li]
+  [li]{{{Prove that the binomial coefficients $\binom{2^n}{k}$, $k=1 , 2,
+  \dots, 2^{n-1}-1, 2^{n-1}+1, \dots, 2^n-1$, are all divisible by
+  4.}}}[/li]
+  [li]{{{Let $p$ be any prime number. Prove that
+  \[
+  \binom{2p}{p} \equiv 2 \pmod{p^2}.
+  \]}}}[/li]
+  [li]{{{Let $n$ be a nonnegative integer. Show that
+  \[
+  \sum_{k=0}^{n} k\binom{n}{k}^2 = n\binom{2n-1}{n-1}.
+  \]}}}[/li]
+  [li]{{{[MOSP 2001, Cecil Rousseau] Let $a_n$ denote the number of
+  nonempty sets $S$ such that  [ol][li]$S\subseteq \{ 1, 2,
+  \dots , n\}$;[/li]
+    [li]all elements of $S$ have the same parity;[/li]
+    [li]each element $k \in S$ satisfies $k \ge 2|S|$, where
+  $|S|$ denotes the number of elements in $S$.[/li][/ol] Prove that
+  \[
+  a_{2m-1} = 2(F_{m+1} - 1)\mbox{and} a_{2m} = F_{m+3}
+  - 2
+  \]
+  for all $m \ge 1$, where $F_n$ is the $n^{\mathrm {th}}$ Fibonacci number.}}}[/li]
+  [li]{{{[IMO 1995/6] Let $p$ be an odd prime, and let $S$ denote
+  the set of positive integers from $1$ to $2p$.  How many subsets
+  of $S$ of size $p$ have a sum divisible by $p$?}}}[/li]
+  [li]{{{[TST 2000, from Kvant] Let $n$ be a positive integer.
+  Prove that
+  \[
+  \sum_{i=0}^{n}\binom{n}{i}^{-1} = \frac{n+1}{2^{n+1}}
+  \sum_{i=1}^{n+1} \frac{2^{i}}{i}.
+  \]}}}[/li]
+  [li]{{{Let $p>3$ be a prime.  Prove that $$\binom{2p}{p}\equiv
+  2\pmod{p^3}.$$}}}[/li]
+[/ol]

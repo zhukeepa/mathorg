@@ -1,0 +1,24 @@
+<<<Title: Inequalities-II
+Author(s): Ali Gurel
+Description: 2008 Blue MOP Handout
+Topics: Inequalities
+>>>
+
+[ol]
+[li]{{{(Tournament of Towns-97) Let $a,b,c$ be positive numbers such that $abc=1$. Prove that
+$$\frac{1}{a+b+1}+\frac{1}{b+c+1}+\frac{1}{c+a+1}\leq1.$$}}}[/li]
+  [li]{{{(IMO-95) Let $a,b,c>0$ such that $abc=1$. Prove that
+$$\frac{1}{a^3(b+c)}+\frac{1}{b^3(c+a)}+\frac{1}{c^3(a+b)}\geq\frac{3}{2}\cdot$$}}}[/li]
+  [li]{{{Let $x,y,z$ be non-negative real numbers with $xy+yz+zx=1$. Prove that
+$$\frac{1}{x+y}+\frac{1}{y+z}+\frac{1}{z+x}\geq\frac{5}{2}\cdot$$}}}[/li]
+  [li]{{{If $a,b,c>0$, prove that
+$$\frac{a^3}{b^2-bc+c^2}+\frac{b^3}{c^2-ca+a^2}+\frac{c^3}{a^2-ab+b^2}\geq\frac{3(ab+bc+ca)}{a+b+c}\cdot$$}}}[/li]
+  [li]{{{If $x+y+z=1$ for some non-negative numbers $x,y,z$, prove that
+$$0\leq xy+yz+zx-2xyz\leq\frac{7}{27}\cdot$$}}}[/li]
+  [li]{{{(Iran-96) Let $x,y,z$ be positive numbers. Prove that
+$$(xy+yz+zx)\left(\frac{1}{(x+y)^2}+\frac{1}{(y+z)^2}+\frac{1}{(z+x)^2}\right)\geq\frac{9}{4}\cdot$$}}}[/li]
+  [li]{{{(IMO-05) Let $x,y$ and $z$ be positive numbers such that $xyz\geq1$. Prove that
+$$\frac{x^5-x^2}{x^5+y^2+z^2}+\frac{y^5-y^2}{y^5+z^2+x^2}+\frac{z^5-z^2}{z^5+x^2+y^2}\geq0.$$}}}[/li]
+  [li]{{{(IMO-00) Let $a,b,c$ be positive numbers such that $abc=1$. Prove that
+$$\left(a-1+\frac{1}{b}\right)\left(b-1+\frac{1}{c}\right)\left(c-1+\frac{1}{a}\right)\leq1.$$}}}[/li]
+[/ol]

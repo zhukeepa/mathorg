@@ -1,230 +1,63 @@
-<<<
-Title: Inversion
+<<<Title: Inversion
 Author(s): Alex Zhu
 Description: 
 Topics: Inversion
 >>>
-Key Facts
-=========
 
-1.  An inversion maps a line passing through the center of inversion to
-    itself.
+[h2]Key Facts[/h2] 
+ 
+[ol]
+  [li]An inversion maps a line passing through the center of inversion to itself.[/li]
+  [li]An inversion maps a line not passing through the center of inversion to a circle passing through the center of inversion.[/li]
+  [li]An inversion maps a circle passing through the center of inversion to a line.[/li]
+  [li]An inversion maps a circle not passing through the center of inversion to a circle not passing through the center of inversion.[/li]
+  [li]If $O, A, B$ are non-collinear points in a plane, and $A'$ and $B'$ are the images of $A$ and $B$ under an inversion centered at $O$ of radius $r$, we have \[ OA' = \frac{r^2}{OA}, OB' = \frac{r^2}{OB}, A'B' = \frac{r^2 \cdot AB}{OA \cdot OB}, \]
+  and $\triangle OAB \sim \triangle OB'A'$ (and, in particular, $\angle OAB = \angle OB'A'$).[/li]
+[/ol]
 
-2.  An inversion maps a line not passing through the center of inversion
-    to a circle passing through the center of inversion.
+[h2]Common Techniques[/h2]
 
-3.  An inversion maps a circle passing through the center of inversion
-    to a line.
+[ol]
+  [li][b]Inverting circles:[/b] When many circles pass through a single point, inversion about that point maps the circles to lines, which are often easier to work with.[/li]
+  [li][b]Utilizing angle conditions:[/b] Bizarre angle conditions (e.g., involving out-of-the-way angles or sums of unrelated angles) often become much more tractable after an inversion.[/li]
+  [li][b]Partial inversion:[/b] Sometimes, it can be helpful to invert part of a diagram and compare the image of the inversion with the original diagram, rather than inverting the whole diagram at once.[/li]
+[/ol]
 
-4.  An inversion maps a circle not passing through the center of
-    inversion to a circle not passing through the center of inversion.
+[h2]Inversion Exercises[/h2]
 
-5.  If $O, A, B$ are non-collinear points in a plane, and $A'$
-    and $B'$ are the images of $A$ and $B$ under an
-    inversion centered at $O$ of radius $r$, we have
-    \[OA' = \frac{r^2}{OA}, OB' = \frac{r^2}{OB}, A'B' = \frac{r^2 \cdot AB}{OA \cdot OB},\]
-    and $\triangle OAB \sim \triangle OB'A'$ (and, in particular,
-    $\angle OAB = \angle OB'A'$).
+[ol]
+  [li]{{{$ABC$ is a triangle with incenter $I$, orthocenter $H$, circumcenter $O$, and circumcircle $\Gamma$. Let $AH$ meet $BC$ at $D$ and let $AI$ meet $\Gamma$ at $M$. An inversion about $A$ with arbitrary radius maps $B$ and $C$ to $B'$ and $C'$, respectively. Identify the images of $I$, $O$, $BC$, $\Gamma$, $D$, and $M$ under this inversion with respect to triangle $AB'C'$.}}}[/li]
+  [li]{{{Prove Ptolemy's theorem using inversion.}}}[/li]
+  [li]{{{Circle $\omega$ is internally tangent to circle $\Gamma$ at a point $P$, and is tangent to a chord $AB$ of $\Gamma$ at a point $S$. Prove that ray $PS$ meets $\Gamma$ again at the midpoint of $\widehat{AB}$. (Separately invert the diagram about each of the points $P$, $A$, and $S$, and solve the problem in each of the inverted diagrams.)}}}[/li]
+  [li]{{{Triangle $ABC$ satisfies $\angle BAC = 120^{\circ}$. The bisectors of angles $A$, $B$, and $C$ meet sides $BC$, $CA$, and $AB$ at $D$, $E$, and $F$, respectively. Prove that $\angle EDF = 90^{\circ}$ by inverting about $D$, and inverting again about the image of $A$.}}}[/li]
+[/ol]
 
-Common Techniques
-=================
+[h2]Problems[/h2]
 
-1.  **Inverting circles:** When many circles pass through a single
-    point, inversion about that point maps the circles to lines, which
-    are often easier to work with.
-
-2.  **Utilizing angle conditions:** Bizarre angle conditions (e.g.,
-    involving out-of-the-way angles or sums of unrelated angles) often
-    become much more tractable after an inversion.
-
-3.  **Partial inversion:** Sometimes, it can be helpful to invert part
-    of a diagram and compare the image of the inversion with the
-    original diagram, rather than inverting the whole diagram at once.
-
-Inversion Exercises
-===================
-
-1.  [[[
-    $ABC$ is a triangle with incenter $I$, orthocenter $H$,
-    circumcenter $O$, and circumcircle $\Gamma$. Let $AH$
-    meet $BC$ at $D$ and let $AI$ meet $\Gamma$ at
-    $M$. An inversion about $A$ with arbitrary radius maps
-    $B$ and $C$ to $B'$ and $C'$, respectively. Identify
-    the images of $I$, $O$, $BC$, $\Gamma$, $D$, and
-    $M$ under this inversion with respect to triangle $AB'C'$.
-    ]]]
-
-2.  [[[
-    Prove Ptolemy’s theorem using inversion.
-    ]]]
-
-3.  [[[
-    Circle $\omega$ is internally tangent to circle $\Gamma$ at
-    a point $P$, and is tangent to a chord $AB$ of $\Gamma$
-    at a point $S$. Prove that ray $PS$ meets $\Gamma$ again
-    at the midpoint of $\widehat{AB}$. (Separately invert the
-    diagram about each of the points $P$, $A$, and $S$, and
-    solve the problem in each of the inverted diagrams.)
-    ]]]
-
-4.  [[[
-    Triangle $ABC$ satisfies $\angle BAC = 120^{\circ}$. The
-    bisectors of angles $A$, $B$, and $C$ meet sides
-    $BC$, $CA$, and $AB$ at $D$, $E$, and $F$,
-    respectively. Prove that $\angle EDF = 90^{\circ}$ by inverting
-    about $D$, and inverting again about the image of $A$.
-    ]]]
-
-Problems
-========
-
-1.  [[[
-    Let $ABCD$ be a convex quadrilateral, and let
-    $AB = a, BC = b, CD = c, DA = d, AC = m$, and $BD = n$.
-    Prove that
-    \[m^2 n^2 = a^2 c^2 + b^2 d^2 - 2abcd \cos(\angle DAB + \angle BCD).\]
-    ]]]
-
-2.  [[[
-    (ISL 2003) Let $\Gamma_1$, $\Gamma_2$, $\Gamma_3$,
-    $\Gamma_4$ be distinct circles such that $\Gamma_1$,
-    $\Gamma_3$ are externally tangent at $P$, and
-    $\Gamma_2$, $\Gamma_4$ are externally tangent at the same
-    point $P$. Suppose that $\Gamma_1$ and $\Gamma_2$,
-    $\Gamma_2$ and $\Gamma_3$, $\Gamma_3$ and
-    $\Gamma_4$, and $\Gamma_4$ and $\Gamma_1$ meet at
-    $A$, $B$, $C$, and $D$, respectively, and that all
-    these points are different from $P$. Prove that
-    \[\frac{AB\cdot BC}{AD\cdot DC}=\frac{PB^2}{PD^2}.\]
-    ]]]
-
-3.  [[[
-    Let $ABC$ be a triangle, and let $O$ be its circumcenter.
-    Show that there exists a point $P$ in the interior of $ABC$
-    with the following properties:
-
-    1.  $\triangle PBA \sim \triangle PAC$.
-
-    2.  $P$ lies on the symmedian of $\triangle ABC$.
-
-    3.  $OP \perp AP$.
-
-    4.  The midpoints of sides $AB$ and $AC$ lie on the
-        circumcircle of $\triangle APO$.
-
-    5.  Quadrilateral $BPOC$ is cyclic.
-    ]]]
-
-4.  [[[
-    (USAMO 1993) Let $ABCD$ be a convex quadrilateral such that
-    diagonals $AC$ and $BD$ intersect at right angles, and let
-    $E$ be their intersection. Prove that the reflections of $E$
-    across $AB$, $BC$, $CD$, and $DA$ are concyclic.
-    ]]]
-
-5.  [[[
-    Let $ABC$ be an acute triangle, let $O$ be its circumcenter,
-    and let $R$ be its circumradius. Define $A'$ to be the
-    second intersection of line $AO$ with the circumcircle of
-    $OBC$. Define $B$’ and $C'$ similarly. Show that
-    $OA' \cdot OB' \cdot OC' \geq 8R^3$.
-    ]]]
-
-6.  [[[
-    Let $ABC$ be a triangle inscribed in circle $\Gamma$. Let
-    $\omega$ be the circle tangent to $AB$ and $AC$ and
-    internally tangent to $\Gamma$ at a point $T$, and let
-    $S$ be the tangency point of the $A$-excircle with side
-    $BC$. Show that $\angle TAB = \angle SAC$.
-    ]]]
-
-7.  [[[
-    (IMO 1996) Let $P$ be a point inside a triangle $ABC$ such
-    that $\angle APB - \angle ACB = \angle APC - \angle ABC$. Let
-    $D,E$ be the incenters of triangles $APB$ and $APC$,
-    respectively. Show that the lines $AP$, $BD$, and $CE$
-    meet at a point.
-    ]]]
-
-8.  [[[
-    (Vietnam TST 2001) Two circles in a plane meet at two points,
-    $A$ and $B$. Suppose a line is tangent to the circles at
-    distinct points $P$ and $T$. The tangents at $P$ and
-    $T$ of the circumcircle of triangle $APT$ meet at $S$.
-    Let $H$ be the reflection of $B$ across $PT$. Show that
-    $A, S$, and $H$ are collinear.
-    ]]]
-
-9.  [[[
-    (Steiner’s porism) Let $\Gamma_1$ and $\Gamma_2$ be two
-    circles, where $\Gamma_1$ is contained in $\Gamma_2$. A
-    *Steiner chain* is a finite sequence of distinct circles inscribed
-    in $\Gamma_1$ and $\Gamma_2$, each of which is tangent to
-    the previous and next circles in the sequence, and with the first
-    circle tangent to the last one. Show that if there exists a Steiner
-    chain for $\Gamma_1$ and $\Gamma_2$, then there exist
-    infinitely many Steiner chains.
-    ]]]
-
-10. [[[
-    (MOP 2011) Let $\Gamma_1, \Gamma_2, \Gamma_3$ be three circles,
-    none of which intersect each other. Let $\omega_1$ be the circle
-    internally tangent to $\Gamma_1, \Gamma_2, \Gamma_3$, and let
-    $\omega_2$ be the circle externally tangent to
-    $\Gamma_1, \Gamma_2, \Gamma_3$. Show that the radical center of
-    $\Gamma_1, \Gamma_2, \Gamma_3$, the center of $\omega_1$,
-    and the center of $\omega_2$ are collinear.
-    ]]]
-
-11. [[[
-    (Pappus’s Arbelos Problem) Circles $S_1$ and $S_2$ are
-    externally tangent to each other and internally tangent to $S$
-    and the diameters of all three circles lie on a line $\ell$.
-    Circle $S_3$ is externally tangent to $S_1$ and $S_2$
-    and internally tangent to $S$. Prove that the distance from the
-    center of $S_3$ to $\ell$ is the length of the diameter of
-    $S_3$.
-    ]]]
-
-12. [[[
-    (China 2010) Let $ABCD$ be a convex quadrilateral with
-    $A,B,C,D$ concyclic. Assume $\angle ADC$ is acute and
-    $\frac{AB}{BC}=\frac{DA}{CD}$. Let $\Gamma$ be a circle
-    through $A$ and $D$, tangent to $AB$, and let $E$ be
-    a point on $\Gamma$ and inside $ABCD$. Prove that
-    $AE \perp EC$ if and only if
-    $\frac{AE}{AB} - \frac{ED}{AD} = 1$.
-    ]]]
-
-13. [[[
-    (USAMO 2007) Let $ABC$ be an acute triangle with $\omega,S$,
-    and $R$ being its incircle, circumcircle, and circumradius,
-    respectively. Circle $\omega_{A}$ is tangent internally to
-    $S$ at $A$ and tangent externally to $\omega$. Circle
-    $S_{A}$ is tangent internally to $S$ at $A$ and tangent
-    internally to $\omega$. Let $P_{A}$ and $Q_{A}$ denote
-    the centers of $\omega_{A}$ and $S_{A}$, respectively.
-    Define points $P_{B}, Q_{B}, P_{C}, Q_{C}$ analogously. Prove
-    that \[8P_{A}Q_{A}\cdot P_{B}Q_{B}\cdot P_{C}Q_{C}\leq R^{3},\]
-    with equality if and only if triangle $ABC$ is equilateral.
-    ]]]
-
-14. [[[
-    (Romanian Masters of Mathematics 2011) A triangle $ABC$ is
-    inscribed in a circle $\omega$. A variable line $\ell$
-    chosen parallel to $BC$ meets segments $AB$, $AC$ at
-    points $D$, $E$ respectively, and meets $\omega$ at
-    points $K,L$ (where $D$ lies between $K$ and $E$).
-    Circle $\gamma_1$ is tangent to the segments $KD$ and
-    $BD$ and also tangent to $\omega$, while circle
-    $\gamma_2$ is tangent to the segments $LE$ and $CE$ and
-    also tangent to $\omega$. Determine the locus, as $\ell$
-    varies, of the meeting point of the common inner tangents to
-    $\gamma_1$ and $\gamma_2$.
-    ]]]
-
-15. [[[
-    (Feuerbach’s theorem) Show that the nine-point circle of a triangle
-    is tangent to the incircle and the three excircles of the triangle.
-    ]]]
-
+[ol]  
+  [li]{{{Let $ABCD$ be a convex quadrilateral, and let $AB = a, BC = b, CD = c, DA = d, AC = m$, and $BD = n$. Prove that \[ m^2 n^2 = a^2 c^2 + b^2 d^2 - 2abcd \cos(\angle DAB + \angle BCD). \]}}}[/li]
+  [li]{{{(ISL 2003) Let $\Gamma_1$, $\Gamma_2$, $\Gamma_3$, $\Gamma_4$ be distinct circles such that $\Gamma_1$, $\Gamma_3$ are externally tangent at $P$, and $\Gamma_2$, $\Gamma_4$ are externally tangent at the same point $P$. Suppose that $\Gamma_1$ and $\Gamma_2$, $\Gamma_2$ and $\Gamma_3$, $\Gamma_3$ and $\Gamma_4$, and $\Gamma_4$ and $\Gamma_1$ meet at $A$, $B$, $C$, and $D$, respectively, and that all these points are different from $P$. Prove that
+ \[ \frac{AB\cdot BC}{AD\cdot DC}=\frac{PB^2}{PD^2}. \]}}}[/li]
+  [li]{{{Let $ABC$ be a triangle, and let $O$ be its circumcenter. Show that there exists a point $P$ in the interior of $ABC$ with the following properties: 
+  [ol]
+    [li]$\triangle PBA \sim \triangle PAC$.[/li]
+    [li]$P$ lies on the symmedian of $\triangle ABC$.[/li]
+    [li]$OP \perp AP$.[/li]
+    [li]The midpoints of sides $AB$ and $AC$ lie on the circumcircle of $\triangle APO$.[/li]
+    [li]Quadrilateral $BPOC$ is cyclic.[/li]
+    [/ol]}}}[/li]
+  [li]{{{(USAMO 1993) Let $ABCD$ be a convex quadrilateral such that diagonals $AC$ and $BD$ intersect at right angles, and let $E$ be their intersection. Prove that the reflections of $E$ across $AB$, $BC$, $CD$, and $DA$ are concyclic.}}}[/li]
+  [li]{{{Let $ABC$ be an acute triangle, let $O$ be its circumcenter, and let $R$ be its circumradius. Define $A'$ to be the second intersection of line $AO$ with the circumcircle of $OBC$. Define $B$' and $C'$ similarly. Show that $OA' \cdot OB' \cdot OC' \geq 8R^3$.}}}[/li]
+  [li]{{{Let $ABC$ be a triangle inscribed in circle $\Gamma$. Let $\omega$ be the circle tangent to $AB$ and $AC$ and internally tangent to $\Gamma$ at a point $T$, and let $S$ be the tangency point of the $A$-excircle with side $BC$. Show that $\angle TAB = \angle SAC$.}}}[/li]
+  [li]{{{(IMO 1996) Let $P$ be a point inside a triangle $ABC$ such that $\angle APB - \angle ACB = \angle APC - \angle ABC$. Let $D,E$ be the incenters of triangles $APB$ and $APC$, respectively. Show that the lines $AP$, $BD$, and $CE$ meet at a point.}}}[/li]
+  [li]{{{(Vietnam TST 2001) Two circles in a plane meet at two points, $A$ and $B$. Suppose a line is tangent to the circles at distinct points $P$ and $T$. The tangents at $P$ and $T$ of the circumcircle of triangle $APT$ meet at $S$. Let $H$ be the reflection of $B$ across $PT$. Show that $A, S$, and $H$ are collinear.}}}[/li]
+  [li]{{{(Steiner's porism) Let $\Gamma_1$ and $\Gamma_2$ be two circles, where $\Gamma_1$ is contained in $\Gamma_2$. A [i]Steiner chain[/i] is a finite sequence of distinct circles inscribed in $\Gamma_1$ and $\Gamma_2$, each of which is tangent to the previous and next circles in the sequence, and with the first circle tangent to the last one. Show that if there exists a Steiner chain for $\Gamma_1$ and $\Gamma_2$, then there exist infinitely many Steiner chains.}}}[/li]
+  [li]{{{(MOP 2011) Let $\Gamma_1, \Gamma_2, \Gamma_3$ be three circles, none of which intersect each other. Let $\omega_1$ be the circle internally tangent to $\Gamma_1, \Gamma_2, \Gamma_3$, and let $\omega_2$ be the circle externally tangent to $\Gamma_1, \Gamma_2, \Gamma_3$. Show that the radical center of $\Gamma_1, \Gamma_2, \Gamma_3$, the center of $\omega_1$, and the center of $\omega_2$ are collinear.}}}[/li]
+  [li]{{{(Pappus's Arbelos Problem) Circles $S_1$ and $S_2$ are externally tangent to each other and internally tangent to $S$ and the diameters of all three circles lie on a line $\ell$. Circle $S_3$ is externally tangent to $S_1$ and $S_2$ and internally tangent to $S$. Prove that the distance from the center of $S_3$ to $\ell$ is the length of the diameter of $S_3$.}}}[/li]
+  [li]{{{(China 2010) Let $ABCD$ be a convex quadrilateral with $A,B,C,D$ concyclic. Assume $\angle ADC$ is acute and $\frac{AB}{BC}=\frac{DA}{CD}$. Let $\Gamma$ be a circle through $A$ and $D$, tangent to $AB$, and let $E$ be a point on $\Gamma$ and inside $ABCD$. Prove that $AE \perp EC$ if and only if $\frac{AE}{AB} - \frac{ED}{AD} = 1$.}}}[/li]
+  [li]{{{(USAMO 2007) Let $ABC$ be an acute triangle with $\omega,S$, and $R$ being its incircle, circumcircle, and circumradius, respectively. Circle $\omega_{A}$ is tangent internally to $S$ at $A$ and tangent externally to $\omega$. Circle $S_{A}$ is tangent internally to $S$ at $A$ and tangent internally to $\omega$. Let $P_{A}$ and $Q_{A}$ denote the centers of $\omega_{A}$ and $S_{A}$, respectively. Define points $P_{B}, Q_{B}, P_{C}, Q_{C}$ analogously. Prove that
+  \[8P_{A}Q_{A}\cdot P_{B}Q_{B}\cdot P_{C}Q_{C}\leq R^{3}, \]
+  with equality if and only if triangle $ABC$ is equilateral.}}}[/li]
+  [li]{{{(Romanian Masters of Mathematics 2011) A triangle $ABC$ is inscribed in a circle $\omega$. A variable line $\ell$ chosen parallel to $BC$ meets segments $AB$, $AC$ at points $D$, $E$ respectively, and meets $\omega$ at points $K,L$ (where $D$ lies between $K$ and $E$). Circle $\gamma_1$ is tangent to the segments $KD$ and $BD$ and also tangent to $\omega$, while circle $\gamma_2$ is tangent to the segments $LE$ and $CE$ and also tangent to $\omega$. Determine the locus, as $\ell$ varies, of the meeting point of the common inner tangents to $\gamma_1$ and $\gamma_2$.}}}[/li]
+  [li]{{{(Feuerbach's theorem) Show that the nine-point circle of a triangle is tangent to the incircle and the three excircles of the triangle.}}}[/li]
+[/ol]

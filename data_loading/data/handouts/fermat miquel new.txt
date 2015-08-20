@@ -1,0 +1,142 @@
+<<<Title: Fermat, Miquel, Simson
+Author(s): Ian Le
+Description: MOP 2013 Handout
+Topics: Miquel points, Simson line, Fermat point
+>>>
+
+As a warm-up, here are some classic problems that you may have seen before:
+
+[ol]
+
+[li]{{{Let $ABC$ be an equilateral triangle.  Let $P$ be a point in $ABC$ such that the distances from $P$ to $A$, $B$ and $C$ are 3, 4 and 5,
+    respectively.  Find the area of $\triangle ABC$.}}}[/li]
+  [li]{{{Let $ABC$ be an equilateral triangle.  Let $P$ be a point on arc $BC$ of the circumcircle of $ABC$.  Show $PA=PB+PC$.}}}[/li]
+  
+These two problems are in fact remarkably connected.  Let's now analyze the situation more closely.
+
+[li]{{{Show that for any other point $P$, $PA > PB+PC$.  This suggests that we can construct a triangle that has side lengths $PA, PB, PC$ for any
+    point $P$.}}}[/li]
+  [li]{{{In fact, using a rotation that's the reverse of problem 1, we can solve problems 2 and 3.  Note that when $P$ is on the circumcircle, we get
+    a degenerate triangle.}}}[/li]
+  [li]{{{Rather than using Ptolemy's theorem to solve problems 2 and 3, we can use 4 to prove Ptolemy's theorem.}}}[/li]
+  [li]{{{We are now armed to tackle a question proposed by Fermat as a challenge to Evangelista Torricelli.  Given a triangle, none of whose angles
+    exceeds $\frac{2\pi}{3}$, find the point $F$ in the plane that minimizes $FA+FB+FC$.}}}[/li]
+  [li]{{{*What happens when one of the angles exceeds $\frac{2\pi}{3}$?}}}[/li]
+  [li]{{{Given a triangle $ABC$, construct an equilateral triangle $A'BC$ externally on side $BC$.  Construct $B'$ and $C'$ similarly.  Show that
+    $AA'=BB'=CC'$, and that the lines $AA', BB', CC'$ concur.  Moreover, show that these lines make angles of $\frac{\pi}{3}$ with one another.}}}[/li]
+  [li]{{{(USAMO 1974/5) Consider two triangles $\triangle ABC$ and $\triangle PQR$.  Let $D$ be a point inside $\triangle ABC$ such that $\angle
+    ADB=\angle BDC=\angle CDA = \frac{2\pi}{3}$ and let $DA=u$, $DB=v$ and $DC=w$.  Let $M$ be a point inside an equilateral $\triangle PQR$ with
+    side length $x$ such that $MP=a$, $MQ=b$ and $MR=c$, where $a$, $b$ and $c$ are the sides of $\triangle ABC$. Show $u+v+w=x$.}}}[/li]
+  [li]{{{*There exists one other equilateral triangle $\triangle P'Q'R'$ such that there is a point $M'$ such that $M'P'=a$, $M'Q'=b$ and $M'R'=c$.
+    Can you find it?}}}[/li]
+  [li]{{{*Find the analogue of problem 9 for this equilateral triangle $\triangle P'Q'R'$.  (You will also find another ``Fermat" point $F'$.)}}}[/li]
+  [li]{{{Erect equilateral triangles externally on the sides of $\triangle ABC$. Let their centers be $O_1$, $O_2$ and $O_3$.  Show that $\triangle
+    O_1O_2O_3$ is equilateral.  (One approach: $O_2AO_3F$ is a kite)}}}[/li]
+  [li]{{{Erect equilateral triangles internally on the sides of $\triangle ABC$.  Let their centers be $N_1$, $N_2$ and $N_3$. Show that $\triangle
+    N_1N_2N_3$ is equilateral, but with opposite orientation to $\triangle O_1O_2O_3$.}}}[/li]
+  
+So here's the punchline:
+
+[li]{{{Show that $\triangle PQR$ in problem 9 and $\triangle O_1O_2O_3$ in problem 12 are related by a factor of $\frac{1}{\surd 3}$.  In fact $F,
+    O_1, O_2, O_3$ are in a similar configuration to $M, P, Q, R$.  Similarly, show that $\triangle P'Q'R'$ from problem 10 and $\triangle
+    N_1N_2N_3$ from problem 13 are related by a factor of $\frac{1}{\surd 3}$.}}}[/li]
+  [li]{{{Show furthermore that $[PQR]-[P'Q'R']=3[ABC]$ or that, using signed areas, $[O_1O_2O_3]+[N_1N_2N_3]=[ABC]$.}}}[/li]
+  [li]{{{Show that $\triangle O_1O_2O_3$ and $\triangle N_1N_2N_3$ have the same center.  Their center is the centroid of $ABC$.}}}[/li]
+  
+We've discovered a lot!  Let's summarize what we know.  Given a triangle $ABC$ with side lengths $a, b$ and $c$, we can construct
+an equilateral triangle $PQR$ and a point $M$ such that $MP=a$, $MQ=b$ and $MR=c$.  In fact, there are two such triangles an ``outer" one (problem
+9) and an ``inner" one (problem 10).  These are related to the outer and inner Napoleon triangles.  They are also related to the Fermat point.
+
+
+Let's rephrase this in another way.  Given an equilateral triangle $PQR$, and some triangle $ABC$ with side lengths $a, b$ and $c$, we can
+construct a point $M$ such that $MP:MQ:MR=a:b:c$.
+
+[li]{{{When $ABC$ is a degenerate triangle, there is exactly one such point, and when $ABC$ is nondegenerate there are two such points.  They turn
+    out to be inverses of one another with respect to the circumcircle of $PQR$.}}}[/li]
+  
+This might lead us to consider the following problem: given three points in the plane, $P$, $Q$, and $R$, and three lengths $x, y$
+and $z$, when can we construct a point $M$ such that $MP:MQ:MR=x:y:z$?  Certainly Ptolemy's inequality implies that we need $QR \cdot x + RP \cdot y
+\geq PQ \cdot z$.  Is this sufficient?  It turns out it is.
+
+[li]{{{**Suppose $QR \cdot x$, $RP \cdot y$ and $PQ \cdot z$ satisfy the triangle inequality.  Then we can construct a point $M$ such that
+    $MP:MQ:MR=x:y:z$.  We proceed as follows.  Construct a triangle $ABC$ with side lengths $a$, $b$ and $c$ proportional to $QR \cdot x$, $RP \cdot
+    y$ and $PQ \cdot z$.  Construct triangles $A'BC$, $AB'C$ and $ABC'$ all externally to $ABC$ so that $A'BC$, $AB'C$, and $ABC'$ are all similar
+    to $PQR$.  Then $AA', BB', CC'$ concur in a point $F$ which also lies on the circumcircles of triangles $A'BC$, $AB'C$ and $ABC'$.  This point
+    $F$ minimizes $QR \cdot AF + RP \cdot BF + PQ \cdot CF$.}}}[/li]
+  [li]{{{**Let $O_1$, $O_2$ and $O_3$ be the circumcenters of $A'BC$, $AB'C$ and $ABC'$.  Then $O_1O_2O_3$ is similar to $PQR$.  Moreover,
+    $FO_1:FO_2:FO_3=x:y:z$.  Had we constructed $A'BC$, $AB'C$ and $ABC'$ internally, we would have found another triangle $N_1N_2N_3$ similar to
+    $PQR$ but with opposite orientation.  Using signed areas, $[O_1O_2O_3]+[N_1N_2N_3]=[ABC]$.}}}[/li]
+  [li]{{{**Let us rephrase what we know.  Given any triangle $PQR$, we can construct a point $M$ with $MP:MQ:MR=x:y:z$ whenever $QR \cdot x$, $RP \cdot
+    y$ and $PQ \cdot z$ satisfy the triangle inequality.  When this triangle is degenerate, we can construct exactly one such point.  When this
+    triangle is nondegenerate, we can can construct two such points.  They turn out to be inverses of one another with respect to the circumcircle
+    of $PQR$.}}}[/li]
+  
+Now given $PQR$ and a point $M$ in the plane, how can we construct a triangle $ABC$ with side lengths proportional to $QR \cdot PM$,
+$RP \cdot QM$, $PQ \cdot RM$?  One way comes from problem 1: we construct a point $S$ with $PSQ$ similar to $PMR$.  Then $QSM$ is the desired
+triangle.  (Note that this was also how we proved Ptolemy's theorem.)
+
+
+Another way to proceed is to drop perpendiculars from $M$ to $QR$, $RP$ and $PQ$ and let the feet of these perpendiculars be $A$, $B$ and
+$C$.  This will lead us to our next topic: the Miquel point.
+
+[li]{{{Show that $BC=PM \cdot QR/2r$, where $r$ is the radius of the circumcircle of $PQR$.  Conclude that $ABC$ is the desired triangle.  (Observe that we could have concluded this from the fact that $O_2AO_3F$ is a kite used in problem 12.)}}}[/li]
+  [li]{{{Use this to give yet another proof of Ptolemy's inequality.  When does equality hold?}}}[/li]
+  [li]{{{(Simson Line) The feet of the perpendiculars from a point $P$ to the sides of a triangle $ABC$ are collinear if and only if $P$ is on the
+    circumcircle of $ABC$.}}}[/li]
+  [li]{{{(Miquel point) Let $P$, $Q$, $R$ be points on sides $BC$, $CA$, $AB$ of a triangle $ABC$.  Then the circumcircles of $AQR$, $PBR$ and $PQC$ concur in a point, the Miquel point $M$ associated to the triple $P$, $Q$, $R$.}}}[/li]
+  [li]{{{The lines from the Miquel point $M$ to the points $P$, $Q$, $R$ make equal angles with the sides $BC$, $CA$, $AB$.}}}[/li]
+  [li]{{{$\angle BMC= \angle BAC + \angle QPR$.}}}[/li]
+  [li]{{{Analyze all triples which have the same Miquel point $M$.  They form a system of similar triangles obtained by spiral similarity about $M$.}}}[/li]
+  [li]{{{*Show that we can make $PQR$ similar to any given triangle we like.}}}[/li]
+  [li]{{{*Show that there are two points $M$, $M'$ which yield systems of triangles similar to $PQR$.  The two sets of triangles will have opposite
+    orientations.  Moreover, $M$ and $M'$ are inverses with respect to the circumcircle of $ABC$.  Compare to problems 17 and 20.}}}[/li]
+  
+We can quickly deduce the following facts. 1) The centers of any set of Miquel circles are vertices of a triangle similar to $ABC$. 2) Two or more directly similar triangles with corresponding vertices on the same sides of $ABC$ have the same Miquel point. 3) If three circles concur in a point, it is possible to start at any point of one of the circumferences ad draw a triangle whose vertices lies on the circles and whose sides
+pass through the corresponding intersections; all such triangles are similar.  Note that problem 21 gives us a relationship between the side
+lengths of $ABC$, $PQR$, the circumradius of $ABC$ and the lengths $AM$, $BM$, $CM$.
+
+[li]{{{Problem 26 allows us to conclude that if $P$, $Q$, $R$ are collinear, then $M$ lies on the circumcircle of $ABC$.  This is related to the
+    Simson line.}}}[/li]
+  [li]{{{Analyze the Simson lines of the vertices $A$, $B$, and $C$ and also the points diametrically opposite them.}}}[/li]
+  [li]{{{Use the Simson line to give a proof of Ptolemy's theorem.}}}[/li]
+  [li]{{{Show that the circumcircles of the four triangles determined by four lines are concurrent.}}}[/li]
+  [li]{{{Given four lines, there is exactly one point from which the perpendiculars from this point to the four lines are collinear.}}}[/li]
+  [li]{{{*Prove that the centers of the the four circumcircles in problem 32 lie on a circle with which also passes through the common point of the
+    four circumcircles.}}}[/li]
+  [li]{{{(TST 2008) *Let $P$, $Q$, and $R$ be the points on sides $BC$, $CA$, and $AB$ of an acute triangle $ABC$ such that triangle $PQR$ is
+    equilateral and has minimal area among all such equilateral triangles. Prove that the perpendiculars from $A$ to line  $QR$, from $B$ to line
+    $RP$, and from $C$ to line $PQ$ are concurrent.  These perpendiculars concur in the Fermat point.}}}[/li]
+  [li]{{{**Find an analogous statement to the previous problem for the other Fermat point.  Also find an analogous statement for $PQR$ a general triangle.}}}[/li]
+  
+Some miscellaneous related problems:
+
+[li]{{{First, some exercises using the methods of problem 12 (rotations, vectors).  Given $\triangle ABC$, erect equilateral triangles $\triangle
+    ABD$ and $\triangle BCE$ externally.  Show that the midpoints of $AC$, $BD$ and $BE$ from an equilateral triangle.}}}[/li]
+  [li]{{{Given $\triangle ABC$, erect equilateral triangles $\triangle ABD$ and $\triangle BCE$ externally and $\triangle AFC$ internally.  What are
+    the angles of the triangle formed by the center of $\triangle AFC$, $D$ and $E$?}}}[/li]
+  [li]{{{Given $\triangle ABC$, erect an equilateral triangle on side $AB$ and a regular hexagon on side $AC$.  Let their centers be $D$ and $E$, and
+    let the midpoint of $BC$ be $F$.  Find $\angle DFE$.}}}[/li]
+  [li]{{{Here's an extension of problem 2.  Let $\triangle ABC$ be equilateral and let $P$ be a point on the arc $BC$ of its circumcircle.  Let $AP$
+    intersect $BC$ at $Q$.  Show that $\frac{1}{PQ}=\frac{1}{BP}+\frac{1}{CP}$.}}}[/li]
+  [li]{{{(Morley Triangle) This is a beautiful problem about equilateral triangles that's unrelated to the above, but nonetheless very beautiful.
+    Given $\triangle ABC$, construct the internal and external angle trisectors.  Let the internal angle trisectors of $\angle B$ and $\angle C$
+    closer to side $BC$ intersect at $A_1$.  Define $B_1$, $C_1$ similarly.  Show that $\triangle A_1B_1C_1$ is equilateral.  Let the external
+    trisectors of $\angle B$ and $\angle C$ closer to side $BC$ intersect at $A_2$.  Define $B_2$, $C_2$ similarly.  Show that $\triangle
+    A_2B_2C_2$ is equilateral.
+
+Finally, let the external angle trisector of $\angle B$ closer to $AB$ and the internal angle trisector of $\angle A$ closer to $AB$ intersect at
+$C_3$, and the external angle trisector of $\angle C$ closer to $AC$ and the internal angle trisector of $\angle A$ closer to $AC$ intersect at
+$B_3$.  Show $\triangle A_2B_3C_3$ is equilateral.}}}[/li]
+  
+These next two problems are reminiscent of problem 12.
+
+[li]{{{Given a centrally symmetric hexagon, erect regular hexagons externally on the sides. Draw the segments connecting the centers of hexagons on
+    adjacent sides. Show that the midpoints of these segments form a regular hexagon.}}}[/li]
+  [li]{{{Let $ABCDEF$ be a hexagon inscribed in a circle of radius $R$ with $AB=CD=EF=R$. Show that the midpoints of $BC$, $DE$, and $FA$ form an
+    equilateral triangle.}}}[/li]
+  [li]{{{The third pedal triangle is similar to the original triangle.}}}[/li]
+  [li]{{{Let $A, B, C, P, Q, R$ be six points in the plane.  If the circumcircles of $ABR$, $AQC$, $PBC$ are concurrent, then the circumcircles of
+    $PQC$, $PBR$, $AQR$ are concurrent.}}}[/li]
+  [li]{{{*Let the triple $P$, $Q$, $R$ have Miquel point $M$ with respect to triangle $ABC$.  For any point $X$, let $AX$ intersect the circumcircle
+    of $AQR$ at $A'$, and define $B'$, $C'$ similarly.  Then $M, X, A', B', C'$ lie on a circle.}}}[/li]
+[/ol]

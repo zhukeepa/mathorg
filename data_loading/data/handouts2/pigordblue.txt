@@ -1,0 +1,235 @@
+<<<Title: Pigeonhole Principle and Well-ordering
+Author(s): Zuming Feng
+Description: 2004 Blue MOP Handout
+Topics: Pigeonhole principle, Well-ordering
+>>>
+
+[ol]
+  [li]{{{Twenty five boys and twenty five girls sit around a table. Prove
+  that, no matter what the arrangement, it is always possible to
+  find someone sitting in between $2$ girls.}}}[/li]
+  [li]{{{Prove that in every tetrahedron there is a vertex such that the
+  three edges meeting there have lengths which are the sides of a
+  triangle.}}}[/li]
+  [li]{{{In an arena, each row has 199 seats. One day, 1990 students are
+  coming to attend a soccer match. It is only known that at most 39
+  students are from the same school. If students from the same
+  school must sit in the same row, determine the minimum number of
+  rows that must be reserved for these students.}}}[/li]
+  [li]{{{For $ i = 1, 2, \cdots , 7$ $a_i$ and $b_i$ are nonnegative
+  numbers such that $a_i + b_i \le 2.$ Prove that there are 2
+  distinct indices $k, m \in \{ 1, 2, \cdots , 7 \}$ such that $|a_k
+  - a_m| + |b_k - b_m| \le 1.$}}}[/li]
+  [li]{{{Prove that, for any convex pentagon, three of its diagonals can
+  form sides of a triangle.}}}[/li]
+  [li]{{{There are 99 points in a plane.
+   [ol][li]Assume that no three are collinear and no four lie on a circle.
+  Prove that it is always possible to choose three of the points and
+  draw a circle through these points, such that exactly 48 of the
+  remaining points lie inside this circle.[/li]
+    [li]Prove that it is always possible to draw a circle such that it
+  passes exactly 1 of the given points, encloses exactly 49 of the
+  given points.[/li][/ol]}}}[/li]
+  [li]{{{Ninety-one white pawns are placed on a $10\times 10$ chessboard.
+  Judy repaints these pawns black one at a time and puts down each
+  repainted pawn on any empty square of the board. Judy tries to
+  avoid the situation of two pawns of different colors occupying two
+  squares that have a common side. Can she do it?}}}[/li]
+  [li]{{{Let $\mathcal{P}$ be a 13-side polygon. (Note that $\mathcal{P}$ is not
+  necessarily convex.) Prove that there is a line $\ell$ such that
+  there is exactly one side of $\mathcal{P}$ lie on $\ell$.}}}[/li]
+  [li]{{{Given a $300 \times 1000$ unit square grid, thirty equal weights
+  are placed on some of the vertices of the grid (where one vertex
+  has at most one weight). Prove that there exist two
+  non-overlapping groups of no more than 10 weights each having the
+  same center of mass.}}}[/li]
+  [li]{{{Let $A = \overline{a_1a_2\cdots a_{16}}$ be a 16-digit number. Prove
+  that it is possible to find integer(s) $1\le i \le j \le 16$ such
+  that the product $a_i\cdots a_j$ is a perfect square.}}}[/li]
+  [li]{{{A chess player has been trained for $11$ weeks $(77$ days). During
+  the period, he played at least $1$ game each day and at most $12$
+  games each week. Prove that there  exist some consecutive dates
+  such that he played exactly $21$ games during the period.}}}[/li]
+  [li]{{{Prove that in an infinite sequence $\{ a_k\}$ of integers,
+  pairwise distinct and each term greater than 1, one can find a
+  subsequence $\{ a_{i_k} \}$  such that $a_{i_k} > i_k$ for all
+  positive integers $k$.}}}[/li]
+  [li]{{{Given positive integers $a_1, a_2, \cdots a_{m+1}$ with $a_1 + a_2
+  + \cdots + a_{m+1} = 2m$ and $a_i\le m$ for all $i = 1, 2, \cdots
+  , m+1,$ prove that it is always  possible to separate the numbers
+  into two groups, each group having its total equals to $m.$}}}[/li]
+  [li]{{{There are some circles inside a square with side $1.$ Suppose that
+  the total circumferences of circles is $10.$ Prove that there is a
+  line which can cut through $4$ of those circles.}}}[/li]
+  [li]{{{A system of right triangles is constructed as following. The
+  system begins with 4 congruent right triangles. One at a time, one
+  triangle in the system is picked and cut into two triangles along
+  the altitude to the hypotenuse of the original triangle. Prove
+  that, at any time, there are at least two congruent triangles.}}}[/li]
+  [li]{{{There are $4$ multiple choice problems on a certain test.
+  Each problem has 3 solutions to be chosen from. A group of
+  students take the test to generate the following  interesting
+  situation: for every three of them, there is a problem such that
+  they all have different answers. Determine, with justification,
+  the maximum number of students taking the test.}}}[/li]
+  [li]{{{Prove that, for any odd prime $p,$ there exists integers $x$ and
+  $y$ such that $p|(1 + x^2 + y^2).$}}}[/li]
+  [li]{{{Given positive distinct integers $a_1, a_2, \cdots , a_{101}$ all
+  less than 5050, prove that there exist 4 different numbers $a_k,
+  a_l, a_m, a_n$ such that the number $a_k +  a_l - a_m - a_n$ is
+  divisible by 5050.}}}[/li]
+  [li]{{{Twenty-three people, each with integral weight, decide to play
+  football, separating into two teams of eleven people, plus a
+  referee. To keep things fair, the teams chosen must have equal
+  {\em\underline{total}} weight. It turns out that no matter who is
+  chosen to be the referee, this can always be done. Prove that the
+  23 people must all have the same weight.}}}[/li]
+  [li]{{{Prove that among any 16 distinct positive integers not exceeding
+  100 there are 4 different numbers among them, $a, b, c, d,$ such
+  that $a + b = c + d.$}}}[/li]
+  [li]{{{Prove that there exists a positive integer $n$ such that the three
+  most left digits of the decimal representation of $2^n$ is 999.}}}[/li]
+  [li]{{{Consider a finite number of polygons in the plane such that any
+  two have at least a common point. Prove that there exists a line
+  that has at least a common point with each of the given polygons.}}}[/li]
+  [li]{{{In a tournament, every two players have exactly one game between
+  each other. There is no ties. A player $A$ is awarded a prize if
+  for every other player $B$, either $A$ defeats $B$, or there is a
+  third player $C$ such that $A$ defeats $C$ and $C$ defeats $B.$
+  Suppose that only one player is awarded a prize. Prove that this
+  player defeats every other player.}}}[/li]
+  [li]{{{Let $z_1, z_2, \cdots , z_n$ be complex numbers such that $|z_1| +
+  |z_2| + \cdots + |z_n| = 1.$ Prove that the sum $s$ of a subset of
+  $\{ z_1, z_2, \cdots , z_n \}$ satisfies $|s| \ge 1/4.$}}}[/li]
+  [li]{{{Let $x_1, x_2, \dots , x_n$ and $y_1, y_2, \dots , y_n$ be real
+  numbers. Let $\mathbf{M} = (a_{ij})_{1\le i, j\le n}$ be the
+  matrix with entries
+  \[
+  a_{ij} = \left\{
+  \begin{array}{ll}
+  1, & \mbox{if $x_i+y_j \ge 0;$} 
+  0, & \mbox{if $x_i+y_j < 0.$}
+  \end{array}
+  \right.
+  \]
+  Suppose that $\mathbf{N}$ is an $n\times n$ matrix with entries 0
+  or 1 in such a way that the sum of the elements in each row and
+  column of $\mathbf{N}$ is equal to the corresponding sum for the
+  matrix $\mathbf{M}$. Prove that $\mathbf{M} = \mathbf{N}$.}}}[/li]
+  [li]{{{An alphabet consists of $n$ letters. One writes letters around a
+  circle such that
+   [ol][li]no one appears twice in row; and[/li]
+    [li]for any two distinct letters $a$ and $b$ one can draw a line such
+  that all letters $a$ lie on one side of the line and all letters
+  $b$ on the other side.[/li][/ol]
+  Determine the maximum number of letters that can be written.}}}[/li]
+  [li]{{{A region is the intersection of exactly $n$ circular discs. Prove
+  that its boundary consists of at most $2n-2$ circular arcs.}}}[/li]
+  [li]{{{Let $S = (a_1, a_2, \dots , a_n)$ be the longest binary sequence
+  such that for $1 \le i < j \le n-4$,
+  \[
+  (a_{i}, a_{i+1}, a_{i+2}, a_{i+3}, a_{i+4}) \ne (a_j, a_{j+1},
+  a_{j+2}, a_{j+3}, a_{j+4}).
+  \]
+  Prove that $(a_1, a_2, a_3, a_4) = (a_{n-3}, a_{n-2}, a_{n-1},
+  a_{n})$.}}}[/li]
+  [li]{{{Let
+  \[
+  S = \{ (x, y)\| {\mbox{$x, y$ are integers and $-2 \le x, y \le 2$
+  }} \}
+  \]
+  be a set of points on the plane, and let $P_1, P_2, \dots , P_6$
+  be any six points in $S$. Prove that there are three distinct
+  indices $i, j, k$ such that $[P_iP_jP_k] \le 2$.}}}[/li]
+  [li]{{{[ol][li]Given a $2n+1$ convex polygon. Determine if it is possible to
+  assign numbers 1, 2, $\cdots,$ $4n+2$ to the vertices and
+  midpoints of the sides of the sides of the polygon such that for
+  each side the sum of the three numbers assigned to it is the same.[/li]
+    [li]Lines $\ell_1,$ $\ell_2,$ $\cdots,$ $\ell_k$ are in general
+  position in the plane (no two are parallel and no three are
+  concurrent). For which values of $k$ can we label the intersection
+  points of these lines by the numbers $1, 2, \cdots , k-1$ so that
+  for each of the lines $\ell_1,$ $\ell_2,$ $\cdots,$ $\ell_k$ all
+  the labels appear exactly once?[/li][/ol]}}}[/li]
+  [li]{{{Form a $2003\times 2005$ screen by unit screens. There are at
+  least $2002\times 2004$ unit screens which are [i]on.[/i] In any
+  $2\times 2$ screen, as soon as there are $3$ unit screens which
+  are [i]off,[/i] the $4^{\mathrm {th}}$ screen will be turned off
+  automatically. Prove that the whole screen can never be totally
+  off.}}}[/li]
+  [li]{{{In a forest each of $9$ animals lives in its own cave, and there
+  is exactly one separate path between any two of these caves.
+  Before the election for Forest Gump, King of the Forest, some of
+  the animals make an election campaign. Each campain-making animal
+  -- ${\mathcal{FGC}}$ (Forest Gump candidates) visits each of the
+  other caves exactly once, use only the paths for moving from cave
+  to cave, never turns from one path to another between the caves
+  and returns to its own cave in the end of campaign. It is also
+  know that no path between two caves is used by more than one
+  ${\mathcal{FGC}}.$ Find the maximum number of ${\mathcal{FGC}}.$}}}[/li]
+  [li]{{{An equilateral triangle is divided into 9,000,000 congruent
+  equilateral triangles by lines parallel to its sides. Each vertex
+  of the small triangles is colored in one  of three colors. Prove
+  that there exist three points of the same color being the vertices
+  of  a triangle with its sides parallel to the lines of the
+  original triangle.}}}[/li]
+  [li]{{{Given any $n+2$ distinct numbers from the first $3n$ positive
+  integers, prove that it is always possible to find two numbers,
+  say $a$ and $b$ such that $n < a - b < 2n.$}}}[/li]
+  [li]{{{Given eight distinct positive integers not exceeding 2004, prove
+  that there are four of them, say $a, b, c$, and $d$, such that
+  \[
+  4 + d \le a + b + c\le 4d.
+  \]}}}[/li]
+  [li]{{{Let $D_1, D_2, \dots$, and $D_n$ be closed discs in the plane.
+  Suppose that every point in the plane is contained in at most 2003
+  discs. Prove that there exists a disc which intersects at most
+  14020 other discs.
+  
+  (A closed disc is the region bounded by a circle, taken jointly
+  with this circle.)}}}[/li]
+  [li]{{{Given 200 integers, prove that it is always possible to find 100
+  of them such that their sum is divisible by 100.}}}[/li]
+  [li]{{{Let $x_{(i, j)},$ $i = 1, 2, \dots ,100,$ $j = 1, 2, \dots , 25,$
+  denote the entries of a $100 \times 25$ matrix $\mathbf{M}$ For $j
+  = 1 , 2, \dots 25,$ all the  entries in the $j^{\mathrm {th}}$ column $x_{(1,
+  j)},$ $x_{(2, j)},$ $\dots ,$ $x_{(100,j)}$ are to be rearranged
+  in non-increasing order from top to bottom to obtain the $j^{\mathrm {th}}$
+  column $x'_{(1, j)} \ge x'_{(2, j)} \ge
+  \cdots \ge x'_{(100, j)}$ of the new matrix ${\mathbf{M}}'.$  Suppose
+  that
+  \[
+  \sum_{j=1}^{25} x_{(i, j)} \le 1\mbox{for all}
+  i = 1, 2, \dots , 100.
+  \]
+  Determine the minimum value of positive integers $k$ such that,
+  \[
+  \sum_{j=1}^{25} x'_{(i, j)} \le 1\mbox{for all}
+  i \ge k.
+  \]}}}[/li]
+  [li]{{{An exam paper consists of 5 multiple-choice questions, each with 4
+  different choices; 2000 students take the test, and each student
+  chooses exactly one answer per question. Find the smallest value
+  of $n$ for which it is possible for the students' answer sheets to
+  have the following property: among any $n$ of the students' answer
+  sheets, there exist 4 of them among which any two have at most 3
+  common answers.}}}[/li]
+  [li]{{{Every cell of a $100 \times 100$ board is colored in one of 4
+  colors so that there are exactly 25 cells of each color in every
+  column and in every row. Prove that one can choose two columns and
+  two rows so that the four cells where they intersect are colored
+  in four different colors.}}}[/li]
+  [li]{{{The integers from 1 to 100 are written on a lottery ticket. When
+  one buys a lottery ticket, one chooses 10 of these 100 numbers.
+  Then 10 of the integers from 1 to 100  are drawn, and a winning
+  ticket is one which does not contain any of them. Determine the
+  minimum number of tickets one needs to buy so one can choose
+  numbers in a way such that it is guaranteed to have at least one
+  winning ticket.}}}[/li]
+  [li]{{{Given a square board of size $n \times n$, where $n$ is an integer
+  greater than 1, we label some of the squares by distinct numbers
+  from the set $\{1,2,\dots,n^2\}$. What is the largest number of
+  board squares we can label in this way without creating a
+  difference of $n$ or higher between any two labels on neighboring
+  squares on the board?}}}[/li]
+[/ol]

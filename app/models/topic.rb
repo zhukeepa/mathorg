@@ -13,7 +13,7 @@ class Topic < ActiveRecord::Base
   has_many :topic_topicables
 
   # regex: no commas
-  validates :name, presence: true, uniqueness: true, length: { minimum: 5 }, format: { with: /\A[^,]*\Z/ }
+  validates :name, presence: true, uniqueness: true, length: { minimum: 3 }, format: { with: /\A[^,]*\Z/ }
 
   acts_as_topicable topics_name: :parents, topicable_name: :children, topicable_class: 'Topic'
 

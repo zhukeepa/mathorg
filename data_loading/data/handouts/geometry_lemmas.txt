@@ -1,171 +1,51 @@
-<<<
-Title: Geometry Lemmas
+<<<Title: Geometry Lemmas
 Author(s): Alex Zhu
 Description: 
 Topics: Common geometry lemmas
 >>>
-*Note:* Many problems here are taken from Yufei Zhao’s olympiad
-geometry handout.
 
-Symmedians
-==========
+[i]Note:[/i] Many problems here are taken from Yufei Zhao's olympiad geometry handout. 
 
-Useful Facts
-------------
+[h2]Symmedians[/h2]
 
-1.  Let $ABC$ be a triangle, and suppose $D$ is on segment
-    $BC$ such that $AD$ is a symmedian. Then
-    $\frac{\sin \angle DAB}{\sin \angle CAD} = \frac{AB}{AC}$, and
-    $\frac{BD}{DC} = \frac{AB^2}{AC^2}$.
+[h3]Useful Facts[/h3] 
 
-2.  Let $ABC$ be a triangle, and let the tangents at $B$ and
-    $C$ to the circumcircle of triangle $ABC$ meet at $S$.
-    Show that $AS$ is a symmedian of triangle $ABC$.
+[ol]
+  [li]Let $ABC$ be a triangle, and suppose $D$ is on segment $BC$ such that $AD$ is a symmedian. Then $\frac{\sin \angle DAB}{\sin \angle CAD} = \frac{AB}{AC}$, and $\frac{BD}{DC} = \frac{AB^2}{AC^2}$.[/li]
+  [li]Let $ABC$ be a triangle, and let the tangents at $B$ and $C$ to the circumcircle of triangle $ABC$ meet at $S$. Show that $AS$ is a symmedian of triangle $ABC$.[/li]
+  [li]Let $ABCD$ be a cyclic quadrilateral. Then the tangents to the circumcircle at $B$ and $D$ concur with diagonal $AC$ if and only if $AB \cdot CD = AD \cdot BC$. In particular, the tangents to the circumcircle at $B$ and $D$ concur with diagonal $AC$ if and only if the tangents to the circumcircle at $A$ and $C$ concur with diagonal $BD$.[/li]
+[/ol]
 
-3.  Let $ABCD$ be a cyclic quadrilateral. Then the tangents to the
-    circumcircle at $B$ and $D$ concur with diagonal $AC$ if
-    and only if $AB \cdot CD = AD \cdot BC$. In particular, the
-    tangents to the circumcircle at $B$ and $D$ concur with
-    diagonal $AC$ if and only if the tangents to the circumcircle at
-    $A$ and $C$ concur with diagonal $BD$.
+[h3]Problems[/h3]
 
-Problems
---------
+[ol]
+  [li]{{{(ISL 2003) Three distinct points $A$, $B$, and $C$ lie on a line in that order. Let $\Gamma$ be a circle passing through $A$ and $C$ whose center does not lie on the line $AC$. The tangents to $\Gamma$ at $A$ and $C$ intersect at a point $P$. The segment $PB$ meets the circle $\Gamma$ at $Q$. Show that the point of intersection of the angle bisector of the angle $AQC$ with the line $AC$ does not depend on the choice of the circle $\Gamma$.}}}[/li]
+  [li]{{{Let $ABC$ be a triangle. Let $O$ be its circumcenter, and let $P$ be a point in its interior such that triangles $PBA$ and $PAC$ are directly similar. Prove that: 
+  [ol]
+    [li]line $AP$ is a symmedian of $\triangle ABC$.[/li]
+    [li]quadrilateral $OPBC$ is cyclic.[/li]
+    [/ol]}}}[/li]
+  [li]{{{(USA TST 2007) Triangle $ ABC$ is inscribed in circle $ \omega$. The tangent lines to $ \omega$ at $ B$ and $ C$ meet at $ T$. Point $ S$ lies on ray $ BC$ such that $AS \perp AT$. Points $ B_1$ and $ C_1$ lie on ray $ ST$ (with $ C_1$ in between $ B_1$ and $ S$) such that $ B_1T = BT = C_1T$. Prove that triangles $ ABC$ and $ AB_1C_1$ are similar to each other.}}}[/li]
+  [li]{{{(Vietnam TST 2001) Two circles in a plane meet at two points, $A$ and $B$. Suppose a line is tangent to the circles at distinct points $P$ and $T$. The tangents at $P$ and $T$ of the circumcircle of triangle $APT$ meet at $S$. Let $H$ be the reflection of $B$ across $PT$. Show that $A, S$, and $H$ are collinear.}}}[/li]
+  [li]{{{(USAMO 2008) Let $ ABC$ be an acute, scalene triangle, and let $ M$, $ N$, and $ P$ be the midpoints of $ \overline{BC}$, $ \overline{CA}$, and $ \overline{AB}$, respectively. Let the perpendicular bisectors of $ \overline{AB}$ and $ \overline{AC}$ intersect ray $ AM$ in points $ D$ and $ E$ respectively, and let lines $ BD$ and $ CE$ intersect in point $ F$, inside of triangle $ ABC$. Prove that points $ A$, $ N$, $ F$, and $ P$ all lie on one circle.}}}[/li]
+  [li]{{{Let $ABC$ be a triangle. The incircle $\omega$ of triangle $ABC$ touches the side $BC$ at $A'$, and the line $AA'$ meets $\omega$ again at a point $P$. Let the lines $CP$ and $BP$ meet $\omega$ again at $N$ and $M$, respectively, and suppose that line $NM$ intersects line $BC$ at a point $Q$. Show that $QP$ is tangent to $\omega$.}}}[/li]
+[/ol]
 
-1.  [[[
-    (ISL 2003) Three distinct points $A$, $B$, and $C$ lie
-    on a line in that order. Let $\Gamma$ be a circle passing
-    through $A$ and $C$ whose center does not lie on the line
-    $AC$. The tangents to $\Gamma$ at $A$ and $C$
-    intersect at a point $P$. The segment $PB$ meets the circle
-    $\Gamma$ at $Q$. Show that the point of intersection of the
-    angle bisector of the angle $AQC$ with the line $AC$ does
-    not depend on the choice of the circle $\Gamma$.
-    ]]]
+[h2]Orthocenter Reflections[/h2]
 
-2.  [[[
-    Let $ABC$ be a triangle. Let $O$ be its circumcenter, and
-    let $P$ be a point in its interior such that triangles $PBA$
-    and $PAC$ are directly similar. Prove that:
+[h3]Useful Facts[/h3] 
 
-    1.  line $AP$ is a symmedian of $\triangle ABC$.
+[ol]
+  [li]Let $ABC$ be a triangle, and let $H$ be its orthocenter. Then the reflection of $H$ across side $BC$ lies on the circumcircle of triangle $ABC$.[/li]
+  [li]Let $ABC$ be a triangle, let $H$ be its orthocenter, and let $M$ be the midpoint of $BC$. Then the reflection of $H$ across $M$ is the point diametrically opposite $A$ on the circumcircle of triangle $ABC$.[/li]
+[/ol]
 
-    2.  quadrilateral $OPBC$ is cyclic.
-    ]]]
-
-3.  [[[
-    (USA TST 2007) Triangle $ ABC$ is inscribed in circle
-    $ \omega$. The tangent lines to $ \omega$ at $ B$ and
-    $ C$ meet at $ T$. Point $ S$ lies on ray $ BC$ such
-    that $AS \perp AT$. Points $ B_1$ and $ C_1$ lie on ray
-    $ ST$ (with $ C_1$ in between $ B_1$ and $ S$) such
-    that $ B_1T = BT = C_1T$. Prove that triangles $ ABC$ and
-    $ AB_1C_1$ are similar to each other.
-    ]]]
-
-4.  [[[
-    (Vietnam TST 2001) Two circles in a plane meet at two points,
-    $A$ and $B$. Suppose a line is tangent to the circles at
-    distinct points $P$ and $T$. The tangents at $P$ and
-    $T$ of the circumcircle of triangle $APT$ meet at $S$.
-    Let $H$ be the reflection of $B$ across $PT$. Show that
-    $A, S$, and $H$ are collinear.
-    ]]]
-
-5.  [[[
-    (USAMO 2008) Let $ ABC$ be an acute, scalene triangle, and let
-    $ M$, $ N$, and $ P$ be the midpoints of
-    $ \overline{BC}$, $ \overline{CA}$, and
-    $ \overline{AB}$, respectively. Let the perpendicular bisectors
-    of $ \overline{AB}$ and $ \overline{AC}$ intersect ray
-    $ AM$ in points $ D$ and $ E$ respectively, and let
-    lines $ BD$ and $ CE$ intersect in point $ F$, inside of
-    triangle $ ABC$. Prove that points $ A$, $ N$, $ F$,
-    and $ P$ all lie on one circle.
-    ]]]
-
-6.  [[[
-    Let $ABC$ be a triangle. The incircle $\omega$ of triangle
-    $ABC$ touches the side $BC$ at $A'$, and the line
-    $AA'$ meets $\omega$ again at a point $P$. Let the lines
-    $CP$ and $BP$ meet $\omega$ again at $N$ and
-    $M$, respectively, and suppose that line $NM$ intersects
-    line $BC$ at a point $Q$. Show that $QP$ is tangent to
-    $\omega$.
-    ]]]
-
-Orthocenter Reflections
-=======================
-
-Useful Facts
-------------
-
-1.  Let $ABC$ be a triangle, and let $H$ be its orthocenter.
-    Then the reflection of $H$ across side $BC$ lies on the
-    circumcircle of triangle $ABC$.
-
-2.  Let $ABC$ be a triangle, let $H$ be its orthocenter, and let
-    $M$ be the midpoint of $BC$. Then the reflection of $H$
-    across $M$ is the point diametrically opposite $A$ on the
-    circumcircle of triangle $ABC$.
-
-Problems
---------
-
-1.  [[[
-    Prove the existence of the nine-point circle, and show that its
-    center is the midpoint of the circumcenter and the orthocenter.
-    (Given a triangle, the nine-point circle is the circle that passes
-    through the three midpoints of sides, the three feet of altitudes,
-    and the three midpoints between the orthocenter and the vertices.)
-    ]]]
-
-2.  [[[
-    (USA TSTST 2011) Acute triangle $ABC$ is inscribed in circle
-    $\omega$. Let $H$ and $O$ denote its orthocenter and
-    circumcenter, respectively. Let $M$ and $N$ be the midpoints
-    of sides $AB$ and $AC$, respectively. Rays $MH$ and
-    $NH$ meet $\omega$ at $P$ and $Q$, respectively.
-    Lines $MN$ and $PQ$ meet at $R$. Prove that
-    $OA\perp RA$.
-    ]]]
-
-3.  [[[
-    (ISL 2000) Let $ O$ be the circumcenter and $ H$ the
-    orthocenter of an acute triangle $ ABC.$ Show that there exist
-    points $ D, E,$ and $ F$ on sides $ BC,CA,$ and
-    $ AB$ respectively such that \[OD + DH = OE +EH = OF +FH\] and
-    the lines $ AD, BE,$ and $ CF$ are concurrent.
-    ]]]
-
-4.  [[[
-    (APMO 2012) Let $ ABC $ be an acute triangle. Denote by
-    $ D $ the foot of the perpendicular line drawn from the point
-    $ A $ to the side $ BC $, by $M$ the midpoint of
-    $ BC $, and by $ H $ the orthocenter of $ ABC $. Let
-    $ E $ be the point of intersection of the circumcircle
-    $ \Gamma $ of the triangle $ ABC $ and the half line
-    $ MH $, and $ F $ be the point of intersection (other than
-    $E$) of the line $ ED $ and the circle $ \Gamma $. Prove
-    that $ \tfrac{BF}{CF} = \tfrac{AB}{AC} $ must hold.
-    ]]]
-
-5.  [[[
-    Let $ABC$ be a triangle, and $P$ a point on its
-    circumcircle. Show that the reflections of $P$ across the three
-    sides of $ABC$ lie on a line that passes through the orthocenter
-    of $ABC$.
-    ]]]
-
-6.  [[[
-    (China 2006) Let $\omega$ be the circumcircle of
-    $\triangle{ABC}$. $P$ is an interior point of
-    $\triangle{ABC}$. $A_{1}, B_{1}, C_{1}$ are the
-    intersections of $AP, BP, CP$ respectively and
-    $A_{2}, B_{2}, C_{2}$ are the symmetrical points of
-    $A_{1}, B_{1}, C_{1}$ with respect to the midpoints of side
-    $BC, CA, AB$. Show that the circumcircle of
-    $\triangle{A_{2}B_{2}C_{2}}$ passes through the orthocentre of
-    $\triangle{ABC}$.
-    ]]]
-
+[h3]Problems[/h3]
+[ol]
+  [li]{{{Prove the existence of the nine-point circle, and show that its center is the midpoint of the circumcenter and the orthocenter. (Given a triangle, the nine-point circle is the circle that passes through the three midpoints of sides, the three feet of altitudes, and the three midpoints between the orthocenter and the vertices.)}}}[/li]
+  [li]{{{(USA TSTST 2011) Acute triangle $ABC$ is inscribed in circle $\omega$. Let $H$ and $O$ denote its orthocenter and circumcenter, respectively. Let $M$ and $N$ be the midpoints of sides $AB$ and $AC$, respectively. Rays $MH$ and $NH$ meet $\omega$ at $P$ and $Q$, respectively. Lines $MN$ and $PQ$ meet at $R$. Prove that $OA\perp RA$.}}}[/li]
+  [li]{{{(ISL 2000) Let $ O$ be the circumcenter and $ H$ the orthocenter of an acute triangle $ ABC.$ Show that there exist points $ D, E,$ and $ F$ on sides $ BC,CA,$ and $ AB$ respectively such that \[ OD + DH = OE +EH = OF +FH\] and the lines $ AD, BE,$ and $ CF$ are concurrent.}}}[/li]
+  [li]{{{(APMO 2012) Let $ ABC $ be an acute triangle. Denote by $ D $ the foot of the perpendicular line drawn from the point $ A $ to the side $ BC $, by $M$ the midpoint of $ BC $, and by $ H $ the orthocenter of $ ABC $. Let $ E $ be the point of intersection of the circumcircle $ \Gamma $ of the triangle $ ABC $ and the half line $ MH $, and $ F $ be the point of intersection (other than  $E$) of the line $ ED $ and the circle $ \Gamma $. Prove that $ \tfrac{BF}{CF} = \tfrac{AB}{AC} $ must hold.}}}[/li]
+  [li]{{{Let $ABC$ be a triangle, and $P$ a point on its circumcircle. Show that the reflections of $P$ across the three sides of $ABC$ lie on a line that passes through the orthocenter of $ABC$.}}}[/li]
+  [li]{{{(China 2006) Let $\omega$ be the circumcircle of $\triangle{ABC}$. $P$ is an interior point of $\triangle{ABC}$. $A_{1}, B_{1}, C_{1}$ are the intersections of $AP, BP, CP$ respectively and $A_{2}, B_{2}, C_{2}$ are the symmetrical points of $A_{1}, B_{1}, C_{1}$ with respect to the midpoints of side $BC, CA, AB$. Show that the circumcircle of $\triangle{A_{2}B_{2}C_{2}}$ passes through the orthocentre of $\triangle{ABC}$.}}}[/li]
+[/ol]

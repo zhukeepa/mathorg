@@ -1,0 +1,46 @@
+<<<Title: Infinite Descent and Root Flipping
+Author(s): Alex Zhu
+Description: 
+Topics: Root flipping
+>>>
+
+[h2]Examples[/h2]
+
+[b]Problem 1.[/b] Show that if $x,y,z$ are integers such that $x^3 + 3y^3 = 9z^3$, then $x = y = z = 0$. 
+
+[b]Solution.[/b] Suppose for the sake of contradiction that the equation has a solution in which not all variables are 0. Let $(x,y,z)$ be any such solution with $|x| + |y| + |z|$ minimal. From $x^3 + 3y^3 = 9z^3$, we can see that $x$ is divisible by 3, so $x = 3x_0$ for some integer $x_0$. Substituting this in and dividing by 3, we get \[ 9x_0^3 + y^3 = 3z^3. \] It follows that $y$ is divisible by 3, so $y = 3y_0$ for some integer $y_0$. Substituting this in and dividing by 3, we get \[ 3x_0^3 + 9y_0^3 = z^3. \] We can see that $z$ is divisible by 3, so $z = 3z_0$ for some integer $z_0$. Substituting this in and dividing by 3, we get \[ x_0^3 + 3y_0^3 = 9z_0^3,\] so $(x_0, y_0, z_0)$ is a solution to the original equation. But \[ |x_0| + |y_0| + |z_0| = \frac{|x| + |y| + |z|}{3} < |x| + |y| + |z|, \] contradicting the minimality of $|x| + |y| + |z|$, so the only integer solution to the equation is $(0,0,0)$. 
+
+[b]Problem 2.[/b] (IMO 1988) Let $a$ and $b$ be positive integers such that $ab+1$ divides $a^2 + b^2$. Prove that $\frac{a^2 + b^2}{ab + 1}$ is a perfect square. 
+
+[b]Solution.[/b] Suppose that $k$ is a positive integer for which there exist positive integers $a,b$ such that $\frac{a^2 + b^2}{ab+1} = k$. Without loss of generality, we may suppose that $a \geq b > 0$ and that $a+b$ is minimal among all pairs $(a,b)$ with $\frac{a^2 + b^2}{ab + 1} = k$. 
+
+We have that $a^2 - (kb)a + (b^2 - k) = 0$. Consider the quadratic $x^2 - (kb)x + (b^2 - k) = 0$. One of its roots is $a$; let its other root be $r$. By Vieta's formulas, we have $a + r = kb$ and $ar = b^2 - k$. If $r > 0$, then we must have $a+r \geq a+b$, since $a+b$ is minimal. It would follow that $r \geq b$, and since $a \geq b$ as well, we would have $b^2 - k = ar \geq b^2$, which is impossible. Thus, $r \leq 0$. 
+
+If $r < 0$, then $br + 1 \leq 0$, whence $0 < b^2 + r^2 = k(br + 1) \leq 0$, which is absurd. It follows that $r = 0$, so $k = b^2$, i.e., $k$ is a perfect square. 
+
+[b]Remark.[/b] The crux of this solution is viewing the symmetric expression $a^2 + b^2 - k(ab + 1)$ as a quadratic in one of the variables and using Vieta's formulas to obtain another root of the quadratic. This trick is called [i]root flipping[/i] or [i]Vieta jumping[/i]. 
+
+[h2]Problems[/h2]
+  
+[ol] 
+  [li]{{{Show that if $a,b,c,d$ are positive integers such that $a^2 + b^2 = 3(c^2 + d^2)$, then $a=b=c=d=0$.}}}[/li]
+  [li]{{{Find infinitely many pairs of positive integers $(a,b)$ such that $1<a<b$ and $\frac{a^2+b^2 - 1}{ab}$ is an integer.}}}[/li]
+  [li]{{{(USAMO 1976) Determine all integral solutions of \[ a^2 + b^2 + c^2 = a^2b^2.\]}}}[/li]
+  [li]{{{Let $x$ and $y$ be positive integers such that $xy$ divides $x^{2}+y^{2}+1$. Show that \[\frac{x^{2}+y^{2}+1}{xy}=3.\]}}}[/li]
+  [li]{{{(PUMaC 2011) Find, with proof, all triples of positive integers $(x,y,z)$ satisfying the equation $3^x - 5^y = 4z^2$.}}}[/li]
+  [li]{{{(IMO 1981)Determine the maximum value of $m^2+n^2$, where $m$ and $n$ are integers in the range $1,2,\ldots,1981$ satisfying $(n^2-mn-m^2)^2=1$.}}}[/li]
+  [li]{{{Which integers can be represented as \[\frac{(x+y+z)^{2}}{xyz}\] where $x$, $y$, and $z$ are positive integers?}}}[/li]
+  [li]{{{(IMO 2007) Let $a$ and $b$ be positive integers. Show that if $4ab - 1$ divides $(4a^2 - 1)^2$, then $a = b$.}}}[/li]
+  [li]{{{Find all integer solutions to the equation $x^4 - y^4 = z^2$.}}}[/li]
+  [li]{{{Find all integer solutions to the equation $x^4 + y^4 = z^2$.}}}[/li]
+  [li]{{{(ISL 2002) Is there a positive integer $m$ such that the equation \[ {1\over a}+{1\over b}+{1\over c}+{1\over abc}={m\over a+b+c}  \] has infinitely many solutions in positive integers $a,b,c$?}}}[/li]
+  [li]{{{(ISL 2009) Find all positive integers $n$ such that there exists a sequence of positive integers $a_1$, $a_2$,$\ldots$, $a_n$ satisfying \[a_{k+1}=\frac{a_k^2+1}{a_{k-1}+1}-1\] for every $k$ with $2\leq k\leq n-1$.}}}[/li]
+  [li]{{{Prove that there are no four distinct perfect squares in arithmetic progression.}}}[/li]
+  [li]{{{Show that if $x, y, z$ are positive integers, then $(xy+1)(yz+1)(zx+1)$ is a perfect square if and only if $xy+1$, $yz+1$, $zx+1$ are all perfect squares.
+  
+  %}}}[/li]
+  [li]{{{Determine all pairs $(a, b)$ of positive integers such that $ab^2+b+7$ divides $a^2 b+a+b$.
+  
+  %}}}[/li]
+  [li]{{{Determine all pairs of positive integers $(a,b)$ such that \[ \frac{a^2}{2ab^2 - b^3 + 1} \] is a positive integer.}}}[/li]
+[/ol]

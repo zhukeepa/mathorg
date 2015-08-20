@@ -1,0 +1,85 @@
+<<<Title: Vectors
+Author(s): Josh Nichols-Barrer
+Description: Red MOP 2012 Handout
+Topics: Vectors (analytic)
+>>>
+
+[ol]
+  
+  [li]{{{Find the centroid of $\triangle ABC$ in terms of arbitrary vector
+    representations of its vertices.}}}[/li]
+  [li]{{{Using vectors, show that the circumcenter, centroid, center of
+    the nine-point circle and the orthocenter are
+    collinear and that the proportions of the lengths of segments
+    connecting consecutive points along the resulting Euler line are $2:1:3$.}}}[/li]
+  [li]{{{Find the volume of tetrahedron $ABCD$ in terms of arbitrary
+    vector represenations of its vertices.}}}[/li]
+  [li]{{{Let $ABCA'B'C'$ be a triangular prism (not necessarily right)
+    with base $ABC$ and parallel edges $AA'$, $BB'$, and $CC'$.  Let $P$
+    be the intersection of the planes $(ABC')$, $(AB'C)$, $(A'BC)$, and
+    let $P'$ be the intersection of the planes $(AB'C')$, $(A'BC')$, and
+    $(A'B'C)$.  Show that $PP'$ is parallel to $AA'$.}}}[/li]
+  [li]{{{Consider three linearly independent vectors $\vec a$, $\vec b$
+    and  $\vec c$ in
+    space, having the same origin.  Prove that the plane determined by
+    their endpoints is perpendicular to the vector $\vec a\times \vec
+    b+\vec b\times
+    \vec c+\vec c\times \vec a$.}}}[/li]
+  [li]{{{Some students take a test consisting of $n$ problems.  After it
+    is over, the judges assign each problem a positive integral number
+    of points, and give each student a score equal to the sum of the
+    points for each problem that the student solved.  (No partial
+    credit!)  It would have been possible for the judges to assign point
+    values so that the students' scores finish in any possible order
+    (not counting ties).  What is the maximum number of students for
+    which this would be able to happen?}}}[/li]
+  [li]{{{Given two triangles $\triangle ABC$ and $\triangle A'B'C'$ with
+    distinct vertices and the same centroid,
+    prove that a triangle can be formed from the three segments $\overline{AA'}$,
+    $\overline{BB'}$ and $\overline{CC'}$.}}}[/li]
+  [li]{{{Prove that the four lines through each of the centroids of
+    the four faces of a tetrahedron and perpendicular to their
+    respective faces are concurrent if and only if the four altitudes of the
+    tetrahedron are concurrent.}}}[/li]
+  [li]{{{Let $S$ be a set of 26 positive integers, none of whose prime
+    factors are bigger than 100.  Show that there exists a nonempty
+    subset $A\subset S$ such that the product of the elements of $A$ is
+    a perfect square.}}}[/li]
+  [li]{{{Given three vectors $\vec a$, $\vec b$, and $\vec c$,
+    define \[\vec u=(\vec b\cdot
+    \vec c)\vec a-(\vec c\cdot \vec a)\vec b, \vec v=(\vec a\cdot
+    \vec c)\vec b-(\vec a\cdot \vec b)\vec c, \vec w=(\vec b\cdot
+    \vec a)\vec c-(\vec b\cdot \vec c)\vec a,.\]  Prove that if $\vec
+    a$, $\vec b$ and $\vec c$ form a triangle,
+    then $\vec u$, $\vec v$ and $\vec w$ also form a triangle, and this triangle is
+    similar to the first.}}}[/li]
+  [li]{{{Let $W\subset \mathbb R^n$ be a subspace.  Show that
+    $(W^{\perp})^\perp=W$.}}}[/li]
+  [li]{{{On each face of a convex polyhedron consider an outward vector
+    with length numerically equal to the area of the face.  Prove that
+    the sum of all these vectors is equal to zero.}}}[/li]
+  [li]{{{Let $A$ be an $n\times n$ matrix of zeroes and ones that is
+    symmetric (that is, $A_{ij}=A_{ji}$ for all $i,j$) and such that
+    $A_{ii}=1$ for all $i$.  Show that there exists a subset of the rows
+    of $A$ whose sum is a vector all of whose components are odd.}}}[/li]
+  [li]{{{In trapezoid $ABCD$, $AB||CD$, the midpoint of $\overline{AB}$ is $E$ and
+    the midpoint of $\overline{CD}$ is $F$.  Let $G$ be the intersection of $\overleftrightarrow{AD}$
+    and $\overleftrightarrow{BC}$ and $H$ the intersection of $\overleftrightarrow{AC}$ and
+    $\overleftrightarrow{BD}$.  Show that the
+    line $\overleftrightarrow{EF}$ passes through both $G$ and $H$.}}}[/li]
+  [li]{{{Let $P$ be a point on a given unit sphere.  Three mutually
+    perpendicular rays from $P$ meet the sphere at $A$, $B$, and $C$.
+    Prove that for all such triples of rays, the plane of $\triangle
+    ABC$ passes through a fixed point.}}}[/li]
+  [li]{{{The vectors $\vec a$, $\vec b$ and $\vec c$ in $\mathbb R^3$
+    satisfy \[\vec a\times \vec b = \vec b\times\vec c =
+    \vec c\times \vec a \neq 0.\]  Prove that $\vec a+\vec b+\vec c=0$.}}}[/li]
+  [li]{{{Prove that the medians of a triangle form a triangle of $\frac
+    34$ the area and with medians $\frac 34$ as long as those in the
+    original triangle.}}}[/li]
+  [li]{{{Let $k$ be a finite field (that is, a finite set with
+    commutative, associative and distributive addition and multiplication with
+    identities, additive inverses, and multiplicative inverses for
+    nonzero elements).  Prove that there exists a prime $p$ and a
+    nonnegative integer $r$ such that $|k|=p^r$.}}}[/li]
+[/ol]

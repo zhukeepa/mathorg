@@ -1,0 +1,341 @@
+<<<Title: Inequalities
+Author(s): Josh Nichols-Barrer
+Description: Red MOP 2005 Handout
+Topics: Inequalities
+>>>
+
+
+[b]MOSP 2005, Red[/b]
+
+ [b]Inequalities[/b]
+
+ First on our list of major tools is the arithmetic
+mean-geometric mean inequality, often abbreviated as "AM-GM."
+
+[b]Theorem 1.[/b] (AM-GM) Let $x_1,\ldots,x_n$ be nonnegative real numbers. Then the
+following inequality holds:
+$$\frac{1}{n}\sum_{i=1}^n x_i \geq \sqrt[n]{x_1x_2\cdots x_n}.$$
+We have equality if and only if all the $x_i$ are equal.
+
+ The left hand side of the inequality is known as the
+arithmetic mean of the $x_i$; the right hand side is known as the
+geometric mean of the $x_i$.  To prove AM-GM, it is actually
+convenient to prove a slightly more general result, weighted
+AM-GM.  But first, a lemma:
+
+[b]Lemma 1.[/b] For any $r\geq 1$, and any $\lambda$ with $0<\lambda < 1$, we have
+that $$\lambda(r-1)\geq r^\lambda - 1,$$ with equality if and only
+if $r=1$.
+
+[b]Proof 1.[/b] We will prove this first for $\lambda$ rational, say $\lambda =
+a/b$ with $a$ and $b$ positive integers. We wish to prove that
+$$\frac{a}{b}(r-1)\geq r^{a/b} - 1.$$  Let $s=r^{1/b}-1$, so that
+we wish to show that $$\frac{(1+s)^b - 1}{b}\geq \frac{(1+s)^a -
+1}{a}.$$  Using the binomial theorem, this is equivalent to saying
+that $$\sum_{k=1}^b \frac{1}{b}\binom{b}{k}s^k\geq
+\sum_{k=1}^b\frac{1}{a}\binom{a}{k}s^k.$$  But since $1\leq a<b$,
+$$\frac{1}{b}\binom{b}{k} = \frac{1}{k}\binom{b-1}{k-1} \geq
+\frac{1}{k}\binom{a-1}{k-1} = \frac{1}{a}\binom{a}{k}.$$ Notice
+that this is a strict inequality if $k>1$.  Therefore, our desired
+inequality holds, and we have equality if and only if $s=0$, i.e.
+$r=1$.
+
+To extend to the case of arbitrary real $\lambda$, notice that by
+replacing $r$ with $r^{1/n}$ for some positive integer $n$, the
+above relation for integers $a<b$
+$$\frac{r^a - 1}{a}\leq \frac{r^b - 1}{b}$$ shows that
+$$\frac{r^{q_1}-1}{q_1}\leq \frac{r^{q_2} - 1}{q_2}$$ for each rational $q_1 < q_2$,
+with equality if and only if $r=1$.  It follows that
+$(r^\lambda-1)/\lambda$ is an increasing function of $\lambda$ on
+$(0,1)$.  But then if $q$ is a rational with $\lambda<q<1$, then
+$$\frac{r^\lambda - 1}{\lambda}\leq \frac{r^q - 1}{q}\leq r-1.$$
+If equality holds, then equality also holds for $q$, and so $r=1$.
+
+Now we prove weighted AM-GM, with Theorem 1 (AM-GM) as a
+corollary.
+
+[b]Theorem 2.[/b] (Weighted AM-GM) Let $x_1,\ldots,x_n$ be nonnegative
+real numbers, and $\lambda_1,\ldots,\lambda_n$ positive real
+numbers (weights) with $\lambda_1+\cdots+\lambda_n = 1$. Then
+$$\sum_{i=1}^n\lambda_ix_i\geq
+x_1^{\lambda_1}x_2^{\lambda_2}\cdots x_n^{\lambda_n},$$ with
+equality if and only if all the $x_i$ are equal.
+
+[b]Proof 2.[/b] We induct on $n$.  For $n=1$ the result holds trivially. For
+$n=2$, the result holds trivially if $x_1$ or $x_2$ is 0.
+Otherwise, suppose $0<x_1\leq x_2.$  We see that we wish to prove
+that
+$$\lambda_1x_1+\lambda_2x_2\geq x_1^{\lambda_1}x_2^{\lambda_2},$$
+which is equivalent to saying that
+$$1-\lambda_2+\lambda_2\frac{x_2}{x_1}\geq \left(\frac{x_2}{x_1}\right)^{\lambda_2}.$$
+Letting $r=x_2/x_1\geq 1$, we see that Lemma 2 gives us this
+inequality, and that equality holds if and only if $r=1$, i.e.
+$x_1=x_2,$ as desired.
+
+Now suppose we have proven the result for $n=m-1\geq 2$.  We wish
+to prove it for $n=m.$  So suppose we are given nonnegative real
+numbers $x_1,\ldots,x_m$ and $\lambda_1,\ldots,\lambda_m$ as in
+the theorem statement.  Define $\lambda=\lambda_m$, and $\mu =
+1-\lambda = \lambda_1+\cdots+\lambda_{m-1}.$  Further, put $X=x_m$
+and
+$$Y=\frac{1}{\mu}\left(\lambda_1x_1+\cdots+\lambda_{m-1}x_{m-1}\right).$$
+We see that $$\sum_{i=1}^m\lambda_ix_i = \lambda X + \mu Y \geq
+X^\lambda Y^\mu = x_m^{\lambda_m}Y^\mu,$$ by weighted AM-GM for
+$n=2$.  Now, notice that $$Y =
+\sum_{i=1}^{m-1}\left(\frac{\lambda_i}{\mu}\right) x_i\geq
+x_1^{\lambda_1/\mu}x_2^{\lambda_2/\mu}\cdots
+x_{m-1}^{\lambda_{m-1}/\mu} = \left(
+x_1^{\lambda_1}x_2^{\lambda_2}\cdots
+x_{m-1}^{\lambda_{m-1}}\right)^{1/\mu},$$ by weighted AM-GM for
+$n=m-1.$  Putting these two together, we get that
+$$\sum_{i=1}^m\lambda_ix_i\geq
+x_1^{\lambda_1}x_2^{\lambda_2}\cdots x_m^{\lambda_m}.$$  Finally,
+if we have equality, we must have had equality in all the
+inequalities we used, so all the $x_i$ for $i=1,\ldots,m-1$ are
+equal, in fact equal to $Y$, and since $x_m = X = Y,$ we are done.
+
+As you might expect, we refer to the left-hand side of the
+weighted AM-GM inequality as the weighted arithmetic mean of the
+$x_i$ with weights $\lambda_i$, and the right-hand side as the
+weighted geometric mean of the $x_i$ with weights $\lambda_i$.
+Setting $\lambda_i = \frac{1}{n}$ for all $i$ recovers AM-GM.
+
+If we apply weighted AM-GM to $1/x_1,\ldots,1/x_n$, with $x_i>0$,
+then we can conclude that
+$$\sum_{i=1}^n \frac{\lambda_i}{x_i} \geq
+\left(\frac{1}{x_1}\right)^{\lambda_1}
+\left(\frac{1}{x_2}\right)^{\lambda_2}\cdots
+\left(\frac{1}{x_n}\right)^{\lambda_n}.$$  Reciprocating both sides
+(which reverses the order of the inequality), we find that
+$$x_1^{\lambda_1}x_2^{\lambda_2}\cdots x_n^{\lambda_n}\geq
+\left( \sum_{i=1}^n \frac{\lambda_i}{x_i} \right)^{-1},$$ with equality
+if and only if all the $x_i$ are equal. The right-hand side of
+this is often called the weighted harmonic mean, and so this is
+the weighted GM-HM inequality. Sometimes this is adjoined to AM-GM
+to produce "weighted AM-GM-HM."
+
+ Another inequality which comes in quite handy is the
+Cauchy-Schwarz inequality.
+
+[b]Theorem 3.[/b] (Cauchy-Schwarz) Suppose $(x_i)_{i=1}^n$ and $(y_i)_{i=1}^n$
+are two (finite) sequences of reals (possibly negative).  Then
+$$\left(\sum_{i=1}^n x_i^2\right)\left(\sum_{i=1}^n y_i^2\right)\geq
+\left(\sum_{i=1}^n x_iy_i\right)^2,$$ with equality if and only if the
+two sequences are proportional (one consists only of zeroes, or
+there is a real number $\lambda$ such that $y_i = \lambda x_i$ for
+all $i$.
+
+[b]Proof 3.[/b] If one sequence or the other consists only of zeroes, then the
+result is immediate.  Otherwise, let $t$ be an indeterminate
+variable.  Define the function $F(t)$ as $$F(t) = \sum_{i=1}^n
+(x_it - y_i)^2.$$  Because it is a sum of squares, we know that
+$F(t)$ takes only nonnegative values.  Suppose $F(\lambda)=0$ for
+some specific $\lambda.$  Then each of the summands in the
+definition of $F$ must be $0$, whence $y_i=\lambda x_i.$ Therefore
+$F$ has a real zero if and only if $(x_i)$ and $(y_i)$ are
+proportional. Now,
+$$F(t) = \left(\sum_{i=1}^n x_i^2\right) t^2 - 2\left(\sum_{i=1}^n
+x_iy_i\right) t + \sum_{i=1}^n y_i^2,$$ so that $F$ is a quadratic in
+$t$.  Since $F$ takes nonnegative values, we know that this
+quadratic has one or no real roots, with one root if and only if
+the proportionality condition is satisfied.  But then the
+discriminant is nonpositive!  We see that $$4\left(\sum_{i=1}^n
+x_iy_i\right)^2 - 4\left(\sum_{i=1}^n x_i^2\right)\left(\sum_{i=1}^n y_i^2\right)
+\leq 0,$$ with equality if and only if the two sequences are
+proportional; this is what we wanted.
+
+ Another approach which can come in handy sometimes is using
+facts about convex functions (if you know calculus, these are just
+functions with a nonnegative second derivative, i.e.
+"bowl-shaped" functions). First, we have a
+
+[b]Definition 1.[/b] A real-valued function $f$ defined on an interval is said to be
+{\emph convex} if for every $x,y$ in the interval and every
+$\lambda\in(0,1)$, $$f(\lambda x + (1-\lambda)y)\leq \lambda
+f(x)+(1-\lambda)f(y).$$  If the inequality is always strict
+whenever $x\neq y$, $f$ is called {\emph strictly convex}.
+
+Notice that it follows from the definition that for any
+$\lambda_1,\ldots \lambda_n\geq 0$ with
+$\lambda_1+\lambda_2+\ldots+\lambda_n = 1$, and any $x_1,\ldots
+x_n$ in the domain of the convex function $f$,
+$$f(\lambda_1x_1+\lambda_2x_2+\cdots+\lambda_nx_n)\leq
+\lambda_1 f(x_1) + \lambda_2 f(x_2)+\cdots + \lambda_n f(x_n);$$
+indeed, this is just an induction analogous to the last step of
+the proof of weighted AM-GM.  The same argument adapted to this
+more general situation gives that if $f$ is strictly convex, then
+equality here implies that all the $x_i$ are equal.  Simple as
+this is to conclude from (a part of) the argument for weighted
+AM-GM, this fact is usually known as Jensen's inequality.
+
+[b]Theorem 4.[/b] (Jensen's Inequality)  If $f$ is a convex function,
+$x_1,\ldots,x_n$ are reals in the domain of $f$, and
+$\lambda_1,\ldots \lambda_n$ are positive reals with
+$\lambda_1+\cdots+\lambda_n = 1$, then
+$$f(\lambda_1x_1+\lambda_2x_2+\cdots+\lambda_nx_n)\leq \lambda_1
+f(x_1) + \lambda_2 f(x_2)+\cdots + \lambda_n f(x_n);$$ if $f$ is
+strictly convex, then equality holds if and only if all the $x_i$
+are equal.
+
+Some examples of convex functions you already know include
+
+[ul][li]The "line" $f(x) = ax+b$.  The proof is immediate; this
+  function is not strictly convex.[/li]
+  [li]The functions $f(x)=a^x$ for $a>0$.  This follows from (and in
+  fact is equivalent to) weighted AM-GM.  These functions are
+  strictly convex as long as $a\neq 1$.[/li]
+  [li]The functions $f(x) = |x|^c$ where $c\geq 1$.  Showing that
+  these are convex comes down to showing that for any $r\geq 1$ and
+  any $\lambda\in (0,1)$, $$\lambda+(1-\lambda)r^c\geq [\lambda +
+  (1-\lambda)r]^c;$$ this is not too different from the Lemma 2
+  above.[/li]
+  [li]Given a convex function $f(x)$ and a nonnegative constant $c$,
+  the function $cf(x)$ is convex.  If $f$ is strictly convex and
+  $c>0$, then $cf(x)$ is strictly convex.[/li]
+  [li]Given two convex functions $f(x)$ and $g(x)$, their sum
+  $f(x)+g(x)$ is convex.  If in addition either $f$ or $g$ is
+  strictly convex, then their sum is strictly convex.  Warning:
+  neither a difference nor a product of convex functions is in
+  general convex (examples?).[/li]
+  [li]Given two convex functions $f(x)$ and $g(x)$, their
+  composition $f(g(x))$ is convex.  If both are strictly convex,
+  then their composition is strictly convex.[/li][/ul]
+
+Jensen's inequality can be used to prove other inequalities, like
+for example the Power Mean inequality, which generalizes AM-GM-HM:
+
+[b]Theorem 5.[/b] (Weighted Power Mean Inequality) Given $x_1,\ldots,x_n>0$ and
+weights $\lambda_i$ as in AM-GM, define a function $M(r)$ by
+$$M(r) = \left(\sum_{i=1}^n\lambda_i x_i^r\right)^{1/r}$$ for $r\neq 0$,
+and $$M(0) = x_1^{\lambda_1}x_2^{\lambda_2}\cdots
+x_n^{\lambda_n}.$$  Then $M(r)$ is a nondecreasing function of
+$r$, and is strictly increasing if and only if the $x_i$ are not
+all equal.
+
+Notice that with notation as in the theorem, $M(1)$ is the
+arithmetic mean, $M(0)$ is the geometric mean, and $M(-1)$ is the
+harmonic mean; it follows from the theorem that $M(1)\geq M(0)\geq
+M(-1)$, with the usual equality condition.   Lest you wonder why
+we don't just start with Power Mean, it should be pointed out that
+in many proofs of the Power Mean Inequality, AM-GM-HM is a crucial
+special case that must be covered separately.
+
+ Now in addition to these basic theorems, it is also helpful
+to have at one's disposal a whole host of techniques for attacking
+inequality problems.  The following is cribbed from a Paul Zeitz
+handout from nine years ago, and is by no means an exhaustive
+list:
+
+[ul][li][Normalization] If all of the variables are homogeneous to the
+  same degree, you may want to multiply or divide them by an
+  appropriately chosen constant.[/li]
+  [li][Monotonicity] Whenever an inequality is symmetrical, order the
+  variables![/li]
+  [li][Substitution] Two useful cases:  trig and $x\to1/x$.[/li]
+  [li][Geometric reinterpretation]  Triangle inequality; vectors,
+  etc.[/li]
+  [li][Symmetry] Sometimes we are not clever and do not see the
+  elegant way to resolve an inequality.  Don't be afraid to multiply
+  out, but make use of good notation.  If the inequality is
+  symmetric (usually it is!), try symmetric sum notation.  For
+  example, use the convention that
+  \[\sum_{\mbox{symm}}
+  f(x,y,z) = f(x,y,z)+f(y,z,x) + f(z,x,y).\] This is surprisingly
+  effective.
+  
+  Another idea is to introduce "symmetric" variables, such as the
+  average value of the original variables.  Try substitutions which
+  reflect the symmetry of a constraint.  Eg, if $xyz=1$, you could
+  try substituting $x=a/b, y=b/c, z= c/a$.[/li]
+  [li][Know special cases well] Examples:  $(\sum_{i=1}^n x_i)
+  \sum_{i=1}^n(1/x_i) \geq n^2$; $(x+y+z)^2\geq 3(xy+yz+xz)$.[/li]
+  [li][Creating squares out of thin air]  Example:
+  \[(x-y)(y-z) - (x-z)(x-y) = (x-y)^2.\][/li]
+  [li][Massage] Also known as the "jiggle" method.  Try loosening up
+  terms to make them larger or smaller, but algebraically simpler.
+  You give up a little, and the new alleged inequality may not be
+  true, but it is easy to check.[/li]
+  [li][Convexity]  The maximum value of a convex function over an
+  interval must occur at an endpoint of that interval.  This is
+  because of the definition of convex function; any value of the
+  function must be bounded above by a weighted mean of the values at
+  the endpoints, and any such weighted mean is bounded above by the
+  maximum of the values at the endpoints.[/li][/ul]
+
+
+[b]Exercises and Problems[/b]
+
+
+[ol] [li]{{{Show that if $a_i$ are reals with $\sum_{i=1}^n a_i = 1$,
+  then $\sum_{i=1}^n a_i^2 \geq 1/n.$}}}[/li]
+  [li]{{{If $a,b,c>0$, prove that $(a^2b+b^2c+c^2a)(ab^2+bc^2+ca^2)\geq
+  9a^2b^2c^2.$}}}[/li]
+  [li]{{{Let $(a_i)_{i=1}^n$ be a sequence of positive reals and let
+  $(b_i)_{i=1}^n$ be a permutation of $(a_i)$. Prove that
+  $\sum_{i=1}^n a_i/b_i \geq n$.}}}[/li]
+  [li]{{{Let $x,y,z>0$ with $xyz=1$.  Prove that $x+y+z\leq
+  x^2+y^2+z^2$.}}}[/li]
+  [li]{{{Consider a random walk on the number line, starting at zero,
+  where the probability of moving one unit to the left or one unit
+  to the right is 1/2.  Let $p_n$ be the probability of returning to
+  zero in $2n$ steps.
+   Show that for all $n\geq2$,
+  \[\sqrt{{9\over32n}} \leq p_n<\sqrt{{3\over8n}}.\]}}}[/li]
+  [li]{{{(IMO 84/1) Prove that $0\leq yz+zx+xy-2xyz\leq 7/27$, where
+  $x,y$ and $z$ are non-negative real numbers for which $x+y+z=1$.}}}[/li]
+  [li]{{{(Putnam 68/A6) Determine all polynomials that have only  real
+  roots  and all coefficients are equal to $\pm 1$.}}}[/li]
+  [li]{{{(Putnam 75/B6) Let $s_n=1+ {1\over2}+{1\over3} +\cdots +
+  {1\over n}$. Show that  [ol][li]$n(n+1)^{1/n} < n+ s_n$ for $n>1$,
+  and[/li]
+    [li]$(n-1)n^{-1/(n-1)} < n-s_n$ for $n>2$.[/li][/ol]}}}[/li]
+  [li]{{{Prove [b]Schur's[/b] inequality: If $x,y,z>0$ and $\lambda$ is
+  real, then
+  \[x^{\lambda}(x-y)(x-z)+
+  y^{\lambda}(y-z)(y-x)+ z^{\lambda}(z-x)(z-y)\geq 0,\] with
+  equality iff $x=y=z$.}}}[/li]
+  [li]{{{Let $0<r<s$ and let $(x_i)_{i=1}^n\geq 0$.  Prove that
+  \[\left(\sum_{i=0}^n x_i^s\right)^{1\over s} \leq\left(\sum_{i=1}^n x_i^r\right)^{1\over r}.\]}}}[/li]
+  [li]{{{The real numbers $x_1,x_2,\ldots, x_n$ belong to the interval
+  $[-1,1]$ and the sum of their cubes is zero.  Prove that their sum
+  does not exceed $n/3$.}}}[/li]
+  [li]{{{(USAMO 78/1) Given that $a,b,c,d,e$ are real numbers such that
+  \[a+b+c+d+e=8,\]
+  \[a^2+b^2+c^2+d^2+e^2=16.\]
+  Determine the minimum value of $e$.}}}[/li]
+  [li]{{{(USAMO 80/5) Prove that, for numbers $a,b,c$ in the interval
+  $[0,1]$,
+  \[{a\over b+c+1} + {b\over c+a+1}+{c\over a+b+1} + (1-a)(1-b)(1-c) \leq
+  1.\]}}}[/li]
+  [li]{{{(USAMO 77/5) If $a,b,c,d,e$ are positive numbers bounded by
+  $p$ and $q$, $0<p<q$, prove that
+  \[(a+b+c+d+e)\left({1\over a}+{1\over b}+{1\over c}+{1\over d}+{1\over
+  e}\right) \leq 25+6\left(\sqrt{p\over q}-\sqrt{q\over p}\right)^2,\] and
+  determine when there is equality.}}}[/li]
+  [li]{{{(Part of USAMO 79/3) Let $x,y,z\geq 0$ with $x+y+z=1$.  Prove
+  that
+  \[x^3+y^3+z^3+6xyz\geq {1\over 4}.\]}}}[/li]
+  [li]{{{(IMO 74/5) Determine all possible values of
+  \[ S= {a\over a+b+d} +{b\over a + b+c} + {c\over b+c+d} +{d\over a+c+d}\]
+  where $a,b,c,d$ are arbitrary positive numbers.}}}[/li]
+  [li]{{{(IMO 95/2) Let $a, b, c$ be positive real numbers such that
+  $abc = 1$. Prove that
+  \[
+  \frac{1}{a^3(b+c)} + \frac{1}{b^3(c+a)} + \frac{1}{c^3(a+b)}
+  \geq\frac{3}{2}.
+  \]}}}[/li]
+  [li]{{{Let $a,b,c,d>0$.  Prove that
+  \[{1\over a}+{1\over b}+{4\over c} + {16\over d}\geq{64\over a+b+c+d}.\]}}}[/li]
+  [li]{{{(Hungary) Let $f(x)=x^n+a_{n-1}x^{n-1}+\cdots +a_1x+1$ be a
+  polynomial  with non-negative real coefficients and $n$ real
+  roots.
+   Prove that
+   [ol][li]$f(2)\geq 3^n$;[/li]
+    [li]$f(x) \geq (1+x)^n$ for all $x\geq 0$;[/li]
+    [li]$a_k\geq {n\choose k}$ for all $k=1,2,\ldots, n-1$.[/li][/ol]}}}[/li]
+  [li]{{{Let $a,b,c$ be positive.  Prove that
+  \[{1\over a(1+b)}+{1\over b(1+c)} + {1\over c(1+a)} \geq {3\over 1+abc},\]
+  with equality iff $a=b=c=1$.}}}[/li]
+  [li]{{{(Romanian selection test) Let $a,b,x,y,z>0$. Prove that
+  \[{x\over ay+bz}+{y\over az+bx} + {z\over ax+by} \geq {3\over a+b}.\]}}}[/li]
+[/ol]

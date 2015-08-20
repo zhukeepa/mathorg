@@ -1,0 +1,28 @@
+<<<Title: Extremal Principle
+Author(s): Alex Zhu
+Description: 
+Topics: Extremal combinatorics
+>>>
+
+When trying to prove a property about a collection of objects, it is often helpful to consider the object that minimizes or maximizes some function. This technique is called the [i]extremal principle[/i]. We will illustrate this technique with an example. 
+
+[b]Problem 1.[/b] There is a set of points in the plane, such that each point in the set is the midpoint of some two other points in the set. Show that this set is infinite. 
+
+[b]Solution.[/b] Suppose for the sake of contradiction that this set is finite. Consider any two points $A$ and $B$ in the set whose distances from one another are maximal. Suppose that $B$ is the midpoint of $C$ and $D$, where $C$ and $D$ are points in the set. Since $\angle CBA + \angle ABD = 180^{\circ}$, one of $\angle ABD$ and $\angle CBA$ is at least $90^{\circ}$. If $\angle ABD \geq 90^{\circ}$, then $AD$ is the longest side of $\triangle ABD$, and thus longer than $AB$, so the length $AB$ is not maximal. If $\angle CBA \geq 90^{\circ}$, then $AC$ is the longest side of $\triangle ABC$, and thus longer than $AB$, so the length $AB$ is not maximal. This is a contradiction, so the set must be infinite. 
+
+[h2]Problems[/h2]
+
+[i]Note: many of these problems are taken from \emph{Problem-Solving Strategies[/i].}
+ 
+[ol] 
+  [li]{{{There are $n$ points in a plane, such that any triangle whose vertices are among these points has area at most 1. Show that all these points are contained in a triangle of area 4.}}}[/li]
+  [li]{{{Prove that every convex polygon with area 1 can be contained in a rectangle of area 2.}}}[/li]
+  [li]{{{Let $P$ be the point in the interior of a convex polygon. Consider the projections of $P$ onto each of the sides of the polygon. Show that at least one of these projections lies within the polygon.}}}[/li]
+  [li]{{{Each lattice point in the plane is labeled with a positive integer, in such a way that the label of any point is the average of the labels of the lattice points adjacent to it (so the label of $(m,n)$ is the average of the labels of $(m-1,n)$, $(m+1,n)$, $(m,n+1)$, and $(m,n-1)$.) Show that each point has the same label.}}}[/li]
+  [li]{{{A solid figure has the property that each of its planar cross-sections is a circle. Show that the solid is a sphere.}}}[/li]
+  [li]{{{Show that every convex pentagon has three distinct diagonals that form the sides of a triangle.}}}[/li]
+  [li]{{{Prove that every polygon in the plane can be triangulated (that is, show that it is always possible to draw $n-2$ line segments between pairs of vertices of a polygon with $n$ vertices, such that each segment lies in the interior of the polygon, and no two segments intersect at a point in their interior.)}}}[/li]
+  [li]{{{(Putnam 1979) $A$ and $B$ are disjoint sets of $n$ points in the plane. No three points of $A \cup B$ are collinear. Is it always possible to label the points of $A$ as $A_1, A_2, \ldots, A_n$ and the points of $B$ as $B_1, B_2, \ldots, B_n$ so that no two of the $n$ segments $A_i B_i$ intersect?}}}[/li]
+  [li]{{{(Sylvester's theorem) There are $n$ points in the plane, not all of which are collinear. Show that there exists a line passing through exactly two of these points.}}}[/li]
+  [li]{{{(Dirac's theorem) Show that any graph with $n$ vertices, such that each vertex has degree at least $n/2$, has a Hamiltonian cycle.}}}[/li]
+[/ol]

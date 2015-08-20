@@ -1,0 +1,153 @@
+<<<Title: Sequences, Comrade!
+Author(s): Josh Nichols-Barrer
+Description: Black MOP 2005 Handout
+Topics: Sequences
+>>>
+
+[ol]
+  
+  [li]{{{(USSR 1961) Let $(a_n)_{n=0}^\infty$,
+  $(b_n)_{n=0}^\infty$, and $(c_n)_{n=0}^\infty$ be three sequences
+  of nonnegative integers.  Prove that there exist distinct positive
+  integers $p$ and $q$ with $a_p\geq a_q$, $b_p\geq b_q$, and
+  $c_p\geq c_q$.}}}[/li]
+  [li]{{{(IMO 75/2) Let $a_{1},a_{2},a_{3,}\cdots $ be an infinite
+  increasing sequence of
+  positive integers. Prove that for every $p\geq 1$ there are infinitely many $
+  a_{m}$ which can be written in the form
+  \[
+  a_{m}=xa_{p}+ya_{q}
+  \]
+  
+  with $x,y$ positive integers and $q>p.$}}}[/li]
+  [li]{{{(USSR 1976) Let $x_1$ and $x_2$ be nonnegative integers,
+  less than or equal to 1000.  Define a sequence recursively for
+  $n\geq 3$ by \[x_n = \min\{|x_i-x_j|, 1\leq i<j<n\}.\] Prove that
+  $x_{21} = 0.$}}}[/li]
+  [li]{{{(IMO 78/5) Let $\{a_{k}\}(k=1,2,3,...,n,...)$ be a
+  sequence of distinct
+  positive integers. Prove that for all natural numbers $n,$
+  \[
+  \sum_{k=1}^{n}\frac{a_{k}}{k^{2}}\ge \sum_{k=1}^{n}\frac{1}{k}.
+  \]}}}[/li]
+  [li]{{{(USSR 1968) Suppose $(a_1,\ldots,a_n)$ is a sequence of
+  numbers with $a_1=0$, and $|a_n|=|a_{n-1}+1|$ for each $n>1.$
+  Prove that \[\frac{a_1+a_2+\cdots+a_n}{n}\geq-\frac{1}{2}.\]}}}[/li]
+  [li]{{{(IMO 95/4) Find the maximum value of $x_0$ for which
+  there exists a sequence $x_0, x_1 \dots, x_{1995}$ of positive
+  reals with $x_0 = x_{1995}$, such that for $i = 1, \dots, 1995$,
+  \[
+  x_{i-1} + \frac{2}{x_{i-1}} = 2x_i + \frac{1}{x_i}.
+  \]}}}[/li]
+  [li]{{{(IMO 67/5) Consider the sequence $\{c_{n}\}$, where
+  
+  \begin{eqnarray*}
+  c_{1} &=&a_{1}+a_{2}+\cdots +a_{8} 
+  c_{2} &=&a_{1}^{2}+a_{2}^{2}+\cdots +a_{8}^{2} 
+  &&\cdots  
+  c_{n} &=&a_{1}^{n}+a_{2}^{n}+\cdots +a_{8}^{n} 
+  &&\cdots
+  \end{eqnarray*}
+  
+  in which $a_{1},a_{2},\cdots ,a_{8}$ are real numbers not all
+  equal to zero. Suppose that an infinite number of terms of the
+  sequence $\{c_{n}\}$ are equal to zero. Find all natural numbers
+  $n$ for which $c_{n}=0.$}}}[/li]
+  [li]{{{(USSR 1968) Suppose $(a_1,\ldots,a_n)$ and
+  $(b_1,\ldots,b_n)$ are two rearrangements of
+  $(1,1/2,1/3,\ldots,1/n),$ so that \[a_1+b_1\geq
+  a_2+b_2\geq\cdots\geq a_n+b_n.\]  Prove that for every $m$ with
+  $1\leq m\leq n$, we have \[a_m+a_n\geq \frac{4}{m}.\]}}}[/li]
+  [li]{{{(IMO 82/3) Consider the infinite sequences $\{x_{n}\}$ of
+  positive real numbers with the following properties:
+  
+  \[
+  x_{0}=1,\text{and for all }i\ge 0,x_{i+1}\le x_{i}.
+  \]
+  
+  (a) Prove that for every such sequence, there is an $n\ge 1$ such
+  that
+  \[
+  \frac{x_{0}^{2}}{x_{1}}+\frac{x_{1}^{2}}{x_{2}}+\cdots +\frac{x_{n-1}^{2}}{
+  x_{n}}\ge 3.999.
+  \]
+  
+  (b) Find a such a sequence $(x_i)$ so that for every $n$,
+  \[
+  \frac{x_{0}^{2}}{x_{1}}+\frac{x_{1}^{2}}{x_{2}}+\cdots +\frac{x_{n-1}^{2}}{
+  x_{n}}<4.
+  \]}}}[/li]
+  [li]{{{(IMO 70/3) The real numbers $a_{0},a_{1},...,a_{n},...$
+  satisfy the condition:
+  \[
+  1=a_{0}\leq a_{1}\leq a_{2}\leq \cdots \leq a_{n}\leq \cdots .
+  \]
+  
+  The numbers $b_{1},b_{2},...,b_{n},...$ are defined by
+  \[
+  b_{n}=\sum_{k=1}^{n}\left( 1-\frac{a_{k-1}}{a_{k}}\right) \frac{1}{\sqrt{
+  a_{k}}}.
+  \]
+  
+  (a) Prove that $0\leq b_{n}<2$ for all $n.$
+  
+  (b) Given $c$ with $0\leq c<2,$ prove that there exist numbers $
+  a_{0},a_{1},...$ with the above properties such that $b_{n}>c$ for
+  large enough $n.$}}}[/li]
+  [li]{{{(USSR 1968) Define the sequence $(a_n)_{n=1}^\infty$ by
+  $a_1=1$ and \[ a_{n+1} = a_n+\frac{1}{a_n}\] for $n\geq 1$.  Prove
+  that $a_{100}>14$.}}}[/li]
+  [li]{{{(IMO 94/1) Let $m$ and $n$ be positive integers. Let
+  $a_1, a_2, \dots, a_m$ be distinct elements of $\{1, 2, \dots,
+  n\}$ such that whenever $a_i + a_j \leq n$ for some $i, j$, $1
+  \leq i \leq j \leq m$, there exists $k$, $1 \leq k \leq m$, with
+  $a_i + a_j = a_k$. Prove that
+  \[
+  \frac{a_1 + a_2 + \cdots + a_m}{m} \geq \frac{n+1}{2}.
+  \]}}}[/li]
+  [li]{{{(IMO 73/6) Let $a_{1},a_{2},...,a_{n}$ be $n$ positive
+  numbers, and let $q$ be a given real number such that $0<q<1.$
+  Find $n$ numbers $b_{1},b_{2},...,b_{n}$ for which
+  
+  (a) $a_{k}<b_{k}$ for $k=1,2,\cdots ,n,$
+  
+  (b) $q<\frac{b_{k+1}}{b_{k}}<\frac{1}{q}$ for $k=1,2,...,n-1,$
+  
+  (c) $b_{1}+b_{2}+\cdots +b_{n}<\frac{1+q}{1-q}(a_{1}+a_{2}+\cdots
+  +a_{n}).$}}}[/li]
+  [li]{{{(USSR 1982) Let $a_1,\ldots a_n$ be a sequence of reals.
+  Prove that it is possible to find a subsequence
+  $S=(a_{i_{1}},a_{i_{2}},\ldots,a_{i_{r}})$ of this sequence
+  ($1\leq i_1<i_2<\cdots<i_r\leq n$) such that:
+  
+   [ol][li]For every three successors $a_k, a_{k+1}, a_{k+2}$ in
+  the original sequence, at least one of these terms is in $S$ and
+  at least one is not.[/li]
+    [li]The following inequality holds:
+  \[\left|\sum_{s=1}^ra_{i_{s}}\right|\geq\frac{1}{6}\sum_{i=1}^n
+  |a_i|.\][/li][/ol]}}}[/li]
+  [li]{{{(IMO 85/6) For every real number $x_{1},$ construct the sequence $
+  x_{1},x_{2},...$ by setting
+  \[
+  x_{n+1}=x_{n}\left( x_{n}+\frac{1}{n}\right) \text{for each }n\geq
+  1.
+  \]
+  Prove that there exists exactly one value of $x_{1}$ for which
+  \[
+  0<x_{n}<x_{n+1}<1
+  \]
+  for every $n.$}}}[/li]
+  [li]{{{(USSR 1985) The set $\{1,2,\ldots 2n\}$ is divided into
+  two sets $S$ and $T$ of equal size $n$.  Suppose
+  $S=\{a_1,\ldots,a_n\}$ and $T=\{b_1,\ldots,b_n\}$, in increasing
+  order.  Prove that
+  \[|a_1-b_n| + |a_2-b_{n-1}|+\cdots+|a_n-b_1| = n^2.\]}}}[/li]
+  [li]{{{(IMO 96/6) Let $p,q,n$ be three positive integers with
+  $p+q < n$. Let $(x_{0}, x_{1}, \dots, x_{n})$ be an $(n+1)$-tuple
+  of integers satisfying the following conditions:
+   [ol][li]For each $i$ with $1
+  \leq i \leq n$, either $x_{i} - x_{i-1} = p$ or $x_{i} - x_{i-1} =
+  -q$.[/li][/ol]
+  Show that there exist indices $i < j$ with $(i,j) \neq (0, n)$,
+  such that $x_{i} = x_{j}$.}}}[/li]
+[/ol]

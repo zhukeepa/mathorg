@@ -1,0 +1,106 @@
+<<<Title: Generating Functions
+Author(s): Maria Monks 
+Description: Red MOP 2012 Handout
+Topics: Generating functions
+>>>
+
+"A generating function is a clothesline on which we hang a sequence of numbers up for display."
+--Herbert Wilf, [i]Generatingfunctionology[/i]
+
+[h2]Generating function basics[/h2]
+
+  Generating functions are a useful tool for solving combinatorial problems.
+
+A classic example of a generating function identity is the geometric series formula $$\frac{1}{1-x}=1+x+x^2+x^3+\cdots.$$  (The term [i]function[/i] is misleading - here $x$ is just a formal symbol, and the coefficients of the series are the important part!)
+
+[b]Definition 1.[/b] The [i](ordinary) generating function[/i] of the sequence $c_0,c_1,c_2,\ldots$ with variable $x$ is the expression $$c_0+c_1x+c_2x^2+\cdots.$$  We abbreviate this series as $$\sum_{i=0}^\infty c_ix^i.$$
+
+Generating functions can be added and multiplied together.  They can also be differentiated, and sometimes composed!  
+
+The following are [i]definitions[/i] of addition, multiplication, differentiation, and composition of generating functions (we're starting from the beginning here - no calculus allowed.)
+
+[ul][li][b]Addition:[/b] $\sum_{i=0}^\infty a_i x^i+\sum_{i=0}^\infty b_i x^i=\sum_{i=0}^\infty (a_i+b_i) x^i$[/li]
+  [li][b]Multiplication:[/b] $\left(\sum_{i=0}^\infty a_i x^i\right)\cdot \left(\sum_{i=0}^\infty a_i x^i\right)=\sum_{n=0}^\infty \left(\sum_{i=0}^n a_ib_{n-i}\right)x^n$[/li]
+  [li][b]Differentiation:[/b] $\frac{d}{dx} \left(\sum_{n=0}^\infty a_n x^n\right)=\sum_{i=1}^\infty na_nx^{n-1}$[/li]
+  [li][b]Composition:[/b] If $F(x)=f_0+f_1x+f_2x^2+\cdots$ and $G(x)=g_1x+g_2x^2+\cdots$, then $$F\circ G(x)=\sum_{n\ge 0} f_nG(x)^n=\sum_{N=0}^\infty h_N x^N$$ where $$h_N=\sum_{s_1+\cdots+s_k=N} f_kg_{s_1}g_{s_2}\cdots g_{s_n}.$$[/li][/ul]
+
+[b]Exercise 1.[/b] {{{Is there a generating function that behaves like an additive identity?  A multiplicative identity?  Can subtraction and division of generating functions be defined?  Why did we only define composition above in the case that $G$ has no constant term?}}}
+
+[b]Exercise 2.[/b] {{{Use the definitions above to prove the generating function identity $$\frac{1}{1-x}=1+x+x^2+x^3+\cdots.$$  Notice that $1-x=1-x+0\cdot x^2+0\cdot x^3+\cdots$ is a generating function as well.}}}
+
+[h2]Tricks for manipulating generating functions[/h2]
+
+Let $F(x)=\sum_{n=0}^\infty a_n x^n$ and $G(x)=\sum_{n=0}^\infty b_n x^n$ be generating functions over $x$.  Try your hand at proving the following identities, using only the definitions above.
+
+[ul][li]$x F(x)=\displaystyle\sum_{n=1}^\infty a_{n-1}x^n$[/li]
+  [li]$\displaystyle{\frac{F(x)-a_0}{x} = \sum_{n=0}^\infty a_{n+1}x^n}$[/li]
+  [li]$\displaystyle{\frac{d}{dx} (F(x)+G(x))=\frac{d}{dx}F(x)+\frac{d}{dx}G(x)}$[/li]
+  [li]$\displaystyle{\frac{d}{dx} (F(x)G(x))=G(x)\cdot\frac{d}{dx}F(x)+F(x)\cdot \frac{d}{dx}G(x)}$[/li]
+  [li]If $b_0\neq 0$, $G(x)$ has a multiplicative inverse: $$G(x)^{-1}=b_0^{-1}-b_0^{-1}b_1x+ (b_0^{-3}b_1^2-b_0^{-2}b_2)x^2+\cdots.$$[/li]
+  [li]If $b_0\neq 0$, $\displaystyle{\frac{d}{dx} \left(\frac{F(x)}{G(x)}\right)=\frac{G(x)\frac{d}{dx}F(x)-F(x)\frac{d}{dx}G(x)}{G(x)^2}}$.[/li][/ul]
+
+[b]Exercise 3.[/b] {{{Show that
+ $$\frac{1}{(1-x)^2}=1+2x+3x^2+4x^3+5x^4+\cdots.$$}}}
+
+[h2]Using generating functions to solve recurrences[/h2]
+
+Suppose we wish to find an explicit formula for the $n$th Fibonnacci number $F_n$, where $F_0=0$, $F_1=1$, and $F_{n}=F_{n-1}+F_{n-2}$ for all $n\ge 2$.  Consider the generating function $$G(x)=\sum_{n=0}^\infty F_n x^n.$$  Let's manipulate this to take advantage of the recursion:
+$$ G(x)-xG(x)-x^2G(x) = F_0+F_1x-F_0x+\sum_{n=2}^\infty (F_n-F_{n-1}-F_{n-2}) x^n =x.$$
+Thus $G(x)=x/(1-x-x^2)$.  Using partial fractions and expanding each term as a geometric series, we find that $$G(x)=\sum_{n=0}^\infty \frac{1}{\sqrt{5}}\left(\left(\frac{1+\sqrt{5}}{2}\right)^n-\left(\frac{1-\sqrt{5}}{2}\right)^n\right)x^n,$$ and so $F_n=\frac{1}{\sqrt{5}}\left(\left(\frac{1+\sqrt{5}}{2}\right)^n-\left(\frac{1-\sqrt{5}}{2}\right)^n\right)$.
+
+[b]Exercise 4.[/b] {{{Use generating functions to find an explicit formula for the $n$th term in the sequence $a_n$ where $a_0 = 1$, $a_1 = 5$, $a_{n+2} = 4a_{n+1} -3a_n$.}}}
+
+[h2]Exponential generating functions[/h2]
+
+We now have a good handle on ordinary generating functions.  But there are other useful generating functions associated to a given sequence of numbers!
+
+[b]Definition 2.[/b] The [i]exponential generating function[/i] for the sequence $\{a_i\}_{i=0}^\infty$ is the series $\sum_{n=0}^\infty \frac{a_n}{n!}x^n$.
+
+[b]When to use them:[/b]  Exponential generating functions are often useful for dealing with sequences that count [i]labeled[/i] objects, whereas ordinary generating functions are better for [i]unlabeled[/i] objects.  
+
+For instance, if we let $p(n)$ be the number of ways of sorting $n$ indistinguishable balls into various groups, and let $B(n)$ be the number of ways of sorting $n$ balls labeled $1,2,\ldots,n$ into various groups, it is easy to work with the ordinary generating function for $p(n)$ and the exponential generating function for $B(n)$, but not the other way around. (See Problems.)
+
+[b]Behaviour:[/b]  The product of exponential generating functions behaves somewhat differently from that of ordinary generating functions:
+$$\left(\sum_{n=0}^\infty \frac{a_n}{n!}x^n\right)\cdot \left(\sum_{n=0}^\infty \frac{b_n}{n!}x^n\right)=\sum_{n=0}^\infty \frac{1}{n!}\left(\sum_{k=0}^n\binom{n}{k}a_k b_{n-k}\right)x^n$$
+
+[b]Exercise 5.[/b] {{{What do addition and differentiation do to exponential generating functions?}}}
+
+We can define $e^{x}$, $\sin(x)$, and $\cos(x)$ to be the exponential generating functions shown below.  
+[ul][li]$e^{x}=\sum_{n=0}^\infty \frac{1}{n!}x^n$[/li]
+  [li]$\sin(x)=\sum_{n=0}^\infty (-1)^n\frac{1}{(2n+1)!}x^{2n+1}$[/li]
+  [li]$\cos(x)=\sum_{n=0}^\infty (-1)^n\frac{1}{(2n)!}x^{2n}$[/li][/ul]
+
+[b]Exercise 6.[/b] {{{Using the definition of $e^x$ as a generating function, show that $e^{x}e^{y}=e^{x+y}$ and that $\frac{d}{dx}e^{x}=e^x$.}}}
+
+And now for some...
+
+[h2]Problems![/h2]
+
+[ol]
+  [li]{{{Prove the following generating function identities:
+  [ol][li]$(1+x)^{n}=\sum_{k=0}^n \binom{n}{k}x^k$[/li]
+    [li]$(1-x)^{-n}=\sum_{k=0}^\infty \binom{-n}{k}(-x)^k=\sum_{k=0}^\infty \binom{n+k-1}{k} x^k$[/li]
+    [li]$\frac{1}{1-y(1+x)}=\sum_{k,n}\binom{n}{k}x^ky^n$[/li][/ol]}}}[/li]
+  [li]{{{(Andy Niedermaier.)  Find a closed form for the generating function for each of the following sequences, and use it to find an explicit formula for $a_n$:
+  [ol][li]$a_0 = 1$, $a_1 = 6$, $a_{n+2} = 4a_{n+1} - 4a_n$[/li]
+    [li]$a_0 = 0$, $a_1 = 5$, $a_2 = 47$, $a_{n+3} = 31a_{n+1} + 30a_n$[/li]
+    [li]$a_0 = a_1 = 1$, $a_{n+2} = a_{n+1} + 6a_n + n$[/li][/ol]}}}[/li]
+  [li]{{{Simplify $\sum_{n=0}^\infty n^2 x^n$.  (There are at least three nice ways of doing this!)}}}[/li]
+  [li]{{{Prove the following combinatorial identities using generating functions:
+  [ol][li]$\sum_{k=0}^n\binom{n}{k}^2=\binom{2n}{n}$[/li]
+    [li]$\sum_{k=0}^n k \binom{n}{k}=n\cdot 2^{n-1}$[/li]
+    [li]$\binom{n}{0}+\binom{n}{2}+\binom{n}{4}+\cdots=\binom{n}{1}+\binom{n}{3}+\binom{n}{5}+\cdots=2^{n-1}$[/li][/ol]}}}[/li]
+  [li]{{{Find an explicit formula for $$\binom{n}{0}+\binom{n}{3}+\binom{n}{6}+\binom{n}{9}+\cdots$$ in terms of $n$.}}}[/li]
+  [li]{{{(360 Problems for Mathematical Contests.) Find a closed form expression for the sum $$S_n=\binom{n}{1}-3\binom{n}{3}+5\binom{n}{5}-7\binom{n}{7}+\cdots.$$}}}[/li]
+  [li]{{{In each of the following, find the ordinary generating function for the sequence whose $n$th term is described below.
+     [ol][li]The number of subsets of $\{1,2,\ldots,n\}$.[/li]
+    [li]$p(n)$, the number of [i]partitions[/i] of $n$.  That is, the number of ways of writing $n$ as a sum of positive integers where order doesn't matter.[/li]
+    [li]The number of partitions of $n$ into distinct parts.[/li]
+    [li]The number of partitions of $n$ into odd parts.  How does this relate to the generating function for partitions into distinct parts?[/li]
+    [li]The number of [i]$k$-compositions[/i] of $n$, that is, ways of writing $n$ as a sum of $k$ [i]ordered[/i] nonnegative integers $s_1,\ldots,s_k$.[/li]
+    [li]The number of integer lattice paths from $(0,0)$ to $(n,n)$, going either one unit right or one unit up at each step, such that every point $(x,y)$ on the path satisfies $y\le x$.[/li][/ol]}}}[/li]
+  [li]{{{(HMMT 2007.)  Let $S$ denote the set of all triples $(i,j,k)$ of positive integers satisfying $i+j+k=17$.  Compute $$\sum_{(i,j,k)\in S} ijk.$$}}}[/li]
+  [li]{{{[b]Signless Stirling Numbers of the First Kind:[/b] Let $c(n,k)$ be the number of permutations of $\{1,2,\ldots,n\}$ which are a product of $k$ cycles.  Prove that $$\sum_{k}c(n,k)y^k=y(y+1)\cdots(y+n-1).$$}}}[/li]
+  [li]{{{[b]Stirling Numbers of the Second Kind:[/b] Let $S(n,k)$ be the number of ways of partitioning a set of $n$ labeled elements into $k$ nonempty unordered blocks. Show that $$\sum_{n} S(n,k)x^n=\frac{x^k}{(1-x)(1-2x)\cdots (1-kx)}.$$}}}[/li]
+  [li]{{{[b]Derangements:[/b] Let $D_n$ be the number of [i]derangements[/i] of $n$, that is, the number of permutations $\phi$ of $\{1,2,\ldots,n\}$ such that $\phi(i)\neq i$ for any $1\le i \le n$.  Find a closed form expression for the exponential generating function of $D_n$.  (Hint: Multiply $D(x)=\sum_{n\ge 0} \frac{D_n}{n!} x^n$ by $e^x$.)}}}[/li]
+[/ol]

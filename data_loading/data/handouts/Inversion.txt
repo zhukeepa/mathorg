@@ -1,0 +1,287 @@
+<<<Title: Inversion
+Author(s): Ian Le
+Description: MOP 2013 Handout
+Topics: Inversion
+>>>
+
+Let's warm up by reviewing some basic facts about power of a point.
+
+What are the possible values for the power of a point with respect to a circle? What is the locus of points with a fixed power with respect to a circle? Show that the power of a point outside of a circle is equal to $t^2$, where $t$ is the length of the tangent.
+
+Construct the radical axis of two circles with a compass and straight-edge.
+
+How do you calculate power of a point in co-ordinates? How do you calculate the radical axis of two circles in co-ordinates?
+
+What is the radical axis of two concentric circles? What is the radical axis of a line and a circle?
+
+What is the power of the incenter with respect to the circumcircle?
+
+[h4]What is inversion?[/h4]
+
+There are many ways to define inversion, some of them quite
+beautiful, but in terms of sheer usefulness there's none better
+than the simplest. An [i]inversion[/i] in a circle $C$ with radius
+$r$ and center $O$ takes any point $P$ to another point $P'$ on
+$OP$ such that $OP \cdot OP' = r^2$. The power of inversion is not
+obvious from this definition, but at least it's clear. Note that
+the set of fixed points is precisely the circle $C$.
+
+The first question that springs to mind about this transformation
+should be: What happens to $O$? There's no line $OO$ and the
+inverse of the length of $OO$ is not defined. But if $O$ isn't mapped
+anywhere, that means nothing gets mapped to $O$ (an inversion is,
+appropriately enough, it's own inverse) and things start going
+bad. For example, what happens when two inversions are composed?
+Does this new transformation have two points that don't go
+anywhere?
+
+To solve the conundrum we need to extend our plane to include a
+point that can be the image of $O$.
+
+The [i]inversive plane[/i] is the standard plane with an
+additional [i]point at infinity[/i] $\omega$ added that lies on
+every line and is infinitely far from every point. One way to think about this is through stereographic projection.
+
+This alters one of the basic properties of plane geometry. In the
+brave new world of the inversive plane every pair of non-parallel
+lines intersect in two points and every pair of parallel lines
+intersect in one point. This is reminiscent of the properties of
+circles and there is indeed a deep connection between lines and
+circles in the inversive plane. We call any line or circle in the
+inversive plane an [i]inversive circle[/i].
+
+We can now clarify our definition of inversion by defining it on
+the inversive plane and mapping $O$ and $\omega$ to each other.
+
+[h4]First properties of inversion[/h4]
+
+The fundamental property of inversion is simply that it maps
+inversive circles to inversive circles.
+
+[b]Exercise I1[/b] - Prove this statement. (One can do this using coordinates or by showing that the cross-ratio of four points is preserved by inversion. See below.) 
+
+Find the conditions under which the following occur:[ol]
+  [li]A circle is mapped to a circle.[/li]
+  [li]A circle is mapped to a line.[/li]
+  [li]A line is mapped to a circle.[/li]
+  [li]A line is mapped to a line.[/li]
+[/ol]
+
+Exercise I1 makes clear the relationship between circles and
+lines, and is enough to demonstrate many correspondences between
+properties of circles and lines. For example, parallel lines should be considered as
+tangent circles.
+
+[b]Exercise I2[/b] 
+[ol][li]{{{If $PA$ and $PB$ are tangents to $\omega$ from $P$, the midpoint of $AB$ is the inverse of $P$.}}}[/li]
+  [li]{{{Construct the inverse of a point using only compass.}}}[/li]
+  [li]{{{Let $A', B'$ be the inverses of $A, B$ in a circle centered at $O$. Show $\angle OAB=\angle OB'A'$.}}}[/li]
+  [li]{{{Prove the inversive distance formula: \[A'B'=\frac{r^2 \cdot AB}{OA \cdot OB}\]}}}[/li]
+  [li]{{{Prove Ptolemy's theorem.}}}[/li]
+  [li]{{{If four points $A, B, C, D$ do not lie on a circle, show that there exist two non-intersecting circles, one through $A$ and $C$, the other through $B$ and $D$. If $A, B, C, D$ do lie on a circle, when is it not possible to find two such circles? In such a situation, we say that $A$ and $C$ [i]separate[/i] $B$ and $D$.}}}[/li]
+  [li]{{{The cross ratio of four points, $\{AB,CD\}$ is defined as $$\frac{AC \cdot BD}{AD \cdot BC}.$$ Show that inversion preserves cross ratio. By rephrasing Ptolemy's inequality in terms of cross ratios, show that inversion preserves circles.}}}[/li]
+  [li]{{{Use co-ordinates to show that inversion preserves circles.}}}[/li]
+[/ol]
+
+[h4]Angles under inversion[/h4]
+
+Like reflection, inversion is orientation-reversing but otherwise
+preserves angles between lines. At first glance it may not be
+clear what that means, since lines don't necessarily end up as
+lines. By defining the angle between two circles to be the angle
+between their tangent lines that problem is solved and the more
+general statement becomes clear: Inversion reverses all angles
+between inversive circles.
+
+[b]Exercise I3[/b] - Prove the previous statement. Show that angles (between two circles) are preserved under inversion. More precisely, the angle between two circles is reversed under inversion if we direct angles modulo $\pi$. First consider the case of two lines, and finish the proof by observing that the property of tangency is preserved.
+
+Another possibility is to show the following lemma: Let $C_1$ be an inversive
+circle and $C'_1$ its inverse under an inversion with center $O$.
+If $P$ is a point on $C_1$ with image $P'$, then the tangent to
+$C'_1$ at $P'$ is the reflection of the tangent to $C_1$ at $P$
+about the perpendicular bisector of $PP'$.
+
+[b]Exercise I4[/b] - The angle between lines that pass through the
+origin seems to be preserved by inversion. Why does this not
+contradict the previous exercise? \sk
+
+[b]Exercise I5[/b] - Let $O, A, B$ be collinear. For any point $C$ not on line $AB$, show that $\angle ACB = -\angle A'C'B'$. \sk
+
+[h4]Orthogonal Circles[/h4]
+
+Orthogonal circles have particularly nice properties under
+inversion. Because angles are preserved, orthogonal circles are sent to orthogonal circles. Thus any circle orthogonal to the circle of inversion is fixed.
+
+[b]Exercise I6[/b] - If circle $C_1$ is orthogonal to $C$, show that
+it is fixed by inversion in $C$. In addition, if $C_1$ and $C_2$
+are both orthogonal to $C$ and intersect at $X$ and $Y$, show that
+$X$ and $Y$ are inverses in $C$. This is one reason that inversion
+is sometimes called [i]reflection in a circle[/i]. Moreover, show that inversion in a circle $\omega$ can be defined as the unique transformation taking circles orthogonal to $\omega$ to themselves and exchanging the inside and outside of $\omega$. Use this to define inversion in a line. \sk
+
+The above exercise allows us to define inversion purely in terms of circles, incidence and orthogonality. Thus inversion may be defined without appealing to the notion of distance.
+
+One failing of inversion is that it doesn't deal well with the
+centers of circles. This may seem strange because the circles
+themselves are so well preserved under inversion, but
+unfortunately the center of a circle is not generally mapped to
+the center of it's inverse. (In fact a good counterexample is the circle of inversion itself!) By symmetry, the two centers do line
+on a line through the center of inversion, but the distances don't
+work out correctly.
+
+One way to get a handle on centers of circles is by observing that inversion in a circle $\omega$ takes a circle $\alpha$ and any pair of inverse points $P, Q$ in $\alpha$ to $\alpha'$ and $P', Q'$, where $P'$ and $Q'$ are inverse in $\alpha'$.
+
+The question of how many degrees of freedom are available in the
+set of inversions is a complicated one: the answer is
+approximately three. One of the most important degrees of freedom-related
+theorems is that there exists an inversion mapping two given
+nonintersecting circles to concentric circles. This is
+particularly interesting given the previous paragraph and offers
+one more way to get a handle on the centers of circles using
+inversion. The next few exercises ask you to prove some
+degrees-of-freedom-related theorems.
+
+[b]Exercise I7[/b] - Find an inversion that maps two given
+nonintersecting circles to concentric circles.
+
+[b]Exercise I8[/b] - Show that for many sets of three circles there
+is an inversion which inverts each one to itself. When is this not
+true?
+
+[b]Exercise I9[/b] - Show that any three points can be inverted to the vertices of a triangle similar to a given triangle. (Hint: If $A, B, C$ invert to $A', B', C'$ then $\angle BOC=\angle BAC + \angle B'A'C'$.)
+
+[b]Exercise I10[/b] - Some more miscellaneous problems.
+
+[ol]
+[li]{{{Let $\omega$ be a circle with center $O$. If $\alpha$ is a circle through $O$, then its inverse is the radical axis of $\alpha$ and $\omega$.}}}[/li]
+  [li]{{{Circle of Apollonius. Let $A$ and $A'$ be inverses in $\omega$. Show that as $P$ varies along $\omega$, $PA'/PA$ is constant.}}}[/li]
+  [li]{{{Given two points inside a circle just two circles can be drawn tangent to the given circle.}}}[/li]
+  [li]{{{Given three mutually tangent circles, show there are two circles that are tangent to all three.}}}[/li]
+  [li]{{{Given three circles, how many circles are tangent to all three?}}}[/li]
+  [li]{{{Let the circle with diameter $OA$ intersect $\omega$ in $B$ and $C$. Show that the circle centered at $A$ through $B$ and $C$ is orthogonal to $\omega$.}}}[/li]
+  [li]{{{Suppose inversion in $\omega$ takes $\alpha$ to $\alpha'$. What is the relationship between the powers of $O$ with respect to $\alpha$ and $\alpha'$?}}}[/li]
+  [li]{{{Given two points $P$, $Q$ and a circle, construct a circle orthogonal to the circle passing through $P$ and $Q$. Given a point $P$ and two circles, construct a circle orthogonal to these circles through $P$.}}}[/li]
+  [li]{{{Given a point $P$ and two circles, construct a circle through $P$ orthogonal to the two original circles.}}}[/li]
+  [li]{{{Given a circle , a point $P$ on the circle and another point $O$ not on the circle, construct another circle tangent to the original circle at $P$ and passing through $O$.}}}[/li]
+  [li]{{{What is the power of a point in a line?}}}[/li]
+[/ol]
+
+
+[h4]Using Inversion[/h4]
+
+Most of the time, inversion can be used with the
+``invert-solve-uninvert'' strategy. By choosing a nice point to
+invert about, inconvenient circles can become lines -- this is
+known as the "busy point" method. The following problem is a
+classic.
+
+[i]Problem[/i] - Cyclic quadrilateral $ABCD$ is given
+in the plane. Find the locus of points $X$ such that the
+circumcircles of triangles $ABX$ and $CDX$ are tangent.
+
+[i]Solution[/i] - Invert the diagram about $A$. The
+points $B',C',D'$ are collinear and we are looking for points $X'$
+such that the line $B'X'$ is tangent to circle $C'D'X'$. But by
+power of a point, $B'X'$ is tangent to circle $C'D'X$ if and only
+if $B'X'^2 = (B'C')(B'D')$ Thus all such $X'$ lie on a circle
+centered at $B'$. The inverse of this circle, and the solution to
+the problem, is therefore a circle or line. Since the circle is
+orthogonal to line $B'C'D'$, the inverse must be orthogonal to the
+circle $ABCD$. Also, since the circle is centered at $B'$, it's
+inverse is centered at a point on $AB$. By a similar inversion
+about $D$, that center must be on $CD$ as well, and therefore be
+centered at the intersection of $AB$ and $CD$. If $AB$ and $CD$
+are parallel, the locus is the symmetry line of the figure. \sk
+
+Another common trick is to use inversion to pull far-apart angles
+together. Although the procedure may seem magical at first, after
+a little practice it will be quite natural.
+
+[i](IMO 1996/2)[/i] - Let $P$ be a point inside
+triangle $ABC$ such that
+$$\angle APB - \angle ACB = \angle APC - \angle ABC.$$
+Let $D$ and $E$ be the incenters of triangles $APB$ and $APC$
+respectively. Show that $AP,BD$, and $CE$ meet at a point.
+
+[i]Solution[/i] - We simply need to prove that the
+angle bisectors of $\angle ABP$ and $\angle ACP$ hit line $AP$ at
+the same point. By the angle bisector theorem, this is equivalent
+to the expression
+$$\frac{BP}{AB} = \frac{CP}{AC}.$$
+The angle constraint is fairly ugly, so we invert about $A$ and
+produce some similar triangles, namely $APC$ similar to $AC'P'$,
+$APB$ similar to $AB'P'$ and $ABC$ similar to $AC'B'$. Thus
+$\angle APB = \angle AB'P'$ and $\angle ACB = \angle AB'C'$
+telling us that $\angle C'B'P = \angle AB'P' - \angle AB'C' =
+\angle APB - \angle ACB$. Performing similar work on the other
+side of the angle constraint, and equating, we get $\angle C'B'P =
+\angle PC'B'$. Thus $B'P' = P'C'$ and using the inversive distance
+formula, we have \beqa
+BP \frac{r^2}{AB \cdot AP} &=& CP \frac{r^2}{AC \cdot AP} \\
+\frac{BP}{AB} &=& \frac{CP}{AC} \eeqa which is exactly what we
+wished to prove. \sk
+
+[h4]Inversion and Complex Numbers[/h4]
+
+[b]Exercise I11[/b] - Relations between inversion and complex numbers:
+
+[ol]
+
+[li]{{{Inversion in the plane becomes (up to conjugation) a fractional linear transformations of the plane.}}}[/li]
+  [li]{{{For four points $z_1, z_2, z_3, z_4$ in the complex plane, their cross ratio is defined as $$[z_1, z_2, z_3, z_4]=\frac{(z_1-z_2)(z_3-z_4)}{(z_1-z_4)(z_3-z_2)}.$$}}}[/li]
+  [li]{{{Four points are cyclic if and only if their cross ratio is real.}}}[/li]
+  [li]{{{If two circles intersect at $z_1$ ad $z_3$, and $z_2$ is a point on one circle and $z_4$ is a point on another, then the argument of the cross ratio $[z_1, z_2, z_3, z_4]$ is the angle between the two circles.}}}[/li]
+  [li]{{{Reprove the basic facts of inversion using complex numbers.}}}[/li]
+  [li]{{{Prove Ptolemy's theorem using complex numbers.}}}[/li]
+[/ol]
+
+[h3]Problems[/h3]
+
+All of these problems should be solved by using at least one
+inversion.
+
+[ol]
+
+
+
+[li]{{{If circles $k_1$, $k_2$, and $k_3$ are tangent in pairs at points $A$, $B$, and $C$, prove that the tangent lines to the circles at $A$, $B$, and $C$ intersect at the circumcenter of triangle $ABC$.}}}[/li]
+  [li]{{{Through the vertex $B$ of triangle $ABC$ consider two lines
+that are symmetric with respect to the bisector of $\angle ABC$,
+and let $D$ and $E$ be their intersections with $AC$. Prove that
+$$ \frac{BC^2}{BA^2} = \frac{CD \cdot CE}{AD \cdot AE}.$$}}}[/li]
+  [li]{{{(USAMO 1995/3) Given a nonisosceles, nonright triangle $ABC$,
+let $O$ denote the center of its circumscribed circle, and let
+$A_1$, $B_1$, and $C_1$ be the midpoints of sides $BC$, $CA$, and
+$AB$ respectively. Point $A_2$ is located on the ray $OA_1$ so
+that triangle $OAA_1$ is similar to triangle $OA_2A$. Points $B_2$
+and $C_2$ on rays $OB_1$ and $OC_1$, respectively, are defined
+similarly. Prove that lines $AA_2$, $BB_2$, and $CC_2$ are
+concurrent.}}}[/li]
+  [li]{{{(USAMO 1993/2) Let $ABCD$ be a convex quadrilateral with
+perpendicular diagonals meeting at $O$. Prove that the reflections
+of $O$ across $AB, BC, CD, DA$ are concyclic. (For an added
+challenge, find a non-inversive proof as well.)}}}[/li]
+  [li]{{{(Pappus's Arbelos Problem) Circles $S_1$ and $S_2$ are externally
+tangent to each other and internally tangent to $S$ and the
+diameters of all three circles lie on a line, $l$. Circle $S_3$ is
+externally tangent to $S_1$ and $S_2$ and internally tangent to
+$S$. Prove that the distance from the center of $S_3$ to $l$ is
+the length of the diameter of $S_3$. (For an added challenge,
+extend this result to the circle $S_4$, externally tangent to
+$S_1$ and $S_3$ and internally tangent to $S$.)}}}[/li]
+  [li]{{{(IMO 1999/5) The circles $\Gamma_1$ and $\Gamma_2$ lie inside circle $\Gamma$, and are tangent to it at $M$ and $N$,
+respectively. It is given that $\Gamma_1$ passes through the center of $\Gamma_2$. The common
+chord of $\Gamma_1$ and $\Gamma_2$, when extended, meets $\Gamma$ at $A$ and $B$. The lines $MA$ and
+$MB$ meet $\Gamma_1$ again at $C$ and $D$. Prove that the line $CD$ is tangent to $\Gamma_2$.}}}[/li]
+  [li]{{{Draw a semicircle with diameter $AB$ and center $O$, then draw a line which intersects the semicircle at $C$ and $D$ and which
+intersects line $AB$ at $M$, such that $MB < MA$ and $MD < MC$. Let $K$ be the second point of intersection of the circumcircles
+of triangles $\triangle AOC$ and $\triangle DOB$. Prove that $\angle MKO$ is a right angle.}}}[/li]
+  [li]{{{Circles $ABC$, $ABD$, and $ACD$ are drawn in the plane and the tangents to $ABC$, $ABD$, $ACD$ at $A$ intersect $BC$ at $R$, $BD$ at $S$, and $CD$ at $T$, respectively. Prove that $R,S,T$ are collinear.}}}[/li]
+  [li]{{{(USAMO 2009/1) Given circles $\omega_1$ and $\omega_2$ intersecting at points $X$ and $Y$, let $l_1$ be a line through the center of $\omega_1$ intersecting $\omega_2$ at points $P$ and $Q$ and let $l_2$ be a line through the center of $\omega_2$ intersecting $\omega_1$ at points $R$ and $S$. Prove that if $P, Q, R$ and $S$ lie on a circle then the center of this circle lies on line $XY$.}}}[/li]
+  [li]{{{A cyclic quadrilateral $ABCD$ is given. Show that there exist unique points $M$ and $N$ on $AB$ and $CD$ respectively so that segment $MN$ bisects $\angle ANB$ and $\angle CMD$. Construct these points.}}}[/li]
+  [li]{{{Prove Feuerbach's theorem, which says that the nine-point circle
+is tangent to the incircle and all three excircles. The nine-point
+circle of a triangle passes through the midpoints of the sides and
+the feet of the altitudes.}}}[/li]
+  [li]{{{Descartes Four Circles theorem says that given four circles that are mutually tangent, if their curvatures are $c_1, c_2, c_3, c_4$ (the curvature is the inverse of the radius) then $$(c_1+ c_2+ c_3+ c_4)^2=2(c_1^2+ c_2^2+ c_3^2+ c_4^2).$$ The standard proof uses the law of cosines repeatedly. Use inversion to give another proof. (You will need to find a formula expressing the radius of an inverted circle in terms of the radius of the original and the distance of the original circle from the center of inversion.)}}}[/li]
+  [li]{{{The Problem of Apollonius. Construct all circles tangent to three given circles.}}}[/li]
+[/ol]

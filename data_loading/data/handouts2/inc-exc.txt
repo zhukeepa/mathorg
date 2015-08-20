@@ -1,0 +1,184 @@
+<<<Title: Inclusion-Exclusion
+Author(s): Josh Nichols-Barrer
+Description: MOP Handout
+Topics: PIE
+>>>
+
+ Inclusion-Exclusion can be a useful method for counting
+the union of a collection of prescribed sets.  Suppose we are
+given a bunch of finite sets $S_1,S_2,\ldots, S_n$.  A first
+approximation to the number of elements of $S_1\cup S_2\cup
+\cdots\cup S_n$ might be $$|S_1\cup S_2\cup \cdots\cup S_n| =
+|S_1|+ |S_2|+ \cdots+ |S_n|.$$  This of course does not work in
+general: the $S_i$ might overlap.  So as a second approximation,
+we might subtract off the sizes of all the pairwise intersections
+$S_i\cap S_j$, $i\neq j$.  Now we are undercounting the elements
+which occur in three of the sets, so we add those back, etc.
+
+Pursuant of a systematic approach to all this, we formulate a
+theorem.
+
+[b]Theorem 1.[/b] (Principle of Inclusion-Exclusion)  Let $S_1,\ldots, S_n$ be a
+collection of $n$ finite sets.  Then: $\begin{equation} |S_1\cup
+S_2\cup\cdots\cup S_n| = \sum_{1\leq i\leq n} |S_i| - \sum_{1\leq
+i < j\leq n} |S_i \cap S_j|\nonumber  + \sum_{1\leq i< j < k\leq
+n} |S_i\cap S_j\cap S_k| - \cdots + (-1)^{n-1}|S_1\cap
+S_2\cap\cdots\cap S_n|. \nonumber\end{equation}$
+
+[b]Proof 1.[/b] We need to check that each element of the union of the $S_i$ is
+counted only once on the right-hand side.  Suppose, then, that $x$
+is an element of the union, and let $k\geq 1$ be the number of
+sets in the collection in which $x$ appears.  The first summation
+will count $x$ a number of times equal to $k$; once for each set
+in which $x$ appears.  The second sum will count $x$ once for
+every pair of sets with $x$ appearing in both; there are
+$\binom{k}{2}$ of those.  Similarly, the third summation counts
+$\binom{k}{3}$, and the $j^{\mathrm {th}}$ counts $\binom{k}{j}$.  Therefore,
+the total number of times $x$ is counted is \[\binom{k}{1} -
+\binom{k}{2} + \binom{k}{3} - \cdots + (-1)^{k-1}\binom{k}{k} =
+1-(1-1)^k = 1.\]  Each element is thus counted 1 time on the
+right-hand side, and we are done.
+
+Notice that it follows from the argument that if we sum up to the
+$r^{\mathrm {th}}$ term of the Inclusion-Exclusion formula, then we will be
+equal to or over the final count if $r$ is odd and equal to or
+under if $r$ is even.  This follows from the fact that
+\[\binom{k}{1}-\binom{k}{2}+\binom{k}{3}-\cdots+(-1)^{r-1}\binom{k}{r}
+= 1 + (-1)^{r-1}\binom{k-1}{r}.\]  These facts (I think) are known
+as \emph {Bonferonni's Inequalities.}
+
+The statement of this theorem may look a bit intimidating, but it
+is actually quite simple.  For example, the case $n=3$ gives \[
+|R\cup S\cup T| = |R| + |S| + |T| - |R\cap S| - |R\cap T| - |S\cap
+T| + |R\cap S\cap T|.\]  Putting this into practice, suppose
+$R=\{a,b,c,d,e\}$, $S=\{b,c,e,f\}$, and $T=\{a,c,f,g\}$.  Then we
+conclude that \[|R\cup S\cup T| = 5+4+4 - 3-2-2+1 = 7.\]
+
+Inclusion-Exclusion is often known in the following (equivalent
+but) different form:
+
+[b]Corollary 1.[/b] Let $S_1\ldots,S_n$ be subsets of a set $X$, and let $S_i^c$
+denote the complement of $S_i$ in $X$.  Then $\begin{equation} |S_1^c\cap
+S_2^c\cap\cdots \cap S_n^c| = |X| - \sum_{1\leq i\leq n} |S_i| +
+\sum_{1\leq i < j\leq n} |S_i \cap S_j|\nonumber  - \sum_{1\leq
+i< j < k\leq n} |S_i\cap S_j\cap S_k| + \cdots + (-1)^n|S_1\cap
+S_2\cap\cdots\cap S_n|. \nonumber\end{equation}$
+
+[b]Proof 2.[/b] This follows from Inclusion-Exclusion upon observing that
+\[S_1^c\cap S_2^c\cap\cdots \cap S_n^c = \left( S_1\cup S_2\cup\cdots\cup
+S_n\right)^c.\]
+
+This form has a particularly elegant version.  Fix a finite set
+$X$, and for any $\mathcal C$ a finite (possibly empty) collection
+of subsets of $X$, let $\bigcap \mathcal C$ be the intersection of
+all elements of $\mathcal C$, or $X$ if $\mathcal C$ is empty.
+Then: \[\left|\bigcap_{S\in\mathcal C}S^c\right| = \sum_{\mathcal
+U\subseteq\mathcal C} (-1)^{|\mathcal U|}\left|\bigcap\mathcal
+U\right|.\]
+
+ Let us look at some examples of inclusion-exclusion in
+action.
+
+ [b]Example 1.[/b] Determine the number of primes less or
+equal to 111.
+
+ [b]Example 2.[/b][AIME 2001] Each unit square of a
+3-by-3 unit-square grid is to be colored either blue or red. For
+each square, either color is equally likely. What is the
+probability of obtaining a grid that does not have a 2-by-2 red
+square?
+
+ [b]Example 3.[/b]  Let $n$ be a positive integer.  How
+many positive integers less than or equal to $n$ are relatively
+prime to $n$?
+
+ [b]Example 4.[/b]  There are 10 seniors asking Mr. Phat
+to write college recommendation letters. Mr.\ Phat writes a letter
+for each one of them and then labels the 10 envelopes. If he
+randomly places one letter into each labeled envelope, what is the
+probability that no letter is placed in the correct envelope?
+
+ [b]Example 5.[/b][IMO 1989] A permutation $(x_1, x_2,
+\dots , x_{2n})$ of the set $\{ 1, 2, \dots , 2n\}$, where $n$ is
+a positive integer, is said to have property $P$ if
+\[
+|x_i - x_{i+1}| = n
+\]
+for at least one $i \in \{ 1, 2, \dots , 2n-1\}$. Show that, for
+each $n$, there are more permutations with property $P$ than
+without.
+
+ [b]Example 6.[/b] At the beginning of the 2002 season,
+the 20 players of Mr. Phly's soccer team lined up in a row to take
+a team picture. At the end of their undefeated season, the players
+decided to take another team picture so that everyone had a
+different right-hand neighbor in the new picture. In how many ways
+could they have done this?
+
+ [b]Example 7.[/b] Let $A$ and $B$ be two finite sets,
+with $|A|=n$ and $|B|=m$. Determine the number $s_{n,m}$ of
+surjective functions $f:A\rightarrow B$.
+
+ [b]Example 8.[/b][Probleme des menages] How
+many ways can $n$ married couples sit at a round table in such a
+way that there is one man between every two women and no man is
+seated next to his wife? (Rotations of the same configuration are
+considered to be equivalent.)
+
+
+[b]Exercises and Problems[/b]
+
+
+[ol]
+  
+  [li]{{{[AMC12 2001] How many positive integers not exceeding 2001 are
+  multiples of 3 or 4 but not 5?}}}[/li]
+  [li]{{{Adrian is to arrange three identical red marbles, four identical
+  green marbles, and five identical blue marbles in such a way that
+  all marbles of the same color are not together. In how many ways
+  can Adrian finish this task?}}}[/li]
+  [li]{{{[Canada 1983] Let $n$ be a positive integer, and let $S
+  = \{ 1, 2, \dots , n\}$. Show that the number of permutations of
+  $S$ with no fixed points and the number of permutations of $S$
+  with exactly one fixed point differ by 1.}}}[/li]
+  [li]{{{Let $n$ be a positive integer. Develop a general formula
+  for the number of positive integer divisors of $n^2$ that are
+  smaller than $n$ but do not divide $n$.}}}[/li]
+  [li]{{{The director of student activities in a boarding school
+  wants to distribute 61 concert tickets to three dorms in such a
+  way that no dorm gets more tickets than the sum of the numbers of
+  tickets the other two dorms get. In how many ways can this be
+  done?}}}[/li]
+  [li]{{{Let $S = \{ 1, 2, \dots , n\}$ and let $T$ be the set of all
+  subsets of $S$ (including the empty set and $S$ itself). One tries
+  to choose three (not necessarily distinct) sets from the set $T$
+  such that either two of the chosen sets are subsets of the third
+  set or one of the chosen sets is a subset of both of the other two
+  sets. In how many ways can this be done?}}}[/li]
+  [li]{{{Let $S$ be a finite set, and let $k$ be a positive integer.
+  Determine the number of ordered $k$-tuples $(S_1, S_2, \dots,
+  S_k)$ of subsets of $S$ such that $\bigcap_{i=1}^{k} S_i =
+  \emptyset$.}}}[/li]
+  [li]{{{Let $a_1, a_2, \dots, a_n$ be positive integers, and let
+  $[a_1, a_2, \dots , a_n]$ denote their least common multiple.
+  Prove that
+  \[
+  [a_1, a_2, \dots , a_n] \ge \frac{a_1a_2\cdots a_n}{\prod_{1\le i
+  < j \le n} \gcd (a_i, a_j)},
+  \]
+  where $\gcd (x, y)$ denote the greatest common divisor of integers
+  $x$ and $y$.}}}[/li]
+  [li]{{{(USAMO 94/5) Let $S$ be a set of positive integers.
+   For a subset $T$ of $S$, let $\Sigma(T)$ denote the sum of
+   the elements of $T$ and let $\Pi(T)$ denote the product of the
+  elements of $T$ (where $\Sigma(\emptyset) = 0$ and
+  $\Pi(\emptyset)=1$). Suppose $N$ is an integer with $N\geq
+  \Sigma(S)$. Prove that
+  \[\sum_{U\subseteq S} (-1)^{|U|}\binom{N-\Sigma (U)}{|S|} = \Pi(S).\]}}}[/li]
+  [li]{{{For each positive real number $x$, let $S(x) = \{ \lfloor{kx}\rfloor\mid k
+  = 1, 2, \dots \}$. Let $x_1, x_2$, and $x_3$ be three real numbers
+  greater than 1 such that $\frac{1}{x_1} + \frac{1}{x_2} +
+  \frac{1}{x_3} > 1$. Prove that there exist $i$ and $j$, with $1\le
+  i < j\le 3$, such that $S(x_i) \cap S(x_j)$ has infinitely many
+  elements.}}}[/li]
+[/ol]

@@ -1,0 +1,59 @@
+<<<Title: Inequalities
+Author(s): Jennifer Iglesias 
+Description: Blue MOP 2013 Handout
+Topics: Inequalities
+>>>
+
+[h2]Inequalities[/h2]
+[h3]The trivial inequality[/h3] Let $x$ be a real number, then
+$$x^2\geq 0$$
+[h3]QM-AM-GM-HM[/h3] Let $x_1,\dots, x_n$ be positive real numbers. Then, we have:
+$$\sqrt{\frac{x_1^2+\dots+x_n^2}{n}}\geq\frac{x_1+\dots+x_n}{n}\geq \sqrt[n]{x_1\dots x_n}\geq \frac{n}{\frac{1}{x_1}+\dots+\frac{1}{x_n}}.$$
+Equality holds when $x_1=\dots=x_n$.
+[h3]Weighted AM-GM[/h3] Let $x_1,\dots, x_n$ and $a_1,\dots a_n$ be positive real numbers with $\sum_{i=1}^n a_i=1$. Then
+$$a_1x_1+\dots+a_nx_n\geq x_1^{a_1}\dots x_n^{a_n}.$$
+Again equality holds when $x_1=x_2=\dots=x_n$. 
+[h3]Power Mean[/h3] Let $x_1,\dots x_n$ be positive real numbers and $0<p<q$ reals. Then, we have
+$$\sqrt[q]{\frac{x_1^q+\dots+x_n^q}{n}} \geq\sqrt[p]{\frac{x_1^p+\dots+x_n^p}{n}}.$$
+Equality holds when $x_1=\dots=x_n$. 
+[h3]Cauchy-Schwarz[/h3] Let $x_1,\dots, x_n$ and $y_1,\dots, y_n$ be non-negative real numbers. Then, we have
+$$(x_1^2+\dots +x_n^2)(y_1^2+\dots +y_n^2)\geq (x_1y_1+\dots +x_ny_n)^2.$$
+Equality holds if and only if $\frac{x_i}{y_i}$ is constant. 
+[h3]Rearrangement[/h3]
+Let $a_1,a_2,\dots a_n$ and $b_1,b_2,\dots b_n$ be two increasing sequences of real numbers. Let $\pi$ be any permutation of $\{1,2,\dots, n\}$. Then we have:
+$$a_1b_n+a_2b_{n-1}+\dots+a_nb_1 \leq a_1b_{\pi(i)}+a_2b_{\pi(2)}+\dots+a_nb_{\pi(n)} \leq a_1b_1+a_2b_2+\dots+a_nb_n$$
+[h3]Holder[/h3]
+Let $x_1, \dots, x_n, y_1, \dots, y_n$ and $z_1, \dots, z_n$, be non-negative real numbers, and let $p,q,r$ be positive reals such that $\frac{1}{p}+\frac{1}{q}+\frac{1}{r}=1$ then we have:
+$$(x_1^p+\dots+x_n^p)^{\frac{1}{p}}(y_1^q+\dots+y_n^q)^{\frac{1}{q}}(z_1^r+\dots+z_n^r)^{\frac{1}{r}}\geq (x_1y_1z_1+\dots+x_ny_nz_n)$$
+Equality holds if and only the ratio $x_i:y_i:z_i$ is constant. 
+[h3]Schur[/h3]
+ If $a,b,c$ are non-negative reals and $k \geq 1$. Then we have:
+$$a^k(a-b)(a-c)+b^k(b-a)(b-c)+c^k(c-a)(c-b)\geq 0$$
+Equality holds when $a=b=c$ or when 2 of $a,b,c$ are equal and the third is zero. 
+[h3]Muirhead[/h3]
+Let $A=[a_1,\dots,a_n]$ and $B=[b_1,\dots, b_n]$ be decreasing sequences of reals, such that $A$ majorizes $B$. In other words, $\sum_{i=1}^k a_i \geq \sum_{i=1}^k b_i$ for all $k \leq n$. If $x_1,\dots, x_n$ are positive reals then
+$$\sum_{sym}x_1^{a_1}\dots x_n^{a_n} \geq \sum_{sym}x_1^{b_1}\dots x_n^{b_n}$$
+Note: Generally Muirhead should just be used to verify inequalities and then AM-GM should be used when writing up the proof. 
+[h2]Problems[/h2]
+[ol]
+[li]{{{Let $x,y,z$ be real numbers with $x+y+z=xyz$. Prove that:
+$$\frac{1}{1+xy}+\frac{1}{1+zx}+\frac{1}{1+yz}\leq \frac{3}{4}$$}}}[/li]
+  [li]{{{$a,b,c$ are non-negative reals such that $a+b+c=1$. Prove that
+$$a^3+b^3+c^3+6abc \geq \frac{1}{4}$$}}}[/li]
+  \item(CGMO 2008/2) Let $\phi(x)=ax^3+bx^2+cx+d$ be a polynomial with real coefficients. Given that $\phi(x)$ has three positive real roots and that $\phi(0) < 0$, prove that
+$$2b^3+9a^2d-7abc \leq 0$$ 
+[li]{{{(CGMO 2007/3) Let $n$ be an integer greater than 3, and let $a_1,a_2,\dots a_n$ be non-negative real numbers with $a_1+a_2+\dots+a_n=2$. Determine the minimum value of 
+$$ \frac{a_1}{a_2^2+1}+\frac{a_2}{a^2_3+1}+\cdots+\frac{a_n}{a^2_1+1}. $$}}}[/li]
+  [li]{{{(IMO 74/5) Determine all possible values of 
+$$\frac{a}{a+b+d}+\frac{b}{a+b+c}+\frac{c}{b+c+d}+\frac{d}{a+c+d}$$
+where $a,b,c,d$ are arbitrary positive numbers.}}}[/li]
+  [li]{{{(IMO 1984/1) Prove that $0\leq yz+zx+xy-2xyz \leq 7/27$, where $x,y$ and $z$ are non-negative real numbers for which $x+y+z=1$.}}}[/li]
+  [li]{{{Let $a,b,c$ be positive reals such that $a+b\geq c; b+c\geq a;$ and $c+a\geq b$, we have 
+$$2a^2(b+c)+2b^2(c+a)+2c^2(a+b)\geq a^3+b^3+c^3+9abc.$$}}}[/li]
+  [li]{{{(MOP 02) For positive numbers $a,b,c$ prove that
+$$\left( \frac{2a}{b+c}\right)^{\frac{2}{3}}+\left( \frac{2b}{a+c}\right)^{\frac{2}{3}}+\left( \frac{2c}{a+b}\right)^{\frac{2}{3}} \geq 3$$}}}[/li]
+  [li]{{{(APMO 05) Let $a,b,c>0$ such that $abc=8$. Prove that 
+$$\frac{a^2}{\sqrt{(1+a^3)(1+b^3)}}+\frac{b^2}{\sqrt{(1+b^3)(1+c^3)}}+\frac{c^2}{\sqrt{(1+c^3)(1+a^3)}} \geq \frac{4}{3}$$}}}[/li]
+  [li]{{{(IMO 00) Let $a,b,c$ be positive numbers such that $abc=1$. Prove that 
+$$(a-1+\frac{1}{b})(b-1+\frac{1}{c})(c-1+\frac{1}{a})\leq 1$$}}}[/li]
+[/ol]

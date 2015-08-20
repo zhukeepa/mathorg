@@ -1,0 +1,109 @@
+<<<Title: My favorite configurations
+Author(s): Carlos Shine
+Description: MOP Handout
+Topics: Common geometry lemmas
+>>>
+
+[b]Abstract.[/b] One important skill in Math is finding patterns. This also applies to Geometry: there are some really cool diagrams that have tons of nice properties. I'll talk about some of my favorites.
+
+[h2]The ubiquitous in(ex)center lemma[/h2]
+There is another characterization of the incenter and the excenter of a triangle that can be useful in at least two situations:
+[ul][li]you need to prove that some point is the incenter or excenter of a triangle;[/li]
+  [li]you need some isosceles triangles or collinear points.[/li][/ul]
+
+[b]Fact 1.[/b] (The ubiquitous in(ex)center property) Let $I$ be the incenter and $I_a$ be the $A$-excenter of a triangle $ABC$ and $L$ be the midpoint of the arc $BC$ from the circumcircle of $ABC$ that doesn't contain $A$. Then there is a circle with center in $L$ that passes through $B$, $C$, $I$ and $I_a$. Notice that this means that $LB = LC = LI = LI_a$ and, moreover, $L$ is the midpoint of $II_a$.
+
+[Image missing]
+
+There are a number of ways of interpreting this fact:
+[ol]
+  [li]$L$ is the circumcenter of the quadrilateral $BICI_a$;[/li]
+  [li]You can find the incenter and $A$-excenter of a triangle by marking $L$ and drawing a circle with center in $L$ and radius $LB = LC$. The incenter is the intersection of said circle and angle bisector $AL$. This is particularly useful when you need to prove that $I$ is the incenter or $I_a$ is the $A$-excenter: you don't have to prove that it's the intersection of two bisectors.[/li]
+[/ol]
+
+[h2]Two circles and a tangent line[/h2]
+[b]Fact 2.[/b] (Two circles and a tangent line) Let $\Omega$ and $\omega$ be two circles internally tangent at $T$. Chord $AB$ from $\Omega$ touches $\omega$ at $P$. Line $PT$ meet $\Omega$ at $L\neq T$.
+
+[Image missing]
+
+[ol]
+  [li]Point $L$ is the midpoint of the arc $AB$ that does not contain $T$.[/li]
+  [li]The inversion with center $L$ and radius $LA$ fixes the diagram (it actually takes $AB$ to $\Omega$ and vice-versa).[/li]
+  [li]$LP\cdot LT = LA^2$.[/li]
+  [li]$L$ has the same power with respect to all circles $\omega$ that are tangent to both chord $AB$ and $\Omega$. Rephrasing: the radical axes of all pairs of such circles $\omega$ pass through $L$.[/li]
+[/ol]
+
+[h2]Symmedians[/h2]
+The [i]symmedians[/i] of a triangle $ABC$ are the reflections of the medians with respect to the corresponding internal bisectors. They have some incredible properties.
+
+[b]Fact 3.[/b] (Symmedian facts) Symmedians have [i]tons[/i] of properties. Here are only some of them.
+[ol]
+  [li][i](Finding the symmedian)[/i] Let $\Gamma$ be the circumcircle of $ABC$; the tangent lines at $B$ and $C$ meet at $D$; then $AD$ is the symmedian.  
+  [Image missing][/li]
+  [li][i](Symmedian ratios)[/i] Let $P$ be any point in the $A$-symmedian. Then the ratio between the distances from $P$ to $AB$ and $AC$ is $\frac{AB}{AC}$. Also, the $A$-symmedian divides side $BC$ in the ratio $\frac{AB^2}{AC^2}$.[/li]
+  [li][i](A similarity)[/i] Let the circumcircle of $BCD$ meet line $AD$ again at $K$. Then $ABK$ and $CAK$ are (spirally) similar.[/li]
+  [li][i](Symmedians in cyclic quads)[/i] Let $ABCD$ be a cyclic quadrilateral. Then $AB\cdot CD = AD\cdot BC$ iff $AC$ is a symmedian of both $ABD$ and $BCD$ and $BD$ is a symmedian of both $ABC$ and $ADC$.[/li]
+  [li][i](Symmedian and bisectors)[/i] Let line $AD$ meet $BC$ at $T$ and the circumcircle at $L\neq A$ and let $M$ be the midpoint of $BC$. Then lines $BC$ and $MD$ are the internal and external bisectors of $\angle LMA$.[/li]
+[/ol]
+
+[h2]Complete quadrilaterals[/h2]
+A [i]complete[/i] quadrilateral is the union of four non-parallel lines. They determine $\binom42 = 6$ points, which are the vertices of this complete quadrilateral (weird, huh?). Nevertheless, this configuration is pretty cool.
+
+[b]Fact 4.[/b] (Complete quadrilateral facts) Here's what you get if you complete the quadrilateral:
+
+[Image missing]
+
+Now let's see what this complex diagram has to offer:
+[ol]
+  [li][i](Miquel's theorem)[/i] The circumcircles of the $\binom43 = 4$ triangles determined by the four lines have a common point, named [i]Miquel point[/i] of the complete quadrilateral.[/li]
+  [li][i](Spiral similarity and Miquel's theorem)[/i] The Miquel point is the center of several spiral similarities that take two of the six points to another two of the six points. Eg (refer to the diagram above), $EC\to AF$, $EA\to CF$, $AB\to DC$, $AD\to BC$.[/li]
+  [li][i](Midpoints in a Gauss line)[/i] The six points of a complete quadrilateral determine three diagonals (segments that are not contained in any of the four original lines). The midpoints of these lines are collinear (the line passing through these points is called the [i]Gauss line[/i] of the complete quadrilateral.[/li]
+  [li][i](More points in a circle, not pictured)[/i] The circumcircles of the four triangles determined by the four lines and the Miquel point lie on a circle.[/li]
+  [li][i](Projecting the Miquel point)[/i] The orthogonal projections of the Miquel point onto the four lines are collinear. Moreover, the line passing through the four projections is perpendicular to the Gauss line.[/li]
+[/ol]
+
+If, in addition, you have a cyclic quad, some additional magic happens!
+
+[b]Fact 5.[/b] (Complete cyclic quad facts) Here's what you get if you complete a cyclic quad:
+
+[Image missing]
+
+Refer to the previous diagram, where $ABCD$ is cyclic. Let $E$ and $F$ be the intersection points of the opposite sides of $ABCD$.
+[ol]
+  [li][i](Cool power of a point)[/i] The sum of the powers of $E$ and $F$ with respect to the circumcircle of $ABCD$ is $EF^2$.[/li]
+  [li][i](Miquel point in a cyclic quad)[/i] The Miquel point of the complete quadrilateral gerenated by $ABCD$ lies on $EF$. In fact, the Miquel point lies on $EF$ iff the quadrilateral $ABCD$ is cyclic.[/li]
+  [li][i](Perpendicular lines)[/i] Let $O$ be the circumcircle of $ABCD$. Then $OM$ is perpendicular to $EF$.[/li]
+  [li][i](More collinear points)[/i] The point of intersection of the diagonals $AC$ and $BD$ meet at a point on line $OM$.[/li]
+  [li][i](Bisectors and in(ex)centers)[/i] $OM$ bisects $\angle AMC$ and $\angle BMD$. Plus, line $OM$ meets the circumcircle of $ABCD$ at the incenter and the $M$-excenter of both triangles $AMC$ and $BMD$ (yep, the incenter and the $M$-excenter coincide in both triangles).[/li]
+[/ol]
+
+[h2]Problems[/h2]
+The problems are in random order. I can't spoil the fun of finding the patterns, right?
+[ol]
+  [li]{{{Prove all the facts listed above.}}}[/li]
+  [li]{{{Prove this well-known quadrilateral theorem: let $ABCD$ be a [i]bicentric quadrilateral[/i], that is, one that has both a inscribed circle and a circumscribed circle. Prove that its circumcenter $O$, its incenter $I$ and the point $P$ where its diagonals meet are collinear.}}}[/li]
+  [li]{{{(IMO 2002) The circle $S$ has center $O$, and $BC$ is a diameter of $S$. Let $A$ be a point of $S$ such that $\angle AOB<120^\circ$. Let $D$ be the midpoint of the arc $AB$ which does not contain $C$. The line through $O$ parallel to $DA$ meets the line $AC$ at $I$. The perpendicular bisector of $OA$ meets $S$ at $E$ and at $F$. Prove that $I$ is the incenter of the triangle $CEF$.}}}[/li]
+  [li]{{{(Serbia 2012) Let $ABCD$ be a parallelogram and $P$ be a point on diagonal $BD$ such that $\angle PCB = \angle ACD$. Circumcircle of triangle $ABD$ intersects line $AC$ at points $A$ and $E$. Prove that $\angle AED=\angle PEB$.}}}[/li]
+  [li]{{{(Japan 2009) Let $\Gamma$ be the circumcircle of triangle $ABC$. A circle with center $O$ touches line segment $BC$ at $P$ and touches the arc $BC$ of $\Gamma$ which doesn't contain $A$ at $Q$. Prove that if $\angle BAO = \angle CAO$, then $\angle PAO = \angle QAO$.}}}[/li]
+  [li]{{{(Iberoamerican 2011) Let $ABC$ be a triangle and $D$, $E$, $F$ be the points where its incircle touches sides $BC$, $CA$, $AB$, respectively. Suppose that $\omega_1$, $\omega_2$, $\omega_3$ are circles with chords $EF$, $DF$, $DE$, respectively, such that $\omega_1$ and $\omega_2$ meet again at a point on line $CF$ and that $\omega_1$ and $\omega_2$ meet again at a point on the line $BE$. Suppose that $\omega_1$ intersects the chords $DE$ and $DF$ at $J$ and $M$, respectively; that $\omega_2$ intersects the chords $EF$ and $DE$ at $L$ and $I$, respectively; and that $\omega_3$ intersects the chords $EF$ and $DF$ at $K$ and $N$, respectively. Prove that points $I$, $J$, $K$, $L$, $M$, $N$ are concyclic.}}}[/li]
+  [li]{{{(Cono Sur 2008) Let $ABC$ be an isosceles triangle with $AC = BC$. Let $\Gamma$ be a semicircle with center on segment $AB$ that touches $AC$ and $BC$. A line is tangent to $\Gamma$ and cuts $AC$ and $BC$ at $D$ and $E$, respectively.
+  
+  Suppose that the perpendicular lines through $D$ to $AC$ and through $E$ to $BC$ meet at a point $P$ inside triangle $ABC$. Let $Q$ be the orthogonal projection of $P$ in line $AB$. Prove that $\frac{PQ}{CP} = \frac12\cdot\frac{AB}{AC}$.}}}[/li]
+  [li]{{{(IMO 2005) Let $ABCD$ be a fixed convex quadrilateral with $BC = DA$ and $BC$ not parallel with $DA$. Let two variable points $E$ and $F$ lie of the sides $BC$ and $DA$, respectively and satisfy $BE = DF$. The lines $AC$ and $BD$ meet at $P$, the lines $BD$ and $EF$ meet at $Q$, the lines $EF$ and $AC$ meet at $R$.
+  
+  Prove that the circumcircles of the triangles $PQR$, as $E$ and $F$ vary, have a common point other than $P$.}}}[/li]
+  [li]{{{(Russia 2012) The points $A_1$, $B_1$, $C_1$ lie on the sides $BC$, $CA$ and $AB$ of the triangle $ABC$ respectively. Suppose that $AB_1 - AC_1 = CA_1 - CB_1 = BC_1 - BA_1$. Let $I_A$, $I_B$ and $I_C$ be the incenters of triangles $AB_1C_1$, $A_1BC_1$ and $A_1B_1C$ respectively. Prove that the circumcenter of triangle $I_AI_BI_C$ is the incenter of triangle $ABC$.}}}[/li]
+  [li]{{{Let $\Gamma$ be a circle. Circles $\omega_1$ and $\omega_2$ are internally tangent to $\Gamma$ and externally tangent to each other at $I$. The chord $AB$ of $\Gamma$ touches both $\omega_1$ and $\omega_2$, such that both circles lie on the same side of $AB$. Let the common external tangent of $\omega_1$ and $\omega_2$ meet $\Gamma$ at $C$, $C$ being on the same of $AB$ as $\omega_1$ and $\omega_2$. Prove that $I$ is the incenter of triangle $ABC$.}}}[/li]
+  [li]{{{(USAMO 2006) Let $ABCD$ be a quadrilateral, and let $E$ and $F$ be points on sides $AD$ and $BC$ respectively, such that $\frac{AE}{ED} = \frac{BF}{FC}$. Ray $FE$ meets rays $BA$ and $CD$ at $S$ and $T$, respectively. Prove that the circumcircles of triangles $SAE$, $SBF$, $TCF$ and $TDE$ pass through a common point.}}}[/li]
+  [li]{{{(Peru TST 2006) Let $ABC$ be an acute triangle, $\omega$ be its circumcircle, $O$ be its circumcenter, $\Gamma$ be the circumcircle of triangle $AOC$ and $OQ$ be a diameter of $\Gamma$. Let $M$ and $N$ be points on lines $AQ$ and $AC$, respectively, such that $AMBN$ is a parallelogram.
+  
+  Prove that the intersection of lines $MN$ and $BQ$ lies on $\Gamma$.}}}[/li]
+  [li]{{{(Balkan) Let $MN$ be a line parallel to the side $BC$ of a triangle $ABC$, with $M$ on side $AB$ and $N$ on side $BC$. The lines  $BN$ and $CM$ meet at point $P$. The circumcircles of triangles $BMP$ and $CNP$ meet at two distinct points $P$ and $Q$. Prove that $\angle BAQ = \angle CAP$.}}}[/li]
+  [li]{{{(APMO 2012) Let $ABC$ be an acute triangle. Denote by $D$ the foot of the perpendicular line drawn from the point $A$ to the side $BC$, by $M$ the midpoint of $BC$, and by $H$ the orthocenter of $ABC$. Let $E$ be the point of intersection of the circumcircle $\Gamma$ of the triangle $ABC$ and the half line $MH$, and $F$ be the point of intersection (other than $E$) of the line $ED$ and the circle $\Gamma$. Prove that $\frac{BF}{CF} = \frac{AB}{AC}$ must hold.}}}[/li]
+  [li]{{{(USAMO 2008) Let $ABC$ be an acute, scalene triangle, and let $M$, $N$ and $P$ be the midpoints of $BC$, $CA$, and $AB$, respectively. Let the perpendicular bisectors of $AB$ and $AC$ intersect ray $AM$ in points $D$ and $E$ respectively, and let lines $BD$ and $CE$ intersect in point $F$, inside of triangle $ABC$. Prove that points $A$, $N$, $F$ and $P$ all lie on one circle.}}}[/li]
+  [li]{{{(IMO 1978, generalized) Let $ABC$ be a triangle. A circle which is internally tangent with the circumscribed circle of the triangle is also tangent to the sides $AB$, $AC$ in the points $P$, respectively $Q$. Prove that the midpoint of $PQ$ is the center of the inscribed circle of the triangle $ABC$.}}}[/li]
+  [li]{{{(Cono Sur 2009) Let $A$, $B$ and $C$ be three points such that $B$ is the midpoint of $AC$ and $P$ a point such that $\angle PBC = 60^\circ$. Let $Q$ be a point such that $PCQ$ is an equilateral triangle and $B$ and $Q$ are in different semiplanes with respect to $PC$, and $R$ be a point such that $APR$ is an equilateral triangle and $B$ and $R$ are in the same semiplane with respect to $AP$. Let $X$ be the intersection point of lines $BQ$ and $PC$ and $Y$ be the point of intersection of lines $BR$ and $AP$. Prove that the lines $XY$ and $AC$ are parallel.}}}[/li]
+  [li]{{{(Sharygin 2012) A circle $\omega$ centered at $I$ is inscribed into a segment of the disk, formed by an arc and a chord $AB$. Point $M$ is the midpoint of that arc $AB$, and point $N$ is the midpoint of the complementary arc. The tangents from $N$ touch $\omega$ in points $C$ and $D$. The opposite sidelines $AC$ and $BD$ of quadrilateral $ABCD$ meet at point $X$, and the diagonals of $ABCD$ meet at point $Y$. Prove that points $X$, $Y$, $I$ and $M$ are collinear.}}}[/li]
+  [li]{{{(TST 2011) Let $ABC$ be an acute scalene triangle inscribed in circle $\Omega$. Circle $\omega$, centered at $O$, passes through $B$ and $C$ and intersects sides $AB$ and $AC$ at $E$ and $D$, respectively. Point $P$ lies on major arc $BAC$ of $\Omega$. Prove that lines $BD$, $CE$, $OP$ are concurrent if and only if triangles $PBD$ and $PCE$ have the same incenter.}}}[/li]
+  [li]{{{(Romanian Master 2012) Let $ABC$ be a triangle and let $I$ and $O$ denote its incenter and circumcenter respectively. Let $\omega_A$ be the circle through $B$ and $C$ which is tangent to the incircle of the triangle $ABC$; the circles $\omega_B$ and $\omega_C$ are defined similarly. The circles $\omega_B$ and $\omega_C$ meet at a point $A'$ distinct from $A$; the points $B'$ and $C'$ are defined similarly. Prove that the lines $AA'$, $BB'$ and $CC'$ are concurrent at a point on the line $IO$.}}}[/li]
+[/ol]

@@ -6,7 +6,10 @@
   <body>
     <outline text="Math contests" >
       <outline text="Problem-solving techniques" >
-        <outline text="Constructions" />
+        <outline text="Constructions" >
+          <outline text="Number theory constructions" />
+          <outline text="Geometry constructions" /></outline>
+        <outline text="Extremal arguments" />
         <outline text="Subproblems" />
         <outline text="Wishful thinking" />
         <outline text="Smoothing" />
@@ -46,26 +49,33 @@
             <outline text="Eclectic equations" />
             <outline text="Unequality" /></outline>
           <outline text="Generating functions" />
+          <outline text="Sequences" >
+            <outline text="Recurrences" /></outline>
           <outline text="Floors and ceilings" >
             <outline text="Beatty sequences" /></outline>
           <outline text="Inequalities" >
             <outline text="Asymmetric inequalities" />
             <outline text="Fudging" />
             <outline text="Discriminants" />
+            <outline text="Lagrange multipliers" />
             <outline text="Cauchy-Schwarz" />
             <outline text="AM-GM" />
+            <outline text="SOS" />
             <outline text="Dumbassing" >
               <outline text="Chinese dumbass notation" /></outline>
             <outline text="n-variable inequalities" /></outline>
-          <outline text="Functional equations" />
+          <outline text="Functional equations" >
+            <outline text="Integer functional equations" /></outline>
           <outline text="Complex numbers" >
             <outline text="Complex numbers (analytic)" /></outline>
           <outline text="Roots of unity" >
             <outline text="Roots of unity filters" /></outline>
-          <outline text="Recurrences" />
           <outline text="Sums and products" /></outline>
         <outline text="Number theory" >
+          <outline text="Number theory foundations" />
+          <outline text="Squares" />
           <outline text="Completeness" />
+          <outline text="Integer polynomials" />
           <outline text="Floors and ceilings" >
             <outline text="Beatty sequences" /></outline>
           <outline text="Chicken McNugget theorem" />
@@ -80,6 +90,7 @@
             <outline text="Primitive roots" />
             <outline text="Hensel's lemma" />
             <outline text="mod p^r" />
+            <outline text="mod p" />
             <outline text="Order of an element" /></outline>
           <outline text="Binomial coefficients" >
             <outline text="Lucas' theorem" />
@@ -106,12 +117,14 @@
             <outline text="Divisors" /></outline>
         </outline>
         <outline text="Combinatorics" >
+          <outline text="Well-ordering" />
           <outline text="Graph theory" >
             <outline text="Turan" />
             <outline text="Terminology" />
             <outline text="Matchings (Marriage lemma)" />
             <outline text="Planar graphs" />
             <outline text="Max-flow / min-cut" /></outline>
+          <outline text="PIE" />
           <outline text="Greedy algorithm" />
           <outline text="Bijections" />
           <outline text="Counting in two ways" />
@@ -136,6 +149,9 @@
             <outline text="Minkowski's theorem" /></outline>
         </outline>
         <outline text="Geometry" >
+          <outline text="Geometry constructions" />
+          <outline text="Loci" />
+          <outline text="Similar triangles" />
           <outline text="Geometric transformations" >
             <outline text="Isometries" />
             <outline text="Inversion" />
@@ -156,7 +172,7 @@
             <outline text="Euler line" /></outline>
           <outline text="Phantom point" />
           <outline text="Circle of Apollonius" />
-          <outline text="Collinearity and concurrence" >
+          <outline text="Collinearity and concurrency" >
             <outline text="Ceva" />
             <outline text="Menelaus" />
             <outline text="Pappus" />

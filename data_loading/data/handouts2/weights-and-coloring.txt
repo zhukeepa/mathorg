@@ -1,0 +1,130 @@
+<<<Title: Weights & Coloring
+Author(s): Josh Nichols-Barrer
+Description: Black MOP 2011 Handout
+Topics: Weights and coloring
+>>>
+
+[ol]
+  
+  [li]{{{Let $n$ be a given integer greater than $2$.  We wish to label
+    each side and each diagonal of a regular $n$-gon $P_1P_2\cdots P_n$
+    with a positive integer less than or equal to $r$ so that
+   [ol][li]every integer between $1$ and $r$ occurs as a label;[/li]
+    [li]in each triangle $P_iP_jP_k$ two of the labels are equal
+    and greater than the third.[/li][/ol]
+  Given these conditions:
+   [ol][li]Determine the largest positive integer $r$ for which this
+    can be done.[/li]
+    [li]For that maximum value of $r$, how many such labelings are
+    there?[/li][/ol]}}}[/li]
+  [li]{{{In an $m\times n$ rectangular board of $mn$ unit squares, two
+    squares are [i]adjacent[/i] if they share a common edge.  A
+    [i]path[/i] is a sequence of squares in which any two consecutive
+    squares are adjacent.  Each square of the board can be colored black
+    or white.  Let $N$ denote the number of coloring schemes of the
+    board such that there exists at least one black path from the left
+    edge of the board to its right edge, and let $M$ denote the number
+    of coloring schemes in which there exist at least two
+    non-intersecting black paths from the left edge to the right edge.
+    Prove that $N^2\geq M\cdot 2^{mn}$.}}}[/li]
+  [li]{{{A $k$-coloring of a graph $G$ is a coloring of its vertices
+    using $k$ possible colors such that the end points of any edge have
+    different colors.  We say a graph $G$ is [i]uniquely
+      $k$-colorable[/i] if on the one hand it has a $k$-coloring, but on
+    the other hand there do not exist vertices $u$ and $v$ such that $u$
+    and $v$ have the same color in one $k$-coloring and $u$ and $v$ have
+    different colors in another $k$-coloring.  Prove that if a graph $G$
+    with $n$ vertices ($n\geq 3$) is uniquely $3$-colorable, then it has
+    at least $2n-3$ edges.}}}[/li]
+  [li]{{{Let $a_1,a_2,\ldots,a_8$ be eight distinct points on the
+    circumference of a circle such that no three chords, each joining a
+    pair of points, are concurrent.  Every four of the eight points form
+    a quadrilateral which is called a [b]quad[/b].  If two chords, each
+    joining a pair of the eight points, intersect, the point of
+    intersection is called a [b]bullet[/b].  Suppose some of the bullets
+    are colored red.  For each pair $(i,j)$, with $1\leq i<j\leq 8$, let
+    $r(i,j)$ be the number of quads containing $a_i,a_j$ as vertices and
+    whose diagonals intersect at a red bullet.  Determine the smallest
+    positive integer $n$ such that it is possible to color $n$ of the
+    bullets red so that $r(i,j)$ is a constant for all pairs $(i,j)$.}}}[/li]
+  [li]{{{Points $P_1,P_2,\ldots,P_n$, with no three collinear, are given
+    in the plane.  Each point is colored in eaither red or blue.  A
+    nonempty set $S$ of the triangles with $P_1,P_2,\ldots,P_n$ as their
+    vertices is called [i]good[/i] if for every pair of segments
+    $P_iP_j$ and $P_uP_v$, the number of triangles in $S$ containing
+    side $P_iP_j$ is equal to the number of triangles in $S$ containing
+    side $P_uP_v$. A triangle is called [i]monochromatic[/i] if all its
+    vertices are of the same color.  Determine the minimum value of $n$
+    such that there are always two monochromatic triangles in any good set.}}}[/li]
+  [li]{{{There is a set of $n$ coins with distinct integer weights
+    $w_1,w_2,\ldots,w_n$.  It is known that if any coin with weight
+    $w_k$, $1\leq k\leq n$, is removed from the set, the remaining coins
+    can be split into two groups of the same weight.  (The number of
+    coins in the two groups can be different.)  Find all $n$ for which
+    such a set of coins exists.}}}[/li]
+  [li]{{{Can we tile a $13\times 13$ table from which we remove the
+    central unit square using only $1\times 4$ or $4\times 1$ rectangles?}}}[/li]
+  [li]{{{In the Cartesian corrdinate plane define the
+    strip \[S_n=\{(x,y):n\leq x\leq n+1\}\] for every
+    integer $n$.  Assume that each strip $S_n$ is colored either red or
+    blue, and let $a$ and $b$ be two distinct positive integers.  Prove
+    that there exists a rectangle with side lengths $a$ and $b$ such
+    that its vertices have the same color.}}}[/li]
+  [li]{{{A (simple and finite) graph is called [i]balanced[/i] if it has
+    $n$ edges, and it is possible to assign each of the numbers
+    $1,2,\ldots,n$ to an edge (one number per edge) in such a way that
+    teh sum of the numbers assigned to the edges connecting to each
+    vertex is the same.  Determine if every balanced graph is connected.}}}[/li]
+  [li]{{{Find all positive integers $n$, for which the numbers in the set
+    $S=\{1,2,\ldots,n\}$ can be colored red and blue, with the following
+    condition being satisfied: the set $S\times S\times S$ contains
+    exactly 2007 ordered triples $(x,y,z)$ such that (i) $x,y,z$ are of
+    the same color and (ii) the integer $x+y+z$ is divisible by $n$.}}}[/li]
+  [li]{{{Every positive integer is colored in either red or blue.  Prove
+    that there exists an infinite sequence $a_1<a_2<\cdots$ such that
+    the
+    sequence \[a_1,\frac{a_1+a_2}2,a_2,\frac{a_2+a_3}2,a_3,\frac{a_3+a_4}2,\ldots\]
+    is a monochromatic integer sequence.}}}[/li]
+  [li]{{{A collection of $\frac{n^2+n}2$ mathematicians are arranged in a series of
+    piles.  A move consists in taking one mathematician from each pile
+    and forming a new pile from these.  (A pile whose last element has
+    been removed is no longer a pile.)  Prove that after some number of
+    moves, the piles will have sizes $1,2,\ldots, n$.}}}[/li]
+  [li]{{{Given a square board of size $n\times n$, where $n$ is an
+    integer greater than 1, we label some of the squares by distinct
+    numbers from the set $\{1,2,\ldots,n^2\}$.  What is the largest
+    number of board squares we can label in this way without creating a
+    difference of $n$ or higher between any two labels on neighboring
+    squares on the board?}}}[/li]
+  [li]{{{Determine the minimum positive integer $n$ satisfying the
+    following condition: If each of the vertices of an $n$-sided regular
+    polygon is colored in one of the three colors (say, red, green, and
+    blue), then there is a monochromatic isosceles trapezoid.  (Note
+    that a parallelogram is not a trapezoid).}}}[/li]
+  [li]{{{For a given prime $p$, find the greatest positive integer $n$
+    with the following property: the edges of the complete graph on $n$
+    vertices can be colored with $p+1$ colors so that:
+   [ol][li]at least two edges have different colors;[/li]
+    [li]if $A,B $ and $C$ are any three vertices and the edges $AB$ and
+    $AC$ are of the same color, then $BC$ has the same color as well.[/li][/ol]}}}[/li]
+  [li]{{{Every integer is marked with one of 100 colors so that there is
+    at least one number of each color.  If $[a,b]$ and $[c,d]$ are two
+    intervals of the same length such that $a$ and $c$ have the same
+    color and also $b$ and $d$ have the same color, then $a+x$ and $c+x$
+    have the same color for each $x\in [0,b-a]$.  Prove that $-2001$ and
+    $2001$ have different colors.}}}[/li]
+  [li]{{{For what values of $n$ is it possible to color every square in
+    an $n\times n$ grid red, blue, yellow, green, or orange, so that for
+    all $i,j,k$ between $1$ and $n$ with $i\neq j$ and $j\neq k$, the
+    square in row $i$ and column$j$ is assigned a different color from
+    the square in row $j$ and column $k$?}}}[/li]
+  [li]{{{Let $a_1\geq a_2\geq\cdots\geq a_k$ and $b_1\geq
+    b_2\geq\cdots\geq b_m$ be nonnegative integers such
+    that \[\min(a_1,d)+\min(a_2,d)+\cdots+\min(a_k,d)\geq
+    b_1+b_2+\cdots+b_d\] for all $d\leq m$
+    and \[\min(b_1,d)+\min(b_2,d)+\cdots+\min(b_m,d)\geq a_1+a_2+\cdots
+    +a_d\] for all $d\leq k$.  Prove that we can mark some of the
+    squares of a $k\times m$ table so that the numbers of marked squares
+    in the rows are exactly $a_1,a_2,\ldots,a_k$ and in the columns are
+    exactly $b_1,b_2,\ldots,b_m$.}}}[/li]
+[/ol]

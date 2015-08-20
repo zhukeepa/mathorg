@@ -1,0 +1,31 @@
+<<<Title: Polynomials-I
+Author(s): Ali Gurel
+Description: 2008 Blue MOP Handout
+Topics: Polynomials
+>>>
+
+[ol]
+[li]{{{(Germany-97) Define the functions
+\begin{eqnarray}
+f(x)&=&x^5+5x^4+5x^3+5x^2+1,\nonumber\\
+g(x)&=&x^5+5x^4+3x^3-5x^2-1.\nonumber\\
+\end{eqnarray}
+Find all prime numbers $p$ for which there exists a natural number $0\leq x<p$, such that both $f(x)$ and $g(x)$ are divisible by $p$. Also find all such $x$.}}}[/li]
+  [li]{{{Prove that a polynomial of degree $n$ that takes integer values at $n+1$ consecutive integers is an integer polynomial, i.e. it takes integer values
+at all integers.}}}[/li]
+  [li]{{{Suppose that a natural number $m$ and a real polynomial $P(x)$ with degree $n$ and leading coefficient $a_n$ is given such that $P(x)$ is an integer divisible
+by $m$ whenever $x$ is an integer. Prove that $n!a_n$ is divisible by $m$.}}}[/li]
+  [li]{{{If $a_1,...,a_n$ are integers, prove that the polynomial
+$$P(x)=(x-a_1)(x-a_2)...(x-a_n)-1$$
+is irreducible.}}}[/li]
+  [li]{{{Let $m,n$ and $a$ be natural numbers and $p<a-1$ a prime number. Prove that the polynomial
+$$P(x)=x^m(x-a)^n+p$$
+is irreducible.}}}[/li]
+  [li]{{{Suppose that all zeros of a monic polynomial $P(x)$ with integer coefficients have norm 1. Prove that all the roots are roots of unity.}}}[/li]
+  [li]{{{(Romania-97) Let $P(x)$ and $Q(x)$ be monic irreducible polynomials over the rational numbers. Suppose that $P$ and $Q$ have respective roots $\alpha$ and $\beta$ such that
+$\alpha+\beta$ is rational. Prove that the polynomial $P(x)^2-Q(x)^2$ has a rational root.}}}[/li]
+  [li]{{{(Romania-97) Let $n\geq2$ be an integer and
+$$P(x)=x^n+a_{n-1}x^{n-1}+...+a_1x+1$$
+be a polynomial with positive integer coefficients satisfying $a_k=a_{n-k}$ for $k=1,2,...,n-1$. Prove that there exists infinitely many pairs $x,y$ of positive integers such that
+$x|P(y)$ and $y|P(x)$.}}}[/li]
+[/ol]

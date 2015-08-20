@@ -1,0 +1,50 @@
+<<<Title: Cyclic Quadrilaterals
+Author(s): Ali Gurel
+Description: 2011 Black MOP Handout
+Topics: Cyclic quadrilaterals
+>>>
+
+[ol]
+[li]{{{(Prasolov, PPSG, p107) Points $A, B$ and $C$ lie on one line, point $P$ lies outside this line. Prove that the
+centers of the circumscribed circles of triangles $ABP, BCP, ACP$ and point $P$ lie on one
+circle.}}}[/li]
+  [li]{{{(Andreescu & Gelca, MOC, p.9) Let $B$ and $C$ be the endpoints and $A$ the midpoint of a semicircle. Let $M$ be a point on the line segment $AC$, and $P,Q$ the feet of
+the perpendiculars from $A$ and $C$ to the line $BM$, respectively. Prove that $BP=PQ+QC$.}}}[/li]
+  [li]{{{(Andreescu & Gelca, MOC, p.8) Prove that the four projections of a vertex $A$ of the triangle $ABC$ onto the exterior and interior angle bisectors of $\angle B$ and $\angle C$
+are collinear.}}}[/li]
+  [li]{{{(Hong Kong-1999) Let $PQRS$ be a cyclic quadrilateral with $\angle PSR = 90^\circ$,
+and let $H$ and $K$ be the respective feet of perpendiculars from $Q$ to
+lines $PR$ and $PS$. Prove that line $HK$ bisects $\overline{QS}$.}}}[/li]
+  [li]{{{(9-Point Circle) In a triangle $ABC$, let $H_A, H_B, H_C$ be the feet of altitudes, $M_A, M_B, M_C$ be the midpoints and $K_A, K_B, K_C$ be the midpoints of $AH, BH, CH$
+where $H$ is the orthocenter. Then the nine points:
+$H_A, H_B,H_C, M_A, M_B,M_C, K_A, K_B,K_C$ are all cyclic.}}}[/li]
+  [li]{{{(Andreescu & Enescu, MOT, p.46) In the triangle $ABC$, the altitude, angle bisector and median from $C$ divide the angle $\angle C$ into four equal angles. Find the angles
+of the triangle.}}}[/li]
+  [li]{{{(Posamentier & Salkind, CPinG, p.34) Express in terms of the sides of a cyclic quadrilateral the ratio of the diagonals.}}}[/li]
+  [li]{{{(Romania-1992) Let $ABC$ be an acute triangle, and let $T$ be a point in its interior such that $\angle ATB=\angle BTC=\angle CTA$. Let $M,N$,
+and $P$ be the projections of $T$ onto $BC, CA$, and $AB$, respectively. The circumcircle of the triangle $MNP$ intersect the lines $BC, CA$, and $AB$ for the second time at $M',N'$, and $P'$, respectively. Prove that the triangle $M'N'P'$ is equilateral.}}}[/li]
+  [li]{{{(Russia-1999) In triangle $ABC$, points $D$ and $E$ are chosen on side $CA$ such that $AB = AD$ and $BE = EC$ ($E$ lying between $A$ and $D$).
+Let $F$ be the midpoint of the arc $BC$ of the circumcircle of $ABC$. Show that $B,E,D, F$ lie on a circle.}}}[/li]
+  [li]{{{(Asian-Pacific-1998) Let $ABC$ be a triangle and $D$ the foot of the altitude from $A$. Let $E$ and $F$ be on a line passing through $D$ such that
+$AE$ is perpendicular to $CF$, and $E$ and $F$ are different from $D$. Let $M$ and $N$ be the midpoints of line segments $BC$ and $EF$, respectively. Prove that $AN$ is perpendicular to $NM$.}}}[/li]
+  [li]{{{(Andreescu & Gelca, MOC, p.9) Let $A$ be a fixed point on the side $Ox$ of the angle $xOy$. A variable circle $\Gamma$ is tangent to $Ox$ and $Oy$, with $D$ the point of
+tangency with $Oy$. The second tangent from $A$ to $\Gamma$ intersects $\Gamma$ at $E$. Prove that when $\Gamma$ varies, the line $DE$ passed through a fixed point.}}}[/li]
+  [li]{{{(IMO-2004) Let $ABC$ be an acute-angled triangle with $AB\neq AC$.
+The circle with diameter $BC$ intersects the sides $AB$ and $AC$ at $M$ and
+$N$, respectively. Denote by $O$ the midpoint of $BC$. The bisectors of the
+angles $BAC$ and $MON$ intersect at $R$. Prove that the circumcircles of the
+triangles $BMR$ and $CNR$ have a common point lying on the line segment
+$BC$.}}}[/li]
+  [li]{{{(IMO-2004) In a convex quadrilateral $ABCD$ the diagonal $BD$ does
+not bisect the angles $ABC$ and $CDA$. The point $P$ lies inside $ABCD$ and
+satisfies
+$$\angle PBC = \angle DBA \mbox{ and } \angle PDC = \angle BDA.$$
+Prove that $ABCD$ is a cyclic quadrilateral if and only if $AP = CP$.}}}[/li]
+  [li]{{{(IMO Shortlist-2002) Circles $S_1$ and $S_2$ intersect at points $P$ and $Q$. Distinct points
+$A_1$ and $B_1$ (not at $P$ or $Q$) are selected on $S_1$. The lines $A_1P$ and $B_1P$
+meet $S_2$ again at $A_2$ and $B_2$ respectively, and the lines $A_1B_1$ and $A_2B_2$
+meet at $C$. Prove that as $A_1$ and $B_1$ vary, the circumcenters of triangles
+$A_1A_2C$ all lie on one fixed circle.}}}[/li]
+  [li]{{{(Pascal's Theorem) Let $A_0A_1A_2A_3A_4A_5$ be a cyclic hexagon and let $P_0$ be the intersection of $A_0A_1$ and $A_3A_4$, $P_1$ the intersection
+of $A_1A_2$ and $A_4A_5$, and $P_2$ the intersection of $A_2A_3$ and $A_5A_0$. Prove that $P_0,P_1$, and $P_2$ are collinear.}}}[/li]
+[/ol]

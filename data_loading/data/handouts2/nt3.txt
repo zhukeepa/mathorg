@@ -1,0 +1,43 @@
+<<<Title: Number Theory 3: Fermat, Euler, Wilson
+Author(s): Josh Nichols-Barrer
+Description: Red MOP 2007 Handout
+Topics: Fermat's theorem, Euler's theorem, Wilson's theorem
+>>>
+
+[ol]
+  [li]{{{Find the roots of $x^2 - x + 43$ modulo 77.}}}[/li]
+  [li]{{{Find the smallest positive integer $a$ such that $7n^{11} + 11n^7 + 9an$ is divisible
+  by 77 for every integer $n$.}}}[/li]
+  [li]{{{Prove that for any even positive integer $n$, $n^2-1$ divides
+  $2^{n!}-1$.}}}[/li]
+  [li]{{{(2004 French Team Selection Test) Are there any integers $a$ such that the set
+  $$ \{a, a+1, \ldots, a+17 \} $$
+  can be partitioned into two disjoint subsets $S$ and $T$ such that $\prod_{x \in S} x =
+  \prod_{y \in T} y$? If so, find all such integers, $a$.}}}[/li]
+  [li]{{{Let $p$ and $q$ be two distinct prime numbers. Show that every integer $a$ satisfies
+  the congruence $a^{pq - p - q + 2} \equiv a \bmod pq$.}}}[/li]
+  [li]{{{Let $a$ and $b$ be natural numbers such that $(a,b) = 1$.  Prove that $(2^a - 1, 2^b - 1) = 1$.  If $a$ and $b$ are odd, prove that $(2^a + 1, 2^b + 1) = 3$.
+  Try to generalize.}}}[/li]
+  [li]{{{(1983 Berkeley Preliminary Exam) The number 21982145917308330487013369 is the
+  thirteenth power of a positive integer. Which positive integer?}}}[/li]
+  [li]{{{(Bulgaria, 1996) Find all primes $p,q$ such that $pq ~|~ (5^p - 2^p)(5^q - 2^q)$.}}}[/li]
+  [li]{{{Let $p$ be a prime. Calculate the sum ${\displaystyle \sum_{n=0}^{p-1} n^k}$ modulo $p$. (Hint: Consider the cases $p - 1 ~|~ k$ and $p - 1 \not |~ k$ separately.)}}}[/li]
+  [li]{{{(Adler/Coury) Find all solutions to the congruence $x^{35} + 5x^{19} + 11x^3 \equiv 0 \bmod 17$.}}}[/li]
+  [li]{{{(Adler/Coury) Find all solutions to the congruence \mbox{$304x^{303} + 204x^{202} - 104x^{101} \equiv 0 \bmod 101$}.}}}[/li]
+  [li]{{{Let $S = \{9, 99, 999, \ldots \}$. Prove that for any prime $p > 5$,
+  there are infinitely many members of $S$ that are divisible by $p$.}}}[/li]
+  [li]{{{For a prime $p$ with primitive root $g$, every nonzero residue $m$ modulo $p$ can be written as $m=g^k$ for $0 \le k \le p-2$. Finding $k$ is known as [i]constructing a log table[/i]. Find a condition on $k$ that determines whether or not $m$ is a square modulo $p$.}}}[/li]
+  [li]{{{Let $p,q > 2$ be primes with $q = 2p+1$ and let $x,y,z \in \mathbb{Z}$. If $x^p + y^p + z^p \equiv 0 \bmod q$, prove that $xyz \equiv 0 \bmod q$.}}}[/li]
+  [li]{{{(IMO 1978/1) Let $m,n$ be positive integers with $m<n$. The last three decimal digits of $1978^m$ are the same as the last three decimal digits of $1978^n$. Find $m$ and $n$ such that $m+n$ is minimal.}}}[/li]
+  [li]{{{[IMO 2005] Consider the sequence $a_1, a_2, \dots$ defined by
+  \[
+  a_n = 2^n + 3^n + 6^n - 1
+  \]
+  for all positive integers $n$. Determine all positive integers that
+  are relatively prime to every term of the sequence.}}}[/li]
+  [li]{{{(IMO 1999/4) Find all pairs $(n,p)$ of positive integers such that
+  
+   [ul][li]$p$ is prime;[/li]
+    [li]$n \leq 2p$\,;[/li]
+    [li]$(p-1)^n + 1$ is divisible by $n^{p-1}$.[/li][/ul]}}}[/li]
+[/ol]

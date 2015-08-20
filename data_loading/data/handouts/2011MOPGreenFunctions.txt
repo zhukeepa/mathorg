@@ -1,0 +1,49 @@
+<<<Title: Functional Equations
+Author(s): Ali Gurel
+Description: 2011 Green MOP Handout
+Topics: Functional equations
+>>>
+
+[ol]
+[li]{{{Find all functions $f: \mathbb{R}\rightarrow\mathbb{R}$ satisfying $f(x+y)=f(x)+f(y)$ and any one of the following conditions:
+(i) $f$ is continuous,
+(ii) $f$ is monotonic,
+(iii) $f(x)\geq0$ whenever $x\geq0$,
+(iv) $f(x^2)=f(x)^2$.}}}[/li]
+  [li]{{{(ECO-1994) Find all functions $f$ from non-negative integers to non-negative integers satisfying
+$$f(f(x)+f(y)+f(z))=x+y+z.$$
+for all non-negative integers $x,y,z$.}}}[/li]
+  [li]{{{(USAMO-2002) Determine all $f: \mathbb{R}\rightarrow\mathbb{R}$ such that
+$$f(x^2-y^2)=xf(x)-yf(y)\ \ \mbox{for all pairs of } x,y\in\mathbb{R}$$}}}[/li]
+  [li]{{{(Romania 2008) Show that there exists a unique function $f: \mathbb{N^{*}}\times\mathbb{N^{*}}\rightarrow\mathbb{N^{*}}$
+which simultaneously satisfies the following three conditions for $x,y\in\mathbb{N^{*}}$: 
+(1) $f(x,y)=f(y,x)$;
+(2) $f(x,x)=x$;
+(3) $(y-x)f(x,y)=yf(x,y-x)$ whenever $y>x$.}}}[/li]
+  [li]{{{(Slovenia-2008) Find all functions $f: \mathbb{R}\rightarrow\mathbb{R}$ such that
+$$x+f(xf(y))=f(y)+yf(x)$$
+for all $x,y\in\mathbb{R}$.}}}[/li]
+  [li]{{{(Belarus-1997) Find all $g: \mathbb{R} \to \mathbb{R}$  satisfying
+$$g(x+y)+g(x)g(y)=g(xy)+g(x)+g(y).$$}}}[/li]
+  [li]{{{(Balkan MO-1997) Find all $f: \mathbb{R} \to \mathbb{R}$ s.t.
+$$f(xf(x)+f(y))=y+f(x)^2.$$}}}[/li]
+  [li]{{{(Radovanovic, FE, p.14) Find all functions $f:\mathbb{R}\to\mathbb{R}$ that satisfy
+$$f((x-y)^2)=f(x)^2-2xf(y)+y^2.$$}}}[/li]
+  [li]{{{(Radovanovic, FE, p.14) Find all continuous functions $f:\mathbb{R}\to\mathbb{R}$ such that
+$$f(xy)=xf(y)+yf(x).$$}}}[/li]
+  [li]{{{(Iran 1999) Find all functions $f:\mathbb{R}\to\mathbb{R}$ for which
+$$f(f(x)+y)=f (x^2-y)+4f (x)\,y.$$}}}[/li]
+  [li]{{{(IMO-1990) Construct a function $f:\mathbb{Q}^+\rightarrow\mathbb{Q}^+$ such that
+$$f(xf(y))=\dfrac{f(x)}{y},\ \forall x,y\in\mathbb{Q}^+.$$}}}[/li]
+  [li]{{{(China-1996) The function $f:\mathbb{R}\to\mathbb{R}$ satisfy
+$$f(x^3+y^3)=(x+y)\left(f(x)^2-f(x)f(y)+f (y)^2\right),$$
+for all real numbers $x$ and $y$. Prove that $f(1996x)=1996f(x)$, $\forall x\in\mathbb{R}$.}}}[/li]
+  [li]{{{(IMO Shortlist-1996) Let $f:\mathbb{R}\to\mathbb{R}$ be the function such that $|f (x)|\leq1$ and
+$$f\left(x+\dfrac{13}{42}\right)+f(x) = f\left(x+\dfrac{1}{6}\right)+f\left(x+\dfrac{1}{7}\right).$$
+Prove that $f$ is periodic.}}}[/li]
+  [li]{{{(IMO Shortlist-2008) Find all functions $f: (0,\infty)\rightarrow(0,\infty)$ such that
+$$\frac{f(p)^2+f(q)^2}{f(r^2)+f(s^2)}=\frac{p^2+q^2}{r^2+s^2}$$
+for all $p,q,r,s>0$ with $pq=rs$.}}}[/li]
+  [li]{{{(IMO Shortlist-1992) Find all functions $f :\mathbb{R}^+\to\mathbb{R}^+$ which satisfy
+$$f(f(x))+af(x)=b(a+b)x.$$}}}[/li]
+[/ol]

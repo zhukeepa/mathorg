@@ -1,0 +1,170 @@
+<<<Title: Graph Theory
+Author(s): Josh Nichols-Barrer
+Description: Blue MOP 2005 Handout
+Topics: Graph theory
+>>>
+
+This handout is cribbed almost verbatim from a Kiran handout from
+1996.  We start with a bunch of definitions.
+
+[ul][li]A [i]graph[/i] is a pair $(V, E)$, where $V$ is a finite set and
+  $E$ is a set of unordered pairs of elements of $V$. The elements
+  of $V$ and $E$ are called [i]vertices[/i] and [i]edges[/i],
+  respectively.[/li]
+  [li]A [i]directed graph (digraph)[/i] is the same as a graph,
+  except that the edges are now ordered pairs of distinct vertices.
+  (An edge is said to "come out of" the first vertex in the pair
+  and "go into" the second vertex.) When we say "graph", we mean
+  an undirected graph unless otherwise specified.[/li]
+  [li]An [i]isomorphism[/i] of two (directed or undirected) graphs is a
+  bijection of their vertices such that two vertices of one graph
+  form an edge if and only if their images form an edge (if the
+  graphs are directed, the bijection must preserve orientation as
+  well).[/li]
+  [li]Two vertices are [i]adjacent[/i] if they are the endpoints of
+  an edge.[/li]
+  [li]The [i]degree[/i] of a vertex is the number of edges it is an
+  endpoint of. In a directed graph, the [i]in-degree[/i] and {\em
+  out-degree} of a vertex are the number of edges coming in and
+  going out of, respectively, that vertex. A graph is {\em
+  $k$-regular} if every vertex has degree $k$.[/li]
+  [li]A graph is [i]connected[/i] if one cannot separate the vertices
+  into two groups, such that every edge connects two vertices in the
+  same group. Otherwise it is [i]disconnected[/i].[/li]
+  [li]A [i]$k$-coloring[/i] of a graph is a partition of the vertex
+  set into $k$ subsets, such that no two vertices in the same subset
+  are adjacent. A [i]$k$-edge-coloring[/i] is a partition of the edge
+  set into $k$ subsets, such that no two edges in the same subset
+  have a common endpoint. A $2$-colorable graph is also said to be
+  [i]bipartite[/i].[/li]
+  [li]The [i]complete[/i] graph $K_n$ is the graph on $n$ vertices in
+  which every pair of vertices is an edge. The [i]complete
+  bipartite[/i] graph $K_{m,n}$ is the graph on $m+n$ vertices in which
+  every pair of vertices, one from the first $m$ and one from the
+  other $n$, is an edge. Similarly, the [i]complete multipartite[/i]
+  graph $K_{m_1, \dots, m_k}$ is the graph on $m_1 + \cdots + m_k$
+  vertices, containing every pair of vertices in distinct partitions
+  as an edge.[/li]
+  [li]A [i]planar[/i] graph is one that can be drawn in the plane,
+  with points representing the vertices, and (polygonal) curves
+  representing the edges, so that no two edges meet except at a
+  common endpoint. The regions into which the edges divide the plane
+  are called [i]faces[/i].[/li]
+  [li]A [i]path[/i] is a sequence of distinct vertices such that
+  every two consecutive vertices are adjacent. A [i]cycle[/i] is the
+  same except that the first and last vertices are equal.  In a
+  directed graph, paths usually travel in the direction of the edge
+  orientations.[/li]
+  [li]An [i]Eulerian tour[/i] is a path (but repeated vertices
+  allowed) containing each edge exactly once.[/li]
+  [li]A [i]Hamiltonian path/cycle[/i] is a path/cycle containing each
+  vertex exactly once.[/li][/ul]
+
+
+[b]Some Hard Theorems[/b]
+
+[ul][li](Marriage theorem) Let $A,B$ be the color sets in a 2-coloring
+  of a bipartite graph. We wish to choose a set of edges such that
+  every vertex of $A$ lies on exactly one of the edges, but no
+  vertex of $B$ lies no more than one. This is possible if and only
+  if, for all $S \subseteq A$, the set of vertices adjacent to at
+  least one vertex of $S$ contains at least as many elements as $S$.[/li]
+  [li](Four-color theorem) Every planar graph is 4-colorable.[/li]
+  [li](Cayley's formula) The number of trees on $n$ labeled vertices
+  is $n^{n-2}$.[/li]
+  [li](Turan's theorem) The maximum number of edges in a graph on
+  $n$ vertices containing no $K_{k+1}$ occurs for the complete
+  $k$-partite graph $K_{m_1, \dots, m_k}$, where $m_1 + \cdots + m_k
+  = n$ and no two of the $m_i$ differ by more than 1.[/li][/ul]
+
+
+[b]Exercises and Problems[/b]
+
+
+[ol]
+  
+  [li]{{{(Handshake lemma) The sum of the degrees of the vertices
+  of a graph is twice the number of edges; in particular, it is an
+  even number.}}}[/li]
+  [li]{{{What is the maximum possible number of distinct degrees
+  in a graph with $n$ vertices?}}}[/li]
+  [li]{{{A graph is bipartite if and only if it has an cycle with
+  an odd number of vertices. (No simple characterization of
+  $k$-colorability is available for $k>2$.)}}}[/li]
+  [li]{{{A [i]tournament[/i] is a directed graph in which every
+  pair of vertices occurs as an edge in one order or the other (but
+  not both). Prove that every tournament has a (directed)
+  Hamiltonian path. Also, which tournaments contain a Hamiltonian
+  cycle?}}}[/li]
+  [li]{{{Prove that every tournament contains a vertex $v$ such
+  that for every other vertex $w$, either $vw$ is an edge or $vx$
+  and $xw$ are edges for some third vertex $w$.}}}[/li]
+  [li]{{{Prove a graph has an Eulerian cycle if and only if every
+  vertex has even degree. Prove also that a digraph has an Eulerian
+  cycle if and only if the in-degree of every vertex equals its
+  out-degree.}}}[/li]
+  [li]{{{The hypercube $Q_n$ is defined as the graph on the
+  $n$-digit binary sequences, where two sequences are adjacent if
+  they differ in only one digit. Prove that $Q_n$ has a Hamiltonian
+  cycle.}}}[/li]
+  [li]{{{(Euler's formula) If a connected planar graph has $v$
+  vertices, $e$ edges and $f$ faces, then $v-e+f=2$.}}}[/li]
+  [li]{{{A connected planar graph on $v$ vertices has no more than
+  $3v-6$ edges. (Hint: each face has at least 3 vertices.)}}}[/li]
+  [li]{{{Prove that if the edges of $K_6$ are divided into two
+  subsets, there must be a triangle in one of the subsets. Also show
+  that this need not be the case for $K_5$. (This is the first
+  result in the subject of Ramsey theory, the topic of an upcoming
+  lecture.) If you thought that was too easy, try IMO 1964/4: if the
+  edges of $K_{17}$ are divided into three subsets, there must be a
+  triangle in one of the subsets.}}}[/li]
+  [li]{{{(USAMO 1981/2) Every pair of communities in a county are
+  linked directly by exactly one mode of transportation: bus, train
+  or automobile. All three modes of transportation are used in the
+  county with no community being serviced by all three modes and no
+  three communities being linked pairwise by the same mode.
+  Determine the maximum number of communities in the county.}}}[/li]
+  [li]{{{(USAMO 1989/2) The 20 members of a local tennis club
+  have scheduled exactly 14 two-person games among themselves, with
+  each member playing in at least one game.  Prove that within this
+  schedule there must be a set of 6 games with 12 distinct players.}}}[/li]
+  [li]{{{Cities $C_1, C_2, \ldots, C_N$ are served by airlines
+  $A_1, A_2,\ldots, A_n$.  There is direct non-stop service between
+  any two cities (by at least one airline), and all airlines provide
+  service in both directions.  If $N\geq 2^n+1$, prove that at least
+  one of the airlines can offer a round trip with an odd number of
+  landings.}}}[/li]
+  [li]{{{(IMO 1991/4) Let $G$ be a connected graph with $k$
+  edges. Prove that the edges can be labeled $1, \dots, k$ in some
+  fashion, such that for every vertex of degree greater than 1, the
+  labels of those edges incident to that vertex have greatest common
+  divisor 1.}}}[/li]
+  [li]{{{A graph has $n$ vertices and $q$ edges. The edges are
+  labeled $1, \dots, q$ in some fashion. Prove that there exists a
+  path (repeated vertices allowed) containing at least $\lfloor 2q/n
+  \rfloor$ edges, such that the labels of the edges in the path occur in
+  increasing order along the path.}}}[/li]
+  [li]{{{(Pamphlet, Russia 15) Suppose a 3-regular planar graph
+  is edge-colored in red, white, and blue. A vertex is said to be
+  [i]positive[/i] if its edges are colored red, white, blue in
+  counterclockwise order; otherwise it is [i]negative[/i]. Prove that
+  the numbers of positive and negative vertices differ by a multiple
+  of 4.}}}[/li]
+  [li]{{{(USAMO 1995/5, and pamphlet, USA 5) Suppose a graph with
+  $n$ vertices and $q$ edges contains no triangles (i.e. contains no
+  three mutually adjacent vertices). Prove that there is a vertex
+  $v$ such that there are at most $q(1-4q/n^2)$ edges neither of
+  whose vertices is $v$ or any vertex adjacent to $v$.}}}[/li]
+  [li]{{{(USAMO 1986/2) During a certain lecture, each of five
+  mathematicians fell asleep exactly twice. For each pair of these
+  mathematicians, there was some moment when both were sleeping
+  simultaneously. Prove that, at some moment, some three of them
+  were sleeping simultaneously.}}}[/li]
+  [li]{{{(IMO 1992/3) Consider nine points in space, no four of
+  which are coplanar.  Each pair of points is joined by an edge
+  (that is, a line segment) and each edge is either colored blue or
+  red or left uncolored.  Find the smallest value of $n$ such that
+  whenever $n$ edges are colored, the set of colored edges
+  necessarily contains a triangle all of whose edges have the same
+  color.}}}[/li]
+[/ol]

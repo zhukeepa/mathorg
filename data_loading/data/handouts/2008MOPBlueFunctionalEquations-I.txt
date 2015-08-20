@@ -1,0 +1,26 @@
+<<<Title: Functional Equations-I 
+Author(s): Ali Gurel
+Description: 2008 Blue MOP handout
+Topics: Functional equations
+>>>
+
+[ol]
+[li]{{{Find all $f:\mathbb{R}\rightarrow\mathbb{R}$ such that $f(f(x))=x^2-2$ for all real $x$.}}}[/li]
+  [li]{{{(SL-92) Let $a,b>0$. Find all functions $f:\mathbb{R}^+\rightarrow\mathbb{R}^+$ which satisfy
+$$f(f(x))+af(x)=b(a+b)x,\ \mbox{ for all } x\in\mathbb{R}^+.$$}}}[/li]
+  [li]{{{(Vietnam-03) Let $F$ be the set of all functions $f:\mathbb{R}^+\rightarrow\mathbb{R}^+$ which satisfy the inequality $f(3x)\geq f(f(2x))+x$ for all positive $x$. Find the largest positive
+number $\alpha$ such that for all functions $f\in F$, we have $f(x)\geq \alpha x$.}}}[/li]
+  [li]{{{Find all functions $f:\mathbb{N}\rightarrow\mathbb{N}$ that satisfy
+$$f(f(n))+f(n+1)=n+2.$$}}}[/li]
+  [li]{{{(Belarus-97) Find all functions $g:\mathbb{R}\rightarrow\mathbb{R}$ such that for all $x,y\in\mathbb{R}$
+$$g(x+y)+g(x)g(y)=g(xy)+g(x)+g(y)$$}}}[/li]
+  [li]{{{(BMO-97) Solve the functional equation
+$$f(xf(x)+f(y))=y+f(x)^2,\ \forall x,y \in\mathbb{R}.$$}}}[/li]
+  [li]{{{(SL-03) Find all functions $f:\mathbb{R}^+\rightarrow\mathbb{R}^+$ satisfying the following conditions:
+$\begin{eqnarray}
+&&(i)\ f(xyz)+f(x)+f(y)+f(z)=f(\sqrt{xy})f(\sqrt{yz})f(\sqrt{zx})\nonumber 
+&&(ii)\ f(x)<f(y)\ \mbox{ for all }\ 1\leq x<y\nonumber
+\end{eqnarray}$ }}}[/li]
+  [li]{{{Given a positive integer $n$, let $f:\mathbb{R}\rightarrow\mathbb{R}$ be a continuous function satisfying $f(0)=0$, $f(1)=1$, and $f^{(n)}(x)=x$ for every $x\in[0,1]$. Prove that
+$f(x)=x$ for all $x\in[0,1]$.}}}[/li]
+[/ol]

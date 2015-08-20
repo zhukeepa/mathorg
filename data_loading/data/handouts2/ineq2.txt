@@ -1,0 +1,22 @@
+<<<Title: Inequalities 2
+Author(s): Josh Nichols-Barrer
+Description: Red MOP 2008 Handout
+Topics: Inequalities
+>>>
+
+[ol]
+  [li]{{{(MOP 2006) Let $x_1,x_2,x_3,x_4,$ and $x_5$ be positive real numbers with \[\frac 1{1+x_1}+\frac 1{1+x_2}+\cdots+\frac 1{1+x_5}=1.\]  Prove that \[\sum_{i=1}^5\frac 4{4+x_i^2}\geq 1\mathrm{and}\sum_{i=1}^5\frac{x_i}{4+x_i^2}\leq 1.\]}}}[/li]
+  [li]{{{(MOP 2006) Let $a$, $b$, and $c$ be nonnegative real numbers.  Prove that \[(a+b+c)^3-27abc\leq 4(a^3+b^3+c^3-3abc).\]}}}[/li]
+  [li]{{{(MOP 2007) Let $x,y,z$ be real numbers with $x+y+z=xyz$.  Prove that \[\frac 1{1+xy}+\frac 1{1+yz}+\frac 1{1+zx}\leq \frac 34.\]}}}[/li]
+  [li]{{{(MOP 2007) Let $a,b,c$ be positive numbers with $a+b+c\geq abc$.  Prove that \[a^2+b^2+c^2\geq \sqrt 3 abc.\]}}}[/li]
+  [li]{{{(MOP 2007) Let $x,y,z$ be nonnegative real numbers with $x^2+y^2+z^2=1$.  Determine the extreme values of \[\frac x{1+yz}+\frac y{1+zx}+\frac z{1+xy}.\]}}}[/li]
+  [li]{{{Let $a,b,c$ be nonnegative real numbers.  Show that \[\frac{a+b+c}3-\sqrt[3]{abc} \leq \frac{(\sqrt a-\sqrt b)^2+(\sqrt b-\sqrt c)^2+(\sqrt c - \sqrt a)^2}3.\]}}}[/li]
+  [li]{{{(Romanian selection test) Let $a,b,x,y,z>0$. Prove that
+  \[\frac x{ay+bz}+\frac y{az+bx} + \frac z{ax+by} \geq \frac 3{a+b}.\]}}}[/li]
+  [li]{{{(USAMO 77/5) If $a,b,c,d,e$ are positive numbers bounded by
+  $p$ and $q$, $0<p<q$, prove that
+  \[(a+b+c+d+e)\left(\frac{1}{a}+\frac{1}{b}+\frac{1}{c}+\frac{1}{d}+\frac{1}{e}\right) \leq 25+6\left(\sqrt{\frac{p}{q}}-\sqrt{\frac{q}{p}}\right)^2,\] and
+  determine when there is equality.}}}[/li]
+  [li]{{{(IMO 1984/1) Prove that $0\leq yz+zx+xy-2xyz\leq 7/27$, where
+  $x,y$ and $z$ are non-negative real numbers for which $x+y+z=1$.}}}[/li]
+[/ol]

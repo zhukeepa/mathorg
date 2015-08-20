@@ -1,0 +1,116 @@
+<<<Title: Algebra 2 -- Sequences 
+Author(s): Josh Nichols-Barrer
+Description: Black MOP Handout
+Topics: Sequences
+>>>
+
+[ol]
+    [li]{{{(IMO 95/4) Find the maximum value of $x_0$ for which
+    there exists a sequence $x_0, x_1 \dots, x_{1995}$ of positive
+    reals with $x_0 = x_{1995}$, such that for $i = 1, \dots, 1995$,
+    \[
+    x_{i-1} + \frac{2}{x_{i-1}} = 2x_i + \frac{1}{x_i}.
+    \]}}}[/li]
+  [li]{{{(IMO 67/5) Consider the sequence $\{c_{n}\}$, where
+  
+    \begin{eqnarray*}
+    c_{1} &=&a_{1}+a_{2}+\cdots +a_{8} 
+    c_{2} &=&a_{1}^{2}+a_{2}^{2}+\cdots +a_{8}^{2} 
+    &&\cdots  
+    c_{n} &=&a_{1}^{n}+a_{2}^{n}+\cdots +a_{8}^{n} 
+    &&\cdots
+    \end{eqnarray*}
+  
+    in which $a_{1},a_{2},\cdots ,a_{8}$ are real numbers not all
+    equal to zero. Suppose that an infinite number of terms of the
+    sequence $\{c_{n}\}$ are equal to zero. Find all natural numbers
+    $n$ for which $c_{n}=0.$}}}[/li]
+  [li]{{{(IMO 82/3) Consider the infinite sequences $\{x_{n}\}$ of
+    positive real numbers with the following properties:
+  
+    \[
+    x_{0}=1,\text{and for all }i\ge 0,x_{i+1}\le x_{i}.
+    \]
+  
+    (a) Prove that for every such sequence, there is an $n\ge 1$ such
+    that
+    \[
+    \frac{x_{0}^{2}}{x_{1}}+\frac{x_{1}^{2}}{x_{2}}+\cdots +\frac{x_{n-1}^{2}}{
+    x_{n}}\ge 3.999.
+    \]
+  
+    (b) Find a such a sequence $(x_i)$ so that for every $n$,
+    \[
+    \frac{x_{0}^{2}}{x_{1}}+\frac{x_{1}^{2}}{x_{2}}+\cdots +\frac{x_{n-1}^{2}}{
+    x_{n}}<4.
+    \]}}}[/li]
+  [li]{{{(IMO 70/3) The real numbers $a_{0},a_{1},...,a_{n},...$
+    satisfy the condition:
+    \[
+    1=a_{0}\leq a_{1}\leq a_{2}\leq \cdots \leq a_{n}\leq \cdots .
+    \]
+  
+    The numbers $b_{1},b_{2},...,b_{n},...$ are defined by
+    \[
+    b_{n}=\sum_{k=1}^{n}\left( 1-\frac{a_{k-1}}{a_{k}}\right) \frac{1}{\sqrt{
+    a_{k}}}.
+    \]
+  
+    (a) Prove that $0\leq b_{n}<2$ for all $n.$
+  
+    (b) Given $c$ with $0\leq c<2,$ prove that there exist numbers $
+    a_{0},a_{1},...$ with the above properties such that $b_{n}>c$ for
+    large enough $n.$}}}[/li]
+  [li]{{{(IMO 94/1) Let $m$ and $n$ be positive integers. Let
+    $a_1, a_2, \dots, a_m$ be distinct elements of $\{1, 2, \dots,
+    n\}$ such that whenever $a_i + a_j \leq n$ for some $i, j$, $1
+    \leq i \leq j \leq m$, there exists $k$, $1 \leq k \leq m$, with
+    $a_i + a_j = a_k$. Prove that
+    \[
+    \frac{a_1 + a_2 + \cdots + a_m}{m} \geq \frac{n+1}{2}.
+    \]}}}[/li]
+  [li]{{{(IMO 73/6) Let $a_{1},a_{2},...,a_{n}$ be $n$ positive
+    numbers, and let $q$ be a given real number such that $0<q<1.$
+    Find $n$ numbers $b_{1},b_{2},...,b_{n}$ for which
+  
+    (a) $a_{k}<b_{k}$ for $k=1,2,\cdots ,n,$
+  
+    (b) $q<\frac{b_{k+1}}{b_{k}}<\frac{1}{q}$ for $k=1,2,...,n-1,$
+  
+    (c) $b_{1}+b_{2}+\cdots +b_{n}<\frac{1+q}{1-q}(a_{1}+a_{2}+\cdots
+    +a_{n}).$}}}[/li]
+  [li]{{{(USSR 1982) Let $a_1,\ldots a_n$ be a sequence of reals.
+    Prove that it is possible to find a subsequence
+    $S=(a_{i_{1}},a_{i_{2}},\ldots,a_{i_{r}})$ of this sequence
+    ($1\leq i_1<i_2<\cdots<i_r\leq n$) such that:
+  
+     [ol][li]For every three successors $a_k, a_{k+1}, a_{k+2}$ in
+    the original sequence, at least one of these terms is in $S$ and
+    at least one is not.[/li]
+    [li]The following inequality holds:
+    \[\left|\sum_{s=1}^ra_{i_{s}}\right|\geq\frac{1}{6}\sum_{i=1}^n
+    |a_i|.\][/li][/ol]}}}[/li]
+  [li]{{{(IMO 85/6) For every real number $x_{1},$ construct the sequence $
+    x_{1},x_{2},...$ by setting
+    \[
+    x_{n+1}=x_{n}\left( x_{n}+\frac{1}{n}\right) \text{for each }n\geq
+    1.
+    \]
+    Prove that there exists exactly one value of $x_{1}$ for which
+    \[
+    0<x_{n}<x_{n+1}<1
+    \]
+    for every $n.$}}}[/li]
+  [li]{{{(IMO 96/6) Let $p,q,n$ be three positive integers with
+    $p+q < n$. Let $(x_{0}, x_{1}, \dots, x_{n})$ be an $(n+1)$-tuple
+    of integers satisfying the following conditions:
+     [ol][li]For each $i$ with $1
+    \leq i \leq n$, either $x_{i} - x_{i-1} = p$ or $x_{i} - x_{i-1} =
+    -q$.[/li][/ol]
+    Show that there exist indices $i < j$ with $(i,j) \neq (0, n)$,
+    such that $x_{i} = x_{j}$.}}}[/li]
+  [li]{{{(2002 IMO Shortlist) Let $a_1,a_2,\ldots,a_n,\ldots$ be an infinite sequence of real numbers, for which there exists a real number $c$ with $0\leq a_i\leq c$ for all $i$, such that \[|a_i-a_j|\geq \frac1{i+j}\] for all $i,j$ with $i\neq j$.  Prove that $c\geq 1$.}}}[/li]
+  [li]{{{(2004 IMO Shortlist) An infinite sequence $a_0,a_1,a_2,\ldots$ of real numbers satisfies the condition \[a_n=|a_{n+1}-a_{n+2}|\] for every $n\geq 0$, with $a_0$ and $a_1$ positive and distinct.  Can this sequence be bounded?}}}[/li]
+  [li]{{{(2004 IMO Shortlist) Consider pairs of sequences of positive real numbers \[a_1\geq a_2\geq a_3\geq\cdots,\qquad b_1\geq b_2\geq b_3\geq\cdots\] and the sums \[A_n=a_1+\cdots+a_n,\qquad B_n=b_1+\cdots+b)n;\qquad n=1,2\ldots\] Define $c_i=\min\{a_i,b_i\}$ and $C_n=c_1+\cdots+c_n,n=1,2,\ldots$.   [ol][li]Does there exist a pair of sequences $(a_i)_{i=1}^\infty$ and $(b_i)_{i=1}^\infty$ such that the sequences $(A_n)_{n=1}^\infty$ and $(B_n)_{n=1}^\infty$ are unbounded while the sequence $(C_n)_{n=1}^\infty$ is bounded?[/li]
+    [li]Does the answer change by assuming additionally that $b_i=1/i$, $i=1,2,\ldots$?[/li][/ol]}}}[/li]
+[/ol]

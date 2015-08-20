@@ -1,0 +1,17 @@
+<<<Title: Roots of Unity
+Author(s): Josh Nichols-Barrer
+Description: Red MOP 2008 Handout
+Topics: Roots of unity
+>>>
+
+[ol]
+  [li]{{{How many $n$th roots of unity are primitive?}}}[/li]
+  [li]{{{Find the monic polynomial whose roots are the primitive 30th roots of unity.}}}[/li]
+  [li]{{{Let $n$ and $k$ be positive integers, $\xi$ a primitive $n$th root of unity.  Compute, as a function of $n$ and $k$, the sum \[\sum_{j=0}^{n-1}\xi^{jk}.\]}}}[/li]
+  [li]{{{Let $\xi$ be a primitive 19th root of unity.  Compute \[\textrm{Re} \sum_{k=1}^{18}\xi^{k^2}.\]}}}[/li]
+  [li]{{{Let $\xi$ be a primitive 19th root of unity.  Compute \[\sum_{k=1}^{18}\xi^{2^k}.\]}}}[/li]
+  [li]{{{Let $n$ be a positive integer, $\xi$ a primitive $n$th root of unity.  Compute \[\prod_{k=0}^{n-1}(2+\xi^k).\]}}}[/li]
+  [li]{{{(IMO 1995/6) Let $p$ be an odd prime.  Determine the number of $p$-element subsets of $\{1,2,\ldots,2p\}$ whose sum is a multiple of $p$.}}}[/li]
+  [li]{{{Let $\mathbb N = S_1\cup S_2\cup\cdots\cup S_n$ be a (disjoint) partition of the natural numbers into finitely many arithmetic sequences (an arithmetic sequence is a set of integers of the form $\{a+bk|k\in\mathbb N\}$ for some integers $a$ and $b$ where $b$ is nonzero).  Prove that two of these arithmetic sequences must have the same common difference.}}}[/li]
+  [li]{{{Prove that \[\frac{1}{\sin(\pi/7)} = \frac{1}{\sin(2\pi/7)} + \frac{1}{\sin(3\pi/7)}.\]}}}[/li]
+[/ol]

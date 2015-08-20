@@ -1,0 +1,56 @@
+<<<Title: Number Theory 2: Divisibility, Modular Arithmetic
+Author(s): Josh Nichols-Barrer
+Description: Red MOP 2007 Handout
+Topics: Modular arithmetic, Divisibility
+>>>
+[ol]
+  [li]{{{For $n > 1$, can the sum
+  $$ \sum_{k=1}^n \frac{1}{k} $$
+  
+  ever be an integer?}}}[/li]
+  [li]{{{Prove that there are infinitely many primes of the form $4k+3$.}}}[/li]
+  [li]{{{For $n,p \in \mathbb{N}$ and $p$ a prime, find an expression for the largest
+  power of $p$ that divides $n!$. Use your formula to prove that $\frac{(m+n)!}{m!n!}$
+  is an integer.}}}[/li]
+  [li]{{{(The first USAMO problem: 1972/1) Let $(x_1, x_2, \ldots, x_n)$
+  denote the greatest common divisor of the natural numbers $x_1, x_2, \ldots,
+  x_n$, and let $[x_1, x_2, \ldots, x_n]$ denote their least common multiple.
+  Prove that for all natural numbers $a,b,c$,
+  $$ \frac{(a,b,c)^2}{(a,b)(b,c)(c,a)} = \frac{[a,b,c]^2}{[a,b][b,c][c,a]}\,. $$}}}[/li]
+  [li]{{{[ol][li](The first IMO problem: 1959/1) Prove that the fraction $\frac{21n+4}{14n+3}$ is irreducible for $n \in \mathbb{N}$.[/li]
+    [li]Prove that the fraction $\frac{12n+1}{30n+2}$ is irreducible for $n \in \mathbb{N}$.[/li][/ol]}}}[/li]
+  [li]{{{Prove that for $a,b,p \in \mathbb{N}$, and $p$ a prime,
+  $$ \binom{pa}{pb} \equiv \binom{a}{b} \bmod p. $$}}}[/li]
+  [li]{{{Find an infinite family of counterexamples to the following statements.
+  
+   [ol][li]$12n + 5$ is prime for all natural numbers $n$ that aren't mulitples of 5.[/li]
+    [li]$n^2 + n + 41$ is prime for all natural numbers $n$ that aren't mulitples of 41.[/li][/ol]}}}[/li]
+  [li]{{{Prove that $n^2 + 3n + 5$ can never be a multiple of 121 for $n \in \mathbb{Z}$.}}}[/li]
+  [li]{{{Let $m$ and $n$ be two relatively prime positive integers, let $a,b,c$, and $d$ be integers, and let $g = (am+bn,cm+dn)$. Show that $g | ad - bc$.}}}[/li]
+  [li]{{{Does there exist a set consisting of 2007 positive integers such that, for every two
+  distinct numbers $a$ and $b$ in this set, their sum $a+b$ is divisible by their differnce $a-b$?}}}[/li]
+  [li]{{{Let $m$ be an even positive integer. Assume that
+  \[
+  \{a_1, a_2, \dotsc,  a_m\} \mbox{and} \{b_1, b_2, \dotsc,
+  b_m\}
+  \]
+  are two complete sets of residue classes modulo $m$. Prove that
+  \[
+  \{ a_1+b_1, a_2+b_2, \dotsc,  a_m+b_m\}
+  \]
+  is not a set of complete residue classes.}}}[/li]
+  [li]{{{(Romania, 1995) Find all positive integral solutions $(x,y,z,t)$ to the equation
+  $$ (x+y)(y+z)(z+x) = txyz $$
+  
+  such that $(x,y) = (y,z) = (z,x) = 1$.}}}[/li]
+  [li]{{{[Romania 2003] Consider the prime numbers $n_1<n_2<\dotsb
+  <n_{31}$. Prove that if 30 divides $n_1^4+n_2^4+\dotsb +n_{31}^4$,
+  then among these numbers one can find three consecutive primes.}}}[/li]
+  [li]{{{[Russia 2001] Find all primes $p$ and $q$ such that $p+q=
+  (p-q)^3$.}}}[/li]
+  [li]{{{Determine whether there exist infinitely many even positive integers
+  $k$ such that for every prime $p$ the number $p^2 + k$ is composite.}}}[/li]
+  [li]{{{[Baltic 2001] Let $a$ be an odd integer. Prove that
+  $a^{2^n}+2^{2^n}$ and $a^{2^m}+2^{2^m}$ are relatively prime for all
+  positive integers $n$ and $m$ with $n\ne m$.}}}[/li]
+[/ol]

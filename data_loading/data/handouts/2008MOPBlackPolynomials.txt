@@ -1,0 +1,37 @@
+<<<Title: Polynomials
+Author(s): Ali Gurel
+Description: 2008 Black MOP Handout
+Topics: Polynomials
+>>>
+
+[ol]
+[li]{{{Let $m,n$ and $a$ be natural numbers and $p<a-1$ a prime number. Prove that the polynomial
+$$P(x)=x^m(x-a)^n+p$$
+is irreducible.}}}[/li]
+  [li]{{{Suppose that all zeros of a monic polynomial $P(x)$ with integer coefficients have norm 1. Prove that all the roots are roots of unity.}}}[/li]
+  [li]{{{(Romania-97) Let $n\geq2$ be an integer and
+$$P(x)=x^n+a_{n-1}x^{n-1}+...+a_1x+1$$
+be a polynomial with positive integer coefficients satisfying $a_k=a_{n-k}$ for $k=1,2,...,n-1$. Prove that there exists infinitely many pairs $x,y$ of positive integers such that
+$x|P(y)$ and $y|P(x)$.}}}[/li]
+  [li]{{{Determine the polynomials $P$ for which $16P(x^2)=P(2x)^2$.}}}[/li]
+  [li]{{{Find all polynomials $P$ such that
+$$P(x)^2+P\left(\frac{1}{x}\right)^2=P(x^2)P\left(\frac{1}{x^2}\right).$$}}}[/li]
+  [li]{{{Are there non-linear polynomials $P$ and $Q$ such that
+$$P(Q(x))=(x-1)(x-2)...(x-15)?$$}}}[/li]
+  [li]{{{Determine all polynomials $P$ for which $$P(x)^2-2=2P(2x^2-1).$$}}}[/li]
+  [li]{{{Find all polynomials satisfying $$P(x)^2-1=4P(x^2-4x+1).$$}}}[/li]
+  [li]{{{Find all polynomials $P$ satisfying
+$$P(x^2+1)=P(x)^2+1.$$}}}[/li]
+  [li]{{{(IMO-04) Find all polynomials $P(x)$ with real coefficients that satisfy
+$$P(a-b)+P(b-c)+P(c-a)=2P(a+b+c)$$
+for all triples $a,b,c$ of real numbers such that $ab+bc+ca=0$.}}}[/li]
+  [li]{{{Let $a_1,a_2,...,a_n$ be non-negative real numbers and assume that the polynomial
+$$P(x)=x^n+a_{n-1}x^{n-1}+...+a_1x+1$$
+has $n$ real roots. Prove that $P(2)\geq3^n$.}}}[/li]
+  [li]{{{(BMO-89) If $a_n...a_1a_0$ is the decimal representation of a prime number and $a_n>1$, prove that the polynomial $P(x)=a_nx^n+...+a_1x+a_0$ is irreducible in $\mathbb{Z}[x]$.}}}[/li]
+  [li]{{{Let $p>2$ be a prime number and $P(x)=x^p-x+p$. Prove that the polynomial $P(x)$ is irreducible in $\mathbb{Z}[x]$.}}}[/li]
+  [li]{{{For polynomials $P(x)$ and $Q(x)$ and an arbitrary $k\in\mathbb{C}$, denote
+$$P_k=\{z\in\mathbb{C}\,|\,P(z)=k\},\ Q_k=\{z\in\mathbb{C}\,|\,Q(z)=k\}$$
+Prove that $P_0=Q_0$ and $P_1=Q_1$ imply that $P\equiv Q$.}}}[/li]
+  [li]{{{Prove that they polynomial $P(x)=x^n+4$ is irreducible over $\mathbb{Z}[x]$ if and only if $n$ is not a multiple of 4.}}}[/li]
+[/ol]

@@ -1,0 +1,46 @@
+<<<Title: Inequalities
+Author(s): Ali Gurel
+Description: 2010 Black MOP Handout
+Topics: Inequalities
+>>>
+
+Problems selected from `Inequalities: A Mathematical Olympiad Approach'.
+
+[ol]
+[li]{{{(Zeb & Ali) For positive numbers $a,b,c$, prove that
+$$2\left(x^2+y^2+z^2\right)^2\geq3\left(xy(x^2+y^2)+yz(y^2+z^2)+zx(z^2+x^2)\right).$$}}}[/li]
+  [li]{{{(Russia-99) If $x^2+y^3\geq x^3+y^4$, prove that $x^3+y^3\leq2$.}}}[/li]
+  [li]{{{(Russia-99) If $abc=1$ and $\displaystyle a+b+c\leq\frac{1}{a}+\frac{1}{b}+\frac{1}{c}$, then for every $n\in\mathbb{Z}^+$,
+$$a^n+b^n+c^n\leq\frac{1}{a^n}+\frac{1}{b^n}+\frac{1}{c^n}\cdot$$}}}[/li]
+  [li]{{{(Japan-05) Let $a,b,c$ be positive real numbers such that $a+b+c=1$. Prove that
+$$a\sqrt[3]{1+b-c}+b\sqrt[3]{1+c-a}+c\sqrt[3]{1+a-b}\leq1.$$}}}[/li]
+  [li]{{{(UK-05) Let $a,b,c$ be positive real numbers. Prove that
+$$\left(\frac{a}{b}+\frac{b}{c}+\frac{c}{a}\right)^2\geq(a+b+c)\left(\frac{1}{a}+\frac{1}{b}+\frac{1}{c}\right)\cdot$$}}}[/li]
+  [li]{{{(Balkan-06) Let $a,b,c$ be positive real numbers. Prove that
+$$\frac{1}{a(b+1)}+\frac{1}{b(c+1)}+\frac{1}{c(a+1)}\geq\frac{3}{1+abc}\cdot$$}}}[/li]
+  [li]{{{(China-07) If $a,b,c$ are the lengths of the sides of a triangle with $a+b+c=3$, find the minimum of
+$$a^2+b^2+c^2+\frac{4abc}{3}\cdot$$}}}[/li]
+  [li]{{{(Iran-07) If $a,b,c$ are different positive real numbers, prove that
+$$\left|\frac{a+b}{a-b}+\frac{b+c}{b-c}+\frac{c+a}{c-a}\right|>1.$$}}}[/li]
+  [li]{{{(Romania-07) Let $a,b,c$ be positive real numbers such that
+$$\frac{1}{a+b+1}+\frac{1}{b+c+1}+\frac{1}{c+a+1}\geq1.$$
+Prove that $a+b+c\geq ab+bc+ca$.}}}[/li]
+  [li]{{{(Iran-08) Find the least real number $K$ such that for any positive real numbers $x,y,z$, the following inequality holds:
+$$x\sqrt{y}+y\sqrt{z}+z\sqrt{x}\leq K\sqrt{(x+y)(y+z)(z+x)}.$$}}}[/li]
+  [li]{{{(Romania-08) If $a,b,c$ are positive real numbers with $ab+bc+ca=3$, prove that
+$$\frac{1}{1+a^2(b+c)}+\frac{1}{1+b^2(c+a)}+\frac{1}{1+c^2(a+b)}\leq\frac{1}{abc}\cdot$$}}}[/li]
+  [li]{{{(Romania-08) Determine the maximum value of the real number $k$ if
+$$(a+b+c)\left(\frac{1}{a+b}+\frac{1}{b+c}+\frac{1}{c+a}-k\right)\geq k$$
+for all real numbers $a,b,c\geq0$ such that $a+b+c=ab+bc+ca$.}}}[/li]
+  [li]{{{(Vietnam-08) Let $x,y,z$ be distinct non-negative real numbers. Prove that
+$$\frac{1}{(x-y)^2}+\frac{1}{(y-z)^2}+\frac{1}{(z-x)^2}\geq\frac{4}{xy+yz+zx}\cdot$$}}}[/li]
+  [li]{{{(IMO-05) Let $x,y,z$ be positive real numbers such that $xyz\geq1$. Prove that
+$$\frac{x^5-x^2}{x^5+y^2+z^2}+\frac{y^5-y^2}{y^5+z^2+x^2}+\frac{z^5-z^2}{z^5+x^2+y^2}\geq0.$$}}}[/li]
+  [li]{{{(IMO-06) Determine the least real number $M$ such that the inequality
+$$|ab(a^2-b^2)+bc(b^2-c^2)+ca(c^2-a^2)|\leq M(a^2+b^2+c^2)^2$$
+is satisfied for all real numbers $a,b,c$.}}}[/li]
+  [li]{{{(IMO-08)
+(i) If $x,y,z$ are three real numbers different from 1 and such that $xyz=1$, prove that
+$$\frac{x^2}{(x-1)^2}+\frac{y^2}{(y-1)^2}+\frac{z^2}{(z-1)^2}\geq1.$$
+(ii) Prove that the equality holds for an infinite number of $x,y,z$, all of them being rational numbers.}}}[/li]
+[/ol]

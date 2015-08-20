@@ -1,0 +1,104 @@
+<<<Title: Triangles
+Author(s): Carlos Shine
+Description: MOP Handout
+Topics: Triangle geometry
+>>>
+
+[h2]Introduction[/h2]
+You probably know that, in a triangle $ABC$:
+[ul][li]The medians meet at a single point $G$, called [i]centroid[/i];[/li]
+  [li]The internal angle bisectors meet at a single point $I$, called [i]incenter[/i];[/li]
+  [li]Two external angle bisectors of $B$ and $C$ and the internal angle bisector of $A$ meet at a single point $I_a$, called [i]$A$-excenter[/i];[/li]
+  [li]The perpendicular bisectors meet at a single point $O$, called [i]circumcenter[/i], which is also the center of the circle that contains $A$, $B$ abd $C$ (called the [i]circumcenter[/i]);[/li]
+  [li]The altitudes meet at a single point $H$, called [i]orthocenter[/i].[/li][/ul]
+
+Now prove the following theorems:
+[b]Fact 1.[/b] (Euler line) The orthocenter $H$, the centroid $G$ and the circumcenter $O$ are collinear, and $HG = 2\cdot GO$.
+
+[b]Fact 2.[/b] (Nine-point circle) The midpoints, the feet of the altitudes and the midpoints of the segments connecting the vertices to the orthocenter of a triangle lie on a circle with center in the midpoint of the segment connecting the orthocenter and the circumcenter.
+
+[b]Fact 3.[/b] (Nine-point circle facts) In a triangle,
+[ul][li]the radius of the nine-point circle is half of the circumradius.[/li]
+  [li]the center of the direct homothety taking the circumcircle to the nine-point circle is the orthocenter $H$.[/li]
+  [li]the center of the inverse homothety taking the circumcircle to the nine-point circle is the centroid $G$.[/li][/ul]
+
+[b]Fact 4.[/b] (Orthocenter and the circumcircle) The reflections of the orthocenter with respect to the sides of its triangle lie on its circumcircle.
+
+[b]Fact 5.[/b] (The ubiquitous in(ex)center property) Let $I$ be the incenter and $I_a$ be the $A$-excenter of a triangle $ABC$ and $L$ be the midpoint of the arc $BC$ from the circumcircle of $ABC$ that doesn't contain $A$. Then there is a circle with center in $L$ that passes through $B$, $C$, $I$ and $I_a$. Notice that this means that $LB = LC = LI = LI_a$ and, moreover, $L$ is the midpoint of $II_a$.
+
+There is a number of ways of interpreting this fact:
+[ol]
+  [li]{{{$L$ is the circumcenter of the quadrilateral $BICI_a$;}}}[/li]
+  [li]{{{You can find the incenter and $A$-excenter of a triangle by marking $L$ and drawing a circle with center in $L$ and radius $LB = LC$. The incenter is the intersection of said circle and angle bisector $AL$. This is particularly useful when you need to prove that $I$ is the incenter or $I_a$ is the $A$-excenter: you don't have to prove that it's the intersection of two bisectors.}}}[/li]
+[/ol]
+
+[b]Fact 6.[/b] (Internal, external, perpendicular bisectors) Let $ABC$ be a triangle. Then the internal and external angle bisectors of $A$ and the perpendicular bisector of $BC$ determine a triangle whose vertices lie on the circumcircle.
+
+[b]Fact 7.[/b] (Buy two, get the third free) Let $ABC$ be a triangle. If $P$ and $Q$ are points in the plane such that $\angle PAB = \angle CAQ$ and $\angle PBC = \angle ABQ$ (directed angles!) then $\angle PCA = \angle BCQ$. Points $P$ and $Q$ are said to be isogonal conjugates with respect to triangle $ABC$.
+
+[b]Fact 8.[/b] (Symmedians) Let $ABC$ be a triangle. Then the isogonal line of the median through $A$ passes through the intersection of the tangent lines to the circumcircle through $B$ and $C$.
+
+[b]Fact 9.[/b] (More symmedian facts) Let $AN$ be a symmedian of triangle $ABC$, $N$ on $BC$. Then
+[ol]
+  [li]{{{The ratio of the distances from any point in line $AN$ to $AB$ and $AC$ is equal to $\frac{AB}{AC}$.}}}[/li]
+  [li]{{{$\frac{BN}{NC} = \left(\frac{AB}{AC}\right)^2$.}}}[/li]
+[/ol]
+
+
+[h2]Some trig[/h2]
+Trigonometry can be a handful in many problems (trig bashers, rejoice!). So it's good to know some identities.
+[b]Fact 10.[/b] (Triangle trig) Let $ABC$ be a triangle. For simplicity, let $\alpha = \angle A$, $\beta = \angle B$, $\gamma = \angle C$, $a = BC$, $b = CA$, $c = AB$, $R$ be the circumradius, $p = \frac{a+b+c}2$ be the semiperimeter and $r$ be the inradius. Then
+[ul][li]$\sin\alpha = \frac a{2R}$[/li]
+  [li]the distance from the circumcenter to side $BC$ is $R\cos\alpha = \frac a2\cot\alpha$[/li]
+  [li]$r = 4R\sin\frac\alpha2\sin\frac\beta2\sin\frac\gamma2$[/li]
+  [li]$p-a = 4R\cos\frac\alpha2\sin\frac\beta2\sin\frac\gamma2$[/li]
+  [li]$p = 4R\cos\frac\alpha2\cos\frac\beta2\cos\frac\gamma2$[/li][/ul]
+
+
+This is not really a trigonometric identity, but it has the spirit of one.
+[b]Fact 11.[/b] (Stewart's theorem) Let $ABC$ be a triangle and $P$ be a point on side $BC$. Then
+$$AB^2\cdot CP + AC^2\cdot BP = BC\cdot (AP^2 + BP\cdot CP)$$
+
+[h2]Problems[/h2]
+[ol]
+  
+  [li]{{{Segments $AC$ and $BD$ meet at $P$, and $PA = PD$ and $PB = PC$. Let $O$ be the circumcenter of the triangle $PAB$. Prove that lines $OP$ and $CD$ are perpendicular.}}}[/li]
+  [li]{{{Let $H$ be the orthocenter of triangle $ABC$. Prove that the circumcircles of triangles $AHB$, $BHC$ and $CHA$ have the same radius.}}}[/li]
+  [li]{{{Let $ABC$ be a right triangle with $\angle A = 90^\circ$, $AD$ be an altitude. Let $I,J,K$ be the incenters of triangles $ABC$, $ABD$ and $ACD$, respectively. Prove that $I$ is the orthocenter of the triangle $AJK$.}}}[/li]
+  [li]{{{Let $C$ be a circle with center $O$, $AB$ be one of its diameters and $R$ be a point on $C$ different from $A$ and $B$. Let $P$ be the orthogonal projection of $O$ onto $AR$. Let $Q$ a point on line $OP$ such that $QP$ is half of $PO$ and $Q$ does not line on segment $OP$. The line that goes through $Q$ and is parallel to $AB$ meets the line $AR$ in $T$. Let $H$ be the intersection of lines $AQ$ and $OT$. Prove that $H$, $R$ and $B$ are collinear.}}}[/li]
+  [li]{{{Let $ABC$ be an acute triangle. Let $H$ be the foot of the altitude from $A$, $\Gamma_A$ be the circle with diameter $AH$. $\Gamma_A$ meet lines $AB$ and $AC$ at $M\neq A$ and $N\neq A$, respectively. Line $\ell_A$ is the perpendicular line from $A$ to $MN$. Define $\ell_B$ and $\ell_C$. Prove that $\ell_A$, $\ell_B$ and $\ell_C$ meet at the same point.}}}[/li]
+  [li]{{{Suppose three circles with the same radius $r$ meet at point $O$. Let $P_1,P_2,P_3$ be the second intersections between two of the three circles. Prove that the circumcircle of the triangle $P_1P_2P_3$ has also radius $r$.}}}[/li]
+  [li]{{{(Brazil) Let $ABCD$ be a convex quadrilateral, $M$ be the midpoint of $DC$, $N$ be the midpoint of $BC$ and $O$ be the intersection of diagonals $AC$ and $BD$. Prove that $O$ is the barycenter of triangle $AMN$ if and only if $ABCD$ is a parallelogram.}}}[/li]
+  [li]{{{Let $ABC$ be an acute triangle. Suppose cevians $AD$, $BE$ and $CF$ meet at the circumcenter $O$ of $ABC$. Prove that
+  $$\frac1{AD} + \frac1{BE} + \frac1{CF} = \frac2R,$$
+  where $R$ is the circumradius of $ABC$.}}}[/li]
+  [li]{{{Let $A_1,B_1,C_1$ be the feet of the altitudes $AA_1,BB_1,CC_1$ respectively. Let $A_2,B_2,C_2$ be the points where the incircle touches the sides of triangle $A_1B_1C_1$. Prove that the Euler lines of triangles $ABC$ and $A_2B_2C_2$ coincide.}}}[/li]
+  [li]{{{Given are six distinct points on a circle. The orthocenter of a triangle with vertices on three of these points is connected to the centroid of the triangle with vertices on the three remaining points. Prove that the twenty line segments that may be defined in this fashion meet at a single point.}}}[/li]
+  [li]{{{(Cono Sur 1998) Let $H$ be the orthocenter of acute triangle $ABC$ and $M$ be the midpoint of $BC$. Let $X$ be the intersection point of the line $HM$ and the arc $BC$ that doesn't contain $A$ of the circumcircle of $ABC$. Line $BH$ meets again the circumcircle of $ABC$ at $Y\neq B$. Prove that $XY = BC$.}}}[/li]
+  [li]{{{Let $G$, $H$ and $I$ be the centroid, the orthocenter and the incenter of an acute triangle. Prove that $\angle GIH > 90^\circ$.}}}[/li]
+  [li]{{{(IMO 2001) Consider an acute-angled triangle $ABC$. Let $P$ be the foot of the altitude of triangle $ABC$ issuing from the vertex $A$, and let $O$ be the circumcenter of triangle $ABC$. Assume that $\angle C \geq \angle B+30^{\circ}$. Prove that $\angle A+\angle COP < 90^{\circ}$.}}}[/li]
+  [li]{{{(Cono Sur 2002) We know the following information about the triangle $ABC$: $\angle A$ is a right angle; we know the location of points $T$, where the incircle touches hypotenuse $BC$, $D$, intersection of the internal bisector of $\angle B$ with side $AC$ and $E$, intersection of the internal bisector of $\angle C$ with side $AB$. Describe how to construct, with compass and ruler, the vertices $A$, $B$ and $C$.}}}[/li]
+  [li]{{{(Cono Sur 2003) Let $ABC$ be an acute triangle such that $\angle B = 60^\circ$. The circle with diameter $AC$ cuts the internal bisectors of $\angle A$ and $\angle C$ at $M$ and $N$ respectively ($M\neq A$, $N \neq C$). The internal bisector of $\angle B$ cuts $MN$ and $AC$ at $R$ and $S$, respectively. Prove that $BR \leq RS$.}}}[/li]
+  [li]{{{(IMO 2002) The circle $S$ has center $O$, and $BC$ is a diameter of $S$. Let $A$ be a point of $S$ such that $\angle AOB<120^\circ$. Let $D$ be the midpoint of the arc $AB$ which does not contain $C$. The line through $O$ parallel to $DA$ meets the line $AC$ at $I$. The perpendicular bisector of $OA$ meets $S$ at $E$ and at $F$. Prove that $I$ is the incenter of the triangle $CEF$.}}}[/li]
+  [li]{{{(IMO 2006) Let $ABC$ be triangle with incenter $I$. A point $P$ in the interior of the triangle satisfies
+  $$\angle PBA+\angle PCA = \angle PBC+\angle PCB.$$
+  
+  Show that $AP \geq AI$, and that equality holds if and only if $P=I$.}}}[/li]
+  [li]{{{(Cono Sur 2008) Let $ABC$ be an isosceles triangle with $AC = BC$. Let $\Gamma$ be a semicircle with center on segment $AB$ that touches $AC$ and $BC$. A line is tangent to $\Gamma$ and cuts $AC$ and $BC$ at $D$ and $E$, respectively.
+  
+  Suppose that the perpendicular lines through $D$ to $AC$ and through $E$ to $BC$ meet at a point $P$ inside triangle $ABC$. Let $Q$ be the orthogonal projection of $P$ in line $AB$. Prove that $\frac{PQ}{CP} = \frac12\cdot\frac{AB}{AC}$.}}}[/li]
+  [li]{{{(Russia 2012) The points $A_1$, $B_1$, $C_1$ lie on the sides $BC$, $CA$ and $AB$ of the triangle $ABC$ respectively. Suppose that $AB_1 - AC_1 = CA_1 - CB_1 = BC_1 - BA_1$. Let $I_A$, $I_B$ and $I_C$ be the incenters of triangles $AB_1C_1$, $A_1BC_1$ and $A_1B_1C$ respectively. Prove that the circumcenter of triangle $I_AI_BI_C$ is the incenter of triangle $ABC$.}}}[/li]
+  [li]{{{(IMO 2010) Let $I$ be the incentre of triangle $ABC$ and let $\Gamma$ be its circumcircle. Let the line $AI$ intersect $\Gamma$ again at $D$. Let $E$ be a point on the arc $BDC$ and $F$ a point on the side $BC$ such that
+  $$\angle BAF = \angle CAE < \frac12\angle BAC.$$
+  
+  Finally, let $G$ be the midpoint of the segment $IF$. Prove that the lines $DG$ and $EI$ intersect on $\Gamma$.}}}[/li]
+  [li]{{{(Olympic Revenge 2008) Let $ABC$ be a triangle and $\Gamma$ its circumcircle. Let $D$, $E$ and $F$ the midpoints of the arcs $BC$, $CA$ and $AB$ of $\Gamma$ that don't contain the other vertex of $ABC$. Let $P_A$, $P_B$ and $P_C$ the midpoints of segments $HD$, $HE$ and $HF$, respectively. Finally, let $Q_A$, $Q_B$ and $Q_C$ be the midpoints of $BC$, $CA$ and $AB$, respectively. Prove that if the lines $P_AQ_A$, $P_BQ_B$ and $P_CQ_C$ determine a triangle, then it is similar to the triangle $DEF$.}}}[/li]
+  [li]{{{(IMO 2004) In a convex quadrilateral $ABCD$, the diagonal $BD$ bisects neither the angle $ABC$ nor the angle $CDA$. The point $P$ lies inside $ABCD$ and satisfies
+  $$\angle PBC=\angle DBA\text{and} \angle PDC=\angle BDA.$$
+  
+  Prove that $ABCD$ is a cyclic quadrilateral if and only if $AP=CP$.}}}[/li]
+  [li]{{{(USAMO 2008) Let $ABC$ be an acute, scalene triangle, and let $M$, $N$ and $P$ be the midpoints of $BC$, $CA$, and $AB$, respectively. Let the perpendicular bisectors of $AB$ and $AC$ intersect ray $AM$ in points $D$ and $E$ respectively, and let lines $BD$ and $CE$ intersect in point $F$, inside of triangle $ABC$. Prove that points $A$, $N$, $F$ and $P$ all lie on one circle.}}}[/li]
+  [li]{{{(Cono Sur 2009) Let $A$, $B$ and $C$ be three points such that $B$ is the midpoint of $AC$ and $P$ a point such that $\angle PBC = 60^\circ$. Let $Q$ be a point such that $PCQ$ is an equilateral triangle and $B$ and $Q$ are in different semiplanes with respect to $PC$, and $R$ be a point such that $APR$ is an equilateral triangle and $B$ and $R$ are in the same semiplane with respect to $AP$. Let $X$ be the intersection point of lines $BQ$ and $PC$ and $Y$ be the point of intersection of lines $BR$ and $AP$. Prove that the lines $XY$ and $AC$ are parallel.}}}[/li]
+  [li]{{{(USA TST, 2008) Let $ABC$ be a triangle with $G$ as its centroid. Let $P$ be a variable point on segment $BC$. Points $Q$ and $R$ lie on sides $AC$ and $AB$ respectively, such that $PQ \parallel AB$ and $PR \parallel AC$. Prove that, as $P$ varies along segment $BC$, the circumcircle of triangle $AQR$ passes through a fixed point $X$ such that $\angle BAG = \angle CAX$.}}}[/li]
+  [li]{{{(Brazil 2010) Let $ABCD$ be a convex quadrilateral with $\angle B \neq 90^\circ$, and $M$ and $N$ be the midpoints of the sides $CD$ and $AD$, respectively. The lines perpendicular to $AB$ passing through $M$ and to $BC$ passing through $N$ intersect at point $P$. Prove that $P$ lies on the diagonal $BD$ if and only if the diagonals $AC$ and $BD$ are perpendicular.}}}[/li]
+[/ol]

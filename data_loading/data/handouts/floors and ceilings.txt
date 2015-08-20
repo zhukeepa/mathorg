@@ -1,98 +1,41 @@
-<<<
-Title: Red Inequalities
+<<<Title: Floors and Ceilings
 Author(s): Alex Zhu
 Description: 
 Topics: Floors and ceilings
 >>>
-Basic Facts/Techniques
-======================
+[h2]Basic Facts/Techniques[/h2]
 
-*Note: Much of this handout is based on Delong Meng’s floor and ceilings
-MOP handout*  
-  
-The *floor* of a real number $x$, denoted by
-$\lfloor x \rfloor$, is the largest integer that is less than or
-equal to $x$. For example,
-$\lfloor 2.99 \rfloor = 2, \lfloor \pi \rfloor = 3$, and
-$\lfloor 3 \rfloor = 3$. The *ceiling* of a real number $x$,
-denoted by $\lceil x \rceil$, is the smallest integer that is
-greater than or equal to $x$. Here are some basic facts for dealing
-with floor functions:
+[i]Note: Much of this handout is based on Delong Meng's floor and ceilings MOP handout[/i]
 
-1.  If $x$ is a real number and $m$ is an integer, then
-    $\lfloor x + m \rfloor = \lfloor x \rfloor + m$.
+The [i]floor[/i] of a real number $x$, denoted by $\lfloor x \rfloor$, is the largest integer that is less than or equal to $x$. For example, $\lfloor 2.99 \rfloor = 2, \lfloor \pi \rfloor = 3$, and $\lfloor 3 \rfloor = 3$. The [i]ceiling[/i] of a real number $x$, denoted by $\lceil x \rceil$, is the smallest integer that is greater than or equal to $x$. Here are some basic facts for dealing with floor functions: 
+[ol]
+  [li]If $x$ is a real number and $m$ is an integer, then $\lfloor x + m \rfloor = \lfloor x \rfloor + m$.[/li]
+  [li]$\lfloor x \rfloor \leq x < \lfloor x \rfloor + 1$.[/li]
+  [li]$\lfloor -x \rfloor = -\lceil x \rceil$.[/li]
+  [li]$\lfloor x \rfloor + \lfloor y \rfloor \leq \lfloor x + y \rfloor \leq \lfloor x \rfloor + \lfloor y \rfloor + 1$.[/li]
+  [li]$\lfloor x + 1/2 \rfloor$ is $x$ rounded to the nearest integer.[/li]
+[/ol]
 
-2.  $\lfloor x \rfloor \leq x < \lfloor x \rfloor + 1$.
-
-3.  $\lfloor -x \rfloor = -\lceil x \rceil$.
-
-4.  $\lfloor x \rfloor + \lfloor y \rfloor \leq \lfloor x + y \rfloor \leq \lfloor x \rfloor + \lfloor y \rfloor + 1$.
-
-5.  $\lfloor x + 1/2 \rfloor$ is $x$ rounded to the nearest
-    integer.
-
-Problems
-========
-
-1.  [[[
-    Find all real numbers $x,y,z$ such that \[\begin{aligned}
-      \lfloor x \rfloor + y + z &= 19.9 \\
-      x + \lfloor y \rfloor + z &= 19.8 \\
-      x + y + \lfloor z \rfloor &= 20.3. 
-      \end{aligned}\]
-    ]]]
-
-2.  [[[
-    Find all real numbers $x$ such that
-    $x^2 - 8 \lfloor x \rfloor + 7 = 0$.
-    ]]]
-
-3.  [[[
-    Find all pairs of real numbers $(x,y)$ such that
-    $\lfloor x \rfloor^2 + \lfloor y \rfloor^2 = 4$.
-    ]]]
-
-4.  [[[
-    (Hermite identity) Let $n$ be a positive integer and let $x$
-    be a positive real number. Prove that
-    \[\lfloor x \rfloor + \lfloor x + \frac{1}{n} \rfloor + \lfloor x + \frac{2}{n} \rfloor + \cdots + \lfloor x + \frac{n-1}{n} \rfloor = \lfloor nx \rfloor.\]
-    ]]]
-
-5.  [[[
-    Let $x$ be a positive real number. Prove that
-    $\lfloor \sqrt{ \lfloor \sqrt{x} \rfloor} \rfloor = \lfloor \sqrt{ \sqrt{ x } } \rfloor$.
-    ]]]
-
-6.  [[[
-    Let $n$ be a positive integer, and let $x$ be a real number.
-    Prove that
-    \[\left \lfloor \frac{x}{n} \right \rfloor = \left \lfloor \frac{\lfloor x \rfloor}{n} \right \rfloor.\]
-    ]]]
-
-7.  [[[
-    Find the units digit of
-    \[\left \lfloor \frac{10^{20000}}{10^{100} + 3} \right \rfloor.\]
-    ]]]
-
-8.  [[[
-    (Beatty’s theorem) Let $\alpha$ and $\beta$ be irrational
-    numbers such that $\frac{1}{\alpha} + \frac{1}{\beta} = 1$. Show
-    that the sequences
-    $\{ \lfloor n \alpha \rfloor \}_{n=1}^{\infty}$ and
-    $\{ \lfloor n \beta \rfloor \}_{n=1}^{\infty}$ partition the
-    positive integers (that is, each positive integer appears in exactly
-    one of the sequences).
-    ]]]
-
-9.  [[[
-    (1968 IMO) Prove that for all positive integers $n$,
-    \[\left \lfloor \frac{n+1}{2} \right \rfloor + \left \lfloor \frac{n+2}{2^2} \right \rfloor + \cdots \left \lfloor \frac{n+2^k}{2^k} \right \rfloor + \cdots = n.\]
-    ]]]
-
-10. [[[
-    (CGMO 2008) For positive integers $n$, define
-    $f_n = \lfloor 2^n \sqrt{2008} \rfloor + \lfloor 2^n \sqrt{2009} \rfloor$.
-    Prove there are infinitely many odd numbers and infinitely many even
-    numbers in the sequence $f_1, f_2, \ldots$
-    ]]]
-
+[h2]Problems[/h2]
+ 
+[ol] 
+  [li]{{{Find all real numbers $x,y,z$ such that 
+  $\begin{align*}
+  \lfloor x \rfloor + y + z &= 19.9 \\
+  x + \lfloor y \rfloor + z &= 19.8 \\
+  x + y + \lfloor z \rfloor &= 20.3. 
+  \end{align*}$}}}[/li]
+  [li]{{{Find all real numbers $x$ such that $x^2 - 8 \lfloor x \rfloor + 7 = 0$.}}}[/li]
+  [li]{{{Find all pairs of real numbers $(x,y)$ such that $\lfloor x \rfloor^2 + \lfloor y \rfloor^2 = 4$.}}}[/li]
+  [li]{{{(Hermite identity) Let $n$ be a positive integer and let $x$ be a positive real number. Prove that 
+  \[ \lfloor x \rfloor + \lfloor x + \frac{1}{n} \rfloor + \lfloor x + \frac{2}{n} \rfloor + \cdots + \lfloor x + \frac{n-1}{n} \rfloor = \lfloor nx \rfloor. \]}}}[/li]
+  [li]{{{Let $x$ be a positive real number. Prove that $\lfloor \sqrt{ \lfloor \sqrt{x} \rfloor} \rfloor = \lfloor \sqrt{ \sqrt{ x } } \rfloor$.}}}[/li]
+  [li]{{{Let $n$ be a positive integer, and let $x$ be a real number. Prove that 
+  \[ \left \lfloor \frac{x}{n} \right \rfloor = \left \lfloor \frac{\lfloor x \rfloor}{n} \right \rfloor. \]}}}[/li]
+  [li]{{{Find the units digit of
+  \[ \left \lfloor \frac{10^{20000}}{10^{100} + 3} \right \rfloor. \]}}}[/li]
+  [li]{{{(Beatty's theorem) Let $\alpha$ and $\beta$ be irrational numbers such that $\frac{1}{\alpha} + \frac{1}{\beta} = 1$. Show that the sequences $\{ \lfloor n \alpha \rfloor \}_{n=1}^{\infty}$ and $\{ \lfloor n \beta \rfloor \}_{n=1}^{\infty}$ partition the positive integers (that is, each positive integer appears in exactly one of the sequences).}}}[/li]
+  [li]{{{(1968 IMO) Prove that for all positive integers $n$, 
+  \[ \left \lfloor \frac{n+1}{2} \right \rfloor + \left \lfloor \frac{n+2}{2^2} \right \rfloor + \cdots \left \lfloor \frac{n+2^k}{2^k} \right \rfloor + \cdots = n. \]}}}[/li]
+  [li]{{{(CGMO 2008) For positive integers $n$, define $f_n = \lfloor 2^n \sqrt{2008} \rfloor + \lfloor 2^n \sqrt{2009} \rfloor$. Prove there are infinitely many odd numbers and infinitely many even numbers in the sequence $f_1, f_2, \ldots$}}}[/li]
+[/ol] 

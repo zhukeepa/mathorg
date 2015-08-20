@@ -1,0 +1,26 @@
+<<<Title: More Algebra and Number Theory
+Author(s): Josh Nichols-Barrer
+Description: MOP Handout
+Topics: Algebra, Number theory
+>>>
+
+
+ [b]More Algebra and Number Theory[/b]
+[ol]
+  [li]{{{(IMO 1984/2) Find one pair of positive integers $a$ and $b$ such 
+  that:
+   [ol][li]$ab(a+b)$ is not divisible by $7;$[/li]
+    [li]$(a+b)^{7}-a^{7}-b^{7}$ is divisible by $7^{7}$ .[/li][/ol]}}}[/li]
+  [li]{{{(IMO 1998/4) Determine all pairs of integers $a,b$ such that $ab^2+b+7$ divides $a^2 b+a+b$.}}}[/li]
+  [li]{{{(IMO 1988/6) Let $a,b$ be positive integers such that
+  
+  \[ \frac{a^2 + b^2}{ab + 1} = x \]
+  
+  is an integer. Show that $x$ must be the square of an integer.}}}[/li]
+  [li]{{{(MOP 1997/8.5) Let $x_1$ and $x_2$ be relatively prime positive integers.  For $n\geq 2$, define $x_{n+1}=x_nx_{n-1}+1$.
+   [ol][li]Prove that for every integer $i>1$, there exists $j>i$ such that $x_i^i$ divides $x_j^j$.[/li]
+    [li]Is it true that $x_1$ must divide $x_j^j$ for some $j>1$?[/li][/ol]}}}[/li]
+  [li]{{{(MOP 1997/9.3) Let $S=\{s_1,s_2,\ldots,s_n\}$ be a set of $n$ distinct complex numbers, for some $n\geq 9$, exactly $n-3$ of which are real.  Prove that there are at most two quadratic polynomials $f(z)$ with complex coefficients such that $f(S)=S$ (that is, $f$ permutes the elements of $S$).}}}[/li]
+  [li]{{{(MOP 1997/I2.2) For each positive integer $n$, show that there exists a positive integer $k$ such that \[k=f(x)(x+1)^{2n}+g(x)(x^{2n}+1)\] for some polynomials $f,g$ with integer coefficients, and find the smallest such $k$ as a function of $n$.}}}[/li]
+  [li]{{{(MOP 1997/6.5) Let $S$ denote the set of nonnegative integers.  Find a bijective function $f$ from $S$ to itself such that for all $m,n\in S$, \[f(3mn+m+n)=4f(m)f(n)+f(m)+f(n).\]}}}[/li]
+[/ol]

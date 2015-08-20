@@ -1,0 +1,33 @@
+<<<Title: Inequalities
+Author(s): Ali Gurel
+Description: 2010 Blue MOP
+Topics: Inequalities
+>>>
+
+[ol]
+[li]{{{Prove in five different ways that $\displaystyle x^2+y^2+z^2\geq xy+yz+zx$.}}}[/li]
+  [li]{{{(Nesbitt) Prove in five different ways that
+$$\frac{a}{b+c}+\frac{b}{c+a}+\frac{c}{a+b}\geq\frac{3}{2}\cdot$$}}}[/li]
+  [li]{{{It is not possible to have all three of the numbers $a(1-b), b(1-c), c(1-a)$ larger than $1/4$ at the same time.}}}[/li]
+  [li]{{{(Brazil-01) $\displaystyle (a+b)(a+c)\geq2\sqrt{abc(a+b+c)}$.}}}[/li]
+  [li]{{{(Chezh and Slovak-04) Let $P(x)=ax^2+bx+c$ be a quadratic polynomial with non-negative real coefficients. For positive $x$, prove that
+$$P(x)P(1/x)\geq P(1)^2.$$}}}[/li]
+  [li]{{{(Chezh and Slovak-99) $\displaystyle\ \frac{a}{b+2c}+\frac{b}{c+2a}+\frac{c}{a+2b}\geq1$.}}}[/li]
+  [li]{{{(IMO-95) Let $a,b,c$ be positive reals with product 1. Prove that
+$$\frac{1}{a^3(b+c)}+\frac{1}{b^3(c+a)}+\frac{1}{c^3(a+b)}\geq\frac{3}{2}\cdot$$}}}[/li]
+  [li]{{{(Turkey-97) Given an integer $n\geq2$, find the minimal value of
+$$\frac{x_1^5}{x_2+x_3+...+x_n}+\frac{x_2^5}{x_3+x_4+...+x_1}+...+\frac{x_n^5}{x_1+x_2+...+x_{n-1}},$$
+where $x_i$ are positive numbers whose sum of squares is 1.}}}[/li]
+  [li]{{{If $a+b+c=1$, then
+$$\displaystyle \left(\frac{1}{a}-1\right)\left(\frac{1}{b}-1\right)\left(\frac{1}{c}-1\right)\geq8.$$}}}[/li]
+  [li]{{{If $a+b+c=1$, then
+$$\displaystyle \left(\frac{1}{a}+1\right)\left(\frac{1}{b}+1\right)\left(\frac{1}{c}+1\right)\geq64.$$}}}[/li]
+  [li]{{{(Iran-98) Prove that, for all $x,y,z>1$ such that $\frac{1}{x}+\frac{1}{y}+\frac{1}{z}=2$,
+$$\sqrt{x+y+z}\geq\sqrt{x-1}+\sqrt{y-1}+\sqrt{z-1}.$$}}}[/li]
+  [li]{{{(Latvia-02) Prove that $abcd\geq3$ if
+$$\frac{1}{1+a^4}+\frac{1}{1+b^4}+\frac{1}{1+c^4}+\frac{1}{1+d^4}=1$$}}}[/li]
+  [li]{{{(Balkan-02) $\displaystyle \frac{2}{b(a+b)}+\frac{2}{c(b+c)}+\frac{2}{a(c+a)}\geq\frac{27}{(a+b+c)^2}\cdot$}}}[/li]
+  [li]{{{(Russia-99) If $abc=1$ and $\displaystyle a+b+c\leq\frac{1}{a}+\frac{1}{b}+\frac{1}{c}$, then for every $n\in\mathbb{Z}^+$,
+$$a^n+b^n+c^n\leq\frac{1}{a^n}+\frac{1}{b^n}+\frac{1}{c^n}\cdot$$}}}[/li]
+  [li]{{{(Russia-99) If $x^2+y^3\geq x^3+y^4$, prove that $x^3+y^3\leq2$.}}}[/li]
+[/ol]

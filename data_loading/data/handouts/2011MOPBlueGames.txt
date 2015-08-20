@@ -1,0 +1,35 @@
+<<<Title: Games
+Author(s): Ali Gurel
+Description: 2011 Blue MOP Handout
+Topics: Games
+>>>
+
+[ol]
+[li]{{{(Russia-1999) Three empty bowls are placed on a table. Three players A, B, C, whose order of play is determined randomly, take turns putting one token into a bowl. A can place a token in
+the first or second bowl, B in the second or third bowl, and C in the third of first bowl. The first player to put the 1999th token into a bowl loses. Show that players A and B can work together to ensure that C will lose.}}}[/li]
+  [li]{{{(St Petersburg City-1999) All positive integers not exceeding 100 are written on both sides of 50 cards (each number is written exactly once). The cards are put on a table so that Vasya only knows the numbers on the top side of each card. Vasya can choose several cards, turn them upside down, and then find the sum of all 50 numbers now on top. What is the maximum sum Vasya can be sure to obtain or beat?}}}[/li]
+  [li]{{{(Engel, PSS, p.364) Initially there is a chip at the corner of an $n\times n$-chessboard. $A$ and $B$ alternately move the chip one step in any direction. They may not move to a square already visited. The loser is the one who cannot move. Who wins? Who wins if the chip starts on a square, which is neighbor to a corner square?}}}[/li]
+  [li]{{{(Fomin&Genkin&Itenberg, p61) The numbers 25 and 36 are written on a black board. At each turn, a player writes on the black board the positive difference between two numbers already on the blackboard-if this number does not appear on the blackboard. The loser is the player who cannot make a move loses.}}}[/li]
+  [li]{{{(Russia-2000) A heap of balls consists of one thousand 10-gram balls and one thousand 9.9-gram balls. We wish to pick out two heaps of balls with equal numbers of balls in them but
+different total weights. What is the minimal number of weighings needed to do this? (The balance scale reports the weight of the objects in the left pan, minus the weight of the objects in the right pan.)}}}[/li]
+  [li]{{{(Italy-1999) Alberta and Barbara play the following game. On a table there are 1999 sticks: each player in turn must remove from the table some sticks, provided that the player removes at least one stick and at most half of the sticks remaining on the table. The player who leaves just one stick on the table loses the game. Barbara moves first. Determine for which of the players there exists a winning strategy.}}}[/li]
+  [li]{{{(Engel, PSS, p.363) There are 1990 boxes containing $1,\ \ldots,\ 1990$ chips, respectively, on a table. You may choose any subset of boxes and subtract the same number of chips from
+each box. What is the minimum number of moves you need to empty all boxes?}}}[/li]
+  [li]{{{(Russia-1999) A curcuit board has 2000 contacts, any two of which are connected by a lead. The hooligans Vasya and Petya take turns cutting leads: Vasya (who goes first) always cuts
+one head, while Petya cuts either one or three leads. The first person to cut the last lead from some contact loses. Who wins with correct play?}}}[/li]
+  [li]{{{(Solvenia-1999) Three boxes with at least one marble in each are given. In a \textit{step} we choose two of the boxes, doubling the number of marbles in one of the boxes by taking the required number of marbles from the other box. Is it always possible to empty one of the boxes after a finite number of steps?}}}[/li]
+  [li]{{{(St Petersburg City-2000) In a country of 2000 airports, there are initially no airline flights. Two airlines take turns introducing new roundtrip nonstop flights. (Between any two cities, only one nonstop flight can be introduced.) The transport authority would like to achieve the goal that if any airport is shut down, one can still travel between any two other airports, possibly with transfers. The airline that causes the goal to be achieved loses. Which airline wins with perfect play?}}}[/li]
+  [li]{{{(Engel, PSS, p.364) $A$ and $B$ alternately replace the stars in the polynomial $x^{10} + *x^9 + *x^8 +\ldots+*x^2 + *x + 1$ by real numbers. If the resulting polynomial has no real roots, then $A$ wins. If it has at least one real root, then $B$ wins. Can $B$ win, whatever $A$ does?}}}[/li]
+  [li]{{{(MSOP-2008) Even number of real numbers are written on a line. The player in turn takes either leftmost or rightmost number and that number is removed from the board. The game finishes when there is no number left on the board. At the end of the game, the player that has the larger total number wins the game.}}}[/li]
+  [li]{{{(Russia-1996) Three sergeants and several soldiers serve in a platoon. The sergeants
+take turns on duty. The commander has given the following orders:
+  [ol]
+  [li]Each day, at least one task must be issued to a soldier.[/li]
+  [li]No soldier may have more than two task or receive more than one tasks in a single day.[/li]
+  [li]The lists of soldiers receiving tasks for two different days must not be the same.[/li]
+  [li]The first sergeant violating any of these orders will be jailed.[/li]
+  [/ol]
+Can at least one of the sergeants, without conspiring with the others, give tasks according to these rules and avoid being jailed?}}}[/li]
+  [li]{{{(Engel, PSS, p.363) Given a triangular cake $PQR$ of area 1, $A$ chooses a point $X$ of the plane. $B$ makes a straight cut through $X$. What maximal area can $B$ cut off?}}}[/li]
+  [li]{{{(Engel, PSS, p.363) $A$ and $B$ take turns in placing a $+$ sign or a $-$ sign in front of one of the numbers in the sequence $1, 2, 3, 4,\ldots,19,20$. After all 20 signs have been placed, $B$ wins the absolute value of the sum. Find the best strategy for each player. How much does $B$ win if both players use their best strategies?}}}[/li]
+[/ol]

@@ -1,0 +1,43 @@
+<<<Title: Induction
+Author(s): Alex Zhu
+Description: 
+Topics: Induction
+>>>
+
+[h2]Things to Keep in Mind[/h2]
+[ol]
+  [li][b]Strong induction:[/b] If we want to prove a proposition $P(n)$ about natural numbers $n$, the principle of induction tells us that it is enough to show that $P(1)$ holds and that $P(n)$ always implies $P(n+1)$. Strong induction says that, when trying to prove that $P(n+1)$ is true, in addition to assuming that $P(n)$ is true, we may also assume each of $P(1), P(2), \ldots, P(n-1)$ is true as well.[/li]
+  [li][b]Strengthening the hypothesis:[/b] Sometimes, using induction on a problem directly will not work, but induction [i]will[/i] work if we strengthen the problem a little bit. While this may seem counterintuitive, proving a stronger problem allows us to assume more in the inductive hypothesis.[/li]
+[/ol]
+
+[h2]Problems[/h2]
+
+[ol]  
+  [li]{{{Let $n$ be a positive integer. Prove that \[ \sum_{k=0}^n \binom{n+k}{k} \frac{1}{2^k} = 2^n. \]}}}[/li]
+  [li]{{{Suppose that $n$ $-1$'s and $n$ $+1$'s are distributed around a circle. Show that it is always possible to start at one of the numbers and go around the circle in such a way that the partial sums of the numbers passed are all nonnegative.}}}[/li]
+  [li]{{{Prove that $\frac{1}{1^2} + \frac{1}{2^2} + \cdots + \frac{1}{n^2} < 2$ for all positive integers $n$.}}}[/li]
+  [li]{{{For any natural number $N$, prove the inequality \[ \sqrt{2 \sqrt{3 \sqrt{4 \ldots \sqrt{(N-1) \sqrt{N}}}}} < 3. \]}}}[/li]
+  [li]{{{Suppose that $a_1, a_2, \ldots$ is a sequence of positive integers such that $a_n = 2a_{\lfloor \frac{n}{2} \rfloor} + 2013$ for each positive integer $n$ larger than 1. Show that there exists a constant $c$ such that $a_n \leq cn$ for each positive integer $n$.}}}[/li]
+  [li]{{{Let $0 < a_1 < a_2 < \cdots < a_n$, and let $e_i = \pm 1$. Prove that $\sum_{i=1}^n e_i a_i$ assumes at least $\binom{n+1}{2}$ distinct values as the $e_i$ range over the $2^n$ possible combinations of digits.}}}[/li]
+  [li]{{{A $2^n \times 2^n$ board has exactly one square removed. Show that it can be tiled by $L$-shaped trominoes.}}}[/li]
+  [li]{{{Show that if a graph with $n$ vertices has more than $\frac{n^2}{4}$ edges, it must contain a triangle (that is, it must contain three vertices all of which are adjacent to one another.)}}}[/li]
+  [li]{{{In a tournament with $n$ players, each player plays against every other player exactly once, and each match results in either a victory or a loss. Show that we can order the players $P_1, P_2, \ldots, P_n$ in such a way that $P_i$ beat $P_{i+1}$ for $i = 1, 2, \ldots, n-1$.}}}[/li]
+  [li]{{{Let $n$ be a positive integers. Show that the sequence $2, 2^2, 2^{2^2}, 2^{2^{2^2}}, \ldots$ eventually becomes constant modulo $n$.}}}[/li]
+  [li]{{{(USAMO 2010) There are $n$ students standing in a circle, one behind the other. The students have heights $h_1<h_2<\dots <h_n$. If a student with height $h_k$ is standing directly behind a student with height $h_{k-2}$ or less, the two students are permitted to switch places. Prove that it is not possible to make more than $\binom{n}{3}$ such switches before reaching a position in which no further switches are possible.}}}[/li]
+  [li]{{{(Fundamental theorem of symmetric polynomials) A polynomial $P(x_1, x_2, \ldots, x_n)$ in $n$ variables is called [i]symmetric[/i] if it remains the same when any two of the variables are interchanged. Define the elementary symmetric polynomials $e_k(x_1, x_2, \ldots, x_n)$ for $1 \leq k \leq n$ as
+  \begin{align*}
+  e_1 (x_1, x_2, \dots,x_n) &= \textstyle \sum_{1 \leq j \leq n} x_j,\\
+  e_2 (x_1, x_2, \dots,x_n) &= \textstyle \sum_{1 \leq j < k \leq n} x_j x_k,\\
+  e_3 (x_1, x_2, \dots,x_n) &= \sum_{1 \leq j < k < l \leq n} x_j x_k x_l,\\
+  \vdots \\
+  e_n(x_1, x_2, \ldots, x_n) &= x_1 x_2 \cdots x_n.
+  \end{align*}
+   Let $X = (x_1, x_2, \ldots, x_n)$. Show that $P(X)$ is symmetric if and only if there exists a polynomial $Q$ in $n$ variables such that $P(X) = Q(e_1(X), e_2(X), \ldots, e_n(X))$.}}}[/li]
+  [li]{{{Prove that for each $n \geq 2$, there is a set $S$ of $n$ integers such that $(a-b)^2$ divides $a$ for every distinct $a,b \in S$.}}}[/li]
+  [li]{{{(ISL 2010) On some planet, there are $2^N$ countries $(N \geq 4).$ Each country has a flag $N$ units wide and one unit high composed of $N$ fields of size $1 \times 1,$ each field being either yellow or blue. No two countries have the same flag. We say that a set of $N$ flags is diverse if these flags can be arranged into an $N \times N$ square so that all $N$ fields on its main diagonal will have the same color. Determine the smallest positive integer $M$ such that among any $M$ distinct flags, there exist $N$ flags forming a diverse set.}}}[/li]
+  [li]{{{Let $ f, g$ and $ a$ be polynomials with real coefficients, $ f$ and $ g$ in one variable and $ a$ in two variables. Suppose that for all real $x,y$, we have 
+\[ f(x) -f(y) = a(x, y)(g(x)- g(y)) . \]
+Prove that there exists a polynomial $ h$ with $ f(x) = h(g(x))$ for all real $x$.}}}[/li]
+  [li]{{{Let $a_1 = 1$, and for all $n \geq 2$, let $a_n$ be the smallest positive integer such that $a_1 + a_2 + \cdots + a_n$ is divisible by $n$, and $a_n$ has not already appeared among the terms $a_1, a_2, \ldots, a_{n-1}$. Prove that every positive integer appears as a term in this sequence.}}}[/li]
+  [li]{{{(IMO 2009) Let $ a_1, a_2, \ldots , a_n$ be distinct positive integers and let $ M$ be a set of $ n - 1$ positive integers not containing $ s = a_1 + a_2 + \cdots + a_n.$ A grasshopper is to jump along the real axis, starting at the point $ 0$ and making $ n$ jumps to the right with lengths $ a_1, a_2, \ldots , a_n$ in some order. Prove that the order can be chosen in such a way that the grasshopper never lands on any point in $ M.$}}}[/li]
+[/ol]

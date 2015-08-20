@@ -1,0 +1,72 @@
+<<<Title: Bijections
+Author(s): Maria Monks 
+Description: Red MOP 2012 Handout
+Topics: Bijections
+>>>
+
+[h2]Bijections, surjections, injections...[/h2]
+
+ Many combinatorial problems can be solved by finding the right bijection.  
+
+[b]Definition 1.[/b] A [i]bijection[/i], or [i]bijective map[/i], is a mapping between the elements of two sets $A$ and $B$, in such a way that each element $x$ of $A$ maps to a unique element $z$ of $B$, and vice versa.
+
+ Alternatively, a bijection is a function that is both:
+  [ul][li][i]Injective[/i], or [i]one-to-one[/i], which means that if $x$ and $y$ both map to $z$ then $x=y$, and[/li]
+    [li][i]Surjective[/i], or [i]onto[/i], meaning that every element $z$ of $B$ is mapped to by some $x$ in $A$.[/li][/ul]
+
+[h2]Useful properties[/h2]
+
+Here are [b]three very important facts[/b] to remember about bijections:
+ [ol]
+  [li]If there is a bijection between finite sets $A$ and $B$, then $A$ and $B$ have the same number of elements.[/li]
+  [li]If $f:A\to B$ has an inverse $g:B\to A$, that is, $f(g(b))=b$ and $g(f(a))=a$ for all $a\in A$ and $b\in B$, then $f$ is a bijection.[/li]
+  [li]"Bijection between" is an [i]equivalence relation:[/i]
+    [ul][li](Reflexive.) For any set $A$, there is a bijection from $A$ to $A$ (namely, the identity map).[/li]
+    [li](Symmetric.) If there is a bijection $f:A\to B$, then there is a bijection $g=f^{-1}:B\to A$.[/li]
+    [li](Transitive.) If there is a bijection $f:A\to B$, and a bijection $g:B\to C$, then the composite map $g\circ f:A\to C$ is a bijection from $A$ to $C$.[/li][/ul][/li]
+[/ol]
+
+We can use these principles to help us count the elements of a set: if we wish to find $|A|$ (the number of elements in $A$) and there is a bijection from $A$ to a set $B$ whose elements are easy to count, then we can compute $|B|$ instead since $|A|=|B|$.
+
+  We can also prove two integers $n$ and $m$ are equal by showing they are the number of elements in a pair of sets $A$ and $B$ having a bijection between them.
+
+[b]Example 1.[/b] Prove that $$\sum_{k=0}^n k\binom{n}{k}=n2^{n-1}.$$
+
+There are many ways of going about proving this.  One way is to find a set $A$ that the left hand side counts, and a set $B$ that the right hand side counts, and find a bijection between $A$ and $B$.  This method is sometimes called [i]counting in two ways[/i].
+
+The left hand side is the number of ways we can choose a subset of $\{1,2,\ldots,n\}$ having any size $k$, and then choosing one of those $k$ to be special.  Thus, the left hand side is the cardinality of the set $$A=\{(S,e): S\subseteq\{1,2,\ldots,n\}, e\in S\}.$$  On the other hand, the right hand side is the number of ways of choosing an element $b\in \{1,2,\ldots,n\}$ (there are $n$ ways to do this) and then choosing a subset $T$ of the remaining numbers.  Thus, the right hand side is the cardinality of $$B=\{(a,T):1\le a\le n, T\subseteq \{1,2,\ldots,n\}\setminus \{a\}\}.$$  Finally, there is a bijection between $A$ and $B$: define $f:A\to B$ by $f(S,e)=(e,S\setminus\{e\})$.  It has an inverse $g(a,T)=(T\cup \{a\},a)$, and so $f$ is a bijection.
+
+[h2]Problems[/h2]
+
+[ol]
+
+  [li]{{{[b]Injective, surjective, both, or neither?[/b]  Identify whether each of the following functions is injective, surjective, both (bijective), or neither.
+     [ol][li]$f:\mathbb{N}\to \mathbb{N}$ given by $f(n)=2n$.[/li]
+    [li]$f:\mathbb{R}\to \mathbb{R}$ given by $f(x)=2x$.[/li]
+    [li]The map from the unit circle to itself sending the complex number $\omega$ to $\omega^2$.[/li][/ol]}}}[/li]
+  [li]{{{\label{binomial} Give a bijective proof of each of the following identities.  All unspecified variables are assumed to be positive integers.
+  [ol][li]$\binom{n}{k}=\binom{n}{n-k}$[/li]
+    [li]$\sum_{k=0}^r \binom{n}{k}\binom{m}{r-k}=\binom{m+n}{r}$[/li]
+    [li]$\sum_{i=0}^n \binom{x+i}{i}=\binom{x+n+1}{n}$[/li]
+    [li]Let $\binom{n}{a_1,\ldots,a_k}$ denote the number of rearrangements of the letters in a word of length $n$ over $x_1,x_2,\ldots$ having $a_i$ occurrences of $x_i$ for all $i$.  Show that 
+  $$\binom{n}{a_1,\ldots,a_k}=\sum_{i=1}^k \binom{n-1}{a_1,\ldots,a_{i-1},a_i-1,a_{i+1},\ldots,a_k}.$$[/li][/ol]}}}[/li]
+  [li]{{{[b]Find the bijection:[/b]  For each of the following pairs of mathematical objects, give a description of a bijection that maps one set of objects to the other.
+
+    [ol][li]$\{$Binary sequences of length $n$$\}\leftrightarrow \{$Subsets of $\{1,2,\ldots,n\}$$\}$[/li]
+    [li]$\{$Ways of writing $n$ as a sum of [b]odd[/b] positive integers$\}\leftrightarrow\{$Ways of writing $n$ as a sum of [b]distinct[/b] positive integers$\}$  In both cases, assume the order of the summands does not matter.[/li]
+    [li]$\{$Increasing binary trees with nodes labeled $1,2,\ldots,n$$\}\leftrightarrow \{$Permutations of $1,2,\ldots,n$$\}$[/li][/ol]}}}[/li]
+  [li]{{{Let $n$ be a positive integer.  Find a closed form expression for $\sum_{i=0}^n\binom{n}{i}\sum_{j=i}^n\binom{n}{j}.$}}}[/li]
+  [li]{{{(AHSME 1992.) Ten points are selected on the positive $x$-axis, and five points are selected on the positive $y$-axis.  The fifty segments connecting the ten points on the $x$-axis to the five points on the $y$-axis are drawn.  What is the maximum possible number of points of intersection of these fifty segments in the interior of the first quadrant?}}}[/li]
+  [li]{{{(AIME 1983.) For $\{1,2,\ldots,n\}$ and each of its nonempty subsets a unique [i]alternating sum[/i] is defined as follows:  Arrange the numbers in the subset in decreasing order and then, beginning with the largest, alternately add and subtract successive numbers.  (For example, the alternating sum for $\{1,2,4,6,9\}$ is $9-6+4-2+1=6$.)  Find the sum of all alternating sums of the nonempty subsets of $\{1,2,\ldots,n\}$.}}}[/li]
+  [li]{{{A triangular grid is obtained by tiling an equilateral triangle of side length $n$ using $n^2$ equilateral triangles of side length $1$.  Deterine the number of parallelograms bounded by line segments of the grid.}}}[/li]
+  [li]{{{Prove Fermat's Little Theorem using a combinatorial argument as follows.  We wish to show that if $p$ is prime and $a$ is a positive integer, then $a^p-a$ is divisible by $p$.  To do so, it suffices to find a set $S$ with $a^p-a$ elements and sort the elements of $S$ into disjoint subsets having $p$ elements each.}}}[/li]
+  [li]{{{(Putnam 2002.) A nonempty subset $S \subseteq \{1,2,\ldots,n\}$ is [i]decent[/i] if the average of its  elements is an integer. Prove that the number of decent subsets has the same parity as $n$.}}}[/li]
+
+  [li]{{{(AIME 1998.)  Find the number of ordered quadruples $(x_1,x_2,x_3,x_4)$ of positive odd integers that satisfy $x_1+x_2+x_3+x_4=98$.}}}[/li]
+  [li]{{{(USAMO 1996.)  An $n$-term sequence in which every term is either $0$ or $1$ is called a "binary sequence" of length $n$. Let $a_n$ be the number of binary sequences of length $n$ containing no three consecutive terms equal to $0$, $1$, $0$ in that order. Let $b_n$ be the number of binary sequences of length $n$ containing no four consecutive terms equal to $0$, $0$, $1$, $1$ or $1$, $1$, $0$, $0$ in that order. Prove that $b_{n+1} = 2a_n$ for all positive integers $n$.}}}[/li]
+  [li]{{{Find the number of strings of $n$ letters, each equal to $A$, $B$, or $C$, such that the
+  same letter never occurs three times in succession.}}}[/li]
+  [li]{{{(Putnam 1996.)  Given a finite string $S$ of symbols $X$ and $O$, we write $\Delta(S)$ for the number of $X$'s in $S$ minus the number of $O$'s.  For example, $\Delta(XOOXOOX)=-1$.  We call a string $S$ [i]balanced[/i] if every substring $T$ of (consecutive symbols of) $S$ has $-2\le \Delta(T)\le 2$.  Thus, $XOOXOOX$ is not balanced, since it contains the substring $OOXOO$.  Find, with proof, the number of balanced strings of length $n$.}}}[/li]
+  [li]{{{We can write any permutation in cycle notation in [i]standard form[/i] by listing the cycles in order of their greatest element, and also writing each cycle such that its greatest element appears first.  For instance, $(31)(624)(875)$ is in standard form.  Then define a map from the set of permutations to itself by writing a permutation in standard form and then removing its parentheses (in the example, we get the permutation $31624875$).  Is this map injective?  Surjective?}}}[/li]
+  [li]{{{Find a bijective proof of [b]Cayley's Theorem:[/b] The number of trees (connected graphs with no cycles) on $n$ distinct labeled vertices is $n^{n-2}$.}}}[/li]
+[/ol]

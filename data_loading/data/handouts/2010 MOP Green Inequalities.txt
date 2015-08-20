@@ -1,0 +1,30 @@
+<<<Title: Inequalities
+Author(s): Ali Gurel
+Description: 2010 Green MOP Handout
+Topics: Inequalities
+>>>
+
+Unless otherwise mentioned, all the variables are assumed to be positive.
+
+
+[ol]
+[li]{{{Let $x\in(0,1)$. Find the maximum value of $x-x^4$ without using Calculus.}}}[/li]
+  [li]{{{Prove in four different ways that $\displaystyle x^2+y^2+z^2\geq xy+yz+zx$.}}}[/li]
+  [li]{{{(Nesbitt) Prove in four different ways that
+$$\frac{a}{b+c}+\frac{b}{c+a}+\frac{c}{a+b}\geq\frac{3}{2}\cdot$$}}}[/li]
+  [li]{{{If $a^2+b^2+c^2=1$, find the minimal value of
+$$\frac{a^2b^2}{c^2}+\frac{b^2c^2}{a^2}+\frac{c^2a^2}{b^2}\cdot$$}}}[/li]
+  [li]{{{(Russia-92) $\displaystyle x^4+y^4+z^2\geq \sqrt{8}xyz$.}}}[/li]
+  [li]{{{It is not possible to have all three of the numbers $a(1-b), b(1-c), c(1-a)$ larger than $1/4$ at the same time.}}}[/li]
+  [li]{{{(Brazil-01) $\displaystyle (a+b)(a+c)\geq2\sqrt{abc(a+b+c)}$.}}}[/li]
+  [li]{{{(Canada-02) $\displaystyle \frac{a^3}{bc}+\frac{b^3}{ca}+\frac{c^3}{ab}\geq a+b+c$.}}}[/li]
+  [li]{{{(Chezh and Slovak-04) Let $P(x)=ax^2+bx+c$ be a quadratic polynomial with non-negative real coefficients. For positive $x$, prove that
+$$P(x)P(1/x)\geq P(1)^2.$$}}}[/li]
+  [li]{{{(Ukraine-04) If $abc\geq1$, prove that $a^3+b^3+c^3\geq ab+bc+ca$.}}}[/li]
+  [li]{{{(Moldova-04) $\displaystyle a^3+b^3+c^3\geq a^2\sqrt{bc}+b^2\sqrt{ca}+c^2\sqrt{ab}\cdot$}}}[/li]
+  [li]{{{(Chezh and Slovak-99) $\displaystyle\ \frac{a}{b+2c}+\frac{b}{c+2a}+\frac{c}{a+2b}\geq1$.}}}[/li]
+  [li]{{{(Balkan-02) $\displaystyle \frac{2}{b(a+b)}+\frac{2}{c(b+c)}+\frac{2}{a(c+a)}\geq\frac{27}{(a+b+c)^2}\cdot$}}}[/li]
+  [li]{{{(Russia-99) If $abc=1$ and $\displaystyle a+b+c\leq\frac{1}{a}+\frac{1}{b}+\frac{1}{c}$, then for every $n\in\mathbb{Z}^+$,
+$$a^n+b^n+c^n\leq\frac{1}{a^n}+\frac{1}{b^n}+\frac{1}{c^n}\cdot$$}}}[/li]
+  [li]{{{(Russia-99) If $x^2+y^3\geq x^3+y^4$, prove that $x^3+y^3\leq2$.}}}[/li]
+[/ol]

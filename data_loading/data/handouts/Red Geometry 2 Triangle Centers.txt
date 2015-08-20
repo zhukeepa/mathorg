@@ -1,0 +1,126 @@
+<<<Title: Circumcenter, Centroid, and Ceva
+Author(s): Ian Le
+Description: 
+Topics: Triangle centers
+>>>
+
+
+[ol]
+
+[h4]Circumcenter, centroid and Ceva[/h4]
+
+[li]{{{The area of a triangle is $abc/4R$.}}}[/li]
+  [li]{{{Let $ABC$ be an equilateral triangle, and let $D$ and $E$ be
+points on $\overline{AB}$ and $\overline{AC}$, respectively, such that $AD =
+CE$. Let $\overline{BE}$ and $\overline{CD}$ meet at $F$. If $[ABC] = 7$ and
+$[BCF] = 2$, find $BD : DA$.}}}[/li]
+  [li]{{{Points $D, E, F$ lie on $BC, CA, AB$ such that $$\frac{BD}{DC}= \frac{CE}{EA}= \frac{AF}{FB}=2.$$ Find the area of the small triangle formed by these Cevians in terms of the area of triangle $ABC$.}}}[/li]
+  [li]{{{Let $ABC$ be a triangle. Show that the medians of $ABC$ divide it into six triangles of equal area.}}}[/li]
+  [li]{{{Show that the medians of $\triangle ABC$ form a triangle with
+area $\frac{3}{4}[ABC]$.  Morover, show that this triangle has
+medians which are $\frac{3}{4}$ the length of the sides of
+$\triangle ABC$.}}}[/li]
+  [li]{{{The [i]medial triangle[/i] is formed by the midpoints of the
+sides of a triangle.  Show that the medial triangle has the same
+centroid as the original triangle, and that its sides are parallel
+to the sides of the original triangle.}}}[/li]
+  [li]{{{Show that $2m_a^2 = b^2 + c^2 - \frac{1}{2}a^2$.  Similar
+relations hold for the other medians.}}}[/li]
+  [li]{{{Let $A, B, C$ be colinear, and $P$ some other point in the plane not on the line of $A, B, C$. Show that $PA^2 \cdot BC + PB^2 \cdot CA + PC^2 \cdot AB + BC \cdot CA \cdot AB=0$ where lengths are directed. This is a form of Stewart's theorem.}}}[/li]
+  [h4]Incenters and excenters[/h4]
+
+[li]{{{Let $r, r_a, r_b, r_c$ be the radii of the incircle and
+excircles, respectively.  Let s be the semiperimeter of $\triangle
+ABC$.  Show that $r \cdot s = r_a \cdot (s-a) = r_b \cdot (s-b) =
+r_c \cdot (s-c) = [ABC]$.}}}[/li]
+  [li]{{{Show the following: $$\frac{1}{r_a} + \frac{1}{r_b} + \frac{1}{r_c} = \frac{1}{r}$$
+$$\frac{1}{h_a} + \frac{1}{h_b} + \frac{1}{h_c} = \frac{1}{r}.$$}}}[/li]
+  [li]{{{Let $X, Y, Z$ be the points of tangency of the incircle to the sides $BC, CA, AB$ of a triangle $ABC$. Show that $AX, BY, CZ$ concur. This point is known as the Gergonne point.}}}[/li]
+  [h4]Orthocenter[/h4]
+
+[li]{{{$D, E, F$ are the feet of the altitudes and $H$ is the orthocenter. Show that the quadrilaterals $AEHF, BFHD, CDHE, BFEC, CDFA$
+and $AEDB$ are cyclic.  (What are the diameters of these quadrilaterals?)}}}[/li]
+  [li]{{{Show that $HA \cdot HD=HB \cdot HE=HC \cdot HF.$ How many analogous statements can you find?}}}[/li]
+  [li]{{{Show that $\triangle ABC \simeq \triangle AEF \simeq \triangle
+DBF \simeq \triangle DEC$, and find three other sets of four similar
+triangles.  Calculate the ratios of similitude.}}}[/li]
+  [li]{{{If $H$ and $O$ are the orthocenter and circumcenter of $ABC$, find $\angle HAO$.}}}[/li]
+  [li]{{{Show that the circumcenter and orthocenter of an obtuse triangle lie outside the triangle.}}}[/li]
+  [li]{{{Show that triangle $ABC$ is the orthic triangle of triangle $I_aI_bI_c$.}}}[/li]
+  [li]{{{Show that the reflections of the orthocenter over the sides of a triangle lie on the circumcircle.}}}[/li]
+  [li]{{{Show that the circumcircles of $\triangle ABC$, $\triangle HBC$,
+$\triangle AHC$ and $\triangle ABH$ all have the same radii.}}}[/li]
+  [li]{{{Let three congruent circles with a common point $H$ meet again in points $A, B$ and $C$. Show that $H$ is the orthocenter of $ABC$. Thus, when three congruent circles intersect at a point, the other three points of intersection lie on a fourth circle of the same radius.}}}[/li]
+  [h4]More on incenters and excenters[/h4]
+
+[li]{{{Let $K$ the intersection of the internal bisector of $\angle A$ with the circumcircle of $\triangle
+ABC$. Show that $KB=KI=KC$.}}}[/li]
+  [li]{{{Let $K$ and $K'$ be the intersections of the internal and
+external bisectors of $\angle A$ with the circumcircle of $\triangle
+ABC$.  Show that quadrilaterals $IBI_aC$ and $I_bI_cBC$ are cyclic,
+and that the centers of their circumcircles are $K$ and $K'$.}}}[/li]
+  [li]{{{Show that $AI \cdot AI_a = bc$.}}}[/li]
+  [li]{{{Show [i]Euler's Theorem[/i], namely that $OI^2 = R(R - 2r)$.
+Show the analog for the excenter $I_a$ of $\triangle ABC$, $OI_a^2 =
+R(R + 2r_a)$.}}}[/li]
+  [h4]Extra practice and advanced problems[/h4]
+
+[li]{{{Let $A'$, $B'$, $C'$ lie on $BC$, $AB$, $CA$ such that $AA'$,
+$BB'$ and $CC'$ are medians of $\triangle A'B'C'$.  Show that they
+are medians of $\triangle ABC$.}}}[/li]
+  [li]{{{Show that if two medians of a triangle have the same length, the triangle is isoceles.}}}[/li]
+  [li]{{{Show that if two altitudes of a triangle have the same length, the triangle is isoceles.}}}[/li]
+  [li]{{{Show that if two internal angle bisectors of a triangle have the same length, the triangle is isoceles.}}}[/li]
+  [li]{{{Let $BM$ and $CN$ external angle bisectors of a triangle where $\angle B=12$ and $\angle C=132$. Show that $BM=CN$.}}}[/li]
+  [li]{{{Show that $$\frac{r}{r_a}=\frac{h_a-r}{h_a+r_a},
+\frac{r_b}{r_c}=\frac{h_a-r_b}{r_c-h_a}.$$}}}[/li]
+  [li]{{{Show that if $U$ is the intersection of the internal bisector
+of $A$ with $\overline{BC}$, then $A, I, U$ and $I_a$ are divided
+harmonically, i.e., $$\frac{AI}{UI}=\frac{AI_a}{UI_a}=\frac{b +
+c}{a}$$ Similarly, show that if $U'$ is the intersection external
+bisector of $A$ with $\overline{BC}$, then $I_b, A, I_c,$ and $U$
+are divided harmonically, i.e.,
+$$\frac{AI_c}{U'I_c}=\frac{AI_b}{U'I_b}=\frac{b - c}{a}$$.}}}[/li]
+  [li]{{{Let $L$ and $M$ be the intersections of the internal bisectors
+of $\angle B$ and $\angle C$ with the circumcircle of $\triangle
+ABC$.  Show that $\overline{AI} \perp \overline{LM}$.}}}[/li]
+  [li]{{{Show $r_a + r_b + r_c = 4R + r$.  (Hint: If $A'$ is the
+midpoint of $\overline{BC}$, consider the lengths $A'K$ and $A'K'$,
+where $K$ and $K'$ are defined as above.)}}}[/li]
+  [li]{{{If $A', B', C'$ are the midpoints of $\overline{BC},
+\overline{CA}, \overline{AB}$ respectively, show that $OA' + OB' +
+OC' = R + r$.  This is [i]Carnot's Theorem[/i].}}}[/li]
+  [li]{{{Let $X, Y$ and $Z$ be the points of tangency of the incircle with
+the sides of $\triangle ABC$.  Show that $\frac{[XYZ]}{[ABC]} =
+\frac{r}{2R}$}}}[/li]
+  [li]{{{Let the midpoints of $BC$, $CA$, $AB$, $AH, BH, CH$ be $A', B' C', K, L, M$, and let the feet of the altitudes be $D, E, F$. Observe that $AO \perp EF$, $AKA'O$ is a parallelogram, $K$ is the midpoint of arc $EF$, and $B'C'LM$ is a rectangle.}}}[/li]
+  [li]{{{If two perpendicular lines pass through $H$, they intercept
+the sides of $\triangle ABC$ in three segments.  Show the midpoints
+of these segments are collinear.}}}[/li]
+  [li]{{{Show that the perimeter of the orthic triangle times the
+circumradius $R$ is $2[ABC]$.}}}[/li]
+  [li]{{{Show that the incenters and excenters of any triangle form an
+orthocentric quadrilateral.}}}[/li]
+  [li]{{{Show that the circumcenter O, the orthocenter H and the centroid
+G of a triangle are collinear (they lie on the [i]Euler line[/i]),
+and that $GH = 2GO$.  Also show that $HA+r_a=2R+r$.}}}[/li]
+  [li]{{{For $\triangle ABC$, the ``tangential triangle'' is formed by the
+tangents at $A, B$ and $C$ to the circumcircle.  Show that the
+orthic triangle and the tangential triangle are homothetic, and that
+the center of homothety lies on the Euler line.}}}[/li]
+  [li]{{{Show that the circumcenter of the tangential triangle lies on the Euler line.}}}[/li]
+  [li]{{{Show that the projections $J, J'$ of $H$ onto the internal and
+external bisectors of $\angle A$ are collinear with $N$, the
+nine-point center, and $A'$, the midpoint of $\overline{BC}$.}}}[/li]
+  [li]{{{Show that the four triangles formed by an orthocentric group of
+points have the same orthic triangle.  Hence, they will also have
+the same nine-point circle.}}}[/li]
+  [li]{{{Show that the circumcenters of an orthocentric group of triangles
+form an orthocentric quadrilateral.  Moreover, this new orthocentric
+quadrilateral has the same nine-point circle as the former one.}}}[/li]
+  [li]{{{Show that a triangle and its circumcircle are respectively
+the orthic triangle and the nine-point circle of the orthocentric
+group of points formed by the incenters and excenters.}}}[/li]
+  [li]{{{Show [i]Feuerbach's Theorem[/i], that the nine-point circle is
+tangent to the incircles and excircles of a triangle.}}}[/li]
+[/ol]

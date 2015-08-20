@@ -5,6 +5,7 @@
 - if @user == current_user
   = link_to "Edit account information", edit_user_registration_path
   %br/
+  %br/
 
 %ul{class: "nav nav-tabs", id: "myTab"}
   %li{class: "active"}
@@ -16,8 +17,8 @@
 
 .tab-content
   #favorites{class: "tab-pane fade in active"}
-    = render 'search/search_results', results: @user.favorite_problems, empty_message: "#{@user.username} has not favorited any problems."
+    = render 'search/results', results: @user.favorite_problems, empty_message: "#{@user.username} has not favorited any problems."
   #working_on{class: "tab-pane fade"}
-    = render 'search/search_results', results: @user.working_on_problems, empty_message: "#{@user.username} is not working on any problems."
+    = render 'search/results', results: @user.working_on_problems, empty_message: "#{@user.username} is not working on any problems."
   #solved{class: "tab-pane fade"}
-    = render 'search/search_results', results: @user.solved_problems, empty_message: "#{@user.username} has not marked any problems as solved."
+    = render 'search/results', results: @user.solved_problems, empty_message: "#{@user.username} has not marked any problems as solved."

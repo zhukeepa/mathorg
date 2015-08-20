@@ -1,0 +1,44 @@
+<<<Title: Power of a Point and Radical Axes
+Author(s): Alex Zhu
+Description: 
+Topics: Power of a point, Radical axes
+>>>
+[h2]Setting Up Radical Axes[/h2]
+
+Recall that the [i]power[/i] of a point $P$ with respect to a circle centered at $O$ with radius $r$ is defined to be the quantity $PO^2 - r^2$. 
+
+[ol]
+  [li]{{{Let $P$ be any point, let $\omega$ be a circle, and let $\ell$ be a line through $P$ that meets $\omega$ at $A$ and $B$. Show that if $P$ is on or outside the circle, then $PA \cdot PB$ is the power of $P$ with respect to $\omega$, and if $P$ is inside the circle, then $-PA \cdot PB$ is the power of $P$ with respect to $\omega$.}}}[/li]
+  [li]{{{Let $AB$ and $CD$ be any two line segments. Prove that $AB \perp CD$ if and only if $AC^2 - AD^2 = BC^2 - BD^2$. (This is a generally useful condition for perpendicularity.)}}}[/li]
+  [li]{{{Let $\omega_1$ and $\omega_2$ be two circles, centered at $O_1$ and $O_2$, respectively. Show that the locus of points with equal power with respect to $\omega_1$ and $\omega_2$ is a line perpendicular to $O_1 O_2$.}}}[/li]
+  [li]{{{(Radical axis theorem) Let $\omega_1$, $\omega_2$, and $\omega_3$ be three circles. Show that the radical axis of $\omega_1$ and $\omega_2$, the radical axis of $\omega_2$ and $\omega_3$, and the radical axis of $\omega_3$ and $\omega_1$ are concurrent.}}}[/li]
+[/ol]
+
+[h2]Basic Applications[/h2]
+
+[ol]  
+  [li]{{{Determine the radical axis of two intersecting circles.}}}[/li]
+  [li]{{{Determine the radical axis two tangent circles.}}}[/li]
+  [li]{{{Suppose that $(x-h_1)^2 + (y-k_1)^2 = r_1^2$ and $(x-h_2)^2 + (y - k_2)^2 = r_2^2$ represent two circles in the Cartesian plane. Show that the difference of the equations of the two circles is the equation of the radical axis of the circles.}}}[/li]
+  [li]{{{Let $\omega_1,\omega_2$ be two circles intersecting at $S$ and $T$, and let $A,B$ be points on $\omega_1,\omega_2$ such that $AB$ is tangent to both circles. Show that $ST$ bisects $AB$.}}}[/li]
+  [li]{{{Use the radical axis theorem to prove that the orthocenter of a triangle exists. (Can you find three circles that pass through vertices of the triangle and the feet of the altitudes?)}}}[/li]
+  [li]{{{Give a straightedge and compass construction of the radical axis of two circles.}}}[/li]
+[/ol]
+
+[h2]Other Problems[/h2]
+
+[ol]
+
+[li]{{{Let $\mathcal{C}_1$ and $\mathcal{C}_2$ be circles with radii 15 and 13, respectively, and centers 26 apart. Suppose they intersect at points $A$ and $B$, and suppose line $\ell$, passing through $A$, intersects $\mathcal{C}_1$ and $\mathcal{C}_2$ at $T_1$ and $T_2$, respectively, so that $A$ is between $T_1$ and $T_2$. Given that the point $P$ such that $PT_1$ and $PT_2$ are tangent to $\mathcal{C}_1$ and $\mathcal{C}_2$, respectively, lies on line $AB$, compute $\frac{T_1 A}{T_2 A}$.}}}[/li]
+  [li]{{{(HMMT) In triangle $ABC$, $\angle ABC=50^{\circ}, \angle ACB=70^{\circ}$. Let $D$ be the midpoint of side $BC.$ A circle is tangent to line $BC$ at $B$ and is also tangent to segment $AD$; this circle intersects $AB$ again at $P$. Another circle is tangent to $BC$ at $C$ and is also tangent to segment $AD$; this circle intersects side $AC$ again at $Q$. Find $\angle APQ$.}}}[/li]
+  [li]{{{Let $\omega_1,\omega_2$ be two circles intersecting at $S$ and $T$, and let $A,B$ be points on $\omega_1,\omega_2$ such that $AB$ is tangent to both circles. Show that $AS/BS =AT/BT$.}}}[/li]
+  [li]{{{$P, B, C$ are on a line in that order, and $A$ is point not on that line. Show that $PA$ is tangent to the circle passing through $A$, $B$, and $C$ if and only if $\frac{AB^2}{AC^2} = \frac{PB}{PC}$.}}}[/li]
+  [li]{{{Let $ABC$ be a triangle. Points $A_1, B_1$, and $C_1$ are chosen outside of $\triangle ABC$ so that $A_1B = A_1C$, $B_1 C = B_1 A$, and $C_1 A = C_1 B$. Show that the perpendicular from $A$ to line $B_1 C_1$, the perpendicular from $B$ to line $A_1 C_1$, and the perpendicular from $C$ to line $C_1 A_1$ are concurrent.}}}[/li]
+  [li]{{{Let $ABC$ be an acute triangle, $M$ be the midpoint of $BC$ and $P$ be a point on line segment $AM$. Lines $BP$ and $CP$ meet the circumcircle of $ABC$ again at $X$ and $Y$, respectively, and sides $AC$ at $D$ and $AB$ at $E$, respectively. Prove that the circumcircles of $AXD$ and $AYE$ have a common point $T$, other than $A$, on line $AM$.}}}[/li]
+  [li]{{{(USAMO 2009) Given circles $ \omega_1$ and $ \omega_2$ intersecting at points $X$ and $ Y$, let $\ell_1$ be a line through the center of $ \omega_1$ intersecting $ \omega_2$ at points $ P$ and $ Q$ and let $ \ell_2$ be a line through the center of $ \omega_2$ intersecting $ \omega_1$ at points $ R$ and $ S$. Prove that if $ P, Q, R$ and $ S$ lie on a circle then the center of this circle lies on line $ XY$.}}}[/li]
+  [li]{{{(IMO 2008) Let $ H$ be the orthocenter of an acute-angled triangle $ ABC$. The circle $ \Gamma_{A}$ centered at the midpoint of $ BC$ and passing through $ H$ intersects the sideline $ BC$ at points  $ A_{1}$ and $ A_{2}$. Similarly, define the points $ B_{1}$, $ B_{2}$, $ C_{1}$ and $ C_{2}$. Prove that the six points $ A_{1}$ , $ A_{2}$, $ B_{1}$, $ B_{2}$, $ C_{1}$ and $ C_{2}$ are concyclic.}}}[/li]
+  [li]{{{Let $ABC$ be a triangle, and let $D$, $E$, and $F$ be the feet of the altitudes from $A$, $B$, and $C$ to sides $BC$, $CA$, and $AB$, respectively. Let $EF$ meet $BC$ at $A_1$, let $FD$ meet $CA$ at $B_1$, and let $DE$ meet $AB$ at $C_1$. Show that $A_1, B_1$, and $C_1$ line on a line perpendicular to the Euler line of $\triangle ABC$. (Hint: use the nine-point circle.)}}}[/li]
+  [li]{{{(ISL 2008) Let $ ABCD$ be a convex quadrilateral and let $ P$ and $ Q$ be points in $ ABCD$ such that $ PQDA$ and $ QPBC$ are cyclic quadrilaterals. Suppose that there exists a point $ E$ on the line segment $ PQ$ such that $ \angle PAE = \angle QDE$ and $ \angle PBE = \angle QCE$. Show that the quadrilateral $ ABCD$ is cyclic.}}}[/li]
+  [li]{{{(ISL 2009) Let $ABC$ be a triangle. The incircle of $ABC$ touches the sides $AB$ and $AC$ at points $Z$ and $Y$, respectively. Let $G$ be the point where the lines $BY$ and $CZ$ meet, and let $R$ and $S$ be points such that the quadrilaterals $BCYR$ and $BCSZ$ are parallelograms. Prove that $GR=GS$.}}}[/li]
+  [li]{{{(Junior Balkan Math Olympiad) Let $AL$ and $BK$ be angle bisectors in the non-isosceles triangle $ABC$ ($L$ lies on the side $BC$, $K$ lies on the side $AC$). The perpendicular bisector of $BK$ intersects the line $AL$ at point $M$. Point $N$ lies on the line $BK$ such that $LN$ is parallel to $MK$. Prove that $LN = NA$.}}}[/li]
+[/ol]

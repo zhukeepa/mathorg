@@ -1,0 +1,90 @@
+<<<Title: Number Theory 4: Introduction to Gauss
+Author(s): Josh Nichols-Barrer
+Description: Red MOP 2011 Handout
+Topics: Primitive roots
+>>>
+
+The intention today is to tackle two hard questions from elementary number theory: the existence of a primitive root mod $m$, and the existence of a square root of a given residue class mod $p$.  Both were investigated at length by Gauss.
+
+Recall that a primitive root is a residue class $\bmod m$ of order $\varphi(m)$.  Such need not exist (and indeed does not in general); however given existence we get extra structure in mod $m$ arithmetic.
+
+[b]Theorem 1.[/b] Suppose that $\omega$ is a primitive root $\bmod m$.  Then the sequence \[\omega,\omega^2,\ldots,\omega^{\varphi(m)}\] runs through all relatively prime residue classes $\bmod m$, each exactly once.
+
+In other words, multiplication of relatively prime residues $\bmod m$ becomes addition $\bmod\varphi(m)$.  This would be especially nice in the $\bmod p$ case, where every nonzero residue class is relatively prime, and we will in fact show that in this case we always have a primitive root.
+
+We need a technical result:
+
+[b]Theorem 2.[/b] Let $m$ be a nonzero integer.  Then there is a residue class $\omega \bmod m$ whose order is a multiple of all other orders (though not necessarily equal to $\varphi(m)$).
+
+Using this, we can prove existence in a key case:
+
+[b]Theorem 3.[/b] Let $p$ be a prime.  Then there exists a primitive root $\bmod p$.
+
+We get a complete answer to our original question:
+
+[b]Theorem 4.[/b] Let $m$ be a nonzero integer.  Then there is a primitive root $\bmod m$ if and only if $m=1,2,4,p^k,2p^k$, where $p$ is an odd prime and $k>0$ is an integer.  Additionally, if $\omega$ is a primitive root mod $p^2$ (respectively $2p^2$), then $\omega$ is a primitive root mod $p^k$ (respectively $2p^k$) for all $k>0$.
+
+So ends the discussion of primitive roots.  We will use this new information to talk about the existence of square roots, or in other words the question of [i]quadratic residues[/i].
+
+[b]Definition 1.[/b] Let $p$ be an odd prime.  A [i]quadratic residue[/i] $\bmod p$ is a nonzero residue class $a$ such that there exists a solution to $x^2=a\bmod p$.  If there is no such solution we say that $a$ is a [i]quadratic nonresidue[/i].  We write the [i]Legendre symbol[/i] like so, pronounced "$a$ on $p$:"
+\[\left(\frac ap\right) = \left\{\begin{array}{cc} 1 & \textrm{if }a\textrm{ is a quadratic residue}  -1 & \textrm{if }a\textrm{ is a quadratic nonresidue}  0 & \textrm{if }a=0\end{array}\right.\]
+
+The Legendre symbol encapsulates the information of whether a given residue class is a quadratic residue.  Note that from yesterday's handout we know that for $p$ an odd prime, \[\left(\frac {-1}p\right) = (-1)^{\frac {p-1}2}.\]
+
+The Legendre symbol has the nice property of being [i]multiplicative[/i]:
+
+[b]Theorem 5.[/b] Let $p$ be an odd prime, and let $a$ be an integer.  Then \[\left(\frac ap\right)\equiv a^{\frac {p-1}2}\bmod p.\]  In particular, the Legendre symbol is multiplicative; in other words, if $b$ is another integer then \[\left(\frac ap\right)\left(\frac bp\right) = \left(\frac{ab}p\right).\]
+
+With a bit of careful counting, the preceding theorem can be used to compute another class of Legendre symbols:
+\[\left(\frac 2p\right) = (-1)^{\frac{p^2-1}8}.\]
+
+With more work, we may prove Quadratic Reciprocity, a surprising result due to Gauss.
+
+[b]Theorem 6.[/b] (Quadratic Reciprocity)  Let $p$ and $q$ be distinct odd primes.  Then:
+\[ \left(\frac pq\right)\left(\frac qp\right) = (-1)^{\left(\frac{p-1}2\right)\left(\frac{q-1}2\right)}.\]
+
+Multiplicativity and the three Legendre formulas comprise an effective algorithm for computing Legendre symbols in general, and so determining whether a given residue class is a square mod $p$.
+
+
+
+[h3]Problems[/h3]
+
+[ol]
+  
+  [li]{{{Suppose there is a primitive root mod $m$.  How many primitive roots are there altogether?}}}[/li]
+  [li]{{{Let $p$ be a prime and $k$ a positive integer.  How many $k$th powers are there mod $p$?}}}[/li]
+  [li]{{{Let $k$ be a nonnegative integer and $p$ a prime.  Compute \[\sum_{n=1}^{p-1} n^k.\]}}}[/li]
+  [li]{{{Determine the number of solutions:
+   [ol][li]$x^2\equiv 17 \bmod {23}$.[/li]
+    [li]$x^2\equiv 107 \bmod{223}$.[/li]
+    [li]$x^2\equiv 127 \bmod{1763}$.[/li][/ol]}}}[/li]
+  [li]{{{Determine the number of solutions to $x^2-13x-7\equiv 0\bmod 613$.}}}[/li]
+  [li]{{{Prove that there are infinitely many primes of the form $3k+1$.}}}[/li]
+  [li]{{{For real numbers $x$ in the interval $(0,1)$, let $y$ be the
+    number in the interval $(0,1)$ whose $n^{\mathrm {th}}$ digit after the decimal
+    point is the $(2^n)^{\mathrm {th}}$ digit after the decimal point of $x$.  Show
+    that if $x$ is rational then so is $y$.}}}[/li]
+  [li]{{{Let $p$ and $q$ be distinct prime numbers.  Given that $q$
+    divides $1+n+n^2+\cdots+n^{p-1}$ for some integer $n$, prove that
+    $q$ is congruent to 1 modulo $p$.}}}[/li]
+  [li]{{{(The Jacobi symbol) Find a new symbol $(\frac am)$, now defined for any odd integer $m$, which is:
+   [ol][li]A proper generalization of Legendre: Whenever $m=p$ is an odd prime, $(\frac am)=(\frac ap)$ as we were saying above.[/li]
+    [li]QNR-detecting: Whenever $(\frac am) = -1$, $a$ is a quadratic nonresidue mod $m$.[/li]
+    [li]Bimultiplicative: Whenever $a,b,m,n\in\mathbb Z$ with $m,n$ odd,
+  we have \[\left(\frac am\right)\left(\frac bm\right)
+  = \left(\frac{ab}m\right)\textrm{, and } \left(\frac
+  am\right)\left(\frac an\right) = \left(\frac a{mn}\right).\][/li]
+    [li]If $m,n$ are odd with $(m,n)=1$, then \[\left(\frac{-1}m\right)
+  = (-1)^{\frac{m-1}2}\textrm{, }\left(\frac 2m\right) =
+  (-1)^{\frac{m^2-1}8}\textrm{, and } \left(\frac mn\right)\left(\frac
+  nm\right) = (-1)^{\left(\frac{m-1}2\right)\left(\frac{n-1}2\right)}\textrm{.}\][/li][/ol]}}}[/li]
+  [li]{{{(Gaussian modular arithmetic, continued).  Suppose that $p$ is a $4k+3$ prime, so that $p$ is also a Gaussian prime.  Prove that there exists a primitive root mod $p$, in the Gaussian sense.}}}[/li]
+  [li]{{{Let $n\geq 2$ be an integer and suppose that $p$ is a prime
+    divisor of $2^{2^n}+1$, the $n$th Fermat number.  Prove that $p$ is
+    of the form $2^{n+2}k+1$.  (Euler used this to efficiently determine that 641 divides 4,294,967,297)}}}[/li]
+  [li]{{{(IMO) Given integers $m,n$ such that both $15m+16n$ and $16m-15n$ are nonzero perfect squares, find the minimal value the lesser of these two squares might be.}}}[/li]
+  [li]{{{(IMO) Find all positive integers $n$ such that \[\frac{2^n+1}{n^2}\] is a whole number.}}}[/li]
+  [li]{{{Suppose that $n$ is an integer such that there is $N\geq n$
+    with the property that for every prime $p>N$, $n$ is a quadratic
+    residue mod $p$.  Prove that $n$ is a perfect square.}}}[/li]
+[/ol]

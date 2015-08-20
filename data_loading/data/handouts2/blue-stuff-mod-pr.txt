@@ -1,0 +1,65 @@
+<<<Title: Stuff mod $p^r$
+Author(s): Josh Nichols-Barrer
+Description: Blue MOP 2012 Handout
+Topics: mod p^r
+>>>
+
+[ol]
+  
+  [li]{{{Let $p>3$ be a prime.  Prove that
+    $\displaystyle{\binom{2p}p\equiv 2\pmod {p^3}}$.}}}[/li]
+  [li]{{{Let $m>1$ be an odd number.  Find the least $n$ such that
+    $2^{1989}|m^n-1$.}}}[/li]
+  [li]{{{Let $b,n>1$ be integers.  Suppose that for each $k>1$ there
+    exists an integer $a_k$ such that $b-a_k^n$ is divisible by $k$.
+    Prove that $b=A^n$ for some integer $A$.}}}[/li]
+  [li]{{{Prove that for and given positive integers $m$ and $n$, there
+    exists a positive integer $k$ such that $2^k-m$ has at least $n$
+    distinct prime divisors}}}[/li]
+  [li]{{{Let $\{a_n\}_{n=0}^\infty$ be the sequence of real numbers with
+    $a_0=0$ and $a_{n+1}=(n+1)^2a_n+(n!)^2$ for all nonnegative integers
+    $n$.  Prove that for any prime $p$ greater than $3$, $p$ divides
+    $a_{\frac{p-1}2}$.}}}[/li]
+  [li]{{{Prove that for integer $n>16$, there exists a set $S$ of
+    positive integers such that if $A$ is a subset of $S$ satisfying the
+    condition that the sum $a=a_1+a_2$ of any pair of distinct elements
+    $a_1$ and $a_2$ in $A$ is not an element in $S$, then $A$ has at
+    most $4\sqrt n$ elements.}}}[/li]
+  [li]{{{Let $n$ be a positive integer.  Given an integer-coefficient
+    polynomial $f(x)$, define its [i]signature modulo $n$[/i] to be the
+    (ordered) sequence $f(1),f(2),\ldots,f(n)$ modulo $n$.  Of the $n^n$
+    such $n$-term sequences of integer modulo $n$, how many are the
+    signature of some polynomial $f(x)$ if  [ol][li]$n$
+      is a positive integer not divisible by the square of a
+      prime?[/li]
+    [li]$n$ is a positive integer not divisible by the cube
+      of a prime?[/li][/ol]}}}[/li]
+  [li]{{{For every integer $k\geq 2$, prove that $2^{3k}$ divides the
+    number \[\binom{2^{k+1}}{2^k}-\binom{2^k}{2^{k-1}}\] but $2^{3k+1}$
+    does not.}}}[/li]
+  [li]{{{Find all polynomials $f$ with integer coefficients such that
+    $n|m$ whenever $f(n) | f(m)$.}}}[/li]
+  [li]{{{Let $p$ be a prime such that $p=k\cdot 2^n+1$, where $k$ is odd,
+    $k>1$.  Suppose that $p$ divides Fermat number $F_m=2^{2^m}+1$ for
+    some integer $m$ with $m\leq n-2$.  Prove that $k^{2^{n-1}}$ is
+    congruent to 1 modulo $p$.}}}[/li]
+  [li]{{{Let $n$ be a positive integer.  Show that the
+    numbers \[\binom{2^n-1}0,\qquad\binom{2^n-1}1\qquad\binom{2^n-1}2,\qquad\cdots,\qquad\binom{2^n-1}{2^{n-1}-1}\]
+    are congruent modulo $2^n$ to $1$, $3$, $5$, $\ldots,$ $2^n-1$ in
+    some order.}}}[/li]
+  [li]{{{Let $f\in\mathbb Z[x]$ be a nonconstant polynomial, and let
+    $k\geq 2$ be an integer such that $\sqrt[k]{f(n)}\in\mathbb Z$ for
+    all positive integers $n$.  Then there exists a polynomial
+    $g\in\mathbb Z[x]$ such that $f=g^k$.}}}[/li]
+  [li]{{{Find all positive integers $m$ such that \[\frac{2^m+1}{m^2}\] is
+    an integer.}}}[/li]
+  [li]{{{Find all surjective functions $f:\mathbb N\rightarrow\mathbb N$
+    such that for every $m,n\in\mathbb N$ and every prime $p$, the
+    number $f(m+n)$ is divisible by $p$ if and only if $f(m)+f(n)$ is
+    divisible by $p$. 
+  
+  (Here $\mathbb N$ is the set of all positive integers.)}}}[/li]
+  [li]{{{Determine all pairs of positive integers $(a,b)$ such that
+    $a^2+b+1$ is a power of a prime, $a^2+b+1$ divides $b^2-a^3-1$, and
+    $a^2+b+1$ does not divide $(a+b-1)^2$.}}}[/li]
+[/ol]
