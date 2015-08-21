@@ -26,7 +26,7 @@
 
 .tab-content
   #problems{class: "tab-pane fade in active"}
-    - results = @topic.problems | @topic.solutions.map(&:problem).uniq
+    - results = @topic_problems
     - if results.size > 0
       %br/
       %em 
@@ -38,7 +38,7 @@
       %em
         There are currently no problems classified under this topic, and no problems with solutions classified under this topic.
   #explanations{class: "tab-pane fade"}
-    = render 'search/results', results: @topic.explanations, empty_message: "There are currently no explanations classified under this topic."
+    = render 'search/results', results: @topic_explanations, empty_message: "There are currently no explanations classified under this topic."
 
 / = #link_to 'Add explanation', new_explanation_path(topic: @topic.id)
 

@@ -12,29 +12,38 @@ private
   def problem_search_results(params)
     # ::TODO_LATER::
     query = !params[:keywords].empty? ? params[:keywords] : "*"
-    results = Problem.search query, fields: [:body, :source]
-    @results = []
-    results.each do |r| 
-      @results << r 
-    end
+
+    # pre-search, with topics: restrict problem id's beforehand
+    id_restrictions = Problem.all.map(&:id)
+
+    # topics
+    topics = Topic.where(name: params[:topics].split(',').map(&:strip))
+    topics.each { |t| id_restrictions &= t.problems_and_solutions_ids }
+
+    #flags
+    id_restrictions &= current_user.problems_marked_as_working_on.map(&:id) if params[:currently_working_on] == "1"
+    id_restrictions &= current_user.problems_marked_as_solved.map(&:id)     if params[:solved_by_me] == "1"
+    id_restrictions &= current_user.problems_marked_as_favorited.map(&:id)  if params[:favorited_by_me] == "1"
+
+    # now build up query
+    where_params = {}
+    where_params[:or] = []
+    where_params[:id] = id_restrictions
 
     #source
-    @results.keep_if { |p| p.source == params[:source] } if params[:source] != ""
+    where_params[:source] = params[:source] if params[:source] != ""
 
     #difficulty
     min_diff, max_diff = params[:min_difficulty].to_i, params[:max_difficulty].to_i
-    @results.keep_if { |p| p.difficulty.nan? || 
-      min_diff <= p.difficulty && p.difficulty <= max_diff }
+    difficulty_query = [{difficulty: {gte: min_diff, lte: max_diff}}]
+    difficulty_query << {difficulty: -1} if true #accept undefined difficulties
+    where_params[:or] << difficulty_query
 
-    #flags
-    @results.keep_if { |p| current_user.currently_working_on_problem?(p) } if params[:currently_working_on] == "1"
-    @results.keep_if { |p| current_user.solved_problem?(p)  } if params[:solved_by_me] == "1"
-    @results.keep_if { |p| current_user.favorited_problem?(p) } if params[:favorited_by_me] == "1"
+    results = Problem.search query, fields: [:body, :source], where: where_params, limit: 50
 
-    #topics
-    if params[:topics] != ""
-      topics = Set.new(params[:topics].split(',').map(&:strip))
-      @results.keep_if { |p| topics <= Set.new(p.topics.map(&:name)) }
+    @results = []
+    results.each do |r| 
+      @results << r 
     end
   end
 
@@ -54,7 +63,7 @@ private
     end
     if params[:topics] != ""
       topics = Set.new(params[:topics].split(',').map(&:strip))
-      @results.keep_if { |e| topics <= Set.new(e.topics.map(&:name)) }
+      @results.keep_if { |e| topics <= Set.new(e.specificest_topics.map(&:name)) }
     end
   end
 end

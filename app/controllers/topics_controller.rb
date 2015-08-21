@@ -4,6 +4,8 @@ class TopicsController < ApplicationController
   autocomplete :topic, :name
 
   def show
+    @topic_problems = Problem.where(id: @topic.problems_and_solutions_ids).limit(50)
+    @topic_explanations = @topic.explanations.limit(50).select { |e| e.specificest_topics.include? @topic }
   end
 
   def index

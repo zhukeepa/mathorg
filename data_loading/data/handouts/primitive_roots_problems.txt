@@ -60,7 +60,7 @@ Find an explanation for this in terms of primitive roots (hint: use 1/7 = $0.\ov
 [ol] 
   [li]{{{(ELMO 2011) Let $p>13$ be a prime of the form $2q+1$, where $q$ is prime. Find the number of ordered pairs of integers $(m,n)$ such that $0\le m<n<p-1$ and 
 \[3^m+(-12)^m\equiv 3^n+(-12)^n\pmod{p}.\]}}}[/li]
-  [li]{{{Let $p$ be a prime number. Show that the sum of all integers between $1$ and $p-1$ inclusive that are primitive roots mod $p$ is congruent to $\mu(p-1)$ mod $p$, where $\mu(n)$ is the M\"{o}bius function. ($\mu(n)$ is defined to be 1 if $n$ is squarefree and has an even number of prime factors, -1 if $n$ is squarefree and has an odd number of prime factors, and 0 if $n$ is not squarefree.)}}}[/li]
+  [li]{{{Let $p$ be a prime number. Show that the sum of all integers between $1$ and $p-1$ inclusive that are primitive roots mod $p$ is congruent to $\mu(p-1)$ mod $p$, where $\mu(n)$ is the Mobius function. ($\mu(n)$ is defined to be 1 if $n$ is squarefree and has an even number of prime factors, -1 if $n$ is squarefree and has an odd number of prime factors, and 0 if $n$ is not squarefree.)}}}[/li]
   [li]{{{Let $p$ be an odd prime, and let $m$ be a positive multiple of $p-1$. Prove that \[ \sum_{0 \leq k \leq \frac{m}{p-1}} \binom{m}{k(p-1)} \equiv 2 + p(1+m) \pmod{p^2}. \]}}}[/li]
   [li]{{{(USA TST 2010 $\#9$) Determine whether or not there exists a positive integer $k$ such that $p = 6k+1$ is a prime and 
 \[\binom{3k}{k} \equiv 1  \pmod{p}.\]}}}[/li]

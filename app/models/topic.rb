@@ -25,6 +25,10 @@ class Topic < ActiveRecord::Base
     (self.children.empty? ? [self] : self.children.map(&:descendants).flatten.append(self)).uniq
   end
 
+  def problems_and_solutions_ids
+    (self.problems.map(&:id) | self.solutions.map(&:problem).map(&:id)).uniq
+  end
+
   # ::TODO_LATER:: this still has a bug. if, e.g., Problem has_many preqresuites, for exampl, and
   # we need to reference it via topic.prerequisites_from_problems rather than topic.problems, 
   # we're going to run into trouble. 

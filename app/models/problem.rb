@@ -19,6 +19,17 @@ class Problem < ActiveRecord::Base
   acts_as_votable
   searchkick
 
+  def search_data
+    {
+      id: id, 
+      body: body, 
+      source: source, 
+      description: description, 
+      difficulty: difficulty.nan? ? -1 : difficulty.round,
+      topics: topics
+    }
+  end
+
   validates :body, presence: true
 
   markable_as :favorite, :working_on, :solved
