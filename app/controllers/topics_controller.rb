@@ -4,13 +4,15 @@ class TopicsController < ApplicationController
   autocomplete :topic, :name
 
   def show
-    @topic_problems = Problem.where(id: @topic.problems_and_solutions_ids).limit(50)
-    @topic_explanations = @topic.explanations.limit(50).select { |e| e.specificest_topics.include? @topic }
+    @topic_problems = Problem.where(id: @topic.problems_and_solutions_ids).limit(25)
+
+    # does not work as expected -- will get top 25 results and then filter, not the other way around
+    # probably not a big deal for this though
+    @topic_explanations = @topic.explanations.limit(25).select { |e| e.specificest_topics.include? @topic }
   end
 
   def index
-  	#@root_topics = Topic.all.keep_if { |t| t.parents.size == 0 }
-    @topic = Topic.where(name: "Math contests").first
+    @topic = Topic.where(name: "Math contests").first || Topic.new # || is so tests don't crash
   end
 
   def new

@@ -19,13 +19,13 @@ RSpec.feature "Add comments", type: :feature do
 
     scenario "User adds comment", js: true do
       click_link 'Show solution'
-      click_link 'Comments'
+      click_link 'View comments'
       expect(page).to have_content("No comments have been submitted yet.")
 
       click_link 'Add comment'
       within '.comment-form' do 
         fill_in :comment_comment, with: "Comment 1"
-        click_button 'Add comment'
+        click_button 'Submit comment'
       end 
 
       expect(page).to have_content("Comment 1")

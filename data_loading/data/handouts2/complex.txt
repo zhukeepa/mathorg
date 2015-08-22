@@ -1,7 +1,7 @@
 <<<Title: Complex Numbers in Geometry
 Author(s): Yi Sun 
 Description: MOP 2014 Handout
-Topics: Complex numbers (analytic)
+Topics: Complex numbers (analytic geometry)
 >>>
 
 [h2]Warmup[/h2]

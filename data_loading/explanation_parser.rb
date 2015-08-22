@@ -13,7 +13,7 @@ default_user = User.find(1)
 #             "#{Rails.root}/data_loading/data/handouts/inversion.txt"]
 
 filenames = Dir["#{Rails.root}/data_loading/data/handouts/*.txt"] | Dir["#{Rails.root}/data_loading/data/handouts2/*.txt"]
-#filenames = ["#{Rails.root}/data_loading/data/handouts/2012MOPBlueSimilarity.txt"]
+#filenames = ["#{Rails.root}/data_loading/data/handouts/green-vectors.txt"]
 #filenames = ["#{Rails.root}/data_loading/data/handouts/analytic_geo.txt"]
 
 bad_topics = []

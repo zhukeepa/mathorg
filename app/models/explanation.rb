@@ -19,6 +19,17 @@ class Explanation < ActiveRecord::Base
   serialize :authors, Array
   searchkick
 
+  def search_data
+    {
+      id: id, 
+      description: description, 
+      title: title, 
+      user_id: user_id, 
+      authors: authors_string, 
+      topics: topics
+    }
+  end
+
   has_many :explanation_authors
   has_many :users, through: :explanation_authors
 

@@ -44,10 +44,10 @@ RSpec.feature "Add, edit, and delete problems", type: :feature do
       end
     end
 
-    scenario "User deletes a problem" do 
-      click_link 'Destroy'
-      expect(page).to have_content("The problem has been destroyed.");
-    end
+    # scenario "User deletes a problem" do 
+    #   click_link 'Destroy'
+    #   expect(page).to have_content("The problem has been destroyed.");
+    # end
 
     scenario "User merges problems", js: true do 
       p_id, p_path = problem_id_from_page, current_path
@@ -73,7 +73,7 @@ RSpec.feature "Add, edit, and delete problems", type: :feature do
       click_link 'here.'
       expect(current_path).to eq p_path
 
-      expect(page).to have_content("Duplicate problems:")
+      expect(page).to have_content("Duplicate problem(s):")
       expect(page).to have_content(problem2.description)
       expect(page).to have_content(problem3.description)
     end

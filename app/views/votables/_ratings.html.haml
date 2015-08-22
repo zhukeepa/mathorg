@@ -18,7 +18,11 @@
   - n = votable.get_upvotes(vote_scope: scope).size
   - if n > 0
     - average = votable.get_upvotes(vote_scope: scope).sum(:vote_weight).to_f / n
-    - hovertext = (defined? rating_meanings) ? rating_meanings.map { |k, v| "#{k}: #{v}" }.join("\n").strip : ""
+    - hovertext = ""
+    - if (defined? rating_meanings)
+      - for i in lower..upper
+        - hovertext += "#{i}: #{rating_meanings[i.to_s]}\n"
+      - hovertext.strip!
     %span{title: hovertext}
       = "#{average} (#{n} #{'rating'.pluralize(n)})"
   -  else 
@@ -32,7 +36,7 @@
     = surround '( ', ' )' do
       - for i in lower..upper
         - path = rate_path(rating: i, votable_id: votable.id, votable_type: votable.class, | 
-          scope: scope, disp_text: disp_text, lower: lower, upper: upper, show_average: show_average)
+          scope: scope, disp_text: disp_text, lower: lower, upper: upper, show_average: show_average, rating_meanings: rating_meanings)
         - text = (current_user_vote == i) ? raw("<strong>#{i}</strong>") : i
         - title = ((defined? rating_meanings) && (rating_meanings != nil) && (rating_meanings[i.to_s] != nil)) ? rating_meanings[i.to_s] : ""
         = link_to text, path, { method: :post, remote: true, title: title }

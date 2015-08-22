@@ -12,3 +12,7 @@
         = render 'search/problem_result', problem: r
       - when "Explanation"
         = render 'search/explanation_result', explanation: r
+
+- if results.size == 25
+  %br/
+  %em Only the first 25 results are shown. 

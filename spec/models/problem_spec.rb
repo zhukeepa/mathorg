@@ -25,7 +25,7 @@ RSpec.describe Problem, type: :model do
       expect(problem.description_maybe_empty).to eq problem.description 
 
       problem.description = ""
-      expect(problem.description_maybe_empty).to eq "No description yet — click to add one!"
+      expect(problem.description_maybe_empty).to eq "No description"
     end
   end
 

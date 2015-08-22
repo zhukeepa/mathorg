@@ -1,7 +1,7 @@
 <<<Title: Vectors
 Author(s): Josh Nichols-Barrer
 Description: Red MOP 2012 Handout
-Topics: Vectors (analytic)
+Topics: Vectors (analytic geometry)
 >>>
 
 [ol]

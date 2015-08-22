@@ -8,8 +8,13 @@
   .form-inline
     = f.input :min_difficulty, collection: 1..8, required: false, selected: 1
     = f.input :max_difficulty, collection: 1..8, required: false, selected: 8
-  %br/
+    = f.input :include_unrated_difficulties, label: "Include problems with unrated difficulty", as: :boolean, input_html: {checked: true}, required: false
+  .form-inline
+    = f.input :min_elegance, collection: -2..2, required: false, selected: -2
+    = f.input :max_elegance, collection: -2..2, required: false, selected: 2
+    = f.input :include_unrated_elegances, label: "Include problems with unrated elegance", as: :boolean, input_html: {checked: true}, required: false
   - if user_signed_in?
+    %br/
     .form-inline
       = f.input :currently_working_on, as: :boolean, required: false
       = f.input :solved_by_me, as: :boolean, required: false

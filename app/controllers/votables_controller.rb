@@ -17,7 +17,7 @@ class VotablesController < ApplicationController
       v.unvote_by current_user, vote_scope: params[:scope], vote_weight: params[:rating]
     end
 
-    render 'votables/rating', locals: { lower: params[:lower], upper: params[:upper], votable: v, scope: params[:scope], disp_text: params[:disp_text], show_average: params[:show_average] }
+    render 'votables/rating', locals: { lower: params[:lower], upper: params[:upper], votable: v, scope: params[:scope], disp_text: params[:disp_text], show_average: params[:show_average], rating_meanings: params[:rating_meanings] }
   end
 
   def vote(pos, params)

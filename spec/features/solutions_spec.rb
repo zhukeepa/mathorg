@@ -17,6 +17,7 @@ RSpec.feature "Add, edit, and delete solutions", type: :feature do
       solution.author = user
       problem.solutions << solution
       visit "/problems/#{problem.id}"
+      binding.pry
     end
 
     scenario "User adds new solution" do 
@@ -39,13 +40,15 @@ RSpec.feature "Add, edit, and delete solutions", type: :feature do
 
     scenario "User shows solution and edits it", js: true do 
       click_link 'Show solution'
-      click_link 'Edit solution'
+      within '.solution' do 
+        click_link '(Edit)'
 
-      within '.edit_solution' do
-        fill_in :solution_body, with: solution2.body
-        fill_in :solution_hints_string, with: solution2.hints_string
+        within '.edit_solution' do
+          fill_in :solution_body, with: solution2.body
+          fill_in :solution_hints_string, with: solution2.hints_string
 
-        click_button 'Update Solution'
+          click_button 'Update Solution'
+        end
       end
 
       click_link 'Show solution'

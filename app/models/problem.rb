@@ -26,6 +26,7 @@ class Problem < ActiveRecord::Base
       source: source, 
       description: description, 
       difficulty: difficulty.nan? ? -1 : difficulty.round,
+      elegance: elegance.nan? ? 100 : elegance.round,
       topics: topics
     }
   end
@@ -47,6 +48,11 @@ class Problem < ActiveRecord::Base
 
   def difficulty
     votes = get_upvotes(vote_scope: "difficulty")
+    votes.sum(:vote_weight).to_f / votes.size
+  end
+
+  def elegance
+    votes = get_upvotes(vote_scope: "elegance")
     votes.sum(:vote_weight).to_f / votes.size
   end
 
