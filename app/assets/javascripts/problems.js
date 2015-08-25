@@ -38,6 +38,9 @@ var ready = function() {
     $(this).blur(); 
   });
 
+  $('[data-toggle="tooltip"]').tooltip({html: true, placement: "bottom"}); 
+
+
   $('body').on('click', '.best_in_place', function(e) { 
     if (e.target.value == "Update") { 
       setTimeout(function(){MathJax.Hub.Queue(["Typeset", MathJax.Hub, $('#preview')[0]])}, 500);

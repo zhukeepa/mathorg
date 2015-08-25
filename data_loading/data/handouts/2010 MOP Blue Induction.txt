@@ -6,21 +6,21 @@ Topics: Induction
 
 [h2]Examples.[/h2]
 [ol]
-[li]{{{Let $n = 2^k$. We can select $n$ integers from any $(2n-1)$ integers
+[li]Let $n = 2^k$. We can select $n$ integers from any $(2n-1)$ integers
 such that their sum is divisible by $n$.
 
 
-[b]Solution.[/b] Let us use induction on $k$. Given any 3 numbers, two will have same parity so their sum will be even, which proves the base case $k=1$. Assume the statement for some $k$. Now, for the $k+1$ case, consider any $4n-1$ integers, where $n=2^k$. We want to find $2n$ of them whose sum is divisible by $2n$. If you think that $4n-1$ is about twice of $2n-1$ so we can use the inductive hypothesis twice, that alone unfortunately does not lead to a solution because we are wasting the unused numbers. If we recycle them, we can use the inductive hypothesis three times and get three set of $n$ numbers each having a sum divisible by $n$. Each is either $0$ or $n$ modulo $2n$. Hence, two must be same and the corresponding sum of those $2n$ integers have a sum divisible by $2n$ $\Box$}}}[/li]
-  [li]{{{For a positive integer $n$ prove that
+[b]Solution.[/b] Let us use induction on $k$. Given any 3 numbers, two will have same parity so their sum will be even, which proves the base case $k=1$. Assume the statement for some $k$. Now, for the $k+1$ case, consider any $4n-1$ integers, where $n=2^k$. We want to find $2n$ of them whose sum is divisible by $2n$. If you think that $4n-1$ is about twice of $2n-1$ so we can use the inductive hypothesis twice, that alone unfortunately does not lead to a solution because we are wasting the unused numbers. If we recycle them, we can use the inductive hypothesis three times and get three set of $n$ numbers each having a sum divisible by $n$. Each is either $0$ or $n$ modulo $2n$. Hence, two must be same and the corresponding sum of those $2n$ integers have a sum divisible by $2n$ $\Box$[/li]
+  [li]For a positive integer $n$ prove that
 $$\left(1+\frac{1}{1^3}\right)\left(1+\frac{1}{2^3}\right)\cdots\left(1+\frac{1}{n^3}\right)<3.$$
 
 [b]Solution.[/b] Induction on this problem itself does not work as the LHS grows with $n$ but RHS does not change. So, let us make the problem harder by replacing RHS by something smaller but that grows with $n$. A natural choice is $3-1/n$. Now, it is not difficult to prove by induction that $\displaystyle LHS<3-\frac{1}{n}$.
-The base case $n=1$ gives $2<2.5$ and the induction step after simplifications amounts to $n^2-n+2>0$ which is correct $\Box$}}}[/li]
-  [li]{{{Use induction to prove that $\displaystyle 11\times{80 \choose 40}\times2^{-80}<1$. (LHS turns out to be approximately $0.98$.)
+The base case $n=1$ gives $2<2.5$ and the induction step after simplifications amounts to $n^2-n+2>0$ which is correct $\Box$[/li]
+  [li]Use induction to prove that $\displaystyle 11\times{80 \choose 40}\times2^{-80}<1$. (LHS turns out to be approximately $0.98$.)
 
 
-[b]Solution.[/b] We will induct on 40. First, let us consider how 11 depends on 40. Let $a_n=2^{2n}/{2n \choose n}$. Then, investigating the small $a_n$'s we see that they grow at the rate of $\sqrt{n}$. Let us use $11=\sqrt{3\times40+1}$. The problem states that $a_{40}\geq11$ and we claim that $a_n\geq\sqrt{3n+1}$. $n=1$ case gives equality so we let the base case to be $n=2$ which gives $8/3>\sqrt{7}$ which is true. The inductive step amounts to $4(n+1)^2(3n+1)\geq(2n+1)^2(3n+4)$ after expanding which simplifies to $n\geq0$. Thus, by induction, our statement is true for all $n\geq2$ and in particular for $n=11$.}}}[/li]
-  [li]{{{(Alien invasion at MOP) One year, some aliens disguise themselves as MOPPERS. Students live in two-people rooms. Everyone knows all the aliens in other rooms but they have
+[b]Solution.[/b] We will induct on 40. First, let us consider how 11 depends on 40. Let $a_n=2^{2n}/{2n \choose n}$. Then, investigating the small $a_n$'s we see that they grow at the rate of $\sqrt{n}$. Let us use $11=\sqrt{3\times40+1}$. The problem states that $a_{40}\geq11$ and we claim that $a_n\geq\sqrt{3n+1}$. $n=1$ case gives equality so we let the base case to be $n=2$ which gives $8/3>\sqrt{7}$ which is true. The inductive step amounts to $4(n+1)^2(3n+1)\geq(2n+1)^2(3n+4)$ after expanding which simplifies to $n\geq0$. Thus, by induction, our statement is true for all $n\geq2$ and in particular for $n=11$.[/li]
+  [li](Alien invasion at MOP) One year, some aliens disguise themselves as MOPPERS. Students live in two-people rooms. Everyone knows all the aliens in other rooms but they have
 no clue about the true identity of their roommates. Each student is extremely intelligent and knows that all the other students are intelligent as well. A student who can prove that his/her roommate is an alien must announce it immediately to everyone and treat him/her to an ice-cream as a sign of world hospitality. One day Zuming announces that there is at least one alien at MOP. Zuming always tells the truth and all the students trust him. If in fact there are exactly 6 aliens among 55 students but this fact is not known to the students what will be found out after Zuming's announcement?
 
 
@@ -28,64 +28,64 @@ no clue about the true identity of their roommates. Each student is extremely in
 (B) Team members are aliens.
 (C) Zuming is an alien.
 
-[b]Hint.[/b] Induct on 6 to prove $A$ and then note the paradoxical side.}}}[/li]
-  [li]{{{(IMO Shortlist '94) $M$ is a subset of $\{1, 2, 3, ... , 15\}$ such that the product of
+[b]Hint.[/b] Induct on 6 to prove $A$ and then note the paradoxical side.[/li]
+  [li](IMO Shortlist '94) $M$ is a subset of $\{1, 2, 3, ... , 15\}$ such that the product of
 any three distinct elements of $M$ is not a square. Determine the maximum
 number of elements in $M$.
 
 
-[b]Solution.[/b] Just kidding!}}}[/li]
+[b]Solution.[/b] Just kidding![/li]
 [/ol]
 
 [h2]Problems.[/h2]
 [h3]From Problem Solving Strategies by Arthur Engel[/h3]
 
 [ol]
-[li]{{{(Engel 8-01) $2n$ points are given in space. Altogether $n^2 + 1$ line segments
+[li](Engel 8-01) $2n$ points are given in space. Altogether $n^2 + 1$ line segments
 are drawn between these points. Show that there is at least one set of three
-points which are joined pairwise by line segments.}}}[/li]
-  [li]{{{(Engel 8-23) A graph with $n$ vertices, $k$ edges, and no tetrahedron satisfies $k \leq [|n^2/3|]$.}}}[/li]
-  [li]{{{(Engel 8-11) Let $a_n$ be the number of binary sequences of length $n$ which do not have two 1's with distant 2 apart. Find $a_n$.}}}[/li]
-  [li]{{{(Engel 8-35) Prove that if $n$ points are not collinear, then at least $n$ of the lines joining
-them are different.}}}[/li]
-  [li]{{{(Engel 8-33) Find the sum of all fractions $\frac{1}{xy}$, such that
+points which are joined pairwise by line segments.[/li]
+  [li](Engel 8-23) A graph with $n$ vertices, $k$ edges, and no tetrahedron satisfies $k \leq [|n^2/3|]$.[/li]
+  [li](Engel 8-11) Let $a_n$ be the number of binary sequences of length $n$ which do not have two 1's with distant 2 apart. Find $a_n$.[/li]
+  [li](Engel 8-35) Prove that if $n$ points are not collinear, then at least $n$ of the lines joining
+them are different.[/li]
+  [li](Engel 8-33) Find the sum of all fractions $\frac{1}{xy}$, such that
 
-$gcd(x,y)=1$, $x,y\leq n$, and $x+y>n$.}}}[/li]
-  [li]{{{(Engel 8-36) The positive integers $x_1,...,x_n$ and $y_1,...,y_m$ are given so that the sums $x_1+...+x_n$ and $y_1+...+y_m$ are equal
-and less than $mn$. One may cross out some of the terms in the equality $x_1+...+x_n=y_1+...+y_m$, so that one again gets an equality.}}}[/li]
-  [li]{{{(Engel 8-26) In an $m\times n$ matrix of real numbers, we mark at least $p$ of the
+$gcd(x,y)=1$, $x,y\leq n$, and $x+y>n$.[/li]
+  [li](Engel 8-36) The positive integers $x_1,...,x_n$ and $y_1,...,y_m$ are given so that the sums $x_1+...+x_n$ and $y_1+...+y_m$ are equal
+and less than $mn$. One may cross out some of the terms in the equality $x_1+...+x_n=y_1+...+y_m$, so that one again gets an equality.[/li]
+  [li](Engel 8-26) In an $m\times n$ matrix of real numbers, we mark at least $p$ of the
 largest numbers in every column, and at least $q$ of the largest numbers in
-every row. Then, at least $pq$ numbers are marked twice.}}}[/li]
+every row. Then, at least $pq$ numbers are marked twice.[/li]
 [/ol]
 
 [h3]From Math Competitions.[/h3]
 
 [ol]
-[li]{{{(Colombia-98) We play the following game with an equilateral triangle of $n(n+1)/2$ pennies (with $n$ pennies on each side). Initially, all of the pennies are turned heads up. On each
+[li](Colombia-98) We play the following game with an equilateral triangle of $n(n+1)/2$ pennies (with $n$ pennies on each side). Initially, all of the pennies are turned heads up. On each
 turn, we may turn over three pennies which are mutually adjacent; the goal is to make all of the pennies show tails. For which values of $n$ can this be achieved?}}}[/li]
-  [li]{{{(Tournament of Towns-89) We are given $N > 1$ lines in a plane, no two of which are parallel and no three of which have a point in common. It is always possible to
+  [li](Tournament of Towns-89) We are given $N > 1$ lines in a plane, no two of which are parallel and no three of which have a point in common. It is always possible to
 assign a non-zero integer of absolute value not exceeding $N$ to each region
 of the plane determined by these lines such that the sum of the integers on
 either side of any of the given lines is equal to 0.}}}[/li]
-  [li]{{{(China-89) There are 2001 coins on a table. For $k=1,2,...,2001$ in succession, one must turn over exactly $k$ coins. Prove that it is always possible either to make all of the coins
+  [li](China-89) There are 2001 coins on a table. For $k=1,2,...,2001$ in succession, one must turn over exactly $k$ coins. Prove that it is always possible either to make all of the coins
 face up or to make all of the coins face down, but not both.}}}[/li]
-  [li]{{{(USATST-00) Let $n$ be a positive integer. Prove that
+  [li](USATST-00) Let $n$ be a positive integer. Prove that
 $${n \choose 0}^{-1}+{n \choose 1}^{-1}+...+{n \choose n}^{-1}=\frac{n+1}{2^{n+1}}\left(\frac{2}{1}+\frac{2^2}{2}+\cdots+\frac{2^{n+1}}{n+1}\right).$$}}}[/li]
-  [li]{{{(USAMO-02) Let $S$ be a set with 2002 elements, and let N be an integer with $0\leq N\leq 2^{2002}$. Prove
+  [li](USAMO-02) Let $S$ be a set with 2002 elements, and let N be an integer with $0\leq N\leq 2^{2002}$. Prove
 that it is possible to color every subset of $S$ either black or white so that the following
 conditions hold:
 (a) the union of any two white subsets is white;
 (b) the union of any two black subsets is black;
 (c) there are exactly N white subsets.}}}[/li]
-  [li]{{{(USAMO-04) Suppose $a_1,a_2,\cdots,a_n$ are integers whose greatest common divisor is 1. Let $S$ be a set of
+  [li](USAMO-04) Suppose $a_1,a_2,\cdots,a_n$ are integers whose greatest common divisor is 1. Let $S$ be a set of
 integers with the following properties.
 (a) For $i = 1,\cdots,n$,\,\ $a_i\in S$.
 (b) For $i, j = 1,\cdots,n$ (not necessarily distinct), $a_i-a_j\in S$.
 (c) For any integers $x, y\in S$, if $x + y \in S$, then $x-y\in S$.
 Prove that $S$ must be equal to the set of all integers.}}}[/li]
-  [li]{{{(IMO-73) $2n+1$ points on the unit circle on the same side of a diameter are given. Then,
+  [li](IMO-73) $2n+1$ points on the unit circle on the same side of a diameter are given. Then,
 $$\left|OP_1+OP_2+...+OP_{2n+1}\right|\geq1.$$}}}[/li]
-  [li]{{{(IMO-77) Let $f : \mathbb{N} \rightarrow \mathbb{N}$ be a function that satisfies the inequality $f(n+1) > f(f(n))$
+  [li](IMO-77) Let $f : \mathbb{N} \rightarrow \mathbb{N}$ be a function that satisfies the inequality $f(n+1) > f(f(n))$
 for all $n\in\mathbb{N}$. Prove that $f(n) = n$ for all natural numbers $n$.
 
 

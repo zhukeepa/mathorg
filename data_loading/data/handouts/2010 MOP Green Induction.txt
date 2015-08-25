@@ -6,7 +6,7 @@ Topics: Induction
 
 [h2]Examples.[/h2]
 [ol]
-[li]{{{Use induction to prove that all horses have the same color.
+[li]Use induction to prove that all horses have the same color.
 
 
 [b]Solution.[/b] Let us first prove the statement. For a positive integer $n$, let the $n$-th statement be:
@@ -17,8 +17,8 @@ Which one do you trust more: the proof above or your eyes? Which one of the foll
 (A) All horses really have the same color.
 (B) Base case is wrong.
 (C) Inductive step is wrong.
-(D) There are infinitely many horses.}}}[/li]
-  [li]{{{The exact quantity of gas needed for a car to complete a single loop around
+(D) There are infinitely many horses.[/li]
+  [li]The exact quantity of gas needed for a car to complete a single loop around
 a track is distributed among 100 containers placed along the track. Prove
 that there exists a starting position at which the car, beginning with an
 empty tank of gas, can complete a single loop around the track without
@@ -26,46 +26,46 @@ running out of gas.
 
 
 [b]Solution.[/b] Let us replace 100 by $n$ and prove the statement by induction. $n=1$ case is clear. Consider the situation with $n+1$ stations while assuming the statement for $n$ stations.
-Relocate the $n+1$th station at the $n$th station. Now, we have $n$ stations so there is a starting point that works. Note that the same starting point works for the $n+1$ stations.}}}[/li]
-  [li]{{{$n \geq 1$ circles are given in the plane. They divide the
+Relocate the $n+1$th station at the $n$th station. Now, we have $n$ stations so there is a starting point that works. Note that the same starting point works for the $n+1$ stations.[/li]
+  [li]$n \geq 1$ circles are given in the plane. They divide the
 plane into regions. Show that it is possible to color the plane using
 two colors, so that no two regions with a common boundary line
 are assigned the same color.
 
 
-[b]Solution.[/b] $n=1$ case is clear. Assume the statement for $n$ circles. Now, suppose one more circle is drawn. Let us readjust the coloring w.r.t. $n$ circles by switching the colors of any region that lies inside the $n+1$th circle. Why does it work?}}}[/li]
+[b]Solution.[/b] $n=1$ case is clear. Assume the statement for $n$ circles. Now, suppose one more circle is drawn. Let us readjust the coloring w.r.t. $n$ circles by switching the colors of any region that lies inside the $n+1$th circle. Why does it work?[/li]
 [/ol]
 
 [h2]More Problems.[/h2]
 [ol]
 [li]{{{(Engel 8-37) All of the numbers $1007, 10017, 100117,...$ are divisible
-by 53.}}}[/li]
+by 53.[/li]
   [li]{{{For a positive integer $n$ show that the power of 2 appearing in the prime
-factorization of the product $(n + 1)(n + 2)\cdots(2n)$ is $n$.}}}[/li]
-  [li]{{{Prove that $3^{n+1}|2^{3^n}+1$ for all non-negative integers $n$.}}}[/li]
+factorization of the product $(n + 1)(n + 2)\cdots(2n)$ is $n$.[/li]
+  [li]{{{Prove that $3^{n+1}|2^{3^n}+1$ for all non-negative integers $n$.[/li]
   [li]{{{(Engel 8-39) Let $x_1, x_2$ be the roots of $x^2+px-1 = 0$, where $p$
 is an odd integer. Set $y_n= x_1^n+x_2^n$, $n\geq 0$. Then $y_n$ and $y_{n+1}$ are coprime
-integers.}}}[/li]
+integers.[/li]
   [li]{{{(USAMO-05) Determine all composite positive integers $n$ for which it is
 possible to arrange all divisors of $n$ that are greater than 1 in a circle so
-that no two adjacent divisors are relatively prime.}}}[/li]
+that no two adjacent divisors are relatively prime.[/li]
   [li]{{{(USAMO-03) Prove that for every positive integer $n$ there exists an $n$-digit
-number divisible by $5^n$ all of whose digits are odd.}}}[/li]
-  [li]{{{Show that every $2^n \times 2^n$ board with one square removed can be covered by L-trominoes (a $2\times2$ piece with one square removed).}}}[/li]
+number divisible by $5^n$ all of whose digits are odd.[/li]
+  [li]{{{Show that every $2^n \times 2^n$ board with one square removed can be covered by L-trominoes (a $2\times2$ piece with one square removed).[/li]
   [li]{{{Prove that for any natural number $n$,
-$$2\left(\sqrt{n+1}-1\right)<1+\frac{1}{\sqrt{2}}+\cdots+\frac{1}{\sqrt{n}}<2\sqrt{n}.$$}}}[/li]
-  [li]{{{(Bernoulli) If $x>-1$ and $n$ is a natural number, then $(1+x)^n\geq1+nx$.}}}[/li]
+$$2\left(\sqrt{n+1}-1\right)<1+\frac{1}{\sqrt{2}}+\cdots+\frac{1}{\sqrt{n}}<2\sqrt{n}.$$[/li]
+  [li]{{{(Bernoulli) If $x>-1$ and $n$ is a natural number, then $(1+x)^n\geq1+nx$.[/li]
   [li]{{{(AM-GM) Use induction to prove that $n$ positive numbers whose product is 1 has a
-sum at least $n$.}}}[/li]
+sum at least $n$.[/li]
   [li]{{{(Tournament of Towns-88) An infinite chessboard has the shape of the first quadrant. Is it possible
 to write a positive integer into each square such that each row and each
-column contains each positive integer exactly once?}}}[/li]
-  [li]{{{Prove that any positive integer can be written uniquely as a sum of distinct Fibonacci numbers containing no neighbors.}}}[/li]
+column contains each positive integer exactly once?[/li]
+  [li]{{{Prove that any positive integer can be written uniquely as a sum of distinct Fibonacci numbers containing no neighbors.[/li]
   [li]{{{(Engel 8-09) A map can be colored with two colors so that no two areas
 that share a common edge are colored same if and only if all of the vertices
-of the map have even degree.}}}[/li]
+of the map have even degree.[/li]
   [li]{{{(USAMO-08) Prove that for each positive integer $n$, there are pairwise relatively prime integers $k_0, k_1,\cdots,k_n$, all strictly greater than 1, such that
-$k_0k_1\cdots k_n-1$ is the product of two consecutive integers.}}}[/li]
+$k_0k_1\cdots k_n-1$ is the product of two consecutive integers.[/li]
   [li]{{{(IMO-73) $2n+1$ points on the unit circle on the same side of a diameter are given. Then,
-$$\left|OP_1+OP_2+...+OP_{2n+1}\right|\geq1.$$}}}[/li]
+$$\left|OP_1+OP_2+...+OP_{2n+1}\right|\geq1.$$[/li]
 [/ol]

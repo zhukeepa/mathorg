@@ -21,10 +21,10 @@
     - hovertext = ""
     - if (defined? rating_meanings)
       - for i in lower..upper
-        - hovertext += "#{i}: #{rating_meanings[i.to_s]}\n"
-      - hovertext.strip!
-    %span{title: hovertext}
-      = "#{average} (#{n} #{'rating'.pluralize(n)})"
+        - hovertext += "#{i}: #{rating_meanings[i.to_s]}<br />"
+    %span{title: hovertext, data: {toggle: "tooltip", html: true}}
+      = "#{average}"
+    = "(#{n} #{'rating'.pluralize(n)})"
   -  else 
     No ratings yet
 
@@ -39,7 +39,7 @@
           scope: scope, disp_text: disp_text, lower: lower, upper: upper, show_average: show_average, rating_meanings: rating_meanings)
         - text = (current_user_vote == i) ? raw("<strong>#{i}</strong>") : i
         - title = ((defined? rating_meanings) && (rating_meanings != nil) && (rating_meanings[i.to_s] != nil)) ? rating_meanings[i.to_s] : ""
-        = link_to text, path, { method: :post, remote: true, title: title }
+        = link_to text, path, { method: :post, remote: true, title: title, data: {toggle: "tooltip"} }
 
         - # Don't display a separator pipe if you're at the end
         - if i != upper

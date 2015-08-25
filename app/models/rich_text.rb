@@ -11,6 +11,8 @@
 #  format        :string(255)
 #
 
+##::TODO:: the code here can almost certainly get cleaned up
+
 class RichText < ActiveRecord::Base
   belongs_to :bodyable, polymorphic: true
   
@@ -19,27 +21,35 @@ class RichText < ActiveRecord::Base
   end
 
   def to_html_with_custom_replacements
-    convert_bbcode_headers(replace_solutions(replace_problems(self.text)).bbcode_to_html.gsub("\n\n", "<br/><br/>"))
+    convert_custom_bbcode(replace_solutions(replace_problems(self.text)).bbcode_to_html.gsub("\n\n", "<br/><br/>"))
     #RichText.new(text: replace_solutions(replace_problems(self.text))).to_html
   end
 
 private
-  def lol(text)
-    foo = text.gsub("(((", "[color=red]")
-              .gsub(")))", "[/color]")
-              .gsub("{{{", "[color=blue]")
-              .gsub("}}}", "[/color] (Link)")
+  # def lol(text)
+  #   foo = text.gsub("(((", "[color=red]")
+  #             .gsub(")))", "[/color]")
+  #             .gsub("{{{", "[color=blue]")
+  #             .gsub("}}}", "[/color] (Link)")
 
-    foo
-  end
+  #   foo
+  # end
 
-  def convert_bbcode_headers(text)
-    foo = text.gsub("[h1]", "<h1>").gsub("[/h1]", "</h1>")
+  def convert_custom_bbcode(text)
+    text = text.gsub("[h1]", "<h1>").gsub("[/h1]", "</h1>")
               .gsub("[h2]", "<h2>").gsub("[/h2]", "</h2>")
               .gsub("[h3]", "<h3>").gsub("[/h3]", "</h3>")
               .gsub("[h4]", "<h4>").gsub("[/h4]", "</h4>")
 
-    foo
+    problem_re = /\[__problem__=([0-9]*)\](.*?)\[\/__problem__\]/m
+    text = text.gsub(problem_re) do |id|
+      id = $1
+      body = $2
+
+      next "<a href='/problems/#{id}' class='problem-link'>#{body}</a>"
+    end
+
+    text
   end
 
   def markdown_to_html(text)
@@ -57,9 +67,10 @@ private
   def replace_problems(text)
     problem_re = /\[problem\]([0-9]*)\[\/problem\]/
     text_with_problems_replaced = text.gsub(problem_re) do |id|
-      problem = Problem.find_by_id($1)
+      id = $1
+      problem = Problem.find_by_id(id)
       if problem
-        next problem.body + " ([url=\"/problems/#{problem.id}\"]Link[/url])"
+        next "[__problem__=#{id}]" + problem.body + "[/__problem__]"
       else
         next "[color=red][i]Problem not found[/i][/color]"
       end

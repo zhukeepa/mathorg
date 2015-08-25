@@ -7,3 +7,13 @@ body {
   padding-right: 240px;
   padding-bottom: 120px;
 }
+
+a.problem-link {
+    color: #333333;
+    text-decoration: none; 
+}
+
+a.problem-link:hover {
+    color: #23527A; 
+    text-decoration: underline; 
+}

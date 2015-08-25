@@ -1,6 +1,6 @@
 <<<Title: Supersums of Square-Weights: A Dumbass's Perspective
 Author(s): Evan Chen
-Description: Red MOP 2011 Handout
+Description: Taken from http://www.mit.edu/~evanchen/olympiad.html
 Topics: SOS, Chinese dumbass notation
 >>>
 
