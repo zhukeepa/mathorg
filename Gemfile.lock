@@ -61,6 +61,7 @@ GEM
     bootstrap-sass (3.3.5.1)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.3.0)
+    bootstrap_tokenfield_rails (0.0.9)
     builder (3.2.2)
     capybara (2.4.4)
       mime-types (>= 1.16)
@@ -255,6 +256,7 @@ DEPENDENCIES
   bb-ruby
   best_in_place
   bootstrap-sass
+  bootstrap_tokenfield_rails
   capybara
   coffee-rails
   database_cleaner

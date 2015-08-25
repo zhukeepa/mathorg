@@ -17,4 +17,5 @@
 //= require jquery_ujs
 //= require autocomplete-rails
 //= require bootstrap-sprockets
+//= require bootstrap-tokenfield
 //= require_tree .

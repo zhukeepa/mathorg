@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'protected_attributes'
 
+gem 'bootstrap_tokenfield_rails'
+
 gem 'annotate'
 
 gem 'markable'
