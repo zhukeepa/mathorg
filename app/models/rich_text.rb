@@ -25,6 +25,11 @@ class RichText < ActiveRecord::Base
     #RichText.new(text: replace_solutions(replace_problems(self.text))).to_html
   end
 
+  # ::TODO:: should move to class function
+  def problem_html(p)
+    RichText.new(text:"[__problem__=#{p.id}]#{p.body}[/__problem__]").to_html_with_custom_replacements
+  end
+
 private
   # def lol(text)
   #   foo = text.gsub("(((", "[color=red]")

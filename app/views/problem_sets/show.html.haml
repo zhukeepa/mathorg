@@ -4,8 +4,7 @@
 %ol
   - @problems.each do |p|
     %li
-      = raw(RichText.new(text: p.body).to_html)
-      = link_to "(Link)", p 
+      = raw(RichText.new.problem_html(p))
       %br/
       %br/
 
