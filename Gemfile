@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'google-analytics-rails'
+
 gem 'protected_attributes'
 
 gem 'bootstrap_tokenfield_rails'
